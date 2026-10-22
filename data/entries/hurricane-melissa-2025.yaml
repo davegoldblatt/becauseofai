@@ -1,0 +1,58 @@
+id: hurricane-melissa-2025
+section: because
+rank: 1
+headline: >-
+  Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica
+  about three days out, while Melissa was still a Category 1.
+impact: "~3 days' warning on a Cat 5"
+summary: >-
+  NHC forecasters explicitly forecast Category 5 intensity while Melissa was an
+  80-mph Category 1, largely on the strength of Google DeepMind's cyclone model,
+  which posted the lowest track and intensity errors of any model for the 2025
+  Atlantic season and kept the official forecast below its five-year average
+  error while NOAA's GFS had its worst year in two decades.
+caveat: >-
+  There is no lives-saved number and cannot be; the measured outcome is forecast
+  skill, and the final call was made by human forecasters using the model.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: in
+comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
+effect:
+  relative: "Lowest season track and intensity error of any model; roughly one extra day of forecast accuracy in 2023–2025 hindcasts"
+  absolute: null
+reach: "Jamaica (pop. ~2.8M), Haiti, Cuba, Bahamas; 2025 Atlantic season"
+dates:
+  achieved_start: 2025-10-25
+  achieved_end: 2025-10-28
+  published: 2025-11-29
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "NWS: AI hurricane forecasting Q&A (2025 season)"
+    url: https://www.weather.gov/news/261102-AI-Hurricane-Forecasting
+    type: primary
+  - title: "Michael Lowry: Two forecast models stand out (2025 season verification)"
+    url: https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast
+    type: primary
+  - title: "NPR: The future of hurricane forecasting is AI"
+    url: https://www.npr.org/2025/11/29/nx-s1-5604290/atlantic-hurricane-season-forecast-ai-google
+    type: secondary
+  - title: "CNN: Why NHC bet big on AI to forecast Isaias (Oct 2026)"
+    url: https://www.cnn.com/2026/10/08/weather/hurricane-isaias-ai-models-google
+    type: secondary
+  - title: "Gizmodo: WeatherNext Cyclones gives an extra day of warning"
+    url: https://gizmodo.com/google-deepminds-hurricane-forecast-model-provides-a-whole-extra-day-of-warning-2000800635
+    type: secondary
+conflicts: "Google partnered with NHC to train and evaluate the model; verification stats are from NHC and an independent former NHC branch chief."
+what_would_change: "A published NHC verification report quantifying the official forecast's error with and without the DeepMind input would move attribution from isolated toward a hard number."
+notes: >-
+  verify: exact NHC advisory time of the first explicit Cat 5 forecast; final Jamaica
+  death toll and any evacuation-timing analysis.
+related: [flood-hub-flash-floods]
+history:
+  - date: 2026-10-22
+    note: "Added."

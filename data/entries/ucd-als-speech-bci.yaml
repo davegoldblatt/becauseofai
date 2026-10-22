@@ -1,0 +1,45 @@
+id: ucd-als-speech-bci
+section: because
+rank: 10
+headline: >-
+  Because of AI, a man with ALS has spoken with his family and kept working from
+  home for two years through a brain implant, at up to 99% word accuracy.
+impact: "2 years of independent speech"
+summary: >-
+  UC Davis's intracortical BCI uses deep-learning brain-to-text and cursor
+  decoders with continuous fine-tuning; Nature Medicine (June 2026) documented
+  Casey Harrell's near-daily unassisted use at home for roughly two years.
+caveat: >-
+  One participant, an experimental device implanted in 2023, not commercially
+  available; some BCIs in other ALS patients have later stopped working.
+domain: accessibility
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: only-path
+  window: ongoing
+comparison: "No alternative communication path at comparable speed existed for this participant"
+effect:
+  relative: null
+  absolute: "Up to 99% word accuracy; ~2 years independent home use"
+reach: "One participant"
+dates:
+  achieved_start: 2023-07
+  achieved_end: null
+  published: 2026-06-15
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Nature Medicine: Long-term independent use of an intracortical BCI for speech and cursor control"
+    url: https://www.nature.com/articles/s41591-026-04414-6
+    type: primary
+  - title: "UC Davis Health news release"
+    url: https://health.ucdavis.edu/news/headlines/brain-computer-interface-enables-independent-accurate-communication-for-man-living-with-als/2026/06
+    type: secondary
+conflicts: "Academic; verify device-maker relationships in the paper."
+what_would_change: "Multi-participant results with durability data would move evidence to C/B."
+notes: null
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

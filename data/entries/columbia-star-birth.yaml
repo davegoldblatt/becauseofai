@@ -1,0 +1,51 @@
+id: columbia-star-birth
+section: because
+rank: 3
+headline: >-
+  Because of AI, a baby girl was born to a couple who had been told there was
+  no sperm to work with.
+impact: "2 sperm found in 2.5M images"
+summary: >-
+  Columbia's STAR system scanned 2.5 million images of a 3.5 mL sample in about
+  two hours and found viable sperm where manual microscopy found none; the
+  resulting pregnancy was confirmed in 2025, published in The Lancet in
+  October 2025, and a healthy daughter was born in late 2025.
+caveat: >-
+  One case; STAR finds sperm in just under 30% of men diagnosed with
+  azoospermia, and larger trials are still underway.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: only-path
+  window: in
+comparison: "Manual microscopy by trained technicians on the same sample (found none) vs STAR"
+effect:
+  relative: "~40x more sperm recovered than manual search across cases reported by the team"
+  absolute: "1 live birth; sperm found in ~30% of azoospermia patients tested"
+reach: "Columbia University Fertility Center only"
+dates:
+  achieved_start: 2025-03
+  achieved_end: 2025-12
+  published: 2025-10-31
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Columbia / The Lancet: First clinical pregnancy following AI-based microfluidic sperm detection (press release)"
+    url: https://www.eurekalert.org/news-releases/1104028
+    type: primary
+  - title: "National Geographic: The first AI-assisted IVF babies are now being born"
+    url: https://nationalgeographic.com/health/article/ivf-ai-assisted-reproductive-technology
+    type: secondary
+  - title: "Decrypt/BBC: Doctors use AI to spot hidden sperm (birth confirmed)"
+    url: https://decrypt.co/366374/doctors-ai-hidden-sperm-men-study
+    type: secondary
+conflicts: "Two authors are inventors on Columbia patent applications for STAR."
+what_would_change: "A multi-center series with live-birth rates would move evidence to B or C."
+notes: >-
+  verify: reports differ on which couple was the first (a 19-year infertility case
+  in the Lancet letter vs a Klinefelter case in BBC coverage); confirm birth month.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

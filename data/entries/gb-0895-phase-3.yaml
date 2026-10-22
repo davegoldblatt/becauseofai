@@ -1,0 +1,40 @@
+id: gb-0895-phase-3
+section: not-yet
+rank: 2
+headline: >-
+  An AI-optimized antibody for severe asthma is in Phase 3 with ~1,600 patients —
+  no AI-designed antibody has been approved.
+impact: "Phase 3 enrolling"
+summary: >-
+  Generate:Biomedicines' GB-0895 started the SOLAIRIA-1 Phase 3 study in
+  December 2025.
+caveat: >-
+  The antibody was optimized with AI, not designed from scratch; readout timing
+  unannounced.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: null
+  attribution: null
+  window: null
+comparison: null
+effect: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-12-03
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "IntuitionLabs: AI-discovered drugs in clinical trials 2026"
+    url: https://intuitionlabs.ai/articles/ai-discovered-drugs-clinical-trials-2026
+    type: secondary
+conflicts: "Sponsor announcements via secondary tracker."
+what_would_change: "Phase 3 primary endpoint result; then approval; then treated patients."
+notes: >-
+  verify: primary source (ClinicalTrials.gov entry for SOLAIRIA-1).
+related: [rentosertib-phase-3]
+history:
+  - date: 2026-10-22
+    note: "Added."

@@ -1,0 +1,51 @@
+id: sierra-leone-gemini-math
+section: because
+rank: 8
+headline: >-
+  Because of AI (plus tablets and pair work), junior secondary students in
+  Sierra Leone gained about 0.26 standard deviations in math in eight weeks.
+impact: "+0.26 SD in 8 weeks"
+summary: >-
+  A preregistered classroom-level cluster RCT of 1,763 Grade 7–8 students in 48
+  classrooms across 12 Port Loko schools had treatment classes use Gemini's
+  Guided Learning in pairs for about two of four weekly math lessons; the
+  treatment group gained +0.258 SD on independently administered tests.
+caveat: >-
+  The control arm got neither tablets nor structured pair work, so the package
+  was tested, not the AI; results are a Google DeepMind/Fab AI technical
+  report, not a peer-reviewed paper.
+domain: education
+ai_type: generative
+grades:
+  evidence: A
+  attribution: bundled
+  window: in
+comparison: "Gemini-integrated lessons vs business-as-usual instruction, classroom-level randomization"
+effect:
+  relative: "+0.258 SD (described as ~1.2–1.7 years of typical progress)"
+  absolute: null
+reach: "1,763 students, 12 schools, Port Loko District"
+dates:
+  achieved_start: 2025-10
+  achieved_end: 2025-12
+  published: 2026-05
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Google DeepMind & Fab AI technical report (May 2026)"
+    url: https://storage.googleapis.com/deepmind-media/LearnLM/learnLM_sierraleone_may26.pdf
+    type: primary
+  - title: "AEA RCT Registry 16651"
+    url: https://www.socialscienceregistry.org/trials/16651
+    type: primary
+  - title: "DeepMind blog summary"
+    url: https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/
+    type: secondary
+conflicts: "Google authored the report and makes the product."
+what_would_change: "An active-control arm (tablets + pair work, no AI) would isolate attribution — see the China CAL trial for why that matters."
+notes: >-
+  verify: exact intervention dates (registry lists Sept 2025–Mar 2026 for the study overall).
+related: [china-ai-cal-null, maryland-ai-tutor-negative]
+history:
+  - date: 2026-10-22
+    note: "Added."

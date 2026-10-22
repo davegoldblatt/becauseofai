@@ -1,0 +1,53 @@
+id: nhs-derm-skin-cancer
+section: because
+rank: 6
+headline: >-
+  Because of AI, about a third of urgent skin-cancer referrals at some NHS
+  hospitals got a same-day all-clear without waiting weeks for a dermatologist.
+impact: "25,000+ cancers found; ~1/3 discharged same day"
+summary: >-
+  Skin Analytics' DERM, the only AI with Class III CE certification for
+  autonomous use, has assessed 250,000+ NHS patients, identified 25,000+
+  histology-confirmed cancers, and is expanding to all 18 NHS South East trusts
+  (about 9 million more people) from autumn 2026.
+caveat: >-
+  Operational data from the vendor and trusts; at one district hospital the
+  autonomous pathway discharged 37% of referrals and missed one basal cell
+  carcinoma.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: only-path
+  window: ongoing
+comparison: "Autonomous AI triage vs dermatologist face-to-face review (capacity-constrained usual care)"
+effect:
+  relative: "Discharge-without-appointment rate 26% with dermatologist second read → 37% autonomous (one hospital)"
+  absolute: "250,000+ assessed; 25,000+ cancers confirmed"
+reach: "25 NHS trusts; +18 trusts from autumn 2026; Northern Ireland (1.9M)"
+dates:
+  achieved_start: 2022-01
+  achieved_end: null
+  published: 2026-10-09
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "NICE early value assessment of DERM (May 2025)"
+    url: https://www.healthtechdigital.com/?p=237510
+    type: primary
+  - title: "NIHR HTA: DERM and Moleanalyzer Pro clinical and cost-effectiveness (Feb 2026)"
+    url: https://njl-admin.nihr.ac.uk/document/download/2049990
+    type: primary
+  - title: "BJD abstract: implementing DERM at an NHS district hospital"
+    url: https://www.citedrive.com/en/discovery/ai04-implementing-ai-derm-technology-into-the-urgent-skin-cancer-pathway-at-an-nhs-district-hospital-is-it-worth-it/
+    type: primary
+  - title: "HLTH: NHS South East expands DERM across 18 trusts"
+    url: https://hlth.com/insights/news/nhs-england-south-east-expands-skin-analytics-ai-skin-cancer-screening-across-18-trusts
+    type: secondary
+conflicts: "Patient and cancer counts come from the vendor's monitoring data."
+what_would_change: "Published missed-cancer rates across all autonomous sites, or NICE's post-evidence-generation decision, would move evidence to B."
+notes: null
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

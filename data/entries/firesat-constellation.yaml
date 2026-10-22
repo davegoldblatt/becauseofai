@@ -1,0 +1,40 @@
+id: firesat-constellation
+section: not-yet
+rank: 4
+headline: >-
+  Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit;
+  no fire-response outcome has been measured yet.
+impact: "3 satellites in orbit"
+summary: >-
+  The Earth Fire Alliance / Google constellation's pilot already spotted small
+  blazes invisible to existing satellites; the three operational satellites
+  launched July 7, 2026, with 50+ planned by 2030.
+caveat: >-
+  Detection is not response; no published case yet of a fire contained earlier
+  because of a FireSat alert.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: null
+  attribution: null
+  window: null
+comparison: null
+effect: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-07
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Google: Three new FireSat satellites launch"
+    url: https://blog.google/innovation-and-ai/models-and-research/google-research/firesat-satellites/
+    type: primary
+conflicts: "Google.org funds the constellation."
+what_would_change: "A documented detection with a timestamp ahead of other systems and a fire-agency response outcome."
+notes: null
+related: [hurricane-melissa-2025]
+history:
+  - date: 2026-10-22
+    note: "Added."

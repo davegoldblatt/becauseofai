@@ -1,0 +1,55 @@
+id: waymo-injury-crashes
+section: because
+rank: 2
+headline: >-
+  Because of AI, there were an estimated 841 fewer injury-causing crashes across
+  270 million driverless miles.
+impact: "82% fewer injury crashes"
+summary: >-
+  Waymo's safety hub through June 2026 reports 82% fewer injury-causing crashes
+  and 95% fewer serious-or-worse crashes than a geographically matched human
+  benchmark, with roughly 134 of the 841 avoided injury crashes accruing in
+  Q2 2026 alone (841 minus the 707 reported through March 2026).
+caveat: >-
+  Company-produced, modeled comparison against an estimated human benchmark
+  with an adjustment for roughly 32% underreporting of human injury crashes;
+  not a randomized comparison of identical trips.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: isolated
+  window: ongoing
+comparison: "Waymo rider-only miles vs human-driver crash rates in the same ZIP codes and period, adjusted for underreporting"
+effect:
+  relative: "82% fewer injury crashes; 95% fewer serious-or-worse"
+  absolute: "0.67 injury crashes per million miles vs ~3.77 benchmark; 841 fewer injury crashes lifetime"
+reach: "Phoenix, SF Bay Area, Los Angeles, Austin, Atlanta; ~4M miles/week by mid-2026"
+dates:
+  achieved_start: 2019-01
+  achieved_end: 2026-06-30
+  published: 2026-09-24
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Waymo Safety Impact hub"
+    url: https://waymo.com/safety/impact/
+    type: primary
+  - title: "Waymo: safety data update, Sept 2026"
+    url: https://waymo.com/blog/shorts/safetydata-september26/
+    type: primary
+  - title: "Waymo: safety data update, June 2026 (through March 2026)"
+    url: https://waymo.com/blog/shorts/safetydata-june26/
+    type: primary
+  - title: "Parameter: IIHS commentary on Waymo data release"
+    url: https://parameter.io/waymo-autonomous-vehicles-slash-injury-crashes-by-more-than-80/
+    type: secondary
+conflicts: "Waymo owns the data and the benchmark methodology; IIHS has commended the transparency but not independently audited the counts."
+what_would_change: "An independent (NHTSA, IIHS, academic) replication of the benchmark on the same miles would move evidence to B."
+notes: >-
+  The 841 figure is lifetime. For a strict 12-month view use the quarterly deltas:
+  ~134 avoided injury crashes in Q2 2026 across ~51M miles.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

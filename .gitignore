@@ -1,4 +1,15 @@
-.engos/
-node_modules/
+# build output
 dist/
+.astro/
+# dependencies
+node_modules/
+# Eng OS run state and planning scratch (clone-shared, never committed)
+.engos/
+# environment
+.env
+.env.production
+# macOS
 .DS_Store
+# jetbrains / vscode local
+.idea/
+.vscode/

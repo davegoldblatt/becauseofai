@@ -1,0 +1,43 @@
+id: oman-ai-retinopathy
+section: because
+rank: 14
+headline: >-
+  Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000
+  for treatment, and cut specialist waiting lists by 87%.
+impact: "Waitlists cut 87%"
+summary: >-
+  Oman's national AI diabetic-retinopathy screening program reported 43,000+
+  patients screened, ~30% referred for specialist examination, an 87% reduction
+  in eye-clinic waiting lists, and 43.2% lower annual operating costs.
+caveat: >-
+  Ministry-reported program figures with no comparison group; vision outcomes
+  (sight saved) are not yet measured.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: in
+comparison: "None (program before/after)"
+effect:
+  relative: "−87% waiting list; −43.2% operating cost"
+  absolute: "43,000+ screened; 12,000+ referred"
+reach: "Oman national program"
+dates:
+  achieved_start: null
+  achieved_end: 2026-08
+  published: 2026-08-24
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Muscat Daily: Oman turns to AI to tackle diabetes-related blindness"
+    url: https://www.muscatdaily.com/2026/08/24/oman-turns-to-ai-to-tackle-diabetes-related-blindness/
+    type: primary
+conflicts: "Ministry of Health self-report."
+what_would_change: "Rates of sight-threatening retinopathy treated in time, vs the prior program."
+notes: >-
+  verify: program start date; which AI vendor.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

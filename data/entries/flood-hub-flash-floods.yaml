@@ -1,0 +1,42 @@
+id: flood-hub-flash-floods
+section: not-yet
+rank: 5
+headline: >-
+  Google's urban flash-flood model now gives up to 24 hours' notice worldwide;
+  whether anyone acted on an alert hasn't been measured.
+impact: "24h flash-flood alerts, global"
+summary: >-
+  Launched March 2026, the model is trained on news-derived ground truth, with
+  precision and recall in South America and Southeast Asia comparable to rich
+  countries; Flood Hub covers 150+ countries.
+caveat: >-
+  Evaluated against flood records, not against outcomes for people.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: null
+  attribution: null
+  window: null
+comparison: null
+effect: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-03-09
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Google Research: Protecting cities with AI-driven flash flood forecasting"
+    url: https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/
+    type: primary
+  - title: "EarthArXiv preprint: AI expands urban flash flood forecasts globally"
+    url: https://eartharxiv.org/repository/object/12082/download/21671/
+    type: primary
+conflicts: "Google authored the evaluation."
+what_would_change: "An independent impact evaluation (evacuations, losses) tied to specific alerts."
+notes: null
+related: [hurricane-melissa-2025]
+history:
+  - date: 2026-10-22
+    note: "Added."

@@ -1,0 +1,48 @@
+id: tricorder-ai-stethoscope-null
+section: not-because
+rank: 1
+headline: >-
+  An AI stethoscope rolled out to 205 NHS GP practices did not significantly
+  increase heart-failure detection at 12 months.
+impact: "Null on intention-to-treat"
+summary: >-
+  TRICORDER (Lancet, Jan 2026) cluster-randomized practices covering 1.5 million
+  patients; on intention-to-treat, heart failure, AF, and valve-disease detection
+  did not significantly rise (1,342 vs 1,984 new HF cases overall), though
+  patients actually examined with the device had roughly twice the HF detection
+  and three times the AF detection.
+caveat: >-
+  The tool worked when used; the deployment didn't get it used — a workflow
+  failure, not a model failure.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Practices with AI stethoscope vs usual care, cluster-randomized, 12 months"
+effect:
+  relative: "HF IRR ~0.94 (n.s.); subgroup examined: ~2x HF, ~3x AF detection"
+  absolute: null
+reach: "205 practices, North West London"
+dates:
+  achieved_start: 2023
+  achieved_end: 2024
+  published: 2026-01-29
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Lancet: TRICORDER cluster-randomised implementation trial"
+    url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)02156-7/fulltext
+    type: primary
+  - title: "Imperial College news summary"
+    url: https://www.imperial.ac.uk/news/articles/medicine/nhli/2026/ai-enabled-stethoscopes-show-promise-for-improving-diagnosis-of-cardiovascular-conditions-uk-trial-finds/
+    type: secondary
+conflicts: "Eko Health supplied devices and publicized subgroup results before the primary analysis."
+what_would_change: null
+notes: >-
+  verify: exact implementation period.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

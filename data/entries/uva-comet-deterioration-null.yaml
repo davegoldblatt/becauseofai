@@ -1,0 +1,43 @@
+id: uva-comet-deterioration-null
+section: not-because
+rank: 2
+headline: >-
+  Displaying AI deterioration-risk scores on a cardiology ward did not improve
+  patient outcomes across 10,422 admissions.
+impact: "No change in primary outcome"
+summary: >-
+  A cluster-randomized trial at UVA (Scientific Reports, Feb 2026) showed CoMET
+  risk trajectories on screens for intervention beds; event-free hours did not
+  differ, and clinicians moved 11% of patients into or out of display beds,
+  undermining the design.
+caveat: >-
+  Passive display with no mandated response, run during COVID-era staffing;
+  sicker patients were preferentially moved into AI-monitored beds.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Display-on vs display-off beds, cluster-randomized by room"
+effect:
+  relative: "No significant difference in event-free hours or 21-day mortality"
+  absolute: null
+reach: "10,422 inpatient visits, 85 beds"
+dates:
+  achieved_start: 2021-01-04
+  achieved_end: 2022-10-04
+  published: 2026-02-05
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Scientific Reports: A randomized controlled trial of AI-based analytics for clinical deterioration"
+    url: https://www.nature.com/articles/s41598-026-39051-z
+    type: primary
+conflicts: "In-kind support from Nihon Kohden; two authors consult for the vendor."
+what_would_change: null
+notes: null
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

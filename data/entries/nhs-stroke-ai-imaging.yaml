@@ -1,0 +1,45 @@
+id: nhs-stroke-ai-imaging
+section: because
+rank: 11
+headline: >-
+  Because of AI, stroke patients in England were 57% more likely to get a
+  thrombectomy and reached specialist centres 64 minutes faster.
+impact: "EVT odds 1.57x; 64 min faster transfer"
+summary: >-
+  Across ~453,000 stroke admissions at 107 English hospitals over five years,
+  patients whose imaging was reviewed with Brainomix 360 had higher thrombectomy
+  odds (OR 1.57), median door-in-door-out of 128 vs 192 minutes, and a good
+  outcome (mRS 0–2) at discharge of 47.1% vs 45.6% (OR 1.16).
+caveat: >-
+  Observational, not randomized; long-term outcomes couldn't be evaluated and
+  reasons for non-use of the AI in some cases weren't captured.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Patients reviewed with AI software vs without, adjusted for age, severity, premorbid disability, timing"
+effect:
+  relative: "OR 1.57 for thrombectomy; OR 1.16 for good outcome"
+  absolute: "Good outcome 47.1% vs 45.6% (15 more per 1,000); DIDO 64 min shorter"
+reach: "107 hospitals, England; patient-level data on 71,017 ischemic strokes"
+dates:
+  achieved_start: 2019
+  achieved_end: 2024
+  published: 2025-12
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Lancet Digital Health: AI imaging decision support for acute stroke in England"
+    url: https://www.thelancet.com/journals/landig/article/PIIS2589-7500(25)00109-8/fulltext
+    type: primary
+conflicts: "verify: Brainomix involvement in authorship or funding."
+what_would_change: null
+notes: >-
+  verify: exact observation period and publication date; window grade assumes the
+  5-year data period ended before Oct 2025.
+related: [golden-bridge-ii-stroke]
+history:
+  - date: 2026-10-22
+    note: "Added."

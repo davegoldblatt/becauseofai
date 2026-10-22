@@ -1,0 +1,53 @@
+id: fortell-ai-hearing-aids
+section: because
+rank: 12
+headline: >-
+  Because of AI, 30 hearing-aid users understood far more words in heavy noise —
+  according to the company that makes the device.
+impact: "31% → 80% words understood (company trial)"
+summary: >-
+  Fortell's neural source-separation hearing aid (launched Dec 2025) reports a
+  pre-registered double-blind 30-person trial against Phonak's Audéo Infinio
+  Sphere showing a 9.2 dB vs 3.1 dB signal-to-noise improvement on QuickSIN,
+  alongside a 20-person blinded preference study published in the International
+  Journal of Audiology (May 2026).
+caveat: >-
+  Both studies are Fortell-funded with a Fortell employee as first author, the
+  control device also uses neural-network noise reduction, and the 30-person
+  intelligibility trial was posted on the company's site rather than confirmed
+  in a journal as of October 2026.
+domain: accessibility
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: ai-vs-ai
+  window: in
+comparison: "Fortell Spatial AI vs leading competitor AI hearing aid, within-subject crossover"
+effect:
+  relative: "9.2 dB vs 3.1 dB SNR improvement; ~19x odds of correct word recognition (company figures)"
+  absolute: "Company-reported: 69%→90%, 31%→80%, 7%→50% words correct across noise levels"
+reach: "Prescription product, 30+ US states as of Oct 2026"
+dates:
+  achieved_start: 2025-11
+  achieved_end: null
+  published: 2026-05-11
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "IJA: Spatial AI consistently preferred to state-of-the-art hearing aids in multitalker noise"
+    url: https://www.tandfonline.com/doi/full/10.1080/14992027.2026.2663345
+    type: primary
+  - title: "Fortell evidence page (intelligibility trial)"
+    url: https://www.fortell.com/evidence
+    type: primary
+  - title: "Independent summary: what is actually known about Fortell"
+    url: https://www.audiologyassociates.org/fortell-hearing-aids-what-we-know
+    type: secondary
+conflicts: "Fortell Research funded both studies; first author is a Fortell employee."
+what_would_change: "Independent replication, or a comparison against a non-AI hearing aid, would move attribution and evidence."
+notes: >-
+  verify: a claimed Oct 8, 2026 IJA publication of the 30-person trial (PubMed 42850968) could not be confirmed.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

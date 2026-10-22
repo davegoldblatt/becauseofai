@@ -1,0 +1,48 @@
+id: ucla-chart-summarizer-rct
+section: because
+rank: 16
+headline: >-
+  Because of AI, 284 UCLA clinicians reported modestly lower task load and
+  burnout from a chart summarizer — while saving no time and mostly not
+  recommending it.
+impact: "Lower task load, zero time saved"
+summary: >-
+  A pragmatic RCT (Feb–May 2026) of Epic's generative chart summarization tool
+  among 284 ambulatory clinicians found modestly reduced physician task load and
+  lower burnout, no time savings, declining engagement, and a net promoter score
+  of −22.
+caveat: >-
+  Preprint (medRxiv, Aug 2026), self-reported outcomes, three-month window, one
+  health system.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: in
+comparison: "Tool access vs usual pre-charting workflow, 1:1 randomization for 90 days"
+effect:
+  relative: "Modest task-load reduction (primary endpoint met)"
+  absolute: null
+reach: "284 clinicians, UCLA Health"
+dates:
+  achieved_start: 2026-02
+  achieved_end: 2026-05
+  published: 2026-08-26
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "medRxiv: A pragmatic randomized trial of an EHR-integrated generative AI chart summarization tool"
+    url: https://www.medrxiv.org/content/10.64898/2026.08.26.26361496.full.pdf
+    type: primary
+  - title: "ClinicalTrials.gov NCT07438743"
+    url: https://clinicaltrials.gov/study/NCT07438743
+    type: primary
+conflicts: "Epic's tool evaluated by its customer; no vendor funding reported — verify."
+what_would_change: null
+notes: >-
+  Included as the honest floor for generative AI in clinical workflow.
+related: [ambient-scribes-nejm-ai]
+history:
+  - date: 2026-10-22
+    note: "Added."

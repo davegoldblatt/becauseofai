@@ -1,0 +1,46 @@
+id: rentosertib-phase-3
+section: not-yet
+rank: 1
+headline: >-
+  The first generative-AI-discovered drug entered Phase III in September 2026 —
+  no AI-discovered drug has yet been approved anywhere.
+impact: "Phase III started; 0 approvals"
+summary: >-
+  Insilico dosed the first patient in GENESIS-IPF-3 (320 patients, 47 Chinese
+  sites, 52-week FVC primary endpoint) for rentosertib in idiopathic pulmonary
+  fibrosis after a Phase IIa signal published in Nature Medicine (2025).
+caveat: >-
+  Primary completion is estimated for late 2029; Phase IIa was 71 patients over
+  12 weeks.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: null
+  attribution: null
+  window: null
+comparison: null
+effect: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-10
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Insilico: first patient dosed in GENESIS-IPF-3"
+    url: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
+    type: primary
+  - title: "ClinicalTrials.gov NCT07687459"
+    url: https://clinicaltrials.gov/study/NCT07687459
+    type: primary
+conflicts: "Sponsor announcements."
+what_would_change: >-
+  A positive 52-week FVC result, then regulatory approval, then patients treated
+  outside a trial — each step moves it closer; approval alone does not make it a
+  "because" entry.
+notes: null
+related: [gb-0895-phase-3]
+history:
+  - date: 2026-10-22
+    note: "Added."

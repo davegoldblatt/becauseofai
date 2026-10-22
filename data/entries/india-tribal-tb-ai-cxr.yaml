@@ -1,0 +1,44 @@
+id: india-tribal-tb-ai-cxr
+section: because
+rank: 5
+headline: >-
+  Because of AI, TB case notifications rose 80% in a tribal district of
+  Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.
+impact: "+80% TB notifications"
+summary: >-
+  A prospective multi-centre study of qXR v3 chest X-ray reading found an 80.21%
+  increase in TB notifications versus the Aug 2022–Mar 2023 baseline; of 51
+  asymptomatic people the AI flagged, 20 were confirmed to have TB, and over 40%
+  of all AI-flagged patients were confirmed.
+caveat: >-
+  Before-and-after design in a high-burden setting; national notifications were
+  also rising from other case-finding efforts.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: only-path
+  window: pre
+comparison: "AI implementation period vs pre-implementation baseline (same sites)"
+effect:
+  relative: "+80.21% notifications (p<.001)"
+  absolute: "162 confirmed cases; 44.6% positivity among AI-flagged"
+reach: "High-risk tribal population, Chhattisgarh"
+dates:
+  achieved_start: 2023-04
+  achieved_end: null
+  published: 2026-01-07
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Evaluating AI-based chest X-ray screening for TB in tribal Chhattisgarh (PMC)"
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12810203/
+    type: primary
+conflicts: "verify: author affiliations and vendor (Qure.ai) involvement."
+what_would_change: null
+notes: >-
+  verify: end date of the AI implementation period.
+related: [ethiopia-tb-ai-cxr]
+history:
+  - date: 2026-10-22
+    note: "Added."

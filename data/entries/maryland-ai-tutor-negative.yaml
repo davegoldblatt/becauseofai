@@ -1,0 +1,42 @@
+id: maryland-ai-tutor-negative
+section: not-because
+rank: 3
+headline: >-
+  A GPT-4o tutor built into a university learning platform was associated with
+  lower grades in a 2,379-student randomized trial.
+impact: "Lower grades (RCT)"
+summary: >-
+  A University of Maryland working paper (Oct 2026) randomized 30 instructors in
+  fall 2025 to a course-integrated GPT-4o tutor drawing on their own materials;
+  students with the tutor performed worse.
+caveat: >-
+  Working paper, not yet peer-reviewed; effect sizes and mechanisms to verify.
+domain: education
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: in
+comparison: "Tutor access vs none, instructor-level randomization"
+effect:
+  relative: "Lower performance in the tutor arm (verify magnitude)"
+  absolute: null
+reach: "2,379 undergraduates, 30 instructors"
+dates:
+  achieved_start: 2025-08
+  achieved_end: 2025-12
+  published: 2026-10
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "World Assessment Council summary of EdWorkingPaper 26-1598"
+    url: https://worldassessmentcouncil.org/spotlight/ai-tutors-beat-good-teaching-and-cut-grades-design-decides/
+    type: secondary
+conflicts: "none found"
+what_would_change: null
+notes: >-
+  verify: locate the EdWorkingPaper itself and record the primary effect size; currently only a secondary source.
+related: [sierra-leone-gemini-math]
+history:
+  - date: 2026-10-22
+    note: "Added — needs primary source before it renders."

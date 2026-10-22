@@ -1,0 +1,47 @@
+id: china-ai-cal-null
+section: not-because
+rank: 4
+headline: >-
+  AI-personalized computer-assisted learning did no better than non-personalized
+  software for 8,647 rural Chinese primary students.
+impact: "Null vs active control"
+summary: >-
+  Stanford REAP and collaborators randomized 315 classes in 105 Sichuan schools
+  to AI-personalized CAL, non-personalized CAL, or non-CAL activities; the AI arm
+  showed no improvement in any ability tercile and may have been worse than
+  plain CAL for the middle tercile.
+caveat: >-
+  One AI product, one province; the active-control design is exactly what the
+  Sierra Leone trial lacked.
+domain: education
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "AI-CAL vs non-personalized CAL (active control) vs pure control"
+effect:
+  relative: "No significant effect of AI-CAL on math scores"
+  absolute: null
+reach: "8,647 students, 105 schools, Sichuan"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "SSRN: Putting AI to the Test — Evidence from a Large-Scale RCT in Rural China"
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7195260
+    type: primary
+  - title: "CESifo working paper version"
+    url: https://www.ifo.de/DocDL/cesifo1_wp12837.pdf
+    type: primary
+conflicts: "none found"
+what_would_change: null
+notes: >-
+  verify: intervention dates to set window grade.
+related: [sierra-leone-gemini-math]
+history:
+  - date: 2026-10-22
+    note: "Added."

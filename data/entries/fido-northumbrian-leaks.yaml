@@ -1,0 +1,47 @@
+id: fido-northumbrian-leaks
+section: because
+rank: 13
+headline: >-
+  Because of AI, Northumbrian Water stopped losing about 6.4 million litres of
+  drinking water a day.
+impact: "~6.4 ML/day saved"
+summary: >-
+  A six-month trial starting November 2025 placed FIDO Tech acoustic sensors on
+  pipes, with AI classifying which underground sounds are leaks and directing
+  crews; the utility reported early results of nearly 6.4 megalitres per day
+  saved.
+caveat: >-
+  Operational report, no controlled comparison, and the saving is attributable
+  to the detect-and-repair package; FIDO had already delivered a 37% leakage
+  reduction across 15 target DMAs at the same utility in 2022–23.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: in
+comparison: "None (before/after reported by the utility)"
+effect:
+  relative: null
+  absolute: "~6.4 ML/day (~25,000 bathtubs)"
+reach: "Northumbrian Water network, North East England (4.4M customers)"
+dates:
+  achieved_start: 2025-11
+  achieved_end: 2026-05
+  published: 2026-06
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Northumbrian Water: AI technology helps to hunt down leaks"
+    url: https://www.nwg.co.uk/news-and-media/news-releases/ai-technology-helps-to-hunt-down-leaks/
+    type: primary
+  - title: "FIDO Direct / Northumbrian 37% reduction (2023)"
+    url: https://www.wateronline.com/doc/fido-direct-launched-as-end-to-end-solution-to-solve-water-loss-0001
+    type: secondary
+conflicts: "Utility and vendor joint announcement."
+what_would_change: "Leakage figures vs a matched set of DMAs using conventional detection in the same period."
+notes: null
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

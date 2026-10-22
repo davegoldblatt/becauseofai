@@ -1,0 +1,51 @@
+id: golden-bridge-ii-stroke
+section: because
+rank: 7
+headline: >-
+  Because of AI-assisted decision support, 10 fewer stroke patients per 1,000
+  had another stroke, heart attack, or vascular death within three months.
+impact: "26% fewer vascular events"
+summary: >-
+  GOLDEN BRIDGE II (BMJ, March 2026) cluster-randomized 77 Chinese hospitals and
+  21,603 acute ischemic stroke patients; new vascular events at three months were
+  2.9% with the AI-imaging decision-support system vs 3.9% with usual care
+  (adjusted HR 0.71), with the benefit holding through 12 months.
+caveat: >-
+  Hospitals, not patients, were randomized, and the intervention bundled AI
+  image analysis with guideline-based treatment prompts, so the AI's isolated
+  contribution isn't separable; enrollment ran January 2021 to June 2023.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "Hospitals with AI-CDSS vs usual care; primary endpoint composite vascular events at 3 months"
+effect:
+  relative: "26% relative reduction (HR 0.71)"
+  absolute: "3.9% → 2.9%: 10 fewer events per 1,000 patients"
+reach: "21,603 patients, 77 hospitals, 23 provinces"
+dates:
+  achieved_start: 2021-01
+  achieved_end: 2023-06
+  published: 2026-03-20
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "BMJ 2026;392:e085810 (press release with trial figures)"
+    url: https://www.eurekalert.org/news-releases/1120567
+    type: primary
+  - title: "ClinicalTrials.gov NCT04524624"
+    url: https://clinicaltrials.gov/study/NCT04524624
+    type: primary
+  - title: "Urban Health Today summary (enrollment dates)"
+    url: https://www.urbanhealthtoday.com/post/use-of-ai-stroke-tool-leads-to-reduced-vascular-events-in-chinese-hospitals
+    type: secondary
+conflicts: "verify: CDSS vendor and funding disclosures in the BMJ paper."
+what_would_change: "A factorial design separating AI imaging from guideline prompts would resolve attribution."
+notes: >-
+  Worked example on /method for the achieved-vs-published rule.
+related: [nhs-stroke-ai-imaging]
+history:
+  - date: 2026-10-22
+    note: "Added."

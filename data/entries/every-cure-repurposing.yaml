@@ -1,0 +1,43 @@
+id: every-cure-repurposing
+section: not-yet
+rank: 3
+headline: >-
+  Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far
+  came from clinicians or predate the window.
+impact: "$76M ARPA-H; 10 programs"
+summary: >-
+  The nonprofit reviewed 9,000+ repurposing opportunities in 2025 and has ten
+  active programs; the AI-identified adalimumab–Castleman case (NEJM) was
+  February 2025, and the DFMO–Bachmann-Bupp program (six treated, five children
+  improved) originated with the researchers who identified the disease.
+caveat: >-
+  No in-window patient outcome attributable to an AI-identified match yet.
+domain: medicine
+ai_type: hybrid
+grades:
+  evidence: null
+  attribution: null
+  window: null
+comparison: null
+effect: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-26
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Every Cure: up to $76M from ARPA-H"
+    url: https://everycure.org/phase2/
+    type: primary
+  - title: "CNBC: Every Cure's drug repurposing strategy"
+    url: https://www.cnbc.com/2026/03/27/every-cure-drug-repurposing-rare-disease-treatment.html
+    type: secondary
+conflicts: "Nonprofit self-reporting."
+what_would_change: "A documented patient outcome where the drug–disease match originated from the MATRIX platform, with dates."
+notes: null
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

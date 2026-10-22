@@ -1,0 +1,52 @@
+id: masai-ai-mammography
+section: because
+rank: 9
+headline: >-
+  Because of AI, Swedish mammography screening found 29% more cancers with 44%
+  less radiologist reading time, and 12% fewer cancers surfaced between screens.
+impact: "29% more cancers, 44% less workload"
+summary: >-
+  MASAI, the first RCT of AI in cancer screening (105,934 women; Lancet, Jan 2026),
+  reported interval cancers of 1.55 vs 1.76 per 1,000 with AI-supported reading
+  vs standard double reading, with fewer invasive, T2+, and non-luminal-A
+  interval cancers, on top of earlier results showing higher detection and lower
+  workload at the same specificity.
+caveat: >-
+  The trial was designed for non-inferiority; the 12% interval-cancer reduction
+  was not statistically significant (ratio 0.88, 95% CI 0.65–1.18, p=0.41),
+  mortality wasn't measured, and screening took place in 2021–2022.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "AI-supported single/double reading vs standard double reading, individually randomized"
+effect:
+  relative: "12% fewer interval cancers (n.s.); 29% more screen-detected cancers; 44% workload reduction"
+  absolute: "1.55 vs 1.76 interval cancers per 1,000 (0.21 per 1,000 difference)"
+reach: "105,934 women, Sweden national screening programme"
+dates:
+  achieved_start: 2021-04
+  achieved_end: 2022-12
+  published: 2026-01-29
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Lancet 2026;407:505-514 (ScienceDirect)"
+    url: https://www.sciencedirect.com/science/article/abs/pii/S014067362502464X
+    type: primary
+  - title: "ASCO Post summary with interval cancer rates"
+    url: https://ascopost.com/news/february-2026/interval-cancer-rate-with-ai-supported-mammography-screening/
+    type: secondary
+  - title: "Cancer (Wiley) summary"
+    url: https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.70440
+    type: secondary
+conflicts: "ScreenPoint Medical (Transpara) provided the software and publicized results; academic sponsor Lund University."
+what_would_change: "Breast-cancer-specific mortality follow-up, or a replication powered for superiority."
+notes: >-
+  verify: exact screening enrollment dates from the Lancet methods.
+related: []
+history:
+  - date: 2026-10-22
+    note: "Added."

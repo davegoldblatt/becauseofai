@@ -1,0 +1,46 @@
+id: ethiopia-tb-ai-cxr
+section: because
+rank: 4
+headline: >-
+  Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and
+  March 2026 in screening programs that had no radiologist to read the X-rays.
+impact: "1,660 TB cases found"
+summary: >-
+  AI-read chest X-rays (CAD) served as the triage reader in MSH's Eliminate TB
+  Project across four regions, contributing to 1,660 detected cases including
+  asymptomatic infectious cases that symptom screening misses.
+caveat: >-
+  Program report, not a controlled comparison; "contributed to" means the AI
+  flagged people for confirmatory testing, so the counterfactual is how many
+  would have been found by symptom screening alone.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: only-path
+  window: ongoing
+comparison: "AI CXR triage vs routine symptom screening in the same facilities (descriptive)"
+effect:
+  relative: "Community AI screening yield >5% vs <0.1% routine clinical screening (program figures)"
+  absolute: "1,660 cases, Jan 2025–Mar 2026"
+reach: "Four project-supported regions, Ethiopia"
+dates:
+  achieved_start: 2025-01
+  achieved_end: 2026-03
+  published: 2026-07
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "MSH technical brief: AI-powered chest X-ray screening for TB case finding, Ethiopia"
+    url: https://msh.org/wp-content/uploads/2026/07/Eliminate-TB-Project_Technical-Brief_AI-Chest-X-Rays.pdf
+    type: primary
+  - title: "MSH: AI-powered chest X-ray screening — field experience from Ethiopia"
+    url: https://msh.org/resources/ai-powered-chest-x-ray-screening-for-tb-case-finding-field-experience-from-ethiopia/
+    type: secondary
+conflicts: "Implementing NGO's own report (USAID-funded project)."
+what_would_change: "A stepped-wedge or cluster comparison of facilities with and without CAD would move evidence to A/B."
+notes: null
+related: [india-tribal-tb-ai-cxr]
+history:
+  - date: 2026-10-22
+    note: "Added."

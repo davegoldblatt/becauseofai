@@ -1,0 +1,46 @@
+id: ambient-scribes-nejm-ai
+section: because
+rank: 15
+headline: >-
+  Because of AI, physicians using ambient scribes reported modestly less burnout,
+  exhaustion, and task load in a 238-physician randomized trial.
+impact: "Modest burnout reduction (RCT)"
+summary: >-
+  NEJM AI (Dec 2025) randomized 238 outpatient physicians across 14 specialties
+  to Microsoft DAX, Nabla, or usual care for two months; either scribe improved
+  burnout, exhaustion, and task load, and Nabla reduced time-in-note.
+caveat: >-
+  Effects were modest, only one vendor saved documentation time, occasional
+  note inaccuracies required vigilance, and the trial ran Nov 2024–Jan 2025.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Scribe access vs usual care, covariate-constrained randomization"
+effect:
+  relative: "Modest improvements on burnout, exhaustion, task load (see paper for effect sizes)"
+  absolute: null
+reach: "238 physicians, one academic health system"
+dates:
+  achieved_start: 2024-11-04
+  achieved_end: 2025-01-03
+  published: 2025-11-26
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "NEJM AI: Ambient AI Scribes in Clinical Practice — A Randomized Trial (PMC)"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/
+    type: primary
+  - title: "JAMIA (May 2026): randomized crossover of two ambient scribes, 160 clinicians (Duke)"
+    url: https://scholars.duke.edu/publication/1706148
+    type: primary
+conflicts: "verify: vendor funding or in-kind support."
+what_would_change: "Patient-outcome or quality measures, not just clinician self-report."
+notes: >-
+  Window is pre for the NEJM AI trial; verify dates of the Duke crossover trial — it may be in-window.
+related: [ucla-chart-summarizer-rct]
+history:
+  - date: 2026-10-22
+    note: "Added."
