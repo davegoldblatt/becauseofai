@@ -2,36 +2,18 @@
 import Base from "../layouts/Base.astro";
 import { publishable, because } from "../lib/site.ts";
 import { SITE } from "../site.ts";
-import { EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
+import { EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION } from "../lib/format.ts";
 import { EVIDENCE, ATTRIBUTION, WINDOW } from "../schema.ts";
 
 // One live example per grade value: the highest-ranked publishable entry that carries it.
 const sorted = [...publishable].sort((a, b) => (a.section === b.section ? a.rank - b.rank : a.section === "because" ? -1 : 1));
 const example = (key: "evidence" | "attribution" | "window", value: string) => sorted.find((e) => e.grades[key] === value);
-const descr = {
-  evidence: {
-    A: "Randomized or cluster-randomized, with a preregistered primary endpoint.",
-    B: "Large observational or population-level data with a credible benchmark.",
-    C: "A company or government operational report with no independent comparison.",
-    D: "A single case or anecdote.",
-  },
-  attribution: {
-    isolated: "The comparison isolates the AI's contribution: the arms differ only by the AI.",
-    "only-path": "No human or conventional alternative existed in practice.",
-    bundled: "The AI shipped inside a package (tablets, protocols, crews) and the package was tested.",
-    "ai-vs-ai": "The control also used AI.",
-  },
-  window: {
-    in: "The benefit occurred inside the last twelve months.",
-    ongoing: "It began earlier, is still delivering, and has new in-window data.",
-    pre: "The benefit predates the window. Only the publication is new.",
-  },
-} as const;
 const gb = because.find((e) => e.id === "golden-bridge-ii-stroke");
 ---
-<Base title="Method" description="The four tests every entry passes, the three grades, and why no number on this site was produced by a machine.">
+<Base title="Method" description="The four tests every entry passes, the three grades, and what is and is not automated.">
   <article class="prose" data-pagefind-body>
     <h1 class="page-title">Method</h1>
+    <p class="thesis">{SITE.thesis}</p>
     <p>Readers of this site have been burned by AI hype. So the registry earns credibility by what it leaves out, by publishing what did not work, and by dating every benefit by when it happened rather than when the paper came out.</p>
 
     <h2 id="four-tests">The four tests</h2>
@@ -45,19 +27,19 @@ const gb = because.find((e) => e.id === "golden-bridge-ii-stroke");
     <p>A result that passes the first three but produced no benefit goes to <a href="/not-because-of-ai">Not because of AI</a>, under the same grades. A candidate that has not yet passed them goes to <a href="/not-yet">Not yet</a>, with a note on what would change that.</p>
 
     <h2 id="grades">Three grades, never one score</h2>
-    <p>Every entry carries three separate grades. They are a vocabulary, not a formula. They are never added up, and no entry has a single score.</p>
+    <p>Every entry carries three separate stamps. They are a vocabulary, not a formula. They are never added up, and no entry has a single score. The same sentences below appear when you hover or focus a stamp anywhere on the site.</p>
 
     <h3 id="evidence">Evidence</h3>
     <ul>
       {EVIDENCE.map((v) => { const ex = example("evidence", v); return (
-        <li id={`evidence-${v}`}><strong>{EVIDENCE_LABEL[v]}.</strong> {descr.evidence[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+        <li id={`evidence-${v}`}><strong>{EVIDENCE_LABEL[v]}.</strong> {GRADE_DESCRIPTION.evidence[v]} {ex && <span class="example">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
       ); })}
     </ul>
 
     <h3 id="attribution">Attribution</h3>
     <ul>
       {ATTRIBUTION.map((v) => { const ex = example("attribution", v); return (
-        <li id={`attribution-${v}`}><strong>{ATTRIBUTION_LABEL[v]}.</strong> {descr.attribution[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+        <li id={`attribution-${v}`}><strong>{ATTRIBUTION_LABEL[v]}.</strong> {GRADE_DESCRIPTION.attribution[v]} {ex && <span class="example">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
       ); })}
     </ul>
     <p>The cleanest counterfactual is where no human alternative existed: tuberculosis X-rays with no radiologist to read them, sperm no technician could find. Bundled and AI-versus-AI results are real results that say less about AI than they appear to. We label them rather than hide them.</p>
@@ -65,13 +47,13 @@ const gb = because.find((e) => e.id === "golden-bridge-ii-stroke");
     <h3 id="window">Window</h3>
     <ul>
       {WINDOW.map((v) => { const ex = example("window", v); return (
-        <li id={`window-${v}`}><strong>{WINDOW_LABEL[v]}.</strong> {descr.window[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+        <li id={`window-${v}`}><strong>{WINDOW_LABEL[v]}.</strong> {GRADE_DESCRIPTION.window[v]} {ex && <span class="example">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
       ); })}
     </ul>
-    <p>The window is the twelve months ending on the registry's reference date, currently {SITE.asOf}. Window grades are editorial and change only through a reviewed edit, so an entry can sit at the edge of the window for a short while before it is re-graded. Pre-window entries stay on the main list with a muted badge: the result is real, it is just not new.</p>
+    <p>The window is the twelve months ending on the registry's reference date, currently {SITE.asOf}. Window grades are editorial and change only through a reviewed edit, so an entry can sit at the edge of the window for a short while before it is re-graded. Pre-window entries stay on the main list with a hatched stamp: the result is real, it is just not new.</p>
 
     <h2 id="achieved-vs-published">Achieved is not published</h2>
-    <p>This is the registry's most common mistake, and the one we work hardest to avoid. Every card shows the date the benefit was achieved next to the date the result was published, at the same weight.</p>
+    <p>This is the registry's most common mistake, and the one we work hardest to avoid. Every row carries a lag bar: the span the benefit was achieved as a solid bar, the publication as an orange tick, and the gap between them hatched and labelled when it is six months or more. The dates themselves are on the entry page.</p>
     {gb && (
       <p>The worked example is <a href={`/entry/${gb.id}`}>GOLDEN BRIDGE II</a>, a cluster-randomized trial across 77 Chinese hospitals published in the BMJ in March 2026. The trial is superb. Its patients were enrolled between January 2021 and June 2023. So the benefit happened years before the paper, and the entry is graded <a href="#window-pre">pre-window</a>, not in-window. We check methods sections and trial registries before trusting a headline date.</p>
     )}

@@ -1,27 +1,44 @@
 ---
-// Base layout: head, header with navigation and theme toggle, footer.
+// Base layout: head, masthead (nameplate, running head, section tabs, search,
+// theme), main, footer. The nameplate reads BECAUSE OF AI, NOT BECAUSE OF AI,
+// or NOT YET BECAUSE OF AI by section (DAV-335). Counts come from the loader.
 import "../styles/global.css";
-import { SITE } from "../site.ts";
+import { SITE, NAMEPLATE } from "../site.ts";
+import { siteCounts } from "../lib/site.ts";
+import type { Section } from "../schema.ts";
 
 interface Props {
   title: string;
   description?: string;
   canonical?: string;
   ogImage?: string;
+  // Which nameplate to set. List pages pass their section and "full".
+  section?: Section | null;
+  nameplate?: "full" | "compact";
 }
-const { title, description = SITE.description, canonical, ogImage = `${SITE.url}/og/site.png` } = Astro.props;
+const {
+  title,
+  description = SITE.description,
+  canonical,
+  ogImage = `${SITE.url}/og/site.png`,
+  section = null,
+  nameplate = "compact",
+} = Astro.props;
 // Public route for this page. With file-format output the build-time pathname
 // carries ".html" (and "/index.html" for the homepage); strip both so canonical
 // URLs, titles, and navigation state use the clean route that is served.
 const path = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/").replace(/(.)\/$/, "$1") || "/";
 const canonicalUrl = canonical ?? new URL(path === "/" ? "/" : path, SITE.url).toString();
-const nav = [
-  { href: "/not-because-of-ai", label: "Not because of AI" },
-  { href: "/not-yet", label: "Not yet" },
+const np = NAMEPLATE[section ?? "because"];
+const tabs: { href: string; label: string; n: number; key: Section }[] = [
+  { href: "/", label: "Because", n: siteCounts.because, key: "because" },
+  { href: "/not-because-of-ai", label: "Not because", n: siteCounts["not-because"], key: "not-because" },
+  { href: "/not-yet", label: "Not yet", n: siteCounts["not-yet"], key: "not-yet" },
+];
+const more = [
   { href: "/method", label: "Method" },
   { href: "/changelog", label: "Changelog" },
   { href: "/about", label: "About" },
-  { href: "/search", label: "Search" },
 ];
 const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI benefits` : `${title} — ${SITE.name}`;
 ---
@@ -34,7 +51,8 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: entries`} href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: changes`} href="/changes.xml" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={fullTitle} />
@@ -44,7 +62,9 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preload" href="/fonts/newsreader-latin-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ArchivoCond-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Bricolage-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/JetBrainsMono-500.woff2" as="font" type="font/woff2" crossorigin />
     <script is:inline>
       (function () {
         try {
@@ -58,32 +78,63 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     -->
   </head>
   <body>
-    <header class="site-header" data-pagefind-ignore>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class:list={["masthead", `np-${nameplate}`]} data-pagefind-ignore>
       <div class="wrap">
-        <a class="wordmark" href="/" aria-current={path === "/" ? "page" : undefined}>{SITE.name}</a>
-        <nav class="site-nav" aria-label="Site">
-          {nav.map((n) => (
-            <a href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</a>
-          ))}
-        </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+        <a class="nameplate" href="/" style={`--np-em:${np.em}`}>
+          {np.pre && <><span class:list={["np-pre", `np-pre-${section}`]}>{np.pre}</span>{" "}</>}<span class="np-rest">{np.rest}</span><span class="sr-only">, home</span>
+        </a>
+        <div class="running">
+          <p class="running-head">{SITE.runningHead} · data as of <time datetime={SITE.asOf}>{SITE.asOf}</time></p>
+          <nav class="tabs" aria-label="Sections">
+            {tabs.map((t) => (
+              <a href={t.href} aria-current={section === t.key ? "page" : undefined}>{t.label} <b>{t.n}</b></a>
+            ))}
+          </nav>
+          <nav class="more" aria-label="About the registry">
+            {more.map((n) => (
+              <a href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</a>
+            ))}
+          </nav>
+          <form class="search" role="search" action="/search" method="get">
+            <input type="search" name="q" placeholder="Search" aria-label="Search entries" data-search-input autocomplete="off" />
+            <kbd aria-hidden="true">/</kbd>
+          </form>
+          <a class="search-link" href="/search" aria-label="Search">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+          <button class="theme" type="button" data-theme-toggle aria-label="Switch color theme">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+          </button>
+        </div>
       </div>
     </header>
-    <main class="wrap">
+    <main id="main" class="wrap" tabindex="-1">
       <slot />
     </main>
     <footer class="site-footer" data-pagefind-ignore>
       <div class="wrap">
-        <span>{SITE.name}. Independent, unfunded. Data as of {SITE.asOf}.</span>
-        <a href="/method">How entries are graded</a>
-        <a href={`${SITE.repo}/issues/new/choose`}>Submit or dispute an entry</a>
-        <a href="/feed.xml">RSS</a>
-        <a href="/api/entries.json">JSON</a>
+        <p class="foot-thesis">{SITE.thesis}</p>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="/">Because of AI</a>
+          <a href="/not-because-of-ai">Not because of AI</a>
+          <a href="/not-yet">Not yet</a>
+          <a href="/method">Method</a>
+          <a href="/changelog">Changelog</a>
+          <a href="/about">About</a>
+          <a href="/search">Search</a>
+          <a href={`${SITE.repo}/issues/new/choose`}>Submit or dispute an entry</a>
+          <a href={SITE.repo}>Source</a>
+          <a href="/feed.xml">RSS</a>
+          <a href="/changes.xml">Changes RSS</a>
+          <a href="/api/entries.json">JSON</a>
+        </nav>
+        <p class="foot-meta">{SITE.name}. Independent, unfunded. Data as of {SITE.asOf}.</p>
       </div>
     </footer>
     <script>
-      const btn = document.querySelector("[data-theme-toggle]");
       const root = document.documentElement;
+      const btn = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
       function current(): "light" | "dark" {
         const t = root.dataset.theme;
         if (t === "dark" || t === "light") return t;
@@ -93,6 +144,23 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
         const next = current() === "dark" ? "light" : "dark";
         root.dataset.theme = next;
         try { localStorage.setItem("theme", next); } catch {}
+      });
+      // "/" or ⌘K / Ctrl+K focuses the header search; when the input is hidden
+      // (narrow screens) they open the search page instead.
+      const input = document.querySelector<HTMLInputElement>("[data-search-input]");
+      addEventListener("keydown", (ev) => {
+        const target = ev.target as HTMLElement | null;
+        const typing = !!target?.closest?.("input, textarea, select, [contenteditable]");
+        const combo = (ev.metaKey || ev.ctrlKey) && !ev.altKey && ev.key.toLowerCase() === "k";
+        const slash = ev.key === "/" && !ev.metaKey && !ev.ctrlKey && !ev.altKey && !typing;
+        if (!combo && !slash) return;
+        ev.preventDefault();
+        if (input && input.offsetParent !== null) {
+          input.focus();
+          input.select();
+        } else {
+          location.href = "/search";
+        }
       });
     </script>
   </body>

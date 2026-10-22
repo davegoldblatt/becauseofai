@@ -21,7 +21,7 @@ Taste, since this is where drift happens:
 Spend effort unevenly: deep-verify the two or three strongest candidates rather than skim twenty. If nothing clears the bar, say so — that's a valid week. Also review the existing entries: new data (Waymo quarterly, DERM counts, Phase 3 readouts), follow-ups, retractions, or a grade you'd argue with. Downgrades are welcome and should be argued. For each `not-yet` entry, check whether its `what_would_change` has happened.
 
 Output:
-1. New or changed entry files, each with a `history` line dated today.
+1. New or changed entry files, each with a `history` line dated today. Start the note with the change verb so the changelog can type it: `Added.`, `Upgraded …`, `Downgraded …`, `Corrected …`, `Verified …`, `Updated …`, `Removed …`, `Re-graded …`.
 2. `research/last-run.md`, under one page: what you added, changed, or downgraded and why; what you rejected and which of the four tests it failed; what you searched that came up empty; what you couldn't verify and want a human to check.
 3. Anything promising but unqualified goes to `research/inbox.md`, one line each with a link.
 

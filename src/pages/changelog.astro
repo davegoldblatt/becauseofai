@@ -1,23 +1,36 @@
 ---
 import Base from "../layouts/Base.astro";
 import { publishable } from "../lib/site.ts";
-import { fmtDate, isoDate } from "../lib/format.ts";
+import { fmtDate, isoDate, changeType, type ChangeType } from "../lib/format.ts";
 
-type Row = { date: string; id: string; headline: string; note: string };
+type Row = { date: string; id: string; headline: string; note: string; type: ChangeType | null; rest: string };
 const rows: Row[] = [];
-for (const e of publishable) for (const h of e.history) rows.push({ date: isoDate(h.date), id: e.id, headline: e.headline, note: h.note });
+for (const e of publishable) {
+  for (const h of e.history) {
+    const ct = changeType(h.note);
+    rows.push({ date: isoDate(h.date), id: e.id, headline: e.headline, note: h.note, type: ct?.type ?? null, rest: ct?.rest ?? h.note });
+  }
+}
 rows.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id)));
 const days = new Map<string, Row[]>();
 for (const r of rows) (days.get(r.date) ?? days.set(r.date, []).get(r.date)!).push(r);
 ---
-<Base title="Changelog" description="Every change to every entry, newest first.">
+<Base title="Changelog" description="Every change to every entry, newest first, with its type.">
   <h1 class="page-title">Changelog</h1>
-  <p class="lede">Generated from each entry's history. Newest first.</p>
+  <p class="lede">Generated from each entry's history, newest first. A change carries a type when its note says so (added, upgraded, downgraded, updated, corrected, verified, removed, re-graded). Subscribe to <a href="/changes.xml">one item per change</a> or <a href="/feed.xml">one item per entry</a>.</p>
   {[...days.entries()].map(([date, items]) => (
     <section class="log-day">
       <h2><time datetime={date}>{fmtDate(date)}</time></h2>
       <ul>
-        {items.map((r) => <li><a href={`/entry/${r.id}`}>{r.headline}</a> <span class="muted">— {r.note}</span></li>)}
+        {items.map((r) => (
+          <li class:list={["chg", r.type]}>
+            <span class="chg-type">{r.type && <span class="stamp stamp-xs"><span class="sd">{r.type}</span></span>}</span>
+            <div>
+              <span class="chg-h"><a href={`/entry/${r.id}`}>{r.headline}</a></span>
+              {r.rest && <p class="chg-note">{r.rest}</p>}
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   ))}

@@ -1,70 +1,199 @@
 ---
 import Base from "../../layouts/Base.astro";
-import Badges from "../../components/Badges.astro";
-import Dates from "../../components/Dates.astro";
-import { publishable, byId } from "../../lib/site.ts";
+import Stamps from "../../components/Stamps.astro";
+import LagBar from "../../components/LagBar.astro";
+import { publishable, byId, neighbours } from "../../lib/site.ts";
 import { SITE } from "../../site.ts";
-import { fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, SECTION_LABEL, DOMAIN_LABEL, AI_TYPE_LABEL } from "../../lib/format.ts";
+import {
+  fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, splitImpact, achievedState, lagFor, isUnreviewed,
+  SECTION_LABEL, SECTION_HREF, DOMAIN_LABEL, AI_TYPE_LABEL,
+} from "../../lib/format.ts";
 
 export function getStaticPaths() {
   return publishable.map((e) => ({ params: { id: e.id }, props: { entry: e } }));
 }
 const { entry: e } = Astro.props;
 const url = `${SITE.url}/entry/${e.id}`;
-const sectionHref = e.section === "because" ? "/" : e.section === "not-because" ? "/not-because-of-ai" : "/not-yet";
+const sectionHref = SECTION_HREF[e.section];
 const related = (e.related ?? []).map((id) => byId.get(id)).filter((x) => x !== undefined);
 const effect = effectLine(e);
-const cite = `“${e.headline}” Because of AI, updated ${fmtDate(e.dates.updated)}. ${url}`;
+const imp = splitImpact(e.impact);
+const a = achievedState(e);
+const lag = lagFor(e);
+const { prev, next } = neighbours(e);
+const primary = primarySources(e);
+const secondary = secondarySources(e);
+const updated = fmtDate(e.dates.updated);
+const unreviewed = isUnreviewed(e);
+const cite = `“${e.headline}” Because of AI, updated ${updated}. ${url}`;
+const bib = `@misc{becauseofai_${e.id.replace(/-/g, "_")},\n  title = {${e.headline.replace(/[{}]/g, "")}},\n  howpublished = {\\url{${url}}},\n  note = {Because of AI registry, updated ${updated}},\n  year = {${String(e.dates.updated).slice(0, 4)}}\n}`;
+const g = e.grades;
+// Pagefind reads one key per attribute (a comma-separated list is not split),
+// so each filter and meta key gets its own element inside the indexed body.
+const facets: [string, string][] = [
+  ["section", SECTION_LABEL[e.section]],
+  ["evidence", g.evidence ?? "none"],
+  ["attribution", g.attribution ?? "none"],
+  ["window", g.window ?? "none"],
+];
 ---
-<Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`}>
-  <article class="entry" data-pagefind-body data-pagefind-meta={`section:${SECTION_LABEL[e.section]}, evidence:${e.grades.evidence ?? "none"}, attribution:${e.grades.attribution ?? "none"}, window:${e.grades.window ?? "none"}, impact:${e.impact}`}>
+<Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`} section={e.section}>
+  <article class:list={["entry", `s-${e.section}`]} data-pagefind-body>
+    {facets.map(([k, v]) => <span hidden data-pagefind-filter={`${k}:${v}`} data-pagefind-meta={`${k}:${v}`}></span>)}
+    <span hidden data-pagefind-meta={`impact:${e.impact}`}></span>
     <header class="entry-head">
-      <a class="section-link" href={sectionHref} data-pagefind-ignore>{SECTION_LABEL[e.section]}</a>
-      <h1 class="headline">{e.headline}</h1>
-      <span class="impact" data-pagefind-ignore>{e.impact}</span>
-      <Badges entry={e} />
-      <Dates entry={e} />
+      <nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore>
+        <a href={sectionHref} data-back={sectionHref}>← Back to the list</a>
+        <a href={sectionHref}>{SECTION_LABEL[e.section]}</a>
+        <span class="muted">{DOMAIN_LABEL[e.domain]} · {AI_TYPE_LABEL[e.ai_type]}</span>
+      </nav>
+      <p class:list={["entry-impact", { phrase: !imp.numeric }]} data-pagefind-ignore>
+        <b data-countup={imp.numeric ? "" : undefined}>{imp.lead}</b>{imp.rest && <span class="rest">{imp.rest}</span>}
+      </p>
+      <h1 class="sentence">{e.headline}</h1>
+      <div data-pagefind-ignore>
+        <Stamps entry={e} scope="entry" />
+        <LagBar entry={e} size="entry" />
+      </div>
     </header>
-    <p class="prose">{e.summary}</p>
-    {e.caveat && <p class="prose muted">{e.caveat}</p>}
-    {e.section === "not-yet" && e.what_would_change && (
-      <div class="what-would-change"><span class="lbl">What would change this</span>{e.what_would_change}</div>
-    )}
-    <dl class="facts">
-      {e.comparison && <><dt>Compared with</dt><dd>{e.comparison}</dd></>}
-      {effect && <><dt>Effect</dt><dd>{effect}</dd></>}
-      {e.reach && <><dt>Reach</dt><dd>{e.reach}</dd></>}
-      <dt>Domain</dt><dd>{DOMAIN_LABEL[e.domain]} · {AI_TYPE_LABEL[e.ai_type]}</dd>
-      {e.conflicts && <><dt>Conflicts</dt><dd>{e.conflicts}</dd></>}
-      {e.section !== "not-yet" && e.what_would_change && <><dt>What would move the grade</dt><dd>{e.what_would_change}</dd></>}
-    </dl>
-    <h2>Sources</h2>
-    <ul class="sources">
-      {primarySources(e).map((s) => <li><span class="type">primary</span><a href={s.url} rel="noopener">{s.title}</a> <span class="muted small">({hostOf(s.url)})</span></li>)}
-      {secondarySources(e).map((s) => <li><span class="type">secondary</span><a href={s.url} rel="noopener">{s.title}</a> <span class="muted small">({hostOf(s.url)})</span></li>)}
-    </ul>
-    {e.notes && (
-      <>
-        <h2>Editor's notes</h2>
-        <p class="notes">{e.notes}</p>
-      </>
-    )}
-    {related.length > 0 && (
-      <>
-        <h2>Related</h2>
-        <ul class="prose">
-          {related.map((r) => <li><a href={`/entry/${r.id}`}>{r.headline}</a></li>)}
+
+    <div class="entry-body">
+      <div class="entry-main">
+        <p class="summary">{e.summary}</p>
+        {e.section === "not-yet" && e.what_would_change && (
+          <>
+            <h2>What would change this</h2>
+            <p>{e.what_would_change}</p>
+          </>
+        )}
+        <h2 data-pagefind-ignore>Sources</h2>
+        <ul class="sources" data-pagefind-ignore>
+          {primary.map((s) => <li><span class="type">{s.type}</span><a href={s.url} rel="noopener">{s.title}</a><span class="host">{hostOf(s.url)}</span></li>)}
+          {secondary.length <= 2 && secondary.map((s) => <li><span class="type">{s.type}</span><a href={s.url} rel="noopener">{s.title}</a><span class="host">{hostOf(s.url)}</span></li>)}
         </ul>
-      </>
-    )}
-    <h2 data-pagefind-ignore>History</h2>
-    <ul class="history" data-pagefind-ignore>
-      {[...e.history].reverse().map((h) => <li><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
-    </ul>
-    <h2 data-pagefind-ignore>Cite this entry</h2>
-    <div class="cite" data-pagefind-ignore>
-      Permalink <a href={url}>{url}</a>
-      <code>{cite}</code>
+        {secondary.length > 2 && (
+          <details class="secondary-more" data-pagefind-ignore>
+            <summary>{secondary.length} secondary sources</summary>
+            <ul class="sources">{secondary.map((s) => <li><span class="type">{s.type}</span><a href={s.url} rel="noopener">{s.title}</a><span class="host">{hostOf(s.url)}</span></li>)}</ul>
+          </details>
+        )}
+        {e.notes && (
+          <>
+            <h2 data-pagefind-ignore>Editor's notes</h2>
+            <p class="notes" data-pagefind-ignore>{e.notes}</p>
+          </>
+        )}
+        {related.length > 0 && (
+          <>
+            <h2 data-pagefind-ignore>Related</h2>
+            <ul class="related" data-pagefind-ignore>
+              {related.map((r) => <li><a href={`/entry/${r.id}`}>{r.headline}</a></li>)}
+            </ul>
+          </>
+        )}
+        <h2 data-pagefind-ignore>History</h2>
+        <ul class="history" data-pagefind-ignore>
+          {[...e.history].reverse().map((h) => <li><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
+        </ul>
+        <h2 data-pagefind-ignore>Cite this entry</h2>
+        <div class="cite" data-pagefind-ignore>
+          Permalink <a href={url}>{url}</a>
+          <code id="cite-text">{cite}</code>
+          <code id="cite-bib" hidden>{bib}</code>
+          <div class="cite-actions">
+            <button type="button" data-copy="cite-text">Copy citation</button>
+            <button type="button" data-copy="cite-bib">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="entry-aside" data-pagefind-ignore>
+        <dl class="facts">
+          {e.caveat && <><dt>Caveat</dt><dd class="caveat-row">{e.caveat}</dd></>}
+          <dt>Achieved</dt><dd>{a.text}</dd>
+          <dt>Published</dt><dd><time datetime={isoDate(e.dates.published)}>{fmtDate(e.dates.published)}</time>{lag && <span class="muted"> · {lag.sentence}</span>}</dd>
+          {e.comparison && <><dt>Compared with</dt><dd>{e.comparison}</dd></>}
+          {effect && <><dt>Effect</dt><dd>{effect}</dd></>}
+          {e.reach && <><dt>Reach</dt><dd>{e.reach}</dd></>}
+          {e.conflicts && <><dt>Conflicts</dt><dd>{e.conflicts}</dd></>}
+          {e.section !== "not-yet" && e.what_would_change && <><dt>What would move the grade</dt><dd>{e.what_would_change}</dd></>}
+          <dt>Updated</dt><dd><time datetime={isoDate(e.dates.updated)}>{updated}</time>{unreviewed && <> <span class="stamp stamp-xs stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span></>}</dd>
+        </dl>
+      </aside>
     </div>
+
+    <nav class="pager" aria-label="Previous and next in this section" data-pagefind-ignore>
+      <div>{prev && <a href={`/entry/${prev.id}`} rel="prev">Previous<span class="pager-h">{prev.headline}</span></a>}</div>
+      <div class="next">{next && <a href={`/entry/${next.id}`} rel="next">Next<span class="pager-h">{next.headline}</span></a>}</div>
+    </nav>
   </article>
 </Base>
+<script>
+  // Back to the list, with the filter and sort the reader left behind: the list
+  // page stores its query string per section; the referrer is the fallback.
+  const back = document.querySelector<HTMLAnchorElement>("[data-back]");
+  if (back) {
+    const base = back.dataset.back!;
+    let q = "";
+    try { q = sessionStorage.getItem(`boa:list:${base}`) ?? ""; } catch {}
+    if (!q && document.referrer) {
+      try {
+        const r = new URL(document.referrer);
+        if (r.origin === location.origin && r.pathname === base) q = r.search;
+      } catch {}
+    }
+    if (q) back.href = base + q;
+  }
+  // Copy buttons for the citation and the BibTeX record.
+  for (const b of document.querySelectorAll<HTMLButtonElement>("[data-copy]")) {
+    b.addEventListener("click", async () => {
+      const src = document.getElementById(b.dataset.copy!);
+      if (!src) return;
+      try {
+        await navigator.clipboard.writeText(src.textContent ?? "");
+        const old = b.textContent;
+        b.textContent = "Copied";
+        b.setAttribute("data-done", "");
+        setTimeout(() => { b.textContent = old; b.removeAttribute("data-done"); }, 1500);
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(src);
+        const sel = getSelection();
+        sel?.removeAllRanges();
+        sel?.addRange(range);
+      }
+    });
+  }
+  // The impact number counts up once on first paint. Width is reserved first so
+  // nothing shifts; reduced motion gets the final value straight away.
+  const el = document.querySelector<HTMLElement>("[data-countup]");
+  if (el && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const text = el.textContent ?? "";
+    const m = /^([^\d]*)(\d[\d,]*)(\.\d+)?(.*)$/.exec(text);
+    if (m) {
+      const [, pre, intPart, frac = "", post] = m;
+      const target = Number(intPart.replace(/,/g, "") + frac);
+      const decimals = frac ? frac.length - 1 : 0;
+      const commas = intPart.includes(",");
+      const fmt = (v: number) => {
+        let s = v.toFixed(decimals);
+        if (commas) { const [i, f] = s.split("."); s = Number(i).toLocaleString("en-US") + (f ? "." + f : ""); }
+        return pre + s + post;
+      };
+      el.style.minWidth = `${el.getBoundingClientRect().width}px`;
+      const t0 = performance.now();
+      let done = false;
+      const finish = () => { if (!done) { done = true; el.textContent = text; } };
+      const step = (t: number) => {
+        if (done) return;
+        const p = Math.min(1, (t - t0) / 600);
+        const eased = 1 - Math.pow(1 - p, 3);
+        if (p < 1) { el.textContent = fmt(target * eased); requestAnimationFrame(step); }
+        else finish();
+      };
+      requestAnimationFrame(step);
+      // Whatever happens to animation frames, the real number is back within a second.
+      setTimeout(finish, 900);
+    }
+  }
+</script>

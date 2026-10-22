@@ -1,0 +1,57 @@
+---
+// The lag bar: one shared time axis, the achieved span as a solid ink bar, the
+// publication as a signal tick, and the distance between them hatched and
+// labelled when it is six months or more (DAV-339). Built from positioned
+// elements at build time, so it renders without JavaScript and scales with its
+// container without distorting text. The dates themselves stay in the entry's
+// facts; this is the picture of them.
+import type { Entry } from "../schema.ts";
+import { timeline } from "../lib/site.ts";
+import { latestDay } from "../lib/entries.ts";
+import { earliestDay, xOf, yearTicks, lagFor, fmtDate, achievedState } from "../lib/format.ts";
+interface Props { entry: Entry; size?: "row" | "entry" }
+const { entry: e, size = "row" } = Astro.props;
+const d = e.dates;
+const s = d.achieved_start != null ? String(d.achieved_start) : null;
+const en = d.achieved_end != null ? String(d.achieved_end) : null;
+const tl = timeline;
+const xs = s ? xOf(earliestDay(s), tl) : null;
+const xe = en ? xOf(latestDay(en), tl) : null;
+const xp = xOf(earliestDay(String(d.published)), tl);
+const open = s !== null && en === null;
+const ongoing = open && e.grades.window === "ongoing";
+const lag = lagFor(e);
+const ticks = yearTicks(tl);
+const end = tl.end;
+const bandStart = xOf(new Date(Date.UTC(end.getUTCFullYear() - 1, end.getUTCMonth(), end.getUTCDate() + 1)), tl);
+// Bar geometry, as percentages of the axis.
+let barL: number | null = null, barR: number | null = null;
+if (xs !== null && xe !== null) { barL = xs; barR = Math.max(xe, xs + 0.6); }
+else if (xs !== null && ongoing) { barL = xs; barR = 100; }
+else if (xs !== null) { barL = xs; barR = Math.min(100, Math.max(xp, xs + 0.6)); }
+else if (xe !== null) { barL = Math.max(0, xe - 0.6); barR = xe; }
+const gapL = lag ? (lag.ref === "end" ? xe : xs) : null;
+const a = achievedState(e);
+const label = [`Benefit: ${a.text}.`, `Published ${fmtDate(d.published)}.`, lag ? lag.sentence : ""].filter(Boolean).join(" ");
+const style = [`--xs:${barL ?? xp}`, `--xe:${barR ?? xp}`, `--xp:${xp}`, `--xb:${bandStart}`, gapL !== null ? `--xg:${gapL}` : ""].filter(Boolean).join(";");
+---
+<div class:list={["lag", `lag-${size}`]} role="img" aria-label={label} style={style}>
+  <div class="lag-band" aria-hidden="true"></div>
+  <div class="lag-axis" aria-hidden="true"></div>
+  {ticks.map((t, i) => (
+    <span class:list={["lag-year", { first: i === 0, last: i === ticks.length - 1 }]} style={`--x:${t.x}`} aria-hidden="true">{t.year}</span>
+  ))}
+  {barL !== null && <div class:list={["lag-ach", { open: open && !ongoing, ongoing }]} aria-hidden="true"></div>}
+  {gapL !== null && <div class="lag-gap" aria-hidden="true"></div>}
+  {lag && <span class="lag-lag" aria-hidden="true">published {lag.short} later</span>}
+  <div class:list={["lag-pub", { "near-end": xp > 86 }]} aria-hidden="true">
+    <span class="lag-flag">{size === "entry" ? `pub ${fmtDate(d.published)}` : "pub"}</span>
+  </div>
+  {size === "entry" && (
+    <div class="lag-dates" aria-hidden="true">
+      {s && <span class:list={["lag-date", "start", { "near-end": xs! > 86 }]} style={`--x:${xs}`}>{fmtDate(d.achieved_start)}</span>}
+      {en && (!s || (xe! - xs!) > 9) && <span class:list={["lag-date", "end"]} style={`--x:${xe}`}>{fmtDate(d.achieved_end)}</span>}
+      {!s && !en && <span class="lag-date none" style="--x:0">{a.text}</span>}
+    </div>
+  )}
+</div>

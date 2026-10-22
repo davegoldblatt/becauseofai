@@ -1,0 +1,255 @@
+---
+// A section's list page body: the filter rail, the toolbar (count, sort, view),
+// the ledger, the table view, and the empty state (DAV-343, DAV-344). Filters,
+// sort, and view all live in the URL so any view is shareable; without
+// JavaScript every row shows in editorial order.
+import type { Entry, Section } from "../schema.ts";
+import { DOMAINS, EVIDENCE, ATTRIBUTION, WINDOW, AI_TYPES } from "../schema.ts";
+import Row from "./Row.astro";
+import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagShort, splitImpact } from "../lib/format.ts";
+interface Props { entries: Entry[]; section: Section }
+const { entries, section } = Astro.props;
+
+type Val = [string, string, number];
+const count = (pick: (e: Entry) => string | null) => (v: string) => entries.filter((e) => pick(e) === v).length;
+const groups: { key: string; label: string; values: Val[] }[] = [
+  { key: "domain", label: "Domain", values: DOMAINS.map((v) => [v, DOMAIN_LABEL[v], count((e) => e.domain)(v)]) },
+  { key: "evidence", label: "Evidence", values: EVIDENCE.map((v) => [v, EVIDENCE_LABEL[v], count((e) => e.grades.evidence)(v)]) },
+  { key: "attribution", label: "Attribution", values: ATTRIBUTION.map((v) => [v, ATTRIBUTION_LABEL[v], count((e) => e.grades.attribution)(v)]) },
+  { key: "window", label: "Window", values: WINDOW.map((v) => [v, WINDOW_LABEL[v], count((e) => e.grades.window)(v)]) },
+  { key: "ai_type", label: "AI type", values: AI_TYPES.map((v) => [v, AI_TYPE_LABEL[v], count((e) => e.ai_type)(v)]) },
+];
+// Not-yet entries carry no grades, so grade groups would be all zeros there.
+const shownGroups = section === "not-yet" ? groups.filter((g) => g.values.some((v) => v[2] > 0)) : groups;
+const sorts: [string, string][] = [
+  ["rank", "Editorial order"],
+  ["achieved", "Achieved, newest first"],
+  ["published", "Published, newest first"],
+  ["evidence", "Evidence, A to D"],
+  ["lag", "Largest publication lag"],
+];
+const total = entries.length;
+---
+<div class="registry" data-registry data-total={total} data-sort="rank">
+  <aside class="rail" aria-label="Filters">
+    <details class="filters" data-filters>
+      <summary><span>Filter</span><span class="filters-summary" data-filter-summary></span></summary>
+      {shownGroups.map((g) => (
+        <fieldset class="filter-group">
+          <legend>{g.label}</legend>
+          <div class="chips">
+            {g.values.map(([v, label, n]) => (
+              <button type="button" class="stamp stamp-chip" data-filter={g.key} data-value={v} aria-pressed="false" disabled={n === 0}>
+                <span class="sd">{label}</span><span class="n" data-chip-count>{n}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+      ))}
+    </details>
+  </aside>
+  <div class="registry-main">
+    <div class="toolbar">
+      <p class="count"><span data-filter-count aria-live="polite">{total} entries</span></p>
+      <label class="sort">Sort
+        <select data-sort>
+          {sorts.map(([v, label]) => <option value={v}>{label}</option>)}
+        </select>
+      </label>
+      <div class="view" role="group" aria-label="View">
+        <button type="button" data-view="ledger" aria-pressed="true">Ledger</button><button type="button" data-view="table" aria-pressed="false">Table</button>
+      </div>
+      <button type="button" class="clear" data-filter-clear hidden>Clear</button>
+    </div>
+    <ol class="ledger" data-ledger>
+      {entries.map((e, i) => <Row entry={e} index={i + 1} />)}
+    </ol>
+    <div class="table-wrap" data-table hidden>
+      <table class="entry-table">
+        <thead>
+          <tr>
+            <th scope="col"><button type="button" data-sort-by="rank">#</button></th>
+            <th scope="col">Entry</th>
+            <th scope="col">Impact</th>
+            <th scope="col"><button type="button" data-sort-by="evidence">Evidence</button></th>
+            <th scope="col">Attribution</th>
+            <th scope="col">Window</th>
+            <th scope="col"><button type="button" data-sort-by="achieved">Achieved</button></th>
+            <th scope="col"><button type="button" data-sort-by="published">Published</button></th>
+            <th scope="col"><button type="button" data-sort-by="lag">Lag</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          {entries.map((e, i) => { const lag = lagMonths(e); const g = e.grades; const un = g.evidence === null && g.attribution === null && g.window === null; return (
+            <tr class:list={[`s-${e.section}`]} data-entry data-id={e.id} data-rank={e.rank} data-achieved={achievedKey(e)} data-published={isoDate(e.dates.published)}
+                data-evidence={g.evidence ?? "none"} data-attribution={g.attribution ?? "none"} data-window={g.window ?? "none"} data-domain={e.domain} data-ai-type={e.ai_type} data-lag={lag ?? -1}>
+              <td class="t-idx" data-idx={i + 1}>{i + 1}</td>
+              <td class="t-sentence"><a href={`/entry/${e.id}`} title={e.headline}>{e.headline}</a></td>
+              <td class="t-impact" title={e.impact}>{splitImpact(e.impact).lead}</td>
+              {un ? (
+                <td colspan="3"><span class="stamp stamp-xs stamp-watch"><span class="sd">Watchlist</span></span></td>
+              ) : (
+                <>
+                  <td>{g.evidence ? <span class={`stamp stamp-xs stamp-ev stamp-ev-${g.evidence}`}><b class="sg">{g.evidence}</b></span> : <span class="muted">—</span>}</td>
+                  <td>{g.attribution ? <span class={`stamp stamp-xs stamp-at stamp-at-${g.attribution}`}><span class="sd">{ATTRIBUTION_LABEL[g.attribution]}</span></span> : <span class="muted">—</span>}</td>
+                  <td>{g.window ? <span class={`stamp stamp-xs stamp-wi stamp-wi-${g.window}`}><span class="sd">{WINDOW_LABEL[g.window]}</span></span> : <span class="muted">—</span>}</td>
+                </>
+              )}
+              <td class="t-date">{e.section === "not-yet" && achievedState(e).kind === "none" ? <span class="muted">not yet</span> : achievedState(e).text}</td>
+              <td class="t-date">{fmtDate(e.dates.published)}</td>
+              <td class="t-lag">{lag !== null && lag >= 6 ? lagShort(lag) : <span class="muted">—</span>}</td>
+            </tr>
+          ); })}
+        </tbody>
+      </table>
+    </div>
+    <p class="empty" data-empty hidden>Nothing matches. <span data-empty-chips></span></p>
+  </div>
+</div>
+<script>
+  const root = document.querySelector<HTMLElement>("[data-registry]");
+  if (root) {
+    const KEYS = ["domain", "evidence", "attribution", "window", "ai_type"] as const;
+    type Key = (typeof KEYS)[number];
+    const DATA: Record<Key, string> = { domain: "domain", evidence: "evidence", attribution: "attribution", window: "window", ai_type: "aiType" };
+    const SORTS = ["rank", "achieved", "published", "evidence", "lag"];
+    const EV = ["A", "B", "C", "D", "none"];
+    const details = root.querySelector<HTMLDetailsElement>("[data-filters]")!;
+    const chips = Array.from(root.querySelectorAll<HTMLButtonElement>("button[data-filter]"));
+    const sortSel = root.querySelector<HTMLSelectElement>("select[data-sort]")!;
+    const viewBtns = Array.from(root.querySelectorAll<HTMLButtonElement>("button[data-view]"));
+    const ledger = root.querySelector<HTMLElement>("[data-ledger]")!;
+    const table = root.querySelector<HTMLElement>("[data-table]")!;
+    const tbody = table.querySelector("tbody")!;
+    const rows = Array.from(ledger.querySelectorAll<HTMLElement>("[data-entry]"));
+    const trs = Array.from(tbody.querySelectorAll<HTMLElement>("[data-entry]"));
+    const countEl = root.querySelector<HTMLElement>("[data-filter-count]")!;
+    const summaryEl = root.querySelector<HTMLElement>("[data-filter-summary]")!;
+    const clearBtn = root.querySelector<HTMLButtonElement>("[data-filter-clear]")!;
+    const emptyEl = root.querySelector<HTMLElement>("[data-empty]")!;
+    const emptyChips = root.querySelector<HTMLElement>("[data-empty-chips]")!;
+    const total = Number(root.dataset.total || rows.length);
+    const allowed = Object.fromEntries(KEYS.map((k) => [k, new Set(chips.filter((b) => b.dataset.filter === k).map((b) => b.dataset.value!))])) as Record<Key, Set<string>>;
+    const state = { f: Object.fromEntries(KEYS.map((k) => [k, new Set<string>()])) as Record<Key, Set<string>>, sort: "rank", view: "ledger" };
+    const mq = matchMedia("(min-width: 1024px)");
+
+    function readUrl() {
+      const q = new URLSearchParams(location.search);
+      for (const k of KEYS) state.f[k] = new Set((q.get(k) || "").split(",").filter((v) => allowed[k].has(v)));
+      const s = q.get("sort") || "rank";
+      state.sort = SORTS.includes(s) ? s : "rank";
+      state.view = q.get("view") === "table" ? "table" : "ledger";
+    }
+    function writeUrl() {
+      const q = new URLSearchParams();
+      for (const k of KEYS) if (state.f[k].size) q.set(k, Array.from(state.f[k]).join(","));
+      if (state.sort !== "rank") q.set("sort", state.sort);
+      if (state.view !== "ledger") q.set("view", state.view);
+      const s = q.toString();
+      history.replaceState(null, "", s ? `${location.pathname}?${s}` : location.pathname);
+      try { sessionStorage.setItem(`boa:list:${location.pathname}`, s ? `?${s}` : ""); } catch {}
+    }
+    const matches = (el: HTMLElement, k: Key) => !state.f[k].size || state.f[k].has(el.dataset[DATA[k]] || "");
+    const visible = (el: HTMLElement) => KEYS.every((k) => matches(el, k));
+    const byRank = (a: HTMLElement, b: HTMLElement) => Number(a.dataset.rank) - Number(b.dataset.rank);
+    function cmp(a: HTMLElement, b: HTMLElement): number {
+      const s = state.sort;
+      if (s === "achieved" || s === "published") {
+        const x = a.dataset[s] || "", y = b.dataset[s] || "";
+        if (x === y) return byRank(a, b);
+        if (!x) return 1;
+        if (!y) return -1;
+        return x < y ? 1 : -1;
+      }
+      if (s === "evidence") {
+        const d = EV.indexOf(a.dataset.evidence || "none") - EV.indexOf(b.dataset.evidence || "none");
+        return d || byRank(a, b);
+      }
+      if (s === "lag") {
+        const d = Number(b.dataset.lag) - Number(a.dataset.lag);
+        return d || byRank(a, b);
+      }
+      return byRank(a, b);
+    }
+    function apply() {
+      let shown = 0;
+      for (const [container, list] of [[ledger, rows], [tbody, trs]] as const) {
+        const sorted = [...list].sort(cmp);
+        container.append(...sorted);
+        let pos = 0;
+        for (const el of sorted) {
+          const ok = visible(el);
+          el.hidden = !ok;
+          if (ok) {
+            pos++;
+            const idx = el.querySelector<HTMLElement>("[data-idx]");
+            if (idx) { idx.dataset.idx = String(pos); if (idx.tagName === "TD") idx.textContent = String(pos); }
+          }
+        }
+        if (container === ledger) shown = pos;
+      }
+      root.dataset.sort = state.sort;
+      // Live chip counts: how many rows would show if this chip were added to the current selection.
+      for (const b of chips) {
+        const k = b.dataset.filter as Key, v = b.dataset.value!;
+        const on = state.f[k].has(v);
+        const n = rows.filter((r) => r.dataset[DATA[k]] === v && KEYS.every((kk) => kk === k || matches(r, kk))).length;
+        b.setAttribute("aria-pressed", String(on));
+        const nEl = b.querySelector("[data-chip-count]");
+        if (nEl) nEl.textContent = String(n);
+        b.disabled = n === 0 && !on;
+      }
+      const active = KEYS.reduce((n, k) => n + state.f[k].size, 0);
+      clearBtn.hidden = !(active || state.sort !== "rank");
+      countEl.textContent = active ? `${shown} of ${total}` : `${total} entries`;
+      summaryEl.textContent = active ? `${active} active` : "";
+      emptyEl.hidden = shown > 0;
+      emptyChips.replaceChildren(...chips.filter((b) => state.f[b.dataset.filter as Key].has(b.dataset.value!)).map((b) => {
+        const x = document.createElement("button");
+        x.type = "button";
+        x.className = "stamp stamp-chip";
+        x.textContent = `${b.querySelector(".sd")?.textContent ?? b.dataset.value} ×`;
+        x.setAttribute("aria-label", `Remove filter ${b.querySelector(".sd")?.textContent ?? b.dataset.value}`);
+        x.addEventListener("click", () => { state.f[b.dataset.filter as Key].delete(b.dataset.value!); writeUrl(); apply(); });
+        return x;
+      }));
+      if (active && !mq.matches) details.open = true;
+      ledger.hidden = state.view === "table";
+      table.hidden = state.view !== "table";
+      for (const v of viewBtns) v.setAttribute("aria-pressed", String(v.dataset.view === state.view));
+      sortSel.value = state.sort;
+      for (const th of table.querySelectorAll<HTMLButtonElement>("[data-sort-by]")) th.setAttribute("aria-pressed", String(th.dataset.sortBy === state.sort));
+    }
+    root.addEventListener("click", (ev) => {
+      const t = ev.target as HTMLElement;
+      const chip = t.closest<HTMLButtonElement>("button[data-filter]");
+      if (chip) {
+        const set = state.f[chip.dataset.filter as Key];
+        set.has(chip.dataset.value!) ? set.delete(chip.dataset.value!) : set.add(chip.dataset.value!);
+        writeUrl(); apply(); return;
+      }
+      const view = t.closest<HTMLButtonElement>("button[data-view]");
+      if (view) { state.view = view.dataset.view === "table" ? "table" : "ledger"; writeUrl(); apply(); return; }
+      const th = t.closest<HTMLButtonElement>("button[data-sort-by]");
+      if (th) { state.sort = th.dataset.sortBy!; writeUrl(); apply(); return; }
+      if (t.closest("[data-filter-clear]")) { for (const k of KEYS) state.f[k].clear(); state.sort = "rank"; writeUrl(); apply(); }
+    });
+    sortSel.addEventListener("change", () => { state.sort = sortSel.value; writeUrl(); apply(); });
+    // Table: arrow keys move between visible rows; Enter follows the link natively.
+    table.addEventListener("keydown", (ev) => {
+      if (ev.key !== "ArrowDown" && ev.key !== "ArrowUp") return;
+      const links = trs.filter((r) => !r.hidden).map((r) => r.querySelector<HTMLAnchorElement>("a")!);
+      const i = links.indexOf(document.activeElement as HTMLAnchorElement);
+      if (i < 0) return;
+      ev.preventDefault();
+      links[Math.max(0, Math.min(links.length - 1, i + (ev.key === "ArrowDown" ? 1 : -1)))].focus();
+    });
+    const syncRail = () => { if (mq.matches) details.open = true; };
+    mq.addEventListener("change", syncRail);
+    addEventListener("popstate", () => { readUrl(); apply(); });
+    readUrl();
+    syncRail();
+    apply();
+    try { sessionStorage.setItem(`boa:list:${location.pathname}`, location.search); } catch {}
+  }
+</script>

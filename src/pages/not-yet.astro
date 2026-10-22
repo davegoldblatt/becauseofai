@@ -1,15 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import Card from "../components/Card.astro";
-import FilterBar from "../components/FilterBar.astro";
-import { notYet, siteCounts as c } from "../lib/site.ts";
+import Registry from "../components/Registry.astro";
+import { notYet } from "../lib/site.ts";
+import { SITE } from "../site.ts";
 ---
-<Base title="Not yet" description="AI efforts that have not yet shown a measured benefit to people, and what would change that.">
-  <h1 class="page-title">Not yet</h1>
+<Base title="Not yet" description="AI efforts that have not yet shown a measured benefit to people, and what would change that." section="not-yet" nameplate="full" ogImage={`${SITE.url}/og/not-yet.png`}>
+  <h1 class="sr-only">Not yet because of AI</h1>
   <p class="lede">Candidates that have not passed the four tests: a drug in Phase III, satellites in orbit, alerts nobody has yet measured a response to. Each one says what would move it onto the main list. These entries carry no grades, because there is nothing to grade yet.</p>
-  <p class="counts" data-pagefind-ignore><strong>{c["not-yet"]}</strong> entries</p>
-  <FilterBar total={notYet.length} />
-  <ol class="entry-list">
-    {notYet.map((e) => <Card entry={e} />)}
-  </ol>
+  <Registry entries={notYet} section="not-yet" />
 </Base>

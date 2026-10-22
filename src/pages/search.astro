@@ -1,15 +1,41 @@
 ---
 import Base from "../layouts/Base.astro";
+import { ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
 ---
 <Base title="Search" description="Search every entry.">
   <h1 class="page-title">Search</h1>
-  <p class="lede">Searches entry pages, the method page, and the about page. The index is built with the site, so nothing leaves your browser.</p>
+  <p class="lede">Searches entry pages, the method page, and the about page. The index is built with the site, so nothing leaves your browser. Results carry the entry's three stamps; the filters below narrow by section and grade.</p>
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
   <div id="search"></div>
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
-  <script is:inline>
+  <script is:inline define:vars={{ AT: ATTRIBUTION_LABEL, WI: WINDOW_LABEL }}>
     window.addEventListener("DOMContentLoaded", () => {
-      if (window.PagefindUI) new PagefindUI({ element: "#search", showSubResults: false, showImages: false });
+      if (!window.PagefindUI) return;
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      const stamp = (cls, inner) => `<span class="stamp stamp-xs ${cls}">${inner}</span>`;
+      const ui = new PagefindUI({
+        element: "#search",
+        showSubResults: false,
+        showImages: false,
+        showEmptyFilters: false,
+        resetStyles: false,
+        processResult: (r) => {
+          const m = r.meta || {};
+          const parts = [];
+          if (m.evidence && m.evidence !== "none") parts.push(stamp(`stamp-ev stamp-ev-${esc(m.evidence)}`, `<b class="sg">${esc(m.evidence)}</b>`));
+          if (m.attribution && m.attribution !== "none") parts.push(stamp(`stamp-at stamp-at-${esc(m.attribution)}`, `<span class="sd">${esc(AT[m.attribution] || m.attribution)}</span>`));
+          if (m.window && m.window !== "none") parts.push(stamp(`stamp-wi stamp-wi-${esc(m.window)}`, `<span class="sd">${esc(WI[m.window] || m.window)}</span>`));
+          if (!parts.length && m.section === "Not yet") parts.push(stamp("stamp-watch", `<span class="sd">Watchlist</span>`));
+          if (parts.length) r.excerpt = `<span class="stamps">${parts.join("")}</span>${r.excerpt}`;
+          return r;
+        },
+      });
+      const q = new URLSearchParams(location.search).get("q");
+      if (q) {
+        ui.triggerSearch(q);
+        const header = document.querySelector("[data-search-input]");
+        if (header) header.value = q;
+      }
     });
   </script>
 </Base>

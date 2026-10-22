@@ -1,16 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
-import Card from "../components/Card.astro";
-import FilterBar from "../components/FilterBar.astro";
-import { because, siteCounts as c } from "../lib/site.ts";
+import Hero from "../components/Hero.astro";
+import Registry from "../components/Registry.astro";
+import { because } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 ---
-<Base title="Because of AI" description={SITE.description}>
-  <h1 class="thesis">{SITE.thesis}</h1>
-  <p class="lede">A registry of measured AI benefits to people. Each sentence below is graded on the evidence behind it, on how much of the result the AI can claim, and on whether the benefit happened inside the last twelve months. We also keep <a href="/not-because-of-ai">what did not work</a> and <a href="/not-yet">what is not yet proven</a>.</p>
-  <p class="counts" data-pagefind-ignore><strong>{c.because}</strong> because · <strong>{c["not-because"]}</strong> not because · <strong>{c["not-yet"]}</strong> not yet</p>
-  <FilterBar total={because.length} />
-  <ol class="entry-list">
-    {because.map((e) => <Card entry={e} />)}
-  </ol>
+<Base title="Because of AI" description={SITE.description} section="because" nameplate="full">
+  <h1 class="sr-only">Because of AI: a registry of measured AI benefits to people</h1>
+  <Hero entries={because} />
+  <Registry entries={because} section="because" />
 </Base>

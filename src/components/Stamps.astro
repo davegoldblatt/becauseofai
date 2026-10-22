@@ -1,0 +1,51 @@
+---
+// The three grade stamps (evidence / attribution / window), or one WATCHLIST
+// stamp when an entry carries no grades at all. Rectangular, mono caps, zero
+// radius: fill for evidence, outline for attribution, signal or hatch for the
+// window, so the three axes read apart in grayscale (DAV-338). Each stamp links
+// to its definition on /method and carries that same sentence as a tooltip.
+// Never collapsed into one score.
+import type { Entry } from "../schema.ts";
+import { EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION, WATCHLIST_DESCRIPTION, isUnreviewed } from "../lib/format.ts";
+interface Props { entry: Entry; scope: string }
+const { entry: e, scope } = Astro.props;
+const g = e.grades;
+const ungraded = g.evidence === null && g.attribution === null && g.window === null;
+const uid = (k: string) => `tip-${scope}-${e.id}-${k}`;
+const unreviewed = isUnreviewed(e);
+---
+<div class="stamps" data-pagefind-ignore>
+  {ungraded ? (
+    <a class="stamp stamp-watch" href="/method#four-tests" aria-describedby={uid("w")}>
+      <span class="sd">Watchlist</span>
+      <span class="tip" role="tooltip" id={uid("w")} aria-hidden="true">{WATCHLIST_DESCRIPTION}</span>
+    </a>
+  ) : (
+    <>
+      {g.evidence && (
+        <a class={`stamp stamp-ev stamp-ev-${g.evidence}`} href={`/method#evidence-${g.evidence}`} aria-describedby={uid("e")}>
+          <span class="sr-only">Evidence </span><b class="sg">{g.evidence}</b><span class="sd">{EVIDENCE_WORD[g.evidence]}</span>
+          <span class="tip" role="tooltip" id={uid("e")} aria-hidden="true">Evidence {g.evidence}: {GRADE_DESCRIPTION.evidence[g.evidence]}</span>
+        </a>
+      )}
+      {g.attribution && (
+        <a class={`stamp stamp-at stamp-at-${g.attribution}`} href={`/method#attribution-${g.attribution}`} aria-describedby={uid("a")}>
+          <span class="sr-only">Attribution </span><span class="sd">{ATTRIBUTION_LABEL[g.attribution]}</span>
+          <span class="tip" role="tooltip" id={uid("a")} aria-hidden="true">Attribution, {ATTRIBUTION_LABEL[g.attribution]}: {GRADE_DESCRIPTION.attribution[g.attribution]}</span>
+        </a>
+      )}
+      {g.window ? (
+        <a class={`stamp stamp-wi stamp-wi-${g.window}`} href={`/method#window-${g.window}`} aria-describedby={uid("i")}>
+          <span class="sr-only">Window </span><span class="sd">{WINDOW_LABEL[g.window]}</span>
+          <span class="tip" role="tooltip" id={uid("i")} aria-hidden="true">Window, {WINDOW_LABEL[g.window]}: {GRADE_DESCRIPTION.window[g.window]}</span>
+        </a>
+      ) : (
+        <a class="stamp stamp-wi stamp-wi-none" href="/method#window" aria-describedby={uid("i")}>
+          <span class="sd">window unverified</span>
+          <span class="tip" role="tooltip" id={uid("i")} aria-hidden="true">No window grade yet: the entry's notes say which date is missing.</span>
+        </a>
+      )}
+    </>
+  )}
+  {unreviewed && <span class="stamp stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span>}
+</div>

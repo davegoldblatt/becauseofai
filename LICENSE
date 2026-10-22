@@ -31,5 +31,5 @@ You may share and adapt the entries and their grades for any purpose, including
 commercially, provided you credit "Because of AI (becauseofai.org)" and link to
 the entry you used. Each entry's own sources keep their own rights.
 
-FONTS: Newsreader and Noto Sans Symbols are used under the SIL Open Font
-License 1.1; see public/fonts/OFL-Newsreader.txt and src/og/OFL-*.txt.
+FONTS: Archivo, Bricolage Grotesque, and JetBrains Mono are used under the SIL
+Open Font License 1.1; see public/fonts/OFL-*.txt and src/og/OFL-*.txt.

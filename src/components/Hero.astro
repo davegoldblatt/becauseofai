@@ -1,0 +1,96 @@
+---
+// The hero is the content: one entry at poster size, cycling through the top
+// five by rank every six seconds (DAV-336). Crossfade only. Pauses on hover,
+// focus, the Pause button, a hidden tab, and whenever the reader prefers
+// reduced motion, in which case rank 1 stays put. Every slide is in the DOM, so
+// the hero reserves the height of the tallest and never shifts layout.
+import type { Entry } from "../schema.ts";
+import Stamps from "./Stamps.astro";
+import LagBar from "./LagBar.astro";
+import { splitImpact } from "../lib/format.ts";
+interface Props { entries: Entry[] }
+const { entries } = Astro.props;
+const slides = entries.slice(0, 5);
+---
+<section class="hero" data-hero aria-roledescription="carousel" aria-label="Top entries" data-pagefind-ignore>
+  <div class="hero-stage">
+    {slides.map((e, i) => { const imp = splitImpact(e.impact); return (
+      <article class:list={["hero-slide", { "is-active": i === 0 }]} data-slide={i} aria-hidden={i === 0 ? undefined : "true"} aria-roledescription="slide" aria-label={`${i + 1} of ${slides.length}`}>
+        <p class:list={["hero-impact", { phrase: !imp.numeric }]}><b>{imp.lead}</b>{imp.rest && <span>{imp.rest}</span>}</p>
+        <h2 class="hero-sentence"><a href={`/entry/${e.id}`} tabindex={i === 0 ? undefined : -1}>{e.headline}</a></h2>
+        <div class="hero-meta">
+          <Stamps entry={e} scope={`hero${i}`} />
+          <LagBar entry={e} />
+        </div>
+      </article>
+    ); })}
+  </div>
+  {slides.length > 1 && (
+    <div class="hero-nav">
+      <span class="hero-idx" data-hero-idx aria-live="polite">1 / {slides.length}</span>
+      <span class="hero-dots" role="group" aria-label="Choose entry">
+        {slides.map((e, i) => <button type="button" data-hero-dot={i} aria-label={`Show entry ${i + 1}: ${e.impact}`} aria-current={i === 0 ? "true" : undefined}></button>)}
+      </span>
+      <button type="button" class="hero-pause" data-hero-pause aria-pressed="false">Pause</button>
+    </div>
+  )}
+</section>
+<script>
+  const hero = document.querySelector<HTMLElement>("[data-hero]");
+  if (hero) {
+    const slides = Array.from(hero.querySelectorAll<HTMLElement>("[data-slide]"));
+    const dots = Array.from(hero.querySelectorAll<HTMLButtonElement>("[data-hero-dot]"));
+    const idx = hero.querySelector<HTMLElement>("[data-hero-idx]");
+    const pauseBtn = hero.querySelector<HTMLButtonElement>("[data-hero-pause]");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+    let current = 0;
+    let timer: number | undefined;
+    let paused = false;
+    let held = false;
+    function show(n: number) {
+      current = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        const on = i === current;
+        s.classList.toggle("is-active", on);
+        if (on) s.removeAttribute("aria-hidden");
+        else s.setAttribute("aria-hidden", "true");
+        s.querySelectorAll<HTMLElement>("a").forEach((a) => {
+          if (on) a.removeAttribute("tabindex");
+          else a.tabIndex = -1;
+        });
+      });
+      dots.forEach((d, i) => {
+        if (i === current) d.setAttribute("aria-current", "true");
+        else d.removeAttribute("aria-current");
+      });
+      if (idx) idx.textContent = `${current + 1} / ${slides.length}`;
+    }
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = undefined;
+    }
+    function start() {
+      stop();
+      if (reduce.matches || slides.length < 2) return;
+      timer = window.setInterval(() => {
+        if (!paused && !held && !document.hidden) show(current + 1);
+      }, 6000);
+    }
+    hero.addEventListener("mouseenter", () => (held = true));
+    hero.addEventListener("mouseleave", () => (held = false));
+    hero.addEventListener("focusin", () => (held = true));
+    hero.addEventListener("focusout", () => (held = false));
+    dots.forEach((d, i) => d.addEventListener("click", () => { show(i); start(); }));
+    pauseBtn?.addEventListener("click", () => {
+      paused = !paused;
+      pauseBtn.setAttribute("aria-pressed", String(paused));
+      pauseBtn.textContent = paused ? "Play" : "Pause";
+    });
+    reduce.addEventListener("change", () => {
+      start();
+      if (pauseBtn) pauseBtn.hidden = reduce.matches;
+    });
+    if (pauseBtn && reduce.matches) pauseBtn.hidden = true;
+    start();
+  }
+</script>

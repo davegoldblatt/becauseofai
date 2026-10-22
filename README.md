@@ -49,12 +49,15 @@ Defaults taken on the owner's behalf while building. Each is recorded on Linear 
 5. **Dates are never coerced to Date objects.** `2025-10-25` stays a string, `2025-10` stays, bare years (`2019`) stay numbers. This prevents a time-zone shift from moving a day.
 6. **Stale window grades warn, never change.** `validate` warns when a `window: in` or `ongoing` grade no longer matches the achieved dates against the 12-month window ending today. `hurricane-melissa-2025` trips this on 2026-10-29.
 7. **`rank` must be unique within a section.** Duplicate ranks make the editorial order ambiguous and fail validation.
-8. **Newsreader is self-hosted** (`public/fonts/`, OFL, latin subset) instead of loaded from Google Fonts: same typeface, no third-party request on page load, and Lighthouse performance stays above 95 on a throttled phone.
-9. Hosting: Cloudflare Pages. No newsletter (Dave, 2026-10-22). `/about` funding line: "independent, unfunded." `pre` entries show on `/` with a muted window badge. OG images: plain text card. (HANDOFF §9 defaults; DAV-312.)
+8. **Fonts are self-hosted** (`public/fonts/`, OFL, Latin subsets, static instances) instead of loaded from Google Fonts: no third-party request on page load, and Lighthouse performance stays above 95 on a throttled phone. The faces are Archivo (condensed 900 for numbers and the nameplate, 400 for body), Bricolage Grotesque 700 for the sentences, and JetBrains Mono 500 for dates, grades, and counts. This departs from HANDOFF §5 (a serif headline face) by decision on DAV-326; tabular numerals stay on everywhere a number appears.
+9. Hosting: Cloudflare Pages. No newsletter (Dave, 2026-10-22). `/about` funding line: "independent, unfunded." `pre` entries show on `/` with a hatched window stamp. OG images: ink card with the number in signal (DAV-341). (HANDOFF §9 defaults; DAV-312.)
+10. **The list pages are ledger rows, not the HANDOFF §5 card** (DAV-326, Dave 2026-10-22). A row carries the sentence, three stamps, the lag bar, one line of caveat, and the impact number; the summary, effect, comparison, reach, sources, and updated stamp live on the entry page only. Not-because rows carry a null-red left rule. Grades, the four tests, held entries, and "never invent precision" are unchanged.
+11. **The lag bar shows a gap when publication trails the benefit by six months or more.** The reference is the achieved end; when the end is unknown and the window is not `ongoing`, the start; an ongoing benefit with no end has no lag. Months are floored from the latest day the achieved date could mean to the earliest day the published date could mean, so the gap is never overstated; bare years render as "~".
+12. **Changelog types come from the note's leading word or a bracketed prefix** (`Added.`, `[downgraded] …`): added, upgraded, downgraded, updated, corrected, verified, removed, re-graded. Any other note carries no type. `/changes.xml` carries one item per history line; `/feed.xml` stays one item per entry.
 
 ## License
 
-Code is MIT. The registry data (`data/`, `research/`), the handoff, and the site's written content are CC BY 4.0: reuse them with credit to "Because of AI (becauseofai.org)" and a link to the entry. Fonts are under the SIL Open Font License. See `LICENSE`.
+Code is MIT. The registry data (`data/`, `research/`), the handoff, and the site's written content are CC BY 4.0: reuse them with credit to "Because of AI (becauseofai.org)" and a link to the entry. Fonts (Archivo, Bricolage Grotesque, JetBrains Mono) are under the SIL Open Font License; their OFL texts sit next to the font files. See `LICENSE`.
 
 ## Contributing
 

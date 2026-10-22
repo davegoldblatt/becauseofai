@@ -1,0 +1,47 @@
+---
+// One ledger row (DAV-337). Index numeral in the gutter, the sentence with
+// stamps and the lag bar in the middle, the impact number on the right. The
+// whole row is a link to the entry page, which is where the summary, effect,
+// sources, and history live. Not-because rows carry the null-red rule;
+// not-yet rows carry dotted rules, a WATCHLIST stamp, and "what would change
+// this" as their body (DAV-340).
+import type { Entry } from "../schema.ts";
+import Stamps from "./Stamps.astro";
+import LagBar from "./LagBar.astro";
+import { splitImpact, achievedKey, isoDate, lagMonths } from "../lib/format.ts";
+interface Props { entry: Entry; index: number }
+const { entry: e, index } = Astro.props;
+const imp = splitImpact(e.impact);
+const lag = lagMonths(e);
+---
+<li
+  class:list={["row", `s-${e.section}`]}
+  id={e.id}
+  data-entry
+  data-id={e.id}
+  data-section={e.section}
+  data-rank={e.rank}
+  data-achieved={achievedKey(e)}
+  data-published={isoDate(e.dates.published)}
+  data-evidence={e.grades.evidence ?? "none"}
+  data-attribution={e.grades.attribution ?? "none"}
+  data-window={e.grades.window ?? "none"}
+  data-domain={e.domain}
+  data-ai-type={e.ai_type}
+  data-lag={lag ?? -1}
+>
+  <span class="idx" data-idx={index} aria-hidden="true"></span>
+  <div class="row-main">
+    <h2 class="sentence"><a href={`/entry/${e.id}`} data-row-link>{e.headline}</a></h2>
+    <Stamps entry={e} scope="row" />
+    <LagBar entry={e} />
+    {e.section === "not-yet" && e.what_would_change ? (
+      <p class="wwc"><span aria-hidden="true">→ </span><span class="sr-only">What would change this: </span>{e.what_would_change}</p>
+    ) : e.caveat ? (
+      <p class="caveat" title={e.caveat}><span class="sr-only">Caveat: </span>{e.caveat}</p>
+    ) : null}
+  </div>
+  <p class:list={["row-impact", { phrase: !imp.numeric }]}>
+    <b>{imp.lead}</b>{imp.rest && <span>{imp.rest}</span>}
+  </p>
+</li>
