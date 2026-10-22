@@ -1,0 +1,1219 @@
+# becauseofai.org — seed entries
+# Split into data/entries/<id>.yaml on scaffold. Do not alter numbers, grades, or sources.
+# Fields marked "verify:" in notes are honest gaps for the first weekly research run to close.
+
+# =====================================================================
+# SECTION: because
+# =====================================================================
+
+- id: hurricane-melissa-2025
+  section: because
+  rank: 1
+  headline: >-
+    Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica
+    about three days out, while Melissa was still a Category 1.
+  impact: "~3 days' warning on a Cat 5"
+  summary: >-
+    NHC forecasters explicitly forecast Category 5 intensity while Melissa was an
+    80-mph Category 1, largely on the strength of Google DeepMind's cyclone model,
+    which posted the lowest track and intensity errors of any model for the 2025
+    Atlantic season and kept the official forecast below its five-year average
+    error while NOAA's GFS had its worst year in two decades.
+  caveat: >-
+    There is no lives-saved number and cannot be; the measured outcome is forecast
+    skill, and the final call was made by human forecasters using the model.
+  domain: disaster
+  ai_type: classic-ml
+  grades:
+    evidence: B
+    attribution: isolated
+    window: in
+  comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
+  effect:
+    relative: "Lowest season track and intensity error of any model; roughly one extra day of forecast accuracy in 2023–2025 hindcasts"
+    absolute: null
+  reach: "Jamaica (pop. ~2.8M), Haiti, Cuba, Bahamas; 2025 Atlantic season"
+  dates:
+    achieved_start: 2025-10-25
+    achieved_end: 2025-10-28
+    published: 2025-11-29
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "NWS: AI hurricane forecasting Q&A (2025 season)"
+      url: https://www.weather.gov/news/261102-AI-Hurricane-Forecasting
+      type: primary
+    - title: "Michael Lowry: Two forecast models stand out (2025 season verification)"
+      url: https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast
+      type: primary
+    - title: "NPR: The future of hurricane forecasting is AI"
+      url: https://www.npr.org/2025/11/29/nx-s1-5604290/atlantic-hurricane-season-forecast-ai-google
+      type: secondary
+    - title: "CNN: Why NHC bet big on AI to forecast Isaias (Oct 2026)"
+      url: https://www.cnn.com/2026/10/08/weather/hurricane-isaias-ai-models-google
+      type: secondary
+    - title: "Gizmodo: WeatherNext Cyclones gives an extra day of warning"
+      url: https://gizmodo.com/google-deepminds-hurricane-forecast-model-provides-a-whole-extra-day-of-warning-2000800635
+      type: secondary
+  conflicts: "Google partnered with NHC to train and evaluate the model; verification stats are from NHC and an independent former NHC branch chief."
+  what_would_change: "A published NHC verification report quantifying the official forecast's error with and without the DeepMind input would move attribution from isolated toward a hard number."
+  notes: >-
+    verify: exact NHC advisory time of the first explicit Cat 5 forecast; final Jamaica
+    death toll and any evacuation-timing analysis.
+  related: [flood-hub-flash-floods]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: waymo-injury-crashes
+  section: because
+  rank: 2
+  headline: >-
+    Because of AI, there were an estimated 841 fewer injury-causing crashes across
+    270 million driverless miles.
+  impact: "82% fewer injury crashes"
+  summary: >-
+    Waymo's safety hub through June 2026 reports 82% fewer injury-causing crashes
+    and 95% fewer serious-or-worse crashes than a geographically matched human
+    benchmark, with roughly 134 of the 841 avoided injury crashes accruing in
+    Q2 2026 alone (841 minus the 707 reported through March 2026).
+  caveat: >-
+    Company-produced, modeled comparison against an estimated human benchmark
+    with an adjustment for roughly 32% underreporting of human injury crashes;
+    not a randomized comparison of identical trips.
+  domain: transport
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: isolated
+    window: ongoing
+  comparison: "Waymo rider-only miles vs human-driver crash rates in the same ZIP codes and period, adjusted for underreporting"
+  effect:
+    relative: "82% fewer injury crashes; 95% fewer serious-or-worse"
+    absolute: "0.67 injury crashes per million miles vs ~3.77 benchmark; 841 fewer injury crashes lifetime"
+  reach: "Phoenix, SF Bay Area, Los Angeles, Austin, Atlanta; ~4M miles/week by mid-2026"
+  dates:
+    achieved_start: 2019-01
+    achieved_end: 2026-06-30
+    published: 2026-09-24
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Waymo Safety Impact hub"
+      url: https://waymo.com/safety/impact/
+      type: primary
+    - title: "Waymo: safety data update, Sept 2026"
+      url: https://waymo.com/blog/shorts/safetydata-september26/
+      type: primary
+    - title: "Waymo: safety data update, June 2026 (through March 2026)"
+      url: https://waymo.com/blog/shorts/safetydata-june26/
+      type: primary
+    - title: "Parameter: IIHS commentary on Waymo data release"
+      url: https://parameter.io/waymo-autonomous-vehicles-slash-injury-crashes-by-more-than-80/
+      type: secondary
+  conflicts: "Waymo owns the data and the benchmark methodology; IIHS has commended the transparency but not independently audited the counts."
+  what_would_change: "An independent (NHTSA, IIHS, academic) replication of the benchmark on the same miles would move evidence to B."
+  notes: >-
+    The 841 figure is lifetime. For a strict 12-month view use the quarterly deltas:
+    ~134 avoided injury crashes in Q2 2026 across ~51M miles.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: columbia-star-birth
+  section: because
+  rank: 3
+  headline: >-
+    Because of AI, a baby girl was born to a couple who had been told there was
+    no sperm to work with.
+  impact: "2 sperm found in 2.5M images"
+  summary: >-
+    Columbia's STAR system scanned 2.5 million images of a 3.5 mL sample in about
+    two hours and found viable sperm where manual microscopy found none; the
+    resulting pregnancy was confirmed in 2025, published in The Lancet in
+    October 2025, and a healthy daughter was born in late 2025.
+  caveat: >-
+    One case; STAR finds sperm in just under 30% of men diagnosed with
+    azoospermia, and larger trials are still underway.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: D
+    attribution: only-path
+    window: in
+  comparison: "Manual microscopy by trained technicians on the same sample (found none) vs STAR"
+  effect:
+    relative: "~40x more sperm recovered than manual search across cases reported by the team"
+    absolute: "1 live birth; sperm found in ~30% of azoospermia patients tested"
+  reach: "Columbia University Fertility Center only"
+  dates:
+    achieved_start: 2025-03
+    achieved_end: 2025-12
+    published: 2025-10-31
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Columbia / The Lancet: First clinical pregnancy following AI-based microfluidic sperm detection (press release)"
+      url: https://www.eurekalert.org/news-releases/1104028
+      type: primary
+    - title: "National Geographic: The first AI-assisted IVF babies are now being born"
+      url: https://nationalgeographic.com/health/article/ivf-ai-assisted-reproductive-technology
+      type: secondary
+    - title: "Decrypt/BBC: Doctors use AI to spot hidden sperm (birth confirmed)"
+      url: https://decrypt.co/366374/doctors-ai-hidden-sperm-men-study
+      type: secondary
+  conflicts: "Two authors are inventors on Columbia patent applications for STAR."
+  what_would_change: "A multi-center series with live-birth rates would move evidence to B or C."
+  notes: >-
+    verify: reports differ on which couple was the first (a 19-year infertility case
+    in the Lancet letter vs a Klinefelter case in BBC coverage); confirm birth month.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: ethiopia-tb-ai-cxr
+  section: because
+  rank: 4
+  headline: >-
+    Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and
+    March 2026 in screening programs that had no radiologist to read the X-rays.
+  impact: "1,660 TB cases found"
+  summary: >-
+    AI-read chest X-rays (CAD) served as the triage reader in MSH's Eliminate TB
+    Project across four regions, contributing to 1,660 detected cases including
+    asymptomatic infectious cases that symptom screening misses.
+  caveat: >-
+    Program report, not a controlled comparison; "contributed to" means the AI
+    flagged people for confirmatory testing, so the counterfactual is how many
+    would have been found by symptom screening alone.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: only-path
+    window: ongoing
+  comparison: "AI CXR triage vs routine symptom screening in the same facilities (descriptive)"
+  effect:
+    relative: "Community AI screening yield >5% vs <0.1% routine clinical screening (program figures)"
+    absolute: "1,660 cases, Jan 2025–Mar 2026"
+  reach: "Four project-supported regions, Ethiopia"
+  dates:
+    achieved_start: 2025-01
+    achieved_end: 2026-03
+    published: 2026-07
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "MSH technical brief: AI-powered chest X-ray screening for TB case finding, Ethiopia"
+      url: https://msh.org/wp-content/uploads/2026/07/Eliminate-TB-Project_Technical-Brief_AI-Chest-X-Rays.pdf
+      type: primary
+    - title: "MSH: AI-powered chest X-ray screening — field experience from Ethiopia"
+      url: https://msh.org/resources/ai-powered-chest-x-ray-screening-for-tb-case-finding-field-experience-from-ethiopia/
+      type: secondary
+  conflicts: "Implementing NGO's own report (USAID-funded project)."
+  what_would_change: "A stepped-wedge or cluster comparison of facilities with and without CAD would move evidence to A/B."
+  notes: null
+  related: [india-tribal-tb-ai-cxr]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: india-tribal-tb-ai-cxr
+  section: because
+  rank: 5
+  headline: >-
+    Because of AI, TB case notifications rose 80% in a tribal district of
+    Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.
+  impact: "+80% TB notifications"
+  summary: >-
+    A prospective multi-centre study of qXR v3 chest X-ray reading found an 80.21%
+    increase in TB notifications versus the Aug 2022–Mar 2023 baseline; of 51
+    asymptomatic people the AI flagged, 20 were confirmed to have TB, and over 40%
+    of all AI-flagged patients were confirmed.
+  caveat: >-
+    Before-and-after design in a high-burden setting; national notifications were
+    also rising from other case-finding efforts.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: B
+    attribution: only-path
+    window: pre
+  comparison: "AI implementation period vs pre-implementation baseline (same sites)"
+  effect:
+    relative: "+80.21% notifications (p<.001)"
+    absolute: "162 confirmed cases; 44.6% positivity among AI-flagged"
+  reach: "High-risk tribal population, Chhattisgarh"
+  dates:
+    achieved_start: 2023-04
+    achieved_end: null
+    published: 2026-01-07
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Evaluating AI-based chest X-ray screening for TB in tribal Chhattisgarh (PMC)"
+      url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12810203/
+      type: primary
+  conflicts: "verify: author affiliations and vendor (Qure.ai) involvement."
+  what_would_change: null
+  notes: >-
+    verify: end date of the AI implementation period.
+  related: [ethiopia-tb-ai-cxr]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: nhs-derm-skin-cancer
+  section: because
+  rank: 6
+  headline: >-
+    Because of AI, about a third of urgent skin-cancer referrals at some NHS
+    hospitals got a same-day all-clear without waiting weeks for a dermatologist.
+  impact: "25,000+ cancers found; ~1/3 discharged same day"
+  summary: >-
+    Skin Analytics' DERM, the only AI with Class III CE certification for
+    autonomous use, has assessed 250,000+ NHS patients, identified 25,000+
+    histology-confirmed cancers, and is expanding to all 18 NHS South East trusts
+    (about 9 million more people) from autumn 2026.
+  caveat: >-
+    Operational data from the vendor and trusts; at one district hospital the
+    autonomous pathway discharged 37% of referrals and missed one basal cell
+    carcinoma.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: only-path
+    window: ongoing
+  comparison: "Autonomous AI triage vs dermatologist face-to-face review (capacity-constrained usual care)"
+  effect:
+    relative: "Discharge-without-appointment rate 26% with dermatologist second read → 37% autonomous (one hospital)"
+    absolute: "250,000+ assessed; 25,000+ cancers confirmed"
+  reach: "25 NHS trusts; +18 trusts from autumn 2026; Northern Ireland (1.9M)"
+  dates:
+    achieved_start: 2022-01
+    achieved_end: null
+    published: 2026-10-09
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "NICE early value assessment of DERM (May 2025)"
+      url: https://www.healthtechdigital.com/?p=237510
+      type: primary
+    - title: "NIHR HTA: DERM and Moleanalyzer Pro clinical and cost-effectiveness (Feb 2026)"
+      url: https://njl-admin.nihr.ac.uk/document/download/2049990
+      type: primary
+    - title: "BJD abstract: implementing DERM at an NHS district hospital"
+      url: https://www.citedrive.com/en/discovery/ai04-implementing-ai-derm-technology-into-the-urgent-skin-cancer-pathway-at-an-nhs-district-hospital-is-it-worth-it/
+      type: primary
+    - title: "HLTH: NHS South East expands DERM across 18 trusts"
+      url: https://hlth.com/insights/news/nhs-england-south-east-expands-skin-analytics-ai-skin-cancer-screening-across-18-trusts
+      type: secondary
+  conflicts: "Patient and cancer counts come from the vendor's monitoring data."
+  what_would_change: "Published missed-cancer rates across all autonomous sites, or NICE's post-evidence-generation decision, would move evidence to B."
+  notes: null
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: golden-bridge-ii-stroke
+  section: because
+  rank: 7
+  headline: >-
+    Because of AI-assisted decision support, 10 fewer stroke patients per 1,000
+    had another stroke, heart attack, or vascular death within three months.
+  impact: "26% fewer vascular events"
+  summary: >-
+    GOLDEN BRIDGE II (BMJ, March 2026) cluster-randomized 77 Chinese hospitals and
+    21,603 acute ischemic stroke patients; new vascular events at three months were
+    2.9% with the AI-imaging decision-support system vs 3.9% with usual care
+    (adjusted HR 0.71), with the benefit holding through 12 months.
+  caveat: >-
+    Hospitals, not patients, were randomized, and the intervention bundled AI
+    image analysis with guideline-based treatment prompts, so the AI's isolated
+    contribution isn't separable; enrollment ran January 2021 to June 2023.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: A
+    attribution: bundled
+    window: pre
+  comparison: "Hospitals with AI-CDSS vs usual care; primary endpoint composite vascular events at 3 months"
+  effect:
+    relative: "26% relative reduction (HR 0.71)"
+    absolute: "3.9% → 2.9%: 10 fewer events per 1,000 patients"
+  reach: "21,603 patients, 77 hospitals, 23 provinces"
+  dates:
+    achieved_start: 2021-01
+    achieved_end: 2023-06
+    published: 2026-03-20
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "BMJ 2026;392:e085810 (press release with trial figures)"
+      url: https://www.eurekalert.org/news-releases/1120567
+      type: primary
+    - title: "ClinicalTrials.gov NCT04524624"
+      url: https://clinicaltrials.gov/study/NCT04524624
+      type: primary
+    - title: "Urban Health Today summary (enrollment dates)"
+      url: https://www.urbanhealthtoday.com/post/use-of-ai-stroke-tool-leads-to-reduced-vascular-events-in-chinese-hospitals
+      type: secondary
+  conflicts: "verify: CDSS vendor and funding disclosures in the BMJ paper."
+  what_would_change: "A factorial design separating AI imaging from guideline prompts would resolve attribution."
+  notes: >-
+    Worked example on /method for the achieved-vs-published rule.
+  related: [nhs-stroke-ai-imaging]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: sierra-leone-gemini-math
+  section: because
+  rank: 8
+  headline: >-
+    Because of AI (plus tablets and pair work), junior secondary students in
+    Sierra Leone gained about 0.26 standard deviations in math in eight weeks.
+  impact: "+0.26 SD in 8 weeks"
+  summary: >-
+    A preregistered classroom-level cluster RCT of 1,763 Grade 7–8 students in 48
+    classrooms across 12 Port Loko schools had treatment classes use Gemini's
+    Guided Learning in pairs for about two of four weekly math lessons; the
+    treatment group gained +0.258 SD on independently administered tests.
+  caveat: >-
+    The control arm got neither tablets nor structured pair work, so the package
+    was tested, not the AI; results are a Google DeepMind/Fab AI technical
+    report, not a peer-reviewed paper.
+  domain: education
+  ai_type: generative
+  grades:
+    evidence: A
+    attribution: bundled
+    window: in
+  comparison: "Gemini-integrated lessons vs business-as-usual instruction, classroom-level randomization"
+  effect:
+    relative: "+0.258 SD (described as ~1.2–1.7 years of typical progress)"
+    absolute: null
+  reach: "1,763 students, 12 schools, Port Loko District"
+  dates:
+    achieved_start: 2025-10
+    achieved_end: 2025-12
+    published: 2026-05
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Google DeepMind & Fab AI technical report (May 2026)"
+      url: https://storage.googleapis.com/deepmind-media/LearnLM/learnLM_sierraleone_may26.pdf
+      type: primary
+    - title: "AEA RCT Registry 16651"
+      url: https://www.socialscienceregistry.org/trials/16651
+      type: primary
+    - title: "DeepMind blog summary"
+      url: https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/
+      type: secondary
+  conflicts: "Google authored the report and makes the product."
+  what_would_change: "An active-control arm (tablets + pair work, no AI) would isolate attribution — see the China CAL trial for why that matters."
+  notes: >-
+    verify: exact intervention dates (registry lists Sept 2025–Mar 2026 for the study overall).
+  related: [china-ai-cal-null, maryland-ai-tutor-negative]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: masai-ai-mammography
+  section: because
+  rank: 9
+  headline: >-
+    Because of AI, Swedish mammography screening found 29% more cancers with 44%
+    less radiologist reading time, and 12% fewer cancers surfaced between screens.
+  impact: "29% more cancers, 44% less workload"
+  summary: >-
+    MASAI, the first RCT of AI in cancer screening (105,934 women; Lancet, Jan 2026),
+    reported interval cancers of 1.55 vs 1.76 per 1,000 with AI-supported reading
+    vs standard double reading, with fewer invasive, T2+, and non-luminal-A
+    interval cancers, on top of earlier results showing higher detection and lower
+    workload at the same specificity.
+  caveat: >-
+    The trial was designed for non-inferiority; the 12% interval-cancer reduction
+    was not statistically significant (ratio 0.88, 95% CI 0.65–1.18, p=0.41),
+    mortality wasn't measured, and screening took place in 2021–2022.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: A
+    attribution: isolated
+    window: pre
+  comparison: "AI-supported single/double reading vs standard double reading, individually randomized"
+  effect:
+    relative: "12% fewer interval cancers (n.s.); 29% more screen-detected cancers; 44% workload reduction"
+    absolute: "1.55 vs 1.76 interval cancers per 1,000 (0.21 per 1,000 difference)"
+  reach: "105,934 women, Sweden national screening programme"
+  dates:
+    achieved_start: 2021-04
+    achieved_end: 2022-12
+    published: 2026-01-29
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Lancet 2026;407:505-514 (ScienceDirect)"
+      url: https://www.sciencedirect.com/science/article/abs/pii/S014067362502464X
+      type: primary
+    - title: "ASCO Post summary with interval cancer rates"
+      url: https://ascopost.com/news/february-2026/interval-cancer-rate-with-ai-supported-mammography-screening/
+      type: secondary
+    - title: "Cancer (Wiley) summary"
+      url: https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.70440
+      type: secondary
+  conflicts: "ScreenPoint Medical (Transpara) provided the software and publicized results; academic sponsor Lund University."
+  what_would_change: "Breast-cancer-specific mortality follow-up, or a replication powered for superiority."
+  notes: >-
+    verify: exact screening enrollment dates from the Lancet methods.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: ucd-als-speech-bci
+  section: because
+  rank: 10
+  headline: >-
+    Because of AI, a man with ALS has spoken with his family and kept working from
+    home for two years through a brain implant, at up to 99% word accuracy.
+  impact: "2 years of independent speech"
+  summary: >-
+    UC Davis's intracortical BCI uses deep-learning brain-to-text and cursor
+    decoders with continuous fine-tuning; Nature Medicine (June 2026) documented
+    Casey Harrell's near-daily unassisted use at home for roughly two years.
+  caveat: >-
+    One participant, an experimental device implanted in 2023, not commercially
+    available; some BCIs in other ALS patients have later stopped working.
+  domain: accessibility
+  ai_type: classic-ml
+  grades:
+    evidence: D
+    attribution: only-path
+    window: ongoing
+  comparison: "No alternative communication path at comparable speed existed for this participant"
+  effect:
+    relative: null
+    absolute: "Up to 99% word accuracy; ~2 years independent home use"
+  reach: "One participant"
+  dates:
+    achieved_start: 2023-07
+    achieved_end: null
+    published: 2026-06-15
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Nature Medicine: Long-term independent use of an intracortical BCI for speech and cursor control"
+      url: https://www.nature.com/articles/s41591-026-04414-6
+      type: primary
+    - title: "UC Davis Health news release"
+      url: https://health.ucdavis.edu/news/headlines/brain-computer-interface-enables-independent-accurate-communication-for-man-living-with-als/2026/06
+      type: secondary
+  conflicts: "Academic; verify device-maker relationships in the paper."
+  what_would_change: "Multi-participant results with durability data would move evidence to C/B."
+  notes: null
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: nhs-stroke-ai-imaging
+  section: because
+  rank: 11
+  headline: >-
+    Because of AI, stroke patients in England were 57% more likely to get a
+    thrombectomy and reached specialist centres 64 minutes faster.
+  impact: "EVT odds 1.57x; 64 min faster transfer"
+  summary: >-
+    Across ~453,000 stroke admissions at 107 English hospitals over five years,
+    patients whose imaging was reviewed with Brainomix 360 had higher thrombectomy
+    odds (OR 1.57), median door-in-door-out of 128 vs 192 minutes, and a good
+    outcome (mRS 0–2) at discharge of 47.1% vs 45.6% (OR 1.16).
+  caveat: >-
+    Observational, not randomized; long-term outcomes couldn't be evaluated and
+    reasons for non-use of the AI in some cases weren't captured.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: B
+    attribution: isolated
+    window: pre
+  comparison: "Patients reviewed with AI software vs without, adjusted for age, severity, premorbid disability, timing"
+  effect:
+    relative: "OR 1.57 for thrombectomy; OR 1.16 for good outcome"
+    absolute: "Good outcome 47.1% vs 45.6% (15 more per 1,000); DIDO 64 min shorter"
+  reach: "107 hospitals, England; patient-level data on 71,017 ischemic strokes"
+  dates:
+    achieved_start: 2019
+    achieved_end: 2024
+    published: 2025-12
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Lancet Digital Health: AI imaging decision support for acute stroke in England"
+      url: https://www.thelancet.com/journals/landig/article/PIIS2589-7500(25)00109-8/fulltext
+      type: primary
+  conflicts: "verify: Brainomix involvement in authorship or funding."
+  what_would_change: null
+  notes: >-
+    verify: exact observation period and publication date; window grade assumes the
+    5-year data period ended before Oct 2025.
+  related: [golden-bridge-ii-stroke]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: fortell-ai-hearing-aids
+  section: because
+  rank: 12
+  headline: >-
+    Because of AI, 30 hearing-aid users understood far more words in heavy noise —
+    according to the company that makes the device.
+  impact: "31% → 80% words understood (company trial)"
+  summary: >-
+    Fortell's neural source-separation hearing aid (launched Dec 2025) reports a
+    pre-registered double-blind 30-person trial against Phonak's Audéo Infinio
+    Sphere showing a 9.2 dB vs 3.1 dB signal-to-noise improvement on QuickSIN,
+    alongside a 20-person blinded preference study published in the International
+    Journal of Audiology (May 2026).
+  caveat: >-
+    Both studies are Fortell-funded with a Fortell employee as first author, the
+    control device also uses neural-network noise reduction, and the 30-person
+    intelligibility trial was posted on the company's site rather than confirmed
+    in a journal as of October 2026.
+  domain: accessibility
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: ai-vs-ai
+    window: in
+  comparison: "Fortell Spatial AI vs leading competitor AI hearing aid, within-subject crossover"
+  effect:
+    relative: "9.2 dB vs 3.1 dB SNR improvement; ~19x odds of correct word recognition (company figures)"
+    absolute: "Company-reported: 69%→90%, 31%→80%, 7%→50% words correct across noise levels"
+  reach: "Prescription product, 30+ US states as of Oct 2026"
+  dates:
+    achieved_start: 2025-11
+    achieved_end: null
+    published: 2026-05-11
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "IJA: Spatial AI consistently preferred to state-of-the-art hearing aids in multitalker noise"
+      url: https://www.tandfonline.com/doi/full/10.1080/14992027.2026.2663345
+      type: primary
+    - title: "Fortell evidence page (intelligibility trial)"
+      url: https://www.fortell.com/evidence
+      type: primary
+    - title: "Independent summary: what is actually known about Fortell"
+      url: https://www.audiologyassociates.org/fortell-hearing-aids-what-we-know
+      type: secondary
+  conflicts: "Fortell Research funded both studies; first author is a Fortell employee."
+  what_would_change: "Independent replication, or a comparison against a non-AI hearing aid, would move attribution and evidence."
+  notes: >-
+    verify: a claimed Oct 8, 2026 IJA publication of the 30-person trial (PubMed 42850968) could not be confirmed.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: fido-northumbrian-leaks
+  section: because
+  rank: 13
+  headline: >-
+    Because of AI, Northumbrian Water stopped losing about 6.4 million litres of
+    drinking water a day.
+  impact: "~6.4 ML/day saved"
+  summary: >-
+    A six-month trial starting November 2025 placed FIDO Tech acoustic sensors on
+    pipes, with AI classifying which underground sounds are leaks and directing
+    crews; the utility reported early results of nearly 6.4 megalitres per day
+    saved.
+  caveat: >-
+    Operational report, no controlled comparison, and the saving is attributable
+    to the detect-and-repair package; FIDO had already delivered a 37% leakage
+    reduction across 15 target DMAs at the same utility in 2022–23.
+  domain: infrastructure
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: bundled
+    window: in
+  comparison: "None (before/after reported by the utility)"
+  effect:
+    relative: null
+    absolute: "~6.4 ML/day (~25,000 bathtubs)"
+  reach: "Northumbrian Water network, North East England (4.4M customers)"
+  dates:
+    achieved_start: 2025-11
+    achieved_end: 2026-05
+    published: 2026-06
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Northumbrian Water: AI technology helps to hunt down leaks"
+      url: https://www.nwg.co.uk/news-and-media/news-releases/ai-technology-helps-to-hunt-down-leaks/
+      type: primary
+    - title: "FIDO Direct / Northumbrian 37% reduction (2023)"
+      url: https://www.wateronline.com/doc/fido-direct-launched-as-end-to-end-solution-to-solve-water-loss-0001
+      type: secondary
+  conflicts: "Utility and vendor joint announcement."
+  what_would_change: "Leakage figures vs a matched set of DMAs using conventional detection in the same period."
+  notes: null
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: oman-ai-retinopathy
+  section: because
+  rank: 14
+  headline: >-
+    Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000
+    for treatment, and cut specialist waiting lists by 87%.
+  impact: "Waitlists cut 87%"
+  summary: >-
+    Oman's national AI diabetic-retinopathy screening program reported 43,000+
+    patients screened, ~30% referred for specialist examination, an 87% reduction
+    in eye-clinic waiting lists, and 43.2% lower annual operating costs.
+  caveat: >-
+    Ministry-reported program figures with no comparison group; vision outcomes
+    (sight saved) are not yet measured.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: C
+    attribution: bundled
+    window: in
+  comparison: "None (program before/after)"
+  effect:
+    relative: "−87% waiting list; −43.2% operating cost"
+    absolute: "43,000+ screened; 12,000+ referred"
+  reach: "Oman national program"
+  dates:
+    achieved_start: null
+    achieved_end: 2026-08
+    published: 2026-08-24
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Muscat Daily: Oman turns to AI to tackle diabetes-related blindness"
+      url: https://www.muscatdaily.com/2026/08/24/oman-turns-to-ai-to-tackle-diabetes-related-blindness/
+      type: primary
+  conflicts: "Ministry of Health self-report."
+  what_would_change: "Rates of sight-threatening retinopathy treated in time, vs the prior program."
+  notes: >-
+    verify: program start date; which AI vendor.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: ambient-scribes-nejm-ai
+  section: because
+  rank: 15
+  headline: >-
+    Because of AI, physicians using ambient scribes reported modestly less burnout,
+    exhaustion, and task load in a 238-physician randomized trial.
+  impact: "Modest burnout reduction (RCT)"
+  summary: >-
+    NEJM AI (Dec 2025) randomized 238 outpatient physicians across 14 specialties
+    to Microsoft DAX, Nabla, or usual care for two months; either scribe improved
+    burnout, exhaustion, and task load, and Nabla reduced time-in-note.
+  caveat: >-
+    Effects were modest, only one vendor saved documentation time, occasional
+    note inaccuracies required vigilance, and the trial ran Nov 2024–Jan 2025.
+  domain: work
+  ai_type: generative
+  grades:
+    evidence: A
+    attribution: isolated
+    window: pre
+  comparison: "Scribe access vs usual care, covariate-constrained randomization"
+  effect:
+    relative: "Modest improvements on burnout, exhaustion, task load (see paper for effect sizes)"
+    absolute: null
+  reach: "238 physicians, one academic health system"
+  dates:
+    achieved_start: 2024-11-04
+    achieved_end: 2025-01-03
+    published: 2025-11-26
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "NEJM AI: Ambient AI Scribes in Clinical Practice — A Randomized Trial (PMC)"
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/
+      type: primary
+    - title: "JAMIA (May 2026): randomized crossover of two ambient scribes, 160 clinicians (Duke)"
+      url: https://scholars.duke.edu/publication/1706148
+      type: primary
+  conflicts: "verify: vendor funding or in-kind support."
+  what_would_change: "Patient-outcome or quality measures, not just clinician self-report."
+  notes: >-
+    Window is pre for the NEJM AI trial; verify dates of the Duke crossover trial — it may be in-window.
+  related: [ucla-chart-summarizer-rct]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: ucla-chart-summarizer-rct
+  section: because
+  rank: 16
+  headline: >-
+    Because of AI, 284 UCLA clinicians reported modestly lower task load and
+    burnout from a chart summarizer — while saving no time and mostly not
+    recommending it.
+  impact: "Lower task load, zero time saved"
+  summary: >-
+    A pragmatic RCT (Feb–May 2026) of Epic's generative chart summarization tool
+    among 284 ambulatory clinicians found modestly reduced physician task load and
+    lower burnout, no time savings, declining engagement, and a net promoter score
+    of −22.
+  caveat: >-
+    Preprint (medRxiv, Aug 2026), self-reported outcomes, three-month window, one
+    health system.
+  domain: work
+  ai_type: generative
+  grades:
+    evidence: A
+    attribution: isolated
+    window: in
+  comparison: "Tool access vs usual pre-charting workflow, 1:1 randomization for 90 days"
+  effect:
+    relative: "Modest task-load reduction (primary endpoint met)"
+    absolute: null
+  reach: "284 clinicians, UCLA Health"
+  dates:
+    achieved_start: 2026-02
+    achieved_end: 2026-05
+    published: 2026-08-26
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "medRxiv: A pragmatic randomized trial of an EHR-integrated generative AI chart summarization tool"
+      url: https://www.medrxiv.org/content/10.64898/2026.08.26.26361496.full.pdf
+      type: primary
+    - title: "ClinicalTrials.gov NCT07438743"
+      url: https://clinicaltrials.gov/study/NCT07438743
+      type: primary
+  conflicts: "Epic's tool evaluated by its customer; no vendor funding reported — verify."
+  what_would_change: null
+  notes: >-
+    Included as the honest floor for generative AI in clinical workflow.
+  related: [ambient-scribes-nejm-ai]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+# =====================================================================
+# SECTION: not-because
+# =====================================================================
+
+- id: tricorder-ai-stethoscope-null
+  section: not-because
+  rank: 1
+  headline: >-
+    An AI stethoscope rolled out to 205 NHS GP practices did not significantly
+    increase heart-failure detection at 12 months.
+  impact: "Null on intention-to-treat"
+  summary: >-
+    TRICORDER (Lancet, Jan 2026) cluster-randomized practices covering 1.5 million
+    patients; on intention-to-treat, heart failure, AF, and valve-disease detection
+    did not significantly rise (1,342 vs 1,984 new HF cases overall), though
+    patients actually examined with the device had roughly twice the HF detection
+    and three times the AF detection.
+  caveat: >-
+    The tool worked when used; the deployment didn't get it used — a workflow
+    failure, not a model failure.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: A
+    attribution: isolated
+    window: pre
+  comparison: "Practices with AI stethoscope vs usual care, cluster-randomized, 12 months"
+  effect:
+    relative: "HF IRR ~0.94 (n.s.); subgroup examined: ~2x HF, ~3x AF detection"
+    absolute: null
+  reach: "205 practices, North West London"
+  dates:
+    achieved_start: 2023
+    achieved_end: 2024
+    published: 2026-01-29
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Lancet: TRICORDER cluster-randomised implementation trial"
+      url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)02156-7/fulltext
+      type: primary
+    - title: "Imperial College news summary"
+      url: https://www.imperial.ac.uk/news/articles/medicine/nhli/2026/ai-enabled-stethoscopes-show-promise-for-improving-diagnosis-of-cardiovascular-conditions-uk-trial-finds/
+      type: secondary
+  conflicts: "Eko Health supplied devices and publicized subgroup results before the primary analysis."
+  what_would_change: null
+  notes: >-
+    verify: exact implementation period.
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: uva-comet-deterioration-null
+  section: not-because
+  rank: 2
+  headline: >-
+    Displaying AI deterioration-risk scores on a cardiology ward did not improve
+    patient outcomes across 10,422 admissions.
+  impact: "No change in primary outcome"
+  summary: >-
+    A cluster-randomized trial at UVA (Scientific Reports, Feb 2026) showed CoMET
+    risk trajectories on screens for intervention beds; event-free hours did not
+    differ, and clinicians moved 11% of patients into or out of display beds,
+    undermining the design.
+  caveat: >-
+    Passive display with no mandated response, run during COVID-era staffing;
+    sicker patients were preferentially moved into AI-monitored beds.
+  domain: medicine
+  ai_type: classic-ml
+  grades:
+    evidence: A
+    attribution: isolated
+    window: pre
+  comparison: "Display-on vs display-off beds, cluster-randomized by room"
+  effect:
+    relative: "No significant difference in event-free hours or 21-day mortality"
+    absolute: null
+  reach: "10,422 inpatient visits, 85 beds"
+  dates:
+    achieved_start: 2021-01-04
+    achieved_end: 2022-10-04
+    published: 2026-02-05
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Scientific Reports: A randomized controlled trial of AI-based analytics for clinical deterioration"
+      url: https://www.nature.com/articles/s41598-026-39051-z
+      type: primary
+  conflicts: "In-kind support from Nihon Kohden; two authors consult for the vendor."
+  what_would_change: null
+  notes: null
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: maryland-ai-tutor-negative
+  section: not-because
+  rank: 3
+  headline: >-
+    A GPT-4o tutor built into a university learning platform was associated with
+    lower grades in a 2,379-student randomized trial.
+  impact: "Lower grades (RCT)"
+  summary: >-
+    A University of Maryland working paper (Oct 2026) randomized 30 instructors in
+    fall 2025 to a course-integrated GPT-4o tutor drawing on their own materials;
+    students with the tutor performed worse.
+  caveat: >-
+    Working paper, not yet peer-reviewed; effect sizes and mechanisms to verify.
+  domain: education
+  ai_type: generative
+  grades:
+    evidence: A
+    attribution: isolated
+    window: in
+  comparison: "Tutor access vs none, instructor-level randomization"
+  effect:
+    relative: "Lower performance in the tutor arm (verify magnitude)"
+    absolute: null
+  reach: "2,379 undergraduates, 30 instructors"
+  dates:
+    achieved_start: 2025-08
+    achieved_end: 2025-12
+    published: 2026-10
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "World Assessment Council summary of EdWorkingPaper 26-1598"
+      url: https://worldassessmentcouncil.org/spotlight/ai-tutors-beat-good-teaching-and-cut-grades-design-decides/
+      type: secondary
+  conflicts: "none found"
+  what_would_change: null
+  notes: >-
+    verify: locate the EdWorkingPaper itself and record the primary effect size; currently only a secondary source.
+  related: [sierra-leone-gemini-math]
+  history:
+    - date: 2026-10-22
+      note: "Added — needs primary source before it renders."
+
+- id: china-ai-cal-null
+  section: not-because
+  rank: 4
+  headline: >-
+    AI-personalized computer-assisted learning did no better than non-personalized
+    software for 8,647 rural Chinese primary students.
+  impact: "Null vs active control"
+  summary: >-
+    Stanford REAP and collaborators randomized 315 classes in 105 Sichuan schools
+    to AI-personalized CAL, non-personalized CAL, or non-CAL activities; the AI arm
+    showed no improvement in any ability tercile and may have been worse than
+    plain CAL for the middle tercile.
+  caveat: >-
+    One AI product, one province; the active-control design is exactly what the
+    Sierra Leone trial lacked.
+  domain: education
+  ai_type: classic-ml
+  grades:
+    evidence: A
+    attribution: isolated
+    window: null
+  comparison: "AI-CAL vs non-personalized CAL (active control) vs pure control"
+  effect:
+    relative: "No significant effect of AI-CAL on math scores"
+    absolute: null
+  reach: "8,647 students, 105 schools, Sichuan"
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2026-07
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "SSRN: Putting AI to the Test — Evidence from a Large-Scale RCT in Rural China"
+      url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7195260
+      type: primary
+    - title: "CESifo working paper version"
+      url: https://www.ifo.de/DocDL/cesifo1_wp12837.pdf
+      type: primary
+  conflicts: "none found"
+  what_would_change: null
+  notes: >-
+    verify: intervention dates to set window grade.
+  related: [sierra-leone-gemini-math]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+# =====================================================================
+# SECTION: not-yet
+# =====================================================================
+
+- id: rentosertib-phase-3
+  section: not-yet
+  rank: 1
+  headline: >-
+    The first generative-AI-discovered drug entered Phase III in September 2026 —
+    no AI-discovered drug has yet been approved anywhere.
+  impact: "Phase III started; 0 approvals"
+  summary: >-
+    Insilico dosed the first patient in GENESIS-IPF-3 (320 patients, 47 Chinese
+    sites, 52-week FVC primary endpoint) for rentosertib in idiopathic pulmonary
+    fibrosis after a Phase IIa signal published in Nature Medicine (2025).
+  caveat: >-
+    Primary completion is estimated for late 2029; Phase IIa was 71 patients over
+    12 weeks.
+  domain: medicine
+  ai_type: generative
+  grades:
+    evidence: null
+    attribution: null
+    window: null
+  comparison: null
+  effect: null
+  reach: null
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2026-09-10
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Insilico: first patient dosed in GENESIS-IPF-3"
+      url: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
+      type: primary
+    - title: "ClinicalTrials.gov NCT07687459"
+      url: https://clinicaltrials.gov/study/NCT07687459
+      type: primary
+  conflicts: "Sponsor announcements."
+  what_would_change: >-
+    A positive 52-week FVC result, then regulatory approval, then patients treated
+    outside a trial — each step moves it closer; approval alone does not make it a
+    "because" entry.
+  notes: null
+  related: [gb-0895-phase-3]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: gb-0895-phase-3
+  section: not-yet
+  rank: 2
+  headline: >-
+    An AI-optimized antibody for severe asthma is in Phase 3 with ~1,600 patients —
+    no AI-designed antibody has been approved.
+  impact: "Phase 3 enrolling"
+  summary: >-
+    Generate:Biomedicines' GB-0895 started the SOLAIRIA-1 Phase 3 study in
+    December 2025.
+  caveat: >-
+    The antibody was optimized with AI, not designed from scratch; readout timing
+    unannounced.
+  domain: medicine
+  ai_type: generative
+  grades:
+    evidence: null
+    attribution: null
+    window: null
+  comparison: null
+  effect: null
+  reach: null
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2025-12-03
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "IntuitionLabs: AI-discovered drugs in clinical trials 2026"
+      url: https://intuitionlabs.ai/articles/ai-discovered-drugs-clinical-trials-2026
+      type: secondary
+  conflicts: "Sponsor announcements via secondary tracker."
+  what_would_change: "Phase 3 primary endpoint result; then approval; then treated patients."
+  notes: >-
+    verify: primary source (ClinicalTrials.gov entry for SOLAIRIA-1).
+  related: [rentosertib-phase-3]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: every-cure-repurposing
+  section: not-yet
+  rank: 3
+  headline: >-
+    Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far
+    came from clinicians or predate the window.
+  impact: "$76M ARPA-H; 10 programs"
+  summary: >-
+    The nonprofit reviewed 9,000+ repurposing opportunities in 2025 and has ten
+    active programs; the AI-identified adalimumab–Castleman case (NEJM) was
+    February 2025, and the DFMO–Bachmann-Bupp program (six treated, five children
+    improved) originated with the researchers who identified the disease.
+  caveat: >-
+    No in-window patient outcome attributable to an AI-identified match yet.
+  domain: medicine
+  ai_type: hybrid
+  grades:
+    evidence: null
+    attribution: null
+    window: null
+  comparison: null
+  effect: null
+  reach: null
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2026-02-26
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Every Cure: up to $76M from ARPA-H"
+      url: https://everycure.org/phase2/
+      type: primary
+    - title: "CNBC: Every Cure's drug repurposing strategy"
+      url: https://www.cnbc.com/2026/03/27/every-cure-drug-repurposing-rare-disease-treatment.html
+      type: secondary
+  conflicts: "Nonprofit self-reporting."
+  what_would_change: "A documented patient outcome where the drug–disease match originated from the MATRIX platform, with dates."
+  notes: null
+  related: []
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: firesat-constellation
+  section: not-yet
+  rank: 4
+  headline: >-
+    Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit;
+    no fire-response outcome has been measured yet.
+  impact: "3 satellites in orbit"
+  summary: >-
+    The Earth Fire Alliance / Google constellation's pilot already spotted small
+    blazes invisible to existing satellites; the three operational satellites
+    launched July 7, 2026, with 50+ planned by 2030.
+  caveat: >-
+    Detection is not response; no published case yet of a fire contained earlier
+    because of a FireSat alert.
+  domain: disaster
+  ai_type: classic-ml
+  grades:
+    evidence: null
+    attribution: null
+    window: null
+  comparison: null
+  effect: null
+  reach: null
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2026-07-07
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Google: Three new FireSat satellites launch"
+      url: https://blog.google/innovation-and-ai/models-and-research/google-research/firesat-satellites/
+      type: primary
+  conflicts: "Google.org funds the constellation."
+  what_would_change: "A documented detection with a timestamp ahead of other systems and a fire-agency response outcome."
+  notes: null
+  related: [hurricane-melissa-2025]
+  history:
+    - date: 2026-10-22
+      note: "Added."
+
+- id: flood-hub-flash-floods
+  section: not-yet
+  rank: 5
+  headline: >-
+    Google's urban flash-flood model now gives up to 24 hours' notice worldwide;
+    whether anyone acted on an alert hasn't been measured.
+  impact: "24h flash-flood alerts, global"
+  summary: >-
+    Launched March 2026, the model is trained on news-derived ground truth, with
+    precision and recall in South America and Southeast Asia comparable to rich
+    countries; Flood Hub covers 150+ countries.
+  caveat: >-
+    Evaluated against flood records, not against outcomes for people.
+  domain: disaster
+  ai_type: classic-ml
+  grades:
+    evidence: null
+    attribution: null
+    window: null
+  comparison: null
+  effect: null
+  reach: null
+  dates:
+    achieved_start: null
+    achieved_end: null
+    published: 2026-03-09
+    added: 2026-10-22
+    updated: 2026-10-22
+  sources:
+    - title: "Google Research: Protecting cities with AI-driven flash flood forecasting"
+      url: https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/
+      type: primary
+    - title: "EarthArXiv preprint: AI expands urban flash flood forecasts globally"
+      url: https://eartharxiv.org/repository/object/12082/download/21671/
+      type: primary
+  conflicts: "Google authored the evaluation."
+  what_would_change: "An independent impact evaluation (evacuations, losses) tied to specific alerts."
+  notes: null
+  related: [hurricane-melissa-2025]
+  history:
+    - date: 2026-10-22
+      note: "Added."
