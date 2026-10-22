@@ -5,7 +5,7 @@ import { Resvg } from "@resvg/resvg-js";
 import fs from "node:fs";
 import path from "node:path";
 import type { Entry } from "../schema.ts";
-import { achievedState, fmtDate, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, SECTION_LABEL, DOMAIN_LABEL } from "../lib/format.ts";
+import { achievedState, fmtDate, effectLine, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, SECTION_LABEL, DOMAIN_LABEL } from "../lib/format.ts";
 
 // Resolved from the project root: at build time this module runs from a bundled
 // chunk under dist/, so import.meta.url would point at the wrong place. Astro
@@ -27,10 +27,15 @@ function pill(key: string, label: string) {
 
 export async function renderEntryOg(e: Entry): Promise<Buffer> {
   const g = e.grades;
-  const headlineSize = e.headline.length > 150 ? 40 : e.headline.length > 110 ? 46 : 54;
+  const effect = effectLine(e);
+  const headlineSize = e.headline.length > 150 ? 36 : e.headline.length > 110 ? 42 : 50;
+  const effectSize = effect && effect.length > 140 ? 20 : 24;
   const tree = h("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: 1200, height: 630, padding: "56px 64px", backgroundColor: PAPER, color: INK, fontFamily: "Newsreader" }, [
     h("div", { display: "flex", justifyContent: "space-between", fontSize: 26, color: INK3 }, [h("div", {}, "Because of AI"), h("div", {}, e.section === "because" ? DOMAIN_LABEL[e.domain] : SECTION_LABEL[e.section])]),
-    h("div", { display: "flex", fontSize: headlineSize, lineHeight: 1.18, fontWeight: 600, letterSpacing: -0.5 }, e.headline),
+    h("div", { display: "flex", flexDirection: "column", gap: 18 }, [
+      h("div", { display: "flex", fontSize: headlineSize, lineHeight: 1.18, fontWeight: 600, letterSpacing: -0.5 }, e.headline),
+      ...(effect ? [h("div", { display: "flex", gap: 10, fontSize: effectSize, lineHeight: 1.3, color: INK }, [h("span", { color: INK3 }, "Effect"), h("span", { display: "flex" }, effect)])] : []),
+    ]),
     h("div", { display: "flex", flexDirection: "column", gap: 18 }, [
       h("div", { display: "flex", gap: 12 }, [
         pill(`ev-${g.evidence}`, g.evidence ? `evidence ${EVIDENCE_LABEL[g.evidence]}` : "evidence not graded"),

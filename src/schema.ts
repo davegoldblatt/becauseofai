@@ -55,12 +55,23 @@ export const DateValue = z.union([
 // is not trimmed or changed.
 export const NonBlank = z.string().refine((v) => v.trim().length > 0, "must not be blank");
 
+export function isHttpUrl(v: string): boolean {
+  if (typeof v !== "string" || /[\s\u0000-\u001f\u007f]/.test(v)) return false;
+  let u: URL;
+  try {
+    u = new URL(v);
+  } catch {
+    return false;
+  }
+  return (u.protocol === "http:" || u.protocol === "https:") && u.hostname.length > 0;
+}
+
 export const Source = z
   .object({
     title: NonBlank,
-    // Only absolute http(s) URLs may qualify as a source; a javascript: or file:
-    // scheme would otherwise pass z.url() and land in an href.
-    url: z.url({ protocol: /^https?$/, hostname: /.+/ }),
+    // Only absolute http(s) URLs may qualify as a source. Checked without
+    // rewriting: z.url() would trim and normalize the stored value.
+    url: z.string().refine(isHttpUrl, "must be an absolute http(s) URL with no whitespace"),
     type: z.enum(SOURCE_TYPES),
   })
   .strict();

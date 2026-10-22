@@ -126,7 +126,8 @@ export function hostOf(url: string): string {
 
 export function effectLine(e: Entry): string | null {
   if (!e.effect) return null;
-  const { relative, absolute } = e.effect;
-  if (relative && absolute) return `${relative} (${absolute})`;
-  return relative ?? absolute ?? null;
+  const rel = e.effect.relative?.trim() || null;
+  const abs = e.effect.absolute?.trim() || null;
+  if (rel && abs) return `${rel} (${abs})`;
+  return rel ?? abs;
 }

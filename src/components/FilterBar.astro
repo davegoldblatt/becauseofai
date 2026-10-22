@@ -40,10 +40,12 @@ const groups = [
   const cards = Array.from(document.querySelectorAll(".entry-list .card"));
   if (box && status && countEl && summaryEl) {
     const state = Object.fromEntries(KEYS.map((k) => [k, new Set()]));
+    // Only values that have a button are valid; anything else in the URL is dropped.
+    const allowed = Object.fromEntries(KEYS.map((k) => [k, new Set(Array.from(box.querySelectorAll(`button[data-filter="${k}"]`)).map((b) => b.dataset.value))]));
     function readUrl() {
       const q = new URLSearchParams(location.search);
       for (const k of KEYS) {
-        state[k] = new Set((q.get(k) || "").split(",").filter(Boolean));
+        state[k] = new Set((q.get(k) || "").split(",").filter((v) => allowed[k].has(v)));
       }
     }
     function writeUrl() {
