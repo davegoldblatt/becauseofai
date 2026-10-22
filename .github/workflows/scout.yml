@@ -47,17 +47,21 @@ jobs:
       - name: Merge the run's pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           branch=$(git rev-parse --abbrev-ref HEAD)
           if [ "$branch" = "main" ]; then echo "no branch created this run; nothing to merge"; exit 0; fi
+          if [ -z "$(git log "$BASE_SHA..HEAD" --oneline)" ]; then echo "branch $branch has no commits beyond $BASE_SHA; nothing to merge"; exit 0; fi
+          git push -u origin "$branch" 2>/dev/null || true
           n=$(gh pr list --head "$branch" --state open --json number -q '.[0].number')
           if [ -z "$n" ]; then
-            if [ -z "$(git log origin/main..HEAD --oneline)" ]; then echo "branch $branch has no commits beyond main; nothing to merge"; exit 0; fi
-            git push -u origin "$branch" 2>/dev/null || true
             title=$(git log -1 --format=%s)
             body_file=.scout/pr-body.md
             [ -s "$body_file" ] || git log -1 --format=%B > "$body_file"
-            n=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
+            url=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file")
+            n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
+            [ -n "$n" ] || { echo "could not open a pull request for $branch: $url"; exit 1; }
             echo "opened #$n for $branch"
           fi
           gh pr merge "$n" --squash --delete-branch
