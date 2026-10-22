@@ -51,3 +51,11 @@ Defaults taken on the owner's behalf while building. Each is recorded on Linear 
 7. **`rank` must be unique within a section.** Duplicate ranks make the editorial order ambiguous and fail validation.
 8. **Newsreader is self-hosted** (`public/fonts/`, OFL, latin subset) instead of loaded from Google Fonts: same typeface, no third-party request on page load, and Lighthouse performance stays above 95 on a throttled phone.
 9. Hosting: Cloudflare Pages. No newsletter (Dave, 2026-10-22). `/about` funding line: "independent, unfunded." `pre` entries show on `/` with a muted window badge. OG images: plain text card. (HANDOFF §9 defaults; DAV-312.)
+
+## License
+
+Code is MIT. The registry data (`data/`, `research/`), the handoff, and the site's written content are CC BY 4.0: reuse them with credit to "Because of AI (becauseofai.org)" and a link to the entry. Fonts are under the SIL Open Font License. See `LICENSE`.
+
+## Contributing
+
+Propose an entry or dispute one through the issue templates. Pull requests change one entry file at a time and add a `history` line. Every entry needs a primary source and an achieved date; see `HANDOFF.md` and `/method`.
