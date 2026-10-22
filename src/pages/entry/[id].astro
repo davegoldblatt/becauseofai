@@ -41,6 +41,7 @@ const facets: [string, string][] = [
   <article class:list={["entry", `s-${e.section}`]} data-pagefind-body>
     {facets.map(([k, v]) => <span hidden data-pagefind-filter={`${k}:${v}`} data-pagefind-meta={`${k}:${v}`}></span>)}
     <span hidden data-pagefind-meta={`impact:${e.impact}`}></span>
+    {unreviewed && <span hidden data-pagefind-meta="unreviewed:yes"></span>}
     <header class="entry-head">
       <nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <a href={sectionHref} data-back={sectionHref}>← Back to the list</a>
@@ -93,7 +94,7 @@ const facets: [string, string][] = [
         )}
         <h2 data-pagefind-ignore>History</h2>
         <ul class="history" data-pagefind-ignore>
-          {[...e.history].reverse().map((h) => <li><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
+          {e.history.map((h, i) => ({ h, n: i + 1 })).reverse().map(({ h, n }) => <li id={`h-${n}`}><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
         </ul>
         <h2 data-pagefind-ignore>Cite this entry</h2>
         <div class="cite" data-pagefind-ignore>

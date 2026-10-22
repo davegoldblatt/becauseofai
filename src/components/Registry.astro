@@ -6,7 +6,7 @@
 import type { Entry, Section } from "../schema.ts";
 import { DOMAINS, EVIDENCE, ATTRIBUTION, WINDOW, AI_TYPES } from "../schema.ts";
 import Row from "./Row.astro";
-import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor } from "../lib/format.ts";
+import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor, isUnreviewed } from "../lib/format.ts";
 interface Props { entries: Entry[]; section: Section }
 const { entries, section } = Astro.props;
 
@@ -84,15 +84,15 @@ const total = entries.length;
             <tr class:list={[`s-${e.section}`]} data-entry data-id={e.id} data-rank={e.rank} data-achieved={achievedKey(e)} data-published={isoDate(e.dates.published)}
                 data-evidence={g.evidence ?? "none"} data-attribution={g.attribution ?? "none"} data-window={g.window ?? "none"} data-domain={e.domain} data-ai-type={e.ai_type} data-lag={lag ?? -1}>
               <td class="t-idx" data-idx={i + 1}>{i + 1}</td>
-              <td class="t-sentence"><a href={`/entry/${e.id}`} title={e.headline}>{e.headline}</a></td>
+              <td class="t-sentence"><a href={`/entry/${e.id}`} title={e.headline}>{e.headline}</a>{isUnreviewed(e) && <span class="stamp stamp-xs stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span>}</td>
               <td class="t-impact">{e.impact}</td>
               {un ? (
-                <td colspan="3"><span class="stamp stamp-xs stamp-watch"><span class="sd">Watchlist</span></span></td>
+                <td colspan="3"><a class="stamp stamp-xs stamp-watch" href="/method#four-tests"><span class="sd">Watchlist</span></a></td>
               ) : (
                 <>
-                  <td>{g.evidence ? <span class={`stamp stamp-xs stamp-ev stamp-ev-${g.evidence}`}><b class="sg">{g.evidence}</b></span> : <span class="muted">—</span>}</td>
-                  <td>{g.attribution ? <span class={`stamp stamp-xs stamp-at stamp-at-${g.attribution}`}><span class="sd">{ATTRIBUTION_LABEL[g.attribution]}</span></span> : <span class="muted">—</span>}</td>
-                  <td>{g.window ? <span class={`stamp stamp-xs stamp-wi stamp-wi-${g.window}`}><span class="sd">{WINDOW_LABEL[g.window]}</span></span> : <span class="muted">—</span>}</td>
+                  <td>{g.evidence ? <a class={`stamp stamp-xs stamp-ev stamp-ev-${g.evidence}`} href={`/method#evidence-${g.evidence}`} title={`Evidence ${EVIDENCE_LABEL[g.evidence]}`}><b class="sg">{g.evidence}</b></a> : <span class="muted">—</span>}</td>
+                  <td>{g.attribution ? <a class={`stamp stamp-xs stamp-at stamp-at-${g.attribution}`} href={`/method#attribution-${g.attribution}`}><span class="sd">{ATTRIBUTION_LABEL[g.attribution]}</span></a> : <span class="muted">—</span>}</td>
+                  <td>{g.window ? <a class={`stamp stamp-xs stamp-wi stamp-wi-${g.window}`} href={`/method#window-${g.window}`}><span class="sd">{WINDOW_LABEL[g.window]}</span></a> : <a class="stamp stamp-xs stamp-wi stamp-wi-none" href="/method#window"><span class="sd">unverified</span></a>}</td>
                 </>
               )}
               <td class="t-date">{e.section === "not-yet" && achievedState(e).kind === "none" ? <span class="muted">not yet</span> : achievedState(e).text}</td>

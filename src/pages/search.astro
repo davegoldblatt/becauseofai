@@ -12,7 +12,7 @@ import { ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
     window.addEventListener("DOMContentLoaded", () => {
       if (!window.PagefindUI) return;
       const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-      const stamp = (cls, inner) => `<span class="stamp stamp-xs ${cls}">${inner}</span>`;
+      const stamp = (cls, inner, href) => href ? `<a class="stamp stamp-xs ${cls}" href="${href}">${inner}</a>` : `<span class="stamp stamp-xs ${cls}">${inner}</span>`;
       const ui = new PagefindUI({
         element: "#search",
         showSubResults: false,
@@ -22,10 +22,11 @@ import { ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
         processResult: (r) => {
           const m = r.meta || {};
           const parts = [];
-          if (m.evidence && m.evidence !== "none") parts.push(stamp(`stamp-ev stamp-ev-${esc(m.evidence)}`, `<b class="sg">${esc(m.evidence)}</b>`));
-          if (m.attribution && m.attribution !== "none") parts.push(stamp(`stamp-at stamp-at-${esc(m.attribution)}`, `<span class="sd">${esc(AT[m.attribution] || m.attribution)}</span>`));
-          if (m.window && m.window !== "none") parts.push(stamp(`stamp-wi stamp-wi-${esc(m.window)}`, `<span class="sd">${esc(WI[m.window] || m.window)}</span>`));
-          if (!parts.length && m.section === "Not yet") parts.push(stamp("stamp-watch", `<span class="sd">Watchlist</span>`));
+          if (m.evidence && m.evidence !== "none") parts.push(stamp(`stamp-ev stamp-ev-${esc(m.evidence)}`, `<b class="sg">${esc(m.evidence)}</b>`, `/method#evidence-${encodeURIComponent(m.evidence)}`));
+          if (m.attribution && m.attribution !== "none") parts.push(stamp(`stamp-at stamp-at-${esc(m.attribution)}`, `<span class="sd">${esc(AT[m.attribution] || m.attribution)}</span>`, `/method#attribution-${encodeURIComponent(m.attribution)}`));
+          if (m.window && m.window !== "none") parts.push(stamp(`stamp-wi stamp-wi-${esc(m.window)}`, `<span class="sd">${esc(WI[m.window] || m.window)}</span>`, `/method#window-${encodeURIComponent(m.window)}`));
+          if (!parts.length && m.section === "Not yet") parts.push(stamp("stamp-watch", `<span class="sd">Watchlist</span>`, "/method#four-tests"));
+          if (m.unreviewed === "yes") parts.push(stamp("stamp-unrev", `<span class="sd">unreviewed</span>`));
           if (parts.length) r.excerpt = `<span class="stamps">${parts.join("")}</span>${r.excerpt}`;
           return r;
         },
