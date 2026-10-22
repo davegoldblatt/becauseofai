@@ -25,6 +25,7 @@ import { ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
           if (m.evidence && m.evidence !== "none") parts.push(stamp(`stamp-ev stamp-ev-${esc(m.evidence)}`, `<b class="sg">${esc(m.evidence)}</b>`, `/method#evidence-${encodeURIComponent(m.evidence)}`));
           if (m.attribution && m.attribution !== "none") parts.push(stamp(`stamp-at stamp-at-${esc(m.attribution)}`, `<span class="sd">${esc(AT[m.attribution] || m.attribution)}</span>`, `/method#attribution-${encodeURIComponent(m.attribution)}`));
           if (m.window && m.window !== "none") parts.push(stamp(`stamp-wi stamp-wi-${esc(m.window)}`, `<span class="sd">${esc(WI[m.window] || m.window)}</span>`, `/method#window-${encodeURIComponent(m.window)}`));
+          else if (parts.length) parts.push(stamp("stamp-wi stamp-wi-none", `<span class="sd">window unverified</span>`, "/method#window"));
           if (!parts.length && m.section === "Not yet") parts.push(stamp("stamp-watch", `<span class="sd">Watchlist</span>`, "/method#four-tests"));
           if (m.unreviewed === "yes") parts.push(stamp("stamp-unrev", `<span class="sd">unreviewed</span>`));
           if (parts.length) r.excerpt = `<span class="stamps">${parts.join("")}</span>${r.excerpt}`;
