@@ -58,7 +58,9 @@ export const NonBlank = z.string().refine((v) => v.trim().length > 0, "must not 
 export const Source = z
   .object({
     title: NonBlank,
-    url: z.url(),
+    // Only absolute http(s) URLs may qualify as a source; a javascript: or file:
+    // scheme would otherwise pass z.url() and land in an href.
+    url: z.url({ protocol: /^https?$/, hostname: /.+/ }),
     type: z.enum(SOURCE_TYPES),
   })
   .strict();
