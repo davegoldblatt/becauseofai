@@ -22,6 +22,6 @@ Keep a candidate only if it could plausibly pass all four: it reached actual peo
 
 ## Finishing the run
 
-Run `npm run validate`. It must pass; if your draft fails, fix the draft or drop it. Then create a branch `scout/YYYY-MM-DD`, commit with the message `Scout YYYY-MM-DD: N leads, M drafted entries`, push it, and open a pull request against `main` with `gh pr create`. The PR body lists the leads added, the entries drafted with their primary sources, the alerts, and the sources that errored. If the day produced only inbox lines, still open the PR; it merges on its own.
+Run `npm run validate`. It must pass; if your draft fails, fix the draft or drop it. Then write the pull request body to `.scout/pr-body.md` with the Write tool (the leads added, the entries drafted with their primary sources, the alerts, and the sources that errored), create a branch `scout/YYYY-MM-DD`, commit with the message `Scout YYYY-MM-DD: N leads, M drafted entries`, and push it. Open the pull request with exactly `gh pr create --base main --title "<the commit message>" --body-file .scout/pr-body.md` on one line, no shell substitutions. If that command is refused, stop there: the workflow opens the pull request from your branch and body file itself. If the day produced only inbox lines, still commit and push; it merges on its own.
 
 Do not invent DOIs, PubMed ids, numbers, or dates. Quote nothing longer than a few words. Prefer a clean empty day over a padded one.

@@ -28,9 +28,12 @@ jobs:
         run: node scripts/scout.ts --days ${{ github.event.inputs.days || '2' }}
       - name: Triage and draft (Claude, subscription token)
         uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
           prompt: |
             Run the daily scout for becauseofai.org. Follow research/scout-brief.md exactly.
             Today's candidates are in .scout/candidates.json (already generated in this checkout).
@@ -48,6 +51,14 @@ jobs:
           branch=$(git rev-parse --abbrev-ref HEAD)
           if [ "$branch" = "main" ]; then echo "no branch created this run; nothing to merge"; exit 0; fi
           n=$(gh pr list --head "$branch" --state open --json number -q '.[0].number')
-          if [ -z "$n" ]; then echo "no open pull request for $branch"; exit 0; fi
+          if [ -z "$n" ]; then
+            if [ -z "$(git log origin/main..HEAD --oneline)" ]; then echo "branch $branch has no commits beyond main; nothing to merge"; exit 0; fi
+            git push -u origin "$branch" 2>/dev/null || true
+            title=$(git log -1 --format=%s)
+            body_file=.scout/pr-body.md
+            [ -s "$body_file" ] || git log -1 --format=%B > "$body_file"
+            n=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
+            echo "opened #$n for $branch"
+          fi
           gh pr merge "$n" --squash --delete-branch
           echo "merged #$n from $branch"
