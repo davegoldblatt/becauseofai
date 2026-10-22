@@ -6,7 +6,7 @@
 import type { Entry, Section } from "../schema.ts";
 import { DOMAINS, EVIDENCE, ATTRIBUTION, WINDOW, AI_TYPES } from "../schema.ts";
 import Row from "./Row.astro";
-import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagShort, splitImpact } from "../lib/format.ts";
+import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor } from "../lib/format.ts";
 interface Props { entries: Entry[]; section: Section }
 const { entries, section } = Astro.props;
 
@@ -85,7 +85,7 @@ const total = entries.length;
                 data-evidence={g.evidence ?? "none"} data-attribution={g.attribution ?? "none"} data-window={g.window ?? "none"} data-domain={e.domain} data-ai-type={e.ai_type} data-lag={lag ?? -1}>
               <td class="t-idx" data-idx={i + 1}>{i + 1}</td>
               <td class="t-sentence"><a href={`/entry/${e.id}`} title={e.headline}>{e.headline}</a></td>
-              <td class="t-impact" title={e.impact}>{splitImpact(e.impact).lead}</td>
+              <td class="t-impact">{e.impact}</td>
               {un ? (
                 <td colspan="3"><span class="stamp stamp-xs stamp-watch"><span class="sd">Watchlist</span></span></td>
               ) : (
@@ -97,7 +97,7 @@ const total = entries.length;
               )}
               <td class="t-date">{e.section === "not-yet" && achievedState(e).kind === "none" ? <span class="muted">not yet</span> : achievedState(e).text}</td>
               <td class="t-date">{fmtDate(e.dates.published)}</td>
-              <td class="t-lag">{lag !== null && lag >= 6 ? lagShort(lag) : <span class="muted">—</span>}</td>
+              <td class="t-lag">{lagFor(e)?.short ?? <span class="muted">—</span>}</td>
             </tr>
           ); })}
         </tbody>
@@ -238,7 +238,7 @@ const total = entries.length;
     // Table: arrow keys move between visible rows; Enter follows the link natively.
     table.addEventListener("keydown", (ev) => {
       if (ev.key !== "ArrowDown" && ev.key !== "ArrowUp") return;
-      const links = trs.filter((r) => !r.hidden).map((r) => r.querySelector<HTMLAnchorElement>("a")!);
+      const links = Array.from(tbody.querySelectorAll<HTMLElement>("[data-entry]:not([hidden])")).map((r) => r.querySelector<HTMLAnchorElement>("a")!);
       const i = links.indexOf(document.activeElement as HTMLAnchorElement);
       if (i < 0) return;
       ev.preventDefault();
@@ -246,10 +246,11 @@ const total = entries.length;
     });
     const syncRail = () => { if (mq.matches) details.open = true; };
     mq.addEventListener("change", syncRail);
-    addEventListener("popstate", () => { readUrl(); apply(); });
+    const remember = () => { try { sessionStorage.setItem(`boa:list:${location.pathname}`, location.search); } catch {} };
+    addEventListener("popstate", () => { readUrl(); apply(); remember(); });
     readUrl();
     syncRail();
     apply();
-    try { sessionStorage.setItem(`boa:list:${location.pathname}`, location.search); } catch {}
+    remember();
   }
 </script>

@@ -183,7 +183,8 @@ img, svg { display: block; }
 .stamp-ev { background: var(--ink); color: var(--paper); }
 .stamp-wi-in { background: var(--signal); border-color: var(--signal); color: var(--on-signal); }
 .stamp-wi-ongoing { border-color: var(--signal); }
-.stamp-wi-pre { border-color: var(--graphite); color: var(--graphite-text); background-image: repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 5px); }
+.stamp-wi-pre { border-color: var(--graphite); color: var(--graphite-text); background-image: repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 5px); padding: 0 4px; }
+.stamp-wi-pre .sd { background: var(--paper); padding: 1px 4px; }
 .stamp-wi-none { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
 .stamp-watch { border-color: var(--graphite); color: var(--graphite-text); }
 .stamp-unrev { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
@@ -257,7 +258,7 @@ a.stamp:hover .sd { text-decoration: underline; text-decoration-thickness: 1px; 
 .stamp-chip { cursor: pointer; background: var(--paper); min-height: 26px; padding: 0 6px; }
 .stamp-chip .n { color: var(--graphite-text); }
 .stamp-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-.stamp-chip[aria-pressed="true"] .n { color: var(--signal); }
+.stamp-chip[aria-pressed="true"] .n { color: inherit; opacity: 0.75; }
 .stamp-chip:disabled { opacity: 0.4; cursor: default; }
 .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; padding: 0.9rem 0 0.6rem; font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.05em; }
 .toolbar .count { margin: 0 auto 0 0; color: var(--graphite-text); }
@@ -273,7 +274,7 @@ a.stamp:hover .sd { text-decoration: underline; text-decoration-thickness: 1px; 
   .registry { grid-template-columns: 240px minmax(0, 1fr); }
   .rail { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow: auto; padding: 1rem 0 2rem; scrollbar-width: thin; }
   .filters { border: 0; padding: 0; margin: 0; }
-  .filters > summary { display: none; }
+  .js .filters > summary { display: none; }
 }
 
 .ledger { list-style: none; margin: 0; padding: 0; border-bottom: 2px solid var(--ink); }
@@ -320,7 +321,7 @@ a.stamp:hover .sd { text-decoration: underline; text-decoration-thickness: 1px; 
 .t-sentence { max-width: 36ch; }
 .t-sentence a { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); font: 700 14px/1.3 var(--head); letter-spacing: -0.01em; text-decoration: none; }
 .t-sentence a:hover, .t-sentence a:focus-visible { text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: 2px; white-space: normal; }
-.t-impact { font: 900 18px/1 var(--display); white-space: nowrap; max-width: 18ch; overflow: hidden; text-overflow: ellipsis; }
+.t-impact { font: 900 16px/1.1 var(--display); max-width: 22ch; letter-spacing: -0.01em; }
 .t-date, .t-lag { white-space: nowrap; }
 tr.s-not-because td:first-child { box-shadow: inset 4px 0 0 var(--null); }
 

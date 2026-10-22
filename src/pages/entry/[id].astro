@@ -134,14 +134,14 @@ const facets: [string, string][] = [
   const back = document.querySelector<HTMLAnchorElement>("[data-back]");
   if (back) {
     const base = back.dataset.back!;
-    let q = "";
-    try { q = sessionStorage.getItem(`boa:list:${base}`) ?? ""; } catch {}
-    if (!q && document.referrer) {
-      try {
-        const r = new URL(document.referrer);
-        if (r.origin === location.origin && r.pathname === base) q = r.search;
-      } catch {}
-    }
+    let q: string | null = null;
+    // The page the reader actually came from wins; the stored state covers a
+    // reload or a return after visiting other entries.
+    try {
+      const r = document.referrer ? new URL(document.referrer) : null;
+      if (r && r.origin === location.origin && r.pathname === base) q = r.search;
+    } catch {}
+    if (q === null) { try { q = sessionStorage.getItem(`boa:list:${base}`); } catch {} }
     if (q) back.href = base + q;
   }
   // Copy buttons for the citation and the BibTeX record.

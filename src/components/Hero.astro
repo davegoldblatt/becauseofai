@@ -46,7 +46,8 @@ const slides = entries.slice(0, 5);
     let current = 0;
     let timer: number | undefined;
     let paused = false;
-    let held = false;
+    let hovered = false;
+    let focused = false;
     function show(n: number) {
       current = (n + slides.length) % slides.length;
       slides.forEach((s, i) => {
@@ -73,13 +74,14 @@ const slides = entries.slice(0, 5);
       stop();
       if (reduce.matches || slides.length < 2) return;
       timer = window.setInterval(() => {
-        if (!paused && !held && !document.hidden) show(current + 1);
+        const focusInside = focused || hero.contains(document.activeElement);
+        if (!paused && !hovered && !focusInside && !document.hidden) show(current + 1);
       }, 6000);
     }
-    hero.addEventListener("mouseenter", () => (held = true));
-    hero.addEventListener("mouseleave", () => (held = false));
-    hero.addEventListener("focusin", () => (held = true));
-    hero.addEventListener("focusout", () => (held = false));
+    hero.addEventListener("mouseenter", () => (hovered = true));
+    hero.addEventListener("mouseleave", () => (hovered = false));
+    hero.addEventListener("focusin", () => (focused = true));
+    hero.addEventListener("focusout", (ev) => { focused = hero.contains(ev.relatedTarget as Node | null); });
     dots.forEach((d, i) => d.addEventListener("click", () => { show(i); start(); }));
     pauseBtn?.addEventListener("click", () => {
       paused = !paused;
@@ -91,6 +93,7 @@ const slides = entries.slice(0, 5);
       if (pauseBtn) pauseBtn.hidden = reduce.matches;
     });
     if (pauseBtn && reduce.matches) pauseBtn.hidden = true;
+    show(0);
     start();
   }
 </script>

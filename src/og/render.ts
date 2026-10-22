@@ -44,12 +44,16 @@ function stamp(kind: "ev" | "at" | "wi-in" | "wi-ongoing" | "wi-pre" | "wi-none"
   return h("div", style, children);
 }
 
-function nameplate(section: Section | null, size: number, color = PAPER): Node {
+// The nameplate at the largest size that fits `width`, using the measured em
+// widths from src/site.ts (plus the gap between the two parts), never wrapping.
+function nameplate(section: Section | null, maxSize: number, width: number, color = PAPER): Node {
   const np = NAMEPLATE[section ?? "because"];
+  const gapEm = np.pre ? 0.22 : 0;
+  const size = Math.min(maxSize, Math.floor(width / (np.em + gapEm)));
   const preColor = section === "not-because" ? NULL_RED : section === "not-yet" ? GRAPHITE_T : color;
-  return h("div", { display: "flex", gap: size * 0.22, fontFamily: DISPLAY, fontSize: size, lineHeight: 0.86, color, letterSpacing: -size * 0.01 }, [
-    ...(np.pre ? [h("span", { color: preColor, display: "flex" }, np.pre)] : []),
-    h("span", { display: "flex" }, np.rest),
+  return h("div", { display: "flex", gap: size * gapEm, fontFamily: DISPLAY, fontSize: size, lineHeight: 0.86, color, letterSpacing: -size * 0.01, whiteSpace: "nowrap" }, [
+    ...(np.pre ? [h("span", { color: preColor, display: "flex", whiteSpace: "nowrap" }, np.pre)] : []),
+    h("span", { display: "flex", whiteSpace: "nowrap" }, np.rest),
   ]);
 }
 
@@ -104,7 +108,7 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
   const tree = h("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: W, height: H, padding: `44px ${PAD}px 40px`, backgroundColor: INK, color: PAPER, position: "relative" }, [
     ...(e.section === "not-because" ? [h("div", { position: "absolute", left: 0, top: 0, width: 16, height: H, backgroundColor: NULL_RED })] : []),
     h("div", { display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, [
-      nameplate(e.section, 34),
+      nameplate(e.section, 34, 700),
       h("div", { display: "flex", ...mono(18) }, SITE.domain),
     ]),
     h("div", { display: "flex", flexDirection: "column", gap: 14 }, [
@@ -133,11 +137,10 @@ export async function renderSiteOg(section: Section | null, counts: { because: n
     : section === "not-yet"
       ? "Candidates that have not yet shown a measured benefit, and what would change that."
       : SITE.thesis;
-  const size = section === "not-yet" ? 128 : section === "not-because" ? 150 : 196;
   const tree = h("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: 1200, height: 630, padding: "52px 56px 44px", backgroundColor: INK, color: PAPER, position: "relative" }, [
     ...(section === "not-because" ? [h("div", { position: "absolute", left: 0, top: 0, width: 16, height: 630, backgroundColor: NULL_RED })] : []),
     h("div", { display: "flex", flexDirection: "column", gap: 24 }, [
-      nameplate(section, size),
+      nameplate(section, 196, 1088),
       h("div", { display: "flex", paddingTop: 14, borderTop: `3px solid ${PAPER}`, ...mono(18) }, line),
     ]),
     h("div", { display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 40 }, [
