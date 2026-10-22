@@ -1,0 +1,13 @@
+---
+// Achieved and Published, side by side, same weight. Achieved follows the date
+// state the entry actually carries (range, ongoing, open, end-only, none).
+import type { Entry } from "../schema.ts";
+import { achievedState, fmtDate, isoDate } from "../lib/format.ts";
+interface Props { entry: Entry }
+const { entry: e } = Astro.props;
+const a = achievedState(e);
+---
+<div class="dates">
+  <span><span class="lbl">Achieved</span><span class="val">{a.text}</span></span>
+  <span><span class="lbl">Published</span><time class="val" datetime={isoDate(e.dates.published)}>{fmtDate(e.dates.published)}</time></span>
+</div>

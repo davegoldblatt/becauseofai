@@ -1,0 +1,37 @@
+---
+// One entry card. Order per HANDOFF §5: headline, impact, three badges,
+// achieved/published, summary, caveat, primary source, updated stamp.
+import type { Entry } from "../schema.ts";
+import Badges from "./Badges.astro";
+import Dates from "./Dates.astro";
+import { primarySources, hostOf, fmtDate, isoDate } from "../lib/format.ts";
+interface Props { entry: Entry; showRank?: boolean }
+const { entry: e, showRank = true } = Astro.props;
+const primary = primarySources(e)[0];
+---
+<li
+  class="card"
+  id={e.id}
+  data-domain={e.domain}
+  data-evidence={e.grades.evidence ?? "none"}
+  data-attribution={e.grades.attribution ?? "none"}
+  data-window={e.grades.window ?? "none"}
+  data-ai-type={e.ai_type}
+>
+  {showRank ? <span class="rank" aria-label={`Rank ${e.rank}`}>{e.rank}</span> : <span class="rank" aria-hidden="true"></span>}
+  <div class="body">
+    <h2 class="headline"><a href={`/entry/${e.id}`}>{e.headline}</a></h2>
+    <span class="impact">{e.impact}</span>
+    <Badges entry={e} />
+    <Dates entry={e} />
+    {e.section === "not-yet" && e.what_would_change && (
+      <div class="what-would-change"><span class="lbl">What would change this</span>{e.what_would_change}</div>
+    )}
+    <p class="summary">{e.summary}</p>
+    {e.caveat && <p class="caveat">{e.caveat}</p>}
+    <div class="foot">
+      {primary && <span>Primary source: <a href={primary.url} rel="noopener">{primary.title}</a> <span class="muted">({hostOf(primary.url)})</span></span>}
+      <span>Updated <time datetime={isoDate(e.dates.updated)}>{fmtDate(e.dates.updated)}</time></span>
+    </div>
+  </div>
+</li>

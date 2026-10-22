@@ -1,0 +1,33 @@
+name: Dispute an entry
+description: Challenge a claim, a grade, a date, or a source on an existing entry.
+title: "Dispute: <entry id>"
+labels: ["dispute"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: The entry id or its URL, for example `golden-bridge-ii-stroke` or https://becauseofai.org/entry/golden-bridge-ii-stroke
+    validations:
+      required: true
+  - type: dropdown
+    id: what
+    attributes:
+      label: What are you disputing?
+      options:
+        - The headline claim
+        - The evidence grade
+        - The attribution grade
+        - The window grade or the achieved dates
+        - A source (wrong, secondary labelled as primary, retracted)
+        - A number
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why, with a source
+      description: Say what you believe is wrong and link the primary source that shows it. Quote at most a few words.
+    validations:
+      required: true

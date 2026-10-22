@@ -1,0 +1,98 @@
+---
+// Base layout: head, header with navigation and theme toggle, footer.
+import "../styles/global.css";
+import { SITE } from "../site.ts";
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+const { title, description = SITE.description, canonical, ogImage } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const canonicalUrl = canonical ?? new URL(path === "/" ? "/" : path, SITE.url).toString();
+const nav = [
+  { href: "/", label: "Because of AI" },
+  { href: "/not-because-of-ai", label: "Not because of AI" },
+  { href: "/not-yet", label: "Not yet" },
+  { href: "/method", label: "Method" },
+  { href: "/changelog", label: "Changelog" },
+  { href: "/about", label: "About" },
+  { href: "/search", label: "Search" },
+];
+const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI benefits` : `${title} — ${SITE.name}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Analytics: none by default. To enable Plausible, uncomment:
+    <script defer data-domain="becauseofai.org" src="https://plausible.io/js/script.js"></script>
+    -->
+  </head>
+  <body>
+    <header class="site-header" data-pagefind-ignore>
+      <div class="wrap">
+        <a class="wordmark" href="/">{SITE.name}</a>
+        <nav class="site-nav" aria-label="Site">
+          {nav.map((n) => (
+            <a href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</a>
+          ))}
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="site-footer" data-pagefind-ignore>
+      <div class="wrap">
+        <span>{SITE.name}. Independent, unfunded. Data as of {SITE.asOf}.</span>
+        <a href="/method">How entries are graded</a>
+        <a href={`${SITE.repo}/issues/new/choose`}>Submit or dispute an entry</a>
+        <a href="/feed.xml">RSS</a>
+        <a href="/api/entries.json">JSON</a>
+        <a href={SITE.newsletter}>Newsletter</a>
+      </div>
+    </footer>
+    <script>
+      const btn = document.querySelector("[data-theme-toggle]");
+      const root = document.documentElement;
+      function current(): "light" | "dark" {
+        const t = root.dataset.theme;
+        if (t === "dark" || t === "light") return t;
+        return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      btn?.addEventListener("click", () => {
+        const next = current() === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch {}
+      });
+    </script>
+  </body>
+</html>

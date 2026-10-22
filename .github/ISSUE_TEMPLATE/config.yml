@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the method first
+    url: https://becauseofai.org/method
+    about: The four tests, the three grades, and the achieved-versus-published rule.

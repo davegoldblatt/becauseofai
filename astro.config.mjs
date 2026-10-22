@@ -7,6 +7,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://becauseofai.org",
   output: "static",
+  // Clean URLs without a trailing slash: dist/entry/<id>.html served at /entry/<id>.
+  // Cloudflare Pages serves .html files at their extensionless path.
   trailingSlash: "never",
   build: { format: "file" },
   integrations: [sitemap()],

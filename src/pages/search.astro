@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Search" description="Search every entry.">
+  <h1 class="page-title">Search</h1>
+  <p class="lede">Searches entry pages, the method page, and the about page. The index is built with the site, so nothing leaves your browser.</p>
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div id="search"></div>
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.PagefindUI) new PagefindUI({ element: "#search", showSubResults: false, showImages: false });
+    });
+  </script>
+</Base>

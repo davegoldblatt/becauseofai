@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import { publishable, because } from "../lib/site.ts";
+import { SITE } from "../site.ts";
+import { EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
+import { EVIDENCE, ATTRIBUTION, WINDOW } from "../schema.ts";
+
+// One live example per grade value: the highest-ranked publishable entry that carries it.
+const sorted = [...publishable].sort((a, b) => (a.section === b.section ? a.rank - b.rank : a.section === "because" ? -1 : 1));
+const example = (key: "evidence" | "attribution" | "window", value: string) => sorted.find((e) => e.grades[key] === value);
+const descr = {
+  evidence: {
+    A: "Randomized or cluster-randomized, with a preregistered primary endpoint.",
+    B: "Large observational or population-level data with a credible benchmark.",
+    C: "A company or government operational report with no independent comparison.",
+    D: "A single case or anecdote.",
+  },
+  attribution: {
+    isolated: "The comparison isolates the AI's contribution: the arms differ only by the AI.",
+    "only-path": "No human or conventional alternative existed in practice.",
+    bundled: "The AI shipped inside a package (tablets, protocols, crews) and the package was tested.",
+    "ai-vs-ai": "The control also used AI.",
+  },
+  window: {
+    in: "The benefit occurred inside the last twelve months.",
+    ongoing: "It began earlier, is still delivering, and has new in-window data.",
+    pre: "The benefit predates the window. Only the publication is new.",
+  },
+} as const;
+const gb = because.find((e) => e.id === "golden-bridge-ii-stroke");
+---
+<Base title="Method" description="The four tests every entry passes, the three grades, and why no number on this site was produced by a machine.">
+  <article class="prose" data-pagefind-body>
+    <h1 class="page-title">Method</h1>
+    <p>Readers of this site have been burned by AI hype. So the registry earns credibility by what it leaves out, by publishing what did not work, and by dating every benefit by when it happened rather than when the paper came out.</p>
+
+    <h2 id="four-tests">The four tests</h2>
+    <p>An entry starts "Because of AI, …" only if all four hold:</p>
+    <ol>
+      <li><strong>It reached people.</strong> A benefit arrived for actual humans, not a benchmark score or a demo.</li>
+      <li><strong>It was measured against something.</strong> A control arm, a prior period, a human benchmark, another model. The comparison is named on every entry.</li>
+      <li><strong>The AI did something that would not otherwise have happened.</strong> The attribution grade says how cleanly we can tell.</li>
+      <li><strong>We know when the benefit occurred.</strong> Not when the result was published.</li>
+    </ol>
+    <p>A result that passes the first three but produced no benefit goes to <a href="/not-because-of-ai">Not because of AI</a>, under the same grades. A candidate that has not yet passed them goes to <a href="/not-yet">Not yet</a>, with a note on what would change that.</p>
+
+    <h2 id="grades">Three grades, never one score</h2>
+    <p>Every entry carries three separate grades. They are a vocabulary, not a formula. They are never added up, and no entry has a single score.</p>
+
+    <h3 id="evidence">Evidence</h3>
+    <ul>
+      {EVIDENCE.map((v) => { const ex = example("evidence", v); return (
+        <li id={`evidence-${v}`}><strong>{EVIDENCE_LABEL[v]}.</strong> {descr.evidence[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+      ); })}
+    </ul>
+
+    <h3 id="attribution">Attribution</h3>
+    <ul>
+      {ATTRIBUTION.map((v) => { const ex = example("attribution", v); return (
+        <li id={`attribution-${v}`}><strong>{ATTRIBUTION_LABEL[v]}.</strong> {descr.attribution[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+      ); })}
+    </ul>
+    <p>The cleanest counterfactual is where no human alternative existed: tuberculosis X-rays with no radiologist to read them, sperm no technician could find. Bundled and AI-versus-AI results are real results that say less about AI than they appear to. We label them rather than hide them.</p>
+
+    <h3 id="window">Window</h3>
+    <ul>
+      {WINDOW.map((v) => { const ex = example("window", v); return (
+        <li id={`window-${v}`}><strong>{WINDOW_LABEL[v]}.</strong> {descr.window[v]} {ex && <span class="muted">Example: <a href={`/entry/${ex.id}`}>{ex.headline}</a></span>}</li>
+      ); })}
+    </ul>
+    <p>The window is the twelve months ending on the registry's reference date, currently {SITE.asOf}. Window grades are editorial and change only through a reviewed edit, so an entry can sit at the edge of the window for a short while before it is re-graded. Pre-window entries stay on the main list with a muted badge: the result is real, it is just not new.</p>
+
+    <h2 id="achieved-vs-published">Achieved is not published</h2>
+    <p>This is the registry's most common mistake, and the one we work hardest to avoid. Every card shows the date the benefit was achieved next to the date the result was published, at the same weight.</p>
+    {gb && (
+      <p>The worked example is <a href={`/entry/${gb.id}`}>GOLDEN BRIDGE II</a>, a cluster-randomized trial across 77 Chinese hospitals published in the BMJ in March 2026. The trial is superb. Its patients were enrolled between January 2021 and June 2023. So the benefit happened years before the paper, and the entry is graded <a href="#window-pre">pre-window</a>, not in-window. We check methods sections and trial registries before trusting a headline date.</p>
+    )}
+
+    <h2 id="why-we-dont-auto-score">Why nothing here is scored by a machine</h2>
+    <p>Every number on this site was put there by a person who read the primary source. We do not scrape papers, and we do not let a model grade them.</p>
+    <p>The cautionary case is an automated index that collected thousands of entries in a couple of months by having a language model read and score papers. Unrelated studies in it carry identical sub-scores, line for line, because the scorer produces the same shape of answer whatever it is shown. An index like that looks dense and reads as evidence. It is neither.</p>
+    <p>Our rules for ourselves: a primary source for anything we put a number on, an absolute effect next to every relative one, company dashboards admitted only with the conflict stated and the comparison understood, and press releases treated as leads rather than evidence.</p>
+
+    <h2 id="submit-dispute">Submit or dispute an entry</h2>
+    <p>Both go through the public repository. <a href={`${SITE.repo}/issues/new/choose`}>Open an issue</a> to propose a new entry (bring the primary source and the achieved date) or to dispute an existing one (name the entry and the claim you disagree with). Every change to an entry is recorded in its history and in the <a href="/changelog">changelog</a>.</p>
+  </article>
+</Base>

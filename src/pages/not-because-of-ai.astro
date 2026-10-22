@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import FilterBar from "../components/FilterBar.astro";
+import { notBecause, siteCounts as c } from "../lib/site.ts";
+---
+<Base title="Not because of AI" description="Measured null and negative results for AI interventions, held to the same evidence bar as the wins.">
+  <h1 class="page-title">Not because of AI</h1>
+  <p class="lede">Trials and deployments where AI was measured against something and did not help, or made things worse. They sit here under the same grades as the wins. A registry that only records successes is advertising. A clean null tells you more about what AI does than most press releases.</p>
+  <p class="counts" data-pagefind-ignore><strong>{c["not-because"]}</strong> entries</p>
+  <FilterBar total={notBecause.length} />
+  <ol class="entry-list">
+    {notBecause.map((e) => <Card entry={e} />)}
+  </ol>
+</Base>

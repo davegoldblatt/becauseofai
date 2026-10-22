@@ -1,0 +1,47 @@
+name: Submit an entry
+description: Propose a new entry for the registry. Bring the primary source and the date the benefit happened.
+title: "Entry: Because of AI, …"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every entry must pass four tests: it reached people, it was measured against something, the AI did something that would not otherwise have happened, and we know when the benefit occurred (not when it was published). Read [the method](https://becauseofai.org/method) first.
+  - type: input
+    id: headline
+    attributes:
+      label: Headline
+      description: One sentence starting "Because of AI, …". For a null result, state what did not happen.
+    validations:
+      required: true
+  - type: input
+    id: primary
+    attributes:
+      label: Primary source
+      description: A link to the paper, trial registry entry, verification report, or operational dataset. Press releases and news articles are leads, not evidence.
+    validations:
+      required: true
+  - type: input
+    id: achieved
+    attributes:
+      label: When did the benefit occur?
+      description: Dates of the trial, deployment, or event. Check the methods section or registry, not the headline.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: What was it measured against?
+      description: Control arm, prior period, human benchmark, another model. Give the absolute effect next to the relative one when both exist.
+    validations:
+      required: true
+  - type: textarea
+    id: attribution
+    attributes:
+      label: What part did AI play?
+      description: Did the comparison isolate the AI? Was it bundled with other changes? Did the control also use AI? Was there no human alternative?
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts you know of
+      description: Funding, vendor-run study, employee authorship.
