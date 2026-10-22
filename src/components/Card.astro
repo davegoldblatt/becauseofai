@@ -5,8 +5,8 @@ import type { Entry } from "../schema.ts";
 import Badges from "./Badges.astro";
 import Dates from "./Dates.astro";
 import { primarySources, hostOf, fmtDate, isoDate, effectLine } from "../lib/format.ts";
-interface Props { entry: Entry; showRank?: boolean }
-const { entry: e, showRank = true } = Astro.props;
+interface Props { entry: Entry }
+const { entry: e } = Astro.props;
 const primary = primarySources(e)[0];
 const effect = effectLine(e);
 ---
@@ -19,10 +19,9 @@ const effect = effectLine(e);
   data-window={e.grades.window ?? "none"}
   data-ai-type={e.ai_type}
 >
-  {showRank ? <span class="rank"><span class="sr-only">Rank </span>{e.rank}</span> : <span class="rank" aria-hidden="true"></span>}
   <div class="body">
     <h2 class="headline"><a href={`/entry/${e.id}`}>{e.headline}</a></h2>
-    <span class="impact">{e.impact}</span>
+    <span class="impact" data-pagefind-ignore>{e.impact}</span>
     <Badges entry={e} />
     <Dates entry={e} />
     {effect && <p class="effect"><span class="lbl">Effect</span>{effect}</p>}
@@ -31,7 +30,7 @@ const effect = effectLine(e);
     )}
     <p class="summary">{e.summary}</p>
     {e.caveat && <p class="caveat">{e.caveat}</p>}
-    <div class="foot">
+    <div class="foot" data-pagefind-ignore>
       {primary && <span>Primary source: <a href={primary.url} rel="noopener">{primary.title}</a> <span class="muted">({hostOf(primary.url)})</span></span>}
       <span>Updated <time datetime={isoDate(e.dates.updated)}>{fmtDate(e.dates.updated)}</time></span>
     </div>

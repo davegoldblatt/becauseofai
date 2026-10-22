@@ -131,3 +131,25 @@ export function effectLine(e: Entry): string | null {
   if (rel && abs) return `${rel} (${abs})`;
   return rel ?? abs;
 }
+
+// Months between the last known achieved date and the publication date, at the
+// precision the YAML gives. Null when either side is missing. Rounded down.
+export function publicationLagMonths(e: Entry): number | null {
+  const ref = e.dates.achieved_end ?? e.dates.achieved_start;
+  const a = parts(ref);
+  const b = parts(e.dates.published);
+  if (!a || !b) return null;
+  const am = (a.m ?? 12) - 1, bm = (b.m ?? 1) - 1; // a: latest month it could mean; b: earliest
+  const months = (b.y - a.y) * 12 + (bm - am);
+  return months > 0 ? months : 0;
+}
+
+// "published 2 yr 9 mo after the benefit" for lags of a year or more; null otherwise.
+export function lagLine(e: Entry): string | null {
+  const m = publicationLagMonths(e);
+  if (m === null || m < 12) return null;
+  const y = Math.floor(m / 12), r = m % 12;
+  const span = r ? `${y} yr ${r} mo` : `${y} yr`;
+  const what = e.dates.achieved_end != null ? "after the benefit ended" : "after the benefit began";
+  return `published ${span} ${what}`;
+}

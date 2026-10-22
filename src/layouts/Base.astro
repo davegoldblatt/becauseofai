@@ -16,7 +16,6 @@ const { title, description = SITE.description, canonical, ogImage = `${SITE.url}
 const path = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/").replace(/(.)\/$/, "$1") || "/";
 const canonicalUrl = canonical ?? new URL(path === "/" ? "/" : path, SITE.url).toString();
 const nav = [
-  { href: "/", label: "Because of AI" },
   { href: "/not-because-of-ai", label: "Not because of AI" },
   { href: "/not-yet", label: "Not yet" },
   { href: "/method", label: "Method" },
@@ -61,7 +60,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
   <body>
     <header class="site-header" data-pagefind-ignore>
       <div class="wrap">
-        <a class="wordmark" href="/">{SITE.name}</a>
+        <a class="wordmark" href="/" aria-current={path === "/" ? "page" : undefined}>{SITE.name}</a>
         <nav class="site-nav" aria-label="Site">
           {nav.map((n) => (
             <a href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</a>

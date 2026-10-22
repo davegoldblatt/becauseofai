@@ -17,11 +17,11 @@ const effect = effectLine(e);
 const cite = `“${e.headline}” Because of AI, updated ${fmtDate(e.dates.updated)}. ${url}`;
 ---
 <Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`}>
-  <article class="entry" data-pagefind-body data-pagefind-meta={`section:${SECTION_LABEL[e.section]}`}>
+  <article class="entry" data-pagefind-body data-pagefind-meta={`section:${SECTION_LABEL[e.section]}, evidence:${e.grades.evidence ?? "none"}, attribution:${e.grades.attribution ?? "none"}, window:${e.grades.window ?? "none"}, impact:${e.impact}`}>
     <header class="entry-head">
-      <a class="section-link" href={sectionHref}>{SECTION_LABEL[e.section]} · rank {e.rank}</a>
+      <a class="section-link" href={sectionHref} data-pagefind-ignore>{SECTION_LABEL[e.section]}</a>
       <h1 class="headline">{e.headline}</h1>
-      <span class="impact">{e.impact}</span>
+      <span class="impact" data-pagefind-ignore>{e.impact}</span>
       <Badges entry={e} />
       <Dates entry={e} />
     </header>
@@ -57,11 +57,11 @@ const cite = `“${e.headline}” Because of AI, updated ${fmtDate(e.dates.updat
         </ul>
       </>
     )}
-    <h2>History</h2>
-    <ul class="history">
+    <h2 data-pagefind-ignore>History</h2>
+    <ul class="history" data-pagefind-ignore>
       {[...e.history].reverse().map((h) => <li><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
     </ul>
-    <h2>Cite this entry</h2>
+    <h2 data-pagefind-ignore>Cite this entry</h2>
     <div class="cite" data-pagefind-ignore>
       Permalink <a href={url}>{url}</a>
       <code>{cite}</code>

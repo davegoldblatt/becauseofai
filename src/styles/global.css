@@ -173,7 +173,7 @@ button { font: inherit; color: inherit; }
 .badge-at-ai-vs-ai { background: var(--at-ai-vs-ai-bg); color: var(--at-ai-vs-ai-fg); }
 .badge-wi-in { background: var(--wi-in-bg); color: var(--wi-in-fg); }
 .badge-wi-ongoing { background: var(--wi-ongoing-bg); color: var(--wi-ongoing-fg); }
-.badge-wi-pre { background: var(--wi-pre-bg); color: var(--wi-pre-fg); }
+.badge-wi-pre { background: transparent; color: var(--wi-pre-fg); border: 1px solid var(--rule-2); }
 .badge-none { background: transparent; color: var(--ink-3); border: 1px dashed var(--rule-2); }
 a.badge:hover { filter: brightness(0.94); color: inherit; }
 :root[data-theme="dark"] a.badge:hover { filter: brightness(1.12); }
@@ -182,9 +182,8 @@ a.badge:hover { filter: brightness(0.94); color: inherit; }
 
 /* Entry list and card */
 .entry-list { list-style: none; margin: 0; padding: 0; }
-.card { display: grid; grid-template-columns: 2.1rem 1fr; column-gap: 0.4rem; padding: 1.35rem 0 1.25rem; border-top: 1px solid var(--rule); }
+.card { display: block; padding: 1.35rem 0 1.25rem; border-top: 1px solid var(--rule); }
 .card:first-child { border-top: 0; }
-.card .rank { font-family: var(--serif); color: var(--ink-3); font-size: 0.95rem; padding-top: 0.35rem; }
 .card .body { min-width: 0; }
 .card .headline { font-family: var(--serif); font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.45rem); font-weight: 600; line-height: 1.28; margin: 0; }
 .card .headline a { color: var(--ink); text-decoration: none; }
@@ -192,6 +191,7 @@ a.badge:hover { filter: brightness(0.94); color: inherit; }
 .dates { display: flex; flex-wrap: wrap; gap: 0.25rem 1.6rem; margin: 0.15rem 0 0.7rem; font-size: 0.9rem; }
 .dates .lbl { color: var(--ink-3); margin-right: 0.4em; }
 .dates .val { color: var(--ink); }
+.dates .lag { color: var(--ink-3); font-style: italic; }
 .card .effect { font-size: 0.9rem; margin: -0.3rem 0 0.6rem; }
 .card .effect .lbl { color: var(--ink-3); margin-right: 0.4em; }
 .card .summary { margin: 0 0 0.5rem; }
@@ -200,13 +200,11 @@ a.badge:hover { filter: brightness(0.94); color: inherit; }
 .card .foot a { color: var(--ink-2); }
 .what-would-change { background: var(--paper-2); border-left: 3px solid var(--rule-2); padding: 0.6rem 0.8rem; margin: 0.4rem 0 0.7rem; font-size: 0.95rem; }
 .what-would-change .lbl { color: var(--ink-3); font-size: 0.8rem; display: block; margin-bottom: 0.2rem; }
-@media (max-width: 480px) {
-  .card { grid-template-columns: 1fr; }
-  .card .rank { display: none; }
-}
+
 
 /* Entry page */
 .entry-head { margin-top: 2rem; }
+.entry h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
 .entry-head .section-link { font-size: 0.9rem; color: var(--ink-3); text-decoration: none; }
 .entry-head .headline { font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.15rem); font-weight: 600; line-height: 1.22; margin: 0.4rem 0 0.2rem; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 0.45rem 1.2rem; margin: 1.25rem 0; font-size: 0.95rem; max-width: 62ch; }
