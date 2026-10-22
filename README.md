@@ -32,7 +32,7 @@ Exit code 1 means an entry is invalid and the build would fail. Held entries and
 
 ## Daily scout
 
-`npm run scout` pulls yesterday's candidates (PubMed, medRxiv, ClinicalTrials.gov results postings, four journal feeds) and alerts (Crossref retractions on our sources, stale window grades) into `.scout/candidates.json`, no model involved. The workflow `.github/workflows/scout.yml` runs it every morning, then lets Claude triage against `research/scout-brief.md`, append leads to `research/inbox.md`, draft at most two entries, and open a pull request. Nothing reaches readers until a human merges. The workflow needs one repository secret, `CLAUDE_CODE_OAUTH_TOKEN`, made with `claude setup-token` on a Pro or Max account.
+`npm run scout` pulls yesterday's candidates (PubMed, medRxiv, ClinicalTrials.gov results postings, four journal feeds) and alerts (Crossref retractions on our sources, stale window grades) into `.scout/candidates.json`, no model involved. The workflow `.github/workflows/scout.yml` runs it every morning, then lets Claude triage against `research/scout-brief.md`, append leads to `research/inbox.md`, draft at most two entries, and open a pull request. Nothing reaches readers until a human merges. A second workflow, `.github/workflows/editor.yml`, runs the full weekly brief (`research/brief.md`) every Sunday with a stronger model and opens its own pull request. Both need one repository secret, `CLAUDE_CODE_OAUTH_TOKEN`, made with `claude setup-token` on a Pro or Max account.
 
 ## Deploy
 
