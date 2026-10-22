@@ -5,7 +5,7 @@ Read `HANDOFF.md` (the spec) and `README.md` (layout, decisions made) first. The
 ## Two authorities over the data
 
 - **Build and site work** never alters entry content. Numbers, dates, grades, and sources are editorial decisions. If a value looks wrong, add a line to the entry's `notes:` starting with `verify:` and leave the value.
-- **The research run** (`research/brief.md`, Linear DAV-313) may propose evidence-backed edits to `data/entries/*.yaml`, each with a `history` line dated that day. A human merges. It never edits `data/seed-entries.yaml`, which is the import snapshot.
+- **The research runs** (`research/brief.md` weekly, `research/scout-brief.md` daily) may add or change `data/entries/*.yaml`, each change with a `history` line dated that day. Their pull requests merge automatically after validate and build; the editor reviews afterwards. They never edit `data/seed-entries.yaml`, which is the import snapshot.
 
 ## Hard rules
 
@@ -21,7 +21,7 @@ Read `HANDOFF.md` (the spec) and `README.md` (layout, decisions made) first. The
 
 ## The daily scout
 
-`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most two drafted entries per day, never an edit to an existing entry, always a pull request. Treat `.scout/` as scratch.
+`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most two drafted entries per day, never an edit to an existing entry, always a pull request, which the workflow merges itself when validate and build pass. Treat `.scout/` as scratch.
 
 ## Commands
 

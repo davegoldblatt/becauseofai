@@ -37,6 +37,15 @@ jobs:
             --model claude-opus-5-5
             --max-turns 120
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
-      - name: Build check
-        if: always()
+      - name: Validate and build the result
         run: npm run validate && npm run build
+      - name: Merge the run's pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$branch" = "main" ]; then echo "no branch created this run; nothing to merge"; exit 0; fi
+          n=$(gh pr list --head "$branch" --state open --json number -q '.[0].number')
+          if [ -z "$n" ]; then echo "no open pull request for $branch"; exit 0; fi
+          gh pr merge "$n" --squash --delete-branch
+          echo "merged #$n from $branch"
