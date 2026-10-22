@@ -21,3 +21,11 @@ Second pass, same date: 78 candidates, 6 flagged randomized, 0 alerts, 1 source 
 
 - AI-powered CURA application to identify at-risk pregnancies, randomised trial protocol. [BMJ Open](https://doi.org/10.1136/bmjopen-2026-124115). Protocol only. Watch for results; missing: results, dates, comparison outcomes.
 - Ambulatory patient experience with ambient AI scribes, qualitative study. [J Gen Intern Med](https://doi.org/10.1007/s11606-026-10931-4). Patient-side view; compare ambient-scribes-nejm-ai. Qualitative, so no measured effect; context only.
+
+Third pass, same date: 266 candidates over the widened 10-day window, 16 flagged randomized, 0 alerts, 0 source errors. No entry drafted: the registry record below could not be read in full.
+
+- Advance, AI-enabled ECG for early detection of advanced liver disease, pragmatic cluster-randomized trial, 248 enrolled, completed 2025-09-01. [ClinicalTrials.gov NCT05782283](https://clinicaltrials.gov/study/NCT05782283). Registry results posted. Missing: the results record (page did not render for the scout), comparator, absolute diagnosis rates, publication.
+- VITAL-MD, AI cardiac arrest prediction for general ward patients, stepped-wedge cluster RCT protocol. [JMIR Res Protoc](https://doi.org/10.2196/104230). Protocol only. Watch for results.
+- PM Heart, AI prognostic decision support in the EHR for ischemic heart disease, RCT rationale and design. [Am Heart J](https://doi.org/10.1016/j.ahj.2026.107631). Design paper only. Watch for results.
+- APOLLAI multimodal AI versus EMS personnel for prehospital stroke deficit detection. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.16.26365784v1). Missing: whether it ran on real patients prospectively or on recorded cases, and any care or outcome effect.
+- AI-assisted identification of potential treatment injury from discharge summaries, New Zealand district hospital. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1). Early-stage evaluation. Missing: whether it changed claims or care, comparison, dates.
