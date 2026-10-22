@@ -19,7 +19,7 @@ const effect = effectLine(e);
   data-window={e.grades.window ?? "none"}
   data-ai-type={e.ai_type}
 >
-  {showRank ? <span class="rank" aria-label={`Rank ${e.rank}`}>{e.rank}</span> : <span class="rank" aria-hidden="true"></span>}
+  {showRank ? <span class="rank"><span class="sr-only">Rank </span>{e.rank}</span> : <span class="rank" aria-hidden="true"></span>}
   <div class="body">
     <h2 class="headline"><a href={`/entry/${e.id}`}>{e.headline}</a></h2>
     <span class="impact">{e.impact}</span>

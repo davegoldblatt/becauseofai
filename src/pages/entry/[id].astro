@@ -16,7 +16,7 @@ const related = (e.related ?? []).map((id) => byId.get(id)).filter((x) => x !== 
 const effect = effectLine(e);
 const cite = `“${e.headline}” Because of AI, updated ${fmtDate(e.dates.updated)}. ${url}`;
 ---
-<Base title={e.headline} description={e.summary} canonical={url}>
+<Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`}>
   <article class="entry" data-pagefind-body data-pagefind-meta={`section:${SECTION_LABEL[e.section]}`}>
     <header class="entry-head">
       <a class="section-link" href={sectionHref}>{SECTION_LABEL[e.section]} · rank {e.rank}</a>
