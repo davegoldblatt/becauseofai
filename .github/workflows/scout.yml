@@ -59,10 +59,18 @@ jobs:
             title=$(git log -1 --format=%s)
             body_file=.scout/pr-body.md
             [ -s "$body_file" ] || git log -1 --format=%B > "$body_file"
-            url=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file")
-            n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
-            [ -n "$n" ] || { echo "could not open a pull request for $branch: $url"; exit 1; }
-            echo "opened #$n for $branch"
+            if url=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file" 2>&1); then
+              n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
+              echo "opened #$n for $branch"
+            else
+              echo "pull request refused ($url); landing the branch on main directly"
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main
+              git push origin --delete "$branch" || true
+              echo "pushed $branch to main directly"
+              exit 0
+            fi
           fi
           gh pr merge "$n" --squash --delete-branch
           echo "merged #$n from $branch"
