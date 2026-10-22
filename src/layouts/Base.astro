@@ -10,7 +10,10 @@ interface Props {
   ogImage?: string;
 }
 const { title, description = SITE.description, canonical, ogImage = `${SITE.url}/og/site.png` } = Astro.props;
-const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+// Public route for this page. With file-format output the build-time pathname
+// carries ".html" (and "/index.html" for the homepage); strip both so canonical
+// URLs, titles, and navigation state use the clean route that is served.
+const path = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/").replace(/(.)\/$/, "$1") || "/";
 const canonicalUrl = canonical ?? new URL(path === "/" ? "/" : path, SITE.url).toString();
 const nav = [
   { href: "/", label: "Because of AI" },

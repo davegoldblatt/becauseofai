@@ -56,7 +56,10 @@ export const DateValue = z.union([
 export const NonBlank = z.string().refine((v) => v.trim().length > 0, "must not be blank");
 
 export function isHttpUrl(v: string): boolean {
-  if (typeof v !== "string" || /[\s\u0000-\u001f\u007f]/.test(v)) return false;
+  if (typeof v !== "string" || /[\s\u0000-\u001f\u007f\\]/.test(v)) return false;
+  // Must spell out the authority: "https:example.org" parses, but in an href it
+  // resolves against this site instead of pointing at the evidence.
+  if (!/^https?:\/\/[^\/?#]+/.test(v)) return false;
   let u: URL;
   try {
     u = new URL(v);
