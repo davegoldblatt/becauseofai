@@ -29,3 +29,9 @@ Third pass, same date: 266 candidates over the widened 10-day window, 16 flagged
 - PM Heart, AI prognostic decision support in the EHR for ischemic heart disease, RCT rationale and design. [Am Heart J](https://doi.org/10.1016/j.ahj.2026.107631). Design paper only. Watch for results.
 - APOLLAI multimodal AI versus EMS personnel for prehospital stroke deficit detection. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.16.26365784v1). Missing: whether it ran on real patients prospectively or on recorded cases, and any care or outcome effect.
 - AI-assisted identification of potential treatment injury from discharge summaries, New Zealand district hospital. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1). Early-stage evaluation. Missing: whether it changed claims or care, comparison, dates.
+
+## 2026-10-22 (weekly run)
+
+- AI-INFOCARE results published (NEJM AI, Oct 15, 2026; DRKS00036810). The vendor's page reports 300 patients, patient rating 4.42 vs 4.25, and median consultation 25 vs 33 min. [Simply Onno summary](https://www.simply-onno.com/en/studie-befund-verstehen-mit-ki). Missing: the NEJM AI full text (403 to the run). A co-author is the vendor's co-founder. Recruitment May 2025–Jan 2026 straddles the window.
+- Kidney-transplant EHR AI risk-prediction RCT (Osmanodja et al.). [npj Digital Medicine](https://doi.org/10.1038/s41746-026-02757-5). Secondary coverage describes a 76-patient null on treatment-option conversations; possible small `not-because`. Missing: primary read, numbers, dates.
+- Fetal intracranial malformation PAICS self-crossover RCT, 1,584 pregnancies, reportedly Sep 2022–Nov 2023. [Lancet Digital Health](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00063-4/fulltext). Rejected this week (reader-accuracy outcome, pre-window). Revisit only if pregnancy-management outcomes appear.

@@ -10,7 +10,8 @@ summary: >-
   fall 2025 to a course-integrated GPT-4o tutor drawing on their own materials;
   students with the tutor performed worse.
 caveat: >-
-  Working paper, not yet peer-reviewed; effect sizes and mechanisms to verify.
+  Working paper, not yet peer-reviewed; the estimate is the effect of being
+  offered the tutor, not of using it, at one university.
 domain: education
 ai_type: generative
 grades:
@@ -19,7 +20,7 @@ grades:
   window: in
 comparison: "Tutor access vs none, instructor-level randomization"
 effect:
-  relative: "Lower performance in the tutor arm (verify magnitude)"
+  relative: "Final grades 0.37 SD lower among sections of the same course; LMS participation 0.90 SD lower"
   absolute: null
 reach: "2,379 undergraduates, 30 instructors"
 dates:
@@ -29,14 +30,25 @@ dates:
   added: 2026-10-22
   updated: 2026-10-22
 sources:
+  - title: "EdWorkingPaper 26-1598: The Effects of Course-Integrated AI Tutoring on Student Performance and Engagement — A Randomized University Trial"
+    url: https://edworkingpapers.com/ai26-1598
+    type: primary
   - title: "World Assessment Council summary of EdWorkingPaper 26-1598"
     url: https://worldassessmentcouncil.org/spotlight/ai-tutors-beat-good-teaching-and-cut-grades-design-decides/
     type: secondary
 conflicts: "none found"
 what_would_change: null
 notes: >-
-  verify: locate the EdWorkingPaper itself and record the primary effect size; currently only a secondary source.
+  Primary located: EdWorkingPaper landing page and abstract (Liu, Sweet, et al.,
+  Oct 2026); losses larger for first-generation students. Secondary coverage
+  reports only ~15% of students offered the tutor used it, which would make
+  this an intent-to-treat effect of access, not of use.
+  verify: randomization unit (instructor vs section), fall 2025 term dates, and
+  uptake rate from the full PDF; the grade effect is reported for within-course
+  comparisons.
 related: [sierra-leone-gemini-math]
 history:
   - date: 2026-10-22
     note: "Added — needs primary source before it renders."
+  - date: 2026-10-22
+    note: "Weekly run: EdWorkingPaper primary source added (entry now renders); effect size recorded from the abstract."

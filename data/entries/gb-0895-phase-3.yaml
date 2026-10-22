@@ -2,15 +2,17 @@ id: gb-0895-phase-3
 section: not-yet
 rank: 2
 headline: >-
-  An AI-optimized antibody for severe asthma is in Phase 3 with ~1,600 patients —
-  no AI-designed antibody has been approved.
+  An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed
+  antibody has been approved.
 impact: "Phase 3 enrolling"
 summary: >-
-  Generate:Biomedicines' GB-0895 started the SOLAIRIA-1 Phase 3 study in
-  December 2025.
+  Generate:Biomedicines' GB-0895 started the placebo-controlled SOLAIRIA-1
+  Phase 3 study on December 3, 2025 (786 patients planned, dosed every six
+  months, primary endpoint annualized exacerbation rate over 52 weeks); a
+  companion SOLAIRIA-2 study is listed by the sponsor.
 caveat: >-
-  The antibody was optimized with AI, not designed from scratch; readout timing
-  unannounced.
+  The antibody was optimized with AI, not designed from scratch; SOLAIRIA-1's
+  primary completion is estimated for December 2028.
 domain: medicine
 ai_type: generative
 grades:
@@ -27,14 +29,21 @@ dates:
   added: 2026-10-22
   updated: 2026-10-22
 sources:
+  - title: "ClinicalTrials.gov NCT07276724 (SOLAIRIA-1)"
+    url: https://clinicaltrials.gov/study/NCT07276724
+    type: primary
   - title: "IntuitionLabs: AI-discovered drugs in clinical trials 2026"
     url: https://intuitionlabs.ai/articles/ai-discovered-drugs-clinical-trials-2026
     type: secondary
-conflicts: "Sponsor announcements via secondary tracker."
+conflicts: "Sponsor-run trial; sponsor announcements via secondary tracker."
 what_would_change: "Phase 3 primary endpoint result; then approval; then treated patients."
 notes: >-
-  verify: primary source (ClinicalTrials.gov entry for SOLAIRIA-1).
+  The earlier headline's ~1,600 patients did not match SOLAIRIA-1's registry
+  (786 planned); it may combine SOLAIRIA-1 and -2.
+  verify: SOLAIRIA-2 registry entry (sponsor lists NCT07359846) and its enrollment.
 related: [rentosertib-phase-3]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Weekly run: ClinicalTrials.gov primary added (entry now renders); headline patient count removed — registry shows 786 planned for SOLAIRIA-1, not ~1,600."

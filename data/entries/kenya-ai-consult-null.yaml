@@ -1,0 +1,59 @@
+id: kenya-ai-consult-null
+section: not-because
+rank: 5
+headline: >-
+  A GPT-4o assistant built into the medical record improved Kenyan clinicians'
+  notes and plans but did not reduce treatment failure for 9,691 patients.
+impact: "Null on patient outcome (RCT)"
+summary: >-
+  A pragmatic cluster-randomized trial in 16 Penda Health clinics in Nairobi
+  (Nature Medicine, June 2026) gave 52 of 103 clinical officers the AI Consult
+  tool; treatment failure within 14 days was 2.2% with it vs 2.0% without
+  (adjusted OR 0.77, p=0.13), while blinded reviewers rated diagnoses, notes,
+  and treatment plans better in the AI arm.
+caveat: >-
+  The event rate was lower than planned, so the trial could miss a modest
+  benefit; one private urban network with a high baseline standard of care.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Clinical officers with EMR plus LLM assistance vs EMR alone, cluster-randomized; primary endpoint expert-adjudicated treatment failure within 14 days"
+effect:
+  relative: "Adjusted OR 0.77 (95% CI 0.55–1.08), not significant; appropriate diagnosis in documentation aOR 1.74"
+  absolute: "102/4,693 (2.2%) vs 94/4,654 (2.0%) treatment failures; death or hospitalization 14 vs 17"
+reach: "9,691 patients, 103 clinical officers, 16 primary care facilities, Nairobi"
+dates:
+  achieved_start: 2025-04-22
+  achieved_end: 2025-07-16
+  published: 2026-06-26
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Nature Medicine: Generative AI-enabled clinical decision support system in primary care — a pragmatic, cluster-randomized trial (open access, PMC)"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13472850/
+    doi: 10.1038/s41591-026-04503-6
+    type: primary
+  - title: "LSHTM Research Online record (abstract and CC BY PDF)"
+    url: https://researchonline.lshtm.ac.uk/id/eprint/4682638/
+    type: primary
+  - title: "University of Birmingham news release"
+    url: https://www.birmingham.ac.uk/news/2026/ai-clinical-support-tool-improved-clinician-decisions-in-real-world-primary-care-trial
+    type: secondary
+conflicts: >-
+  Funded by the Gates Foundation; run in Penda Health clinics, with two Penda
+  authors holding stock options; OpenAI gave Penda in-kind compute credits and
+  API guidance but had no stated role in the trial.
+what_would_change: "A trial powered for patient outcomes (the authors suggest very large samples) showing fewer treatment failures."
+notes: >-
+  Pairs with the earlier Penda/OpenAI quality-improvement study of an almost
+  identical tool (Korom et al., preprint), which reported fewer clinician
+  errors without patient-outcome randomization. Clinicians fully followed only
+  19.5% of 1,000 reviewed red alerts. Protocol violations: 45 control-arm
+  encounters had tool access through an EMR configuration error.
+related: [uva-comet-deterioration-null, tricorder-ai-stethoscope-null]
+history:
+  - date: 2026-10-22
+    note: "Added by weekly research run; verified against the open-access full text."
