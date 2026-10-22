@@ -14,6 +14,10 @@ export const SITE = {
   // Editorial reference date for the 12-month window. Refreshed only through a
   // reviewed change (DAV-302, decision 6).
   asOf: "2026-10-22",
+  // Appended to every share-image URL. Slack, X, and iMessage cache an image by
+  // its URL for days; bump this when the card design changes so new posts
+  // fetch the new image instead of the cached one.
+  ogVersion: "2",
 };
 
 // Nameplate per section. `em` is the measured advance width of the caps string
