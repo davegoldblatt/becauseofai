@@ -4,10 +4,11 @@
 import type { Entry } from "../schema.ts";
 import Badges from "./Badges.astro";
 import Dates from "./Dates.astro";
-import { primarySources, hostOf, fmtDate, isoDate } from "../lib/format.ts";
+import { primarySources, hostOf, fmtDate, isoDate, effectLine } from "../lib/format.ts";
 interface Props { entry: Entry; showRank?: boolean }
 const { entry: e, showRank = true } = Astro.props;
 const primary = primarySources(e)[0];
+const effect = effectLine(e);
 ---
 <li
   class="card"
@@ -24,6 +25,7 @@ const primary = primarySources(e)[0];
     <span class="impact">{e.impact}</span>
     <Badges entry={e} />
     <Dates entry={e} />
+    {effect && <p class="effect"><span class="lbl">Effect</span>{effect}</p>}
     {e.section === "not-yet" && e.what_would_change && (
       <div class="what-would-change"><span class="lbl">What would change this</span>{e.what_would_change}</div>
     )}

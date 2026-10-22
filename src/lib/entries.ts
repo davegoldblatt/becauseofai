@@ -97,7 +97,7 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
   }
   const ids = new Set(all.map((e) => e.id));
   for (const e of all) {
-    for (const r of e.related) {
+    for (const r of e.related ?? []) {
       if (!ids.has(r)) errors.push({ file: `${e.id}.yaml`, message: `related id "${r}" does not exist` });
     }
     const stale = staleWindowReason(e, today);

@@ -46,7 +46,11 @@ for doc, body in zip(seed_docs, blocks):
     p = OUT / f"{eid}.yaml"
     p.write_text(body)
     written.append(p)
-    back = yaml.safe_load(body)
+    back = yaml.safe_load(p.read_text())  # read the file back, not the in-memory body
     if back != doc:
         raise SystemExit(f"MISMATCH after split: {eid}")
-print(f"wrote {len(written)} files to {OUT.relative_to(ROOT)}; deep-compare against the seed: identical")
+on_disk = sorted(q.name for q in OUT.glob("*.yaml"))
+expected = sorted(f"{d['id']}.yaml" for d in seed_docs)
+if on_disk != expected:
+    raise SystemExit(f"output set mismatch: extra={sorted(set(on_disk)-set(expected))} missing={sorted(set(expected)-set(on_disk))}")
+print(f"wrote {len(written)} files to {OUT.relative_to(ROOT)}; read back and deep-compared against the seed: identical; filename set matches the {len(expected)} seed ids")

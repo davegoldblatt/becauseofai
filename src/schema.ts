@@ -22,14 +22,42 @@ export const SOURCE_TYPES = ["primary", "secondary"] as const;
 // Dates are kept exactly as written in the YAML: "YYYY-MM-DD", "YYYY-MM", or a
 // bare year (which YAML 1.2 reads as an integer). They are never coerced to Date
 // objects, so no time-zone shift can move a day.
+function daysInMonth(y: number, m: number): number {
+  return new Date(Date.UTC(y, m, 0)).getUTCDate();
+}
+
+// A real calendar date at the written precision. The value is never rewritten.
+export function isValidCalendarDate(s: string): boolean {
+  const m = /^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$/.exec(s);
+  if (!m) return false;
+  const y = Number(m[1]);
+  if (y < 1900 || y > 2100) return false;
+  if (m[2] !== undefined) {
+    const mo = Number(m[2]);
+    if (mo < 1 || mo > 12) return false;
+    if (m[3] !== undefined) {
+      const d = Number(m[3]);
+      if (d < 1 || d > daysInMonth(y, mo)) return false;
+    }
+  }
+  return true;
+}
+
 export const DateValue = z.union([
-  z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/, "date must be YYYY, YYYY-MM, or YYYY-MM-DD"),
+  z
+    .string()
+    .regex(/^\d{4}(-\d{2}(-\d{2})?)?$/, "date must be YYYY, YYYY-MM, or YYYY-MM-DD")
+    .refine(isValidCalendarDate, "not a real calendar date"),
   z.number().int().min(1900).max(2100),
 ]);
 
+// Required prose must contain something other than whitespace. The stored value
+// is not trimmed or changed.
+export const NonBlank = z.string().refine((v) => v.trim().length > 0, "must not be blank");
+
 export const Source = z
   .object({
-    title: z.string().min(1),
+    title: NonBlank,
     url: z.url(),
     type: z.enum(SOURCE_TYPES),
   })
@@ -41,12 +69,13 @@ export const Effect = z
     absolute: z.string().nullable(),
   })
   .strict()
-  .nullable();
+  .nullable()
+  .optional();
 
 export const HistoryItem = z
   .object({
     date: DateValue,
-    note: z.string().min(1),
+    note: NonBlank,
   })
   .strict();
 
@@ -55,10 +84,10 @@ export const EntrySchema = z
     id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "id must be a kebab-case slug"),
     section: z.enum(SECTIONS),
     rank: z.number().int().positive(),
-    headline: z.string().min(1),
-    impact: z.string().min(1),
-    summary: z.string().min(1),
-    caveat: z.string().nullable(),
+    headline: NonBlank,
+    impact: NonBlank,
+    summary: NonBlank,
+    caveat: z.string().nullable().optional(),
     domain: z.enum(DOMAINS),
     ai_type: z.enum(AI_TYPES),
     grades: z
@@ -68,9 +97,9 @@ export const EntrySchema = z
         window: z.enum(WINDOW).nullable(),
       })
       .strict(),
-    comparison: z.string().nullable(),
+    comparison: z.string().nullable().optional(),
     effect: Effect,
-    reach: z.string().nullable(),
+    reach: z.string().nullable().optional(),
     dates: z
       .object({
         achieved_start: DateValue.nullable(),
@@ -81,10 +110,11 @@ export const EntrySchema = z
       })
       .strict(),
     sources: z.array(Source).min(1),
-    conflicts: z.string().nullable(),
-    what_would_change: z.string().nullable(),
-    notes: z.string().nullable(),
-    related: z.array(z.string()),
+    conflicts: z.string().nullable().optional(),
+    // Required (non-blank) for not-yet, optional elsewhere (HANDOFF §3).
+    what_would_change: z.string().nullable().optional(),
+    notes: z.string().nullable().optional(),
+    related: z.array(z.string()).optional(),
     history: z.array(HistoryItem).min(1),
   })
   .strict()
