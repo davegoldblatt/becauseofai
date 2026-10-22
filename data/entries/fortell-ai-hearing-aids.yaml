@@ -12,10 +12,9 @@ summary: >-
   alongside a 20-person blinded preference study published in the International
   Journal of Audiology (May 2026).
 caveat: >-
-  Both studies are Fortell-funded with a Fortell employee as first author, the
-  control device also uses neural-network noise reduction, and the 30-person
-  intelligibility trial was posted on the company's site rather than confirmed
-  in a journal as of October 2026.
+  Both studies are Fortell-run with a Fortell employee as first author, the
+  control device also uses neural-network noise reduction, and the outcomes
+  are laboratory speech-in-noise tests rather than daily-life benefit.
 domain: accessibility
 ai_type: classic-ml
 grades:
@@ -37,17 +36,29 @@ sources:
   - title: "IJA: Spatial AI consistently preferred to state-of-the-art hearing aids in multitalker noise"
     url: https://www.tandfonline.com/doi/full/10.1080/14992027.2026.2663345
     type: primary
+  - title: "IJA (Oct 2026): Spatial AI improves speech intelligibility for hearing aid wearers in challenging multitalker noise (30-person RCT)"
+    url: https://doi.org/10.1080/14992027.2026.2741760
+    doi: 10.1080/14992027.2026.2741760
+    type: primary
   - title: "Fortell evidence page (intelligibility trial)"
     url: https://www.fortell.com/evidence
     type: primary
   - title: "Independent summary: what is actually known about Fortell"
     url: https://www.audiologyassociates.org/fortell-hearing-aids-what-we-know
     type: secondary
-conflicts: "Fortell Research funded both studies; first author is a Fortell employee."
+conflicts: "Fortell Research funded both studies; first author is a Fortell employee. The intelligibility trial adds two NYU Langone co-authors; its PubMed record carries no funding statement."
 what_would_change: "Independent replication, or a comparison against a non-AI hearing aid, would move attribution and evidence."
 notes: >-
-  verify: a claimed Oct 8, 2026 IJA publication of the 30-person trial (PubMed 42850968) could not be confirmed.
+  The 30-person intelligibility trial is now peer-reviewed: IJA, epub Oct 8,
+  2026 (PubMed 42850968), described as pre-registered, double-blind, randomised.
+  Evidence stays C under the company-run rule despite the NYU co-authors.
+  verify: the abstract gives a 9.2 dB SNR-50 improvement and lab SNR gains over
+  unaided of 2.3 dB (control) vs 15.5 dB (Fortell); the "9.2 dB vs 3.1 dB"
+  framing in the effect line comes from the company page and should be checked
+  against the paper's results table. No registry ID is given in the PubMed record.
 related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Weekly run: 30-person trial confirmed in IJA (Oct 2026); journal source added, caveat updated, grades unchanged."

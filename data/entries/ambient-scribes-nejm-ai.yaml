@@ -40,7 +40,14 @@ conflicts: "verify: vendor funding or in-kind support."
 what_would_change: "Patient-outcome or quality measures, not just clinician self-report."
 notes: >-
   Window is pre for the NEJM AI trial; verify dates of the Duke crossover trial — it may be in-window.
+  The Duke trial (JAMIA 33(5):990–999, doi 10.1093/jamia/ocag018) randomized
+  clinicians to the order of two scribes, so it compares scribe with scribe
+  (ai-vs-ai) and does not support the isolated grade; it adds that both scribes
+  reduced burnout and one cut note time by about 3 minutes a day more than the
+  other. Its study dates are not on the abstract page.
 related: [ucla-chart-summarizer-rct]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Weekly run: noted that the Duke crossover is scribe-vs-scribe; grades rest on the NEJM AI trial alone. No grade change."

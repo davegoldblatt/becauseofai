@@ -1,0 +1,58 @@
+id: advance-ai-ecg-liver
+section: because
+rank: 17
+headline: >-
+  Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver
+  disease in about 5 more patients per 1,000 adults who had a routine ECG.
+impact: "Liver disease diagnoses doubled (RCT)"
+summary: >-
+  The Advance trial (Nature Medicine, Dec 2025) cluster-randomized 98 primary
+  care teams; when an ECG-reading model flagged likely advanced chronic liver
+  disease, clinicians were notified, and new diagnoses within 180 days were 1.0%
+  vs 0.5% among 15,596 adults with ECGs (78 of 8,034 vs 35 of 7,562).
+caveat: >-
+  The outcome is a diagnosis, not better health: whether earlier diagnosis
+  changed treatment or survival was not measured, clinician follow-through was
+  uneven, and the trial ran 2023–2025.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Care teams notified of AI-ECG results vs usual care, cluster-randomized 1:1 across 45 primary care practices; primary endpoint new advanced chronic liver disease diagnosis within 180 days"
+effect:
+  relative: "OR 2.09 (95% CI 1.22–3.55) for a new diagnosis"
+  absolute: "0.97% vs 0.46% (registry counts 78/8,034 vs 35/7,562): about 5 more diagnoses per 1,000 patients"
+reach: "15,596 adults, 98 care teams, 45 Mayo Clinic primary care practices"
+dates:
+  achieved_start: 2023-04
+  achieved_end: 2025-09
+  published: 2025-12-17
+  added: 2026-10-22
+  updated: 2026-10-22
+sources:
+  - title: "Nature Medicine: Detection of undiagnosed liver cirrhosis via AI-enabled electrocardiogram — a pragmatic, cluster-randomized clinical trial"
+    url: https://www.nature.com/articles/s41591-025-04058-y
+    doi: 10.1038/s41591-025-04058-y
+    type: primary
+  - title: "ClinicalTrials.gov NCT05782283 (results posted)"
+    url: https://clinicaltrials.gov/study/NCT05782283
+    type: primary
+  - title: "npj Digital Medicine: Clinician engagement shapes the impact of AI-based ECG screening for chronic liver disease"
+    url: https://doi.org/10.1038/s41746-026-02718-y
+    doi: 10.1038/s41746-026-02718-y
+    type: secondary
+conflicts: >-
+  Mayo Clinic licensed the ECG model to Anumana; several authors may benefit
+  through a related patent, and two sit on Anumana's scientific advisory board.
+what_would_change: "Follow-up showing that the extra diagnoses led to surveillance, treatment, or fewer decompensations would turn a detection gain into a health gain."
+notes: >-
+  Grades and numbers from the PubMed abstract and the registry results record;
+  the Nature Medicine full text is paywalled and was not read.
+  verify: achieved dates are the registry's study start (2023-04-18) and
+  completion (2025-09-01), not ECG enrollment dates from the methods section.
+related: [tricorder-ai-stethoscope-null]
+history:
+  - date: 2026-10-22
+    note: "Added by weekly research run from the scout's registry lead; window pre (trial completed Sept 2025)."
