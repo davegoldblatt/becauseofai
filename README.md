@@ -50,4 +50,4 @@ Defaults taken on the owner's behalf while building. Each is recorded on Linear 
 6. **Stale window grades warn, never change.** `validate` warns when a `window: in` or `ongoing` grade no longer matches the achieved dates against the 12-month window ending today. `hurricane-melissa-2025` trips this on 2026-10-29.
 7. **`rank` must be unique within a section.** Duplicate ranks make the editorial order ambiguous and fail validation.
 8. **Newsreader is self-hosted** (`public/fonts/`, OFL, latin subset) instead of loaded from Google Fonts: same typeface, no third-party request on page load, and Lighthouse performance stays above 95 on a throttled phone.
-9. Hosting: Cloudflare Pages. Newsletter: Buttondown placeholder. `/about` funding line: "independent, unfunded." `pre` entries show on `/` with a muted window badge. OG images: plain text card. (HANDOFF §9 defaults; DAV-312.)
+9. Hosting: Cloudflare Pages. No newsletter (Dave, 2026-10-22). `/about` funding line: "independent, unfunded." `pre` entries show on `/` with a muted window badge. OG images: plain text card. (HANDOFF §9 defaults; DAV-312.)

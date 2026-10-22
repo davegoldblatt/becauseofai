@@ -9,7 +9,6 @@ export const SITE = {
   // GitHub repository that holds the data. Issue templates for submissions and
   // disputes live there. Placeholder until the repo has a remote (DAV-308).
   repo: "https://github.com/davegoldblatt/becauseofai",
-  newsletter: "https://buttondown.com/becauseofai",
   // Editorial reference date for the 12-month window. Refreshed only through a
   // reviewed change (DAV-302, decision 6).
   asOf: "2026-10-22",
