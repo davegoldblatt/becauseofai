@@ -1,0 +1,44 @@
+name: daily scout
+on:
+  schedule:
+    - cron: "7 12 * * *"   # 05:07 America/Los_Angeles (PDT); 04:07 in winter
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back to scan"
+        default: "2"
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Pull candidates (no model)
+        run: node scripts/scout.ts --days ${{ github.event.inputs.days || '2' }}
+      - name: Triage and draft (Claude, subscription token)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Run the daily scout for becauseofai.org. Follow research/scout-brief.md exactly.
+            Today's candidates are in .scout/candidates.json (already generated in this checkout).
+            Finish by opening the pull request described in the brief. Do not merge anything.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+      - name: Build check of whatever the scout left behind
+        if: always()
+        run: npm run validate && npm run build

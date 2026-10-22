@@ -13,3 +13,5 @@ node_modules/
 # jetbrains / vscode local
 .idea/
 .vscode/
+# daily scout working files
+.scout/

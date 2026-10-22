@@ -30,6 +30,10 @@ npm run validate
 
 Exit code 1 means an entry is invalid and the build would fail. Held entries and stale-window warnings print but do not fail the run.
 
+## Daily scout
+
+`npm run scout` pulls yesterday's candidates (PubMed, medRxiv, ClinicalTrials.gov results postings, four journal feeds) and alerts (Crossref retractions on our sources, stale window grades) into `.scout/candidates.json`, no model involved. The workflow `.github/workflows/scout.yml` runs it every morning, then lets Claude triage against `research/scout-brief.md`, append leads to `research/inbox.md`, draft at most two entries, and open a pull request. Nothing reaches readers until a human merges. The workflow needs one repository secret, `CLAUDE_CODE_OAUTH_TOKEN`, made with `claude setup-token` on a Pro or Max account.
+
 ## Deploy
 
 Cloudflare Pages, static output. Build command `npm run build`, output directory `dist`. See the Linear ticket DAV-310 for the preview and cutover steps.

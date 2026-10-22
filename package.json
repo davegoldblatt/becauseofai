@@ -13,7 +13,8 @@
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "validate": "node scripts/validate.ts",
-    "astro": "astro"
+    "astro": "astro",
+    "scout": "node scripts/scout.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

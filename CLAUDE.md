@@ -19,11 +19,16 @@ Read `HANDOFF.md` (the spec) and `README.md` (layout, decisions made) first. The
 
 `data/entries/*.yaml` → `src/schema.ts` (zod, build fails on a bad entry) → `src/lib/entries.ts` (parse, cross-file checks, held entries) → `src/lib/site.ts` (the one import pages use) → pages. An entry with no `type: primary` source is held: validated, in `/api/entries.json`, listed under `held`, but not rendered, counted, or linked.
 
+## The daily scout
+
+`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most two drafted entries per day, never an edit to an existing entry, always a pull request. Treat `.scout/` as scratch.
+
 ## Commands
 
 - `npm run validate` prints errors, held entries, and stale-window warnings. Exit 1 only on errors.
 - `npm run build` builds `dist/` and runs Pagefind over it.
 - `npm run dev` for local work.
+- `npm run scout` pulls candidates for the last two days into `.scout/candidates.json` (`--days N` to widen).
 
 ## Rendering rules worth re-reading
 

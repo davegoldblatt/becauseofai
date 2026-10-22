@@ -75,6 +75,9 @@ export const Source = z
     // Only absolute http(s) URLs may qualify as a source. Checked without
     // rewriting: z.url() would trim and normalize the stored value.
     url: z.string().refine(isHttpUrl, "must be an absolute http(s) URL with no whitespace"),
+    // Optional DOI, so the daily scout can check Crossref for retractions and
+    // corrections. The research run backfills it.
+    doi: z.string().regex(/^10\.\d{4,9}\/\S+$/, "DOI must look like 10.xxxx/...").optional(),
     type: z.enum(SOURCE_TYPES),
   })
   .strict();
