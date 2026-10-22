@@ -1,0 +1,2 @@
+# Cloudflare Pages redirects: one canonical host.
+https://www.becauseofai.org/* https://becauseofai.org/:splat 301
