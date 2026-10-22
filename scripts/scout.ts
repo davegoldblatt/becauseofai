@@ -86,7 +86,7 @@ async function medrxiv() {
 }
 
 async function clinicaltrials() {
-  const term = `AREA[ResultsFirstPostDate]RANGE[${iso(from)},MAX] AND (artificial intelligence OR machine learning OR deep learning OR algorithm OR "decision support" OR "computer-aided")`;
+  const term = `AREA[ResultsFirstPostDate]RANGE[${iso(from)},MAX] AND ("artificial intelligence" OR "machine learning" OR "deep learning" OR "neural network" OR "large language model" OR "decision support" OR "computer-aided" OR "AI-enabled" OR "AI-based")`;
   const fields = "NCTId,BriefTitle,OfficialTitle,ResultsFirstPostDate,PrimaryCompletionDate,StartDate,OverallStatus,DesignAllocation,EnrollmentCount,Condition,InterventionName";
   const d = await getJson(`https://clinicaltrials.gov/api/v2/studies?query.term=${encodeURIComponent(term)}&fields=${fields}&pageSize=100`);
   for (const s of d.studies ?? []) {
