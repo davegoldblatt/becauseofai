@@ -16,3 +16,8 @@ Daily scout, 108 candidates, 7 flagged randomized, 0 alerts, 0 source errors. No
 - Multi-agent LLM diagnostic teams, reversal on real emergency notes. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.09.24.26363897v3). Possible `not-because` lead, but retrospective on notes. Missing: patient contact.
 - AI-enabled diabetic retinopathy screening, validation to public health impact. [Frontiers in Public Health](https://doi.org/10.3389/fpubh.2026.1976572). Check for screening-uptake numbers; likely a perspective. Compare oman-ai-retinopathy.
 - AI sputum analysis for TB detection in south-western Uganda. [Medical Devices](https://doi.org/10.2147/MDER.S639007). Validation study. Missing: any deployment or case-finding comparison.
+
+Second pass, same date: 78 candidates, 6 flagged randomized, 0 alerts, 1 source error (medRxiv returned 503). The leads above stand; no entry drafted.
+
+- AI-powered CURA application to identify at-risk pregnancies, randomised trial protocol. [BMJ Open](https://doi.org/10.1136/bmjopen-2026-124115). Protocol only. Watch for results; missing: results, dates, comparison outcomes.
+- Ambulatory patient experience with ambient AI scribes, qualitative study. [J Gen Intern Med](https://doi.org/10.1007/s11606-026-10931-4). Patient-side view; compare ambient-scribes-nejm-ai. Qualitative, so no measured effect; context only.
