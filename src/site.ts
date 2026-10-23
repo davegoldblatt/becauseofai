@@ -21,6 +21,8 @@ export const SITE = {
   // The site's X account (the announce workflow posts new entries there). Handle without the
   // "@"; the footer link and the twitter:site card tag are both built from it.
   x: "bcuz_of_ai",
+  // The editor's own X account, used for the twitter:creator card tag and /about.
+  editorX: "davegoldblatt",
 };
 
 // Nameplate per section. `em` is the measured advance width of the caps string

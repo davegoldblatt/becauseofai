@@ -4,6 +4,8 @@ A public registry of measured AI benefits to people. Every entry is one sentence
 
 The data is the product. The website is a reader for it. The data is YAML in git, the git history is the audit trail, and there is no database, CMS, or backend.
 
+New entries are posted on X as [@bcuz_of_ai](https://x.com/bcuz_of_ai). The editor is [@davegoldblatt](https://x.com/davegoldblatt).
+
 ## What an entry has to pass
 
 Every entry must pass four tests:
