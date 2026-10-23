@@ -36,6 +36,7 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.label.name == 'dispute' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    # Writes land on a branch or in a pull request; nothing here pushes main.
     permissions:
       contents: write
       issues: write
@@ -43,6 +44,7 @@ jobs:
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+      ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -124,8 +126,5 @@ jobs:
           branch="gate/$(date -u +%Y%m%d-%H%M%S)-${GITHUB_RUN_ID}"
           git checkout -q -b "$branch"
           git push -q -u origin "$branch"
-          npm run validate && npm run build
-          url=$(gh pr create --head "$branch" --base main --title "Gate: $LABEL" --body "Written by the verify workflow ($LABEL). Entry files and verification records only.")
-          n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
-          gh pr merge "$n" --squash --delete-branch
-          echo "merged #$n"
+          gh pr create --head "$branch" --base main --title "Gate: $LABEL" --body "Written by the verify workflow ($LABEL). Entry files and verification records only. The next scheduled scout run merges it once validate and build pass."
+          echo "opened a pull request from $branch; the scheduled scout run lands it"

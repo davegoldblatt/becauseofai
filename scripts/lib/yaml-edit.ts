@@ -49,18 +49,37 @@ function renderItems(items: unknown[], indent: string): string {
     .join("\n") + "\n";
 }
 
+// A sequence written in flow style (or empty) cannot take a textual insert;
+// the document API appends and re-flows the file. Rare, and never a failure.
+function appendViaDocument(raw: string, key: string, item: unknown): string {
+  const doc = parseDocument(raw, { schema: "core" });
+  const seq = doc.get(key, true);
+  if (seq && isSeq(seq)) doc.addIn([key], item); else doc.set(key, [item]);
+  return doc.toString({ lineWidth: 0 });
+}
+
 // Append a history line inside the history block, with the block's own indentation.
 export function appendHistory(raw: string, item: { date: string; note: string }): string {
-  const { insertAt, indent } = seqLayout(raw, "history");
-  const out = raw.slice(0, insertAt) + renderItems([{ date: item.date, note: item.note }], indent) + raw.slice(insertAt);
+  let out: string;
+  try {
+    const { insertAt, indent } = seqLayout(raw, "history");
+    out = raw.slice(0, insertAt) + renderItems([{ date: item.date, note: item.note }], indent) + raw.slice(insertAt);
+  } catch {
+    out = appendViaDocument(raw, "history", { date: item.date, note: item.note });
+  }
   return assertEntry(out, "entry after appending a history line");
 }
 
 // Append a source to the sources block; returns the new index.
 export function appendSource(raw: string, src: { title: string; url: string; type: "primary" | "secondary" }): { text: string; index: number } {
-  const { insertAt, indent } = seqLayout(raw, "sources");
-  const index = (parseDocument(raw, { schema: "core" }).toJS() as { sources: unknown[] }).sources.length;
-  const text = raw.slice(0, insertAt) + renderItems([src], indent) + raw.slice(insertAt);
+  const index = ((parseDocument(raw, { schema: "core" }).toJS() as { sources?: unknown[] }).sources ?? []).length;
+  let text: string;
+  try {
+    const { insertAt, indent } = seqLayout(raw, "sources");
+    text = raw.slice(0, insertAt) + renderItems([src], indent) + raw.slice(insertAt);
+  } catch {
+    text = appendViaDocument(raw, "sources", src);
+  }
   return { text: assertEntry(text, "entry after appending a source"), index };
 }
 

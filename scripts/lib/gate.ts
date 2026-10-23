@@ -25,12 +25,17 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
   const log = o.log ?? console.log;
   const d = readDraft(id);
   const e = d.entry;
-  // The drafter of record is bound to the file by receipts.ts (or an earlier gate run).
-  const drafter: Role = e.drafted ? { vendor: e.drafted.vendor, model: e.drafted.model } : o.drafter;
-  if (e.drafted && e.drafted.vendor !== o.drafter.vendor) throw new Error(`${id}: the file says ${e.drafted.vendor} drafted it; the run claims ${o.drafter.vendor}`);
-  if (drafter.vendor === o.verifier.vendor) throw new Error(`${id}: drafter and verifier are both ${drafter.vendor}; refusing`);
   const previous = latestRecord(e);
-  const unchanged = previous !== null && previous.entry_sha256 === d.contentSha && e.verification?.verifier.verdict === "pass" && !e.held;
+  const changed = !previous || previous.entry_sha256 !== d.contentSha;
+  // The drafter of record. A stamp on the file (receipts.ts, or an earlier
+  // gate run) names the vendor; the vendor can never be relabelled by a flag,
+  // and a conflict refuses the run. The model and date follow the run that
+  // produced the current content: a new draft by the same vendor re-stamps.
+  const stamped = e.drafted ?? e.verification?.drafter ?? null;
+  if (stamped && stamped.vendor !== o.drafter.vendor) throw new Error(`${id}: the file says ${stamped.vendor} drafted it; the run claims ${o.drafter.vendor}`);
+  const drafter: Role & { date: string } = stamped && !changed ? { vendor: stamped.vendor, model: stamped.model, date: stamped.date } : { vendor: o.drafter.vendor, model: o.drafter.model, date: o.date };
+  if (drafter.vendor === o.verifier.vendor) throw new Error(`${id}: drafter and verifier are both ${drafter.vendor}; refusing`);
+  const unchanged = !changed && e.verification?.verifier.verdict === "pass" && !e.held;
   if (unchanged && !o.force) {
     log("  unchanged since its passing verification; skipped (--force to re-verify)");
     return { id, adjudication: previous.adjudication, skipped: true, record: e.verification!.record };
@@ -59,18 +64,22 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
     log("  verifier unavailable; previous verification stands");
     return { id, adjudication: previous!.adjudication, skipped: true, record: e.verification!.record };
   }
-  // An open dispute is lifted only by the dispute handler, never by an ordinary pass.
-  if (e.held?.reason === "disputed" && final.result === "published" && !o.resolvesDispute) {
-    log("  passes, but a dispute is open; the hold stays until both vendors resolve it");
-    final = { result: "held", reason: "disputed", detail: e.held.detail };
+  // An open dispute is lifted only by the dispute handler. Whatever this run
+  // found is in the record; the entry stays held as disputed until then.
+  const openDispute = e.held?.reason === "disputed" && !o.resolvesDispute;
+  if (openDispute) {
+    log(`  a dispute is open; this run's outcome (${final.result}${final.reason ? ` ${final.reason}` : ""}) is recorded and the hold stays`);
+    final = { result: "held", reason: "disputed", detail: `${e.held!.detail} Latest gate run: ${final.result}${final.reason ? ` (${final.reason})` : ""}.`.slice(0, 1900) };
   }
+  // The record keeps the whole explanation; the entry's own summary is bounded.
+  final = { ...final, detail: final.detail.length > 1900 ? final.detail.slice(0, 1897) + "..." : final.detail };
   log(`  => ${final.result.toUpperCase()}${final.reason ? ` (${final.reason})` : ""}: ${final.detail}`);
   if (o.dryRun) return { id, adjudication: final, skipped: false, record: null };
 
   const record: VerificationRecord = {
     version: 1, kind: "verification", entry: id, date: o.date, as_of: asOf, entry_sha256: d.contentSha,
-    drafter: { vendor: drafter.vendor, model: drafter.model, date: e.drafted?.date ?? e.verification?.drafter.date ?? o.date },
-    sources: fetched.fetches, quote_checks: quoteChecks, verifier: run, adjudication: final,
+    drafter: { vendor: drafter.vendor, model: drafter.model, date: drafter.date },
+    sources: fetched.fetches, quote_checks: quoteChecks, verifier: run, adjudication: openDispute ? adjudicate({ ...base, verifier: outcome }) : final,
   };
   const rel = writeRecord(record);
   const verification = run && run.error === null
@@ -78,7 +87,7 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
     : undefined;
   const since = e.held && e.held.reason === final.reason ? e.held.since : o.date;
   const held = final.result === "held" ? { reason: final.reason!, since, detail: final.detail, record: final.reason === "disputed" && e.held?.record ? e.held.record : rel } : undefined;
-  const drafted = e.drafted ?? { vendor: drafter.vendor, model: drafter.model, date: o.date };
+  const drafted = { vendor: drafter.vendor, model: drafter.model, date: drafter.date, ...(e.drafted?.via && !changed ? { via: e.drafted.via } : {}) };
   writeOwned(d, { drafted, verification, held });
   log(`  wrote data/verifications/${rel}`);
   return { id, adjudication: final, skipped: false, record: rel };

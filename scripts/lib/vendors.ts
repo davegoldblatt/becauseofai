@@ -76,6 +76,12 @@ export function looksLikeSecret(output: unknown): string | null {
 export function availability(vendor: Vendor): Availability {
   if (vendor === "openai") {
     if (process.env.OPENAI_API_KEY) return { via: "api" };
+    // The CLI route runs an agent with a read-only shell. On a shared runner
+    // that is a tool the verifier does not need; the API has none. It takes an
+    // explicit opt-in there.
+    if (process.env.GITHUB_ACTIONS && process.env.ALLOW_CODEX_LOGIN_IN_CI !== "1") {
+      return { via: null, why: "no OPENAI_API_KEY; the Codex login route is not used in CI unless ALLOW_CODEX_LOGIN_IN_CI=1" };
+    }
     if (codexHome()) return { via: "codex-login" };
     return { via: null, why: "no OPENAI_API_KEY and no Codex login (CODEX_AUTH_JSON or CODEX_HOME/auth.json)" };
   }

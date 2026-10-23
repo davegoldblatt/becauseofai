@@ -32,6 +32,9 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
     const why = sources.map((s) => `source ${s.index}: ${s.reason ?? "not fetched"}`).join("; ");
     return hold("no-full-text", `No primary source could be read in full (${why}).`);
   }
+  // A source the code had to cut short was not read in full, whatever a model says about it.
+  const cut = fetched.filter((s) => s.truncated);
+  if (cut.length) return hold("no-full-text", cut.map((s) => `source ${s.index} is longer than the reader keeps (${s.chars} characters kept)`).join("; ") + ".");
 
   const missing = missingReceipts(e);
   if (missing.length) {
@@ -58,10 +61,9 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
   const v = verifier.output;
 
   // The verifier's full-text judgment matters for pages and PDFs, where the code
-  // cannot tell an abstract from a paper, and for anything the code cut short.
-  // A registry record from the API or a Europe PMC article, read whole, is
-  // complete by construction.
-  const judged = fetched.some((s) => !/^(clinicaltrials|europepmc)/.test(s.method) || s.truncated);
+  // cannot tell an abstract from a paper. A registry record from the API or a
+  // Europe PMC article is complete by construction.
+  const judged = fetched.some((s) => !/^(clinicaltrials|europepmc)/.test(s.method));
   if (!v.full_text && judged) return hold("no-full-text", `The verifier read only an abstract or landing page, not the full document${v.summary ? ` (${v.summary})` : ""}.`);
   if (NOT_PRIMARY.has(v.source_kind)) return hold("no-primary-source", `The primary source is a ${v.source_kind.replace("-", " ")}; press releases and news articles are leads, not evidence.`);
 
@@ -91,15 +93,16 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
       const names: Record<string, string> = { reached_people: "reached people", measured_against: "measured against something", ai_counterfactual: "the AI did something that would not otherwise have happened", dated: "dated" };
       return hold("fails-test", `Failed: ${failed.map((k) => names[k]).join("; ")}${v.tests.note ? ` (${v.tests.note})` : ""}.`);
     }
-    // Every grade must match, null included: a drafter that could not grade
-    // and a verifier that could is a disagreement the editor has to resolve.
-    const splits: Split[] = [];
-    for (const g of ["evidence", "attribution", "window"] as const) {
-      if (v.grades[g] !== e.grades[g]) splits.push({ grade: g, drafter: e.grades[g], verifier: v.grades[g] });
-    }
-    if (splits.length) {
-      return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
-    }
+  }
+  // Every grade must match in every section, null included: a drafter that
+  // could not grade and a verifier that could is a disagreement, and a verifier
+  // that grades a watchlist entry says it is not a watchlist entry.
+  const splits: Split[] = [];
+  for (const g of ["evidence", "attribution", "window"] as const) {
+    if (v.grades[g] !== e.grades[g]) splits.push({ grade: g, drafter: e.grades[g], verifier: v.grades[g] });
+  }
+  if (splits.length) {
+    return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
   }
 
   return { result: "published", reason: null, detail: v.summary || "Every receipt supported; grades agree." };

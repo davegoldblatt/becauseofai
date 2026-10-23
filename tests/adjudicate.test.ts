@@ -161,6 +161,17 @@ test("a failed test holds; a not-yet entry is not tested or grade-compared", () 
   const ny = entry({ section: "not-yet", grades: { evidence: null, attribution: null, window: null }, what_would_change: "An outcome." });
   const w = verdict(ny, { grades: { evidence: null, attribution: null, window: null }, tests: { reached_people: false, measured_against: false, ai_counterfactual: false, dated: false, note: "not a result" } });
   assert.equal(adjudicate(input(ny, { verifier: { ok: true, output: w } })).result, "published");
+  // A verifier that grades a watchlist entry disagrees that it is one.
+  const graded = verdict(ny, { grades: { evidence: "A", attribution: "isolated", window: "pre" } });
+  assert.equal(adjudicate(input(ny, { verifier: { ok: true, output: graded } })).reason, "grade-split");
+});
+
+test("a source the code cut short holds before any model is asked", () => {
+  const e = entry();
+  const cut: SourceFetch = { ...fetched(), truncated: true };
+  const a = adjudicate(input(e, { sources: [cut], verifier: null }));
+  assert.equal(a.reason, "no-full-text");
+  assert.match(a.detail, /longer than the reader keeps/);
 });
 
 test("missing receipt coverage holds before the model is called", () => {
@@ -198,14 +209,11 @@ test("not-applicable date provenance counts only when the entry has no achieved 
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: r } })).result, "published");
 });
 
-test("a drafter that could not grade and a verifier that could is a split; a cut source is judged for full text", () => {
+test("a drafter that could not grade and a verifier that could is a split", () => {
   const e = entry({ grades: { evidence: "A", attribution: "bundled", window: null }, notes: "verify: window" });
   const a = adjudicate(input(e));
   assert.equal(a.reason, "grade-split");
   assert.deepEqual(a.splits, [{ grade: "window", drafter: null, verifier: "pre" }]);
-  const cut: SourceFetch = { ...fetched(), truncated: true };
-  const v = verdict(entry(), { full_text: false, summary: "cut before the results" });
-  assert.equal(adjudicate(input(entry(), { sources: [cut], verifier: { ok: true, output: v } })).reason, "no-full-text");
 });
 
 test("a receipt whose source could not be read is a reading failure", () => {

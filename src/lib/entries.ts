@@ -13,6 +13,8 @@ import { parse } from "yaml";
 import { EntrySchema, isPublished, type Entry, type Section, type DateLike } from "../schema.ts";
 import { contentSha256 } from "./entry-text.ts";
 import type { VerificationRecord } from "../../scripts/lib/record.ts";
+import { VerdictSchema } from "../../scripts/lib/verdict-schema.ts";
+import { adjudicate } from "../../scripts/lib/adjudicate.ts";
 
 export const ENTRIES_DIR = fileURLToPath(new URL("../../data/entries/", import.meta.url));
 
@@ -43,6 +45,15 @@ export function recordMismatch(e: Entry, raw: string, records: Records): string 
   if (!rec.verifier || rec.verifier.error || rec.verifier.vendor !== v.verifier.vendor || rec.verifier.model !== v.verifier.model) return `record ${v.record} names a different verifier`;
   if (!rec.drafter || rec.drafter.vendor !== v.drafter.vendor) return `record ${v.record} names a different drafter`;
   if (rec.entry_sha256 !== contentSha256(raw)) return `the entry changed after record ${v.record} was made`;
+  // The record must carry a complete verdict and the inputs that produced the
+  // decision, and those inputs must still produce it.
+  const verdict = VerdictSchema.safeParse(rec.verifier.output);
+  if (!verdict.success) return `record ${v.record} carries no complete verdict`;
+  const receipts = e.receipts ?? [];
+  if (rec.quote_checks.length !== receipts.length || rec.quote_checks.some((c, i) => c.field !== receipts[i].field || c.quote !== receipts[i].quote || !c.found)) return `record ${v.record} did not check the entry's receipts`;
+  if (!rec.sources.some((s) => s.ok)) return `record ${v.record} read no source`;
+  const again = adjudicate({ entry: e, drafterVendor: rec.drafter.vendor, verifierVendor: rec.verifier.vendor, sources: rec.sources, quoteChecks: rec.quote_checks, verifier: { ok: true, output: verdict.data } });
+  if (again.result !== "published") return `record ${v.record} does not re-derive as published (${again.reason})`;
   return null;
 }
 

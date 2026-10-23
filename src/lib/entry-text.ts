@@ -4,7 +4,11 @@
 // from the YAML parser, not from line patterns, so quoted keys, comments,
 // document markers, and keep-style scalars survive.
 import { createHash } from "node:crypto";
-import { parseDocument, isMap, isScalar, stringify, type Document, type Pair } from "yaml";
+import { parseDocument, isMap, isScalar, stringify, visit, type Document, type Pair } from "yaml";
+
+// Fields a verification is about. Notes, history, and the pipeline's own keys
+// are not among them; nothing else on an entry is left out.
+const VERIFIED_KEYS = ["id", "section", "rank", "headline", "impact", "impact_number", "impact_label", "summary", "caveat", "domain", "ai_type", "grades", "comparison", "effect", "reach", "dates", "sources", "conflicts", "what_would_change", "related"] as const;
 
 export const OWNED_KEYS = ["rationale", "receipts", "drafted", "verification", "held"] as const;
 export type OwnedKey = (typeof OWNED_KEYS)[number];
@@ -16,23 +20,38 @@ function keyText(k: unknown): string {
   return isScalar(k) ? String(k.value) : String(k);
 }
 
+// Anchors and aliases let one field's bytes stand in for another's; the
+// textual editor and the projection both refuse them (README, trust boundaries).
+function refuseAliases(doc: Document): void {
+  let alias = false;
+  visit(doc, { Alias: () => { alias = true; return visit.BREAK; } });
+  if (alias) throw new Error("entry uses YAML anchors and aliases; not supported");
+}
+
 // Every top-level mapping entry with its byte range [start, end): from the key
-// to the start of the next key (or the end of the mapping).
+// to the end of its value (trailing newline included). Comments and blank
+// lines between one entry and the next belong to the editor, not to a block.
 export function topBlocks(raw: string): { doc: Document; blocks: TopBlock[]; mapEnd: number } {
   const doc = parseDocument(raw, { schema: "core", keepSourceTokens: true });
   if (!isMap(doc.contents)) throw new Error("entry is not a YAML mapping");
+  refuseAliases(doc);
   const items = doc.contents.items as Pair[];
-  const starts = items.map((p) => (p.key as { range?: [number, number, number] }).range?.[0] ?? -1);
-  if (starts.some((s) => s < 0)) throw new Error("could not read key positions");
   const mapRange = (doc.contents as { range?: [number, number, number] }).range!;
   const mapEnd = mapRange[2];
-  const blocks = items.map((p, i) => ({
-    key: keyText(p.key),
-    start: starts[i],
-    end: i + 1 < items.length ? starts[i + 1] : mapEnd,
-    keyNode: p.key,
-    valueNode: p.value,
-  }));
+  const blocks = items.map((p, i) => {
+    const kr = (p.key as { range?: [number, number, number] }).range;
+    if (!kr) throw new Error("could not read key positions");
+    // "? key" (an explicit key) would leave its indicator behind on a rewrite.
+    const lineStart = raw.lastIndexOf("\n", kr[0] - 1) + 1;
+    if (/^\s*\?\s*$/.test(raw.slice(lineStart, kr[0]))) throw new Error(`explicit key "? ${keyText(p.key)}" is not supported`);
+    const vr = (p.value as { range?: [number, number, number] } | null)?.range;
+    let end = vr ? vr[2] : kr[2];
+    // Take the newline that closes the value's last line, nothing past it.
+    if (raw[end - 1] !== "\n") { const nl = raw.indexOf("\n", end); end = nl < 0 ? raw.length : nl + 1; }
+    const next = i + 1 < items.length ? (items[i + 1].key as { range?: [number, number, number] }).range![0] : mapEnd;
+    if (end > next) end = next;
+    return { key: keyText(p.key), start: kr[0], end, keyNode: p.key, valueNode: p.value };
+  });
   return { doc, blocks, mapEnd };
 }
 
@@ -60,23 +79,23 @@ export function readOwned(raw: string): Owned {
   return out;
 }
 
-// The content a verification is about: the editor's bytes minus notes and
-// history (the verifier never sees them, and a note or a history line must not
-// invalidate a verification), plus the receipts exactly as they stand.
+// The content a verification is about: a canonical rendering of the parsed,
+// alias-resolved values of every verified field plus the receipts. Not the
+// file's bytes, so a note, a history line, a comment, or an anchor cannot
+// change what the hash covers or hide a change to a value.
+function canonical(v: unknown): unknown {
+  if (Array.isArray(v)) return v.map(canonical);
+  if (v && typeof v === "object") return Object.fromEntries(Object.keys(v as object).sort().map((k) => [k, canonical((v as Record<string, unknown>)[k])]));
+  return v;
+}
 export function verifiableContent(raw: string): string {
-  const base = stripOwned(raw);
-  const { blocks } = topBlocks(base);
-  let out = "";
-  let cursor = 0;
-  for (const b of blocks) {
-    if (b.key === "notes" || b.key === "history") {
-      out += base.slice(cursor, b.start);
-      cursor = b.end;
-    }
-  }
-  out += base.slice(cursor);
-  const receipts = readOwned(raw).receipts ?? [];
-  return out.replace(/\s+$/, "") + "\n" + stringify({ receipts }, { lineWidth: 0, schema: "core" });
+  const doc = parseDocument(raw, { schema: "core" });
+  refuseAliases(doc);
+  const js = doc.toJS() as Record<string, unknown>;
+  const view: Record<string, unknown> = {};
+  for (const k of VERIFIED_KEYS) if (k in js) view[k] = js[k];
+  view.receipts = js.receipts ?? [];
+  return JSON.stringify(canonical(view));
 }
 
 export function contentSha256(raw: string): string {

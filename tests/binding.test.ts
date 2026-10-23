@@ -53,11 +53,26 @@ verification:
   record: x/2026-10-23.json
 `;
 
+const VERDICT = {
+  full_text: true, source_kind: "paper",
+  receipts: [{ field: "headline", status: "supported", note: "" }, { field: "dates.achieved_start", status: "supported", note: "" }],
+  grades: { evidence: "A", attribution: "isolated", window: "pre" },
+  attribution_rationale: "arms differ only by the AI",
+  achieved_dates: { from: "methods", note: "" },
+  conflict: { in_source: false, stated_in_entry: false, note: "" },
+  tests: { reached_people: true, measured_against: true, ai_counterfactual: true, dated: true, note: "" },
+  summary: "ok",
+};
 function record(over: Partial<VerificationRecord> = {}): VerificationRecord {
   return {
     version: 1, kind: "verification", entry: "x", date: "2026-10-23", as_of: "2026-10-22", entry_sha256: contentSha256(FILE),
-    drafter: { vendor: "anthropic", model: "m1", date: "2026-10-23" }, sources: [], quote_checks: [],
-    verifier: { vendor: "openai", model: "m2", via: "api", date: "2026-10-23", output: {}, error: null, tokens: null, duration_ms: 1 },
+    drafter: { vendor: "anthropic", model: "m1", date: "2026-10-23" },
+    sources: [{ index: 0, url: "https://doi.org/10.1/x", ok: true, method: "europepmc", fetched_at: "2026-10-23T00:00:00Z", sha256: "abc", chars: 50000, truncated: false }],
+    quote_checks: [
+      { field: "headline", source: 0, quote: "10 fewer patients per 1,000", found: true, exact: true, status: "supported" },
+      { field: "dates.achieved_start", source: 0, quote: "enrolled from January 2021", found: true, exact: true, status: "supported" },
+    ],
+    verifier: { vendor: "openai", model: "m2", via: "api", date: "2026-10-23", output: VERDICT, error: null, tokens: null, duration_ms: 1 },
     adjudication: { result: "published", reason: null, detail: "ok" },
     ...over,
   };
@@ -76,6 +91,20 @@ test("a pass marker publishes only with a matching record", () => {
   assert.match(heldRec.unbound.get("x")!, /did not publish/);
   const vendor = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ verifier: { ...record().verifier!, vendor: "anthropic" } }) } });
   assert.match(vendor.unbound.get("x")!, /different verifier/);
+  // A record that says "published" but whose own inputs do not re-derive it, or that skipped the receipts, binds nothing.
+  const empty = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ sources: [], quote_checks: [], verifier: { ...record().verifier!, output: {} } }) } });
+  assert.match(empty.unbound.get("x")!, /no complete verdict/);
+  const skipped = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ quote_checks: record().quote_checks.slice(0, 1) }) } });
+  assert.match(skipped.unbound.get("x")!, /did not check/);
+  const contradicted = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ verifier: { ...record().verifier!, output: { ...VERDICT, receipts: [{ field: "headline", status: "contradicted", note: "the paper says 12" }, VERDICT.receipts[1]] } } }) } });
+  assert.match(contradicted.unbound.get("x")!, /does not re-derive/);
+});
+
+test("aliases are refused, so a value cannot change through an excluded field", () => {
+  const aliased = FILE.replace("headline: Because of AI, 10 fewer patients per 1,000 had an event.", "notes: &c Because of AI, 10 fewer patients per 1,000 had an event.\nheadline: *c");
+  const r = parseEntryFiles({ "x.yaml": aliased }, { records: { "x/2026-10-23.json": record() } });
+  assert.equal(r.publishable.length, 0);
+  assert.match(r.unbound.get("x")!, /anchors and aliases/);
 });
 
 test("changing a number or a receipt after verification holds the entry; a note does not", () => {

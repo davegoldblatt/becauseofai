@@ -11,7 +11,7 @@ import path from "node:path";
 
 export const UA_EMAIL = "dave@becauseofai.org";
 export const UA = `becauseofai-verifier/1.0 (https://becauseofai.org; mailto:${UA_EMAIL})`;
-export const MAX_CHARS = 160_000;
+export const MAX_CHARS = 600_000;
 export const MIN_FULL_TEXT_CHARS = 2_000;
 
 export type SourceText =
@@ -307,14 +307,20 @@ export function normalizeForMatch(s: string): string {
     .replace(/\u00a0/g, " ")
     .replace(/(\d)\u00b7(\d)/g, "$1.$2")
     .replace(/(\d)[, ](\d{3})(?!\d)/g, "$1$2")
+    .replace(/[\u2264]/g, "<=")
+    .replace(/[\u2265]/g, ">=")
+    .replace(/[\u00b1]/g, "+-")
+    // A sign set off by a space still belongs to its number: "- 10" is "-10".
+    .replace(/(^|[\s(])([+-]) (?=\d)/g, "$1$2")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-// Tokens: numbers (with sign, decimals, percent) and words. Everything else
-// (punctuation, quotes, brackets) is dropped, so a quote may differ from the
-// source in punctuation but never in a number or a word.
-const TOKEN = /[+-]?\d+(?:\.\d+)?%?|[\p{L}]+/gu;
+// Tokens: numbers (with sign, decimals, percent), comparison and arithmetic
+// operators that change a number's meaning, and words. Other punctuation
+// (quotes, brackets, commas, periods between words) is dropped, so a quote may
+// differ from the source in that punctuation but never in a number or a word.
+const TOKEN = /[+-]?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?%?|<=|>=|[<>=~×\/]|[\p{L}]+/gu;
 export function matchTokens(s: string): string[] {
   return normalizeForMatch(s).match(TOKEN) ?? [];
 }
@@ -323,8 +329,8 @@ function hasBoundary(t: string, at: number, len: number): boolean {
   const before = at === 0 ? "" : t[at - 1];
   const after = at + len >= t.length ? "" : t[at + len];
   const alnum = /[\p{L}\p{N}]/u;
-  // A sign or a decimal point glued to the match changes the number: "-10" is not "10", "1.0" is not "0".
-  return !alnum.test(before) && !/[+\-.]/.test(before) && !alnum.test(after) && !/[.%]/.test(after);
+  // A sign, an operator, or a decimal point glued to the match changes the number: "-10" is not "10", "1.0" is not "0", ">10" is not "10".
+  return !alnum.test(before) && !/[+\-.<>=~×\/]/.test(before) && !alnum.test(after) && !/[.%\/]/.test(after);
 }
 
 export function findQuote(text: string, quote: string): { found: boolean; exact: boolean } {

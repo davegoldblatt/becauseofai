@@ -8,105 +8,8 @@ import { stringify } from "yaml";
 import { EVIDENCE, ATTRIBUTION, WINDOW, RECEIPT_FIELDS, RECEIPT_MAX_WORDS, type Entry } from "../../src/schema.ts";
 import { GRADE_DESCRIPTION } from "../../src/lib/format.ts";
 import type { QuoteCheck } from "./record.ts";
-
-export const SOURCE_KINDS = ["paper", "preprint", "registry-record", "verification-report", "operational-report", "program-report", "press-release", "news", "other"] as const;
-export const DATE_ORIGINS = ["methods", "results", "registry", "report-body", "abstract", "press-release", "not-found", "not-applicable"] as const;
-export const RECEIPT_STATUSES = ["supported", "contradicted", "unsupported"] as const;
-
-const Field = z.enum(RECEIPT_FIELDS);
-
-export const VerdictSchema = z
-  .object({
-    full_text: z.boolean().describe("true when the text given is the complete document (methods and results, or the whole registry record or report); false for an abstract, a landing page, or a fragment"),
-    source_kind: z.enum(SOURCE_KINDS).describe("what the primary source text is"),
-    receipts: z
-      .array(
-        z
-          .object({
-            field: Field,
-            status: z.enum(RECEIPT_STATUSES).describe("supported: the quote, read in context, establishes the field's value. contradicted: the source says something different. unsupported: the quote does not establish the value, or the value is not in the source"),
-            note: z.string().describe("one sentence; empty when supported"),
-          })
-          .strict(),
-      )
-      .describe("one item per receipt on the entry, in the same order"),
-    grades: z
-      .object({
-        evidence: z.enum(EVIDENCE).nullable(),
-        attribution: z.enum(ATTRIBUTION).nullable(),
-        window: z.enum(WINDOW).nullable(),
-      })
-      .strict()
-      .describe("your own grades from the source alone; null when the source does not let you decide, or for a not-yet entry"),
-    attribution_rationale: z.string().describe("one sentence naming the comparison that justifies your attribution grade"),
-    achieved_dates: z
-      .object({
-        from: z.enum(DATE_ORIGINS).describe("where the entry's achieved dates can be read in the source: methods, results, registry, and report-body are acceptable (the body of the document, at the stated precision); abstract and press-release are not; not-found when the body does not give them; not-applicable when the entry has no achieved dates"),
-        note: z.string(),
-      })
-      .strict(),
-    conflict: z
-      .object({
-        in_source: z.boolean().describe("the source shows a conflict: a company-run study or dashboard, vendor funding, authors employed by or holding equity in the vendor, a patent or licence"),
-        stated_in_entry: z.boolean().describe("the entry's conflicts field discloses that conflict"),
-        note: z.string(),
-      })
-      .strict(),
-    tests: z
-      .object({
-        reached_people: z.boolean(),
-        measured_against: z.boolean(),
-        ai_counterfactual: z.boolean(),
-        dated: z.boolean(),
-        note: z.string().describe("which test failed and why, or empty"),
-      })
-      .strict()
-      .describe("the four tests, applied to the study for because and not-because entries; all true for a not-yet entry"),
-    summary: z.string().describe("two sentences at most: what the source supports and what it does not"),
-  })
-  .strict();
-export type Verdict = z.infer<typeof VerdictSchema>;
-
-export const ReceiptsDraftSchema = z
-  .object({
-    receipts: z
-      .array(
-        z
-          .object({
-            field: Field,
-            quote: z.string().describe(`verbatim from the source text, ${RECEIPT_MAX_WORDS} words or fewer`),
-            locator: z.string().max(300).describe("section, table, figure, page, or registry field; one short phrase"),
-            source: z.number().int().describe("index of the source the quote comes from, as given"),
-          })
-          .strict(),
-      ),
-    rationale: z.string().describe("one sentence naming the comparison that justifies the entry's attribution grade"),
-    unsupported: z.array(z.object({ field: Field, why: z.string() }).strict()).describe("required fields the text cannot support verbatim"),
-  })
-  .strict();
-export type ReceiptsDraft = z.infer<typeof ReceiptsDraftSchema>;
-
-export const DisputeVerdictSchema = z
-  .object({
-    upheld: z.boolean(),
-    reasoning: z.string().max(1500).describe("three sentences at most, specific to the source"),
-    changes: z
-      .array(
-        z
-          .object({
-            field: z.string().max(40).describe("dotted path on the entry, for example grades.window, effect.absolute, dates.achieved_start, headline"),
-            value: z.string().max(600).nullable().describe("the corrected value, as it should read on the entry"),
-            quote: z.string().max(400).describe(`verbatim from a source text given, ${RECEIPT_MAX_WORDS} words or fewer; empty for a grade change`),
-            locator: z.string().max(160),
-            source: z.number().int().describe("index of the source quoted; -1 for the disputant's source"),
-          })
-          .strict(),
-      )
-      .max(12)
-      .describe("empty unless upheld"),
-  })
-  .strict();
-export type DisputeVerdict = z.infer<typeof DisputeVerdictSchema>;
+export * from "./verdict-schema.ts";
+import { VerdictSchema } from "./verdict-schema.ts";
 
 export function jsonSchema(schema: z.ZodType): Record<string, unknown> {
   const js = z.toJSONSchema(schema, { target: "draft-2020-12" }) as Record<string, unknown>;
@@ -129,7 +32,7 @@ function vocabulary(asOf: string): string {
 
 const FOUR_TESTS = `The four tests: (1) the benefit reached actual people, not a benchmark score or a demo; (2) it was measured against something: a control arm, a prior period, a human benchmark, another model; (3) the AI was a necessary part of what produced the result; the attribution grade (isolated, only-path, bundled, AI vs AI) records how cleanly its contribution can be separated, so a bundled package that was tested as a package passes this test and is graded bundled, and the test fails only when the AI's part cannot be identified at all; (4) the date the benefit occurred is known, from the methods section, the trial registry, or the body of an operational report, never from an abstract or a press release.`;
 
-const TEXT_NOTE = `The code may cut a long source at a fixed number of characters; a cut is marked in the source tag and does not make the text "not full text". full_text is false only when what you were given is visibly not the document: an abstract without methods and results, a landing page, a snippet, or a cookie or access wall. A complete registry record or report is full text even when it does not contain everything the entry claims; a claim the text does not carry is an unsupported receipt, not a full-text failure.`;
+const TEXT_NOTE = `full_text is false only when what you were given is visibly not the document: an abstract without methods and results, a landing page, a snippet, or a cookie or access wall. A complete registry record or report is full text even when it does not contain everything the entry claims; a claim the text does not carry is an unsupported receipt, not a full-text failure.`;
 
 export function verifierSystem(asOf: string): string {
   return `You are the independent verifier for becauseofai.org, a public registry of measured AI benefits to people. A model from a different vendor drafted the entry you are given. You never see its reasoning. You receive the entry's data and the text of its primary source(s), fetched by code. Judge only from that text: not from memory of the study, not from anything else. Do not browse, run commands, or read files.

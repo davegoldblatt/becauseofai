@@ -26,6 +26,14 @@ test("quotes match after typographic normalisation, loosely on punctuation, neve
   assert.equal(findQuote("rate 3.95% in arm", "3.9%").found, false);
   assert.equal(findQuote("rate 3.9% in arm", "3.9%").found, true);
   assert.equal(findQuote("rose by 10 percent, not 11", "rose by 10 percent").found, true);
+  // Operators and spaced signs are part of the number.
+  assert.equal(findQuote("The rate was >10 percent overall", "<10 percent overall").found, false);
+  assert.equal(findQuote("The rate was >10 percent overall", ">10 percent overall").found, true);
+  assert.equal(findQuote("fell by - 10 percent", "10 percent").found, false);
+  assert.equal(findQuote("fell by - 10 percent", "-10 percent").found, true);
+  assert.equal(findQuote("ratio ≥ 1.5 in arm", "≥1.5 in arm").found, true);
+  assert.equal(findQuote("ratio ≥ 1.5 in arm", "≤1.5 in arm").found, false);
+  assert.equal(findQuote("1/3 of arm", "1/3 of arm").found, true);
   assert.deepEqual(findQuote("abc", ""), { found: false, exact: false });
   assert.equal(normalizeForMatch("2·9% of 21 603"), "2.9% of 21603");
 });
@@ -114,6 +122,18 @@ test("history lines append inside the history block with its indentation; a fold
   const flat = RAW.replace(/history:\n  - date: 2026-10-22\n    note: "Added."/, 'history:\n- date: 2026-10-22\n  note: "Added."');
   const f = appendHistory(flat, { date: "2026-10-24", note: "Updated." });
   assert.match(f, /note: "Added."\n- date: 2026-10-24\n  note: Updated.\nheld:/);
+});
+
+test("comments between keys stay with the editor; explicit keys and anchors are refused; flow sequences re-flow instead of failing", () => {
+  const withComment = RAW.replace('"what_would_change": keep me', '# keep this comment\n"what_would_change": keep me');
+  const out = withOwned(withComment, { held: undefined });
+  assert.match(out, /# keep this comment\n"what_would_change": keep me/);
+  assert.throws(() => withOwned(RAW.replace("held:\n  reason", "? held\n:\n  reason"), {}), /explicit key/);
+  assert.throws(() => contentSha256(RAW.replace("impact: 26% fewer events", "impact: &i 26% fewer events\nsummary2: *i")), /anchors/);
+  const flow = RAW.replace(/history:\n  - date: 2026-10-22\n    note: "Added."/, 'history: [{ date: 2026-10-22, note: "Added." }]');
+  const f = appendHistory(flow, { date: "2026-10-24", note: "Updated." });
+  assert.match(f, /note: Updated\./);
+  assert.match(f, /held:\n  reason: ungrounded/);
 });
 
 test("an edit that breaks the entry is refused before it is written", () => {
