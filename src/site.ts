@@ -17,7 +17,7 @@ export const SITE = {
   // Appended to every share-image URL. Slack, X, and iMessage cache an image by
   // its URL for days; bump this when the card design changes so new posts
   // fetch the new image instead of the cached one.
-  ogVersion: "2",
+  ogVersion: "3",
 };
 
 // Nameplate per section. `em` is the measured advance width of the caps string

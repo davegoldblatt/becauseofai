@@ -12,6 +12,8 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  // Title for link previews when the page <title> is too long for a card.
+  ogTitle?: string;
   // Which nameplate to set. List pages pass their section and "full".
   section?: Section | null;
   nameplate?: "full" | "compact";
@@ -21,6 +23,7 @@ const {
   description = SITE.description,
   canonical,
   ogImage = `${SITE.url}/og/site.png`,
+  ogTitle,
   section = null,
   nameplate = "compact",
 } = Astro.props;
@@ -55,8 +58,8 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: entries`} href="/feed.xml" />
     <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: changes`} href="/changes.xml" />
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:title" content={fullTitle} />
+    <meta property="og:site_name" content={SITE.domain} />
+    <meta property="og:title" content={ogTitle ?? fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />

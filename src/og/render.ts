@@ -133,6 +133,32 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
   return render(tree);
 }
 
+// The home card: the nameplate, then four impact numbers from the top of the
+// list, then the counts. Numbers are the reason anyone clicks.
+export async function renderHomeOg(top: Entry[], counts: { because: number; "not-because": number; "not-yet": number }): Promise<Buffer> {
+  const cells = top.slice(0, 4).map((e) => {
+    const imp = splitImpact(e.impact);
+    const leadSize = !imp.numeric ? 44 : imp.lead.length <= 4 ? 118 : imp.lead.length <= 6 ? 96 : 72;
+    return h("div", { display: "flex", flexDirection: "column", width: 520, gap: 8 }, [
+      h("div", { display: "flex", fontFamily: DISPLAY, fontSize: leadSize, lineHeight: 0.88, color: SIGNAL, letterSpacing: -leadSize * 0.015, ...(imp.numeric ? {} : { maxWidth: 520 }) }, imp.lead),
+      ...(imp.rest ? [h("div", { display: "flex", maxWidth: 520, ...mono(17, PAPER, { lineHeight: 1.25 }) }, imp.rest)] : []),
+    ]);
+  });
+  const rows = [cells.slice(0, 2), cells.slice(2, 4)].filter((r) => r.length);
+  const tree = h("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: 1200, height: 630, padding: "44px 56px 40px", backgroundColor: INK, color: PAPER }, [
+    h("div", { display: "flex", justifyContent: "space-between", alignItems: "flex-end" }, [
+      nameplate(null, 92, 640),
+      h("div", { display: "flex", paddingBottom: 6, ...mono(18) }, SITE.domain),
+    ]),
+    h("div", { display: "flex", flexDirection: "column", gap: 34, paddingTop: 10 }, rows.map((r) => h("div", { display: "flex", gap: 48 }, r))),
+    h("div", { display: "flex", justifyContent: "space-between", paddingTop: 16, borderTop: `3px solid ${PAPER}`, ...mono(17) }, [
+      h("div", { display: "flex" }, `${counts.because} because · ${counts["not-because"]} not because · ${counts["not-yet"]} not yet`),
+      h("div", { display: "flex" }, "measured, and dated by when it happened"),
+    ]),
+  ]);
+  return render(tree);
+}
+
 export async function renderSiteOg(section: Section | null, counts: { because: number; "not-because": number; "not-yet": number }): Promise<Buffer> {
   const line = `${SITE.runningHead} · ${counts.because} because · ${counts["not-because"]} not because · ${counts["not-yet"]} not yet`;
   const sub = section === "not-because"

@@ -2,10 +2,11 @@
 import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 import Registry from "../components/Registry.astro";
-import { because } from "../lib/site.ts";
+import { because, siteCounts as c } from "../lib/site.ts";
 import { SITE } from "../site.ts";
+const description = `What AI has measurably done for people: ${c.because} benefits that reached humans, were measured against something, and are dated by when they happened, not when they were published. ${c["not-because"]} nulls and ${c["not-yet"]} watchlist candidates under the same grades.`;
 ---
-<Base title="Because of AI" description={SITE.description} section="because" nameplate="full">
+<Base title="Because of AI" ogTitle="Because of AI" description={description} section="because" nameplate="full">
   <h1 class="sr-only">Because of AI: a registry of measured AI benefits to people</h1>
   <Hero entries={because} />
   <Registry entries={because} section="because" />
