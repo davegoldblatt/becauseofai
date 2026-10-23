@@ -1,47 +1,53 @@
-# Because of AI, daily digest for 2026-10-23
+Because of AI, the day in plain words. Facts gathered 2026-10-23 18:40 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
-Facts since 2026-10-22 18:38:19 UTC. Written by code; the email is written from this.
+WHAT WE POSTED
+- 2026-10-22: "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three months." https://becauseofai.org/entry/golden-bridge-ii-stroke
+- 2026-10-22: "Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver disease in about 5 more patients per 1,000 adults who had a routine ECG." https://becauseofai.org/entry/advance-ai-ecg-liver
+- 2026-10-22: "A GPT-4o assistant built into the medical record improved Kenyan clinicians' notes and plans but did not reduce treatment failure for 9,691 patients." https://becauseofai.org/entry/kenya-ai-consult-null
+- 2026-10-23: "Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with." https://becauseofai.org/entry/columbia-star-birth
+- 2026-10-23: "Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a 238-physician randomized trial." https://becauseofai.org/entry/ambient-scribes-nejm-ai
 
-## Registry
+HOW THE POSTS ARE DOING (last 7 days, newest first)
+- 7 views, 0 likes, 0 replys, 0 reposts: "Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a" https://x.com/bcuz_of_ai/status/2113492594319671392
+- 1 view, 0 likes, 0 replys, 0 reposts: "Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with." https://x.com/bcuz_of_ai/status/2113491592350941292
+- 3 views, 0 likes, 0 replys, 0 reposts: "A GPT-4o assistant built into the medical record improved Kenyan clinicians' notes and plans but did not reduc" https://x.com/bcuz_of_ai/status/2113452645822439557
+- 3 views, 0 likes, 0 replys, 0 reposts: "Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver disease in about 5 more patients per" https://x.com/bcuz_of_ai/status/2113452235439182144
+- 1 view, 0 likes, 0 replys, 0 reposts: "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, " https://x.com/bcuz_of_ai/status/2113451484524536175
+- 11 views, 0 likes, 0 replys, 0 reposts: "A public registry of measured AI benefits to people. Each entry is one sentence that has to earn it: the benef" https://x.com/bcuz_of_ai/status/2113450666471612910
 
-16 because · 5 not because · 5 not yet published; 1 held.
+THE ACCOUNT'S OWN REPLIES TO OTHERS (9 in the last 7 days)
+- to @GoogleDeepMind: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113503741655822838
+- to @EricTopol: 9 views, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113503532926300217
+- to @BoWang87: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113502819517096286
+- to @CBSMornings: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113502817134792952
+- to @thesupermannx: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113502187548799019
+- to @cgnorthcutt: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113502186189758618
+- to @semafor: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113501406619644367
+- to @jillnephew: 9 views, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113494415541141740
+- to @jillnephew: 13 views, 0 likes, 1 reply https://x.com/bcuz_of_ai/status/2113494077090201841
 
-Entries added or changed:
-- added: Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver disease in about 5 more patients per 1,000 adults who had a routine ECG. → published https://becauseofai.org/entry/advance-ai-ecg-liver
-- added: Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a 238-physician randomized trial. → published https://becauseofai.org/entry/ambient-scribes-nejm-ai
-- added: AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chinese primary students. → published https://becauseofai.org/entry/china-ai-cal-null
-- added: Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with. → published https://becauseofai.org/entry/columbia-star-birth
-- added: Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs that had no radiologist to read the X-rays. → published https://becauseofai.org/entry/ethiopia-tb-ai-cxr
-- added: Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate the window. → published https://becauseofai.org/entry/every-cure-repurposing
-- added: Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day. → published https://becauseofai.org/entry/fido-northumbrian-leaks
-- added: Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit; no fire-response outcome has been measured yet. → published https://becauseofai.org/entry/firesat-constellation
-- added: Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that makes the device. → published https://becauseofai.org/entry/fortell-ai-hearing-aids
-- added: Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1. → published https://becauseofai.org/entry/hurricane-melissa-2025
-- added: Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confirmed cases in people with no symptoms. → published https://becauseofai.org/entry/india-tribal-tb-ai-cxr
-- added: A GPT-4o assistant built into the medical record improved Kenyan clinicians' notes and plans but did not reduce treatment failure for 9,691 patients. → published https://becauseofai.org/entry/kenya-ai-consult-null
-- added: A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student randomized trial. → published https://becauseofai.org/entry/maryland-ai-tutor-negative
-- added: Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, and 12% fewer cancers surfaced between screens. → published https://becauseofai.org/entry/masai-ai-mammography
-- added: Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear without waiting weeks for a dermatologist. → published https://becauseofai.org/entry/nhs-derm-skin-cancer
-- added: Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist centres 64 minutes faster. → published https://becauseofai.org/entry/nhs-stroke-ai-imaging
-- added: Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%. → held (no-primary-source)
-- added: The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet been approved anywhere. → published https://becauseofai.org/entry/rentosertib-phase-3
-- added: An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at 12 months. → published https://becauseofai.org/entry/tricorder-ai-stethoscope-null
-- added: Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a brain implant, at up to 99% word accuracy. → published https://becauseofai.org/entry/ucd-als-speech-bci
-- added: Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — while saving no time and mostly not recommending it. → published https://becauseofai.org/entry/ucla-chart-summarizer-rct
-- added: Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 admissions. → published https://becauseofai.org/entry/uva-comet-deterioration-null
-- added: Because of AI, there were an estimated 841 fewer injury-causing crashes across 270 million driverless miles. → published https://becauseofai.org/entry/waymo-injury-crashes
-- added: Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert hasn't been measured. → published https://becauseofai.org/entry/flood-hub-flash-floods
-- added: An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved. → published https://becauseofai.org/entry/gb-0895-phase-3
-- added: Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three months. → published https://becauseofai.org/entry/golden-bridge-ii-stroke
-- added: Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks. → published https://becauseofai.org/entry/sierra-leone-gemini-math
+FOLLOWERS: 1
 
-Gate decisions:
-- flood-hub-flash-floods: published: The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes.
-- gb-0895-phase-3: published: The records support recruiting Phase 3 trials and the stated SOLAIRIA-1 plans, but provide no results, AI provenance, or evidence about approvals of AI-designed antibodies. SOLAIRIA-1 was first posted on 2025-12-11; the entry's published date of 2025-12-03 is its actual study start date.
-- golden-bridge-ii-stroke: published: The preregistered cluster randomized trial supports approximately 26% fewer three-month vascular events and 10 fewer events per 1,000 patients with the AI-containing package. It does not isolate AI's contribution, and the reported benefits predate the current window.
-- sierra-leone-gemini-math: published: The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling.
+PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY
+- None.
 
-Leads the scout logged (26):
+SITE TRAFFIC
+- Not connected yet. Dave would need to make a Cloudflare analytics token; until then there are no traffic numbers.
+
+THE REGISTRY
+- Live on the site: 16 benefits, 5 null results, 5 watchlist items. Held off the site: 1.
+- A bulk change touched 27 entries at once (a rebuild of the files, not 27 new entries).
+
+WHAT THE SECOND MODEL DECIDED IN THE LAST DAY
+- "Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert hasn't been measured.": agreed, so it is live. The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes.
+- "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved.": agreed, so it is live. The records support recruiting Phase 3 trials and the stated SOLAIRIA-1 plans, but provide no results, AI provenance, or evidence about approvals of AI-designed antibodies. SOLAIRIA-1 was first posted on 2025-12-11; the entry's published date of 2025-12-03 is its actual study start date.
+- "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three months.": agreed, so it is live. The preregistered cluster randomized trial supports approximately 26% fewer three-month vascular events and 10 fewer events per 1,000 patients with the AI-containing package. It does not isolate AI's contribution, and the reported benefits predate the current window.
+- "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks.": agreed, so it is live. The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling.
+
+STILL HELD OFF THE SITE (1)
+- "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.": it has no primary source, only a press release or a news story (since 2026-10-23). No primary source yet.
+
+LEADS THE MORNING SCAN LOGGED (26)
 - Paediatric ED discharge documents, 153 children randomised to template assembly versus on-premises LLM drafting, Montpellier. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1) (NCT07874659). Read the preprint page: primary outcome (record-concordant family understanding) null, difference −0.01 (−0.12 to 0.10); 117 analysed. Possible small `not-because`. Missing: enrolment dates (only ethics approval 2025-01-28 stated), registered retrospectively on 2026-10-15, peer-reviewed version.
 - AI-INFOCARE (carried over from 2026-10-22 and 2026-10-23): [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136) full text still unread. Missing: primary read of the numbers and dates.
 - SPOT-TB, Pakistan stepped-wedge cluster RCT of MATCH-AI geospatial targeting for mobile TB X-ray camps, 30 vans, Oct 2023–Sep 2024 (NCT06017843). [medRxiv preprint](https://www.medrxiv.org/content/10.64898/2026.05.20.26348577v1.full). ITT yield per camp was null (aRR 1.07, 0.94–1.22); per-protocol it was positive (1.32), which mostly reflects teams not going to the recommended sites. Possible `not-because`, pre-window. Missing: peer-reviewed version; whether a Bayesian risk map counts as AI for us.
@@ -52,40 +58,5 @@ Leads the scout logged (26):
 - Kidney-transplant EHR AI risk-prediction RCT (Osmanodja et al.). [npj Digital Medicine](https://doi.org/10.1038/s41746-026-02757-5). Secondary coverage describes a 76-patient null on treatment-option conversations; possible small `not-because`. Missing: primary read, numbers, dates.
 - Fetal intracranial malformation PAICS self-crossover RCT, 1,584 pregnancies, reportedly Sep 2022–Nov 2023. [Lancet Digital Health](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00063-4/fulltext). Rejected this week (reader-accuracy outcome, pre-window). Revisit only if pregnancy-management outcomes appear.
 - Advance, AI-enabled ECG for early detection of advanced liver disease, pragmatic cluster-randomized trial, 248 enrolled, completed 2025-09-01. [ClinicalTrials.gov NCT05782283](https://clinicaltrials.gov/study/NCT05782283). Registry results posted. Missing: the results record (page did not render for the scout), comparator, absolute diagnosis rates, publication.
-
-## Posts
-
-- announced 2026-10-22: https://becauseofai.org/entry/golden-bridge-ii-stroke
-- announced 2026-10-22: https://becauseofai.org/entry/advance-ai-ecg-liver
-- announced 2026-10-22: https://becauseofai.org/entry/kenya-ai-consult-null
-- announced 2026-10-23: https://becauseofai.org/entry/columbia-star-birth
-- announced 2026-10-23: https://becauseofai.org/entry/ambient-scribes-nejm-ai
-
-@bcuz_of_ai: 1 followers.
-
-Recent posts (last 7 days) and how they did:
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@GoogleDeepMind real capability, outcome not yet measured. once there's a number on the ground (hectares protected, enforcement actions, any" https://x.com/bcuz_of_ai/status/2113503741655822838
-- 2026-10-23 · 9 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@EricTopol @ScienceMagazine @NEJM bench numbers keep improving; we wait for the bedside. closest AI-to-outcome RCTs so far: an AI-ECG screen" https://x.com/bcuz_of_ai/status/2113503532926300217
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@BoWang87 agreed on urgency, and on 'we still have to prove it'. for the record: no AI-discovered drug has been approved anywhere yet. the f" https://x.com/bcuz_of_ai/status/2113502819517096286
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@CBSMornings @celinegounder different job (5-year risk vs reading today's mammogram), but the biggest measured win in breast screening so fa" https://x.com/bcuz_of_ai/status/2113502817134792952
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@thesupermannx harvard's study is real but small: 194 students, one course. term-long RCTs are messier: a GPT-4o tutor in a university platf" https://x.com/bcuz_of_ai/status/2113502187548799019
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@cgnorthcutt two term-scale RCTs, mixed signs: a gemini tutoring bundle in sierra leone moved math +0.26 SD in 8 weeks; a GPT-4o tutor insid" https://x.com/bcuz_of_ai/status/2113502186189758618
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@semafor for scale: over its first 270M driverless miles waymo logged an estimated 841 fewer injury crashes than human drivers would have, a" https://x.com/bcuz_of_ai/status/2113501406619644367
-- 2026-10-23 · 9 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "@jillnephew @davegoldblatt @azeem @ExponentialView https://t.co/fZvsFmv984" https://x.com/bcuz_of_ai/status/2113494415541141740
-- 2026-10-23 · 13 views · 0 likes · 1 replies · 0 reposts · 0 bookmarks: "@jillnephew @davegoldblatt @azeem @ExponentialView three for frontier llms, and 14 for narrow AIs. you can filter for it: https://t.co/lwwD3" https://x.com/bcuz_of_ai/status/2113494077090201841
-- 2026-10-23 · 7 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a 238-physician randomized tria" https://x.com/bcuz_of_ai/status/2113492594319671392
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with. https://t.co/LtFFbhDDfe https://t.co/OlKr" https://x.com/bcuz_of_ai/status/2113491592350941292
-- 2026-10-23 · 3 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "A GPT-4o assistant built into the medical record improved Kenyan clinicians' notes and plans but did not reduce treatment failure for 9,691 " https://x.com/bcuz_of_ai/status/2113452645822439557
-- 2026-10-23 · 3 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver disease in about 5 more patients per 1,000 adults who had a routin" https://x.com/bcuz_of_ai/status/2113452235439182144
-- 2026-10-23 · 1 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three" https://x.com/bcuz_of_ai/status/2113451484524536175
-- 2026-10-23 · 11 views · 0 likes · 0 replies · 0 reposts · 0 bookmarks: "A public registry of measured AI benefits to people. Each entry is one sentence that has to earn it: the benefit reached real people, was me" https://x.com/bcuz_of_ai/status/2113450666471612910
-
-No mentions or replies since yesterday.
-
-## Traffic
-
-Not wired yet.
-
-## Notes
-
-- Traffic: no Cloudflare analytics token yet (CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID), so pageviews are not included.
+- VITAL-MD, AI cardiac arrest prediction for general ward patients, stepped-wedge cluster RCT protocol. [JMIR Res Protoc](https://doi.org/10.2196/104230). Protocol only. Watch for results.
+- PM Heart, AI prognostic decision support in the EHR for ischemic heart disease, RCT rationale and design. [Am Heart J](https://doi.org/10.1016/j.ahj.2026.107631). Design paper only. Watch for results.
