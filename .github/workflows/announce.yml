@@ -1,0 +1,101 @@
+name: announce new entries
+# Posts each entry a merge adds to X, Bluesky and Mastodon, once its page is
+# live. Each network is skipped until its secrets exist, so this is a no-op
+# until the accounts are set up (DAV-371). A dispatch with dry_run prints the
+# posts instead of sending them.
+on:
+  push:
+    branches: [main]
+    paths: ["data/entries/**"]
+  workflow_dispatch:
+    inputs:
+      entry:
+        description: "Entry id(s) to announce, comma-separated"
+        required: true
+      dry_run:
+        description: "Print the posts instead of sending them"
+        type: boolean
+        default: true
+concurrency:
+  group: announce-${{ github.sha }}-${{ github.event.inputs.entry }}
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      posts: ${{ steps.find.outputs.posts }}
+      count: ${{ steps.find.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - name: Find the entries this push added and wait for their pages
+        id: find
+        run: |
+          if [ -n "${{ github.event.inputs.entry }}" ]; then
+            node scripts/announce.ts --entry "${{ github.event.inputs.entry }}"
+          else
+            node scripts/announce.ts --before "${{ github.event.before }}" --after "${{ github.sha }}"
+          fi
+          echo "posts=$(jq -c . .announce/posts.json)" >> "$GITHUB_OUTPUT"
+          echo "count=$(jq length .announce/posts.json)" >> "$GITHUB_OUTPUT"
+  post:
+    needs: find
+    if: ${{ needs.find.outputs.count != '0' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        post: ${{ fromJSON(needs.find.outputs.posts) }}
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run == 'true' }}
+      X_APP_KEY: ${{ secrets.X_APP_KEY }}
+      BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+      MASTODON_URL: ${{ secrets.MASTODON_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - name: Fetch the share image for ${{ matrix.post.id }}
+        run: node scripts/announce.ts --entry "${{ matrix.post.id }}" --no-wait
+      - name: Show the post
+        run: |
+          echo "dry_run=$DRY_RUN  x=$([ -n "$X_APP_KEY" ] && echo keys || echo no-keys)  bluesky=$([ -n "$BLUESKY_IDENTIFIER" ] && echo keys || echo no-keys)  mastodon=$([ -n "$MASTODON_URL" ] && echo keys || echo no-keys)"
+          jq -r '.[0].text' .announce/posts.json
+          ls -l .announce/
+      - name: Post to X
+        if: ${{ env.DRY_RUN != 'true' && env.X_APP_KEY != '' }}
+        uses: nearform-actions/github-action-notify-twitter@v1.3.0
+        with:
+          message: ${{ matrix.post.text }}
+          twitter-app-key: ${{ secrets.X_APP_KEY }}
+          twitter-app-secret: ${{ secrets.X_APP_SECRET }}
+          twitter-access-token: ${{ secrets.X_ACCESS_TOKEN }}
+          twitter-access-token-secret: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          media: ${{ matrix.post.image }}
+          media-alt-text: ${{ matrix.post.alt }}
+      - name: Post to Bluesky
+        if: ${{ env.DRY_RUN != 'true' && env.BLUESKY_IDENTIFIER != '' }}
+        uses: myConsciousness/bluesky-post@v6
+        with:
+          text: ${{ matrix.post.text }}
+          link-preview-url: ${{ matrix.post.url }}
+          identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
+          password: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      - name: Post to Mastodon
+        if: ${{ env.DRY_RUN != 'true' && env.MASTODON_URL != '' }}
+        uses: cbrgm/mastodon-github-action@v2.2.5
+        with:
+          url: ${{ secrets.MASTODON_URL }}
+          access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          message: ${{ matrix.post.text }}
+          media-paths: ${{ matrix.post.image }}
+          media-descriptions: ${{ matrix.post.alt }}
