@@ -53,3 +53,21 @@ history:
       Updated sources: the ClinicalTrials.gov record (NCT07687459) is the primary
       and the Insilico release is retyped as secondary; the registry matches the
       summary's size, sites and endpoint.
+rationale: "No completed comparison exists yet: the registry's placebo-controlled arm (PLACEBO_COMPARATOR) has no results (hasResults: false), so nothing yet separates what the drug does from what placebo does, and nothing at all tests the AI's role in finding it."
+receipts:
+  - field: headline
+    quote: A Prospective Phase 3, Randomized, Double-blind, Placebo-controlled, Parallel-group Study Evaluating the Efficacy and Safety of Rentosertib (INS018_055)
+    locator: Registry field protocolSection.identificationModule.officialTitle
+    source: 0
+  - field: headline
+    quote: 2026-09-09
+    locator: "Registry field protocolSection.statusModule.startDateStruct.date (type: ACTUAL)"
+    source: 0
+  - field: impact
+    quote: 2026-09-09
+    locator: "Registry field protocolSection.statusModule.startDateStruct.date (type: ACTUAL)"
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23

@@ -2,11 +2,12 @@
 import Base from "../../layouts/Base.astro";
 import Stamps from "../../components/Stamps.astro";
 import LagBar from "../../components/LagBar.astro";
-import { publishable, byId, neighbours } from "../../lib/site.ts";
+import Receipt from "../../components/Receipt.astro";
+import { publishable, byId, neighbours, verifiedRecord } from "../../lib/site.ts";
 import { SITE } from "../../site.ts";
 import {
-  fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, impactParts, achievedState, lagFor, isUnreviewed,
-  SECTION_LABEL, SECTION_HREF, DOMAIN_LABEL, AI_TYPE_LABEL,
+  fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, impactParts, achievedState, lagFor,
+  SECTION_LABEL, SECTION_HREF, DOMAIN_LABEL, AI_TYPE_LABEL, VENDOR_LABEL, recordUrl,
 } from "../../lib/format.ts";
 
 export function getStaticPaths() {
@@ -24,7 +25,8 @@ const { prev, next } = neighbours(e);
 const primary = primarySources(e);
 const secondary = secondarySources(e);
 const updated = fmtDate(e.dates.updated);
-const unreviewed = isUnreviewed(e);
+const rec = verifiedRecord(e);
+const v = rec ? e.verification : undefined;
 const cite = `“${e.headline}” Because of AI, updated ${updated}. ${url}`;
 const bib = `@misc{becauseofai_${e.id.replace(/-/g, "_")},\n  title = {${e.headline.replace(/[{}]/g, "")}},\n  howpublished = {\\url{${url}}},\n  note = {Because of AI registry, updated ${updated}},\n  year = {${String(e.dates.updated).slice(0, 4)}}\n}`;
 const g = e.grades;
@@ -58,17 +60,18 @@ const facets: [string, string][] = [
   <article class:list={["entry", `s-${e.section}`]} data-pagefind-body>
     {facets.map(([k, v]) => <span hidden data-pagefind-filter={`${k}:${v}`} data-pagefind-meta={`${k}:${v}`}></span>)}
     <span hidden data-pagefind-meta={`impact:${e.impact}`}></span>
-    {unreviewed && <span hidden data-pagefind-meta="unreviewed:yes"></span>}
     <header class="entry-head">
       <nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <a href={sectionHref} data-back={sectionHref}>← Back to the list</a>
         <a href={sectionHref}>{SECTION_LABEL[e.section]}</a>
         <span class="muted">{DOMAIN_LABEL[e.domain]} · {AI_TYPE_LABEL[e.ai_type]}</span>
       </nav>
-      <p class:list={["entry-impact", { phrase: !imp.numeric }]} data-pagefind-ignore>
+      <div class:list={["entry-impact", { phrase: !imp.numeric }]} data-pagefind-ignore>
         <b>{imp.mod && <i class="mod">{imp.mod}</i>}<span class="num" data-countup={imp.numeric ? "" : undefined}>{imp.num}</span></b>{imp.rest && <span class="rest">{imp.rest}</span>}
-      </p>
+        <Receipt entry={e} fields={e.impact_number ? ["impact_number"] : ["impact"]} label="the number" />
+      </div>
       <h1 class="sentence">{e.headline}</h1>
+      <Receipt entry={e} fields={["headline"]} label="the sentence" />
       <div data-pagefind-ignore>
         <Stamps entry={e} scope="entry" />
         <LagBar entry={e} size="entry" />
@@ -113,6 +116,17 @@ const facets: [string, string][] = [
         <ul class="history" data-pagefind-ignore>
           {e.history.map((h, i) => ({ h, n: i + 1 })).reverse().map(({ h, n }) => <li id={`h-${n}`}><time datetime={isoDate(h.date)}>{fmtDate(h.date)}</time><span>{h.note}</span></li>)}
         </ul>
+        {v && (
+          <>
+            <h2 data-pagefind-ignore>Verification</h2>
+            <dl class="verif" data-pagefind-ignore>
+              <dt>Drafted by</dt><dd>{VENDOR_LABEL[v.drafter.vendor]} <code>{v.drafter.model}</code> <time datetime={v.drafter.date}>{fmtDate(v.drafter.date)}</time></dd>
+              <dt>Verified by</dt><dd>{VENDOR_LABEL[v.verifier.vendor]} <code>{v.verifier.model}</code> <time datetime={v.verifier.date}>{fmtDate(v.verifier.date)}</time> · {v.verifier.verdict}</dd>
+              <dt>Record</dt><dd><a href={recordUrl(v.record)} rel="noopener">data/verifications/{v.record}</a>{rec?.record.verifier?.output && typeof (rec.record.verifier.output as { summary?: string }).summary === "string" && <span class="muted"> · {(rec.record.verifier.output as { summary: string }).summary}</span>}</dd>
+            </dl>
+            <p class="verif-note" data-pagefind-ignore>Two models from different vendors read the primary source independently; this entry is published because they agreed on every receipt and every grade. The models grading an AI registry have an interest in the answer. Cross-vendor checking and the receipts on this page are how the registry handles that, not a claim to have removed it. <a href="/method#pipeline">How the gate works</a> · <a href={`${SITE.repo}/issues/new?template=dispute-entry.yml&title=${encodeURIComponent(`Dispute: ${e.id}`)}`}>Dispute this entry</a></p>
+          </>
+        )}
         <h2 data-pagefind-ignore>Cite this entry</h2>
         <div class="cite" data-pagefind-ignore>
           Permalink <a href={url}>{url}</a>
@@ -128,14 +142,14 @@ const facets: [string, string][] = [
       <aside class="entry-aside" data-pagefind-ignore>
         <dl class="facts">
           {e.caveat && <><dt>Caveat</dt><dd class="caveat-row">{e.caveat}</dd></>}
-          <dt>Achieved</dt><dd>{a.text}</dd>
+          <dt>Achieved</dt><dd>{a.text} <Receipt entry={e} fields={["dates.achieved_start", "dates.achieved_end"]} label="the achieved dates" /></dd>
           <dt>Published</dt><dd><time datetime={isoDate(e.dates.published)}>{fmtDate(e.dates.published)}</time>{lag && <span class="muted"> · {lag.sentence}</span>}</dd>
           {e.comparison && <><dt>Compared with</dt><dd>{e.comparison}</dd></>}
-          {effect && <><dt>Effect</dt><dd>{effect}</dd></>}
-          {e.reach && <><dt>Reach</dt><dd>{e.reach}</dd></>}
+          {effect && <><dt>Effect</dt><dd>{effect} <Receipt entry={e} fields={["effect.relative", "effect.absolute"]} label="the effect" /></dd></>}
+          {e.reach && <><dt>Reach</dt><dd>{e.reach} <Receipt entry={e} fields={["reach"]} label="the reach" /></dd></>}
           {e.conflicts && <><dt>Conflicts</dt><dd>{e.conflicts}</dd></>}
           {e.section !== "not-yet" && e.what_would_change && <><dt>What would move the grade</dt><dd>{e.what_would_change}</dd></>}
-          <dt>Updated</dt><dd><time datetime={isoDate(e.dates.updated)}>{updated}</time>{unreviewed && <> <span class="stamp stamp-xs stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span></>}</dd>
+          <dt>Updated</dt><dd><time datetime={isoDate(e.dates.updated)}>{updated}</time></dd>
         </dl>
       </aside>
     </div>

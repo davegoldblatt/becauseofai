@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "masai-ai-mammography",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "4b46d59ec7a9fe283b2779d42e870a56f05d7d158b34470c8562e9a5eda426de",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014067362502464X",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:36:52.416Z",
+      "reason": "HTTP 403"
+    }
+  ],
+  "quote_checks": [],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "no-full-text",
+    "detail": "No primary source could be read in full (source 0: HTTP 403)."
+  }
+}

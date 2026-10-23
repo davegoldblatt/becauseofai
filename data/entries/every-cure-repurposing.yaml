@@ -41,3 +41,18 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+rationale: "The entry has no comparison: the source reports funding and a count of active programs, not any patient outcome measured against a control, a prior period or a benchmark, so no AI attribution can be graded."
+receipts:
+  - field: impact
+    quote: announced that it has been selected to receive up to $76 million in funding from the Advanced Research Projects Agency for Health (ARPA-H)
+    locator: Press release, first paragraph
+    source: 0
+  - field: impact
+    quote: building on earlier work that has already yielded 10 active programs.
+    locator: Press release, subheadline
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login

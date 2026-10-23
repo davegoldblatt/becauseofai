@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nhs-derm-skin-cancer",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "070855ec14639b727de8b0856beebd9cdf0a16409d2f1414c8798b1d8c8f8b65",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nice.org.uk/guidance/htg746",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:36:53.592Z",
+      "final_url": "https://www.nice.org.uk/guidance/htg746",
+      "sha256": "141c7c4272a8e0a3109410eeb98aec9d85e388aa8443057a775512ba29aebea8",
+      "chars": 3525,
+      "truncated": false
+    },
+    {
+      "index": 2,
+      "url": "https://njl-admin.nihr.ac.uk/document/download/2049990",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-10-23T16:36:55.767Z",
+      "final_url": "https://njl-admin.nihr.ac.uk/document/download/2049990",
+      "sha256": "58caeaac5cab5d1c99aa3875d7572adad14fa603dfb65519c968c169315f0ea4",
+      "chars": 24503,
+      "truncated": false
+    },
+    {
+      "index": 3,
+      "url": "https://www.citedrive.com/en/discovery/ai04-implementing-ai-derm-technology-into-the-urgent-skin-cancer-pathway-at-an-nhs-district-hospital-is-it-worth-it/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:36:55.846Z",
+      "final_url": "https://www.citedrive.com/en/discovery/ai04-implementing-ai-derm-technology-into-the-urgent-skin-cancer-pathway-at-an-nhs-district-hospital-is-it-worth-it/",
+      "sha256": "abaa588aca3db82391e13eeeb71c407636f98c2b125e2f67cf99ad8664a1ad66",
+      "chars": 7240,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "effect.relative",
+      "source": 3,
+      "quote": "As of February 2025, 3830 patients were assessed with AI DERM and 1010 were discharged without the need for a face-to-face appointment (26%).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 3,
+      "quote": "In the move to becoming autonomous the discharge rate increased to 37%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact, impact_number, effect.absolute, reach, dates.achieved_start."
+  }
+}

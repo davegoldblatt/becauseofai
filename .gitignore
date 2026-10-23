@@ -14,3 +14,4 @@ node_modules/
 # daily scout working files
 .scout/
 .announce/
+node_modules

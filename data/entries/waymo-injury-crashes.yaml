@@ -57,3 +57,54 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: Waymo's rider-only crash rates are set against police-reported human-driver crash rates for the same areas, reweighted to match where Waymo drives and adjusted for underreporting; because the Waymo Driver takes the place of the human driver, the comparison isolates the AI's contribution.
+receipts:
+  - field: headline
+    quote: Regardless of fault, it was involved in 841 fewer injury-causing crashes — an 82% reduction compared to human drivers.
+    locator: Blog post body, third paragraph
+    source: 1
+  - field: headline
+    quote: Our latest analysis of the Waymo Driver’s safety performance now covers over 270 million miles of fully autonomous operations through the end of June 2026
+    locator: Blog post body, second paragraph
+    source: 1
+  - field: impact
+    quote: 82% Fewer injury-causing crashes (841 fewer)
+    locator: Overall crash reduction panel, Waymo Driver compared to human benchmarks
+    source: 0
+  - field: impact_number
+    quote: an 82% reduction compared to human drivers
+    locator: Blog post body, third paragraph
+    source: 1
+  - field: effect.relative
+    quote: 82% Fewer injury-causing crashes (841 fewer)
+    locator: Overall crash reduction panel
+    source: 0
+  - field: effect.relative
+    quote: 95% Fewer serious injury or worse crashes (55 fewer)
+    locator: Overall crash reduction panel
+    source: 0
+  - field: effect.absolute
+    quote: All Locations	0.67	3.77
+    locator: Any-Injury-Reported Crash Rates table, IPMM Waymo vs Benchmark
+    source: 0
+  - field: effect.absolute
+    quote: 82% Fewer injury-causing crashes (841 fewer)
+    locator: Overall crash reduction panel
+    source: 0
+  - field: reach
+    quote: "This safety data includes analysis of five of our major metropolitan service areas: Atlanta, Austin, Los Angeles, Phoenix, and San Francisco."
+    locator: Blog post body, second paragraph
+    source: 1
+  - field: reach
+    quote: Waymo now drives more than 4 million miles every week.
+    locator: Blog post body, sixth paragraph
+    source: 2
+  - field: dates.achieved_end
+    quote: Through June 2026, Waymo has driven 271.3M rider-only miles without a human driver
+    locator: Safety Impact hub body, Rider-only (RO) miles driven section
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login

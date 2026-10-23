@@ -54,3 +54,7 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23

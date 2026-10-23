@@ -55,3 +55,29 @@ history:
     note: "Weekly run: noted that the Duke crossover is scribe-vs-scribe; grades rest on the NEJM AI trial alone. No grade change."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: Physicians randomized to DAX or Nabla scribe access were compared with a contemporaneous usual-care control group (covariate-constrained 1:1:1 randomization), isolating the scribe's contribution.
+receipts:
+  - field: headline
+    quote: In total, 238 physicians representing 14 specialties were enrolled
+    locator: Results, Participants
+    source: 0
+  - field: impact_number
+    quote: Enrolled physicians (N=238) were randomly assigned 1:1:1 to either of two intervention groups
+    locator: Methods, Trial Design
+    source: 0
+  - field: reach
+    quote: it was conducted among 238 physicians at a single academic institution on English-only encounters
+    locator: Discussion, Strengths and Limitations
+    source: 0
+  - field: dates.achieved_start
+    quote: The trial was implemented from November 4, 2024, to January 3, 2025.
+    locator: Methods, Trial Design
+    source: 0
+  - field: dates.achieved_end
+    quote: The trial was implemented from November 4, 2024, to January 3, 2025.
+    locator: Methods, Trial Design
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23

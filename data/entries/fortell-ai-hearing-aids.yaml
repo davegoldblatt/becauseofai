@@ -66,3 +66,26 @@ history:
     note: "Weekly run: 30-person trial confirmed in IJA (Oct 2026); journal source added, caveat updated, grades unchanged."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: "The attribution grade rests on Fortell's Spatial AI being compared with another AI hearing aid: per the evidence-page FAQ, \"The study on speech intelligibility compared Fortell to the leading AI-powered hearing aid.\""
+receipts:
+  - field: impact
+    quote: 31% of words understood with Control
+    locator: Evidence page, 'Fortell makes conversations easier to follow', Challenging Noise (0 dB) panel
+    source: 2
+  - field: impact
+    quote: 80% Words understood with Fortell
+    locator: Evidence page, 'Fortell makes conversations easier to follow', Challenging Noise (0 dB) panel
+    source: 2
+  - field: impact_number
+    quote: 31% of words understood with Control
+    locator: Evidence page, 'Fortell makes conversations easier to follow', Challenging Noise (0 dB) panel
+    source: 2
+  - field: impact_number
+    quote: 80% Words understood with Fortell
+    locator: Evidence page, 'Fortell makes conversations easier to follow', Challenging Noise (0 dB) panel
+    source: 2
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
