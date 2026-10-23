@@ -1,6 +1,6 @@
 # Because of AI, daily digest for 2026-10-23
 
-Facts since 2026-10-22 18:34:19 UTC. Written by code; the email is written from this.
+Facts since 2026-10-22 18:38:19 UTC. Written by code; the email is written from this.
 
 ## Registry
 
@@ -36,33 +36,10 @@ Entries added or changed:
 - added: Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks. → published https://becauseofai.org/entry/sierra-leone-gemini-math
 
 Gate decisions:
-- advance-ai-ecg-liver: held (no-full-text): source 0 could not be read in full (only 230 characters of text: a landing page or an abstract, not the full document); no receipt for headline, impact_number, effect.relative.
-- ambient-scribes-nejm-ai: held (grade-split): evidence: drafter A, verifier could not grade.
-- china-ai-cal-null: held (fails-test): The source shows a conflict of interest the entry does not state: The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose.
-- columbia-star-birth: held (no-full-text): No primary source could be read in full (source 0: only 11 characters of text: a landing page or an abstract, not the full document).
-- ethiopia-tb-ai-cxr: held (ungrounded): No receipt for effect.relative, dates.achieved_start, dates.achieved_end.
-- every-cure-repurposing: held (ungrounded): No receipt for headline.
-- fido-northumbrian-leaks: held (ungrounded): No receipt for reach, dates.achieved_start, dates.achieved_end.
-- firesat-constellation: held (no-primary-source): The primary source is a press release; press releases and news articles are leads, not evidence.
 - flood-hub-flash-floods: published: The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes.
-- fortell-ai-hearing-aids: held (no-full-text): source 0 could not be read in full (HTTP 403); source 1 could not be read in full (HTTP 403); no receipt for headline, effect.relative, effect.absolute, reach, dates.achieved_start.
 - gb-0895-phase-3: published: The records support recruiting Phase 3 trials and the stated SOLAIRIA-1 plans, but provide no results, AI provenance, or evidence about approvals of AI-designed antibodies. SOLAIRIA-1 was first posted on 2025-12-11; the entry's published date of 2025-12-03 is its actual study start date.
 - golden-bridge-ii-stroke: published: The preregistered cluster randomized trial supports approximately 26% fewer three-month vascular events and 10 fewer events per 1,000 patients with the AI-containing package. It does not isolate AI's contribution, and the reported benefits predate the current window.
-- hurricane-melissa-2025: held (ungrounded): No receipt for effect.relative, reach.
-- india-tribal-tb-ai-cxr: held (grade-split): attribution: drafter only-path, verifier bundled.
-- kenya-ai-consult-null: held (grade-split): evidence: drafter A, verifier could not grade.
-- maryland-ai-tutor-negative: held (ungrounded): No receipt for dates.achieved_start, dates.achieved_end.
-- masai-ai-mammography: held (no-full-text): No primary source could be read in full (source 0: HTTP 403).
-- nhs-derm-skin-cancer: held (ungrounded): No receipt for impact, impact_number, effect.absolute, reach, dates.achieved_start.
-- nhs-stroke-ai-imaging: held (no-full-text): No primary source could be read in full (source 0: HTTP 403).
-- oman-ai-retinopathy: held (no-primary-source): No source is typed primary.
-- rentosertib-phase-3: held (ungrounded): impact (receipt 3): unsupported, The actual study start date does not establish the claimed zero approvals..
 - sierra-leone-gemini-math: published: The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling.
-- tricorder-ai-stethoscope-null: held (no-full-text): No primary source could be read in full (source 0: HTTP 403).
-- ucd-als-speech-bci: held (no-full-text): No primary source could be read in full (source 0: only 230 characters of text: a landing page or an abstract, not the full document).
-- ucla-chart-summarizer-rct: held (ungrounded): No receipt for impact_number, dates.achieved_end.
-- uva-comet-deterioration-null: held (no-full-text): No primary source could be read in full (source 0: only 230 characters of text: a landing page or an abstract, not the full document).
-- waymo-injury-crashes: held (ungrounded): No receipt for dates.achieved_start.
 
 Leads the scout logged (26):
 - Paediatric ED discharge documents, 153 children randomised to template assembly versus on-premises LLM drafting, Montpellier. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1) (NCT07874659). Read the preprint page: primary outcome (record-concordant family understanding) null, difference −0.01 (−0.12 to 0.10); 117 analysed. Possible small `not-because`. Missing: enrolment dates (only ethics approval 2025-01-28 stated), registered retrospectively on 2026-10-15, peer-reviewed version.

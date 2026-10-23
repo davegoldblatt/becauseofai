@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T18:34:19.338Z",
-  "since": "2026-10-22T18:34:19Z",
+  "generated_at": "2026-10-23T18:38:19.376Z",
+  "since": "2026-10-22T18:38:19Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
@@ -213,84 +213,12 @@
   },
   "verifications": [
     {
-      "id": "advance-ai-ecg-liver",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "source 0 could not be read in full (only 230 characters of text: a landing page or an abstract, not the full document); no receipt for headline, impact_number, effect.relative.",
-      "record": "advance-ai-ecg-liver/2026-10-23.json"
-    },
-    {
-      "id": "ambient-scribes-nejm-ai",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "ambient-scribes-nejm-ai/2026-10-23.json"
-    },
-    {
-      "id": "china-ai-cal-null",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "fails-test",
-      "detail": "The source shows a conflict of interest the entry does not state: The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose.",
-      "record": "china-ai-cal-null/2026-10-23.json"
-    },
-    {
-      "id": "columbia-star-birth",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: only 11 characters of text: a landing page or an abstract, not the full document).",
-      "record": "columbia-star-birth/2026-10-23.json"
-    },
-    {
-      "id": "ethiopia-tb-ai-cxr",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for effect.relative, dates.achieved_start, dates.achieved_end.",
-      "record": "ethiopia-tb-ai-cxr/2026-10-23.json"
-    },
-    {
-      "id": "every-cure-repurposing",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for headline.",
-      "record": "every-cure-repurposing/2026-10-23.json"
-    },
-    {
-      "id": "fido-northumbrian-leaks",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for reach, dates.achieved_start, dates.achieved_end.",
-      "record": "fido-northumbrian-leaks/2026-10-23.json"
-    },
-    {
-      "id": "firesat-constellation",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-primary-source",
-      "detail": "The primary source is a press release; press releases and news articles are leads, not evidence.",
-      "record": "firesat-constellation/2026-10-23.json"
-    },
-    {
       "id": "flood-hub-flash-floods",
       "date": "2026-10-23",
       "result": "published",
       "reason": null,
       "detail": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes.",
       "record": "flood-hub-flash-floods/2026-10-23.json"
-    },
-    {
-      "id": "fortell-ai-hearing-aids",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "source 0 could not be read in full (HTTP 403); source 1 could not be read in full (HTTP 403); no receipt for headline, effect.relative, effect.absolute, reach, dates.achieved_start.",
-      "record": "fortell-ai-hearing-aids/2026-10-23.json"
     },
     {
       "id": "gb-0895-phase-3",
@@ -309,124 +237,12 @@
       "record": "golden-bridge-ii-stroke/2026-10-23.json"
     },
     {
-      "id": "hurricane-melissa-2025",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for effect.relative, reach.",
-      "record": "hurricane-melissa-2025/2026-10-23.json"
-    },
-    {
-      "id": "india-tribal-tb-ai-cxr",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter only-path, verifier bundled.",
-      "record": "india-tribal-tb-ai-cxr/2026-10-23.json"
-    },
-    {
-      "id": "kenya-ai-consult-null",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "kenya-ai-consult-null/2026-10-23.json"
-    },
-    {
-      "id": "maryland-ai-tutor-negative",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for dates.achieved_start, dates.achieved_end.",
-      "record": "maryland-ai-tutor-negative/2026-10-23.json"
-    },
-    {
-      "id": "masai-ai-mammography",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: HTTP 403).",
-      "record": "masai-ai-mammography/2026-10-23.json"
-    },
-    {
-      "id": "nhs-derm-skin-cancer",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for impact, impact_number, effect.absolute, reach, dates.achieved_start.",
-      "record": "nhs-derm-skin-cancer/2026-10-23.json"
-    },
-    {
-      "id": "nhs-stroke-ai-imaging",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: HTTP 403).",
-      "record": "nhs-stroke-ai-imaging/2026-10-23.json"
-    },
-    {
-      "id": "oman-ai-retinopathy",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-primary-source",
-      "detail": "No source is typed primary.",
-      "record": "oman-ai-retinopathy/2026-10-23.json"
-    },
-    {
-      "id": "rentosertib-phase-3",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "impact (receipt 3): unsupported, The actual study start date does not establish the claimed zero approvals..",
-      "record": "rentosertib-phase-3/2026-10-23.json"
-    },
-    {
       "id": "sierra-leone-gemini-math",
       "date": "2026-10-23",
       "result": "published",
       "reason": null,
       "detail": "The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling.",
       "record": "sierra-leone-gemini-math/2026-10-23.json"
-    },
-    {
-      "id": "tricorder-ai-stethoscope-null",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: HTTP 403).",
-      "record": "tricorder-ai-stethoscope-null/2026-10-23.json"
-    },
-    {
-      "id": "ucd-als-speech-bci",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: only 230 characters of text: a landing page or an abstract, not the full document).",
-      "record": "ucd-als-speech-bci/2026-10-23.json"
-    },
-    {
-      "id": "ucla-chart-summarizer-rct",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for impact_number, dates.achieved_end.",
-      "record": "ucla-chart-summarizer-rct/2026-10-23.json"
-    },
-    {
-      "id": "uva-comet-deterioration-null",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "no-full-text",
-      "detail": "No primary source could be read in full (source 0: only 230 characters of text: a landing page or an abstract, not the full document).",
-      "record": "uva-comet-deterioration-null/2026-10-23.json"
-    },
-    {
-      "id": "waymo-injury-crashes",
-      "date": "2026-10-23",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for dates.achieved_start.",
-      "record": "waymo-injury-crashes/2026-10-23.json"
     }
   ],
   "announced": [
