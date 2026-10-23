@@ -69,6 +69,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={`@${SITE.x}`} />
     <link rel="preload" href="/fonts/ArchivoCond-900.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/Bricolage-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/JetBrainsMono-500.woff2" as="font" type="font/woff2" crossorigin />
@@ -137,6 +138,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
           <a href="/feed.xml">RSS</a>
           <a href="/changes.xml">Changes RSS</a>
           <a href="/api/entries.json">JSON</a>
+          <a href={`https://x.com/${SITE.x}`} rel="me">X</a>
         </nav>
         <p class="foot-meta">{SITE.name}. Independent, unfunded. Data as of {SITE.asOf}.</p>
       </div>

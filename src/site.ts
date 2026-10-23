@@ -18,6 +18,9 @@ export const SITE = {
   // its URL for days; bump this when the card design changes so new posts
   // fetch the new image instead of the cached one.
   ogVersion: "3",
+  // The site's X account (DAV-371 posts new entries there). Handle without the
+  // "@"; the footer link and the twitter:site card tag are both built from it.
+  x: "bcuz_of_ai",
 };
 
 // Nameplate per section. `em` is the measured advance width of the caps string
