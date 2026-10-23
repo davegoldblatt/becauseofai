@@ -58,17 +58,18 @@ async function main() {
   const counts = { because: 0, "not-because": 0, "not-yet": 0 } as Record<string, number>;
   for (const e of loaded.publishable) counts[e.section]++;
 
-  // Verification records dated in the last day.
+  // Gate decisions of the last day: only the records an entry currently stands
+  // on (its verification or its hold). Older records of the same entry are
+  // history, not today's decision.
   const verifications: Digest["verifications"] = [];
-  const recDir = "data/verifications";
-  if (fs.existsSync(recDir)) {
-    for (const id of fs.readdirSync(recDir)) {
-      for (const f of fs.readdirSync(path.join(recDir, id)).filter((x) => x.endsWith(".json"))) {
-        const r = JSON.parse(fs.readFileSync(path.join(recDir, id, f), "utf8"));
-        if (r.date < day(sinceIso)) continue;
-        verifications.push({ id, date: r.date, result: r.adjudication.result, reason: r.adjudication.reason, detail: String(r.adjudication.detail).slice(0, 300), record: `${id}/${f}` });
-      }
-    }
+  for (const e of loaded.all) {
+    const rel = e.held?.record ?? e.verification?.record;
+    if (!rel) continue;
+    const p = path.join("data/verifications", rel);
+    if (!fs.existsSync(p)) continue;
+    const r = JSON.parse(fs.readFileSync(p, "utf8"));
+    if (r.date < day(sinceIso)) continue;
+    verifications.push({ id: e.id, date: r.date, result: published.has(e.id) ? "published" : "held", reason: published.has(e.id) ? null : (heldInfo(e)?.reason ?? null), detail: String(r.adjudication.detail).slice(0, 300), record: rel });
   }
 
   // Announcer ledger: posted in the last two days.
