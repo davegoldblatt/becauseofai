@@ -4,7 +4,7 @@
   "entry": "flood-hub-flash-floods",
   "date": "2026-10-23",
   "as_of": "2026-10-22",
-  "entry_sha256": "b17158f94524744f4c3e64b7b72fa3d0f0fd7c625a087f22b96d92c9ea4fc01c",
+  "entry_sha256": "e91d8fb1372ab98f60709dd11e5e2855a90aef27f41ea1cbe945952dcd07d0a4",
   "drafter": {
     "vendor": "anthropic",
     "model": "claude-opus-5-5",
@@ -16,7 +16,7 @@
       "url": "https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/",
       "ok": true,
       "method": "html",
-      "fetched_at": "2026-10-23T16:34:56.569Z",
+      "fetched_at": "2026-10-23T16:59:29.424Z",
       "final_url": "https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/",
       "sha256": "3fd89c9b4f5c028a08039e811ba1c17ff1baaabd7f83da538a124a7b1ab8f4d7",
       "chars": 11050,
@@ -27,7 +27,7 @@
       "url": "https://eartharxiv.org/repository/object/12082/download/21671/",
       "ok": true,
       "method": "pdf",
-      "fetched_at": "2026-10-23T16:34:56.862Z",
+      "fetched_at": "2026-10-23T16:59:29.663Z",
       "final_url": "https://eartharxiv.org/repository/object/12082/download/21671/",
       "sha256": "f518e5fabba2dfe440240162329a91525c73bc9f0cb27a4495aab8ac0053b6e5",
       "chars": 33293,
@@ -77,7 +77,7 @@
         "attribution": null,
         "window": null
       },
-      "attribution_rationale": "The model is benchmarked against NWS warnings, but attribution is ungraded for this not-yet entry.",
+      "attribution_rationale": "The not-yet entry is ungraded; the study compares forecast performance with NWS warnings, without measuring benefits to people.",
       "achieved_dates": {
         "from": "not-applicable",
         "note": "The entry has no achieved dates."
@@ -85,28 +85,28 @@
       "conflict": {
         "in_source": true,
         "stated_in_entry": true,
-        "note": "Google researchers developed and evaluated Google's system, which the entry discloses."
+        "note": "Google researchers developed and evaluated Google's system; the entry discloses Google's authorship of the evaluation."
       },
       "tests": {
         "reached_people": true,
         "measured_against": true,
         "ai_counterfactual": true,
         "dated": true,
-        "note": "Tests are not applied to not-yet entries; all are true by convention."
+        "note": "All tests are true by convention for a not-yet entry; they were not applied."
       },
-      "summary": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecasting benchmarks. They do not establish measured benefits to people or actions taken in response to alerts."
+      "summary": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes."
     },
     "error": null,
     "tokens": {
       "input": 0,
       "output": 0,
-      "total": 25840
+      "total": 25799
     },
-    "duration_ms": 18311
+    "duration_ms": 13065
   },
   "adjudication": {
     "result": "published",
     "reason": null,
-    "detail": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecasting benchmarks. They do not establish measured benefits to people or actions taken in response to alerts."
+    "detail": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes."
   }
 }

@@ -4,7 +4,7 @@
   "entry": "golden-bridge-ii-stroke",
   "date": "2026-10-23",
   "as_of": "2026-10-22",
-  "entry_sha256": "9c21872888a0c87a6b3699138bd720eaae1aede9558f52be9b9971f0afdd02ec",
+  "entry_sha256": "797938340fc7fe4b1e6c2a2bfe75c4bcb0a0dbf9fd1f373711ff53a0a45c25e6",
   "drafter": {
     "vendor": "anthropic",
     "model": "claude-opus-5-5",
@@ -16,7 +16,7 @@
       "url": "https://doi.org/10.1136/bmj-2025-085810",
       "ok": true,
       "method": "europepmc",
-      "fetched_at": "2026-10-23T16:35:39.482Z",
+      "fetched_at": "2026-10-23T16:58:34.145Z",
       "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13003563/fullTextXML",
       "sha256": "f94a55f7096cd6ee84d24113f8315e863f3937b599bc7692c9e237f9612da43f",
       "chars": 61025,
@@ -27,7 +27,7 @@
       "url": "https://clinicaltrials.gov/study/NCT04524624",
       "ok": true,
       "method": "clinicaltrials",
-      "fetched_at": "2026-10-23T16:35:39.676Z",
+      "fetched_at": "2026-10-23T16:58:34.308Z",
       "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT04524624?format=json",
       "sha256": "956f35540f1842d6142652c2adc380d3bfb3d43a4448a994c117ba9f4deed9f8",
       "chars": 14704,
@@ -168,15 +168,15 @@
         "attribution": "bundled",
         "window": "pre"
       },
-      "attribution_rationale": "Hospitals received AI imaging plus classification, guideline recommendations, reminders and training versus usual care, so the comparison tests the combined package.",
+      "attribution_rationale": "Hospitals received AI imaging analysis together with classification, guideline recommendations, reminders, and training versus usual care, so the comparison tests the package.",
       "achieved_dates": {
         "from": "methods",
-        "note": "Methods gives enrollment from 13 January 2021 to 25 June 2023, supporting the stated months; these are enrollment dates, with outcomes measured through 12 months afterward."
+        "note": "Methods gives enrollment from 13 January 2021 to 25 June 2023; these support the stated months, but outcome follow-up extended beyond enrollment."
       },
       "conflict": {
         "in_source": true,
         "stated_in_entry": true,
-        "note": "The paper discloses Beijing Ande Yizhi Technology Co. funding, which the entry states."
+        "note": "The paper discloses Beijing Ande Yizhi Technology Co. funding, which the entry acknowledges; it also lists additional author consulting relationships."
       },
       "tests": {
         "reached_people": true,
@@ -185,19 +185,19 @@
         "dated": true,
         "note": ""
       },
-      "summary": "The preregistered cluster randomized trial supports a rounded 26% relative reduction and 10 fewer vascular events per 1,000 patients at three months. It establishes benefit for the combined CDSS package before the window, without isolating AI's contribution."
+      "summary": "The preregistered cluster randomized trial supports approximately 26% fewer three-month vascular events and 10 fewer events per 1,000 patients with the AI-containing package. It does not isolate AI's contribution, and the reported benefits predate the current window."
     },
     "error": null,
     "tokens": {
       "input": 0,
       "output": 0,
-      "total": 40118
+      "total": 36684
     },
-    "duration_ms": 21189
+    "duration_ms": 19639
   },
   "adjudication": {
     "result": "published",
     "reason": null,
-    "detail": "The preregistered cluster randomized trial supports a rounded 26% relative reduction and 10 fewer vascular events per 1,000 patients at three months. It establishes benefit for the combined CDSS package before the window, without isolating AI's contribution."
+    "detail": "The preregistered cluster randomized trial supports approximately 26% fewer three-month vascular events and 10 fewer events per 1,000 patients with the AI-containing package. It does not isolate AI's contribution, and the reported benefits predate the current window."
   }
 }

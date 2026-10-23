@@ -4,7 +4,7 @@
   "entry": "sierra-leone-gemini-math",
   "date": "2026-10-23",
   "as_of": "2026-10-22",
-  "entry_sha256": "adb6e19b4409e604a31777611d68211e615d94b687ea9c0c7591350cf426e5e6",
+  "entry_sha256": "7216d09d9edd54141426145b60add5bdb255c3521664b7275ea8f94a5762d081",
   "drafter": {
     "vendor": "anthropic",
     "model": "claude-opus-5-5",
@@ -16,7 +16,7 @@
       "url": "https://storage.googleapis.com/deepmind-media/LearnLM/learnLM_sierraleone_may26.pdf",
       "ok": true,
       "method": "pdf",
-      "fetched_at": "2026-10-23T16:37:16.436Z",
+      "fetched_at": "2026-10-23T16:58:55.078Z",
       "final_url": "https://storage.googleapis.com/deepmind-media/LearnLM/learnLM_sierraleone_may26.pdf",
       "sha256": "1ac36e5fa2eae282fb72f1e59c787c44d98e0aade4b1208ad39ba0f5fa73cd9c",
       "chars": 133095,
@@ -27,7 +27,7 @@
       "url": "https://www.socialscienceregistry.org/trials/16651",
       "ok": true,
       "method": "html",
-      "fetched_at": "2026-10-23T16:37:16.686Z",
+      "fetched_at": "2026-10-23T16:58:55.364Z",
       "final_url": "https://www.socialscienceregistry.org/trials/16651",
       "sha256": "861b4d95dda157c325795df576f8ecd10b06611aa4b4090851ba91e8ed1b6c3d",
       "chars": 8793,
@@ -181,15 +181,15 @@
         "attribution": "bundled",
         "window": "in"
       },
-      "attribution_rationale": "The randomized comparison tested Gemini with devices, structured pair work and teacher-led activities against standard mathematics instruction.",
+      "attribution_rationale": "Classrooms using Gemini with devices, structured pair work, and teacher-led activities were compared with standard instruction, isolating the package rather than AI alone.",
       "achieved_dates": {
         "from": "methods",
-        "note": "Design and Appendix B give 6 October–5 December 2025, supporting the entry's month precision; registry end dates differ within December."
+        "note": "Design and Appendix B give 6 October–5 December 2025, supporting both entry months; registry dates differ at day precision but agree on those months."
       },
       "conflict": {
         "in_source": true,
         "stated_in_entry": true,
-        "note": "Google coauthored and supported research evaluating its own Gemini product, which the entry discloses."
+        "note": "Google coauthored and supported research on its own product; the entry discloses Google's authorship and product ownership."
       },
       "tests": {
         "reached_people": true,
@@ -198,19 +198,19 @@
         "dated": true,
         "note": ""
       },
-      "summary": "The research report and registry support a preregistered cluster RCT reporting a +0.258 SD mathematics effect from an eight-week instructional package delivered during October–December 2025. They do not isolate Gemini's contribution; 1,763 is total study enrollment, including controls."
+      "summary": "The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling."
     },
     "error": null,
     "tokens": {
       "input": 0,
       "output": 0,
-      "total": 46853
+      "total": 30386
     },
-    "duration_ms": 28582
+    "duration_ms": 33490
   },
   "adjudication": {
     "result": "published",
     "reason": null,
-    "detail": "The research report and registry support a preregistered cluster RCT reporting a +0.258 SD mathematics effect from an eight-week instructional package delivered during October–December 2025. They do not isolate Gemini's contribution; 1,763 is total study enrollment, including controls."
+    "detail": "The complete research technical report supports a +0.258 SD mathematics effect for the classroom package, with eight instructional weeks delivered during October–December 2025. It does not establish AI's separate contribution or sustained gains equivalent to actual additional years of schooling."
   }
 }
