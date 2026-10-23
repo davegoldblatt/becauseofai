@@ -7,6 +7,7 @@
 //   node scripts/verify.ts --entry <id>[,<id>]
 //   node scripts/verify.ts --all
 //   options: --drafter vendor:model (who drafted; default research/vendors.json)
+//            --verifier vendor:model[:effort] (default research/vendors.json; for measuring)
 //            --date YYYY-MM-DD  --dry-run  --max N (0 = no cap)  --force (re-verify unchanged entries)
 //
 // Exit 0 when the gate ran, whatever it decided; 1 on an error of the pipeline itself.
@@ -20,7 +21,12 @@ const flag = (name: string) => argv.includes(name);
 
 const cfg = loadVendorConfig();
 const drafter = parseRole(opt("--drafter") ?? undefined, cfg.drafter);
-const verifier = cfg.verifier;
+const verifier = (() => {
+  const v = opt("--verifier");
+  if (!v) return cfg.verifier;
+  const [vendor, model, effort] = v.split(":");
+  return { ...parseRole(`${vendor}:${model}`, cfg.verifier), effort: (effort as typeof cfg.verifier.effort) ?? cfg.verifier.effort };
+})();
 if (drafter.vendor === verifier.vendor) { console.error(`refusing to run: drafter and verifier are both ${drafter.vendor}`); process.exit(1); }
 const date = opt("--date") ?? todayUtc();
 const dryRun = flag("--dry-run");

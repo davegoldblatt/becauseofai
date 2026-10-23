@@ -141,4 +141,5 @@ export function writeOwned(d: DraftEntry, owned: Owned): void {
 }
 
 export const asOf = SITE.asOf;
-export const fmtTokens = (t: { total: number } | null | undefined) => (t ? `${t.total.toLocaleString("en-US")} tokens` : "tokens n/a");
+export const fmtTokens = (t: { input?: number; output?: number; total: number; cached?: number; reasoning?: number } | null | undefined) =>
+  t ? `${t.total.toLocaleString("en-US")} tokens${t.input ? ` (in ${t.input.toLocaleString("en-US")}${t.cached ? `, cached ${t.cached.toLocaleString("en-US")}` : ""}, out ${(t.output ?? 0).toLocaleString("en-US")}${t.reasoning ? `, reasoning ${t.reasoning.toLocaleString("en-US")}` : ""})` : ""}` : "tokens n/a";

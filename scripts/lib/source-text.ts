@@ -59,6 +59,8 @@ export function decodeEntities(s: string): string {
 export function htmlToText(html: string): string {
   let s = html;
   s = s.replace(/<!--[\s\S]*?-->/g, " ");
+  // JATS (Europe PMC): the reference list and the back matter carry no result.
+  s = s.replace(/<ref-list\b[^>]*>[\s\S]*?<\/ref-list>/gi, " ");
   s = s.replace(/<(script|style|noscript|svg|template|iframe|canvas|math)\b[^>]*>[\s\S]*?<\/\1>/gi, " ");
   s = s.replace(/<(nav|header|footer)\b[^>]*>[\s\S]*?<\/\1>/gi, " ");
   s = s.replace(/<(br|hr)\b[^>]*\/?>/gi, "\n");
@@ -78,7 +80,18 @@ function titleOf(html: string): string {
 
 const PAYWALL = /(access through your institution|buy this article|purchase (pdf|access)|subscribe to (the )?journal|sign in to read|institutional login|get full access|rent or buy|login to view full|full text access)/i;
 
+// A reference list at the end of a paper (a "References" or "Bibliography"
+// heading in the last half of the text) is dropped: nothing the registry
+// cites is in it, and it is often a third of the tokens.
+export function dropReferences(text: string): string {
+  const re = /\n[ \t]*(?:\d+\.?\s*)?(references|reference list|bibliography|works cited|literature cited)[ \t]*:?[ \t]*\n/gi;
+  let cut = -1;
+  for (const m of text.matchAll(re)) if (m.index! > text.length * 0.5) { cut = m.index!; break; }
+  return cut < 0 ? text : text.slice(0, cut).trimEnd() + "\n\n[reference list omitted]\n";
+}
+
 function finish(url: string, finalUrl: string, method: string, text: string, opts: { minChars: number; maxChars: number; html?: string }): SourceText {
+  text = dropReferences(text);
   const title = opts.html ? titleOf(opts.html) : "";
   if (/just a moment|attention required|access denied|are you a robot/i.test(title)) return { ok: false, url, method, reason: `blocked by the site (${title})` };
   if (text.length < opts.minChars) return { ok: false, url, method, reason: `only ${text.length} characters of text: a landing page or an abstract, not the full document` };

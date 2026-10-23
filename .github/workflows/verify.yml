@@ -26,6 +26,14 @@ on:
         description: "Print decisions, write nothing"
         type: boolean
         default: false
+      force:
+        description: "Re-verify entries that already pass"
+        type: boolean
+        default: false
+      verifier:
+        description: "vendor:model[:effort] to use instead of research/vendors.json (for measuring)"
+        required: false
+        default: ""
   issues:
     types: [labeled]
 concurrency:
@@ -67,10 +75,12 @@ jobs:
         env:
           ENTRIES: ${{ github.event.inputs.entries }}
           MAX: ${{ github.event.inputs.max }}
+          VERIFIER: ${{ github.event.inputs.verifier }}
         run: |
           set -euo pipefail
           [[ "$ENTRIES" =~ ^(all|changed|[a-z0-9-]+(,[a-z0-9-]+)*)$ ]] || { echo "entries must be all, changed, or comma-separated ids"; exit 1; }
           [[ "$MAX" =~ ^[0-9]{1,3}$ ]] || { echo "max must be a number"; exit 1; }
+          [[ -z "$VERIFIER" || "$VERIFIER" =~ ^(openai|anthropic):[A-Za-z0-9._-]+(:(low|medium|high|xhigh))?$ ]] || { echo "verifier must be vendor:model[:effort]"; exit 1; }
       - name: Receipts
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'receipts' }}
         env:
@@ -88,9 +98,11 @@ jobs:
           ENTRIES: ${{ github.event.inputs.entries }}
           MAX: ${{ github.event.inputs.max }}
           DRY: ${{ github.event.inputs.dry_run }}
+          FORCE: ${{ github.event.inputs.force }}
+          VERIFIER: ${{ github.event.inputs.verifier }}
         run: |
           set -euo pipefail
-          args=(--max "$MAX"); [ "$DRY" = "true" ] && args+=(--dry-run)
+          args=(--max "$MAX"); [ "$DRY" = "true" ] && args+=(--dry-run); [ "$FORCE" = "true" ] && args+=(--force); [ -n "$VERIFIER" ] && args+=(--verifier "$VERIFIER")
           case "$ENTRIES" in all) args+=(--all) ;; changed) args+=(--changed --base origin/main) ;; *) args+=(--entry "$ENTRIES") ;; esac
           node scripts/verify.ts "${args[@]}"
       - name: Dispute

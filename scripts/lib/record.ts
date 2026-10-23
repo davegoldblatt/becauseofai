@@ -3,7 +3,7 @@
 // a reader can see what graded what and where the two vendors disagreed.
 import type { HeldReason, Vendor } from "../../src/schema.ts";
 
-export type Tokens = { input: number; output: number; total: number };
+export type Tokens = { input: number; output: number; total: number; cached?: number; reasoning?: number };
 
 export type SourceFetch = {
   index: number;            // index into the entry's sources[]

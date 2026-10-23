@@ -152,7 +152,7 @@ async function openaiApi<T>(req: Request<T>): Promise<Raw> {
   const text = msg?.content?.find((c: any) => c.type === "output_text")?.text;
   if (typeof text !== "string") throw new Error(`OpenAI API returned no output_text (status ${body.status}, ${body.incomplete_details?.reason ?? "no detail"})`);
   const u = body.usage ?? {};
-  return { output: JSON.parse(text), model: body.model, tokens: u.input_tokens != null ? { input: u.input_tokens, output: u.output_tokens ?? 0, total: u.total_tokens ?? u.input_tokens + (u.output_tokens ?? 0) } : null };
+  return { output: JSON.parse(text), model: body.model, tokens: u.input_tokens != null ? { input: u.input_tokens, output: u.output_tokens ?? 0, total: u.total_tokens ?? u.input_tokens + (u.output_tokens ?? 0), cached: u.input_tokens_details?.cached_tokens ?? 0, reasoning: u.output_tokens_details?.reasoning_tokens ?? 0 } : null };
 }
 
 async function codexCli<T>(req: Request<T>): Promise<Raw> {
