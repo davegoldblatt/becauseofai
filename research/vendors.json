@@ -1,6 +1,13 @@
 {
-  "comment": "Vendor roles for the pipeline (DAV-376). The drafter and the verifier must be different vendors; scripts/verify.ts refuses to run otherwise. Models are recorded verbatim on every entry and record. max_entries_per_run caps the model calls one run may make (0 = no cap).",
-  "drafter": { "vendor": "anthropic", "model": "claude-opus-5-5" },
-  "verifier": { "vendor": "openai", "model": "gpt-6-astra", "effort": "high" },
+  "comment": "Vendor roles for the pipeline (DAV-376). The drafter and the verifier must be different vendors; scripts/verify.ts refuses to run otherwise. Models are recorded verbatim on every entry and record. max_entries_per_run caps the model calls one run may make (0 = no cap). Verifier measured 2026-10-23 on two entries: gpt-6.1-sol at medium reached the same verdicts as gpt-6-astra at high for about a sixth of the price; the luna models missed an unstated conflict and would have published an entry astra held.",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5"
+  },
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
   "max_entries_per_run": 10
 }
