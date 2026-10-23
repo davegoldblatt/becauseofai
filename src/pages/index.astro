@@ -8,9 +8,31 @@ import { isUnreviewed } from "../lib/format.ts";
 // The hero is the site's poster. An entry no person has read yet stays in the
 // ledger with its UNREVIEWED stamp and out of the hero.
 const reviewed = because.filter((e) => !isUnreviewed(e));
+const org = { "@type": "Organization", name: SITE.name, url: SITE.url };
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "WebSite", name: SITE.name, url: SITE.url, description: SITE.description, publisher: org },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: `${SITE.name}: a registry of measured AI benefits to people`,
+    description: `${SITE.description} Every entry passes four tests (the benefit reached people, it was measured against something, the AI did something that would not otherwise have happened, and the date it happened is known) and carries three grades: evidence, attribution, window.`,
+    url: SITE.url,
+    sameAs: [SITE.repo],
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    isAccessibleForFree: true,
+    creator: org,
+    dateModified: SITE.asOf,
+    keywords: ["artificial intelligence", "evidence", "randomized trials", "public health", "registry", "AI benefits"],
+    distribution: [
+      { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE.url}/api/entries.json` },
+      { "@type": "DataDownload", encodingFormat: "application/rss+xml", contentUrl: `${SITE.url}/feed.xml` },
+      { "@type": "DataDownload", encodingFormat: "text/plain", contentUrl: `${SITE.url}/llms.txt` },
+    ],
+  },
+];
 const description = `What AI has measurably done for people: ${c.because} benefits that reached humans, were measured against something, and are dated by when they happened, not when they were published. ${c["not-because"]} nulls and ${c["not-yet"]} watchlist candidates under the same grades.`;
 ---
-<Base title="Because of AI" ogTitle="Because of AI" description={description} section="because" nameplate="full">
+<Base title="Because of AI" ogTitle="Because of AI" description={description} section="because" nameplate="full" jsonLd={jsonLd}>
   <h1 class="sr-only">Because of AI: a registry of measured AI benefits to people</h1>
   <Hero entries={reviewed} />
   <Registry entries={because} section="because" />

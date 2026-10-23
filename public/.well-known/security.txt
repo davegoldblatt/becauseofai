@@ -1,0 +1,5 @@
+Contact: https://github.com/davegoldblatt/becauseofai/issues/new/choose
+Expires: 2027-10-23T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://becauseofai.org/.well-known/security.txt
+Policy: https://github.com/davegoldblatt/becauseofai#contributing
