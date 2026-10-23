@@ -1,23 +1,33 @@
 name: announce new entries
-# Posts each entry a merge adds to X, Bluesky and Mastodon, once its page is
-# live. Each network is skipped until its secrets exist, so this is a no-op
-# until the accounts are set up (DAV-371). A dispatch with dry_run prints the
-# posts instead of sending them.
+# Posts entries to X, Bluesky and Mastodon once their pages are live: the
+# entries a merge adds (push), plus a daily drip of a few never-announced
+# entries from the back catalogue (schedule). research/announced.json is the
+# ledger of what has been posted, so nothing posts twice. Each network is
+# skipped until its secrets exist, so this is a no-op until the accounts are
+# set up. A dispatch with dry_run prints the posts instead of sending them.
 on:
   push:
     branches: [main]
     paths: ["data/entries/**"]
+  schedule:
+    - cron: "7 16 * * *"   # 09:07 America/Los_Angeles (PDT): the back-catalogue drip
   workflow_dispatch:
     inputs:
       entry:
-        description: "Entry id(s) to announce, comma-separated"
-        required: true
+        description: "Entry id(s) to announce, comma-separated (leave blank with backfill to drip the back catalogue)"
+        required: false
+        default: ""
+      backfill:
+        description: "How many never-announced entries to post (used when entry is blank)"
+        required: false
+        default: "0"
       dry_run:
         description: "Print the posts instead of sending them"
         type: boolean
         default: true
 concurrency:
-  group: announce-${{ github.sha }}-${{ github.event.inputs.entry }}
+  group: announce
+  cancel-in-progress: false
 jobs:
   find:
     runs-on: ubuntu-latest
@@ -38,6 +48,10 @@ jobs:
         run: |
           if [ -n "${{ github.event.inputs.entry }}" ]; then
             node scripts/announce.ts --entry "${{ github.event.inputs.entry }}"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            node scripts/announce.ts --backfill 3
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            node scripts/announce.ts --backfill "${{ github.event.inputs.backfill }}"
           else
             node scripts/announce.ts --before "${{ github.event.before }}" --after "${{ github.sha }}"
           fi
@@ -99,3 +113,42 @@ jobs:
           message: ${{ matrix.post.text }}
           media-paths: ${{ matrix.post.image }}
           media-descriptions: ${{ matrix.post.alt }}
+      - name: Mark ${{ matrix.post.id }} as posted
+        if: ${{ env.DRY_RUN != 'true' && (env.X_APP_KEY != '' || env.BLUESKY_IDENTIFIER != '' || env.MASTODON_URL != '') }}
+        run: mkdir -p .posted && echo "${{ matrix.post.id }}" > ".posted/${{ matrix.post.id }}"
+      - uses: actions/upload-artifact@v4
+        if: ${{ env.DRY_RUN != 'true' && (env.X_APP_KEY != '' || env.BLUESKY_IDENTIFIER != '' || env.MASTODON_URL != '') }}
+        with:
+          name: posted-${{ matrix.post.id }}
+          path: .posted/
+          retention-days: 3
+  record:
+    needs: [find, post]
+    if: ${{ always() && needs.find.outputs.count != '0' && needs.post.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: posted-*
+          path: .posted-all
+          merge-multiple: true
+      - name: Record the posted ids in the ledger and push
+        run: |
+          set -euo pipefail
+          ids=$(ls .posted-all 2>/dev/null | tr '\n' ',' | sed 's/,$//')
+          if [ -z "$ids" ]; then echo "nothing was posted; ledger unchanged"; exit 0; fi
+          node scripts/announce.ts --record "$ids"
+          git config user.name "becauseofai announcer"
+          git config user.email "announcer@becauseofai.org"
+          git add research/announced.json
+          git commit -m "Announcer: record posted entries ($ids)"
+          for i in 1 2 3 4; do git fetch -q origin main && git rebase -q origin/main && git push -q origin HEAD:main && exit 0 || sleep 5; done
+          echo "could not push the ledger after 4 tries"; exit 1

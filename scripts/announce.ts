@@ -3,6 +3,10 @@
 //
 //   node scripts/announce.ts --before <sha> --after <sha>   (a push to main)
 //   node scripts/announce.ts --entry <id>[,<id>]           (by hand)
+//   node scripts/announce.ts --backfill <n>                 (next n never-announced entries: reviewed first, newest first)
+//
+// research/announced.json is the ledger of ids already posted; every mode skips
+// them, and the workflow appends the ids it posts.
 //   flags: --no-wait (skip the live check), --out <dir> (default .announce)
 //
 // Output: <out>/posts.json, one post per entry, plus <out>/<id>.png.
@@ -15,6 +19,7 @@ import { isUnreviewed } from "../src/lib/format.ts";
 import type { Entry } from "../src/schema.ts";
 
 const SITE = "https://becauseofai.org";
+const LEDGER = "research/announced.json";
 const X_LIMIT = 280;
 const URL_WEIGHT = 23; // X counts every link as 23 characters
 const DRAFT_NOTE = "(Automated draft, not yet reviewed by the editor.)";
@@ -71,15 +76,39 @@ async function fetchImage(url: string, file: string): Promise<boolean> {
   }
 }
 
+function record(ids: string[]) {
+  const ledger = JSON.parse(fs.readFileSync(LEDGER, "utf8")) as { note: string; posted: Record<string, string> };
+  const today = new Date().toISOString().slice(0, 10);
+  for (const id of ids) if (id && !ledger.posted[id]) ledger.posted[id] = today;
+  fs.writeFileSync(LEDGER, JSON.stringify(ledger, null, 2) + "\n");
+  console.log(`recorded ${ids.length} id(s) in ${LEDGER}`);
+}
+
 async function main() {
+  if (arg("--record")) return record(arg("--record")!.split(",").map((s) => s.trim()));
   const out = arg("--out") ?? ".announce";
   fs.mkdirSync(out, { recursive: true });
+  const loaded = loadOrThrow();
+  const ledger = JSON.parse(fs.readFileSync(LEDGER, "utf8")) as { posted: Record<string, string> };
+  const already = new Set(Object.keys(ledger.posted));
   let ids: string[];
   if (arg("--entry")) ids = arg("--entry")!.split(",").map((s) => s.trim()).filter(Boolean);
   else if (arg("--before") && arg("--after")) ids = addedIds(arg("--before")!, arg("--after")!);
-  else throw new Error("pass --before <sha> --after <sha> or --entry <id>");
-
-  const loaded = loadOrThrow();
+  else if (arg("--backfill")) {
+    const n = Number(arg("--backfill"));
+    const rank = (e: Entry) => (isUnreviewed(e) ? 1 : 0); // reviewed entries first
+    ids = loaded.publishable
+      .filter((e) => !already.has(e.id))
+      .sort((a, b) => rank(a) - rank(b) || String(b.dates.added).localeCompare(String(a.dates.added)) || a.id.localeCompare(b.id))
+      .slice(0, n)
+      .map((e) => e.id);
+    console.log(`backfill: ${ids.length} of ${loaded.publishable.length - already.size} never-announced entries`);
+  } else throw new Error("pass --before <sha> --after <sha>, --entry <id>, or --backfill <n>");
+  if (!flag("--force")) {
+    const dup = ids.filter((id) => already.has(id));
+    for (const id of dup) console.log(`skip ${id}: already announced on ${ledger.posted[id]}`);
+    ids = ids.filter((id) => !already.has(id));
+  }
   const byId = new Map(loaded.publishable.map((e) => [e.id, e]));
   const heldIds = new Set(loaded.held.map((e) => e.id));
   const posts: Post[] = [];
