@@ -86,7 +86,7 @@ async function main() {
   // X: the bot's posts and their metrics, and mentions.
   let x: Digest["x"] = null;
   const keys = xKeysFromEnv();
-  if (!keys) notes.push("X: no keys in the environment, so posts and mentions are not included.");
+  if (!keys) notes.push("The X account could not be read today (no keys in this run).");
   else {
     try {
       const who = await me(keys);
@@ -137,24 +137,50 @@ async function main() {
   console.log(render(digest));
 }
 
+// Plain words for the model and for anyone reading the file: no ids, no
+// internal vocabulary, no secrets' names.
+const REASON: Record<string, string> = {
+  ungrounded: "a number on the entry is not in the source word for word",
+  "no-full-text": "we could not read the source in full (the publisher blocks automated readers, or only an abstract is public)",
+  "grade-split": "the two models graded it differently",
+  "fails-test": "the second model failed it on one of the four tests, or the source shows a conflict the entry does not state",
+  "verification-unavailable": "the second model could not be reached",
+  "no-primary-source": "it has no primary source, only a press release or a news story",
+  disputed: "a reader's dispute split the two models",
+};
+const n = (v: number | null | undefined, word: string) => (v == null ? `? ${word}` : `${v} ${word}${v === 1 ? "" : "s"}`);
+
 function render(d: Digest): string {
   const L: string[] = [];
-  L.push(`# Because of AI, daily digest for ${day(d.generated_at)}`, "", `Facts since ${d.since.replace("T", " ").replace("Z", " UTC")}. Written by code; the email is written from this.`, "");
-  L.push(`## Registry`, "", `${d.entries.counts.because} because · ${d.entries.counts["not-because"]} not because · ${d.entries.counts["not-yet"]} not yet published; ${d.entries.held} held.`);
-  if (d.entries.changed.length) { L.push("", "Entries added or changed:"); for (const c of d.entries.changed) L.push(`- ${c.change}: ${c.headline} → ${c.state}${c.url ? ` ${c.url}` : ""}`); } else L.push("", "No entry was added or changed.");
-  if (d.verifications.length) { L.push("", "Gate decisions:"); for (const v of d.verifications) L.push(`- ${v.id}: ${v.result}${v.reason ? ` (${v.reason})` : ""}: ${v.detail}`); }
-  if (d.leads_added.length) { L.push("", `Leads the scout logged (${d.leads_added.length}):`); for (const l of d.leads_added.slice(0, 10)) L.push(`- ${l}`); }
-  L.push("", "## Posts", "");
-  if (d.announced.length) for (const a of d.announced) L.push(`- announced ${a.date}: ${a.url}`); else L.push("Nothing announced.");
+  L.push(`Because of AI, the day in plain words. Facts gathered ${d.generated_at.slice(0, 16).replace("T", " ")} UTC, covering the last 24 hours. The email is written from this file; every number here is measured.`, "");
+
+  L.push("WHAT WE POSTED");
+  if (d.announced.length) for (const a of d.announced) { const e = d.entries; const h = [...e.changed, ...e.held_list].find((x) => x.id === a.id)?.headline; L.push(`- ${a.date}: "${h ?? a.id}" ${a.url}`); } else L.push("- Nothing new was posted to the account.");
   if (d.x) {
-    L.push("", `@${d.x.username}: ${d.x.followers ?? "?"} followers.`);
-    if (d.x.note) L.push(d.x.note);
-    if (d.x.posts.length) { L.push("", "Recent posts (last 7 days) and how they did:"); for (const p of d.x.posts) L.push(`- ${p.created_at.slice(0, 10)} · ${p.impressions ?? "?"} views · ${p.likes} likes · ${p.replies} replies · ${p.reposts} reposts · ${p.bookmarks} bookmarks: "${p.text.replace(/\s+/g, " ").slice(0, 140)}" ${p.url}`); }
-    if (d.x.mentions.length) { L.push("", `Mentions and replies since yesterday (${d.x.mentions.length}):`); for (const m of d.x.mentions) L.push(`- ${m.from}${m.in_reply_to_us ? " (reply to us)" : ""}: "${m.text.replace(/\s+/g, " ").slice(0, 200)}" ${m.url}`); } else L.push("", "No mentions or replies since yesterday.");
+    if (d.x.note) L.push(`- Could not read the X account today: ${d.x.note}`);
+    const own = d.x.posts.filter((p) => !p.text.startsWith("@"));
+    const replies = d.x.posts.filter((p) => p.text.startsWith("@"));
+    if (own.length) { L.push("", "HOW THE POSTS ARE DOING (last 7 days, newest first)"); for (const p of own) L.push(`- ${n(p.impressions, "view")}, ${n(p.likes, "like")}, ${n(p.replies, "reply")}, ${n(p.reposts, "repost")}: "${p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim().slice(0, 110)}" ${p.url}`); }
+    if (replies.length) { L.push("", `THE ACCOUNT'S OWN REPLIES TO OTHERS (${replies.length} in the last 7 days)`); for (const p of replies) L.push(`- to ${p.text.split(/\s+/)[0]}: ${n(p.impressions, "view")}, ${n(p.likes, "like")}, ${n(p.replies, "reply")} ${p.url}`); }
+    L.push("", `FOLLOWERS: ${d.x.followers ?? "unknown"}`);
+    L.push("", d.x.mentions.length ? `PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY (${d.x.mentions.length})` : "PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY");
+    if (d.x.mentions.length) for (const m of d.x.mentions) L.push(`- ${m.from}${m.in_reply_to_us ? ", replying to us" : ""}: "${m.text.replace(/\s+/g, " ").slice(0, 200)}" ${m.url}`); else L.push("- None.");
   }
-  L.push("", "## Traffic", "");
-  if (d.traffic) { L.push(`${d.traffic.day}: ${d.traffic.pageviews} pageviews, ${d.traffic.visits} visits.`); if (d.traffic.note) L.push(d.traffic.note); for (const p of d.traffic.top_paths) L.push(`- ${p.path}: ${p.views}`); } else L.push("Not wired yet.");
-  if (d.notes.length) { L.push("", "## Notes", ""); for (const n of d.notes) L.push(`- ${n}`); }
+
+  L.push("", "SITE TRAFFIC");
+  if (d.traffic && !d.traffic.note) { L.push(`- ${d.traffic.day}: ${n(d.traffic.pageviews, "page view")}, ${n(d.traffic.visits, "visit")}.`); for (const p of d.traffic.top_paths) L.push(`  - ${p.path}: ${p.views}`); }
+  else if (d.traffic?.note) L.push(`- Could not read the traffic numbers today: ${d.traffic.note}`);
+  else L.push("- Not connected yet. Dave would need to make a Cloudflare analytics token; until then there are no traffic numbers.");
+
+  L.push("", "THE REGISTRY");
+  L.push(`- Live on the site: ${d.entries.counts.because} benefits, ${d.entries.counts["not-because"]} null results, ${d.entries.counts["not-yet"]} watchlist items. Held off the site: ${d.entries.held}.`);
+  if (d.entries.changed.length > 10) L.push(`- A bulk change touched ${d.entries.changed.length} entries at once (a rebuild of the files, not ${d.entries.changed.length} new entries).`);
+  else if (d.entries.changed.length) { L.push("", "ENTRIES ADDED OR CHANGED IN THE LAST DAY"); for (const c of d.entries.changed) { const reason = /^held \((.*)\)$/.exec(c.state)?.[1]; L.push(`- ${c.change}: "${c.headline}" (${c.url ? `live: ${c.url}` : reason ? `held because ${REASON[reason] ?? reason}` : c.state})`); } }
+  else L.push("- No entry was added or changed.");
+  if (d.verifications.length) { L.push("", "WHAT THE SECOND MODEL DECIDED IN THE LAST DAY"); for (const v of d.verifications) { const h = [...d.entries.changed, ...d.entries.held_list].find((x) => x.id === v.id)?.headline ?? v.id; L.push(`- "${h}": ${v.result === "published" ? "agreed, so it is live" : `held because ${REASON[v.reason ?? ""] ?? v.reason}`}. ${v.detail}`); } }
+  if (d.entries.held_list.length) { L.push("", `STILL HELD OFF THE SITE (${d.entries.held_list.length})`); for (const h of d.entries.held_list) L.push(`- "${h.headline}": ${REASON[h.reason] ?? h.reason} (since ${h.since}). ${h.detail}`); }
+  if (d.leads_added.length) { L.push("", `LEADS THE MORNING SCAN LOGGED (${d.leads_added.length})`); for (const l of d.leads_added.slice(0, 12)) L.push(`- ${l}`); }
+  if (d.notes.filter((x) => !/^Traffic:/.test(x)).length) { L.push("", "NOTES"); for (const x of d.notes) if (!/^Traffic:/.test(x)) L.push(`- ${x.replace(/CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID/, "a Cloudflare analytics token")}`); }
   return L.join("\n") + "\n";
 }
 
