@@ -41,3 +41,12 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+held:
+  reason: no-full-text
+  since: 2026-10-23
+  detail: "No primary source could be read in full (source 0: only 230 characters of text: a landing page or an abstract, not the full document)."
+  record: uva-comet-deterioration-null/2026-10-23.json

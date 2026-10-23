@@ -60,3 +60,23 @@ history:
     note: "Poster number and label set from the entry's own figures."
   - date: 2026-10-22
     note: "NICE guidance page is now the primary for the early value assessment; the news article that stood in for it is secondary."
+rationale: "At one district hospital, DERM-triaged patients were discharged without a face-to-face appointment: 26% when a dermatologist second-read DERM's call and 37% under autonomous DERM, compared with usual care where every urgent referral sees a dermatologist in person; that discharge route only exists through DERM."
+receipts:
+  - field: effect.relative
+    quote: As of February 2025, 3830 patients were assessed with AI DERM and 1010 were discharged without the need for a face-to-face appointment (26%).
+    locator: BJD abstract AI04, results
+    source: 3
+  - field: effect.relative
+    quote: In the move to becoming autonomous the discharge rate increased to 37%.
+    locator: BJD abstract AI04, results
+    source: 3
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: ungrounded
+  since: 2026-10-23
+  detail: No receipt for impact, impact_number, effect.absolute, reach, dates.achieved_start.
+  record: nhs-derm-skin-cancer/2026-10-23.json

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "every-cure-repurposing",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "fff9f101f290ba83885b5cd5dd73307c81db31038518a43a528e7f54beac7524",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://everycure.org/phase2/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:34:34.982Z",
+      "final_url": "https://everycure.org/phase2/",
+      "sha256": "aaffe5ea31831ca697cf96fbec514e871b58089ebd13e73fdc869fd88351f284",
+      "chars": 8574,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "announced that it has been selected to receive up to $76 million in funding from the Advanced Research Projects Agency for Health (ARPA-H)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "building on earlier work that has already yielded 10 active programs.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for headline."
+  }
+}

@@ -57,3 +57,12 @@ history:
       17 March 2025, before the window opened. Retyped the Muscat Daily article as
       secondary because no ministry or programme report with the figures exists, so
       the entry is now held.
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+held:
+  reason: no-primary-source
+  since: 2026-10-23
+  detail: No source is typed primary.
+  record: oman-ai-retinopathy/2026-10-23.json

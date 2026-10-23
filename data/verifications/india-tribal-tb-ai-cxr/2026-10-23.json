@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "india-tribal-tb-ai-cxr",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "5e696826478cf214277cfc20eaa575fe11e97f2d2fe6e1bc0de0422968317cc0",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12810203/",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-10-23T16:36:03.621Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12810203/fullTextXML",
+      "sha256": "c237557dfaf1374665d80e3d63e007e89d11c860ea65ac522dd3a785a517ecbf",
+      "chars": 41258,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "This indicated an 80.21% percentage increase in the number of TB notifications during the period when AI was active in the sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Interestingly, 51 (14.04%) of the 363 patients were asymptomatic, and 20 of these patients were finally diagnosed with TB.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "This indicated an 80.21% percentage increase in the number of TB notifications during the period when AI was active in the sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "we found that 173 patients with TB were notified with TB confirmation. This indicated an 80.21% percentage increase",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "an 80.21% ( P < .001) increase in the number of TB case notifications was observed during the AI implemented period.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "This translates to a TB positivity rate of 44.63% (95% CI: 39.44–49.91) in patients flagged by AI",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "during a period of 8 months from 01 August 2023 to 31 March 2024.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "during a period of 8 months from 01 August 2023 to 31 March 2024.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6-astra",
+    "via": "codex-login",
+    "date": "2026-10-23",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison used a historical symptom-screening pathway versus expanded screening with AI, trained field coordinators, and a disease-management platform, so it evaluated a package.",
+      "achieved_dates": {
+        "from": "methods",
+        "note": "Study Design and Population specifies 01 August 2023 through 31 March 2024."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The source identifies eight authors as Qure.ai employees, which the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports an 80.21% descriptive increase in notifications against a same-season historical baseline and 162 confirmed cases among analyzed AI-flagged patients, including 20 asymptomatic cases. It does not establish that AI alone caused the increase or that no conventional alternative existed."
+    },
+    "error": null,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 27263
+    },
+    "duration_ms": 19683
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter only-path, verifier bundled.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "only-path",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}
