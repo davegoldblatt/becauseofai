@@ -9,7 +9,7 @@ summary: >-
   Columbia's STAR system scanned 2.5 million images of a 3.5 mL sample in about
   two hours and found viable sperm where manual microscopy found none; the
   resulting pregnancy was confirmed in 2025, published in The Lancet in
-  October 2025, and a healthy daughter was born in late 2025.
+  October 2025, and a healthy daughter was born in November 2025.
 caveat: >-
   One case; STAR finds sperm in just under 30% of men diagnosed with
   azoospermia, and larger trials are still underway.
@@ -26,26 +26,43 @@ effect:
 reach: "Columbia University Fertility Center only"
 dates:
   achieved_start: 2025-03
-  achieved_end: 2025-12
+  achieved_end: 2025-11
   published: 2025-10-31
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
-  - title: "Columbia / The Lancet: First clinical pregnancy following AI-based microfluidic sperm detection (press release)"
-    url: https://www.eurekalert.org/news-releases/1104028
+  - title: "The Lancet research letter: First clinical pregnancy following AI-based microfluidic sperm detection and recovery in non-obstructive azoospermia"
+    url: https://doi.org/10.1016/S0140-6736(25)01623-X
+    doi: 10.1016/S0140-6736(25)01623-X
     type: primary
+  - title: "TIME100 Health 2026: Zev Williams (birth in November)"
+    url: https://time.com/collections/time100-health-2026/7362507/zev-williams/
+    type: secondary
+  - title: "TIME: Doctors report the first pregnancy using a new AI procedure (June 2025; retrieval in March 2025)"
+    url: https://time.com/7291154/doctors-report-first-pregnancy-new-ai-procedure/
+    type: secondary
   - title: "National Geographic: The first AI-assisted IVF babies are now being born"
     url: https://nationalgeographic.com/health/article/ivf-ai-assisted-reproductive-technology
     type: secondary
-  - title: "Decrypt/BBC: Doctors use AI to spot hidden sperm (birth confirmed)"
+  - title: "Decrypt/BBC: Doctors use AI to spot hidden sperm (a later Klinefelter case, April 2026)"
     url: https://decrypt.co/366374/doctors-ai-hidden-sperm-men-study
     type: secondary
 conflicts: "Two authors are inventors on Columbia patent applications for STAR."
 what_would_change: "A multi-center series with live-birth rates would move evidence to B or C."
 notes: >-
-  verify: reports differ on which couple was the first (a 19-year infertility case
-  in the Lancet letter vs a Klinefelter case in BBC coverage); confirm birth month.
+  First couple settled: the Lancet letter's case is the couple who had tried for
+  nearly two decades (sperm retrieved March 2025, per TIME). The Klinefelter
+  couple in the BBC/Decrypt coverage (April 2026) is a later STAR case whose
+  pregnancy was still ongoing at publication. Birth month is November 2025, per
+  TIME's February 2026 profile; the Lancet letter reports the pregnancy, not the birth.
+  verify: the 2.5M-image, 3.5 mL and two-hour figures against the Lancet letter
+  itself, which returned 403 to the weekly run.
 related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Corrected the birth month to November 2025 (was end 2025-12) per TIME; replaced
+      the EurekAlert release with the Lancet letter (doi 10.1016/S0140-6736(25)01623-X)
+      as primary and settled which couple was first.

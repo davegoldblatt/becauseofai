@@ -18,18 +18,18 @@ ai_type: classic-ml
 grades:
   evidence: A
   attribution: isolated
-  window: null
+  window: pre
 comparison: "AI-CAL vs non-personalized CAL (active control) vs pure control"
 effect:
   relative: "No significant effect of AI-CAL on math scores"
   absolute: null
 reach: "8,647 students, 105 schools, Sichuan"
 dates:
-  achieved_start: null
-  achieved_end: null
+  achieved_start: 2021-04-04
+  achieved_end: 2021-06-14
   published: 2026-07
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
   - title: "SSRN: Putting AI to the Test — Evidence from a Large-Scale RCT in Rural China"
     url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7195260
@@ -37,11 +37,27 @@ sources:
   - title: "CESifo working paper version"
     url: https://www.ifo.de/DocDL/cesifo1_wp12837.pdf
     type: primary
+  - title: "AEA RCT Registry AEARCTR-0007888: Adaptive versus Non-adaptive EdTech"
+    url: https://www.socialscienceregistry.org/trials/7888
+    type: primary
 conflicts: "none found"
 what_would_change: null
 notes: >-
-  verify: intervention dates to set window grade.
+  Intervention dates come from the AEA registry (AEARCTR-0007888, PI Loyalka), whose
+  sample matches the paper exactly (105 schools, 315 classes, 8,647 students, three
+  class-level arms): intervention 4 April to 14 June 2021. Window is pre on either
+  reading below.
+  verify: a secondary account of a 2025 talk calls it a year-long trial, so confirm
+  the intervention period against the paper's methods. The SSRN page returned 403
+  and the CESifo PDF would not extract for the run.
+  verify: the registry was first registered on 28 June 2021, after the intervention
+  ended, so the primary endpoint was not strictly preregistered. Evidence A is
+  arguable; the editor should decide whether it stays.
 related: [sierra-leone-gemini-math]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Re-graded window to pre: the AEA registry (AEARCTR-0007888) dates the
+      intervention 4 April to 14 June 2021; added the registry as a primary source.

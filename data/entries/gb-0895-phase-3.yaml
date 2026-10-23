@@ -27,10 +27,13 @@ dates:
   achieved_end: null
   published: 2025-12-03
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
   - title: "ClinicalTrials.gov NCT07276724 (SOLAIRIA-1)"
     url: https://clinicaltrials.gov/study/NCT07276724
+    type: primary
+  - title: "ClinicalTrials.gov NCT07359846 (SOLAIRIA-2)"
+    url: https://clinicaltrials.gov/study/NCT07359846
     type: primary
   - title: "IntuitionLabs: AI-discovered drugs in clinical trials 2026"
     url: https://intuitionlabs.ai/articles/ai-discovered-drugs-clinical-trials-2026
@@ -39,8 +42,9 @@ conflicts: "Sponsor-run trial; sponsor announcements via secondary tracker."
 what_would_change: "Phase 3 primary endpoint result; then approval; then treated patients."
 notes: >-
   The earlier headline's ~1,600 patients did not match SOLAIRIA-1's registry
-  (786 planned); it may combine SOLAIRIA-1 and -2.
-  verify: SOLAIRIA-2 registry entry (sponsor lists NCT07359846) and its enrollment.
+  (786 planned). SOLAIRIA-2 (NCT07359846) is a second 786-patient Phase 3 with the
+  same 52-week exacerbation endpoint, started 20 January 2026, primary completion
+  estimated January 2029, so ~1,600 was the two studies combined (1,572).
 related: [rentosertib-phase-3]
 history:
   - date: 2026-10-22
@@ -49,3 +53,8 @@ history:
     note: "Weekly run: ClinicalTrials.gov primary added (entry now renders); headline patient count removed — registry shows 786 planned for SOLAIRIA-1, not ~1,600."
   - date: 2026-10-22
     note: "The editor has not yet read the registry record; published unreviewed."
+  - date: 2026-10-23
+    note: >-
+      Verified the SOLAIRIA-2 registry record (NCT07359846, 786 planned, started
+      20 Jan 2026) and added it as primary; this closes the verify note. The
+      editor's review is still outstanding, so the entry stays unreviewed.

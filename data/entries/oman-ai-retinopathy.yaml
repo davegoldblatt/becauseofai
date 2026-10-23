@@ -17,27 +17,43 @@ ai_type: classic-ml
 grades:
   evidence: C
   attribution: bundled
-  window: in
+  window: ongoing
 comparison: "None (program before/after)"
 effect:
   relative: "−87% waiting list; −43.2% operating cost"
   absolute: "43,000+ screened; 12,000+ referred"
 reach: "Oman national program"
 dates:
-  achieved_start: null
+  achieved_start: 2025-03-17
   achieved_end: 2026-08
   published: 2026-08-24
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
   - title: "Muscat Daily: Oman turns to AI to tackle diabetes-related blindness"
     url: https://www.muscatdaily.com/2026/08/24/oman-turns-to-ai-to-tackle-diabetes-related-blindness/
-    type: primary
+    type: secondary
+  - title: "Oman Ministry of Health: launch of the national AI diabetic retinopathy project (17 March 2025; no results)"
+    url: https://moh.gov.om/en/media-center/news/third-country-in-the-world-to-achieve-this-milestone-a-revolution-in-diagnosis-and-treatment-using-ai-to-detect-diabetic-retinopathy-in-oman/
+    type: secondary
 conflicts: "Ministry of Health self-report."
 what_would_change: "Rates of sight-threatening retinopathy treated in time, vs the prior program."
 notes: >-
-  verify: program start date; which AI vendor.
+  Held: no ministry or programme report carrying these figures was found. The
+  numbers reach the press as statements by the National Virtual Health Center
+  to the Oman News Agency. The ministry's own page is the 17 March 2025 launch
+  release (25 facilities, first phase), with no results. Coverage is
+  inconsistent on whether 43,000 counts patients or retinal images; the
+  waiting-time figure (62 to 8 days) covers the first seven months. The vendor
+  EyRIS (Nova MSC) claimed the programme in August 2025; the ministry does not
+  name a vendor. Needs a ministry report, a WHO/EMRO write-up, or a paper to stand as primary.
 related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Re-graded window from in to ongoing: the ministry launched the programme on
+      17 March 2025, before the window opened. Retyped the Muscat Daily article as
+      secondary because no ministry or programme report with the figures exists, so
+      the entry is now held.
