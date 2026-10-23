@@ -31,7 +31,7 @@ type Digest = {
   verifications: { id: string; date: string; result: string; reason: string | null; detail: string; record: string }[];
   announced: { id: string; date: string; url: string }[];
   leads_added: string[];
-  x: null | { username: string; followers: number | null; posts: { id: string; url: string; text: string; created_at: string; impressions: number | null; likes: number; replies: number; reposts: number; bookmarks: number; quotes: number }[]; mentions: { id: string; url: string; from: string; text: string; created_at: string; in_reply_to_us: boolean }[]; note?: string };
+  x: null | { username: string; followers: number | null; posts: { id: string; url: string; text: string; created_at: string; impressions: number | null; likes: number; replies: number; reposts: number; bookmarks: number; quotes: number }[]; mentions: { id: string; url: string; from: string; text: string; created_at: string; in_reply_to_us: boolean; new: boolean }[]; note?: string };
   traffic: null | { pageviews: number; visits: number; top_paths: { path: string; views: number }[]; day: string; note?: string };
   notes: string[];
 };
@@ -92,12 +92,15 @@ async function main() {
     try {
       const who = await me(keys);
       const posts = (await ownPosts(keys, who.id, 20)).filter((p) => new Date(p.created_at) >= new Date(since.getTime() - 6 * 24 * 3600_000));
-      const ment = await mentions(keys, who.id, sinceIso, 50);
+      // Mentions over the whole week, so a reply that arrived before the window
+      // still shows (marked as earlier); the newest sort first.
+      const weekAgo = new Date(since.getTime() - 6 * 24 * 3600_000).toISOString().replace(/\.\d{3}Z$/, "Z");
+      const ment = (await mentions(keys, who.id, weekAgo, 50)).sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
       const metric = (p: XPost, k: string, np = false) => (np ? p.non_public_metrics?.[k] : p.public_metrics?.[k]) ?? null;
       x = {
         username: who.username, followers: who.followers,
         posts: posts.map((p) => ({ id: p.id, url: `https://x.com/${who.username}/status/${p.id}`, text: p.text, created_at: p.created_at, impressions: metric(p, "impression_count", true) ?? metric(p, "impression_count"), likes: metric(p, "like_count") ?? 0, replies: metric(p, "reply_count") ?? 0, reposts: metric(p, "retweet_count") ?? 0, bookmarks: metric(p, "bookmark_count") ?? 0, quotes: metric(p, "quote_count") ?? 0 })),
-        mentions: ment.map((m) => ({ id: m.id, url: `https://x.com/${m.username ?? "i"}/status/${m.id}`, from: m.username ? `@${m.username}` : m.author_id ?? "?", text: m.text, created_at: m.created_at, in_reply_to_us: m.in_reply_to_user_id === who.id })),
+        mentions: ment.map((m) => ({ id: m.id, url: `https://x.com/${m.username ?? "i"}/status/${m.id}`, from: m.username ? `@${m.username}` : m.author_id ?? "?", text: m.text, created_at: m.created_at, in_reply_to_us: m.in_reply_to_user_id === who.id, new: new Date(m.created_at) >= since })),
       };
     } catch (err) {
       x = { username: "", followers: null, posts: [], mentions: [], note: `X API failed: ${(err as Error).message}` };
@@ -173,8 +176,8 @@ function render(d: Digest): string {
     if (own.length) { L.push("", "HOW THE POSTS ARE DOING (last 7 days, newest first)"); for (const p of own) L.push(`- ${n(p.impressions, "view")}, ${n(p.likes, "like")}, ${n(p.replies, "reply")}, ${n(p.reposts, "repost")}: "${p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim().slice(0, 110)}" ${p.url}`); }
     if (replies.length) { L.push("", `THE ACCOUNT'S OWN REPLIES TO OTHERS (${replies.length} in the last 7 days)`); for (const p of replies) L.push(`- to ${p.text.split(/\s+/)[0]}: ${n(p.impressions, "view")}, ${n(p.likes, "like")}, ${n(p.replies, "reply")} ${p.url}`); }
     L.push("", `FOLLOWERS: ${d.x.followers ?? "unknown"}`);
-    L.push("", d.x.mentions.length ? `PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY (${d.x.mentions.length})` : "PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY");
-    if (d.x.mentions.length) for (const m of d.x.mentions) L.push(`- ${m.from}${m.in_reply_to_us ? ", replying to us" : ""}: "${m.text.replace(/\s+/g, " ").slice(0, 200)}" ${m.url}`); else L.push("- None.");
+    L.push("", `PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, ${d.x.mentions.filter((m) => m.new).length} new since yesterday)`);
+    if (d.x.mentions.length) for (const m of d.x.mentions) L.push(`- ${m.new ? "NEW · " : "earlier this week · "}${m.from}${m.in_reply_to_us ? ", replying to us" : ""}: "${m.text.replace(/\s+/g, " ").slice(0, 200)}" ${m.url}`); else L.push("- None.");
   }
 
   L.push("", "SITE TRAFFIC");

@@ -5,7 +5,7 @@
 // routine to fill: <!--NOTE--> (the morning note) and <!--NEEDS--> (what
 // needs Dave). Everything else is written by code from measured facts.
 export type Post = { url: string; text: string; created_at: string; impressions: number | null; likes: number; replies: number; reposts: number; bookmarks: number };
-export type Mention = { url: string; from: string; text: string; created_at: string; in_reply_to_us: boolean };
+export type Mention = { url: string; from: string; text: string; created_at: string; in_reply_to_us: boolean; new?: boolean };
 export type DigestForHtml = {
   generated_at: string;
   site: string;
@@ -62,8 +62,8 @@ export function renderHtml(d: DigestForHtml): string {
   // People replying: the thing he most wants to see.
   parts.push(h2("People replying"));
   if (d.x?.mentions.length) {
-    for (const m of d.x.mentions) parts.push(`<div style="border-left:4px solid ${SIGNAL};padding:6px 0 6px 14px;margin:10px 0;">${sentence(`${m.from}${m.in_reply_to_us ? ", replying to us" : ""}`)}<div style="font:400 15px/1.45 ${BODY};color:${INK};margin-top:4px;">&ldquo;${esc(m.text.replace(/\s+/g, " ").slice(0, 280))}&rdquo;</div>${meta(`${esc(date(m.created_at))} &middot; <a href="${esc(m.url)}" style="color:${GRAPHITE};">open on x</a>`)}</div>`);
-  } else parts.push(`<div style="font:400 15px/1.5 ${BODY};color:${GRAPHITE};">Nobody replied to or mentioned the account since yesterday.</div>`);
+    for (const m of d.x.mentions) parts.push(`<div style="border-left:4px solid ${m.new === false ? RULE : SIGNAL};padding:6px 0 6px 14px;margin:10px 0;">${sentence(`${m.from}${m.in_reply_to_us ? ", replying to us" : ""}`)}<div style="font:400 15px/1.45 ${BODY};color:${INK};margin-top:4px;">&ldquo;${esc(m.text.replace(/\s+/g, " ").slice(0, 280))}&rdquo;</div>${meta(`${m.new === false ? "earlier this week &middot; " : ""}${esc(date(m.created_at))} &middot; <a href="${esc(m.url)}" style="color:${GRAPHITE};">open on x</a>`)}</div>`);
+  } else parts.push(`<div style="font:400 15px/1.5 ${BODY};color:${GRAPHITE};">Nobody replied to or mentioned the account this week.</div>`);
 
   // Posts as ledger rows.
   parts.push(h2("What we posted"));
