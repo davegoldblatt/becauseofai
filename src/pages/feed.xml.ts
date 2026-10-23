@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { publishable } from "../lib/site.ts";
 import { SITE } from "../site.ts";
-import { isoDate, effectLine, isUnreviewed } from "../lib/format.ts";
+import { isoDate, effectLine } from "../lib/format.ts";
 
 // Newest dates.added first, then editorial rank.
 export function GET(context: APIContext) {
@@ -21,7 +21,7 @@ export function GET(context: APIContext) {
         // is kept as text in the description instead of inventing a day.
         ...(/^\d{4}-\d{2}-\d{2}$/.test(added) ? { pubDate: new Date(`${added}T00:00:00Z`) } : {}),
         description: [e.summary, effect ? `Effect: ${effect}.` : "", /^\d{4}-\d{2}-\d{2}$/.test(added) ? "" : `Added ${added}.`].filter(Boolean).join(" "),
-        categories: [e.section, e.domain, ...(isUnreviewed(e) ? ["unreviewed"] : [])],
+        categories: [e.section, e.domain],
       };
     });
   return rss({

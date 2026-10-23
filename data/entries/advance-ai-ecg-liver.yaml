@@ -62,3 +62,35 @@ history:
     note: "The editor has not yet read the Nature Medicine paper or the registry record; published unreviewed."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures. Still unreviewed."
+rationale: Patients whose care teams got AI-ECG alerts were compared with patients of usual-care teams, randomized 1:1 by cluster, and the arms differed only in the AI notification, which supports an isolated attribution.
+receipts:
+  - field: effect.absolute
+    quote: '"value": "78"'
+    locator: Registry results, outcomeMeasuresModule, primary outcome, OG001 (ECG ML group; denominator 8034)
+    source: 1
+  - field: effect.absolute
+    quote: '"value": "35"'
+    locator: Registry results, outcomeMeasuresModule, primary outcome, OG000 (usual care; denominator 7562)
+    source: 1
+  - field: reach
+    quote: A pragmatic, cluster randomized trial in 45 Mayo Clinic primary care practices will be conducted over a period of 6 months
+    locator: Registry descriptionModule, detailedDescription
+    source: 1
+  - field: dates.achieved_start
+    quote: '"date": "2023-04-18"'
+    locator: Registry statusModule, startDateStruct (type ACTUAL)
+    source: 1
+  - field: dates.achieved_end
+    quote: '"date": "2025-09-01"'
+    locator: Registry statusModule, primaryCompletionDateStruct (type ACTUAL)
+    source: 1
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: no-full-text
+  since: 2026-10-23
+  detail: "source 0 could not be read in full (only 230 characters of text: a landing page or an abstract, not the full document); no receipt for headline, impact_number, effect.relative."
+  record: advance-ai-ecg-liver/2026-10-23.json

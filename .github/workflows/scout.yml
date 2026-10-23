@@ -8,12 +8,15 @@ on:
         description: "How many days back to scan"
         default: "2"
 jobs:
-  scout:
+  # Job 1: the drafting model, with its own token only. It may write entry
+  # files, the inbox, and the run note; it never sees the verifier's secrets.
+  draft:
     runs-on: ubuntu-latest
+    outputs:
+      branch: ${{ steps.handoff.outputs.branch }}
     timeout-minutes: 45
     permissions:
       contents: write
-      pull-requests: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +27,26 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Land pending gate pull requests
+        # A dispute run (a public trigger) only opens a pull request; this
+        # scheduled job, which nobody outside can trigger, merges it. Only a
+        # pull request opened by this repository's own workflows, from a branch
+        # in this repository, is considered; its head commit is checked and
+        # merged by exact SHA so nothing can change in between.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh pr list --state open --json number,headRefName,isCrossRepository,author,headRefOid -q '.[] | select((.headRefName | startswith("gate/")) and (.isCrossRepository == false) and (.author.login == "github-actions")) | "\(.number) \(.headRefOid)"' | while read -r n sha; do
+            git fetch -q origin "$sha"
+            bad=$(git diff --name-only "origin/main...$sha" | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' || true)
+            if [ -n "$bad" ]; then echo "#$n touches more than data; left open:"; echo "$bad"; continue; fi
+            if git checkout -q "$sha" && npm run validate && npm run build; then
+              git checkout -q -; gh pr merge "$n" --squash --delete-branch --match-head-commit "$sha" && echo "merged gate #$n at $sha"
+            else
+              git checkout -q - || true; echo "#$n failed validate or build; left open"
+            fi
+          done
       - name: Pull candidates (no model)
         run: node scripts/scout.ts --days ${{ github.event.inputs.days || '2' }}
       - name: Triage and draft (Claude, subscription token)
@@ -37,40 +60,100 @@ jobs:
           prompt: |
             Run the daily scout for becauseofai.org. Follow research/scout-brief.md exactly.
             Today's candidates are in .scout/candidates.json (already generated in this checkout).
+            Every entry you draft carries receipts and a rationale as the brief describes; a second model from another vendor will check every receipt against the source, and the entry is held if any fails.
             Finish by opening the pull request described in the brief. Do not merge anything.
           claude_args: |
             --model claude-sonnet-5-5
             --max-turns 100
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+      - name: Hand the branch to the gate
+        id: handoff
+        run: |
+          set -euo pipefail
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$branch" = "main" ] || [ -z "$(git log "${{ github.sha }}..HEAD" --oneline)" ]; then echo "branch=" >> "$GITHUB_OUTPUT"; echo "nothing drafted"; exit 0; fi
+          git push -u origin "$branch" 2>/dev/null || true
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
+  # Job 2: the gate and the merge, from a fresh checkout of what job 1 pushed.
+  # Nothing from the drafting job's working tree, git configuration, or
+  # processes reaches this job; only the commits on the branch do, and only
+  # entry files, the inbox, and the run note may differ from the base.
+  gate:
+    needs: draft
+    if: ${{ needs.draft.outputs.branch != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      BRANCH: ${{ needs.draft.outputs.branch }}
+      BASE_SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.draft.outputs.branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Refuse anything the draft changed outside the data
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor "$BASE_SHA" HEAD
+          bad=$(git diff --name-only "$BASE_SHA" HEAD | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|research/inbox\.md|research/last-run\.md)$' || true)
+          if [ -n "$bad" ]; then echo "the draft touched files outside the allowlist; nothing merges:"; echo "$bad"; exit 1; fi
+          # The gate runs the base commit's code, whatever the branch carries.
+          git checkout "$BASE_SHA" -- . ':!data/entries' ':!research/inbox.md' ':!research/last-run.md'
+          git status --porcelain
+      - run: npm ci
+      - name: Install the verifier's tools
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
+          npm install -g @openai/codex
+      - name: The gate (second vendor, independent)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
+        run: |
+          set -euo pipefail
+          node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-sonnet-5-5" --max 0 --force
+          git checkout -- . ':!data/' || true
+          bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)
+          if [ -n "$bad" ]; then echo "the gate wrote outside the data:"; echo "$bad"; exit 1; fi
+          if ! git diff --quiet -- data/ || [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name "becauseofai gate"
+            git config user.email "gate@becauseofai.org"
+            git add data/
+            git commit -m "Gate: verify the run's entries"
+            git push origin "HEAD:$BRANCH"
+          fi
       - name: Validate and build the result
         run: npm run validate && npm run build
       - name: Merge the run's pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          if [ "$branch" = "main" ]; then echo "no branch created this run; nothing to merge"; exit 0; fi
-          if [ -z "$(git log "$BASE_SHA..HEAD" --oneline)" ]; then echo "branch $branch has no commits beyond $BASE_SHA; nothing to merge"; exit 0; fi
-          git push -u origin "$branch" 2>/dev/null || true
-          n=$(gh pr list --head "$branch" --state open --json number -q '.[0].number')
+          n=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
           if [ -z "$n" ]; then
-            title=$(git log -1 --format=%s)
-            body_file=.scout/pr-body.md
-            [ -s "$body_file" ] || git log -1 --format=%B > "$body_file"
-            if url=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file" 2>&1); then
+            title=$(git log -1 --format=%s "origin/$BRANCH" -- data/entries research 2>/dev/null || git log -1 --format=%s)
+            body_file="$RUNNER_TEMP/pr-body.md"
+            git log "$BASE_SHA..HEAD" --format=%B > "$body_file"
+            if url=$(gh pr create --head "$BRANCH" --base main --title "$title" --body-file "$body_file" 2>&1); then
               n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
-              echo "opened #$n for $branch"
+              echo "opened #$n for $BRANCH"
             else
               echo "pull request refused ($url); landing the branch on main directly"
               git fetch origin main
               git rebase origin/main
               git push origin HEAD:main
-              git push origin --delete "$branch" || true
-              echo "pushed $branch to main directly"
+              git push origin --delete "$BRANCH" || true
               exit 0
             fi
           fi
           gh pr merge "$n" --squash --delete-branch
-          echo "merged #$n from $branch"
+          echo "merged #$n from $BRANCH"

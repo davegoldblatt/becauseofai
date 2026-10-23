@@ -61,3 +61,41 @@ history:
     note: >-
       Re-graded window to pre: the AEA registry (AEARCTR-0007888) dates the
       intervention 4 April to 14 June 2021; added the registry as a primary source.
+rationale: AI-CAL was randomized against R-CAL, a non-personalized CAL active control that matched it on content, time, hardware, gamification and feedback, so the comparison isolates the AI-driven adaptive personalization (Section 2.2; Table 1).
+receipts:
+  - field: headline
+    quote: The final sample comprised 8,647 students and their 315 math teachers.
+    locator: Section 2.1 Study Site and Sampling Procedure, p. 5
+    source: 1
+  - field: reach
+    quote: we implement a field experiment involving 8,647 students from 315 classes in 105 primary schools across rural China.
+    locator: Section 1 Introduction, p. 4
+    source: 1
+  - field: dates.achieved_start
+    quote: 2021-04-04
+    locator: "Registry field: Experimental Details > Interventions > Intervention Start Date"
+    source: 2
+  - field: dates.achieved_end
+    quote: 2021-06-14
+    locator: "Registry field: Experimental Details > Interventions > Intervention End Date"
+    source: 2
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-10-23
+  verifier:
+    vendor: openai
+    model: gpt-6-astra
+    date: 2026-10-23
+    verdict: fail
+  record: china-ai-cal-null/2026-10-23.json
+held:
+  reason: fails-test
+  since: 2026-10-23
+  detail: "The source shows a conflict of interest the entry does not state: The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose."
+  record: china-ai-cal-null/2026-10-23.json

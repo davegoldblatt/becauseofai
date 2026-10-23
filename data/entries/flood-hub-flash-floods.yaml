@@ -40,3 +40,28 @@ related: [hurricane-melissa-2025]
 history:
   - date: 2026-10-22
     note: "Added."
+rationale: The only comparison is the model's precision and recall against news-derived Groundsource and GDACS flood records, benchmarked against aggregated NWS warnings in the U.S. (recall 0.32 vs 0.22, precision 0.26 vs 0.44 at threshold 0.7). That measures forecast skill, not any change in what happened to people, so it cannot show the AI caused a benefit.
+receipts:
+  - field: headline
+    quote: we can now predict the risk of flash floods in urban areas up to 24 hours in advance.
+    locator: Blog body, paragraph 2 ("To address this, today we're announcing...")
+    source: 0
+  - field: impact
+    quote: we developed an operational system that produces short-term (24-hour) flood forecasts, currently available in over 150 countries.
+    locator: Section 1, Introduction, final paragraph
+    source: 1
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-10-23
+  verifier:
+    vendor: openai
+    model: gpt-6-astra
+    date: 2026-10-23
+    verdict: pass
+  record: flood-hub-flash-floods/2026-10-23.json

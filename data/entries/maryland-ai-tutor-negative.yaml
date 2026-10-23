@@ -54,3 +54,27 @@ history:
     note: "Weekly run: EdWorkingPaper primary source added (entry now renders); effect size recorded from the abstract."
   - date: 2026-10-22
     note: "The editor has not yet read the working paper; published unreviewed."
+rationale: The grade is isolated because instructors were randomly assigned to offer the course-integrated AI tutor or not, so grades and LMS participation can be compared between sections of the same course with and without the tutor.
+receipts:
+  - field: headline
+    quote: We evaluate access to a course-integrated generative AI (GenAI) tutor in a randomized controlled trial involving 2,379 undergraduate students and 30 instructors
+    locator: Abstract, EdWorkingPaper landing page
+    source: 0
+  - field: effect.relative
+    quote: Among sections of the same course, tutor access reduced final grades by 0.37 standard deviations and learning management system participation by 0.90 standard deviations.
+    locator: Abstract, EdWorkingPaper landing page
+    source: 0
+  - field: reach
+    quote: a randomized controlled trial involving 2,379 undergraduate students and 30 instructors
+    locator: Abstract, EdWorkingPaper landing page
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: ungrounded
+  since: 2026-10-23
+  detail: No receipt for dates.achieved_start, dates.achieved_end.
+  record: maryland-ai-tutor-negative/2026-10-23.json

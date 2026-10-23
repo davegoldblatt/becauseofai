@@ -8,7 +8,7 @@ import { Resvg } from "@resvg/resvg-js";
 import fs from "node:fs";
 import path from "node:path";
 import type { Entry, Section } from "../schema.ts";
-import { achievedState, fmtDate, impactParts, lagFor, xOf, earliestDay, yearTicks, isUnreviewed, type Timeline, EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
+import { achievedState, fmtDate, impactParts, lagFor, xOf, earliestDay, yearTicks, type Timeline, EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
 import { latestDay } from "../lib/entries.ts";
 import { NAMEPLATE, SITE } from "../site.ts";
 
@@ -29,14 +29,14 @@ type Node = { type: string; props: Record<string, unknown> };
 const h = (type: string, style: Record<string, unknown>, children?: unknown): Node => ({ type, props: { style, children } });
 const mono = (fontSize: number, color = GRAPHITE_T, extra: Record<string, unknown> = {}) => ({ fontFamily: MONO, fontSize, color, textTransform: "uppercase", letterSpacing: 1, ...extra });
 
-function stamp(kind: "ev" | "at" | "wi-in" | "wi-ongoing" | "wi-pre" | "wi-none" | "watch" | "unrev", text: string, big?: string): Node {
+function stamp(kind: "ev" | "at" | "wi-in" | "wi-ongoing" | "wi-pre" | "wi-none" | "watch", text: string, big?: string): Node {
   const base: Record<string, unknown> = { display: "flex", alignItems: "center", gap: 10, height: 44, padding: "0 12px", border: `3px solid ${PAPER}`, color: PAPER, ...mono(16, PAPER) };
   const style: Record<string, unknown> =
     kind === "ev" ? { ...base, backgroundColor: PAPER, color: INK }
     : kind === "wi-in" ? { ...base, backgroundColor: SIGNAL, borderColor: SIGNAL, color: INK }
     : kind === "wi-ongoing" ? { ...base, borderColor: SIGNAL }
     : kind === "wi-pre" ? { ...base, borderColor: GRAPHITE, color: GRAPHITE_T, backgroundImage: `repeating-linear-gradient(135deg, rgba(138,138,138,0.55) 0px, rgba(138,138,138,0.55) 2px, transparent 2px, transparent 9px)` }
-    : kind === "wi-none" || kind === "watch" || kind === "unrev" ? { ...base, borderColor: GRAPHITE, color: GRAPHITE_T, borderStyle: "dashed" }
+    : kind === "wi-none" || kind === "watch" ? { ...base, borderColor: GRAPHITE, color: GRAPHITE_T, borderStyle: "dashed" }
     : base;
   if (kind === "wi-pre") style.padding = "0 5px";
   const children: unknown[] = [];
@@ -113,7 +113,6 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
         ...(g.attribution ? [stamp("at", ATTRIBUTION_LABEL[g.attribution])] : []),
         g.window ? stamp(`wi-${g.window}` as "wi-in", WINDOW_LABEL[g.window]) : stamp("wi-none", "window unverified"),
       ];
-  if (isUnreviewed(e)) stamps.push(stamp("unrev", "unreviewed"));
   const W = 1200, H = 630, PAD = 56;
   const tree = h("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: W, height: H, padding: `44px ${PAD}px 40px`, backgroundColor: INK, color: PAPER, position: "relative" }, [
     ...(e.section === "not-because" ? [h("div", { position: "absolute", left: 0, top: 0, width: 16, height: H, backgroundColor: NULL_RED })] : []),
@@ -143,7 +142,7 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
 // The home card: the nameplate, then four impact numbers from the top of the
 // list, then the counts. Numbers are the reason anyone clicks.
 export async function renderHomeOg(top: Entry[], counts: { because: number; "not-because": number; "not-yet": number }): Promise<Buffer> {
-  const cells = top.filter((e) => !isUnreviewed(e)).slice(0, 4).map((e) => {
+  const cells = top.slice(0, 4).map((e) => {
     const imp = impactParts(e);
     const leadSize = !imp.numeric ? 44 : imp.lead.length <= 4 ? 118 : imp.lead.length <= 6 ? 96 : 72;
     return h("div", { display: "flex", flexDirection: "column", width: 520, gap: 8 }, [

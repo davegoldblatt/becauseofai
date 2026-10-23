@@ -59,3 +59,61 @@ history:
     note: "Added by weekly research run; verified against the open-access full text."
   - date: 2026-10-22
     note: "The editor has not yet read the Nature Medicine paper; published unreviewed."
+rationale: Clinical officers were randomized to the same EMR with AI Consult (GPT-4o) turned on or turned off, so the AI was the only difference between arms, which supports the isolated grade.
+receipts:
+  - field: headline
+    quote: 9,691 patients were enrolled, overseen by 103 clinical officers (52 in the LLM-assisted arm and 51 in the control arm).
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: adjusted odds ratio (aOR) 0.77, 95% CI 0.55 to 1.08, P  = 0.13
+    locator: Results, Primary outcome
+    source: 0
+  - field: effect.relative
+    quote: they were more likely to record an appropriate diagnosis (aOR 1.74, 95% CI 1.28 to 2.36, P  < 0.001)
+    locator: Results, Secondary outcomes, Clinical documentation quality
+    source: 0
+  - field: effect.absolute
+    quote: Treatment failure occurred in 102/4,693 patients (2.2%) in the intervention arm and 94/4,654 (2.0%) in the control arm
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: which occurred in 17 participants (0.4%) in the control arm and 14 participants (0.3%) in the intervention arm, did not significantly differ
+    locator: Results, Safety
+    source: 0
+  - field: reach
+    quote: 9,691 patients were enrolled, overseen by 103 clinical officers
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: across a network of 16 primary care facilities operated by Penda Health in Nairobi and Kiambu counties in Kenya
+    locator: Methods, Design
+    source: 0
+  - field: dates.achieved_start
+    quote: Between 22 April and 16 July 2025, 17,626 patients were screened for eligibility.
+    locator: Results, Patient disposition
+    source: 0
+  - field: dates.achieved_end
+    quote: Between 22 April and 16 July 2025, 17,626 patients were screened for eligibility.
+    locator: Results, Patient disposition
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-10-23
+  verifier:
+    vendor: openai
+    model: gpt-6-astra
+    date: 2026-10-23
+    verdict: fail
+  record: kenya-ai-consult-null/2026-10-23.json
+held:
+  reason: grade-split
+  since: 2026-10-23
+  detail: "evidence: drafter A, verifier could not grade."
+  record: kenya-ai-consult-null/2026-10-23.json

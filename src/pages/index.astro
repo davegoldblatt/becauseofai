@@ -4,10 +4,6 @@ import Hero from "../components/Hero.astro";
 import Registry from "../components/Registry.astro";
 import { because, siteCounts as c } from "../lib/site.ts";
 import { SITE } from "../site.ts";
-import { isUnreviewed } from "../lib/format.ts";
-// The hero is the site's poster. An entry no person has read yet stays in the
-// ledger with its UNREVIEWED stamp and out of the hero.
-const reviewed = because.filter((e) => !isUnreviewed(e));
 const org = { "@type": "Organization", name: SITE.name, url: SITE.url };
 const jsonLd = [
   { "@context": "https://schema.org", "@type": "WebSite", name: SITE.name, url: SITE.url, description: SITE.description, publisher: org },
@@ -34,6 +30,6 @@ const description = `What AI has measurably done for people: ${c.because} benefi
 ---
 <Base title="Because of AI" ogTitle="Because of AI" description={description} section="because" nameplate="full" jsonLd={jsonLd}>
   <h1 class="sr-only">Because of AI: a registry of measured AI benefits to people</h1>
-  <Hero entries={reviewed} />
+  <Hero entries={because} />
   <Registry entries={because} section="because" />
 </Base>
