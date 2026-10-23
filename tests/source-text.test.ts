@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { htmlToText, findQuote, extractDoi, nctOf, pmcidOf, decodeEntities, normalizeForMatch } from "../scripts/lib/source-text.ts";
 import { withOwned, stripOwned, appendHistory, appendSource, setScalar, contentSha256, readOwned, assertEntry } from "../scripts/lib/yaml-edit.ts";
 import { topBlocks } from "../src/lib/entry-text.ts";
+import { parse } from "yaml";
 
 test("html to text drops chrome and keeps paragraphs and cells", () => {
   const t = htmlToText('<html><head><title>T</title><style>p{}</style><script>x()</script></head><body><nav>menu</nav><p>Hello &amp; <b>world</b>&nbsp;&#8211; ok</p><table><tr><td>2.9%</td><td>3.9%</td></tr></table></body></html>');
@@ -140,4 +141,24 @@ test("an edit that breaks the entry is refused before it is written", () => {
   assert.throws(() => setScalar(RAW, ["section"], "bogus"), /fails the schema/);
   assert.throws(() => assertEntry("id: [", "x"), /not valid YAML/);
   assert.throws(() => withOwned(RAW, { receipts: [{ field: "headline", quote: Array(30).fill("w").join(" "), locator: "l", source: 0 }] }) && assertEntry(withOwned(RAW, { receipts: [{ field: "headline", quote: Array(30).fill("w").join(" "), locator: "l", source: 0 }] })), /25 words/);
+});
+
+test("round 3: operator neighbours, leading decimals, tags, flow sequences in place, unsupported layouts", () => {
+  assert.equal(findQuote("rate >10 percent overall", "10 percent overall").found, false);
+  assert.equal(findQuote("dose .5 mg daily", "5 mg daily").found, false);
+  assert.equal(findQuote("dose .5 mg daily", ".5 mg daily").found, true);
+  assert.equal(findQuote("ratio ≥ 1.5 in arm", "1.5 in arm").found, false);
+  assert.equal(findQuote("rate 10 percent overall", "10 percent overall").found, true);
+  // A tagged scalar is replaced through the document API, and the value read back is the one asked for.
+  const tagged = RAW.replace("summary: s", "summary: !!str s");
+  const r = setScalar(tagged, ["summary"], "t");
+  assert.equal(parse(r.text).summary, "t");
+  // A flow-style history is re-rendered in place; the folded headline keeps its bytes.
+  const flow = RAW.replace(/history:\n  - date: 2026-10-22\n    note: "Added."/, 'history: [{ date: 2026-10-22, note: "Added." }]');
+  const f = appendHistory(flow, { date: "2026-10-24", note: "Updated." });
+  assert.match(f, /headline: >-\n  Because of AI, 10 fewer patients\n  per 1,000 had an event\./);
+  assert.match(f, /history:\n  - date: 2026-10-22\n    note: Added\.\n  - date: 2026-10-24\n    note: Updated\.\nheld:/);
+  // An indented root mapping or a flow mapping is refused.
+  assert.throws(() => topBlocks(RAW.split("\n").map((l) => (l ? "  " + l : l)).join("\n")), /column 0/);
+  assert.throws(() => topBlocks("{ id: x, section: because }\n"), /flow mapping/);
 });

@@ -11,6 +11,7 @@ import { callStructured, availability } from "./lib/vendors.ts";
 import { loadVendorConfig, readDraft, allEntryIds, fetchPrimaries, sourcesForPrompt, writeOwned, fmtTokens, todayUtc, type DraftEntry } from "./lib/pipeline.ts";
 import { entryForModel } from "./lib/verdict.ts";
 import { findQuote } from "./lib/source-text.ts";
+import { withOwned, contentSha256 } from "./lib/yaml-edit.ts";
 import { wordCount, RECEIPT_MAX_WORDS, missingReceipts } from "../src/schema.ts";
 
 const argv = process.argv.slice(2);
@@ -66,7 +67,8 @@ for (const id of ids) {
   console.log(`  ${kept.length} receipt(s) kept${missing.length ? `; still missing ${missing.join(", ")}` : "; every required field covered"}`);
   if (dryRun) { for (const k of kept) console.log(`    ${k.field} <- "${k.quote}" (${k.locator}, source ${k.source})`); continue; }
   // New receipts, new drafter of record, and any previous verification no longer applies.
-  writeOwned(d, { receipts: kept, rationale: r.output.rationale.trim() || undefined, drafted: { vendor: drafter.vendor, model: r.model, date: todayUtc(), via: r.via }, verification: undefined });
+  const stampedText = withOwned(d.raw, { receipts: kept, rationale: r.output.rationale.trim() || undefined, verification: undefined });
+  writeOwned(d, { receipts: kept, rationale: r.output.rationale.trim() || undefined, drafted: { vendor: drafter.vendor, model: r.model, date: todayUtc(), via: r.via, content: contentSha256(stampedText) }, verification: undefined });
   wrote++;
 }
 console.log(`\n${wrote} entries written · ${failed} not written`);

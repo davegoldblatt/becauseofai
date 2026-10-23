@@ -27,13 +27,15 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
   const e = d.entry;
   const previous = latestRecord(e);
   const changed = !previous || previous.entry_sha256 !== d.contentSha;
-  // The drafter of record. A stamp on the file (receipts.ts, or an earlier
-  // gate run) names the vendor; the vendor can never be relabelled by a flag,
-  // and a conflict refuses the run. The model and date follow the run that
-  // produced the current content: a new draft by the same vendor re-stamps.
+  // The drafter of record. A stamp on the file names the vendor, and the
+  // vendor can never be relabelled by a flag: a conflict refuses the run. The
+  // stamp is kept while it was made for this content (its content hash, or a
+  // previous record with the same hash); otherwise the content was re-drafted
+  // and the run's own drafter is stamped.
   const stamped = e.drafted ?? e.verification?.drafter ?? null;
   if (stamped && stamped.vendor !== o.drafter.vendor) throw new Error(`${id}: the file says ${stamped.vendor} drafted it; the run claims ${o.drafter.vendor}`);
-  const drafter: Role & { date: string } = stamped && !changed ? { vendor: stamped.vendor, model: stamped.model, date: stamped.date } : { vendor: o.drafter.vendor, model: o.drafter.model, date: o.date };
+  const stampHolds = !!stamped && ((e.drafted?.content ? e.drafted.content === d.contentSha : false) || (!!previous && previous.entry_sha256 === d.contentSha));
+  const drafter: Role & { date: string } = stampHolds ? { vendor: stamped!.vendor, model: stamped!.model, date: stamped!.date } : { vendor: o.drafter.vendor, model: o.drafter.model, date: o.date };
   if (drafter.vendor === o.verifier.vendor) throw new Error(`${id}: drafter and verifier are both ${drafter.vendor}; refusing`);
   const unchanged = !changed && e.verification?.verifier.verdict === "pass" && !e.held;
   if (unchanged && !o.force) {
@@ -64,11 +66,13 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
     log("  verifier unavailable; previous verification stands");
     return { id, adjudication: previous!.adjudication, skipped: true, record: e.verification!.record };
   }
-  // An open dispute is lifted only by the dispute handler. Whatever this run
+  // An open dispute is lifted only by the dispute handler resolving it, and
+  // only when no other issue is still open on the entry. Whatever this run
   // found is in the record; the entry stays held as disputed until then.
-  const openDispute = e.held?.reason === "disputed" && !o.resolvesDispute;
+  const openIssues = e.held?.reason === "disputed" ? (e.held.issues ?? []).filter((n) => n !== o.resolvesDispute) : [];
+  const openDispute = e.held?.reason === "disputed" && (openIssues.length > 0 || (!e.held.issues && !o.resolvesDispute));
   if (openDispute) {
-    log(`  a dispute is open; this run's outcome (${final.result}${final.reason ? ` ${final.reason}` : ""}) is recorded and the hold stays`);
+    log(`  dispute${openIssues.length > 1 ? "s" : ""} ${openIssues.map((n) => `#${n}`).join(", ") || "(unnumbered)"} still open; this run's outcome (${final.result}${final.reason ? ` ${final.reason}` : ""}) is recorded and the hold stays`);
     final = { result: "held", reason: "disputed", detail: `${e.held!.detail} Latest gate run: ${final.result}${final.reason ? ` (${final.reason})` : ""}.`.slice(0, 1900) };
   }
   // The record keeps the whole explanation; the entry's own summary is bounded.
@@ -86,8 +90,10 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
     ? { drafter: record.drafter!, verifier: { vendor: run.vendor, model: run.model, date: o.date, verdict: final.result === "published" ? "pass" : "fail" }, record: rel }
     : undefined;
   const since = e.held && e.held.reason === final.reason ? e.held.since : o.date;
-  const held = final.result === "held" ? { reason: final.reason!, since, detail: final.detail, record: final.reason === "disputed" && e.held?.record ? e.held.record : rel } : undefined;
-  const drafted = { vendor: drafter.vendor, model: drafter.model, date: drafter.date, ...(e.drafted?.via && !changed ? { via: e.drafted.via } : {}) };
+  const held = final.result === "held"
+    ? { reason: final.reason!, since, detail: final.detail, record: final.reason === "disputed" && e.held?.record ? e.held.record : rel, ...(final.reason === "disputed" && openIssues.length ? { issues: openIssues } : {}) }
+    : undefined;
+  const drafted = { vendor: drafter.vendor, model: drafter.model, date: drafter.date, content: d.contentSha, ...(e.drafted?.via && stampHolds ? { via: e.drafted.via } : {}) };
   writeOwned(d, { drafted, verification, held });
   log(`  wrote data/verifications/${rel}`);
   return { id, adjudication: final, skipped: false, record: rel };

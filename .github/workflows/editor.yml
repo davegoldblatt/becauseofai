@@ -107,7 +107,7 @@ jobs:
           set -euo pipefail
           node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-opus-5-5" --max 0 --force
           git checkout -- . ':!data/' || true
-          bad=$(git status --porcelain | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)
+          bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)
           if [ -n "$bad" ]; then echo "the gate wrote outside the data:"; echo "$bad"; exit 1; fi
           if ! git diff --quiet -- data/ || [ -n "$(git status --porcelain data/)" ]; then
             git config user.name "becauseofai gate"
@@ -126,8 +126,8 @@ jobs:
           n=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
           if [ -z "$n" ]; then
             title=$(git log -1 --format=%s "origin/$BRANCH" -- data/entries research 2>/dev/null || git log -1 --format=%s)
-            body_file=.scout/pr-body.md
-            [ -s "$body_file" ] || git log "$BASE_SHA..HEAD" --format=%B > "$body_file"
+            body_file="$RUNNER_TEMP/pr-body.md"
+            git log "$BASE_SHA..HEAD" --format=%B > "$body_file"
             if url=$(gh pr create --head "$BRANCH" --base main --title "$title" --body-file "$body_file" 2>&1); then
               n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
               echo "opened #$n for $BRANCH"

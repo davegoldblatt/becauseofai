@@ -14,7 +14,9 @@ import { EntrySchema, isPublished, type Entry, type Section, type DateLike } fro
 import { contentSha256 } from "./entry-text.ts";
 import type { VerificationRecord } from "../../scripts/lib/record.ts";
 import { VerdictSchema } from "../../scripts/lib/verdict-schema.ts";
+import { RecordSchema } from "../../scripts/lib/record-schema.ts";
 import { adjudicate } from "../../scripts/lib/adjudicate.ts";
+import { topBlocks } from "./entry-text.ts";
 
 export const ENTRIES_DIR = fileURLToPath(new URL("../../data/entries/", import.meta.url));
 
@@ -37,21 +39,34 @@ export type Records = Record<string, VerificationRecord>;
 export function recordMismatch(e: Entry, raw: string, records: Records): string | null {
   const v = e.verification;
   if (!v) return null;
-  const rec = records[v.record];
-  if (!rec) return `record ${v.record} is not on disk`;
+  const raw_ = records[v.record];
+  if (!raw_) return `record ${v.record} is not on disk`;
+  const parsed = RecordSchema.safeParse(raw_);
+  if (!parsed.success) return `record ${v.record} is malformed (${parsed.error.issues[0]?.path.join(".")}: ${parsed.error.issues[0]?.message})`;
+  const rec = parsed.data as VerificationRecord;
   if (rec.entry !== e.id) return `record ${v.record} belongs to ${rec.entry}`;
   if (rec.kind !== "verification") return `record ${v.record} is a ${rec.kind} record, not a verification`;
   if (rec.adjudication.result !== "published") return `record ${v.record} did not publish (${rec.adjudication.reason})`;
-  if (!rec.verifier || rec.verifier.error || rec.verifier.vendor !== v.verifier.vendor || rec.verifier.model !== v.verifier.model) return `record ${v.record} names a different verifier`;
-  if (!rec.drafter || rec.drafter.vendor !== v.drafter.vendor) return `record ${v.record} names a different drafter`;
+  // The vendors, models, and dates on the entry are the record's, exactly.
+  if (!rec.verifier || rec.verifier.error || rec.verifier.vendor !== v.verifier.vendor || rec.verifier.model !== v.verifier.model || rec.verifier.date !== v.verifier.date) return `record ${v.record} names a different verifier`;
+  if (!rec.drafter || rec.drafter.vendor !== v.drafter.vendor || rec.drafter.model !== v.drafter.model || rec.drafter.date !== v.drafter.date) return `record ${v.record} names a different drafter`;
+  if (e.drafted && (e.drafted.vendor !== v.drafter.vendor || e.drafted.model !== v.drafter.model)) return `the drafter stamp on the entry (${e.drafted.vendor} ${e.drafted.model}) is not the record's`;
+  if (rec.drafter.vendor === rec.verifier.vendor) return `record ${v.record} has one vendor on both sides`;
   if (rec.entry_sha256 !== contentSha256(raw)) return `the entry changed after record ${v.record} was made`;
   // The record must carry a complete verdict and the inputs that produced the
-  // decision, and those inputs must still produce it.
+  // decision, bound to this entry's sources and receipts, and those inputs
+  // must still produce it.
   const verdict = VerdictSchema.safeParse(rec.verifier.output);
   if (!verdict.success) return `record ${v.record} carries no complete verdict`;
+  const primaries = new Map(e.sources.map((s, i) => [i, s]).filter(([, s]) => s.type === "primary"));
+  for (const s of rec.sources) {
+    const src = primaries.get(s.index);
+    if (!src || src.url !== s.url) return `record ${v.record} read a source that is not the entry's (${s.index}: ${s.url})`;
+  }
+  const okIdx = new Set(rec.sources.filter((s) => s.ok).map((s) => s.index));
+  if (!okIdx.size) return `record ${v.record} read no source`;
   const receipts = e.receipts ?? [];
-  if (rec.quote_checks.length !== receipts.length || rec.quote_checks.some((c, i) => c.field !== receipts[i].field || c.quote !== receipts[i].quote || !c.found)) return `record ${v.record} did not check the entry's receipts`;
-  if (!rec.sources.some((s) => s.ok)) return `record ${v.record} read no source`;
+  if (rec.quote_checks.length !== receipts.length || rec.quote_checks.some((c, i) => c.field !== receipts[i].field || c.quote !== receipts[i].quote || c.source !== receipts[i].source || !c.found || !okIdx.has(c.source))) return `record ${v.record} did not check the entry's receipts against its sources`;
   const again = adjudicate({ entry: e, drafterVendor: rec.drafter.vendor, verifierVendor: rec.verifier.vendor, sources: rec.sources, quoteChecks: rec.quote_checks, verifier: { ok: true, output: verdict.data } });
   if (again.result !== "published") return `record ${v.record} does not re-derive as published (${again.reason})`;
   return null;
@@ -134,6 +149,9 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
       errors.push({ file, message: `YAML parse error: ${(err as Error).message}` });
       continue;
     }
+    // Only a block mapping at column 0, without anchors, is a supported layout: the
+    // pipeline cannot edit anything else, so nothing else publishes.
+    try { topBlocks(raw); } catch (err) { errors.push({ file, message: (err as Error).message }); continue; }
     const result = EntrySchema.safeParse(doc);
     if (!result.success) {
       for (const issue of result.error.issues) {

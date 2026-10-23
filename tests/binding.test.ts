@@ -100,11 +100,24 @@ test("a pass marker publishes only with a matching record", () => {
   assert.match(contradicted.unbound.get("x")!, /does not re-derive/);
 });
 
+test("round 3: a record binds to the entry's sources, receipts' source indices, and the drafter's model and date", () => {
+  const otherUrl = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ sources: [{ ...record().sources[0], url: "https://elsewhere.org/p" }] }) } });
+  assert.match(otherUrl.unbound.get("x")!, /not the entry's/);
+  const otherIdx = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ quote_checks: record().quote_checks.map((c) => ({ ...c, source: 99 })) }) } });
+  assert.match(otherIdx.unbound.get("x")!, /against its sources/);
+  const otherModel = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ drafter: { vendor: "anthropic", model: "other", date: "2026-10-23" } }) } });
+  assert.match(otherModel.unbound.get("x")!, /different drafter/);
+  const malformed = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": { ...record(), sources: [{ ok: true, method: "clinicaltrials" }] } as unknown as VerificationRecord } });
+  assert.match(malformed.unbound.get("x")!, /malformed/);
+  const stamp = FILE.replace("verification:", "drafted:\n  vendor: anthropic\n  model: not-m1\n  date: 2026-10-23\nverification:");
+  assert.match(parseEntryFiles({ "x.yaml": stamp }, { records: { "x/2026-10-23.json": record() } }).unbound.get("x")!, /drafter stamp/);
+});
+
 test("aliases are refused, so a value cannot change through an excluded field", () => {
   const aliased = FILE.replace("headline: Because of AI, 10 fewer patients per 1,000 had an event.", "notes: &c Because of AI, 10 fewer patients per 1,000 had an event.\nheadline: *c");
   const r = parseEntryFiles({ "x.yaml": aliased }, { records: { "x/2026-10-23.json": record() } });
   assert.equal(r.publishable.length, 0);
-  assert.match(r.unbound.get("x")!, /anchors and aliases/);
+  assert.match(r.errors.map((p) => p.message).join("\n"), /anchors and aliases/);
 });
 
 test("changing a number or a receipt after verification holds the entry; a note does not", () => {

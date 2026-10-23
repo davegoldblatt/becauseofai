@@ -34,8 +34,11 @@ function refuseAliases(doc: Document): void {
 export function topBlocks(raw: string): { doc: Document; blocks: TopBlock[]; mapEnd: number } {
   const doc = parseDocument(raw, { schema: "core", keepSourceTokens: true });
   if (!isMap(doc.contents)) throw new Error("entry is not a YAML mapping");
+  if ((doc.contents as { flow?: boolean }).flow) throw new Error("entry is a flow mapping; only a block mapping at column 0 is supported");
   refuseAliases(doc);
   const items = doc.contents.items as Pair[];
+  const first = (items[0]?.key as { range?: [number, number, number] })?.range;
+  if (first && raw.lastIndexOf("\n", first[0] - 1) + 1 !== first[0]) throw new Error("entry's top-level keys must start at column 0");
   const mapRange = (doc.contents as { range?: [number, number, number] }).range!;
   const mapEnd = mapRange[2];
   const blocks = items.map((p, i) => {

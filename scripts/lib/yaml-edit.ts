@@ -50,12 +50,21 @@ function renderItems(items: unknown[], indent: string): string {
 }
 
 // A sequence written in flow style (or empty) cannot take a textual insert;
-// the document API appends and re-flows the file. Rare, and never a failure.
+// the sequence alone is re-rendered as a block sequence in place, with the
+// rest of the file untouched.
 function appendViaDocument(raw: string, key: string, item: unknown): string {
-  const doc = parseDocument(raw, { schema: "core" });
-  const seq = doc.get(key, true);
-  if (seq && isSeq(seq)) doc.addIn([key], item); else doc.set(key, [item]);
-  return doc.toString({ lineWidth: 0 });
+  const { blocks } = topBlocks(raw);
+  const b = blocks.find((x) => x.key === key);
+  if (!b) throw new Error(`no ${key} block`);
+  const seq = b.valueNode;
+  const items = seq && isSeq(seq) ? (seq.toJSON() as unknown[]) : [];
+  const vr = rangeOf(seq);
+  const keyEnd = rangeOf(b.keyNode)![1];
+  // From just after "key:" to the end of the old value.
+  const start = raw.indexOf(":", keyEnd) + 1;
+  const end = vr ? vr[1] : start;
+  const rendered = "\n" + renderItems([...items, item], "  ").replace(/\n$/, "");
+  return raw.slice(0, start) + rendered + raw.slice(end);
 }
 
 // Append a history line inside the history block, with the block's own indentation.
@@ -91,14 +100,18 @@ export function appendSource(raw: string, src: { title: string; url: string; typ
 export function setScalar(raw: string, path: (string | number)[], value: string | number | null): { text: string; reflowed: boolean } {
   const doc = parseDocument(raw, { schema: "core", keepSourceTokens: true });
   const node = doc.getIn(path, true);
-  if (node && isScalar(node) && node.range) {
+  if (node && isScalar(node) && node.range && !node.tag) {
     const [start, valueEnd, nodeEnd] = node.range;
     const rendered = typeof value === "string" && value.includes("\n") ? JSON.stringify(value) : stringify(value, { schema: "core", lineWidth: 0 }).replace(/\n$/, "");
     const wasBlock = node.type === "BLOCK_FOLDED" || node.type === "BLOCK_LITERAL";
     const tail = raw.slice(wasBlock ? nodeEnd : valueEnd);
     const sep = tail.startsWith("\n") || tail === "" ? "" : "\n";
     const text = raw.slice(0, start) + rendered + sep + tail;
-    return { text: assertEntry(text, `entry after setting ${path.join(".")}`), reflowed: false };
+    // The file must now read back exactly the value asked for.
+    const back = parseDocument(text, { schema: "core" }).getIn(path);
+    if (back === value || (typeof back === "number" && typeof value === "string" && String(back) === value)) {
+      return { text: assertEntry(text, `entry after setting ${path.join(".")}`), reflowed: false };
+    }
   }
   const parent = path.length > 1 ? doc.getIn(path.slice(0, -1), true) : doc.contents;
   if (!parent || !(isMap(parent) || isSeq(parent))) throw new Error(`cannot set ${path.join(".")}: parent is not a map`);

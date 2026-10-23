@@ -320,17 +320,25 @@ export function normalizeForMatch(s: string): string {
 // operators that change a number's meaning, and words. Other punctuation
 // (quotes, brackets, commas, periods between words) is dropped, so a quote may
 // differ from the source in that punctuation but never in a number or a word.
-const TOKEN = /[+-]?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?%?|<=|>=|[<>=~×\/]|[\p{L}]+/gu;
+const TOKEN = /[+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:\/\d+(?:\.\d+)?)?%?|<=|>=|[<>=~×\/]|[\p{L}]+/gu;
+const OPERATOR = /^(<=|>=|[<>=~×\/+-])$/;
+const NUMBER = /^[+-]?(?:\d|\.\d)/;
 export function matchTokens(s: string): string[] {
   return normalizeForMatch(s).match(TOKEN) ?? [];
 }
 
-function hasBoundary(t: string, at: number, len: number): boolean {
+function hasBoundary(t: string, at: number, len: number, q: string): boolean {
   const before = at === 0 ? "" : t[at - 1];
   const after = at + len >= t.length ? "" : t[at + len];
   const alnum = /[\p{L}\p{N}]/u;
   // A sign, an operator, or a decimal point glued to the match changes the number: "-10" is not "10", "1.0" is not "0", ">10" is not "10".
-  return !alnum.test(before) && !/[+\-.<>=~×\/]/.test(before) && !alnum.test(after) && !/[.%\/]/.test(after);
+  if (alnum.test(before) || /[+\-.<>=~×\/]/.test(before) || alnum.test(after) || /[.%\/]/.test(after)) return false;
+  // An operator one space away still governs a number at the edge of the match: "≥ 1.5" is not "1.5".
+  const prevWord = t.slice(0, at).trimEnd().match(/(\S+)$/)?.[1] ?? "";
+  const nextWord = t.slice(at + len).trimStart().match(/^(\S+)/)?.[1] ?? "";
+  if (NUMBER.test(q) && OPERATOR.test(prevWord)) return false;
+  if (NUMBER.test(q.match(/(\S+)$/)?.[1] ?? "") && OPERATOR.test(nextWord)) return false;
+  return true;
 }
 
 export function findQuote(text: string, quote: string): { found: boolean; exact: boolean } {
@@ -340,15 +348,19 @@ export function findQuote(text: string, quote: string): { found: boolean; exact:
   // Exact: the normalised quote occurs at a token boundary.
   let at = t.indexOf(q);
   while (at >= 0) {
-    if (hasBoundary(t, at, q.length)) return { found: true, exact: true };
+    if (hasBoundary(t, at, q.length, q)) return { found: true, exact: true };
     at = t.indexOf(q, at + 1);
   }
-  // Loose: the same tokens in the same order, punctuation aside. Numbers must match exactly.
+  // Loose: the same tokens in the same order, punctuation aside. Numbers must
+  // match exactly, and a number at the edge of the match may not sit next to
+  // an operator in the source that the quote left out.
   const qt = matchTokens(quote);
   if (qt.length < 3) return { found: false, exact: false };
   const tt = matchTokens(text);
   outer: for (let i = 0; i + qt.length <= tt.length; i++) {
     for (let j = 0; j < qt.length; j++) if (tt[i + j] !== qt[j]) continue outer;
+    if (NUMBER.test(qt[0]) && i > 0 && OPERATOR.test(tt[i - 1])) continue;
+    if (NUMBER.test(qt[qt.length - 1]) && i + qt.length < tt.length && OPERATOR.test(tt[i + qt.length])) continue;
     return { found: true, exact: false };
   }
   return { found: false, exact: false };

@@ -157,7 +157,12 @@ export const VendorRun = z
 
 // Who wrote the receipts (and, for a new entry, the entry): bound to the file
 // so the gate's drafter of record cannot be relabelled by a flag.
-export const Drafted = VendorRun.extend({ via: z.string().max(40).optional() }).strict();
+export const Drafted = VendorRun.extend({
+  via: z.string().max(40).optional(),
+  // sha256 of the verifiable content the stamp was made for (see
+  // src/lib/entry-text.ts); the gate keeps the stamp only while it matches.
+  content: z.string().regex(/^[0-9a-f]{64}$/).optional(),
+}).strict();
 
 export const Verification = z
   .object({
@@ -178,6 +183,9 @@ export const Held = z
     since: FullDate,
     detail: NonBlank.max(2000),
     record: z.string().max(200).optional(),
+    // For reason "disputed": the issue numbers still unresolved. The hold
+    // lifts only when this list is empty.
+    issues: z.array(z.number().int().positive()).max(50).optional(),
   })
   .strict();
 

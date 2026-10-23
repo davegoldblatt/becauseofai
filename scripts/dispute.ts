@@ -15,7 +15,7 @@ import { callStructured } from "./lib/vendors.ts";
 import { runGate } from "./lib/gate.ts";
 import { loadVendorConfig, todayUtc, readDraft, fetchPrimaries, sourcesForPrompt, writeRecord, asOf, fmtTokens, ROOT, type Role } from "./lib/pipeline.ts";
 import { fetchSourceText, normalizeForMatch } from "./lib/source-text.ts";
-import { appendHistory, appendSource, setScalar, withOwned, readOwned } from "./lib/yaml-edit.ts";
+import { appendHistory, appendSource, setScalar, withOwned, readOwned, assertEntry } from "./lib/yaml-edit.ts";
 import { RECEIPT_FIELDS, wordCount, RECEIPT_MAX_WORDS, heldInfo } from "../src/schema.ts";
 import { loadEntries } from "../src/lib/entries.ts";
 import type { VendorRunRecord, VerificationRecord } from "./lib/record.ts";
@@ -126,14 +126,27 @@ if (dryRun) { console.log(reasoning); process.exit(0); }
 const link = (rel: string) => `https://github.com/${repo}/blob/main/data/verifications/${rel}`;
 let text = d.raw;
 
-// A hold that this very issue placed is lifted when the issue resolves; a hold
-// another issue placed stays.
-const heldByThisIssue = e.held?.reason === "disputed" && new RegExp(`#${issueNo}\\b`).test(e.held.detail);
+// A disputed hold lists the issues still open on the entry. Resolving this
+// issue removes it from the list; the hold lifts only when the list is empty,
+// and the gate then recomputes the entry's state.
+const openIssues = e.held?.reason === "disputed" ? (e.held.issues ?? []) : [];
+const remaining = openIssues.filter((n) => n !== issueNo);
+const heldByThisIssue = e.held?.reason === "disputed" && openIssues.includes(issueNo);
 const bounded = (s: string) => (s.length > 1900 ? s.slice(0, 1897) + "..." : s);
+const write = (t: string) => fs.writeFileSync(d.file, assertEntry(t, `${id}.yaml`));
+const keepOrLift = (t: string): string => {
+  if (!heldByThisIssue) return t;
+  if (remaining.length) return withOwned(t, { held: { ...e.held!, issues: remaining, detail: bounded(`${e.held!.detail} Dispute #${issueNo} resolved; #${remaining.join(", #")} still open.`) } });
+  return withOwned(t, { held: undefined, verification: e.verification?.verifier.verdict === "pass" ? e.verification : undefined });
+};
 
 if (finalOutcome === "rejected") {
-  if (heldByThisIssue) { text = withOwned(text, { held: undefined }); fs.writeFileSync(d.file, text); }
-  try { text = appendHistory(text, { date, note: `Verified against dispute #${issueNo}: not upheld by either vendor.` }); fs.writeFileSync(d.file, text); } catch (err) { console.log(`  history line not added: ${(err as Error).message}`); }
+  text = keepOrLift(text); write(text);
+  try { text = appendHistory(text, { date, note: `Verified against dispute #${issueNo}: not upheld by either vendor.` }); write(text); } catch (err) { console.log(`  history line not added: ${(err as Error).message}`); }
+  if (heldByThisIssue && !remaining.length) {
+    // The hold is gone; the gate says what the entry is now.
+    await runGate(id, { drafter: e.drafted ? { vendor: e.drafted.vendor, model: e.drafted.model } : cfg.drafter, verifier: cfg.verifier, date, dryRun: false, force: true, resolvesDispute: issueNo });
+  }
   const rel = writeDisputeRecord(currentState());
   gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=Two models from different vendors assessed this dispute against the primary source and neither upheld it. The entry is unchanged.\n\n${reasoning}\n\nRecord: ${link(rel)}`]);
   gh(["api", "-X", "PATCH", `repos/${repo}/issues/${issueNo}`, "-f", "state=closed", "-f", "state_reason=completed"]);
@@ -141,10 +154,11 @@ if (finalOutcome === "rejected") {
 } else if (finalOutcome === "split") {
   const rel = writeDisputeRecord({ result: "held", reason: "disputed", detail: "Held while the vendors disagree." });
   // The hold lands first, on its own; the history line is a courtesy after it.
-  const prior = e.held && !heldByThisIssue ? ` (${e.held.reason} since ${e.held.since}: ${e.held.detail})` : "";
-  text = withOwned(text, { held: { reason: "disputed", since: heldByThisIssue ? e.held!.since : date, detail: bounded(`${disputeDetail}${prior}`), record: rel } });
-  fs.writeFileSync(d.file, text);
-  try { text = appendHistory(text, { date, note: `Updated: held while dispute #${issueNo} splits the two vendors.` }); fs.writeFileSync(d.file, text); } catch (err) { console.log(`  history line not added: ${(err as Error).message}`); }
+  const prior = e.held && e.held.reason !== "disputed" ? ` (${e.held.reason} since ${e.held.since}: ${e.held.detail})` : "";
+  const issues = [...new Set([...openIssues, issueNo])];
+  text = withOwned(text, { held: { reason: "disputed", since: e.held?.reason === "disputed" ? e.held.since : date, detail: bounded(`${disputeDetail}${prior}`), record: rel, issues } });
+  write(text);
+  try { text = appendHistory(text, { date, note: `Updated: held while dispute #${issueNo} splits the two vendors.` }); write(text); } catch (err) { console.log(`  history line not added: ${(err as Error).message}`); }
   gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=The two vendors disagree on this dispute, so the entry is held (off the counted list) until they agree. This issue stays open.\n\n${reasoning}\n\nRecord: ${link(rel)}`]);
   console.log(`held ${id} as disputed; #${issueNo} stays open`);
 } else {
@@ -172,9 +186,9 @@ if (finalOutcome === "rejected") {
   text = setScalar(text, ["dates", "updated"], date).text;
   text = appendHistory(text, { date, note: `Corrected ${agreed.map((c) => c.field).join(", ")} per dispute #${issueNo}, upheld by both vendors.` });
   // The amendment clears the verification (the gate re-runs next) and this
-  // issue's own hold; a hold another issue placed stays for the gate to keep.
-  text = withOwned(text, { receipts, verification: undefined, held: heldByThisIssue || !e.held ? undefined : e.held });
-  fs.writeFileSync(d.file, text);
+  // issue's own hold; any other open issue stays on the hold for the gate to keep.
+  text = withOwned(text, { receipts, verification: undefined, held: !e.held ? undefined : e.held.reason === "disputed" ? (remaining.length ? { ...e.held, issues: remaining } : undefined) : e.held });
+  write(text);
   if (reflowed) console.log("  note: a missing key was added through the document API; the file was re-flowed");
   console.log(`  amended ${id}: ${agreed.map((c) => `${c.field} -> ${c.value}`).join("; ")}`);
   const gate = await runGate(id, { drafter: e.drafted ? { vendor: e.drafted.vendor, model: e.drafted.model } : cfg.drafter, verifier: cfg.verifier, date, dryRun: false, force: true, resolvesDispute: issueNo });
