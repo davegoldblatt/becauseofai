@@ -34,9 +34,12 @@ dates:
   added: 2026-10-22
   updated: 2026-10-22
 sources:
-  - title: "NICE early value assessment of DERM (May 2025)"
-    url: https://www.healthtechdigital.com/?p=237510
+  - title: "NICE early value assessment HTE24, 1 May 2025 (now HTG746, updated 17 March 2026): AI technologies for assessing and triaging skin lesions referred to the urgent suspected skin cancer pathway"
+    url: https://www.nice.org.uk/guidance/htg746
     type: primary
+  - title: "Health Tech Digital report on the NICE assessment (May 2025)"
+    url: https://www.healthtechdigital.com/?p=237510
+    type: secondary
   - title: "NIHR HTA: DERM and Moleanalyzer Pro clinical and cost-effectiveness (Feb 2026)"
     url: https://njl-admin.nihr.ac.uk/document/download/2049990
     type: primary
@@ -55,3 +58,5 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures (DAV-368)."
+  - date: 2026-10-22
+    note: "NICE guidance page is now the primary for the early value assessment; the news article that stood in for it is secondary (DAV-313)."
