@@ -1,0 +1,7 @@
+# Cloudflare Pages response headers.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog", </api/entries.json>; rel="alternate"; type="application/json", </llms.txt>; rel="alternate"; type="text/plain", </feed.xml>; rel="alternate"; type="application/rss+xml"

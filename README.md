@@ -37,7 +37,7 @@ An entry with no `primary` source is held: it validates, appears in the JSON fee
 
 ## Pages
 
-`/` (because), `/not-because-of-ai`, `/not-yet`, `/entry/<id>`, `/method`, `/changelog`, `/about`, `/search` (Pagefind, built at deploy time). Feeds: `/feed.xml` (one item per entry), `/changes.xml` (one item per history line), `/api/entries.json` (every entry, with `held` and `unreviewed` lists), `/sitemap.xml`. Share images: `/og/<id>.png` per entry plus one per section.
+`/` (because), `/not-because-of-ai`, `/not-yet`, `/entry/<id>`, `/method`, `/changelog`, `/about`, `/search` (Pagefind, built at deploy time), and a real `404.html` so unknown paths do not answer with the home page. Feeds and data: `/feed.xml` (one item per entry), `/changes.xml` (one item per history line), `/api/entries.json` (every entry, with `held` and `unreviewed` lists), `/api/schema.json` (JSON Schema generated from the zod schema), `/llms.txt` (a plain-text index for agents, built from the same data), `/.well-known/api-catalog` (RFC 9727, advertised by a `Link` header on `/` via `public/_headers`), `/sitemap.xml`. `robots.txt` allows everything and carries Content Signals (`search`, `ai-input`, `ai-train` all `yes`, matching the CC BY 4.0 license). Share images: `/og/<id>.png` per entry plus one per section.
 
 ## Add an entry
 
