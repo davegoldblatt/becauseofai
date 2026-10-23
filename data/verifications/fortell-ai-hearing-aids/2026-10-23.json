@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "fortell-ai-hearing-aids",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "4916dae308fd033213c96ef31f38bc3b57f99b1273771a4f23efdc4c9775e274",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.tandfonline.com/doi/full/10.1080/14992027.2026.2663345",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:35:16.481Z",
+      "reason": "HTTP 403"
+    },
+    {
+      "index": 1,
+      "url": "https://doi.org/10.1080/14992027.2026.2741760",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:35:17.179Z",
+      "reason": "HTTP 403"
+    },
+    {
+      "index": 2,
+      "url": "https://www.fortell.com/evidence",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:35:17.292Z",
+      "final_url": "https://www.fortell.com/evidence",
+      "sha256": "fa8a9ba4432eb915c718db9df6d102921a6b749ec58655d64e64218d902be259",
+      "chars": 7695,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact",
+      "source": 2,
+      "quote": "31% of words understood with Control",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 2,
+      "quote": "80% Words understood with Fortell",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 2,
+      "quote": "31% of words understood with Control",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 2,
+      "quote": "80% Words understood with Fortell",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "no-full-text",
+    "detail": "source 0 could not be read in full (HTTP 403); source 1 could not be read in full (HTTP 403); no receipt for headline, effect.relative, effect.absolute, reach, dates.achieved_start."
+  }
+}

@@ -48,3 +48,35 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: "The comparison is descriptive, with no control arm: AI CXR screening found TB in 5.3% of people screened, against under 0.1% for routine clinical symptom screening. The grade is only-path because the AI's CAD score decided who went on to GeneXpert testing in settings without radiologists to read the X-rays."
+receipts:
+  - field: headline
+    quote: Of those tested, 1,660 TB cases were identified
+    locator: Results and Achievements, Performance by High-Risk Population Group, p. 4
+    source: 0
+  - field: impact
+    quote: Of those tested, 1,660 TB cases were identified
+    locator: Results and Achievements, Performance by High-Risk Population Group, p. 4
+    source: 0
+  - field: impact_number
+    quote: Of those tested, 1,660 TB cases were identified
+    locator: Results and Achievements, Performance by High-Risk Population Group, p. 4
+    source: 0
+  - field: effect.absolute
+    quote: Of those tested, 1,660 TB cases were identified
+    locator: Results and Achievements, Performance by High-Risk Population Group, p. 4
+    source: 0
+  - field: effect.absolute
+    quote: "Table 1: Performance of AI CXR by population in project-supported regions, January 2025–March 2026"
+    locator: Table 1 caption, p. 4
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: ungrounded
+  since: 2026-10-23
+  detail: No receipt for effect.relative, dates.achieved_start, dates.achieved_end.
+  record: ethiopia-tb-ai-cxr/2026-10-23.json

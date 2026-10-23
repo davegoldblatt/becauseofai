@@ -82,3 +82,35 @@ history:
       Corrected the summary's "80-mph" to 80 kt (90 mph), as the discussion states.
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: The comparison is the NHC report's head-to-head check of the Google DeepMind ensemble (GDMI) against the official forecast and the other guidance models for Melissa (Tables 5b and 6b), together with the report's statement that GDMI guidance increased forecaster confidence in predicting rapid intensification at unusually long lead times.
+receipts:
+  - field: headline
+    quote: Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane,
+    locator: Forecast and Warning Critique, Intensity Forecast, p. 17
+    source: 0
+  - field: impact
+    quote: Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane,
+    locator: Forecast and Warning Critique, Intensity Forecast, p. 17
+    source: 0
+  - field: impact_number
+    quote: predicted a storm to reach Category 5 strength from that low of an initial intensity (80 kt - Category 1).
+    locator: Forecast and Warning Critique, Intensity Forecast, p. 17
+    source: 0
+  - field: dates.achieved_start
+    quote: INIT 25/2100Z 16.6N 75.5W 80 KT 90 MPH
+    locator: Discussion 18 body, Forecast Positions and Max Winds (issued 500 PM EDT Sat Oct 25 2025)
+    source: 1
+  - field: dates.achieved_end
+    quote: Melissa made landfall as an estimated 160-kt category 5 hurricane near New Hope, Jamaica, around 1725 UTC 28 October.
+    locator: Synoptic History, p. 4
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: ungrounded
+  since: 2026-10-23
+  detail: No receipt for effect.relative, reach.
+  record: hurricane-melissa-2025/2026-10-23.json

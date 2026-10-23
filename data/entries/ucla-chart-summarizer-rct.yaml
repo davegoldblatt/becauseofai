@@ -50,3 +50,29 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+rationale: Clinicians were randomized 1:1 to get the Epic chart summarization tool or to a usual-care control arm with no tool, so the AI's effect is separated from everything else (isolated).
+receipts:
+  - field: headline
+    quote: This is a RCT of 284 outpatient physicians at a large academic health system
+    locator: Registry descriptionModule.briefSummary
+    source: 1
+  - field: reach
+    quote: This is a RCT of 284 outpatient physicians at a large academic health system, randomized 1:1
+    locator: "Registry descriptionModule.briefSummary (organization: University of California, Los Angeles)"
+    source: 1
+  - field: dates.achieved_start
+    quote: |-
+      "date": "2026-02-23",
+          "type": "ACTUAL"
+    locator: Registry statusModule.startDateStruct
+    source: 1
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-23
+  via: claude-login
+held:
+  reason: ungrounded
+  since: 2026-10-23
+  detail: No receipt for impact_number, dates.achieved_end.
+  record: ucla-chart-summarizer-rct/2026-10-23.json

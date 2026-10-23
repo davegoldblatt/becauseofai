@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "china-ai-cal-null",
+  "date": "2026-10-23",
+  "as_of": "2026-10-22",
+  "entry_sha256": "96cb2ede0aade572db398c8fd8fd33a544567bdb0ef9fe61f6b175560c4849a9",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7195260",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:30:49.962Z",
+      "reason": "fetch failed: fetch failed"
+    },
+    {
+      "index": 1,
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp12837.pdf",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:31:03.988Z",
+      "reason": "fetch failed: fetch failed"
+    },
+    {
+      "index": 2,
+      "url": "https://www.socialscienceregistry.org/trials/7888",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-10-23T16:33:58.737Z",
+      "final_url": "https://www.socialscienceregistry.org/trials/7888",
+      "sha256": "d70fa34ee37b61dbd49c6fbde053701d51d6c52ec63229c6bdf62ecb853ec83b",
+      "chars": 5193,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 1,
+      "quote": "The final sample comprised 8,647 students and their 315 math teachers.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 1 could not be read: fetch failed: fetch failed"
+    },
+    {
+      "field": "reach",
+      "source": 1,
+      "quote": "we implement a field experiment involving 8,647 students from 315 classes in 105 primary schools across rural China.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 1 could not be read: fetch failed: fetch failed"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 2,
+      "quote": "2021-04-04",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 2,
+      "quote": "2021-06-14",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "no-full-text",
+    "detail": "source 1 could not be read in full (fetch failed: fetch failed); receipts for headline, reach could not be checked."
+  }
+}
