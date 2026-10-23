@@ -27,6 +27,7 @@ const MONO = "ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 const num = (v: number | null | undefined) => (v == null ? "?" : v.toLocaleString("en-US"));
+const count = (v: number | null | undefined, word: string) => `${num(v)} ${word}${v === 1 ? "" : "s"}`;
 const date = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 const label = (s: string) => `<div style="font:500 11px/1.6 ${MONO};text-transform:uppercase;letter-spacing:.08em;color:${GRAPHITE};">${esc(s)}</div>`;
 const h2 = (s: string) => `<div style="font:900 15px/1 ${DISPLAY};text-transform:uppercase;letter-spacing:.04em;color:${INK};border-top:2px solid ${INK};padding-top:10px;margin:36px 0 10px;">${esc(s)}</div>`;
@@ -67,13 +68,13 @@ export function renderHtml(d: DigestForHtml): string {
   // Posts as ledger rows.
   parts.push(h2("What we posted"));
   if (posts.length) {
-    for (const p of posts) parts.push(row(`${sentence(p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim(), p.url)}${meta(`${esc(date(p.created_at))} &middot; <span style="color:${INK};">${num(p.impressions)} views</span> &middot; ${num(p.likes)} likes &middot; ${num(p.replies)} replies &middot; ${num(p.reposts)} reposts &middot; ${num(p.bookmarks)} bookmarks`)}`));
+    for (const p of posts) parts.push(row(`${sentence(p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim(), p.url)}${meta(`${esc(date(p.created_at))} &middot; <span style="color:${INK};">${count(p.impressions, "view")}</span> &middot; ${count(p.likes, "like")} &middot; ${count(p.replies, "repl").replace(/repls$/, "replies").replace(/repl$/, "reply")} &middot; ${count(p.reposts, "repost")} &middot; ${count(p.bookmarks, "bookmark")}`)}`));
   } else if (d.announced.length) {
     for (const a of d.announced) parts.push(row(`${sentence(a.headline, a.url)}${meta(`announced ${esc(a.date)}`)}`));
   } else parts.push(`<div style="font:400 15px/1.5 ${BODY};color:${GRAPHITE};">Nothing new was posted.</div>`);
   if (replies.length) {
     parts.push(`<div style="margin-top:14px;">${label(`The account's own replies to others, last 7 days (${replies.length})`)}</div>`);
-    for (const p of replies) parts.push(row(`${sentence(p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim().slice(0, 160), p.url)}${meta(`${esc(date(p.created_at))} &middot; ${num(p.impressions)} views &middot; ${num(p.likes)} likes &middot; ${num(p.replies)} replies`)}`, RULE));
+    for (const p of replies) parts.push(row(`${sentence(p.text.replace(/\s+/g, " ").replace(/https?:\/\/\S+/g, "").trim().slice(0, 160), p.url)}${meta(`${esc(date(p.created_at))} &middot; ${count(p.impressions, "view")} &middot; ${count(p.likes, "like")} &middot; ${count(p.replies, "repl").replace(/repls$/, "replies").replace(/repl$/, "reply")}`)}`, RULE));
   }
 
   // Traffic.
