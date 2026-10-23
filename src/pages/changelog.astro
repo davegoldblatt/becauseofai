@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import { publishable, held } from "../lib/site.ts";
 import { fmtDate, isoDate, changeType, isUnreviewed, SECTION_LABEL, type ChangeType } from "../lib/format.ts";
 // Entries the research run published that no person has read yet, and entries
-// held back for lacking a primary source (DAV-366). Held entries are named
+// held back for lacking a primary source. Held entries are named
 // here, as they are in /api/entries.json, but never linked.
 const awaiting = publishable.filter(isUnreviewed);
 

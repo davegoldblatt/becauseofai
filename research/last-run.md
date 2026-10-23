@@ -1,11 +1,11 @@
 # Last research run — 2026-10-23
 
-Window: 2025-10-24 to 2026-10-23. Inputs: 27 entries, inbox, `.scout/candidates.json` (161 candidates over 8 days, 11 flagged randomized, 0 alerts, 1 source error). Extra scope: Linear DAV-313.
+Window: 2025-10-24 to 2026-10-23. Inputs: 27 entries, inbox, `.scout/candidates.json` (161 candidates over 8 days, 11 flagged randomized, 0 alerts, 1 source error). Extra scope: replace press-release primaries with the paper or registry record.
 
 ## Added
 Nothing. Three candidates were deep-checked and none cleared the bar (see Rejected). That is a valid week.
 
-## Changed (DAV-313 and review)
+## Changed (re-sourcing and review)
 - **golden-bridge-ii-stroke**: the BMJ paper (doi 10.1136/bmj-2025-085810, read in PMC) replaces the EurekAlert release as primary. **Corrected HR 0.71 → 0.74** (0.58 to 0.93); the 26% and the 10 per 1,000 stand. Beijing Ande Yizhi Technology is a co-funder, and whether it supplied the CDSS is now a `verify:`.
 - **columbia-star-birth**: the Lancet letter (doi 10.1016/S0140-6736(25)01623-X) replaces the release as primary. The first couple is the one who tried for nearly two decades (retrieval March 2025). The Klinefelter couple is a later case. Birth month corrected to **November 2025** (per TIME); the window stays `in`.
 - **oman-ai-retinopathy**: **now held.** No ministry or programme report has the figures; the MoH page is only the 17 March 2025 launch release. The Muscat Daily article is retyped as secondary. Window **in → ongoing** because the programme started before the window. The vendor (EyRIS) comes from its own claim.

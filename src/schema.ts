@@ -105,7 +105,7 @@ export const EntrySchema = z
     rank: z.number().int().positive(),
     headline: NonBlank,
     impact: NonBlank,
-    // Optional editorial control of the poster number (DAV-368). When set, the
+    // Optional editorial control of the poster number. When set, the
     // number and its label drive the hero, rows, table, and share image;
     // `impact` stays the citation phrase and the fallback.
     impact_number: z.string().nullable().optional(),
@@ -144,7 +144,7 @@ export const EntrySchema = z
   .strict()
   .superRefine((e, ctx) => {
     // Grades are required for because and not-because. not-yet entries have not
-    // been graded yet, so all three may be null there (decision 2 on DAV-302).
+    // been graded yet, so all three may be null there (README, decision 2).
     if (e.section !== "not-yet") {
       for (const key of ["evidence", "attribution"] as const) {
         if (e.grades[key] === null) {

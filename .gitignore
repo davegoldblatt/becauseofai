@@ -3,8 +3,6 @@ dist/
 .astro/
 # dependencies
 node_modules/
-# Eng OS run state and planning scratch (clone-shared, never committed)
-.engos/
 # environment
 .env
 .env.production

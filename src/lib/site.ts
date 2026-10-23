@@ -19,7 +19,7 @@ export const data = loadOrThrow(files);
 export const publishable = data.publishable;
 export const held = data.held;
 export const siteCounts = counts(publishable);
-// Counts of entries a person has read (DAV-366): the tabs and the share card
+// Counts of entries a person has read: the tabs and the share card
 // use these; the running head adds "N unreviewed".
 export const reviewed = publishable.filter((e) => !isUnreviewed(e));
 export const reviewedCounts = counts(reviewed);

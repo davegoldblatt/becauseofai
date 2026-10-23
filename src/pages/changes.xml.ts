@@ -4,7 +4,7 @@ import { publishable } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 import { isoDate, changeType, isUnreviewed } from "../lib/format.ts";
 
-// One item per history line, newest first (DAV-334). /feed.xml stays one item
+// One item per history line, newest first. /feed.xml stays one item
 // per entry. Only a complete YYYY-MM-DD becomes a pubDate; a month or year as
 // written is kept as text instead of inventing a day.
 export function GET(context: APIContext) {

@@ -12,13 +12,13 @@ export const SITE = {
   // disputes live there.
   repo: "https://github.com/davegoldblatt/becauseofai",
   // Editorial reference date for the 12-month window. Refreshed only through a
-  // reviewed change (DAV-302, decision 6).
+  // reviewed change (README, decision 6).
   asOf: "2026-10-22",
   // Appended to every share-image URL. Slack, X, and iMessage cache an image by
   // its URL for days; bump this when the card design changes so new posts
   // fetch the new image instead of the cached one.
   ogVersion: "3",
-  // The site's X account (DAV-371 posts new entries there). Handle without the
+  // The site's X account (the announce workflow posts new entries there). Handle without the
   // "@"; the footer link and the twitter:site card tag are both built from it.
   x: "bcuz_of_ai",
 };

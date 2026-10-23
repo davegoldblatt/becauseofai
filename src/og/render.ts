@@ -1,4 +1,4 @@
-// Open Graph images (DAV-341): ink background, the impact number in signal at
+// Open Graph images: ink background, the impact number in signal at
 // poster size, the sentence in white, three stamps, and the lag bar. Static TTF
 // instances of the same families the site uses (satori cannot read variable
 // fonts). Not-because cards carry the null-red rule; not-yet cards a WATCHLIST

@@ -2,7 +2,7 @@
 // coercion), validates every file against EntrySchema, and exposes two views:
 //   all          every entry on disk, validated (the archive)
 //   publishable  entries that may render: they carry at least one primary source
-// An entry with no primary source is HELD (decision 1 on DAV-302): it is not an
+// An entry with no primary source is HELD (README, decision 1): it is not an
 // error, it does not render, it is not counted, and it is never linked.
 import fs from "node:fs";
 import path from "node:path";

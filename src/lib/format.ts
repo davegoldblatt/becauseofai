@@ -54,7 +54,7 @@ export function fmtRange(start: DateLike | null | undefined, end: DateLike | nul
   return "";
 }
 
-// The achieved-date states the seed actually carries (DAV-302, decision 4).
+// The achieved-date states the seed actually carries (README, decision 4).
 export type AchievedState =
   | { kind: "range"; text: string }
   | { kind: "ongoing"; text: string }
@@ -132,7 +132,7 @@ export const WINDOW_LABEL: Record<string, string> = {
 };
 
 // One sentence per grade value. The method page and every stamp tooltip read
-// this same table, so the two can never drift (DAV-338, DAV-322).
+// this same table, so the two can never drift.
 export const GRADE_DESCRIPTION = {
   evidence: {
     A: "Randomized or cluster-randomized, with a preregistered primary endpoint.",
@@ -203,7 +203,7 @@ export function impactParts(e: Entry): ImpactParts {
 }
 
 // ---------------------------------------------------------------------------
-// Time axis shared by every lag bar on the site (DAV-339).
+// Time axis shared by every lag bar on the site.
 export type Timeline = { start: Date; end: Date };
 
 // The earliest calendar day a date as written could mean.
@@ -300,7 +300,7 @@ export function lagFor(e: Entry): Lag | null {
   const approx = lagApprox(e);
   const what = ref === "end" ? "after the benefit ended" : "after the benefit began";
   const short = `${approx ? "~" : ""}${lagShort(m)}`;
-  // One wording everywhere (DAV-369): the bar says "published 2.7 yrs later",
+  // One wording everywhere: the bar says "published 2.7 yrs later",
   // prose and the aria-label say "Published 2.7 yrs after the benefit ended."
   return { months: m, approx, ref, short, sentence: `Published ${short} ${what}.` };
 }

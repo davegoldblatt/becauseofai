@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       focus:
-        description: "Extra scope for this run only (for example a ticket's list of entries to re-source). Leave blank for the standing brief."
+        description: "Extra scope for this run only (for example a list of entries to re-source). Leave blank for the standing brief."
         required: false
         default: ""
 jobs:

@@ -6,7 +6,7 @@ import { because, siteCounts as c } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 import { isUnreviewed } from "../lib/format.ts";
 // The hero is the site's poster. An entry no person has read yet stays in the
-// ledger with its UNREVIEWED stamp and out of the hero (DAV-366).
+// ledger with its UNREVIEWED stamp and out of the hero.
 const reviewed = because.filter((e) => !isUnreviewed(e));
 const description = `What AI has measurably done for people: ${c.because} benefits that reached humans, were measured against something, and are dated by when they happened, not when they were published. ${c["not-because"]} nulls and ${c["not-yet"]} watchlist candidates under the same grades.`;
 ---
