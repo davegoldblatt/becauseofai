@@ -125,7 +125,9 @@ function vocabulary(asOf: string): string {
   ].join("\n");
 }
 
-const FOUR_TESTS = `The four tests: (1) the benefit reached actual people, not a benchmark score or a demo; (2) it was measured against something: a control arm, a prior period, a human benchmark, another model; (3) the AI did something that would not otherwise have happened, and the comparison lets you tell; (4) the date the benefit occurred is known, from the methods section, the trial registry, or the body of an operational report, never from an abstract or a press release.`;
+const FOUR_TESTS = `The four tests: (1) the benefit reached actual people, not a benchmark score or a demo; (2) it was measured against something: a control arm, a prior period, a human benchmark, another model; (3) the AI was a necessary part of what produced the result; the attribution grade (isolated, only-path, bundled, AI vs AI) records how cleanly its contribution can be separated, so a bundled package that was tested as a package passes this test and is graded bundled, and the test fails only when the AI's part cannot be identified at all; (4) the date the benefit occurred is known, from the methods section, the trial registry, or the body of an operational report, never from an abstract or a press release.`;
+
+const TEXT_NOTE = `The code may cut a long source at a fixed number of characters; a cut is marked in the source tag and does not make the text "not full text". full_text is false only when what you were given is visibly not the document: an abstract without methods and results, a landing page, a snippet, or a cookie or access wall. A complete registry record or report is full text even when it does not contain everything the entry claims; a claim the text does not carry is an unsupported receipt, not a full-text failure.`;
 
 export function verifierSystem(asOf: string): string {
   return `You are the independent verifier for becauseofai.org, a public registry of measured AI benefits to people. A model from a different vendor drafted the entry you are given. You never see its reasoning. You receive the entry's data and the text of its primary source(s), fetched by code. Judge only from that text: not from memory of the study, not from anything else. Do not browse, run commands, or read files.
@@ -137,12 +139,14 @@ ${vocabulary(asOf)}
 
 Sections: "because" is a measured benefit; "not-because" is a measured null or harm, and the four tests apply to the study the same way; "not-yet" is a candidate that has not passed the tests, carries null grades, and is not tested, though its receipts and dates are still checked.
 
-Receipts: each ties one field to a verbatim quote of ${RECEIPT_MAX_WORDS} words or fewer, with a locator and a source index. For every receipt, in the same order, say whether the quote read in context establishes the field's value: supported, contradicted, or unsupported. The code has already checked whether each quote occurs in the text; a quote marked as not found is unsupported. The achieved dates on an entry are a span; a receipt for a date is supported when the source gives that date at that precision (a month for a month, a day for a day).
+Receipts: each ties one field to a verbatim quote of ${RECEIPT_MAX_WORDS} words or fewer, with a locator and a source index. A receipt supports the NUMBER in its field, nothing more. For every receipt, in the same order, say whether the quote read in context establishes the field's numeric value: supported, contradicted (the source gives a different number or date), or unsupported (the quote does not establish that number, or the number is not in the source). For headline and impact, judge only the numeric claim; the rest of the sentence (what the result means, what has not been measured, what is first or only) is editorial framing that the four tests and the grades cover, not the receipt. The code has already checked whether each quote occurs in the text; a quote marked as not found is unsupported. The achieved dates on an entry are a span; a receipt for a date is supported when the source gives that date at that precision (a month for a month, a day for a day).
 
-Then grade the entry yourself from the source alone, say where the achieved dates can be read, say whether the text is the full document or only an abstract or landing page, classify the source, say whether the source shows a conflict of interest and whether the entry states it, and pass or fail the four tests. Where the text does not let you decide, say so in the note and choose the conservative answer: unsupported, false, or null. Be exact and brief.`;
+Then grade the entry yourself from the source alone, say where the achieved dates can be read, say whether the text is the full document, classify the source, say whether the source shows a conflict of interest and whether the entry states it, and pass or fail the four tests. Where the text does not let you decide, say so in the note and choose the conservative answer: unsupported, false, or null. Be exact and brief.
+
+${TEXT_NOTE}`;
 }
 
-export type SourceForPrompt = { index: number; url: string; method: string; sha256: string; text: string };
+export type SourceForPrompt = { index: number; url: string; method: string; sha256: string; text: string; truncated?: boolean };
 
 // The entry as the verifier sees it: without the drafter's reasoning, notes,
 // history, or any previous verdict.
@@ -161,14 +165,14 @@ export function entryForVerifier(yamlWithoutOwned: string, receiptsYaml: string)
 
 export function verifierUser(args: { asOf: string; entryId: string; entryYaml: string; quoteChecks: QuoteCheck[]; sources: SourceForPrompt[] }): string {
   const checks = args.quoteChecks.map((c, i) => `${i + 1}. ${c.field} (source ${c.source}): ${c.found ? "found" : "NOT FOUND"}`).join("\n");
-  const sources = args.sources.map((s) => `<source index="${s.index}" url="${s.url}" method="${s.method}" sha256="${s.sha256}">\n${s.text}\n</source>`).join("\n\n");
+  const sources = args.sources.map((s) => `<source index="${s.index}" url="${s.url}" method="${s.method}" sha256="${s.sha256}"${s.truncated ? ' truncated="true"' : ""}>\n${s.text}\n</source>`).join("\n\n");
   return `<as_of>${args.asOf}</as_of>\n\n<entry id="${args.entryId}">\n${args.entryYaml}\n</entry>\n\n<quote_checks>\n${checks || "(no receipts)"}\n</quote_checks>\n\n${sources}`;
 }
 
 export function drafterSystem(): string {
   return `You write receipts for becauseofai.org, a public registry of measured AI benefits to people. A receipt ties one field of an entry to one verbatim fragment of the primary source that supports it, so a reader can check the number against the sentence it came from.
 
-Rules. Every quote is verbatim from the source text you are given: character for character, including numbers, punctuation, and any typo; never paraphrased, never from memory. ${RECEIPT_MAX_WORDS} words or fewer. Each receipt carries a locator (section, table, figure, page, or registry field) and the index of the source it comes from. A receipt for an achieved date must come from the methods section, the registry record, or the body of a report, never from the abstract or a press release, and the locator says where. Write one receipt per required field; a second for the same field only when the value joins two numbers from two places. A field the text cannot support verbatim goes under unsupported with the reason; never invent or adjust a quote to make it fit. Also write rationale: one sentence naming the comparison that justifies the entry's attribution grade. Never change, grade, or comment on the entry's values.
+Rules. A receipt supports the number in its field, nothing more: for headline and impact, quote the sentence that carries the number, not every claim in the sentence. Every quote is verbatim from the source text you are given: character for character, including numbers, punctuation, and any typo; never paraphrased, never from memory. ${RECEIPT_MAX_WORDS} words or fewer. Each receipt carries a locator (section, table, figure, page, or registry field) and the index of the source it comes from. A receipt for an achieved date must come from the methods section, the registry record, or the body of a report, never from the abstract or a press release, and the locator says where. Write one receipt per required field; a second for the same field only when the value joins two numbers from two places. A field the text cannot support verbatim goes under unsupported with the reason; never invent or adjust a quote to make it fit. Also write rationale: one sentence naming the comparison that justifies the entry's attribution grade. Never change, grade, or comment on the entry's values.
 
 ${FOUR_TESTS}`;
 }

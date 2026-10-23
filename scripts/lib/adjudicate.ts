@@ -34,7 +34,13 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
   }
 
   const missing = missingReceipts(e);
-  if (missing.length) return hold("ungrounded", `No receipt for ${missing.join(", ")}.`);
+  if (missing.length) {
+    // A number with no receipt because the source that would carry it could
+    // not be read is a reading failure, not a grounding failure.
+    const unread = sources.filter((s) => !s.ok);
+    if (unread.length) return hold("no-full-text", `${unread.map((s) => `source ${s.index} could not be read in full (${s.reason})`).join("; ")}; no receipt for ${missing.join(", ")}.`);
+    return hold("ungrounded", `No receipt for ${missing.join(", ")}.`);
+  }
 
   const notFound = quoteChecks.filter((c) => !c.found);
   if (notFound.length) {
@@ -45,7 +51,11 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
   if (!verifier.ok) return hold("verification-unavailable", `The ${input.verifierVendor} verifier failed: ${verifier.error}`);
   const v = verifier.output;
 
-  if (!v.full_text) return hold("no-full-text", `The verifier read only an abstract or landing page, not the full document${v.summary ? ` (${v.summary})` : ""}.`);
+  // The verifier's full-text judgment matters for pages and PDFs, where the code
+  // cannot tell an abstract from a paper. A registry record from the API or a
+  // Europe PMC article is complete by construction.
+  const judged = fetched.some((s) => !/^(clinicaltrials|europepmc)/.test(s.method));
+  if (!v.full_text && judged) return hold("no-full-text", `The verifier read only an abstract or landing page, not the full document${v.summary ? ` (${v.summary})` : ""}.`);
   if (NOT_PRIMARY.has(v.source_kind)) return hold("no-primary-source", `The primary source is a ${v.source_kind.replace("-", " ")}; press releases and news articles are leads, not evidence.`);
 
   const bad = v.receipts.map((r, i) => ({ r, i })).filter(({ r }) => r.status !== "supported");

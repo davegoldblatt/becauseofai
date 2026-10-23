@@ -133,11 +133,14 @@ test("6. vendor B unavailable: held verification-unavailable, never published on
   assert.match(c.detail, /both anthropic/);
 });
 
-test("no full text: nothing fetched, or the verifier saw only an abstract", () => {
+test("no full text: nothing fetched, or the verifier saw only an abstract on a page", () => {
   const e = entry();
   assert.equal(adjudicate(input(e, { sources: [unfetched()], verifier: null })).reason, "no-full-text");
   const v = verdict(e, { full_text: false, summary: "Only the abstract was provided." });
-  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: v } })).reason, "no-full-text");
+  const page: SourceFetch = { ...fetched(), method: "html" };
+  assert.equal(adjudicate(input(e, { sources: [page], verifier: { ok: true, output: v } })).reason, "no-full-text");
+  // A registry record or a Europe PMC article is complete by construction: the verifier's doubt does not hold it.
+  assert.equal(adjudicate(input(e, { sources: [fetched()], verifier: { ok: true, output: v } })).result, "published");
 });
 
 test("grade split: any disagreement holds, with the split recorded", () => {
@@ -165,6 +168,12 @@ test("missing receipt coverage holds before the model is called", () => {
   const a = adjudicate(input(e, { quoteChecks: allFound(e), verifier: null }));
   assert.equal(a.reason, "ungrounded");
   assert.match(a.detail, /No receipt for reach/);
+  // When a primary source could not be read, the missing receipt is a reading failure.
+  const two = entry({ sources: [...entry().sources, { title: "Registry", url: "https://clinicaltrials.gov/study/NCT00000000", type: "primary" }], receipts: (entry().receipts ?? []).filter((r) => r.field !== "reach") });
+  const b = adjudicate(input(two, { sources: [unfetched(0, "only 230 characters"), fetched(2)], quoteChecks: allFound(two), verifier: null }));
+  assert.equal(b.reason, "no-full-text");
+  assert.match(b.detail, /source 0 could not be read/);
+  assert.match(b.detail, /no receipt for reach/);
 });
 
 test("the verifier answering for the wrong number of receipts is unavailable, not a pass", () => {

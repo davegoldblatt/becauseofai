@@ -9,8 +9,9 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-export const UA = "becauseofai-verifier/1.0 (https://becauseofai.org; mailto:dave@becauseofai.org)";
-export const MAX_CHARS = 120_000;
+export const UA_EMAIL = "dave@becauseofai.org";
+export const UA = `becauseofai-verifier/1.0 (https://becauseofai.org; mailto:${UA_EMAIL})`;
+export const MAX_CHARS = 160_000;
 export const MIN_FULL_TEXT_CHARS = 2_000;
 
 export type SourceText =
@@ -28,6 +29,11 @@ export function extractDoi(url: string): string | null {
 
 export function nctOf(url: string): string | null {
   const m = /\b(NCT\d{8})\b/i.exec(url);
+  return m ? m[1].toUpperCase() : null;
+}
+
+export function pmcidOf(url: string): string | null {
+  const m = /\b(PMC\d{6,9})\b/i.exec(url);
   return m ? m[1].toUpperCase() : null;
 }
 
@@ -82,8 +88,58 @@ function finish(url: string, finalUrl: string, method: string, text: string, opt
   return { ok: true, url, finalUrl, method, text: body, sha256: sha(body), chars: body.length, truncated };
 }
 
-async function get(url: string, accept: string, timeoutMs: number): Promise<Response> {
-  return fetch(url, { headers: { "User-Agent": UA, Accept: accept }, redirect: "follow", signal: AbortSignal.timeout(timeoutMs) });
+// A fetch that follows redirects itself and keeps cookies across the hops.
+// Publishers bounce a first visit through a cookie check (nature.com sends
+// every new client to idp.nature.com and back); without a jar the final page
+// is a "cookies not supported" stub. This is the same thing a browser does.
+type Jar = Map<string, Map<string, string>>; // cookie domain -> name -> value
+
+function storeCookies(jar: Jar, url: URL, setCookies: string[]): void {
+  for (const sc of setCookies) {
+    const [pair, ...attrs] = sc.split(";");
+    const eq = pair.indexOf("=");
+    if (eq < 0) continue;
+    const name = pair.slice(0, eq).trim(), value = pair.slice(eq + 1).trim();
+    let domain = url.hostname;
+    for (const a of attrs) {
+      const [k, v] = a.split("=").map((x) => x.trim());
+      if (k.toLowerCase() === "domain" && v) domain = v.replace(/^\./, "").toLowerCase();
+    }
+    if (!jar.has(domain)) jar.set(domain, new Map());
+    jar.get(domain)!.set(name, value);
+  }
+}
+
+function cookieHeader(jar: Jar, url: URL): string {
+  const out: string[] = [];
+  for (const [domain, cookies] of jar) {
+    if (url.hostname === domain || url.hostname.endsWith(`.${domain}`)) for (const [n, v] of cookies) out.push(`${n}=${v}`);
+  }
+  return out.join("; ");
+}
+
+async function get(url: string, accept: string, timeoutMs: number, hops = 8): Promise<Response> {
+  const jar: Jar = new Map();
+  let current = url;
+  const deadline = Date.now() + timeoutMs;
+  for (let i = 0; i <= hops; i++) {
+    const u = new URL(current);
+    const headers: Record<string, string> = { "User-Agent": UA, Accept: accept };
+    const cookie = cookieHeader(jar, u);
+    if (cookie) headers.Cookie = cookie;
+    const r = await fetch(current, { headers, redirect: "manual", signal: AbortSignal.timeout(Math.max(1000, deadline - Date.now())) });
+    storeCookies(jar, u, r.headers.getSetCookie?.() ?? []);
+    const loc = r.headers.get("location");
+    if (r.status >= 300 && r.status < 400 && loc && i < hops) {
+      await r.arrayBuffer().catch(() => undefined);
+      current = new URL(loc, current).toString();
+      continue;
+    }
+    // Reads of r.url by callers expect the final address.
+    Object.defineProperty(r, "url", { value: current });
+    return r;
+  }
+  throw new Error("too many redirects");
 }
 
 function flatten(v: unknown, prefix = "", out: string[] = []): string[] {
@@ -94,14 +150,49 @@ function flatten(v: unknown, prefix = "", out: string[] = []): string[] {
   return out;
 }
 
+// The registry record as compact JSON: the protocol and results sections,
+// which hold everything an entry can cite. The derived and document sections
+// (MeSH terms, attached files) are dropped so the record is not truncated.
 async function clinicalTrials(url: string, nct: string, timeoutMs: number, maxChars: number): Promise<SourceText> {
   const api = `https://clinicaltrials.gov/api/v2/studies/${nct}?format=json`;
   const r = await get(api, "application/json", timeoutMs);
   if (!r.ok) return { ok: false, url, method: "clinicaltrials", reason: `ClinicalTrials.gov API ${r.status}` };
-  const json = await r.json();
-  const text = flatten(json).join("\n");
+  const json = (await r.json()) as Record<string, unknown>;
+  const kept = { protocolSection: json.protocolSection, resultsSection: json.resultsSection, hasResults: json.hasResults };
+  const text = JSON.stringify(kept, null, 1).replace(/^\s+/gm, (m) => " ".repeat(Math.min(m.length, 6)));
   return finish(url, api, "clinicaltrials", text, { minChars: 500, maxChars });
 }
+
+async function europePmcFullText(url: string, pmc: string, timeoutMs: number, maxChars: number): Promise<SourceText | null> {
+  const ft = `https://www.ebi.ac.uk/europepmc/webservices/rest/${pmc}/fullTextXML`;
+  const r2 = await get(ft, "application/xml", timeoutMs);
+  if (!r2.ok) return null;
+  const xml = await r2.text();
+  if (!/<body[\s>]/i.test(xml)) return null; // front matter only
+  return finish(url, ft, "europepmc", htmlToText(xml), { minChars: MIN_FULL_TEXT_CHARS, maxChars });
+}
+
+// Unpaywall: the legitimate open-access copy of a DOI, when one exists
+// (publisher OA, PMC, or a repository). Tried after the publisher page fails.
+async function unpaywall(url: string, doi: string, timeoutMs: number, maxChars: number): Promise<SourceText | null> {
+  const r = await get(`https://api.unpaywall.org/v2/${encodeURIComponent(doi)}?email=${encodeURIComponent(UA_EMAIL)}`, "application/json", timeoutMs);
+  if (!r.ok) return null;
+  const json = (await r.json()) as { is_oa?: boolean; best_oa_location?: Loc | null; oa_locations?: Loc[] };
+  if (!json.is_oa) return null;
+  const locs = [json.best_oa_location, ...(json.oa_locations ?? [])].filter((l): l is Loc => !!l);
+  const seen = new Set<string>();
+  for (const l of locs) {
+    for (const u of [l.url_for_pdf, l.url]) {
+      if (!u || seen.has(u)) continue;
+      seen.add(u);
+      const pmc = pmcidOf(u);
+      const t = pmc ? await europePmcFullText(url, pmc, timeoutMs, maxChars).catch(() => null) : await direct(u, timeoutMs, maxChars).catch(() => null);
+      if (t && t.ok) return { ...t, url, method: `unpaywall:${t.method}` };
+    }
+  }
+  return null;
+}
+type Loc = { url?: string | null; url_for_pdf?: string | null; host_type?: string };
 
 async function europePmc(url: string, doi: string, timeoutMs: number, maxChars: number): Promise<SourceText | null> {
   const q = `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent(`DOI:"${doi}"`)}&format=json&resultType=lite`;
@@ -111,12 +202,7 @@ async function europePmc(url: string, doi: string, timeoutMs: number, maxChars: 
   const hit = json.resultList?.result?.[0];
   const pmc = hit?.pmcid ?? hit?.fullTextIdList?.fullTextId?.find((x) => /^PMC/.test(x));
   if (!pmc) return null;
-  const ft = `https://www.ebi.ac.uk/europepmc/webservices/rest/${pmc}/fullTextXML`;
-  const r2 = await get(ft, "application/xml", timeoutMs);
-  if (!r2.ok) return null;
-  const xml = await r2.text();
-  if (!/<body[\s>]/i.test(xml)) return null; // front matter only
-  return finish(url, ft, "europepmc", htmlToText(xml), { minChars: MIN_FULL_TEXT_CHARS, maxChars });
+  return europePmcFullText(url, pmc, timeoutMs, maxChars);
 }
 
 export function pdfToText(buf: Buffer): { ok: true; text: string } | { ok: false; reason: string } {
@@ -159,12 +245,23 @@ export async function fetchSourceText(url: string, opts: { timeoutMs?: number; m
   try {
     const nct = nctOf(url);
     if (nct && /clinicaltrials\.gov/i.test(url)) return await clinicalTrials(url, nct, timeoutMs, maxChars);
+    const pmcid = pmcidOf(url);
+    if (pmcid) {
+      const t = await europePmcFullText(url, pmcid, timeoutMs, maxChars).catch(() => null);
+      if (t && t.ok) return t;
+    }
     const doi = extractDoi(url);
     if (doi) {
       const pmc = await europePmc(url, doi, timeoutMs, maxChars).catch(() => null);
       if (pmc && pmc.ok) return pmc;
     }
-    return await direct(url, timeoutMs, maxChars);
+    const d = await direct(url, timeoutMs, maxChars);
+    if (d.ok) return d;
+    if (doi) {
+      const oa = await unpaywall(url, doi, timeoutMs, maxChars).catch(() => null);
+      if (oa && oa.ok) return oa;
+    }
+    return d;
   } catch (err) {
     return { ok: false, url, method: "none", reason: `fetch failed: ${(err as Error).message}` };
   }

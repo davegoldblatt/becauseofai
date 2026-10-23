@@ -1,7 +1,7 @@
 // Announce new entries: find the entries a push added, wait until their pages
 // are live, fetch their share images, and write the posts the workflow sends.
 //
-//   node scripts/announce.ts --before <sha> --after <sha>   (a push to main: entries the push added or published)
+//   node scripts/announce.ts --before <sha> --after <sha>   (a push to main: entries the push added)
 //   node scripts/announce.ts --entry <id>[,<id>]           (by hand)
 //   node scripts/announce.ts --backfill <n>                 (next n never-announced published entries, newest first)
 //
@@ -29,12 +29,13 @@ function arg(name: string): string | null {
 }
 const flag = (name: string) => process.argv.includes(name);
 
-// Entry files the push added or changed. A change counts because the gate
-// publishes an entry by editing its file (a held entry becomes published); the
-// ledger keeps anything already announced from posting twice.
-function touchedIds(before: string, after: string): string[] {
+// Entry files the push added. A scout or editor run adds the file and the gate
+// publishes it on the same branch, so the merge adds a published entry. An
+// entry that was held and is published by a later run is not announced by
+// that push; the daily back-catalogue drip picks it up, newest first.
+function addedIds(before: string, after: string): string[] {
   if (/^0+$/.test(before)) return []; // first push to a branch: nothing to compare against
-  const out = execFileSync("git", ["diff", "--diff-filter=AM", "--name-only", before, after, "--", "data/entries/"], { encoding: "utf8" });
+  const out = execFileSync("git", ["diff", "--diff-filter=A", "--name-only", before, after, "--", "data/entries/"], { encoding: "utf8" });
   return out.split("\n").filter((f) => f.endsWith(".yaml")).map((f) => path.basename(f, ".yaml"));
 }
 
@@ -93,7 +94,7 @@ async function main() {
   const already = new Set(Object.keys(ledger.posted));
   let ids: string[];
   if (arg("--entry")) ids = arg("--entry")!.split(",").map((s) => s.trim()).filter(Boolean);
-  else if (arg("--before") && arg("--after")) ids = touchedIds(arg("--before")!, arg("--after")!);
+  else if (arg("--before") && arg("--after")) ids = addedIds(arg("--before")!, arg("--after")!);
   else if (arg("--backfill")) {
     const n = Number(arg("--backfill"));
     ids = loaded.publishable

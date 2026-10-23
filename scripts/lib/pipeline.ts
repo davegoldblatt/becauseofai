@@ -94,7 +94,7 @@ export async function fetchPrimaries(e: Entry, log: (s: string) => void = () => 
 }
 
 export function sourcesForPrompt(f: Fetched): SourceForPrompt[] {
-  return [...f.texts.entries()].map(([index, t]) => ({ index, url: t.url, method: t.method, sha256: t.sha256, text: t.text }));
+  return [...f.texts.entries()].map(([index, t]) => ({ index, url: t.url, method: t.method, sha256: t.sha256, text: t.text, truncated: t.truncated }));
 }
 
 // The code's own check of every receipt, before any model sees the entry. A
