@@ -1,0 +1,6 @@
+{
+  "comment": "Vendor roles for the pipeline (DAV-376). The drafter and the verifier must be different vendors; scripts/verify.ts refuses to run otherwise. Models are recorded verbatim on every entry and record. max_entries_per_run caps the model calls one run may make (0 = no cap).",
+  "drafter": { "vendor": "anthropic", "model": "claude-opus-5-5" },
+  "verifier": { "vendor": "openai", "model": "gpt-6-astra", "effort": "high" },
+  "max_entries_per_run": 10
+}

@@ -40,7 +40,7 @@ jobs:
             Inputs: data/entries/*.yaml, research/last-run.md, research/inbox.md, and this week's candidates in .scout/candidates.json.
             Deep-verify the two or three strongest candidates against their primary sources (WebFetch). Review existing entries for new data, follow-ups, retractions, and grades you would argue with; for each not-yet entry check whether what_would_change has happened.
             Output exactly as the brief says: new or changed entry files each with a history line dated today, a rewritten research/last-run.md under one page, and unqualified leads appended to research/inbox.md.
-            Stamp rule: every entry you add, and every held entry you make publishable by adding its first primary source, must end with a history note whose last word is "unreviewed." (for example "Added by the weekly run; unreviewed."). The site shows an unreviewed marker while that is the latest note and the editor clears it by hand. Do not add the stamp when you only add notes, close a verify, or add a secondary source. Never change the rank of an existing entry.
+            Receipts: every entry you add or change carries `receipts` (one verbatim quote of 25 words or fewer from a primary source for every field named in the brief that holds a number, with a locator and the source index) and a one-line `rationale` for the attribution grade. A second model from another vendor checks every receipt against the source text and the entry is held if any fails, so quote exactly and from the source you read. When you change a value, replace its receipt. Never edit the `verification` or `held` blocks: the gate owns them. Never change the rank of an existing entry.
             Poster number: every entry has optional `impact_number` (a short lead such as "5 per 1,000", "2×", "−0.37 SD", "26%"; a leading ~ ≈ + − or $ is set small as a modifier) and `impact_label` (the short phrase after it, such as "more liver-disease diagnoses"). Pick the figure a stranger would screenshot, absolute over relative when both exist, taken only from the entry's own effect fields or sources, and fill both fields. Do this for every entry you add and for every `because` entry that still lacks them (that counts as a change: history line dated today, no stamp).
             Extra scope for this run, if any (treat as part of the brief): ${{ github.event.inputs.focus }}
             Then run `npm run validate` (must pass), create branch editor/YYYY-MM-DD, commit, push, and open a pull request against main with `gh pr create` whose body summarises additions, changes, downgrades, rejections (and which of the four tests each failed), empty searches, and what a human should check. Do not merge.
@@ -48,6 +48,23 @@ jobs:
             --model claude-opus-5-5
             --max-turns 250
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+      - name: Install the verifier's tools
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
+          npm install -g @openai/codex
+      - name: The gate (second vendor, independent)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+        run: |
+          set -euo pipefail
+          node scripts/verify.ts --changed --base "${{ github.sha }}" --drafter "anthropic:claude-opus-5-5" --max 0
+          if ! git diff --quiet -- data/; then
+            git config user.name "becauseofai gate"
+            git config user.email "gate@becauseofai.org"
+            git add data/
+            git commit -m "Gate: verify the run's entries"
+          fi
       - name: Validate and build the result
         run: npm run validate && npm run build
       - name: Merge the run's pull request

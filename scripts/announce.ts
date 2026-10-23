@@ -1,9 +1,9 @@
 // Announce new entries: find the entries a push added, wait until their pages
 // are live, fetch their share images, and write the posts the workflow sends.
 //
-//   node scripts/announce.ts --before <sha> --after <sha>   (a push to main)
+//   node scripts/announce.ts --before <sha> --after <sha>   (a push to main: entries the push added or published)
 //   node scripts/announce.ts --entry <id>[,<id>]           (by hand)
-//   node scripts/announce.ts --backfill <n>                 (next n never-announced entries: reviewed first, newest first)
+//   node scripts/announce.ts --backfill <n>                 (next n never-announced published entries, newest first)
 //
 // research/announced.json is the ledger of ids already posted; every mode skips
 // them, and the workflow appends the ids it posts.
@@ -15,16 +15,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { loadOrThrow } from "../src/lib/entries.ts";
-import { isUnreviewed } from "../src/lib/format.ts";
-import type { Entry } from "../src/schema.ts";
 
 const SITE = "https://becauseofai.org";
 const LEDGER = "research/announced.json";
 const X_LIMIT = 280;
 const URL_WEIGHT = 23; // X counts every link as 23 characters
-const DRAFT_NOTE = "(Automated draft, not yet reviewed by the editor.)";
 
-type Post = { id: string; url: string; text: string; image: string | null; alt: string; unreviewed: boolean };
+type Post = { id: string; url: string; text: string; image: string | null; alt: string };
 
 function arg(name: string): string | null {
   const i = process.argv.indexOf(name);
@@ -32,16 +29,19 @@ function arg(name: string): string | null {
 }
 const flag = (name: string) => process.argv.includes(name);
 
-function addedIds(before: string, after: string): string[] {
+// Entry files the push added or changed. A change counts because the gate
+// publishes an entry by editing its file (a held entry becomes published); the
+// ledger keeps anything already announced from posting twice.
+function touchedIds(before: string, after: string): string[] {
   if (/^0+$/.test(before)) return []; // first push to a branch: nothing to compare against
-  const out = execFileSync("git", ["diff", "--diff-filter=A", "--name-only", before, after, "--", "data/entries/"], { encoding: "utf8" });
+  const out = execFileSync("git", ["diff", "--diff-filter=AM", "--name-only", before, after, "--", "data/entries/"], { encoding: "utf8" });
   return out.split("\n").filter((f) => f.endsWith(".yaml")).map((f) => path.basename(f, ".yaml"));
 }
 
-// Headline first, then the draft note when needed, then the link. Trim the
-// headline at a word boundary if X would refuse the whole thing.
-function compose(e: Entry, url: string, unreviewed: boolean): string {
-  const tail = (unreviewed ? "\n\n" + DRAFT_NOTE : "") + "\n\n";
+// Headline first, then the link. Trim the headline at a word boundary if X
+// would refuse the whole thing.
+function compose(e: { headline: string }, url: string): string {
+  const tail = "\n\n";
   const room = X_LIMIT - URL_WEIGHT - tail.length;
   let head = e.headline.trim();
   if (head.length > room) {
@@ -93,13 +93,12 @@ async function main() {
   const already = new Set(Object.keys(ledger.posted));
   let ids: string[];
   if (arg("--entry")) ids = arg("--entry")!.split(",").map((s) => s.trim()).filter(Boolean);
-  else if (arg("--before") && arg("--after")) ids = addedIds(arg("--before")!, arg("--after")!);
+  else if (arg("--before") && arg("--after")) ids = touchedIds(arg("--before")!, arg("--after")!);
   else if (arg("--backfill")) {
     const n = Number(arg("--backfill"));
-    const rank = (e: Entry) => (isUnreviewed(e) ? 1 : 0); // reviewed entries first
     ids = loaded.publishable
       .filter((e) => !already.has(e.id))
-      .sort((a, b) => rank(a) - rank(b) || String(b.dates.added).localeCompare(String(a.dates.added)) || a.id.localeCompare(b.id))
+      .sort((a, b) => String(b.dates.added).localeCompare(String(a.dates.added)) || a.id.localeCompare(b.id))
       .slice(0, n)
       .map((e) => e.id);
     console.log(`backfill: ${ids.length} of ${loaded.publishable.length - already.size} never-announced entries`);
@@ -115,11 +114,10 @@ async function main() {
   for (const id of ids) {
     const e = byId.get(id);
     if (!e) {
-      console.log(heldIds.has(id) ? `skip ${id}: held (no primary source), nothing to announce` : `skip ${id}: not a publishable entry`);
+      console.log(heldIds.has(id) ? `skip ${id}: held, nothing to announce` : `skip ${id}: not a publishable entry`);
       continue;
     }
     const url = `${SITE}/entry/${id}`;
-    const unreviewed = isUnreviewed(e);
     if (!flag("--no-wait")) {
       const live = await waitLive(url, 12);
       if (!live) {
@@ -130,12 +128,12 @@ async function main() {
     const image = path.join(out, `${id}.png`);
     const ok = await fetchImage(`${SITE}/og/${id}.png`, image);
     posts.push({
-      id, url, text: compose(e, url, unreviewed), image: ok ? image : null,
-      alt: `Because of AI share card: ${e.impact}`, unreviewed,
+      id, url, text: compose(e, url), image: ok ? image : null,
+      alt: `Because of AI share card: ${e.impact}`,
     });
   }
   fs.writeFileSync(path.join(out, "posts.json"), JSON.stringify(posts, null, 2) + "\n");
-  for (const p of posts) console.log(`post ${p.id} (${p.text.length} chars${p.image ? ", image" : ", no image"}${p.unreviewed ? ", unreviewed" : ""})\n${p.text}\n`);
+  for (const p of posts) console.log(`post ${p.id} (${p.text.length} chars${p.image ? ", image" : ", no image"})\n${p.text}\n`);
   console.log(`${posts.length} post(s) written to ${out}/posts.json`);
 }
 main().catch((err) => { console.error(err?.stack ?? err); process.exit(1); });

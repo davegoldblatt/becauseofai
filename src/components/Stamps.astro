@@ -6,13 +6,12 @@
 // to its definition on /method and carries that same sentence as a tooltip.
 // Never collapsed into one score.
 import type { Entry } from "../schema.ts";
-import { EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION, WATCHLIST_DESCRIPTION, isUnreviewed } from "../lib/format.ts";
+import { EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION, WATCHLIST_DESCRIPTION } from "../lib/format.ts";
 interface Props { entry: Entry; scope: string }
 const { entry: e, scope } = Astro.props;
 const g = e.grades;
 const ungraded = g.evidence === null && g.attribution === null && g.window === null;
 const uid = (k: string) => `tip-${scope}-${e.id}-${k}`;
-const unreviewed = isUnreviewed(e);
 ---
 <div class="stamps" data-pagefind-ignore>
   {ungraded ? (
@@ -47,5 +46,4 @@ const unreviewed = isUnreviewed(e);
       )}
     </>
   )}
-  {unreviewed && <span class="stamp stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span>}
 </div>

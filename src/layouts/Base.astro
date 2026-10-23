@@ -4,7 +4,7 @@
 // or NOT YET BECAUSE OF AI by section. Counts come from the loader.
 import "../styles/global.css";
 import { SITE, NAMEPLATE } from "../site.ts";
-import { reviewedCounts as siteCounts, unreviewedCount } from "../lib/site.ts";
+import { siteCounts, heldCount } from "../lib/site.ts";
 import type { Section } from "../schema.ts";
 
 interface Props {
@@ -99,7 +99,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
             {tabs.map((t) => (
               <a href={t.href} aria-current={section === t.key ? "page" : undefined}>{t.label} <b>{t.n}</b></a>
             ))}
-            {unreviewedCount > 0 && <a class="tab-unrev" href="/changelog#awaiting-review" title="Published by the research run, not yet read by the editor">Unreviewed <b>{unreviewedCount}</b></a>}
+            {heldCount > 0 && <a class="tab-held" href="/changelog#held" title="Entries the gate is holding, with the reason">Held <b>{heldCount}</b></a>}
           </nav>
           <nav class="more" aria-label="About the registry">
             {more.map((n) => (

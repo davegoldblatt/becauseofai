@@ -1,8 +1,11 @@
 // Date and label formatting. Dates keep the precision they were written with:
 // "2025-10-25" renders a day, "2025-10" a month, 2019 a year. Nothing is
 // invented beyond what the YAML says.
-import type { Entry, DateLike } from "../schema.ts";
+import type { Entry, DateLike, HeldReason, Vendor, ReceiptField, Receipt as ReceiptSchema } from "../schema.ts";
+import type { z } from "zod";
 import { dateToString, latestDay } from "./entries.ts";
+import { SITE } from "../site.ts";
+type Receipt = z.infer<typeof ReceiptSchema>;
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -330,10 +333,35 @@ export function changeType(note: string): { type: ChangeType; rest: string } | n
   return { type: t, rest: verb[2] };
 }
 
-// An entry drafted by the research run that no person has read yet: its latest
-// history note ends with "unreviewed." The marker disappears as soon as the
-// editor adds a later history line. Read from history, never a schema field.
-export function isUnreviewed(e: Entry): boolean {
-  const last = e.history[e.history.length - 1];
-  return !!last && /unreviewed\.?$/i.test(last.note.trim());
+// ---------------------------------------------------------------------------
+// Held entries and receipts. One sentence per held reason; the changelog and
+// the method page read this table.
+export const HELD_REASON_LABEL: Record<HeldReason, string> = {
+  ungrounded: "ungrounded",
+  "no-full-text": "no full text",
+  "grade-split": "grade split",
+  "fails-test": "fails a test",
+  "verification-unavailable": "unverified",
+  "no-primary-source": "no primary source",
+  disputed: "disputed",
+};
+export const HELD_REASON_DESCRIPTION: Record<HeldReason, string> = {
+  ungrounded: "A number on the entry was not supported by a sentence in the primary source.",
+  "no-full-text": "The primary source could not be read in full, so nothing on the entry could be checked against it.",
+  "grade-split": "The two vendors graded the entry differently and the registry does not vote.",
+  "fails-test": "The verifier failed the entry on one of the four tests, or a conflict the source shows is not stated.",
+  "verification-unavailable": "The second vendor could not be reached. The registry never publishes on one vendor.",
+  "no-primary-source": "There is no primary source, or the only one is a press release or a news article.",
+  disputed: "A reader's dispute split the two vendors, so the entry is off the list until they agree.",
+};
+
+export const VENDOR_LABEL: Record<Vendor, string> = { anthropic: "Anthropic", openai: "OpenAI" };
+
+export function receiptsFor(e: Entry, ...fields: ReceiptField[]): Receipt[] {
+  return (e.receipts ?? []).filter((r) => fields.includes(r.field));
+}
+
+// Public URL of a verification record in the repository.
+export function recordUrl(record: string): string {
+  return `${SITE.repo}/blob/main/data/verifications/${record}`;
 }

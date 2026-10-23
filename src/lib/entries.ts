@@ -1,14 +1,16 @@
 // Loader for data/entries/*.yaml. Parses with YAML 1.2 core schema (no date
 // coercion), validates every file against EntrySchema, and exposes two views:
 //   all          every entry on disk, validated (the archive)
-//   publishable  entries that may render: they carry at least one primary source
-// An entry with no primary source is HELD (README, decision 1): it is not an
-// error, it does not render, it is not counted, and it is never linked.
+//   publishable  entries that may render: a passing cross-vendor verification,
+//                no held block, and at least one primary source
+// Everything else is HELD (README, decision 1): it is not an error, it does not
+// render, it is not counted, and it is never linked. The changelog names held
+// entries with their reason.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
-import { EntrySchema, hasPrimarySource, type Entry, type Section, type DateLike } from "../schema.ts";
+import { EntrySchema, isPublished, type Entry, type Section, type DateLike } from "../schema.ts";
 
 export const ENTRIES_DIR = fileURLToPath(new URL("../../data/entries/", import.meta.url));
 
@@ -110,8 +112,8 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
     byRank.set(key, e.id);
   }
-  const held = all.filter((e) => !hasPrimarySource(e));
-  const publishable = all.filter((e) => hasPrimarySource(e));
+  const held = all.filter((e) => !isPublished(e));
+  const publishable = all.filter((e) => isPublished(e));
   return { all, publishable, held, errors, warnings };
 }
 
