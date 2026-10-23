@@ -25,21 +25,34 @@ effect:
   absolute: "Good outcome 47.1% vs 45.6% (15 more per 1,000); DIDO 64 min shorter"
 reach: "107 hospitals, England; patient-level data on 71,017 ischemic strokes"
 dates:
-  achieved_start: 2019
-  achieved_end: 2024
-  published: 2025-12
+  achieved_start: 2019-01-01
+  achieved_end: 2023-12-31
+  published: 2025-12-02
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
-  - title: "Lancet Digital Health: AI imaging decision support for acute stroke in England"
+  - title: "Lancet Digital Health: Artificial intelligence imaging decision support for acute stroke treatment in England — a prospective observational study"
     url: https://www.thelancet.com/journals/landig/article/PIIS2589-7500(25)00109-8/fulltext
+    doi: 10.1016/j.landig.2025.100927
     type: primary
-conflicts: "verify: Brainomix involvement in authorship or funding."
+conflicts: >-
+  Four authors list Brainomix affiliations (one jointly with Oxford University
+  Hospitals). Funded by an AI in Health and Care Award from NHS England's
+  Accelerated Access Collaborative.
 what_would_change: null
 notes: >-
-  verify: exact observation period and publication date; window grade assumes the
-  5-year data period ended before Oct 2025.
+  Observation period 1 January 2019 to 31 December 2023 and e-publication on
+  2 December 2025 (Lancet Digit Health 7(12), PMID 41339157), per the abstract;
+  window stays pre. Site-level comparison at the 26 evaluation sites: EVT 2.3%
+  before vs 4.6% after implementation (interaction OR 1.24 against non-evaluation sites).
+  verify: door-in-door-out (128 vs 192 min) and mRS 0–2 (47.1% vs 45.6%, OR 1.16)
+  are not in the abstract; check them against the full text, which is paywalled.
 related: [golden-bridge-ii-stroke]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Verified the observation period (1 Jan 2019 to 31 Dec 2023) and e-publication
+      date (2 Dec 2025) from the Lancet Digital Health abstract; window stays pre.
+      Set the conflicts line from the author affiliations and funding.

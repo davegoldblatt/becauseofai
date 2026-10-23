@@ -26,21 +26,30 @@ dates:
   achieved_end: null
   published: 2026-09-10
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
-  - title: "Insilico: first patient dosed in GENESIS-IPF-3"
-    url: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
-    type: primary
-  - title: "ClinicalTrials.gov NCT07687459"
+  - title: "ClinicalTrials.gov NCT07687459 (Phase 3, rentosertib in IPF)"
     url: https://clinicaltrials.gov/study/NCT07687459
     type: primary
-conflicts: "Sponsor announcements."
+  - title: "Insilico: first patient dosed in GENESIS-IPF-3"
+    url: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
+    type: secondary
+conflicts: "Sponsor-run trial (InSilico Medicine Hong Kong); first-dosing date from the sponsor's release."
 what_would_change: >-
   A positive 52-week FVC result, then regulatory approval, then patients treated
   outside a trial — each step moves it closer; approval alone does not make it a
   "because" entry.
-notes: null
+notes: >-
+  Registry (read 2026-10-23): randomized, double-blind, placebo-controlled Phase 3;
+  320 planned; actual start 9 September 2026; 47 sites, all in China; primary
+  outcome annual FVC decline over 52 weeks; primary completion estimated
+  30 October 2029; recruiting. what_would_change not met.
 related: [gb-0895-phase-3]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Updated sources: the ClinicalTrials.gov record (NCT07687459) is the primary
+      and the Insilico release is retyped as secondary; the registry matches the
+      summary's size, sites and endpoint.

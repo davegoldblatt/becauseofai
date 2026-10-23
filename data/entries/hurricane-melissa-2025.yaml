@@ -7,7 +7,7 @@ headline: >-
 impact: "~3 days' warning on a Cat 5"
 summary: >-
   NHC forecasters explicitly forecast Category 5 intensity while Melissa was an
-  80-mph Category 1, largely on the strength of Google DeepMind's cyclone model,
+  80-knot (90-mph) Category 1, largely on the strength of Google DeepMind's cyclone model,
   which posted the lowest track and intensity errors of any model for the 2025
   Atlantic season and kept the official forecast below its five-year average
   error while NOAA's GFS had its worst year in two decades.
@@ -30,8 +30,17 @@ dates:
   achieved_end: 2025-10-28
   published: 2025-11-29
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
+  - title: "NHC Tropical Cyclone Report: Hurricane Melissa (AL132025), 25 Feb 2026"
+    url: https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf
+    type: primary
+  - title: "NHC Forecast Discussion 18, 2100 UTC 25 Oct 2025 (first 140 kt forecast)"
+    url: https://www.nhc.noaa.gov/archive/2025/al13/al132025.discus.018.shtml
+    type: primary
+  - title: "NHC Tropical Cyclone Update, 1700 UTC 28 Oct 2025 (Jamaica landfall)"
+    url: https://www.nhc.noaa.gov/archive/2025/al13/al132025.update.10281700.shtml
+    type: primary
   - title: "NWS: AI hurricane forecasting Q&A (2025 season)"
     url: https://www.weather.gov/news/261102-AI-Hurricane-Forecasting
     type: primary
@@ -50,9 +59,22 @@ sources:
 conflicts: "Google partnered with NHC to train and evaluate the model; verification stats are from NHC and an independent former NHC branch chief."
 what_would_change: "A published NHC verification report quantifying the official forecast's error with and without the DeepMind input would move attribution from isolated toward a hard number."
 notes: >-
-  verify: exact NHC advisory time of the first explicit Cat 5 forecast; final Jamaica
-  death toll and any evacuation-timing analysis.
+  First explicit Cat 5 forecast settled from the NHC archive: Discussion 18
+  (2100 UTC 25 Oct 2025) forecast 140 kt at 48 h while Melissa was at 80 kt
+  (Category 1), and cited the Google DeepMind ensembles' Category 5 peak. Earlier
+  discussions (15 to 17) held the forecast at 135 kt while noting DeepMind members
+  at Category 5. Landfall near New Hope, Jamaica, at 1700 UTC 28 Oct at 185 mph, per
+  the NHC update: about 68 hours after the first Cat 5 forecast.
+  verify: the Tropical Cyclone Report (original date 25 Feb 2026, later updated) is
+  published but the PDF exceeded the weekly run's fetch limit. Read its forecast
+  verification section and its Jamaica death toll; no evacuation-timing analysis was found.
 related: [flood-hub-flash-floods]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Verified the first explicit Category 5 forecast (NHC Discussion 18, 2100 UTC
+      25 Oct 2025, Melissa at 80 kt) and the Jamaica landfall time (1700 UTC 28 Oct);
+      added the NHC Tropical Cyclone Report and both advisories as primary sources.
+      Corrected the summary's "80-mph" to 80 kt (90 mph), as the discussion states.

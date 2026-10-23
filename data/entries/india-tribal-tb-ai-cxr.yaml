@@ -25,20 +25,32 @@ effect:
   absolute: "162 confirmed cases; 44.6% positivity among AI-flagged"
 reach: "High-risk tribal population, Chhattisgarh"
 dates:
-  achieved_start: 2023-04
-  achieved_end: null
+  achieved_start: 2023-08-01
+  achieved_end: 2024-03-31
   published: 2026-01-07
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
   - title: "Evaluating AI-based chest X-ray screening for TB in tribal Chhattisgarh (PMC)"
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12810203/
     type: primary
-conflicts: "verify: author affiliations and vendor (Qure.ai) involvement."
+conflicts: >-
+  Eight of the authors are full-time employees of Qure.ai, which makes qXR; funded
+  by the India Health Fund (TB Quest 2019).
 what_would_change: null
 notes: >-
-  verify: end date of the AI implementation period.
+  Per the methods, the AI ran 1 August 2023 to 31 March 2024 at three public
+  facilities, against an August 2022 to March 2023 baseline: 96 vs 173 TB patients
+  notified. The authors call it a descriptive analysis. This settles last week's
+  conflict between achieved_end null and window pre.
+  verify: "162 confirmed cases" in effect.absolute against the paper's 173 notified;
+  the two may count different things.
 related: [ethiopia-tb-ai-cxr]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Corrected the achieved dates to 1 Aug 2023 to 31 Mar 2024 (were Apr 2023 and
+      open-ended) from the paper's methods; window stays pre. Set the conflicts line
+      from the author affiliations.

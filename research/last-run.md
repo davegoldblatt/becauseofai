@@ -1,37 +1,44 @@
-# Last research run — 2026-10-22
+# Last research run — 2026-10-23
 
-Window: 2025-10-23 to 2026-10-22. Inputs: 25 entries, inbox, `.scout/candidates.json` (219 candidates, 14 flagged randomized, 0 alerts, 1 source error).
+Window: 2025-10-24 to 2026-10-23. Inputs: 27 entries, inbox, `.scout/candidates.json` (161 candidates over 8 days, 11 flagged randomized, 0 alerts, 1 source error). Extra scope: Linear DAV-313.
 
 ## Added
-- **advance-ai-ecg-liver** (because, A / isolated / pre). Mayo cluster RCT: notifying clinicians of an AI-ECG flag doubled new advanced-liver-disease diagnoses (1.0% vs 0.5%; ~5 per 1,000). Clean comparison, but the outcome is a diagnosis, and the trial ended Sept 2025, so the window is pre. Numbers come from the registry results and the PubMed abstract; full text is paywalled.
-- **kenya-ai-consult-null** (not-because, A / isolated / pre). Nature Medicine, June 2026, 9,691 patients: GPT-4o decision support improved notes and plans but not 14-day treatment failure (2.2% vs 2.0%, aOR 0.77, p=0.13). Read in full (open access). Enrolment Apr–Jul 2025, so pre. It is the patient-outcome counterpoint to the earlier Penda/OpenAI quality-improvement claims.
+Nothing. Three candidates were deep-checked and none cleared the bar (see Rejected). That is a valid week.
 
-## Changed
-- **maryland-ai-tutor-negative**: primary found (EdWorkingPaper 26-1598); effect recorded as −0.37 SD in final grades. The entry now renders.
-- **gb-0895-phase-3**: ClinicalTrials.gov primary added (entry now renders). Removed "~1,600 patients" from the headline because the registry shows 786 planned for SOLAIRIA-1.
-- **fortell-ai-hearing-aids**: the 30-person trial is confirmed in IJA (Oct 8, 2026), which closes the old `verify:`. Evidence stays C under the company-run rule. A new `verify:` asks someone to check the "9.2 vs 3.1 dB" framing against the abstract's figures.
-- **ambient-scribes-nejm-ai**: notes now say the Duke JAMIA trial is scribe-vs-scribe (ai-vs-ai) and can't support the isolated grade.
+## Changed (DAV-313 and review)
+- **golden-bridge-ii-stroke**: the BMJ paper (doi 10.1136/bmj-2025-085810, read in PMC) replaces the EurekAlert release as primary. **Corrected HR 0.71 → 0.74** (0.58 to 0.93); the 26% and the 10 per 1,000 stand. Beijing Ande Yizhi Technology is a co-funder, and whether it supplied the CDSS is now a `verify:`.
+- **columbia-star-birth**: the Lancet letter (doi 10.1016/S0140-6736(25)01623-X) replaces the release as primary. The first couple is the one who tried for nearly two decades (retrieval March 2025). The Klinefelter couple is a later case. Birth month corrected to **November 2025** (per TIME); the window stays `in`.
+- **oman-ai-retinopathy**: **now held.** No ministry or programme report has the figures; the MoH page is only the 17 March 2025 launch release. The Muscat Daily article is retyped as secondary. Window **in → ongoing** because the programme started before the window. The vendor (EyRIS) comes from its own claim.
+- **nhs-stroke-ai-imaging**: the abstract gives the observation period as 1 Jan 2019 to 31 Dec 2023 and e-publication as 2 Dec 2025, so `pre` is confirmed. Four authors are Brainomix-affiliated.
+- **china-ai-cal-null**: window set to **pre**. The AEA registry (AEARCTR-0007888, same 105/315/8,647 sample) dates the intervention 4 Apr to 14 Jun 2021.
+- **hurricane-melissa-2025**: the NHC TCR is published (25 Feb 2026) and added as primary. The first explicit Cat 5 forecast was Discussion 18 (2100 UTC 25 Oct, Melissa at 80 kt) and landfall was 1700 UTC 28 Oct, about 68 h later. The headline holds. Corrected "80-mph" to 80 kt (90 mph).
+- **rentosertib-phase-3**: the registry is now primary and the Insilico release is secondary. The registry matches: 320 patients, 47 sites in China, start 9 Sep 2026, primary completion Oct 2029.
+- **firesat-constellation**: the deployment is confirmed by the operator's release (Muon Space, 7 Jul 2026), added as primary. The summary's "50+ by 2030" isn't in any source read, so it is now a `verify:`.
+- **india-tribal-tb-ai-cxr**: achieved dates **corrected** to 1 Aug 2023 to 31 Mar 2024 from the methods. This fixes last week's null-end-vs-`pre` conflict. Eight authors are Qure.ai staff.
+- **gb-0895-phase-3**: SOLAIRIA-2 registry added (NCT07359846, 786 planned). The two trials together make 1,572, which explains the old ~1,600. My history line ends "stays unreviewed." so it doesn't clear the editor's open marker.
 
-No downgrades this week. I'd argue two grades but haven't changed them. First, oman-ai-retinopathy at `window: in` with no start date: if the program predates Oct 2025 it is `ongoing`. Second, india-tribal-tb-ai-cxr has `achieved_end: null` (ongoing) while graded `pre`. One of those two fields is wrong.
+No downgrades. One I'd argue: china-ai-cal-null evidence **A**. The AEA registration (28 Jun 2021) came after the intervention ended, so the endpoint wasn't strictly preregistered. I've flagged it rather than changed it.
 
-## Rejected (four tests: reached humans · measured against something · AI made the difference · we know when)
-- Fetal intracranial malformation self-crossover RCT (Lancet Digit Health): **reached humans** fails because the outcome is reader sensitivity on offline review. **When** fails too: Sep 2022–Nov 2023 per a secondary source, so pre.
-- AI-INFOCARE (NEJM AI): not rejected on merit. **Measured** couldn't be checked because the primary returned 403 and the only figures are on the vendor's page. Sent back to the inbox.
-- VoqX auscultation, breast-ultrasound DSS, Uganda sputum AI, multi-agent LLM notes: **reached humans** fails (accuracy or validation only).
-- VITAL-MD, PM Heart, CURAte: protocols only, so **measured** fails.
+## Rejected (reached humans · measured against something · AI made the difference · we know when)
+- **PRIMA-AI** kidney-transplant RCT (npj Digit Med, read in full): **measured** fails as a null. It stopped at 76 of 122, the control rate was 40% vs an assumed 10–15%, and OR 0.96 (0.34–2.64) can't rule out an effect. **When** = Jan–Sep 2024, so pre.
+- **SPOT-TB** (medRxiv): **AI made the difference** is unresolved. The ITT result is null, per-protocol is positive, and the gap mostly reflects adherence. It is also an unreviewed preprint and pre-window. Sent to the inbox.
+- **AI-INFOCARE**: **measured** still unchecked because NEJM AI returns 403. The protocol makes consultation time a secondary outcome. Kept in the inbox.
+- Scout candidates were otherwise protocols, validation studies, or reviews (**reached humans** or **measured** fails).
 
 ## Not-yet checks
-None of rentosertib, GB-0895, FireSat, Flood Hub, or Every Cure has met its `what_would_change`. No FireSat detection-to-response case is documented. Flood Hub has no independent impact evaluation; Google's own loss-reduction estimate doesn't count. Every Cure has no in-window patient outcome traced to MATRIX. SOLAIRIA-1 reads out ~Dec 2028.
+None met. Rentosertib: Phase 3 recruiting. GB-0895: both Phase 3s recruiting, readouts 2028–29. FireSat: first-light detections (Sep 2026) but no agency response or timing comparison. Flood Hub: no independent impact evaluation found. Every Cure: no in-window MATRIX-originated outcome found.
 
 ## Searched, empty
-- Waymo hub still runs through June 2026 (271.3M miles); no Q3 update yet.
-- No final NHC Tropical Cyclone Report for Melissa found, so the first explicit Cat 5 advisory time stays unverified.
-- China CAL intervention dates: the CESifo PDF wouldn't extract.
-- Null search ("did not improve", "no significant"): found Kenya; a 76-patient kidney-transplant RCT (npj Digit Med) is too small and was sent to the inbox.
+- Waymo hub still runs through June 2026 (271.3M miles).
+- Oman: no MoH, WHO or journal report with programme results.
+- Null search ("did not improve" AI randomized 2026): only Kenya (already in) and SPOT-TB.
 - Retraction Watch: not run beyond the scout's Crossref check (0 alerts).
 
 ## Needs a human
-- Advance: ECG enrolment dates from the Nature Medicine methods (paywalled).
-- AI-INFOCARE: the NEJM AI full text, to confirm the vendor-reported consultation times (median 25 vs 33 min) and patient ratings, and recruitment May 2025–Jan 2026 (straddles the window).
-- Maryland: randomization unit, term dates, and uptake from the full PDF.
-- Ranks: new entries were placed last in their sections (because 17, not-because 5). Re-rank by hand.
+- Melissa TCR: the PDF exceeded the run's fetch limit. Read its forecast-verification section and the Jamaica death toll.
+- China CAL: the paper's methods for the intervention period (a secondary account says "year-long"), and the call on evidence A.
+- STAR: the 2.5M-image, 3.5 mL and two-hour figures against the Lancet letter (403).
+- NHS stroke: the DIDO and mRS figures, which aren't in the abstract (paywalled).
+- India TB: the "162 confirmed" figure vs 173 notified.
+- GOLDEN BRIDGE II: the vendor behind the CDSS.
+- Oman is held. Promote it only if a primary appears.

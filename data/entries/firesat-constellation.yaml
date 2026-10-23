@@ -26,15 +26,32 @@ dates:
   achieved_end: null
   published: 2026-07-07
   added: 2026-10-22
-  updated: 2026-10-22
+  updated: 2026-10-23
 sources:
   - title: "Google: Three new FireSat satellites launch"
     url: https://blog.google/innovation-and-ai/models-and-research/google-research/firesat-satellites/
     type: primary
-conflicts: "Google.org funds the constellation."
+  - title: "Muon Space: first three operational FireSat satellites deployed (Transporter-17, 7 Jul 2026)"
+    url: https://www.muonspace.com/muon-space-deploys-first-three-operational-firesat-satellites-for-earth-fire-alliance/
+    type: primary
+  - title: "Earth Fire Alliance and Muon Space: first light and first active-fire images (16 Sep 2026)"
+    url: https://finance.yahoo.com/technology/articles/earth-fire-alliance-muon-space-110000319.html
+    type: secondary
+conflicts: "Google.org funds the constellation; Muon Space builds and operates the satellites and announced the deployment."
 what_would_change: "A documented detection with a timestamp ahead of other systems and a fire-agency response outcome."
-notes: null
+notes: >-
+  Deployment confirmed by the operator: launched on SpaceX Transporter-17 from
+  Vandenberg on 7 July 2026, in contact with ground within 120 minutes, healthy and
+  commissioning. The 16 September first-light release shows active-fire detections
+  (Australia, Portugal, Oregon–Idaho) but names no agency response and gives no
+  detection-time comparison, so what_would_change is not met.
+  verify: "50+ planned by 2030" in the summary is not in the Google or Muon sources
+  (Muon gives hourly global revisit by 2029); find the Earth Fire Alliance source or drop it.
 related: [hurricane-melissa-2025]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-23
+    note: >-
+      Verified the deployment against the operator's release (Muon Space, 7 July
+      2026) and added it as primary; added a verify note on the 50+ by 2030 figure.
