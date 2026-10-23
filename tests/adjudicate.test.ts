@@ -181,3 +181,37 @@ test("the verifier answering for the wrong number of receipts is unavailable, no
   const v = verdict(e, { receipts: verdict(e).receipts.slice(0, 3) });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: v } })).reason, "verification-unavailable");
 });
+
+test("receipt verdicts must name the entry's receipts, in order", () => {
+  const e = entry();
+  const shuffled = verdict(e, { receipts: [...verdict(e).receipts].reverse() });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: shuffled } })).reason, "verification-unavailable");
+  const padded = verdict(e, { receipts: verdict(e).receipts.map((r) => ({ ...r, field: "headline" as const })) });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: padded } })).reason, "verification-unavailable");
+});
+
+test("not-applicable date provenance counts only when the entry has no achieved dates", () => {
+  const e = entry();
+  const v = verdict(e, { achieved_dates: { from: "not-applicable", note: "" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: v } })).reason, "ungrounded");
+  const r = verdict(e, { achieved_dates: { from: "results", note: "the screening span is given in Results" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: r } })).result, "published");
+});
+
+test("a drafter that could not grade and a verifier that could is a split; a cut source is judged for full text", () => {
+  const e = entry({ grades: { evidence: "A", attribution: "bundled", window: null }, notes: "verify: window" });
+  const a = adjudicate(input(e));
+  assert.equal(a.reason, "grade-split");
+  assert.deepEqual(a.splits, [{ grade: "window", drafter: null, verifier: "pre" }]);
+  const cut: SourceFetch = { ...fetched(), truncated: true };
+  const v = verdict(entry(), { full_text: false, summary: "cut before the results" });
+  assert.equal(adjudicate(input(entry(), { sources: [cut], verifier: { ok: true, output: v } })).reason, "no-full-text");
+});
+
+test("a receipt whose source could not be read is a reading failure", () => {
+  const e = entry();
+  const checks = allFound(e).map((c) => ({ ...c, found: false, exact: false, status: "unsupported" as const, note: "source 0 could not be read: HTTP 403" }));
+  const a = adjudicate(input(e, { sources: [unfetched(0, "HTTP 403"), fetched(1)], quoteChecks: checks, verifier: null }));
+  assert.equal(a.reason, "no-full-text");
+  assert.match(a.detail, /HTTP 403/);
+});

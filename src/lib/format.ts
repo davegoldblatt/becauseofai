@@ -340,9 +340,9 @@ export const HELD_REASON_LABEL: Record<HeldReason, string> = {
   ungrounded: "ungrounded",
   "no-full-text": "no full text",
   "grade-split": "grade split",
-  "fails-test": "fails a test",
+  "fails-test": "fails test",
   "verification-unavailable": "unverified",
-  "no-primary-source": "no primary source",
+  "no-primary-source": "no primary",
   disputed: "disputed",
 };
 export const HELD_REASON_DESCRIPTION: Record<HeldReason, string> = {

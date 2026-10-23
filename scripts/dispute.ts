@@ -10,13 +10,14 @@
 //   needs: gh (GH_TOKEN) and REPO=owner/name (default from the git remote)
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
-import { DisputeVerdictSchema, jsonSchema, disputeSystem, disputeUser, type DisputeVerdict } from "./lib/verdict.ts";
+import { DisputeVerdictSchema, jsonSchema, disputeSystem, disputeUser, entryForModel, type DisputeVerdict } from "./lib/verdict.ts";
 import { callStructured } from "./lib/vendors.ts";
 import { runGate } from "./lib/gate.ts";
 import { loadVendorConfig, todayUtc, readDraft, fetchPrimaries, sourcesForPrompt, writeRecord, asOf, fmtTokens, ROOT, type Role } from "./lib/pipeline.ts";
 import { fetchSourceText, normalizeForMatch } from "./lib/source-text.ts";
-import { appendHistory, appendSource, setScalar, withOwned, readOwned, stripOwned } from "./lib/yaml-edit.ts";
-import { RECEIPT_FIELDS, wordCount, RECEIPT_MAX_WORDS } from "../src/schema.ts";
+import { appendHistory, appendSource, setScalar, withOwned, readOwned } from "./lib/yaml-edit.ts";
+import { RECEIPT_FIELDS, wordCount, RECEIPT_MAX_WORDS, heldInfo } from "../src/schema.ts";
+import { loadEntries } from "../src/lib/entries.ts";
 import type { VendorRunRecord, VerificationRecord } from "./lib/record.ts";
 import type { SourceForPrompt } from "./lib/verdict.ts";
 
@@ -75,12 +76,9 @@ if (linked) {
   if (r.ok) { disputant = { index: -1, url: linked, method: r.method, sha256: r.sha256, text: r.text }; console.log(`  reader's source: ${r.method} ${r.chars} chars`); }
   else console.log(`  reader's source could not be read: ${r.reason}`);
 }
-const entryYaml = stripOwned(d.raw).split("\n").filter(function (this: { skip: boolean }, line) {
-  if (/^(notes|history):/.test(line)) { this.skip = true; return false; }
-  if (/^[A-Za-z_]/.test(line)) this.skip = false;
-  return !this.skip;
-}, { skip: false }).join("\n");
-const user = disputeUser({ asOf, entryId: id, entryYaml, issue: { number: issueNo, title: issue.title, body: claim }, sources, disputantSource: disputant });
+// The issue is public input: bounded before it reaches a model or a record.
+const boundedClaim = claim.slice(0, 6000);
+const user = disputeUser({ asOf, entryId: id, entryYaml: entryForModel(e), issue: { number: issueNo, title: issue.title.slice(0, 200), body: boundedClaim }, sources, disputantSource: disputant });
 const schema = jsonSchema(DisputeVerdictSchema);
 
 const runs: VendorRunRecord[] = [];
@@ -102,33 +100,46 @@ const agreed = outcome === "upheld"
 const finalOutcome = outcome === "upheld" && !agreed.length ? "split" : outcome;
 console.log(`  outcome: ${finalOutcome}${agreed.length ? ` (${agreed.map((c) => c.field).join(", ")})` : ""}`);
 
-const record: VerificationRecord = {
+// The entry's state after the dispute is whatever the gate (or the current
+// file) says; the dispute record states the dispute's outcome and that state
+// separately, and is written only once both are known.
+function currentState(): { result: "published" | "held"; reason: string | null; detail: string } {
+  const r = loadEntries();
+  const cur = r.all.find((x) => x.id === id)!;
+  const why = r.unbound.get(id);
+  if (r.publishable.some((x) => x.id === id)) return { result: "published", reason: null, detail: "Published." };
+  const h = why ? { reason: "verification-unavailable", detail: why } : heldInfo(cur)!;
+  return { result: "held", reason: h.reason, detail: h.detail };
+}
+const disputeDetail = finalOutcome === "upheld" ? `Dispute #${issueNo} upheld by both vendors; corrected ${agreed.map((c) => c.field).join(", ")}.`
+  : finalOutcome === "rejected" ? `Dispute #${issueNo} not upheld by either vendor; entry unchanged.`
+  : `Dispute #${issueNo} split the vendors: ${runs.map((r, i) => `${r.vendor} ${verdicts[i] ? (verdicts[i]!.upheld ? "upheld" : "rejected") : "failed"}`).join(", ")}.`;
+const writeDisputeRecord = (state: { result: "published" | "held"; reason: string | null; detail: string }, gateRecord?: string): string => writeRecord({
   version: 1, kind: "dispute", entry: id, date, as_of: asOf, entry_sha256: d.contentSha,
-  drafter: e.verification?.drafter ?? null, sources: fetched.fetches, quote_checks: [], verifier: null,
-  adjudication: finalOutcome === "upheld" ? { result: "published", reason: null, detail: `Dispute #${issueNo} upheld by both vendors; corrected ${agreed.map((c) => c.field).join(", ")}; re-verified below.` }
-    : finalOutcome === "rejected" ? { result: "published", reason: null, detail: `Dispute #${issueNo} not upheld by either vendor; entry unchanged.` }
-    : { result: "held", reason: "disputed", detail: `Dispute #${issueNo} split the vendors: ${runs.map((r, i) => `${r.vendor} ${verdicts[i] ? (verdicts[i]!.upheld ? "upheld" : "rejected") : "failed"}`).join(", ")}.` },
-  dispute: { issue: issueNo, title: issue.title, claim, verdicts: runs, outcome: finalOutcome },
-};
+  drafter: e.drafted ?? e.verification?.drafter ?? null, sources: fetched.fetches, quote_checks: [], verifier: null,
+  adjudication: { result: state.result, reason: (state.reason as VerificationRecord["adjudication"]["reason"]) ?? null, detail: `${disputeDetail} ${state.detail}${gateRecord ? ` Gate record: ${gateRecord}.` : ""}` },
+  dispute: { issue: issueNo, title: issue.title.slice(0, 200), claim: boundedClaim, verdicts: runs, outcome: finalOutcome },
+}, `-dispute-${issueNo}`);
 const reasoning = runs.map((r, i) => `**${r.vendor}** (${r.model}): ${verdicts[i] ? `${verdicts[i]!.upheld ? "upheld" : "not upheld"}. ${verdicts[i]!.reasoning}` : `could not answer (${r.error}).`}`).join("\n\n");
 if (dryRun) { console.log(reasoning); process.exit(0); }
 
-const rel = writeRecord(record, `-dispute-${issueNo}`);
-const recordLink = `https://github.com/${repo}/blob/main/data/verifications/${rel}`;
+const link = (rel: string) => `https://github.com/${repo}/blob/main/data/verifications/${rel}`;
 let text = d.raw;
 
 if (finalOutcome === "rejected") {
   text = appendHistory(text, { date, note: `Verified against dispute #${issueNo}: not upheld by either vendor.` });
   fs.writeFileSync(d.file, text);
-  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=Two models from different vendors assessed this dispute against the primary source and neither upheld it. The entry is unchanged.\n\n${reasoning}\n\nRecord: ${recordLink}`]);
+  const rel = writeDisputeRecord(currentState());
+  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=Two models from different vendors assessed this dispute against the primary source and neither upheld it. The entry is unchanged.\n\n${reasoning}\n\nRecord: ${link(rel)}`]);
   gh(["api", "-X", "PATCH", `repos/${repo}/issues/${issueNo}`, "-f", "state=closed", "-f", "state_reason=completed"]);
   console.log(`closed #${issueNo}: not upheld`);
 } else if (finalOutcome === "split") {
+  const rel = writeDisputeRecord({ result: "held", reason: "disputed", detail: "Held while the vendors disagree." });
   const owned = readOwned(text);
-  text = withOwned(text, { ...owned, held: { reason: "disputed", since: date, detail: record.adjudication.detail, record: rel } });
+  text = withOwned(text, { ...owned, held: { reason: "disputed", since: date, detail: disputeDetail, record: rel } });
   text = appendHistory(text, { date, note: `Updated: held while dispute #${issueNo} splits the two vendors.` });
   fs.writeFileSync(d.file, text);
-  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=The two vendors disagree on this dispute, so the entry is held (off the counted list) until they agree. This issue stays open.\n\n${reasoning}\n\nRecord: ${recordLink}`]);
+  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=The two vendors disagree on this dispute, so the entry is held (off the counted list) until they agree. This issue stays open.\n\n${reasoning}\n\nRecord: ${link(rel)}`]);
   console.log(`held ${id} as disputed; #${issueNo} stays open`);
 } else {
   // Apply the agreed corrections, with a receipt for every numeric value, then re-run the gate.
@@ -158,9 +169,10 @@ if (finalOutcome === "rejected") {
   fs.writeFileSync(d.file, text);
   if (reflowed) console.log("  note: a missing key was added through the document API; the file was re-flowed");
   console.log(`  amended ${id}: ${agreed.map((c) => `${c.field} -> ${c.value}`).join("; ")}`);
-  const gate = await runGate(id, { drafter: cfg.drafter, verifier: cfg.verifier, date, dryRun: false, force: true });
+  const gate = await runGate(id, { drafter: e.drafted ? { vendor: e.drafted.vendor, model: e.drafted.model } : cfg.drafter, verifier: cfg.verifier, date, dryRun: false, force: true, resolvesDispute: issueNo });
+  const rel = writeDisputeRecord(gate.adjudication.result === "published" ? { result: "published", reason: null, detail: "The amended entry passed the gate." } : { result: "held", reason: gate.adjudication.reason, detail: gate.adjudication.detail }, gate.record ?? undefined);
   const outcomeLine = gate.adjudication.result === "published" ? "The amended entry passed the gate and is published." : `The amended entry is held (${gate.adjudication.reason}): ${gate.adjudication.detail}`;
-  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=Upheld by both vendors. Changed: ${agreed.map((c) => `\`${c.field}\``).join(", ")}. ${outcomeLine}\n\n${reasoning}\n\nRecord: ${recordLink}`]);
+  gh(["api", `repos/${repo}/issues/${issueNo}/comments`, "-f", `body=Upheld by both vendors. Changed: ${agreed.map((c) => `\`${c.field}\``).join(", ")}. ${outcomeLine}\n\n${reasoning}\n\nRecord: ${link(rel)}`]);
   gh(["api", "-X", "PATCH", `repos/${repo}/issues/${issueNo}`, "-f", "state=closed", "-f", "state_reason=completed"]);
   console.log(`closed #${issueNo}: upheld`);
 }

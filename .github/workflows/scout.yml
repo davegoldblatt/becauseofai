@@ -43,6 +43,17 @@ jobs:
             --model claude-sonnet-5-5
             --max-turns 100
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+      - name: Refuse anything the run changed outside the data
+        env:
+          BASE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          { git diff --name-only "$BASE_SHA" HEAD; git status --porcelain | cut -c4-; } | sort -u > /tmp/touched.txt
+          bad=$(grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json|research/inbox\.md|research/last-run\.md|\.scout/.*)$' /tmp/touched.txt | grep -v '^$' || true)
+          if [ -n "$bad" ]; then echo "the run touched files outside the allowlist; nothing merges:"; echo "$bad"; exit 1; fi
+          # The gate runs the code from the commit this job started on, with fresh dependencies.
+          git checkout "$BASE_SHA" -- scripts src tests package.json package-lock.json research/vendors.json research/brief.md research/scout-brief.md .github
+          rm -rf node_modules && npm ci
       - name: Install the verifier's tools
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q poppler-utils

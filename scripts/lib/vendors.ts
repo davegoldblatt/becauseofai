@@ -33,22 +33,44 @@ const CLAUDE = process.env.CLAUDE_BIN || "claude";
 
 let codexHomeCache: string | null | undefined;
 // Where Codex finds its login. CODEX_AUTH_JSON (the file's contents, from a
-// secret) wins; then CODEX_HOME; then ~/.codex. The temp copy made from the
-// secret is 0600 and removed at exit.
+// secret) wins; then CODEX_HOME; then ~/.codex. The model always runs against
+// a fresh temporary home holding only auth.json (0600, removed at exit), never
+// the operator's real home with its session history and config.
 export function codexHome(): string | null {
   if (codexHomeCache !== undefined) return codexHomeCache;
+  let auth: string | null = null;
   const fromSecret = process.env.CODEX_AUTH_JSON;
-  if (fromSecret && fromSecret.trim()) {
-    const dir = fs.mkdtempSync(path.join(os.tmpdir(), "boa-codex-"));
-    fs.chmodSync(dir, 0o700);
-    fs.writeFileSync(path.join(dir, "auth.json"), fromSecret, { mode: 0o600 });
-    process.on("exit", () => fs.rmSync(dir, { recursive: true, force: true }));
-    return (codexHomeCache = dir);
+  if (fromSecret && fromSecret.trim()) auth = fromSecret;
+  else {
+    for (const dir of [process.env.CODEX_HOME, path.join(os.homedir(), ".codex")]) {
+      const f = dir && path.join(dir, "auth.json");
+      if (f && fs.existsSync(f)) { auth = fs.readFileSync(f, "utf8"); break; }
+    }
   }
-  for (const dir of [process.env.CODEX_HOME, path.join(os.homedir(), ".codex")]) {
-    if (dir && fs.existsSync(path.join(dir, "auth.json"))) return (codexHomeCache = dir);
-  }
-  return (codexHomeCache = null);
+  if (!auth) return (codexHomeCache = null);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "boa-codex-"));
+  fs.chmodSync(dir, 0o700);
+  fs.writeFileSync(path.join(dir, "auth.json"), auth, { mode: 0o600 });
+  process.on("exit", () => fs.rmSync(dir, { recursive: true, force: true }));
+  return (codexHomeCache = dir);
+}
+
+// The environment a vendor CLI runs with: a path to find its binary, a
+// throwaway home, and the one variable it needs for its login. Nothing else
+// from the job (tokens, keys, the repository's location) is passed on.
+function cliEnv(extra: Record<string, string>): NodeJS.ProcessEnv {
+  const home = fs.mkdtempSync(path.join(os.tmpdir(), "boa-home-"));
+  process.on("exit", () => fs.rmSync(home, { recursive: true, force: true }));
+  return { PATH: process.env.PATH ?? "/usr/bin:/bin", HOME: home, TMPDIR: os.tmpdir(), LANG: "C.UTF-8", TERM: "dumb", ...extra };
+}
+
+// A structured answer that carries something shaped like a credential is not
+// an answer: it is refused before anything is written or posted.
+const SECRET_SHAPES = [/\bsk-[A-Za-z0-9_-]{16,}/, /\beyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}/, /\bghp_[A-Za-z0-9]{20,}/, /\bAKIA[A-Z0-9]{12,}/, /"refresh_token"\s*:/, /"access_token"\s*:/, /-----BEGIN [A-Z ]*PRIVATE KEY-----/];
+export function looksLikeSecret(output: unknown): string | null {
+  const s = JSON.stringify(output);
+  for (const re of SECRET_SHAPES) if (re.test(s)) return re.source;
+  return null;
 }
 
 export function availability(vendor: Vendor): Availability {
@@ -71,6 +93,8 @@ export async function callStructured<T>(vendor: Vendor, req: Request<T>): Promis
       vendor === "openai"
         ? a.via === "api" ? await openaiApi(req) : await codexCli(req)
         : a.via === "api" ? await anthropicApi(req) : await claudeCli(req);
+    const leak = looksLikeSecret(raw.output);
+    if (leak) return { ok: false, error: `output refused: it carries something shaped like a credential (${leak})`, via: a.via, model: req.model, durationMs: Date.now() - t0 };
     const parsed = req.validate.safeParse(raw.output);
     if (!parsed.success) {
       return { ok: false, error: `output did not match the schema: ${parsed.error.issues.slice(0, 3).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`, via: a.via, model: req.model, durationMs: Date.now() - t0 };
@@ -139,7 +163,7 @@ async function codexCli<T>(req: Request<T>): Promise<Raw> {
       "-m", req.model, "-c", `model_reasoning_effort="${req.effort ?? "high"}"`, "--output-schema", schemaFile, "-o", outFile, "-",
     ];
     const prompt = `${req.system}\n\nAnswer with one JSON object matching the output schema and nothing else.\n\n${req.user}`;
-    const r = await run(CODEX, args, { cwd, env: { ...process.env, CODEX_HOME: home }, stdin: prompt, timeoutMs: req.timeoutMs ?? 900_000 });
+    const r = await run(CODEX, args, { cwd, env: cliEnv({ CODEX_HOME: home }), stdin: prompt, timeoutMs: req.timeoutMs ?? 900_000 });
     if (!fs.existsSync(outFile)) throw new Error(`codex exec exited ${r.code} without output: ${(r.stderr || r.stdout).trim().slice(-400)}`);
     const text = fs.readFileSync(outFile, "utf8").trim();
     if (!text) throw new Error(`codex exec wrote an empty answer (exit ${r.code})`);
@@ -188,7 +212,10 @@ async function claudeCli<T>(req: Request<T>): Promise<Raw> {
       "-p", "--no-session-persistence", "--model", req.model, "--output-format", "json", "--json-schema", JSON.stringify(req.schema),
       "--max-turns", "1", "--tools", "", "--system-prompt", req.system,
     ];
-    const r = await run(CLAUDE, args, { cwd, env: { ...process.env }, stdin: req.user, timeoutMs: req.timeoutMs ?? 900_000 });
+    const extra: Record<string, string> = {};
+    if (process.env.CLAUDE_CODE_OAUTH_TOKEN) extra.CLAUDE_CODE_OAUTH_TOKEN = process.env.CLAUDE_CODE_OAUTH_TOKEN;
+    if (process.env.CLAUDE_CONFIG_DIR) extra.CLAUDE_CONFIG_DIR = process.env.CLAUDE_CONFIG_DIR;
+    const r = await run(CLAUDE, args, { cwd, env: cliEnv(extra), stdin: req.user, timeoutMs: req.timeoutMs ?? 900_000 });
     const line = r.stdout.trim().split("\n").filter((l) => l.startsWith("{")).pop();
     if (!line) throw new Error(`claude -p produced no JSON (exit ${r.code}): ${(r.stderr || r.stdout).trim().slice(-400)}`);
     const body = JSON.parse(line);

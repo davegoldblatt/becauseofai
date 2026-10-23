@@ -4,12 +4,13 @@
 // Verdict; the drafter writes Receipts for an existing entry; both vendors
 // answer a Dispute.
 import { z } from "zod";
+import { stringify } from "yaml";
 import { EVIDENCE, ATTRIBUTION, WINDOW, RECEIPT_FIELDS, RECEIPT_MAX_WORDS, type Entry } from "../../src/schema.ts";
 import { GRADE_DESCRIPTION } from "../../src/lib/format.ts";
 import type { QuoteCheck } from "./record.ts";
 
 export const SOURCE_KINDS = ["paper", "preprint", "registry-record", "verification-report", "operational-report", "program-report", "press-release", "news", "other"] as const;
-export const DATE_ORIGINS = ["methods", "registry", "report-body", "abstract", "press-release", "not-found", "not-applicable"] as const;
+export const DATE_ORIGINS = ["methods", "results", "registry", "report-body", "abstract", "press-release", "not-found", "not-applicable"] as const;
 export const RECEIPT_STATUSES = ["supported", "contradicted", "unsupported"] as const;
 
 const Field = z.enum(RECEIPT_FIELDS);
@@ -40,7 +41,7 @@ export const VerdictSchema = z
     attribution_rationale: z.string().describe("one sentence naming the comparison that justifies your attribution grade"),
     achieved_dates: z
       .object({
-        from: z.enum(DATE_ORIGINS).describe("where the entry's achieved dates can be read in the source: methods, registry, report-body are acceptable; abstract and press-release are not; not-applicable when the entry has no achieved dates"),
+        from: z.enum(DATE_ORIGINS).describe("where the entry's achieved dates can be read in the source: methods, results, registry, and report-body are acceptable (the body of the document, at the stated precision); abstract and press-release are not; not-found when the body does not give them; not-applicable when the entry has no achieved dates"),
         note: z.string(),
       })
       .strict(),
@@ -74,7 +75,7 @@ export const ReceiptsDraftSchema = z
           .object({
             field: Field,
             quote: z.string().describe(`verbatim from the source text, ${RECEIPT_MAX_WORDS} words or fewer`),
-            locator: z.string().describe("section, table, figure, page, or registry field"),
+            locator: z.string().max(300).describe("section, table, figure, page, or registry field; one short phrase"),
             source: z.number().int().describe("index of the source the quote comes from, as given"),
           })
           .strict(),
@@ -88,19 +89,20 @@ export type ReceiptsDraft = z.infer<typeof ReceiptsDraftSchema>;
 export const DisputeVerdictSchema = z
   .object({
     upheld: z.boolean(),
-    reasoning: z.string().describe("three sentences at most, specific to the source"),
+    reasoning: z.string().max(1500).describe("three sentences at most, specific to the source"),
     changes: z
       .array(
         z
           .object({
-            field: z.string().describe("dotted path on the entry, for example grades.window, effect.absolute, dates.achieved_start, headline"),
-            value: z.string().nullable().describe("the corrected value, as it should read on the entry"),
-            quote: z.string().describe(`verbatim from a source text given, ${RECEIPT_MAX_WORDS} words or fewer; empty for a grade change`),
-            locator: z.string(),
+            field: z.string().max(40).describe("dotted path on the entry, for example grades.window, effect.absolute, dates.achieved_start, headline"),
+            value: z.string().max(600).nullable().describe("the corrected value, as it should read on the entry"),
+            quote: z.string().max(400).describe(`verbatim from a source text given, ${RECEIPT_MAX_WORDS} words or fewer; empty for a grade change`),
+            locator: z.string().max(160),
             source: z.number().int().describe("index of the source quoted; -1 for the disputant's source"),
           })
           .strict(),
       )
+      .max(12)
       .describe("empty unless upheld"),
   })
   .strict();
@@ -148,19 +150,15 @@ ${TEXT_NOTE}`;
 
 export type SourceForPrompt = { index: number; url: string; method: string; sha256: string; text: string; truncated?: boolean };
 
-// The entry as the verifier sees it: without the drafter's reasoning, notes,
-// history, or any previous verdict.
-export function entryForVerifier(yamlWithoutOwned: string, receiptsYaml: string): string {
-  const stripped = yamlWithoutOwned
-    .split("\n")
-    .filter(function (this: { skip: boolean }, line) {
-      if (/^(notes|history|rationale|verification|held):/.test(line)) { this.skip = true; return false; }
-      if (/^[A-Za-z_]/.test(line)) this.skip = false;
-      return !this.skip;
-    }, { skip: false })
-    .join("\n")
-    .replace(/\s+$/, "");
-  return `${stripped}\n${receiptsYaml}`.trim();
+// The entry as a model sees it: an explicit projection of the parsed fields.
+// Never the file text, so notes, history, the drafter's rationale, a previous
+// verdict, comments, and anything a quoted key could smuggle stay out.
+const MODEL_FIELDS = ["id", "section", "headline", "impact", "impact_number", "impact_label", "summary", "caveat", "domain", "ai_type", "grades", "comparison", "effect", "reach", "dates", "sources", "conflicts", "what_would_change"] as const;
+export function entryForModel(e: Entry, opts: { receipts?: boolean } = {}): string {
+  const view: Record<string, unknown> = {};
+  for (const k of MODEL_FIELDS) if (e[k] !== undefined) view[k] = e[k];
+  if (opts.receipts !== false) view.receipts = e.receipts ?? [];
+  return stringify(view, { lineWidth: 0, schema: "core" }).trim();
 }
 
 export function verifierUser(args: { asOf: string; entryId: string; entryYaml: string; quoteChecks: QuoteCheck[]; sources: SourceForPrompt[] }): string {

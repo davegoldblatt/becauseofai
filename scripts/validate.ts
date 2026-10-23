@@ -8,7 +8,8 @@ const r = loadEntries();
 for (const p of r.errors) console.error(`ERROR  ${p.file}: ${p.message}`);
 for (const p of r.warnings) console.warn(`WARN   ${p.file}: ${p.message}`);
 for (const e of r.held) {
-  const h = heldInfo(e)!;
+  const why = r.unbound.get(e.id);
+  const h = why ? { reason: "verification-unavailable", since: e.verification!.verifier.date, detail: `${why}; the gate has to run again` } : heldInfo(e)!;
   console.log(`held   ${e.id}.yaml: ${h.reason} since ${h.since}: ${h.detail}`);
 }
 for (const e of r.publishable) {

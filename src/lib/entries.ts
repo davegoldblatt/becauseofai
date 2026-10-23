@@ -11,6 +11,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
 import { EntrySchema, isPublished, type Entry, type Section, type DateLike } from "../schema.ts";
+import { contentSha256 } from "./entry-text.ts";
+import type { VerificationRecord } from "../../scripts/lib/record.ts";
 
 export const ENTRIES_DIR = fileURLToPath(new URL("../../data/entries/", import.meta.url));
 
@@ -21,7 +23,42 @@ export type LoadResult = {
   held: Entry[];
   errors: Problem[];
   warnings: Problem[];
+  // Why an entry whose file says "pass" is held anyway: the record is missing,
+  // is another entry's, did not publish, or was made for different content.
+  unbound: Map<string, string>;
 };
+export type Records = Record<string, VerificationRecord>;
+
+// The verification block is a claim; the record under data/verifications is
+// the evidence. An entry publishes only when the two agree and the record was
+// made for the content (and receipts) the file carries now.
+export function recordMismatch(e: Entry, raw: string, records: Records): string | null {
+  const v = e.verification;
+  if (!v) return null;
+  const rec = records[v.record];
+  if (!rec) return `record ${v.record} is not on disk`;
+  if (rec.entry !== e.id) return `record ${v.record} belongs to ${rec.entry}`;
+  if (rec.kind !== "verification") return `record ${v.record} is a ${rec.kind} record, not a verification`;
+  if (rec.adjudication.result !== "published") return `record ${v.record} did not publish (${rec.adjudication.reason})`;
+  if (!rec.verifier || rec.verifier.error || rec.verifier.vendor !== v.verifier.vendor || rec.verifier.model !== v.verifier.model) return `record ${v.record} names a different verifier`;
+  if (!rec.drafter || rec.drafter.vendor !== v.drafter.vendor) return `record ${v.record} names a different drafter`;
+  if (rec.entry_sha256 !== contentSha256(raw)) return `the entry changed after record ${v.record} was made`;
+  return null;
+}
+
+// Read every data/verifications/<id>/<file>.json from disk (node scripts).
+export function readRecordFiles(dir: string = path.resolve(ENTRIES_DIR, "../verifications")): Records {
+  const out: Records = {};
+  if (!fs.existsSync(dir)) return out;
+  for (const id of fs.readdirSync(dir)) {
+    const sub = path.join(dir, id);
+    if (!fs.statSync(sub).isDirectory()) continue;
+    for (const f of fs.readdirSync(sub).filter((x) => x.endsWith(".json"))) {
+      try { out[`${id}/${f}`] = JSON.parse(fs.readFileSync(path.join(sub, f), "utf8")); } catch { /* a bad record binds nothing */ }
+    }
+  }
+  return out;
+}
 
 export function dateToString(d: DateLike | null): string | null {
   if (d === null || d === undefined) return null;
@@ -65,15 +102,17 @@ export function readEntryFiles(dir: string = ENTRIES_DIR): Record<string, string
   return out;
 }
 
-export function loadEntries(opts: { today?: Date } = {}): LoadResult {
-  return parseEntryFiles(readEntryFiles(), opts);
+export function loadEntries(opts: { today?: Date; records?: Records } = {}): LoadResult {
+  return parseEntryFiles(readEntryFiles(), { ...opts, records: opts.records ?? readRecordFiles() });
 }
 
-export function parseEntryFiles(files: Record<string, string>, opts: { today?: Date } = {}): LoadResult {
+export function parseEntryFiles(files: Record<string, string>, opts: { today?: Date; records?: Records } = {}): LoadResult {
   const today = opts.today ?? new Date();
+  const records = opts.records ?? {};
   const all: Entry[] = [];
   const errors: Problem[] = [];
   const warnings: Problem[] = [];
+  const unbound = new Map<string, string>();
   const seenIds = new Map<string, string>();
   for (const file of Object.keys(files).sort()) {
     const raw = files[file];
@@ -95,6 +134,11 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (`${e.id}.yaml` !== file) errors.push({ file, message: `id "${e.id}" does not match the filename` });
     if (seenIds.has(e.id)) errors.push({ file, message: `duplicate id "${e.id}" (also in ${seenIds.get(e.id)})` });
     seenIds.set(e.id, file);
+    if (isPublished(e)) {
+      let why: string | null;
+      try { why = recordMismatch(e, raw, records); } catch (err) { why = `could not hash the entry: ${(err as Error).message}`; }
+      if (why) { unbound.set(e.id, why); warnings.push({ file, message: `held: ${why}; the gate has to run again` }); }
+    }
     all.push(e);
   }
   const ids = new Set(all.map((e) => e.id));
@@ -112,9 +156,10 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
     byRank.set(key, e.id);
   }
-  const held = all.filter((e) => !isPublished(e));
-  const publishable = all.filter((e) => isPublished(e));
-  return { all, publishable, held, errors, warnings };
+  const published = (e: Entry) => isPublished(e) && !unbound.has(e.id);
+  const held = all.filter((e) => !published(e));
+  const publishable = all.filter(published);
+  return { all, publishable, held, errors, warnings, unbound };
 }
 
 export function bySection(entries: Entry[], section: Section): Entry[] {
@@ -130,8 +175,8 @@ export function counts(entries: Entry[]): Record<Section, number> {
 }
 
 // Throws when any entry is invalid, so `astro build` fails on bad data.
-export function loadOrThrow(files?: Record<string, string>): LoadResult {
-  const r = files ? parseEntryFiles(files) : loadEntries();
+export function loadOrThrow(files?: Record<string, string>, records?: Records): LoadResult {
+  const r = files ? parseEntryFiles(files, { records }) : loadEntries();
   if (r.errors.length) {
     const lines = r.errors.map((p) => `  ${p.file}: ${p.message}`);
     throw new Error(`entry validation failed (${r.errors.length} error(s)):\n${lines.join("\n")}`);

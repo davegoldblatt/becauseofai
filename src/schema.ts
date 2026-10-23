@@ -113,8 +113,8 @@ export const Source = z
 
 export const Effect = z
   .object({
-    relative: z.string().nullable(),
-    absolute: z.string().nullable(),
+    relative: z.string().max(300).nullable(),
+    absolute: z.string().max(300).nullable(),
   })
   .strict()
   .nullable()
@@ -141,8 +141,8 @@ export function wordCount(s: string): number {
 export const Receipt = z
   .object({
     field: z.enum(RECEIPT_FIELDS),
-    quote: NonBlank.refine((q) => wordCount(q) <= RECEIPT_MAX_WORDS, `quote must be ${RECEIPT_MAX_WORDS} words or fewer`),
-    locator: NonBlank,
+    quote: NonBlank.max(400).refine((q) => wordCount(q) <= RECEIPT_MAX_WORDS, `quote must be ${RECEIPT_MAX_WORDS} words or fewer`),
+    locator: NonBlank.max(300),
     source: z.number().int().nonnegative(),
   })
   .strict();
@@ -150,17 +150,21 @@ export const Receipt = z
 export const VendorRun = z
   .object({
     vendor: z.enum(VENDORS),
-    model: NonBlank,
+    model: NonBlank.max(120),
     date: FullDate,
   })
   .strict();
+
+// Who wrote the receipts (and, for a new entry, the entry): bound to the file
+// so the gate's drafter of record cannot be relabelled by a flag.
+export const Drafted = VendorRun.extend({ via: z.string().max(40).optional() }).strict();
 
 export const Verification = z
   .object({
     drafter: VendorRun,
     verifier: VendorRun.extend({ verdict: z.enum(VERDICTS) }).strict(),
     // Path under data/verifications/ of the public record of this run.
-    record: NonBlank,
+    record: NonBlank.max(200),
   })
   .strict()
   .refine((v) => v.drafter.vendor !== v.verifier.vendor, {
@@ -172,25 +176,29 @@ export const Held = z
   .object({
     reason: z.enum(HELD_REASONS),
     since: FullDate,
-    detail: NonBlank,
-    record: z.string().optional(),
+    detail: NonBlank.max(2000),
+    record: z.string().max(200).optional(),
   })
   .strict();
+
+// Generous caps on prose: an amendment or a run can never write a field the
+// page cannot show.
+const Prose = (max: number) => NonBlank.max(max);
 
 export const EntryObject = z
   .object({
     id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "id must be a kebab-case slug"),
     section: z.enum(SECTIONS),
     rank: z.number().int().positive(),
-    headline: NonBlank,
-    impact: NonBlank,
+    headline: Prose(400),
+    impact: Prose(120),
     // Optional editorial control of the poster number. When set, the
     // number and its label drive the hero, rows, table, and share image;
     // `impact` stays the citation phrase and the fallback.
-    impact_number: z.string().nullable().optional(),
-    impact_label: z.string().nullable().optional(),
-    summary: NonBlank,
-    caveat: z.string().nullable().optional(),
+    impact_number: z.string().max(40).nullable().optional(),
+    impact_label: z.string().max(160).nullable().optional(),
+    summary: Prose(1500),
+    caveat: z.string().max(1000).nullable().optional(),
     domain: z.enum(DOMAINS),
     ai_type: z.enum(AI_TYPES),
     grades: z
@@ -200,9 +208,9 @@ export const EntryObject = z
         window: z.enum(WINDOW).nullable(),
       })
       .strict(),
-    comparison: z.string().nullable().optional(),
+    comparison: z.string().max(600).nullable().optional(),
     effect: Effect,
-    reach: z.string().nullable().optional(),
+    reach: z.string().max(300).nullable().optional(),
     dates: z
       .object({
         achieved_start: DateValue.nullable(),
@@ -213,16 +221,17 @@ export const EntryObject = z
       })
       .strict(),
     sources: z.array(Source).min(1),
-    conflicts: z.string().nullable().optional(),
+    conflicts: z.string().max(1500).nullable().optional(),
     // Required (non-blank) for not-yet, optional elsewhere (HANDOFF §3).
-    what_would_change: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
+    what_would_change: z.string().max(1000).nullable().optional(),
+    notes: z.string().max(6000).nullable().optional(),
     related: z.array(z.string()).optional(),
     history: z.array(HistoryItem).min(1),
     // Written by the pipeline, read by the site. `rationale` is the drafter's
     // one line naming the comparison that justifies the attribution grade.
-    rationale: z.string().nullable().optional(),
-    receipts: z.array(Receipt).optional(),
+    rationale: z.string().max(600).nullable().optional(),
+    receipts: z.array(Receipt).max(40).optional(),
+    drafted: Drafted.optional(),
     verification: Verification.optional(),
     held: Held.optional(),
   })
@@ -252,6 +261,13 @@ function editorialRefine(e: Draft, ctx: Ctx): void {
           path: ["grades", "window"],
           message: "window grade is required unless notes carry a verify: line",
         });
+      }
+    }
+    // A not-yet entry is a watchlist candidate: ungraded by definition, so the
+    // gate does not compare grades on it.
+    if (e.section === "not-yet") {
+      for (const key of ["evidence", "attribution", "window"] as const) {
+        if (e.grades[key] !== null) ctx.addIssue({ code: "custom", path: ["grades", key], message: "a not-yet entry carries no grades" });
       }
     }
     if (e.section === "not-yet" && !(e.what_would_change ?? "").trim()) {

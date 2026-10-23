@@ -18,6 +18,8 @@ Taste, since this is where drift happens:
 - Company dashboards (Waymo) are admissible with the conflict stated and the comparison understood. Press releases are leads, not evidence. Never auto-score; never collapse grades into one number.
 - Absolute next to relative, always. "26% fewer" needs "10 per 1,000" beside it.
 
+The held list comes first. `npm run validate` prints every held entry with its reason (`/changelog#held` shows the same, with both vendors' verdicts). For each one, fix the cause rather than the symptom: add a primary source that actually carries the number (a registry record, a PMC or Europe PMC copy, the paper itself, a verification report) when the publisher's page cannot be read; correct a value to what the source says when a receipt could not be found for it, with a new receipt; state a conflict the verifier found in the source; swap a press release for the paper or registry it announces; and when the source genuinely cannot support a number, remove the number from the entry or move the entry to `not-yet`. Never edit `verification` or `held`; the gate rewrites them. A `grade-split` is an argument to have in the entry's `rationale` and `notes`, not a value to change to make it pass.
+
 Spend effort unevenly: deep-verify the two or three strongest candidates rather than skim twenty. If nothing clears the bar, say so — that's a valid week. Also review the existing entries: new data (Waymo quarterly, DERM counts, Phase 3 readouts), follow-ups, retractions, or a grade you'd argue with. Downgrades are welcome and should be argued. For each `not-yet` entry, check whether its `what_would_change` has happened.
 
 Output:

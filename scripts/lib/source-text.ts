@@ -118,7 +118,23 @@ function cookieHeader(jar: Jar, url: URL): string {
   return out.join("; ");
 }
 
+// Rate limits and transient errors get two more tries with a pause; a 403 is final.
 async function get(url: string, accept: string, timeoutMs: number, hops = 8): Promise<Response> {
+  let last: Error | null = null;
+  for (const pause of [0, 4000, 10000]) {
+    if (pause) await new Promise((r) => setTimeout(r, pause));
+    try {
+      const r = await getOnce(url, accept, timeoutMs, hops);
+      if (r.status === 429 || (r.status >= 500 && r.status < 600)) { last = new Error(`HTTP ${r.status}`); await r.arrayBuffer().catch(() => undefined); continue; }
+      return r;
+    } catch (err) {
+      last = err as Error;
+    }
+  }
+  throw last ?? new Error("fetch failed");
+}
+
+async function getOnce(url: string, accept: string, timeoutMs: number, hops: number): Promise<Response> {
   const jar: Jar = new Map();
   let current = url;
   const deadline = Date.now() + timeoutMs;
@@ -219,7 +235,7 @@ export function pdfToText(buf: Buffer): { ok: true; text: string } | { ok: false
   }
 }
 
-async function direct(url: string, timeoutMs: number, maxChars: number): Promise<SourceText> {
+async function direct(url: string, timeoutMs: number, maxChars: number, retried = 0): Promise<SourceText> {
   let r: Response;
   try {
     r = await get(url, "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.5", timeoutMs);
@@ -236,7 +252,14 @@ async function direct(url: string, timeoutMs: number, maxChars: number): Promise
     return finish(url, r.url, "pdf", p.text, { minChars: MIN_FULL_TEXT_CHARS, maxChars });
   }
   const html = buf.toString("utf8");
-  return finish(url, r.url, "html", htmlToText(html), { minChars: MIN_FULL_TEXT_CHARS, maxChars, html });
+  const out = finish(url, r.url, "html", htmlToText(html), { minChars: MIN_FULL_TEXT_CHARS, maxChars, html });
+  // Some sites (PMC among them) answer a first contact with a stub page and
+  // the article on the next; one more try after a pause before giving up.
+  if (!out.ok && /^only \d+ characters/.test(out.reason) && retried < 2) {
+    await new Promise((res) => setTimeout(res, retried ? 15000 : 5000));
+    return direct(url, timeoutMs, maxChars, retried + 1);
+  }
+  return out;
 }
 
 export async function fetchSourceText(url: string, opts: { timeoutMs?: number; maxChars?: number } = {}): Promise<SourceText> {
@@ -269,27 +292,58 @@ export async function fetchSourceText(url: string, opts: { timeoutMs?: number; m
 
 // ---------------------------------------------------------------------------
 // Verbatim quote matching. Both sides are normalised the same way: Unicode
-// compatibility form, lower case, curly quotes and dashes straightened,
-// whitespace collapsed. The loose form keeps letters and digits only.
+// compatibility form, lower case, curly quotes and dashes straightened, the
+// middle dot some journals use as a decimal point made a period, thousands
+// separators (a comma or a space before exactly three digits) dropped,
+// whitespace collapsed. Numbers are never changed beyond that: a sign, a
+// decimal point, a percent sign, and the digits are part of the token.
 export function normalizeForMatch(s: string): string {
   return s
     .normalize("NFKC")
     .toLowerCase()
-    .replace(/[‘’‚′]/g, "'")
-    .replace(/[“”„″]/g, '"')
-    .replace(/[‐-―−]/g, "-")
-    .replace(/ /g, " ")
+    .replace(/[\u2018\u2019\u201a\u2032]/g, "'")
+    .replace(/[\u201c\u201d\u201e\u2033]/g, '"')
+    .replace(/[\u2010-\u2015\u2212]/g, "-")
+    .replace(/\u00a0/g, " ")
+    .replace(/(\d)\u00b7(\d)/g, "$1.$2")
+    .replace(/(\d)[, ](\d{3})(?!\d)/g, "$1$2")
     .replace(/\s+/g, " ")
     .trim();
 }
-const loose = (s: string) => normalizeForMatch(s).replace(/[^a-z0-9]+/g, "");
+
+// Tokens: numbers (with sign, decimals, percent) and words. Everything else
+// (punctuation, quotes, brackets) is dropped, so a quote may differ from the
+// source in punctuation but never in a number or a word.
+const TOKEN = /[+-]?\d+(?:\.\d+)?%?|[\p{L}]+/gu;
+export function matchTokens(s: string): string[] {
+  return normalizeForMatch(s).match(TOKEN) ?? [];
+}
+
+function hasBoundary(t: string, at: number, len: number): boolean {
+  const before = at === 0 ? "" : t[at - 1];
+  const after = at + len >= t.length ? "" : t[at + len];
+  const alnum = /[\p{L}\p{N}]/u;
+  // A sign or a decimal point glued to the match changes the number: "-10" is not "10", "1.0" is not "0".
+  return !alnum.test(before) && !/[+\-.]/.test(before) && !alnum.test(after) && !/[.%]/.test(after);
+}
 
 export function findQuote(text: string, quote: string): { found: boolean; exact: boolean } {
   const t = normalizeForMatch(text);
-  const q = normalizeForMatch(quote).replace(/^["'“”‘’]+|["'“”‘’.,;:]+$/g, "");
+  const q = normalizeForMatch(quote).replace(/^["'“”‘’(\[]+|["'“”‘’.,;:)\]]+$/g, "").trim();
   if (!q) return { found: false, exact: false };
-  if (t.includes(q)) return { found: true, exact: true };
-  const lq = loose(quote);
-  if (lq.length >= 12 && loose(text).includes(lq)) return { found: true, exact: false };
+  // Exact: the normalised quote occurs at a token boundary.
+  let at = t.indexOf(q);
+  while (at >= 0) {
+    if (hasBoundary(t, at, q.length)) return { found: true, exact: true };
+    at = t.indexOf(q, at + 1);
+  }
+  // Loose: the same tokens in the same order, punctuation aside. Numbers must match exactly.
+  const qt = matchTokens(quote);
+  if (qt.length < 3) return { found: false, exact: false };
+  const tt = matchTokens(text);
+  outer: for (let i = 0; i + qt.length <= tt.length; i++) {
+    for (let j = 0; j < qt.length; j++) if (tt[i + j] !== qt[j]) continue outer;
+    return { found: true, exact: false };
+  }
   return { found: false, exact: false };
 }

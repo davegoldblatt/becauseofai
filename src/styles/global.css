@@ -490,3 +490,4 @@ h1.sentence + .rcpt { margin: -0.5rem 0 1rem; }
 .verif code { font: inherit; background: var(--paper); border: 1px solid var(--graphite); padding: 0 4px; }
 .verif-note { font: 400 0.95rem/1.5 var(--body); margin: 1rem 0 0; max-width: 68ch; }
 .chg.held .chg-h { color: var(--graphite-text); }
+.chg.held .chg-type .stamp { white-space: normal; text-align: center; line-height: 1.2; padding: 2px 5px; }

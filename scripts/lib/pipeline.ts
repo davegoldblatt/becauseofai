@@ -9,7 +9,7 @@ import { DraftEntrySchema, VENDORS, type Entry, type Vendor } from "../../src/sc
 import { ENTRIES_DIR } from "../../src/lib/entries.ts";
 import { SITE } from "../../src/site.ts";
 import { fetchSourceText, findQuote, type SourceText } from "./source-text.ts";
-import { contentSha256, stripOwned, withOwned, type Owned } from "./yaml-edit.ts";
+import { contentSha256, stripOwned, withOwned, assertEntry, type Owned } from "./yaml-edit.ts";
 import type { QuoteCheck, SourceFetch, VerificationRecord } from "./record.ts";
 import type { Effort } from "./vendors.ts";
 import type { SourceForPrompt } from "./verdict.ts";
@@ -135,8 +135,9 @@ export function writeRecord(record: VerificationRecord, suffix = ""): string {
   return rel;
 }
 
+// Every write goes through the draft schema first; a bad edit never lands.
 export function writeOwned(d: DraftEntry, owned: Owned): void {
-  fs.writeFileSync(d.file, withOwned(d.raw, owned));
+  fs.writeFileSync(d.file, assertEntry(withOwned(d.raw, owned), `${d.id}.yaml`));
 }
 
 export const asOf = SITE.asOf;

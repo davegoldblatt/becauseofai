@@ -16,7 +16,7 @@ export type AdjudicationInput = {
   verifier: VerifierOutcome;       // null when the verifier was not run
 };
 
-const ACCEPTED_DATE_ORIGINS = new Set(["methods", "registry", "report-body", "not-applicable"]);
+const ACCEPTED_DATE_ORIGINS = new Set(["methods", "results", "registry", "report-body"]);
 const NOT_PRIMARY = new Set(["press-release", "news"]);
 
 const hold = (reason: Adjudication["reason"], detail: string, extra: Partial<Adjudication> = {}): Adjudication => ({ result: "held", reason, detail, ...extra });
@@ -44,6 +44,12 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
 
   const notFound = quoteChecks.filter((c) => !c.found);
   if (notFound.length) {
+    // A receipt whose source could not be read is a reading failure, not a grounding failure.
+    const unreadIdx = new Set(sources.filter((s) => !s.ok).map((s) => s.index));
+    const unread = notFound.filter((c) => unreadIdx.has(c.source));
+    if (unread.length) {
+      return hold("no-full-text", [...new Set(unread.map((c) => c.source))].map((i) => { const s = sources.find((x) => x.index === i)!; return `source ${i} could not be read in full (${s.reason})`; }).join("; ") + `; receipts for ${[...new Set(unread.map((c) => c.field))].join(", ")} could not be checked.`);
+    }
     return hold("ungrounded", notFound.map((c) => `${c.field}: the quote is ${c.status === "stale" ? "no longer" : "not"} in source ${c.source}${c.note ? ` (${c.note})` : ""}`).join("; ") + ".");
   }
 
@@ -52,18 +58,22 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
   const v = verifier.output;
 
   // The verifier's full-text judgment matters for pages and PDFs, where the code
-  // cannot tell an abstract from a paper. A registry record from the API or a
-  // Europe PMC article is complete by construction.
-  const judged = fetched.some((s) => !/^(clinicaltrials|europepmc)/.test(s.method));
+  // cannot tell an abstract from a paper, and for anything the code cut short.
+  // A registry record from the API or a Europe PMC article, read whole, is
+  // complete by construction.
+  const judged = fetched.some((s) => !/^(clinicaltrials|europepmc)/.test(s.method) || s.truncated);
   if (!v.full_text && judged) return hold("no-full-text", `The verifier read only an abstract or landing page, not the full document${v.summary ? ` (${v.summary})` : ""}.`);
   if (NOT_PRIMARY.has(v.source_kind)) return hold("no-primary-source", `The primary source is a ${v.source_kind.replace("-", " ")}; press releases and news articles are leads, not evidence.`);
 
+  // One verdict per receipt, in order, naming the same field: a verdict list
+  // that is short, long, or shuffled is not an answer.
+  const receipts = e.receipts ?? [];
+  if (v.receipts.length !== receipts.length || v.receipts.some((r, i) => r.field !== receipts[i].field)) {
+    return hold("verification-unavailable", `The verifier's receipt verdicts (${v.receipts.map((r) => r.field).join(", ") || "none"}) do not match the entry's receipts (${receipts.map((r) => r.field).join(", ") || "none"}).`);
+  }
   const bad = v.receipts.map((r, i) => ({ r, i })).filter(({ r }) => r.status !== "supported");
   if (bad.length) {
     return hold("ungrounded", bad.map(({ r, i }) => `${r.field} (receipt ${i + 1}): ${r.status}${r.note ? `, ${r.note}` : ""}`).join("; ") + ".");
-  }
-  if (v.receipts.length !== (e.receipts ?? []).length) {
-    return hold("verification-unavailable", `The verifier answered for ${v.receipts.length} receipts; the entry has ${(e.receipts ?? []).length}.`);
   }
 
   const hasDates = e.dates.achieved_start != null || e.dates.achieved_end != null;
@@ -81,14 +91,14 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
       const names: Record<string, string> = { reached_people: "reached people", measured_against: "measured against something", ai_counterfactual: "the AI did something that would not otherwise have happened", dated: "dated" };
       return hold("fails-test", `Failed: ${failed.map((k) => names[k]).join("; ")}${v.tests.note ? ` (${v.tests.note})` : ""}.`);
     }
+    // Every grade must match, null included: a drafter that could not grade
+    // and a verifier that could is a disagreement the editor has to resolve.
     const splits: Split[] = [];
     for (const g of ["evidence", "attribution", "window"] as const) {
-      const d = e.grades[g];
-      if (d === null) continue; // an ungraded field (window with a verify: note) is not a split
-      if (v.grades[g] !== d) splits.push({ grade: g, drafter: d, verifier: v.grades[g] });
+      if (v.grades[g] !== e.grades[g]) splits.push({ grade: g, drafter: e.grades[g], verifier: v.grades[g] });
     }
     if (splits.length) {
-      return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
+      return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
     }
   }
 

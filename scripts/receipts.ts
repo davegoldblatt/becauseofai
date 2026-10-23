@@ -8,7 +8,8 @@
 //   options: --dry-run  --max N (0 = no cap)
 import { ReceiptsDraftSchema, jsonSchema, drafterSystem, drafterUser, requiredFieldsOf } from "./lib/verdict.ts";
 import { callStructured, availability } from "./lib/vendors.ts";
-import { loadVendorConfig, readDraft, allEntryIds, fetchPrimaries, sourcesForPrompt, writeOwned, fmtTokens, type DraftEntry } from "./lib/pipeline.ts";
+import { loadVendorConfig, readDraft, allEntryIds, fetchPrimaries, sourcesForPrompt, writeOwned, fmtTokens, todayUtc, type DraftEntry } from "./lib/pipeline.ts";
+import { entryForModel } from "./lib/verdict.ts";
 import { findQuote } from "./lib/source-text.ts";
 import { wordCount, RECEIPT_MAX_WORDS, missingReceipts } from "../src/schema.ts";
 
@@ -44,7 +45,7 @@ for (const id of ids) {
   const fetched = await fetchPrimaries(e, console.log);
   if (!fetched.texts.size) { console.log("  no primary source could be read; nothing to write (the gate will hold it)"); failed++; continue; }
   const sources = sourcesForPrompt(fetched);
-  const user = drafterUser({ entryId: id, entryYaml: d.content.replace(/^(notes|history):[\s\S]*?(?=^[a-z_]+:|\Z)/gm, ""), required, sources });
+  const user = drafterUser({ entryId: id, entryYaml: entryForModel(e, { receipts: false }), required, sources });
   const r = await callStructured(drafter.vendor, { system: drafterSystem(), user, schema, schemaName: "receipts", validate: ReceiptsDraftSchema, model: drafter.model, effort: drafter.effort });
   if (!r.ok) { console.log(`  drafter FAILED: ${r.error}`); failed++; continue; }
   console.log(`  drafter answered · ${fmtTokens(r.tokens)} · ${Math.round(r.durationMs / 1000)} s`);
@@ -57,14 +58,15 @@ for (const id of ids) {
       console.log(`  dropped receipt for ${rc.field}: ${!t ? `source ${rc.source} not read` : !found ? "quote not found verbatim" : words > RECEIPT_MAX_WORDS ? `${words} words` : "blank"}: "${rc.quote.slice(0, 80)}"`);
       continue;
     }
-    kept.push({ field: rc.field, quote: rc.quote.trim(), locator: rc.locator.trim(), source: rc.source });
+    kept.push({ field: rc.field, quote: rc.quote.trim(), locator: rc.locator.trim().slice(0, 300), source: rc.source });
   }
   for (const u of r.output.unsupported) console.log(`  drafter could not support ${u.field}: ${u.why}`);
   const covered = new Set(kept.map((k) => k.field));
   const missing = required.filter((f) => !covered.has(f));
   console.log(`  ${kept.length} receipt(s) kept${missing.length ? `; still missing ${missing.join(", ")}` : "; every required field covered"}`);
   if (dryRun) { for (const k of kept) console.log(`    ${k.field} <- "${k.quote}" (${k.locator}, source ${k.source})`); continue; }
-  writeOwned(d, { receipts: kept, rationale: r.output.rationale.trim() || undefined });
+  // New receipts, new drafter of record, and any previous verification no longer applies.
+  writeOwned(d, { receipts: kept, rationale: r.output.rationale.trim() || undefined, drafted: { vendor: drafter.vendor, model: r.model, date: todayUtc(), via: r.via }, verification: undefined });
   wrote++;
 }
 console.log(`\n${wrote} entries written · ${failed} not written`);
