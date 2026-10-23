@@ -99,4 +99,4 @@ Code is MIT. The registry data (`data/`, `research/`), the spec, and the site's 
 
 ## Contributing
 
-Propose an entry or dispute one through the issue templates. Pull requests change one entry file at a time and add a `history` line. Every entry needs a primary source and an achieved date; see `HANDOFF.md` and `/method`. Build and design changes are welcome too; keep dependencies minimal (no UI library, no analytics, no trackers).
+Propose an entry or dispute one through the issue templates. Pull requests change one entry file at a time and add a `history` line. Every entry needs a primary source and an achieved date; see `HANDOFF.md` and `/method`. Build and design changes are welcome too; keep dependencies minimal (no UI library, no trackers, no analytics scripts in the code; the only third-party script is Cloudflare's cookieless measurement beacon, injected at the edge and allowed by the content-security policy in `public/_headers`).

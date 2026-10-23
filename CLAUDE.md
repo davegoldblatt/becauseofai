@@ -11,7 +11,7 @@ Read `HANDOFF.md` (the spec) and `README.md` (layout, decisions made) first. The
 
 - Do not add entries from a build session. Leads go to `research/inbox.md` with a link.
 - Do not add scoring, ranking algorithms, sentiment, or AI-generated summaries. `rank` is set by a human.
-- Do not add analytics, cookies, trackers, or third-party scripts beyond Google Fonts and Pagefind.
+- Do not add analytics, cookies, trackers, or third-party scripts beyond Pagefind. The one exception is Cloudflare's cookieless measurement beacon, which Cloudflare injects at the edge (no code in this repo) and the owner chose to keep on 2026-10-23; the content-security policy in `public/_headers` allows exactly that host and nothing else.
 - No database, no CMS, no backend. YAML in git is the CMS and the git history is the audit trail.
 - Keep dependencies minimal. No UI library, no Tailwind.
 
