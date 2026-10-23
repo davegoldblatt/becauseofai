@@ -47,3 +47,5 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Weekly run: ClinicalTrials.gov primary added (entry now renders); headline patient count removed — registry shows 786 planned for SOLAIRIA-1, not ~1,600."
+  - date: 2026-10-22
+    note: "The editor has not yet read the registry record; published unreviewed."

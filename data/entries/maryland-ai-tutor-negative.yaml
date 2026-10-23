@@ -52,3 +52,5 @@ history:
     note: "Added — needs primary source before it renders."
   - date: 2026-10-22
     note: "Weekly run: EdWorkingPaper primary source added (entry now renders); effect size recorded from the abstract."
+  - date: 2026-10-22
+    note: "The editor has not yet read the working paper; published unreviewed."
