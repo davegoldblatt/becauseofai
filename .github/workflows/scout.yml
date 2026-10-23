@@ -40,7 +40,7 @@ jobs:
             Finish by opening the pull request described in the brief. Do not merge anything.
           claude_args: |
             --model claude-sonnet-5-5
-            --max-turns 60
+            --max-turns 100
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
       - name: Validate and build the result
         run: npm run validate && npm run build
