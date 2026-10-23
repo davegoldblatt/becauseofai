@@ -1,4 +1,4 @@
-Because of AI, the day in plain words. Facts gathered 2026-10-23 18:42 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-10-23 18:53 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
 - 2026-10-22: "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three months." https://becauseofai.org/entry/golden-bridge-ii-stroke
@@ -28,7 +28,7 @@ THE ACCOUNT'S OWN REPLIES TO OTHERS (9 in the last 7 days)
 
 FOLLOWERS: 1
 
-PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT SINCE YESTERDAY
+PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterday)
 - None.
 
 SITE TRAFFIC
