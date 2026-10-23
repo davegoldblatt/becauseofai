@@ -76,8 +76,9 @@ const parts = slides.map(impactParts);
           else a.tabIndex = -1;
         });
       });
-      dots.forEach((d, i) => {
-        if (i === current) d.setAttribute("aria-current", "true");
+      // Dots and the desktop index share data-hero-dot, so match on the value, not the position.
+      dots.forEach((d) => {
+        if (Number(d.dataset.heroDot) === current) d.setAttribute("aria-current", "true");
         else d.removeAttribute("aria-current");
       });
       if (idx) idx.textContent = `${current + 1} / ${slides.length}`;
@@ -100,7 +101,7 @@ const parts = slides.map(impactParts);
     hero.addEventListener("mouseleave", () => (hovered = false));
     hero.addEventListener("focusin", () => (focused = true));
     hero.addEventListener("focusout", (ev) => { focused = hero.contains(ev.relatedTarget as Node | null); });
-    dots.forEach((d, i) => d.addEventListener("click", () => { show(i); start(); }));
+    dots.forEach((d) => d.addEventListener("click", () => { show(Number(d.dataset.heroDot)); start(); }));
     pauseBtn?.addEventListener("click", () => {
       paused = !paused;
       pauseBtn.setAttribute("aria-pressed", String(paused));
