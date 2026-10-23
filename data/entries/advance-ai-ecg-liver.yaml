@@ -92,5 +92,5 @@ drafted:
 held:
   reason: no-full-text
   since: 2026-10-23
-  detail: "No primary source could be read in full (source 0: fetch failed: fetch failed; source 1: fetch failed: fetch failed)."
+  detail: "source 0 could not be read in full (only 230 characters of text: a landing page or an abstract, not the full document); no receipt for headline, impact_number, effect.relative."
   record: advance-ai-ecg-liver/2026-10-23.json

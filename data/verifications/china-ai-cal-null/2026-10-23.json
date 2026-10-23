@@ -16,23 +16,26 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7195260",
       "ok": false,
       "method": "html",
-      "fetched_at": "2026-10-23T16:30:49.962Z",
-      "reason": "fetch failed: fetch failed"
+      "fetched_at": "2026-10-23T16:42:32.231Z",
+      "reason": "HTTP 403"
     },
     {
       "index": 1,
       "url": "https://www.ifo.de/DocDL/cesifo1_wp12837.pdf",
-      "ok": false,
-      "method": "html",
-      "fetched_at": "2026-10-23T16:31:03.988Z",
-      "reason": "fetch failed: fetch failed"
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-10-23T16:42:33.832Z",
+      "final_url": "https://www.ifo.de/DocDL/cesifo1_wp12837.pdf",
+      "sha256": "dab6f8abb9ccfb40a94c54b9d5dfbeda5bc0aef8c925f873ddf1a3bde4ec1aaa",
+      "chars": 98650,
+      "truncated": false
     },
     {
       "index": 2,
       "url": "https://www.socialscienceregistry.org/trials/7888",
       "ok": true,
       "method": "html",
-      "fetched_at": "2026-10-23T16:33:58.737Z",
+      "fetched_at": "2026-10-23T16:42:34.183Z",
       "final_url": "https://www.socialscienceregistry.org/trials/7888",
       "sha256": "d70fa34ee37b61dbd49c6fbde053701d51d6c52ec63229c6bdf62ecb853ec83b",
       "chars": 5193,
@@ -44,19 +47,17 @@
       "field": "headline",
       "source": 1,
       "quote": "The final sample comprised 8,647 students and their 315 math teachers.",
-      "found": false,
+      "found": true,
       "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "status": "supported"
     },
     {
       "field": "reach",
       "source": 1,
       "quote": "we implement a field experiment involving 8,647 students from 315 classes in 105 primary schools across rural China.",
-      "found": false,
+      "found": true,
       "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "status": "supported"
     },
     {
       "field": "dates.achieved_start",
@@ -75,10 +76,71 @@
       "status": "supported"
     }
   ],
-  "verifier": null,
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6-astra",
+    "via": "codex-login",
+    "date": "2026-10-23",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "AI-CAL versus R-CAL compares distinct software products with matched delivery conditions, but identical items and non-AI features were not established.",
+      "achieved_dates": {
+        "from": "registry",
+        "note": "The registry specifies April 4–June 14, 2021; the paper describes implementation more broadly as March–June 2021."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": false,
+        "note": "The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The sources support a dated cluster-randomized study of 8,647 students finding no significant average math achievement advantage for AI-CAL. Evidence grade A is not established because initial registration occurred June 28, 2021, after the intervention ended, and the other evidence categories do not fit."
+    },
+    "error": null,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 41740
+    },
+    "duration_ms": 25820
+  },
   "adjudication": {
     "result": "held",
-    "reason": "no-full-text",
-    "detail": "source 1 could not be read in full (fetch failed: fetch failed); receipts for headline, reach could not be checked."
+    "reason": "fails-test",
+    "detail": "The source shows a conflict of interest the entry does not state: The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose."
   }
 }

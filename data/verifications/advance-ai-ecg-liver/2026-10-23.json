@@ -16,16 +16,19 @@
       "url": "https://www.nature.com/articles/s41591-025-04058-y",
       "ok": false,
       "method": "html",
-      "fetched_at": "2026-10-23T16:23:54.957Z",
-      "reason": "fetch failed: fetch failed"
+      "fetched_at": "2026-10-23T16:41:43.974Z",
+      "reason": "only 230 characters of text: a landing page or an abstract, not the full document"
     },
     {
       "index": 1,
       "url": "https://clinicaltrials.gov/study/NCT05782283",
-      "ok": false,
-      "method": "none",
-      "fetched_at": "2026-10-23T16:24:08.975Z",
-      "reason": "fetch failed: fetch failed"
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-10-23T16:41:44.140Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT05782283?format=json",
+      "sha256": "c3d09c233ccf7581249160273c1521e316c7a1e807fc38671960f360a9b9fa9d",
+      "chars": 28149,
+      "truncated": false
     }
   ],
   "quote_checks": [
@@ -33,52 +36,47 @@
       "field": "effect.absolute",
       "source": 1,
       "quote": "\"value\": \"78\"",
-      "found": false,
-      "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "found": true,
+      "exact": true,
+      "status": "supported"
     },
     {
       "field": "effect.absolute",
       "source": 1,
       "quote": "\"value\": \"35\"",
-      "found": false,
-      "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "found": true,
+      "exact": true,
+      "status": "supported"
     },
     {
       "field": "reach",
       "source": 1,
       "quote": "A pragmatic, cluster randomized trial in 45 Mayo Clinic primary care practices will be conducted over a period of 6 months",
-      "found": false,
-      "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "found": true,
+      "exact": true,
+      "status": "supported"
     },
     {
       "field": "dates.achieved_start",
       "source": 1,
       "quote": "\"date\": \"2023-04-18\"",
-      "found": false,
-      "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "found": true,
+      "exact": true,
+      "status": "supported"
     },
     {
       "field": "dates.achieved_end",
       "source": 1,
       "quote": "\"date\": \"2025-09-01\"",
-      "found": false,
-      "exact": false,
-      "status": "unsupported",
-      "note": "source 1 could not be read: fetch failed: fetch failed"
+      "found": true,
+      "exact": true,
+      "status": "supported"
     }
   ],
   "verifier": null,
   "adjudication": {
     "result": "held",
     "reason": "no-full-text",
-    "detail": "No primary source could be read in full (source 0: fetch failed: fetch failed; source 1: fetch failed: fetch failed)."
+    "detail": "source 0 could not be read in full (only 230 characters of text: a landing page or an abstract, not the full document); no receipt for headline, impact_number, effect.relative."
   }
 }
