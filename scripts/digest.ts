@@ -12,6 +12,7 @@ import { loadEntries } from "../src/lib/entries.ts";
 import { heldInfo } from "../src/schema.ts";
 import { SITE } from "../src/site.ts";
 import { xKeysFromEnv, me, ownPosts, mentions, type XPost } from "./lib/x-api.ts";
+import { renderHtml } from "./lib/digest-html.ts";
 
 const argv = process.argv.slice(2);
 const opt = (name: string): string | null => { const i = argv.indexOf(name); return i >= 0 && i + 1 < argv.length ? argv[i + 1] : null; };
@@ -134,6 +135,15 @@ async function main() {
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "latest.json"), JSON.stringify(digest, null, 2) + "\n");
   fs.writeFileSync(path.join(outDir, "latest.md"), render(digest));
+  const headlineOf = (id: string) => byId.get(id)?.headline ?? id;
+  fs.writeFileSync(path.join(outDir, "latest.html"), renderHtml({
+    generated_at: digest.generated_at, site: SITE.url, counts, held: loaded.held.length,
+    announced: announced.map((a) => ({ ...a, headline: headlineOf(a.id) })),
+    x: digest.x, traffic: digest.traffic,
+    changed: changed.map((c) => ({ headline: c.headline, change: c.change, state: c.state, url: c.url, reasonText: (() => { const r = /^held \((.*)\)$/.exec(c.state)?.[1]; return r ? (REASON[r] ?? r) : null; })() })),
+    heldList: held_list.map((h) => ({ headline: h.headline, reasonText: REASON[h.reason] ?? h.reason, since: h.since })),
+    leads: leads_added.length, bulk: changed.length > 10,
+  }));
   console.log(render(digest));
 }
 
