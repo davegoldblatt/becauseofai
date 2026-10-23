@@ -1,6 +1,8 @@
 # Cloudflare Pages response headers.
 /.well-known/api-catalog
   Content-Type: application/linkset+json; charset=utf-8
+/api/schema.json
+  Content-Type: application/schema+json; charset=utf-8
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 /

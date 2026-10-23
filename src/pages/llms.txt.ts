@@ -15,7 +15,8 @@ function line(e: Entry): string {
     ? ` Achieved ${fmtRange(e.dates.achieved_start, e.dates.achieved_end)}, published ${fmtDate(e.dates.published)}.`
     : ` Published ${fmtDate(e.dates.published)}.`;
   const flag = isUnreviewed(e) ? " [unreviewed]" : "";
-  return `- [${e.headline}](${SITE.url}/entry/${e.id}): ${e.impact}${grades}${when}${flag}`;
+  const impact = e.impact.trim().replace(/[.。]$/, "");
+  return `- [${e.headline}](${SITE.url}/entry/${e.id}): ${impact}.${grades}${when}${flag}`;
 }
 
 export function GET() {
