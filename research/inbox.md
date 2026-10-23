@@ -42,3 +42,10 @@ Third pass, same date: 266 candidates over the widened 10-day window, 16 flagged
 - PRIMA-AI kidney-transplant RCT (NCT06056518), Charité, Jan–Sep 2024. [PMC full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13176338/). Read in full and rejected this week: stopped at 76 of 122 planned, control rate about 40% against an assumed 10–15%, OR 0.96 (0.34–2.64). An underpowered null, not a clean one. Revisit only if a larger trial follows.
 - ALERT trial, automated EHR alerts for valvular heart disease (win ratio 1.29 aortic stenosis, 1.23 mitral regurgitation). [JACC](https://www.jacc.org/doi/10.1016/j.jacc.2026.03.037). Missing: whether the alerts use AI or are rule-based, trial dates, absolute numbers (403 to the run).
 - AI-INFOCARE (carried over): the NEJM AI full text still returns 403. The protocol ([JMIR Res Protoc 2025](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12680933/)) names patient-rated interaction quality as primary and consultation length as secondary, so the vendor's 25 vs 33 min headline is a secondary outcome.
+
+## 2026-10-23 (daily scout)
+
+Candidates: 102 over 2026-10-21 to 2026-10-23, 9 flagged randomized, 0 alerts, 0 source errors. No entry drafted.
+
+- Paediatric ED discharge documents, 153 children randomised to template assembly versus on-premises LLM drafting, Montpellier. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1) (NCT07874659). Read the preprint page: primary outcome (record-concordant family understanding) null, difference −0.01 (−0.12 to 0.10); 117 analysed. Possible small `not-because`. Missing: enrolment dates (only ethics approval 2025-01-28 stated), registered retrospectively on 2026-10-15, peer-reviewed version.
+- AI-INFOCARE (carried over from 2026-10-22 and 2026-10-23): [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136) full text still unread. Missing: primary read of the numbers and dates.
