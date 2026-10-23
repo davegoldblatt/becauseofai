@@ -5,6 +5,8 @@ headline: >-
   Because of AI, Swedish mammography screening found 29% more cancers with 44%
   less radiologist reading time, and 12% fewer cancers surfaced between screens.
 impact: "29% more cancers, 44% less workload"
+impact_number: "29%"
+impact_label: "more cancers found, 44% less radiologist reading"
 summary: >-
   MASAI, the first RCT of AI in cancer screening (105,934 women; Lancet, Jan 2026),
   reported interval cancers of 1.55 vs 1.76 per 1,000 with AI-supported reading
@@ -50,3 +52,5 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

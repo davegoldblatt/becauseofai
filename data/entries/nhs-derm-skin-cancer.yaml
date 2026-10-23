@@ -5,6 +5,8 @@ headline: >-
   Because of AI, about a third of urgent skin-cancer referrals at some NHS
   hospitals got a same-day all-clear without waiting weeks for a dermatologist.
 impact: "25,000+ cancers found; ~1/3 discharged same day"
+impact_number: "25,000+"
+impact_label: "cancers found; 1 in 3 referrals cleared same day"
 summary: >-
   Skin Analytics' DERM, the only AI with Class III CE certification for
   autonomous use, has assessed 250,000+ NHS patients, identified 25,000+
@@ -51,3 +53,5 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

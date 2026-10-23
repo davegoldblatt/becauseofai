@@ -5,6 +5,8 @@ headline: >-
   Because of AI-assisted decision support, 10 fewer stroke patients per 1,000
   had another stroke, heart attack, or vascular death within three months.
 impact: "26% fewer vascular events"
+impact_number: "26%"
+impact_label: "fewer repeat strokes, heart attacks, or vascular deaths — 10 per 1,000"
 summary: >-
   GOLDEN BRIDGE II (BMJ, March 2026) cluster-randomized 77 Chinese hospitals and
   21,603 acute ischemic stroke patients; new vascular events at three months were
@@ -64,3 +66,5 @@ history:
       BMJ paper (PMC full text); replaced the EurekAlert press release with the BMJ
       paper (doi 10.1136/bmj-2025-085810) as primary and set the conflicts line
       from its funding and competing-interest statements.
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

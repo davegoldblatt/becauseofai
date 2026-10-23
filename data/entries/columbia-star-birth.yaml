@@ -5,6 +5,8 @@ headline: >-
   Because of AI, a baby girl was born to a couple who had been told there was
   no sperm to work with.
 impact: "2 sperm found in 2.5M images"
+impact_number: "1"
+impact_label: "baby, from sperm no technician could find"
 summary: >-
   Columbia's STAR system scanned 2.5 million images of a 3.5 mL sample in about
   two hours and found viable sperm where manual microscopy found none; the
@@ -66,3 +68,5 @@ history:
       Corrected the birth month to November 2025 (was end 2025-12) per TIME; replaced
       the EurekAlert release with the Lancet letter (doi 10.1016/S0140-6736(25)01623-X)
       as primary and settled which couple was first.
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

@@ -5,6 +5,8 @@ headline: >-
   Because of AI, Northumbrian Water stopped losing about 6.4 million litres of
   drinking water a day.
 impact: "~6.4 ML/day saved"
+impact_number: "~6.4M"
+impact_label: "litres of drinking water saved per day"
 summary: >-
   A six-month trial starting November 2025 placed FIDO Tech acoustic sensors on
   pipes, with AI classifying which underground sounds are leaks and directing
@@ -45,3 +47,5 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

@@ -5,6 +5,8 @@ headline: >-
   Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and
   March 2026 in screening programs that had no radiologist to read the X-rays.
 impact: "1,660 TB cases found"
+impact_number: "1,660"
+impact_label: "TB cases found with no radiologist"
 summary: >-
   AI-read chest X-rays (CAD) served as the triage reader in MSH's Eliminate TB
   Project across four regions, contributing to 1,660 detected cases including
@@ -44,3 +46,5 @@ related: [india-tribal-tb-ai-cxr]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

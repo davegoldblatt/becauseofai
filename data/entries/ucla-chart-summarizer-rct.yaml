@@ -6,6 +6,8 @@ headline: >-
   burnout from a chart summarizer — while saving no time and mostly not
   recommending it.
 impact: "Lower task load, zero time saved"
+impact_number: "−22"
+impact_label: "net promoter score; less task load, zero time saved"
 summary: >-
   A pragmatic RCT (Feb–May 2026) of Epic's generative chart summarization tool
   among 284 ambulatory clinicians found modestly reduced physician task load and
@@ -46,3 +48,5 @@ related: [ambient-scribes-nejm-ai]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

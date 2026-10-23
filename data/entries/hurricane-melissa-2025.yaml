@@ -5,6 +5,8 @@ headline: >-
   Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica
   about three days out, while Melissa was still a Category 1.
 impact: "~3 days' warning on a Cat 5"
+impact_number: "~3"
+impact_label: "days' warning on a Category 5, called at Category 1"
 summary: >-
   NHC forecasters explicitly forecast Category 5 intensity while Melissa was an
   80-knot (90-mph) Category 1, largely on the strength of Google DeepMind's cyclone model,
@@ -78,3 +80,5 @@ history:
       25 Oct 2025, Melissa at 80 kt) and the Jamaica landfall time (1700 UTC 28 Oct);
       added the NHC Tropical Cyclone Report and both advisories as primary sources.
       Corrected the summary's "80-mph" to 80 kt (90 mph), as the discussion states.
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

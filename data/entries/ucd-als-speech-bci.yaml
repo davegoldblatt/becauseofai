@@ -5,6 +5,8 @@ headline: >-
   Because of AI, a man with ALS has spoken with his family and kept working from
   home for two years through a brain implant, at up to 99% word accuracy.
 impact: "2 years of independent speech"
+impact_number: "2 yrs"
+impact_label: "of independent speech at home, up to 99% word accuracy"
 summary: >-
   UC Davis's intracortical BCI uses deep-learning brain-to-text and cursor
   decoders with continuous fine-tuning; Nature Medicine (June 2026) documented
@@ -43,3 +45,5 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

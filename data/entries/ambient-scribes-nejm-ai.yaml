@@ -5,6 +5,8 @@ headline: >-
   Because of AI, physicians using ambient scribes reported modestly less burnout,
   exhaustion, and task load in a 238-physician randomized trial.
 impact: "Modest burnout reduction (RCT)"
+impact_number: "238"
+impact_label: "physicians, modestly less burnout (RCT)"
 summary: >-
   NEJM AI (Dec 2025) randomized 238 outpatient physicians across 14 specialties
   to Microsoft DAX, Nabla, or usual care for two months; either scribe improved
@@ -51,3 +53,5 @@ history:
     note: "Added."
   - date: 2026-10-22
     note: "Weekly run: noted that the Duke crossover is scribe-vs-scribe; grades rest on the NEJM AI trial alone. No grade change."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

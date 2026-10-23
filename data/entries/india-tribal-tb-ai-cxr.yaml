@@ -5,6 +5,8 @@ headline: >-
   Because of AI, TB case notifications rose 80% in a tribal district of
   Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.
 impact: "+80% TB notifications"
+impact_number: "+80%"
+impact_label: "TB notifications, tribal Chhattisgarh"
 summary: >-
   A prospective multi-centre study of qXR v3 chest X-ray reading found an 80.21%
   increase in TB notifications versus the Aug 2022–Mar 2023 baseline; of 51
@@ -54,3 +56,5 @@ history:
       Corrected the achieved dates to 1 Aug 2023 to 31 Mar 2024 (were Apr 2023 and
       open-ended) from the paper's methods; window stays pre. Set the conflicts line
       from the author affiliations.
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

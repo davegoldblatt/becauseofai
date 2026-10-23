@@ -5,6 +5,8 @@ headline: >-
   Because of AI, there were an estimated 841 fewer injury-causing crashes across
   270 million driverless miles.
 impact: "82% fewer injury crashes"
+impact_number: "82%"
+impact_label: "fewer injury crashes than human drivers, 270M miles"
 summary: >-
   Waymo's safety hub through June 2026 reports 82% fewer injury-causing crashes
   and 95% fewer serious-or-worse crashes than a geographically matched human
@@ -53,3 +55,5 @@ related: []
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

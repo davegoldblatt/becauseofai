@@ -5,6 +5,8 @@ headline: >-
   Because of AI, stroke patients in England were 57% more likely to get a
   thrombectomy and reached specialist centres 64 minutes faster.
 impact: "EVT odds 1.57x; 64 min faster transfer"
+impact_number: "64 min"
+impact_label: "faster transfer to thrombectomy; EVT odds 1.57×"
 summary: >-
   Across ~453,000 stroke admissions at 107 English hospitals over five years,
   patients whose imaging was reviewed with Brainomix 360 had higher thrombectomy
@@ -56,3 +58,5 @@ history:
       Verified the observation period (1 Jan 2019 to 31 Dec 2023) and e-publication
       date (2 Dec 2025) from the Lancet Digital Health abstract; window stays pre.
       Set the conflicts line from the author affiliations and funding.
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."

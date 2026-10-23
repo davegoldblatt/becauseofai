@@ -5,6 +5,8 @@ headline: >-
   Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver
   disease in about 5 more patients per 1,000 adults who had a routine ECG.
 impact: "Liver disease diagnoses doubled (RCT)"
+impact_number: "2×"
+impact_label: "advanced liver disease diagnoses (5 more per 1,000)"
 summary: >-
   The Advance trial (Nature Medicine, Dec 2025) cluster-randomized 98 primary
   care teams; when an ECG-reading model flagged likely advanced chronic liver
@@ -58,3 +60,5 @@ history:
     note: "Added by weekly research run from the scout's registry lead; window pre (trial completed Sept 2025)."
   - date: 2026-10-22
     note: "The editor has not yet read the Nature Medicine paper or the registry record; published unreviewed."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368). Still unreviewed."

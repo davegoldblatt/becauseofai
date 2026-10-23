@@ -5,6 +5,8 @@ headline: >-
   Because of AI (plus tablets and pair work), junior secondary students in
   Sierra Leone gained about 0.26 standard deviations in math in eight weeks.
 impact: "+0.26 SD in 8 weeks"
+impact_number: "+0.26 SD"
+impact_label: "math gain in 8 weeks; about 1.2 to 1.7 years of typical progress"
 summary: >-
   A preregistered classroom-level cluster RCT of 1,763 Grade 7–8 students in 48
   classrooms across 12 Port Loko schools had treatment classes use Gemini's
@@ -49,3 +51,5 @@ related: [china-ai-cal-null, maryland-ai-tutor-negative]
 history:
   - date: 2026-10-22
     note: "Added."
+  - date: 2026-10-22
+    note: "Poster number and label set from the entry's own figures (DAV-368)."
