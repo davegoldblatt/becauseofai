@@ -27,7 +27,8 @@ test("required receipt fields are the set fields that carry a digit", () => {
   assert.deepEqual(requiredReceiptFields(e as any), ["headline", "impact", "effect.relative", "dates.achieved_start"]);
 });
 
-test("a published entry needs a receipt on every numeric field", () => {
+test("an entry the gate passed needs a receipt on every numeric field; an unverified one does not", () => {
+  assert.equal(EntrySchema.safeParse({ ...base(), receipts: receiptsFor(["headline"]) }).success, true);
   const e = { ...base(), verification: pass(), receipts: receiptsFor(["headline", "impact", "effect.relative"]) };
   const r = EntrySchema.safeParse(e);
   assert.equal(r.success, false);
@@ -53,11 +54,14 @@ test("a failed verification must carry a held block; a held entry is not publish
   assert.equal(heldInfo(held.data!)?.reason, "grade-split");
 });
 
-test("an entry with neither block is held as unverified, not rejected", () => {
+test("an entry the gate has not run on stays published; only a held block or a failed verification holds it", () => {
   const r = EntrySchema.safeParse(base());
   assert.equal(r.success, true);
-  assert.equal(isPublished(r.data!), false);
-  assert.equal(heldInfo(r.data!)?.reason, "verification-unavailable");
+  assert.equal(isPublished(r.data!), true);
+  assert.equal(heldInfo(r.data!), null);
+  const fail = { ...pass(), verifier: { ...pass().verifier, verdict: "fail" } };
+  const held = EntrySchema.safeParse({ ...base(), verification: fail, held: { reason: "ungrounded", since: "2026-10-23", detail: "d" } });
+  assert.equal(isPublished(held.data!), false);
 });
 
 test("no primary source is held for that reason even with a verification", () => {

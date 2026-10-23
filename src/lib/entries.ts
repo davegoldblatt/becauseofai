@@ -27,8 +27,9 @@ export type LoadResult = {
   held: Entry[];
   errors: Problem[];
   warnings: Problem[];
-  // Why an entry whose file says "pass" is held anyway: the record is missing,
-  // is another entry's, did not publish, or was made for different content.
+  // Why an entry whose file says "pass" is not shown as verified: the record
+  // is missing, is another entry's, did not publish, or was made for
+  // different content. The entry stays published; the gate runs again on it.
   unbound: Map<string, string>;
 };
 export type Records = Record<string, VerificationRecord>;
@@ -166,7 +167,7 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (isPublished(e)) {
       let why: string | null;
       try { why = recordMismatch(e, raw, records); } catch (err) { why = `could not hash the entry: ${(err as Error).message}`; }
-      if (why) { unbound.set(e.id, why); warnings.push({ file, message: `held: ${why}; the gate has to run again` }); }
+      if (why) { unbound.set(e.id, why); warnings.push({ file, message: `verification not shown: ${why}; the gate has to run again` }); }
     }
     all.push(e);
   }
@@ -185,9 +186,8 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
     byRank.set(key, e.id);
   }
-  const published = (e: Entry) => isPublished(e) && !unbound.has(e.id);
-  const held = all.filter((e) => !published(e));
-  const publishable = all.filter(published);
+  const held = all.filter((e) => !isPublished(e));
+  const publishable = all.filter(isPublished);
   return { all, publishable, held, errors, warnings, unbound };
 }
 

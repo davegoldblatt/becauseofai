@@ -109,8 +109,3 @@ drafted:
   model: claude-opus-5-5
   date: 2026-10-23
   via: claude-login
-held:
-  reason: ungrounded
-  since: 2026-10-23
-  detail: No receipt for effect.relative, reach.
-  record: hurricane-melissa-2025/2026-10-23.json

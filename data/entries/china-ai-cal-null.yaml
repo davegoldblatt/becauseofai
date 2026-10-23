@@ -83,19 +83,3 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-10-23
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-opus-5-5
-    date: 2026-10-23
-  verifier:
-    vendor: openai
-    model: gpt-6-astra
-    date: 2026-10-23
-    verdict: fail
-  record: china-ai-cal-null/2026-10-23.json
-held:
-  reason: fails-test
-  since: 2026-10-23
-  detail: "The source shows a conflict of interest the entry does not state: The paper acknowledges financing from Dell Global Giving, which the entry's 'none found' does not disclose."
-  record: china-ai-cal-null/2026-10-23.json

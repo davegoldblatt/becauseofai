@@ -38,14 +38,14 @@ export function recordFor(e: Entry): { path: string; record: VerificationRecord 
 }
 
 // Held entries with their reason, for the changelog, the running head, and the JSON.
-// An entry whose file says "pass" but whose record does not bind is held as unverified.
-export const heldList = held.map((e) => {
-  const why = data.unbound.get(e.id);
-  const h = why
-    ? { reason: "verification-unavailable" as const, since: e.verification!.verifier.date, detail: `${why[0].toUpperCase()}${why.slice(1)}; the gate has to run again.`, record: e.verification!.record }
-    : heldInfo(e)!;
-  return { entry: e, held: h, record: recordFor(e) };
-});
+export const heldList = held.map((e) => ({ entry: e, held: heldInfo(e)!, record: recordFor(e) }));
+
+// A verification is shown on an entry page only when its record binds to the
+// entry as it stands now.
+export function verifiedRecord(e: Entry): ReturnType<typeof recordFor> {
+  if (!e.verification || e.verification.verifier.verdict !== "pass" || data.unbound.has(e.id)) return null;
+  return recordFor(e);
+}
 export const because = bySection(publishable, "because");
 export const notBecause = bySection(publishable, "not-because");
 export const notYet = bySection(publishable, "not-yet");

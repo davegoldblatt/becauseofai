@@ -71,19 +71,3 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-10-23
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-opus-5-5
-    date: 2026-10-23
-  verifier:
-    vendor: openai
-    model: gpt-6-astra
-    date: 2026-10-23
-    verdict: fail
-  record: rentosertib-phase-3/2026-10-23.json
-held:
-  reason: ungrounded
-  since: 2026-10-23
-  detail: "impact (receipt 3): unsupported, The actual study start date does not establish the claimed zero approvals.."
-  record: rentosertib-phase-3/2026-10-23.json

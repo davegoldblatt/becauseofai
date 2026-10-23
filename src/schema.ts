@@ -303,7 +303,9 @@ function stateRefine(e: Draft, ctx: Ctx): void {
       if (!src) ctx.addIssue({ code: "custom", path: ["receipts", i, "source"], message: `source ${r.source} does not exist` });
       else if (src.type !== "primary") ctx.addIssue({ code: "custom", path: ["receipts", i, "source"], message: `source ${r.source} is not a primary source` });
     }
-    if (isPublished(e)) {
+    // Full receipt coverage is the gate's condition for a pass; an entry it
+    // has not verified yet is not held to it.
+    if (isPublished(e) && e.verification) {
       for (const f of missingReceipts(e)) {
         ctx.addIssue({ code: "custom", path: ["receipts"], message: `no receipt for ${f}` });
       }
@@ -355,10 +357,12 @@ export function missingReceipts(e: ReceiptFieldSource & { receipts?: { field: Re
   return requiredReceiptFields(e).filter((f) => !have.has(f));
 }
 
-// Published: a passing verification by two different vendors, no held block,
-// and a primary source. Everything else is held.
+// Published: a primary source, no held block, and no failed verification. An
+// entry the gate has not run on yet stays published; only the gate holds an
+// entry, and only by writing a held block. A passing verification is shown on
+// the entry page once it has one.
 export function isPublished(e: Pick<Entry, "verification" | "held" | "sources">): boolean {
-  return e.verification?.verifier.verdict === "pass" && !e.held && hasPrimarySource(e);
+  return hasPrimarySource(e) && !e.held && e.verification?.verifier.verdict !== "fail";
 }
 
 // The held block for an entry that is not published. An entry with no primary
@@ -371,5 +375,5 @@ export function heldInfo(e: Pick<Entry, "verification" | "held" | "sources" | "d
     return { reason: "no-primary-source", since: /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : `${d.slice(0, 4)}-01-01`, detail: "No primary source yet." };
   }
   const d = String(e.dates.updated);
-  return { reason: "verification-unavailable", since: /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : `${d.slice(0, 4)}-01-01`, detail: "Not yet verified by a second vendor." };
+  return { reason: "verification-unavailable", since: /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : `${d.slice(0, 4)}-01-01`, detail: "A failed verification without a held block." };
 }

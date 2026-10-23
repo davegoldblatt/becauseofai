@@ -73,19 +73,3 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-10-23
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-opus-5-5
-    date: 2026-10-23
-  verifier:
-    vendor: openai
-    model: gpt-6-astra
-    date: 2026-10-23
-    verdict: fail
-  record: firesat-constellation/2026-10-23.json
-held:
-  reason: no-primary-source
-  since: 2026-10-23
-  detail: The primary source is a press release; press releases and news articles are leads, not evidence.
-  record: firesat-constellation/2026-10-23.json

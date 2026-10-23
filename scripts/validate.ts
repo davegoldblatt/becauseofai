@@ -8,10 +8,11 @@ const r = loadEntries();
 for (const p of r.errors) console.error(`ERROR  ${p.file}: ${p.message}`);
 for (const p of r.warnings) console.warn(`WARN   ${p.file}: ${p.message}`);
 for (const e of r.held) {
-  const why = r.unbound.get(e.id);
-  const h = why ? { reason: "verification-unavailable", since: e.verification!.verifier.date, detail: `${why}; the gate has to run again` } : heldInfo(e)!;
+  const h = heldInfo(e)!;
   console.log(`held   ${e.id}.yaml: ${h.reason} since ${h.since}: ${h.detail}`);
 }
+const verified = r.publishable.filter((e) => e.verification && !r.unbound.has(e.id)).length;
+console.log(`${verified} published entries carry a bound verification`);
 for (const e of r.publishable) {
   const m = missingReceipts(e);
   if (m.length) console.warn(`WARN   ${e.id}.yaml: published without a receipt for ${m.join(", ")}`);

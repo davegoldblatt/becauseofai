@@ -72,8 +72,3 @@ drafted:
   model: claude-opus-5-5
   date: 2026-10-23
   via: claude-login
-held:
-  reason: ungrounded
-  since: 2026-10-23
-  detail: No receipt for reach, dates.achieved_start, dates.achieved_end.
-  record: fido-northumbrian-leaks/2026-10-23.json

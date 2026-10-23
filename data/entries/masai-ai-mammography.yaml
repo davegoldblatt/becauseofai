@@ -58,8 +58,3 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-10-23
-held:
-  reason: no-full-text
-  since: 2026-10-23
-  detail: "No primary source could be read in full (source 0: HTTP 403)."
-  record: masai-ai-mammography/2026-10-23.json

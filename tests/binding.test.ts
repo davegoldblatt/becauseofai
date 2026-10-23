@@ -78,12 +78,13 @@ function record(over: Partial<VerificationRecord> = {}): VerificationRecord {
   };
 }
 
-test("a pass marker publishes only with a matching record", () => {
+test("a pass marker is shown as a verification only with a matching record; the entry stays published either way", () => {
   const ok = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record() } });
   assert.equal(ok.errors.length, 0);
   assert.equal(ok.publishable.length, 1);
+  assert.equal(ok.unbound.size, 0);
   const none = parseEntryFiles({ "x.yaml": FILE }, { records: {} });
-  assert.equal(none.publishable.length, 0);
+  assert.equal(none.publishable.length, 1);
   assert.match(none.unbound.get("x")!, /not on disk/);
   const other = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ entry: "y" }) } });
   assert.match(other.unbound.get("x")!, /belongs to y/);
@@ -120,13 +121,13 @@ test("aliases are refused, so a value cannot change through an excluded field", 
   assert.match(r.errors.map((p) => p.message).join("\n"), /anchors and aliases/);
 });
 
-test("changing a number or a receipt after verification holds the entry; a note does not", () => {
+test("changing a number or a receipt after verification drops the verification from view; a note does not", () => {
   const changed = FILE.replace("10 fewer patients per 1,000 had an event.", "12 fewer patients per 1,000 had an event.");
   const r = parseEntryFiles({ "x.yaml": changed }, { records: { "x/2026-10-23.json": record() } });
-  assert.equal(r.publishable.length, 0);
+  assert.equal(r.publishable.length, 1);
   assert.match(r.unbound.get("x")!, /changed after/);
   const receipt = FILE.replace("quote: enrolled from January 2021", "quote: enrolled from January 2020");
-  assert.equal(parseEntryFiles({ "x.yaml": receipt }, { records: { "x/2026-10-23.json": record() } }).publishable.length, 0);
+  assert.match(parseEntryFiles({ "x.yaml": receipt }, { records: { "x/2026-10-23.json": record() } }).unbound.get("x")!, /changed after/);
   const noted = FILE.replace("history:", "notes: an editor's note\nhistory:");
-  assert.equal(parseEntryFiles({ "x.yaml": noted }, { records: { "x/2026-10-23.json": record() } }).publishable.length, 1);
+  assert.equal(parseEntryFiles({ "x.yaml": noted }, { records: { "x/2026-10-23.json": record() } }).unbound.size, 0);
 });

@@ -21,7 +21,7 @@ Each entry then carries three grades, shown as three stamps and never collapsed 
 - **attribution**: `isolated` · `only-path` · `bundled` · `ai-vs-ai`
 - **window**: `in` · `ongoing` · `pre` (relative to the 12 months ending on the site's reference date)
 
-Every number on a published entry carries a **receipt**: the verbatim sentence in the primary source that supports it. An entry is either **published** (a model from one vendor drafted it and a model from a different vendor independently agreed on every receipt and every grade) or **held**, with a public reason. Held entries validate, appear in the JSON feed under `held`, and are listed on `/changelog#held` with both verdicts, but do not render, are not counted, and are never linked. The full vocabulary is in `HANDOFF.md` §3 and on `/method`.
+Every number on a published entry carries a **receipt**: the verbatim sentence in the primary source that supports it. An entry added or changed since the gate exists is either **published** (a model from one vendor drafted it and a model from a different vendor independently agreed on every receipt and every grade) or **held**, with a public reason. Entries from before the gate stay published until a gate run holds them. Held entries validate, appear in the JSON feed under `held`, and are listed on `/changelog#held` with both verdicts, but do not render, are not counted, and are never linked. The full vocabulary is in `HANDOFF.md` §3 and on `/method`.
 
 ## Layout
 
@@ -89,7 +89,7 @@ Cloudflare Pages, static output. Build command `npm run build`, output directory
 
 Defaults taken while building, with the reasons, so the next person does not re-derive them. The owner can override any of them with a pull request.
 
-1. **Held entries are a state, not an error.** An entry with no primary source, no passing verification, or a `held` block is held: `validate` lists it with its reason and exits 0; it does not render, is not counted, and is never linked from reader pages. The reasons are a fixed vocabulary (`ungrounded`, `no-full-text`, `grade-split`, `fails-test`, `verification-unavailable`, `no-primary-source`, `disputed`) set only by the adjudicator in `scripts/lib/adjudicate.ts`.
+1. **Held entries are a state, not an error.** An entry with no primary source, a failed verification, or a `held` block is held: `validate` lists it with its reason and exits 0; it does not render, is not counted, and is never linked from reader pages. The reasons are a fixed vocabulary (`ungrounded`, `no-full-text`, `grade-split`, `fails-test`, `verification-unavailable`, `no-primary-source`, `disputed`) set only by the adjudicator in `scripts/lib/adjudicate.ts`.
 2. **Grades are nullable for `not-yet` entries** (they have not been graded) and required for `because` and `not-because`. `window` may be null on any entry only when `notes` carries a `verify:` line.
 3. **Press releases typed `primary` were imported as the seed had them.** Build work never alters sources. The editorial runs replace them with the paper or registry record, or hold the entry until one exists.
 4. **The schema does not enforce "impact ≤ 6 words" or the exact "Because of AI, " prefix.** Several seed impacts run longer and two headlines start differently. Enforcing either would fail validation on content the build may not edit.

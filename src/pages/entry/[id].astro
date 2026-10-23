@@ -3,7 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Stamps from "../../components/Stamps.astro";
 import LagBar from "../../components/LagBar.astro";
 import Receipt from "../../components/Receipt.astro";
-import { publishable, byId, neighbours, recordFor } from "../../lib/site.ts";
+import { publishable, byId, neighbours, verifiedRecord } from "../../lib/site.ts";
 import { SITE } from "../../site.ts";
 import {
   fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, impactParts, achievedState, lagFor,
@@ -25,8 +25,8 @@ const { prev, next } = neighbours(e);
 const primary = primarySources(e);
 const secondary = secondarySources(e);
 const updated = fmtDate(e.dates.updated);
-const v = e.verification;
-const rec = recordFor(e);
+const rec = verifiedRecord(e);
+const v = rec ? e.verification : undefined;
 const cite = `“${e.headline}” Because of AI, updated ${updated}. ${url}`;
 const bib = `@misc{becauseofai_${e.id.replace(/-/g, "_")},\n  title = {${e.headline.replace(/[{}]/g, "")}},\n  howpublished = {\\url{${url}}},\n  note = {Because of AI registry, updated ${updated}},\n  year = {${String(e.dates.updated).slice(0, 4)}}\n}`;
 const g = e.grades;
