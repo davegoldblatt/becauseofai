@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../site.ts";
+// dist/404.html: Cloudflare Pages serves it with status 404 for any path that
+// does not exist. Without it, Pages answers every unknown path with the home
+// page and status 200, so typos, moved entries, and scanner probes all read as
+// successful home-page views.
+---
+<Base title="Not found" description={`There is no page at this address on ${SITE.domain}.`}>
+  <article class="prose" data-pagefind-ignore>
+    <h1 class="page-title">Not found</h1>
+    <p>There is no page at this address. Entries live at <code>/entry/&lt;id&gt;</code>; the ids are listed on the <a href="/">registry</a>, the <a href="/changelog">changelog</a>, and in <a href="/api/entries.json">the JSON feed</a>. Or <a href="/search">search</a>.</p>
+  </article>
+</Base>

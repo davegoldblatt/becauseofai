@@ -4,6 +4,8 @@ A public registry of measured AI benefits to people. Every entry is one sentence
 
 The data is the product. The website is a reader for it. The data is YAML in git, the git history is the audit trail, and there is no database, CMS, or backend.
 
+New entries are posted on X as [@bcuz_of_ai](https://x.com/bcuz_of_ai). The editor is [@davegoldblatt](https://x.com/davegoldblatt).
+
 ## What an entry has to pass
 
 Every entry must pass four tests:
@@ -37,7 +39,7 @@ Every number on a published entry carries a **receipt**: the verbatim sentence i
 
 ## Pages
 
-`/` (because), `/not-because-of-ai`, `/not-yet`, `/entry/<id>`, `/method`, `/changelog` (with the held list), `/about`, `/search` (Pagefind, built at deploy time). Feeds: `/feed.xml` (one item per entry), `/changes.xml` (one item per history line), `/api/entries.json` (every entry, with the `held` list and reasons), `/sitemap.xml`. Share images: `/og/<id>.png` per entry plus one per section.
+`/` (because), `/not-because-of-ai`, `/not-yet`, `/entry/<id>`, `/method`, `/changelog` (with the held list), `/about`, `/search` (Pagefind, built at deploy time), and a real `404.html` so unknown paths do not answer with the home page. Feeds and data: `/feed.xml` (one item per entry), `/changes.xml` (one item per history line), `/api/entries.json` (every entry, with the `held` list and reasons), `/api/schema.json` (JSON Schema generated from the zod schema), `/llms.txt` (a plain-text index for agents, built from the same data), `/.well-known/api-catalog` (RFC 9727, advertised by a `Link` header on `/` via `public/_headers`), `/sitemap.xml`. `robots.txt` allows everything and carries Content Signals (`search`, `ai-input`, `ai-train` all `yes`, matching the CC BY 4.0 license). Share images: `/og/<id>.png` per entry plus one per section.
 
 ## Add an entry
 
@@ -108,4 +110,4 @@ Code is MIT. The registry data (`data/`, `research/`), the spec, and the site's 
 
 ## Contributing
 
-Propose an entry or dispute one through the issue templates. Pull requests change one entry file at a time and add a `history` line. Every entry needs a primary source and an achieved date; see `HANDOFF.md` and `/method`. Build and design changes are welcome too; keep dependencies minimal (no UI library, no analytics, no trackers).
+Propose an entry or dispute one through the issue templates. Pull requests change one entry file at a time and add a `history` line. Every entry needs a primary source and an achieved date; see `HANDOFF.md` and `/method`. Build and design changes are welcome too; keep dependencies minimal (no UI library, no trackers, no analytics scripts in the code; the only third-party script is Cloudflare's cookieless measurement beacon, injected at the edge and allowed by the content-security policy in `public/_headers`).

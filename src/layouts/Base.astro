@@ -14,6 +14,8 @@ interface Props {
   ogImage?: string;
   // Title for link previews when the page <title> is too long for a card.
   ogTitle?: string;
+  // schema.org JSON-LD for the page, serialised into one <script type="application/ld+json">.
+  jsonLd?: object | object[];
   // Which nameplate to set. List pages pass their section and "full".
   section?: Section | null;
   nameplate?: "full" | "compact";
@@ -24,6 +26,7 @@ const {
   canonical,
   ogImage = `${SITE.url}/og/site.png`,
   ogTitle,
+  jsonLd,
   section = null,
   nameplate = "compact",
 } = Astro.props;
@@ -70,6 +73,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content={`@${SITE.x}`} />
+    <meta name="twitter:creator" content={`@${SITE.editorX}`} />
     <link rel="preload" href="/fonts/ArchivoCond-900.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/Bricolage-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/JetBrainsMono-500.woff2" as="font" type="font/woff2" crossorigin />
@@ -82,9 +86,10 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
         } catch (e) {}
       })();
     </script>
-    <!-- Analytics: none by default. To enable Plausible, uncomment:
-    <script defer data-domain="becauseofai.org" src="https://plausible.io/js/script.js"></script>
-    -->
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {/* Analytics: none by default (CLAUDE.md). To enable Plausible, add:
+        <script defer data-domain="becauseofai.org" src="https://plausible.io/js/script.js"></script>
+        and allow https://plausible.io in the script-src and connect-src of public/_headers. */}
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>

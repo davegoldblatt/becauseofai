@@ -1,0 +1,10 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://becauseofai.org/api/entries.json",
+      "service-desc": [{ "href": "https://becauseofai.org/api/schema.json", "type": "application/schema+json" }],
+      "service-doc": [{ "href": "https://github.com/davegoldblatt/becauseofai#readme", "type": "text/html" }],
+      "service-meta": [{ "href": "https://becauseofai.org/method", "type": "text/html" }]
+    }
+  ]
+}

@@ -109,7 +109,7 @@ jobs:
         # request that merges once validate and build pass, like the research runs.
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
-          LABEL: ${{ github.event_name == 'issues' && format('dispute #{0}', github.event.issue.number) || format('{0} {1}', github.event.inputs.mode, github.event.inputs.entries) }}
+          LABEL: "${{ github.event_name == 'issues' && format('dispute #{0}', github.event.issue.number) || format('{0} {1}', github.event.inputs.mode, github.event.inputs.entries) }}"
         run: |
           set -euo pipefail
           bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)

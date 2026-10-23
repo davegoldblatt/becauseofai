@@ -30,6 +30,23 @@ const rec = recordFor(e);
 const cite = `“${e.headline}” Because of AI, updated ${updated}. ${url}`;
 const bib = `@misc{becauseofai_${e.id.replace(/-/g, "_")},\n  title = {${e.headline.replace(/[{}]/g, "")}},\n  howpublished = {\\url{${url}}},\n  note = {Because of AI registry, updated ${updated}},\n  year = {${String(e.dates.updated).slice(0, 4)}}\n}`;
 const g = e.grades;
+const org = { "@type": "Organization", name: SITE.name, url: SITE.url };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: e.headline,
+  description: e.summary,
+  url,
+  mainEntityOfPage: url,
+  image: `${SITE.url}/og/${e.id}.png`,
+  datePublished: isoDate(e.dates.added),
+  dateModified: isoDate(e.dates.updated),
+  author: org,
+  publisher: org,
+  license: "https://creativecommons.org/licenses/by/4.0/",
+  isPartOf: { "@type": "Dataset", name: `${SITE.name}: a registry of measured AI benefits to people`, url: SITE.url },
+  citation: primary.map((s) => s.url),
+};
 // Pagefind reads one key per attribute (a comma-separated list is not split),
 // so each filter and meta key gets its own element inside the indexed body.
 const facets: [string, string][] = [
@@ -39,7 +56,7 @@ const facets: [string, string][] = [
   ["window", g.window ?? "none"],
 ];
 ---
-<Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`} section={e.section}>
+<Base title={e.headline} description={e.summary} canonical={url} ogImage={`${SITE.url}/og/${e.id}.png`} section={e.section} jsonLd={jsonLd}>
   <article class:list={["entry", `s-${e.section}`]} data-pagefind-body>
     {facets.map(([k, v]) => <span hidden data-pagefind-filter={`${k}:${v}`} data-pagefind-meta={`${k}:${v}`}></span>)}
     <span hidden data-pagefind-meta={`impact:${e.impact}`}></span>

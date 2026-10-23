@@ -1,3 +1,7 @@
+# becauseofai.org: a public registry of measured AI benefits to people.
+# Everything here is CC BY 4.0 (credit "Because of AI (becauseofai.org)" and link
+# the entry). Content Signals below follow contentsignals.org.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Sitemap: https://becauseofai.org/sitemap.xml
