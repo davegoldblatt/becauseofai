@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EntrySchema, SECTIONS, HELD_REASONS, FullDate } from "../../schema.ts";
+import { EntrySchema, SECTIONS } from "../../schema.ts";
 
 // JSON Schema for /api/entries.json, generated from the same zod schema the
 // build validates entries against, so the two cannot drift. Refinements
@@ -10,15 +10,10 @@ export function GET() {
   const Envelope = z.object({
     site: z.string().describe("Canonical site URL"),
     as_of: z.string().describe("Editorial reference date for the 12-month window (YYYY-MM-DD)"),
-    counts: Counts.describe("Published entries per section: a passing cross-vendor verification, a receipt on every number, a primary source"),
-    held: z.array(z.object({
-      id: z.string(),
-      reason: z.enum(HELD_REASONS),
-      since: FullDate,
-      detail: z.string(),
-      record: z.string().optional().describe("Path of the verification record under data/verifications/ in the repository"),
-    })).describe("Entries the gate is holding, with the reason: in `entries`, but not rendered, counted, or linked on the site"),
-    records: z.string().describe("Where the verification records live"),
+    counts: Counts.describe("Published entries per section"),
+    counts_reviewed: Counts.describe("Published entries per section whose latest history note is not 'unreviewed.'"),
+    held: z.array(z.string()).describe("Ids of entries with no primary source: in `entries`, but not rendered, counted, or linked on the site"),
+    unreviewed: z.array(z.string()).describe("Ids of published entries the editor has not yet reviewed"),
     entries: z.array(EntrySchema).describe("Every entry on disk, held ones included"),
   });
   const schema = z.toJSONSchema(Envelope, { target: "draft-2020-12", unrepresentable: "any" });

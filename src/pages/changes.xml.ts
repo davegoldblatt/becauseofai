@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { publishable } from "../lib/site.ts";
 import { SITE } from "../site.ts";
-import { isoDate, changeType } from "../lib/format.ts";
+import { isoDate, changeType, isUnreviewed } from "../lib/format.ts";
 
 // One item per history line, newest first. /feed.xml stays one item
 // per entry. Only a complete YYYY-MM-DD becomes a pubDate; a month or year as
@@ -22,7 +22,7 @@ export function GET(context: APIContext) {
         link: `/entry/${e.id}#h-${i + 1}`,
         ...(/^\d{4}-\d{2}-\d{2}$/.test(date) ? { pubDate: new Date(`${date}T00:00:00Z`) } : {}),
         description: [h.note, /^\d{4}-\d{2}-\d{2}$/.test(date) ? "" : `Dated ${date}.`].filter(Boolean).join(" "),
-        categories: [ct?.type ?? "change", e.section],
+        categories: [ct?.type ?? "change", e.section, ...(isUnreviewed(e) ? ["unreviewed"] : [])],
       });
     });
   }

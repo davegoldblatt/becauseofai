@@ -55,37 +55,3 @@ history:
     note: >-
       Verified the deployment against the operator's release (Muon Space, 7 July
       2026) and added it as primary; added a verify note on the 50+ by 2030 figure.
-rationale: "The only comparison here is about detection, not outcomes: the pilot spotted an Oregon roadside fire that 'other space-based systems observing the region had not detected'. There is no control arm or prior-period comparison of how fires were handled, so attribution can't be graded."
-receipts:
-  - field: headline
-    quote: July 7, 2026 – Muon Space , the Mission Foundry for high-performance satellite constellations, today announced the successful launch of the first three operational satellites
-    locator: Press release, dateline paragraph
-    source: 1
-  - field: headline
-    quote: capable of detecting fires as small as five-by-five meters and seeing through smoke and clouds
-    locator: Press release, second paragraph
-    source: 1
-  - field: impact
-    quote: Today, three new FireSat satellites successfully launched from Vandenberg Space Force Base in California.
-    locator: Blog post, first paragraph (dated Jul 07, 2026)
-    source: 0
-drafted:
-  vendor: anthropic
-  model: claude-opus-5-5
-  date: 2026-10-23
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-opus-5-5
-    date: 2026-10-23
-  verifier:
-    vendor: openai
-    model: gpt-6-astra
-    date: 2026-10-23
-    verdict: fail
-  record: firesat-constellation/2026-10-23.json
-held:
-  reason: no-primary-source
-  since: 2026-10-23
-  detail: The primary source is a press release; press releases and news articles are leads, not evidence.
-  record: firesat-constellation/2026-10-23.json

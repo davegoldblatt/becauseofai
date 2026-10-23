@@ -9,15 +9,12 @@ on:
         required: false
         default: ""
 jobs:
-  # Job 1: the drafting model, with its own token only. It may write entry
-  # files, the inbox, and the run note; it never sees the verifier's secrets.
-  draft:
+  editor:
     runs-on: ubuntu-latest
-    outputs:
-      branch: ${{ steps.handoff.outputs.branch }}
     timeout-minutes: 90
     permissions:
       contents: write
+      pull-requests: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
@@ -43,7 +40,7 @@ jobs:
             Inputs: data/entries/*.yaml, research/last-run.md, research/inbox.md, and this week's candidates in .scout/candidates.json.
             Deep-verify the two or three strongest candidates against their primary sources (WebFetch). Review existing entries for new data, follow-ups, retractions, and grades you would argue with; for each not-yet entry check whether what_would_change has happened.
             Output exactly as the brief says: new or changed entry files each with a history line dated today, a rewritten research/last-run.md under one page, and unqualified leads appended to research/inbox.md.
-            Receipts: every entry you add or change carries `receipts` (one verbatim quote of 25 words or fewer from a primary source for every field named in the brief that holds a number, with a locator and the source index) and a one-line `rationale` for the attribution grade. A second model from another vendor checks every receipt against the source text and the entry is held if any fails, so quote exactly and from the source you read. When you change a value, replace its receipt. Never edit the `verification` or `held` blocks: the gate owns them. Never change the rank of an existing entry.
+            Stamp rule: every entry you add, and every held entry you make publishable by adding its first primary source, must end with a history note whose last word is "unreviewed." (for example "Added by the weekly run; unreviewed."). The site shows an unreviewed marker while that is the latest note and the editor clears it by hand. Do not add the stamp when you only add notes, close a verify, or add a secondary source. Never change the rank of an existing entry.
             Poster number: every entry has optional `impact_number` (a short lead such as "5 per 1,000", "2×", "−0.37 SD", "26%"; a leading ~ ≈ + − or $ is set small as a modifier) and `impact_label` (the short phrase after it, such as "more liver-disease diagnoses"). Pick the figure a stranger would screenshot, absolute over relative when both exist, taken only from the entry's own effect fields or sources, and fill both fields. Do this for every entry you add and for every `because` entry that still lacks them (that counts as a change: history line dated today, no stamp).
             Extra scope for this run, if any (treat as part of the brief): ${{ github.event.inputs.focus }}
             Then run `npm run validate` (must pass), create branch editor/YYYY-MM-DD, commit, push, and open a pull request against main with `gh pr create` whose body summarises additions, changes, downgrades, rejections (and which of the four tests each failed), empty searches, and what a human should check. Do not merge.
@@ -51,94 +48,35 @@ jobs:
             --model claude-opus-5-5
             --max-turns 250
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
-      - name: Hand the branch to the gate
-        id: handoff
-        run: |
-          set -euo pipefail
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          if [ "$branch" = "main" ] || [ -z "$(git log "${{ github.sha }}..HEAD" --oneline)" ]; then echo "branch=" >> "$GITHUB_OUTPUT"; echo "nothing drafted"; exit 0; fi
-          git push -u origin "$branch" 2>/dev/null || true
-          echo "branch=$branch" >> "$GITHUB_OUTPUT"
-
-  # Job 2: the gate and the merge, from a fresh checkout of what job 1 pushed.
-  # Nothing from the drafting job's working tree, git configuration, or
-  # processes reaches this job; only the commits on the branch do, and only
-  # entry files, the inbox, and the run note may differ from the base.
-  gate:
-    needs: draft
-    if: ${{ needs.draft.outputs.branch != '' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 90
-    permissions:
-      contents: write
-      pull-requests: write
-    env:
-      BRANCH: ${{ needs.draft.outputs.branch }}
-      BASE_SHA: ${{ github.sha }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.draft.outputs.branch }}
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-      - name: Refuse anything the draft changed outside the data
-        run: |
-          set -euo pipefail
-          git merge-base --is-ancestor "$BASE_SHA" HEAD
-          bad=$(git diff --name-only "$BASE_SHA" HEAD | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|research/inbox\.md|research/last-run\.md)$' || true)
-          if [ -n "$bad" ]; then echo "the draft touched files outside the allowlist; nothing merges:"; echo "$bad"; exit 1; fi
-          # The gate runs the base commit's code, whatever the branch carries.
-          git checkout "$BASE_SHA" -- . ':!data/entries' ':!research/inbox.md' ':!research/last-run.md'
-          git status --porcelain
-      - run: npm ci
-      - name: Install the verifier's tools
-        run: |
-          sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
-          npm install -g @openai/codex
-      - name: The gate (second vendor, independent)
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
-          ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
-        run: |
-          set -euo pipefail
-          node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-opus-5-5" --max 0 --force
-          git checkout -- . ':!data/' || true
-          bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)
-          if [ -n "$bad" ]; then echo "the gate wrote outside the data:"; echo "$bad"; exit 1; fi
-          if ! git diff --quiet -- data/ || [ -n "$(git status --porcelain data/)" ]; then
-            git config user.name "becauseofai gate"
-            git config user.email "gate@becauseofai.org"
-            git add data/
-            git commit -m "Gate: verify the run's entries"
-            git push origin "HEAD:$BRANCH"
-          fi
       - name: Validate and build the result
         run: npm run validate && npm run build
       - name: Merge the run's pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          n=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$branch" = "main" ]; then echo "no branch created this run; nothing to merge"; exit 0; fi
+          if [ -z "$(git log "$BASE_SHA..HEAD" --oneline)" ]; then echo "branch $branch has no commits beyond $BASE_SHA; nothing to merge"; exit 0; fi
+          git push -u origin "$branch" 2>/dev/null || true
+          n=$(gh pr list --head "$branch" --state open --json number -q '.[0].number')
           if [ -z "$n" ]; then
-            title=$(git log -1 --format=%s "origin/$BRANCH" -- data/entries research 2>/dev/null || git log -1 --format=%s)
-            body_file="$RUNNER_TEMP/pr-body.md"
-            git log "$BASE_SHA..HEAD" --format=%B > "$body_file"
-            if url=$(gh pr create --head "$BRANCH" --base main --title "$title" --body-file "$body_file" 2>&1); then
+            title=$(git log -1 --format=%s)
+            body_file=.scout/pr-body.md
+            [ -s "$body_file" ] || git log -1 --format=%B > "$body_file"
+            if url=$(gh pr create --head "$branch" --base main --title "$title" --body-file "$body_file" 2>&1); then
               n=$(printf '%s' "$url" | grep -o 'pull/[0-9]*' | cut -d/ -f2)
-              echo "opened #$n for $BRANCH"
+              echo "opened #$n for $branch"
             else
               echo "pull request refused ($url); landing the branch on main directly"
               git fetch origin main
               git rebase origin/main
               git push origin HEAD:main
-              git push origin --delete "$BRANCH" || true
+              git push origin --delete "$branch" || true
+              echo "pushed $branch to main directly"
               exit 0
             fi
           fi
           gh pr merge "$n" --squash --delete-branch
-          echo "merged #$n from $BRANCH"
+          echo "merged #$n from $branch"

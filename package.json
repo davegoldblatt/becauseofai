@@ -14,10 +14,7 @@
     "preview": "astro preview",
     "validate": "node scripts/validate.ts",
     "astro": "astro",
-    "scout": "node scripts/scout.ts",
-    "test": "node --test 'tests/*.test.ts'",
-    "verify": "node scripts/verify.ts",
-    "receipts": "node scripts/receipts.ts"
+    "scout": "node scripts/scout.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

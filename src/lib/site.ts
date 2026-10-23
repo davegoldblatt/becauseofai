@@ -2,10 +2,9 @@
 // pages never touch the filesystem at render time and dev reloads on YAML edits.
 // Everything below is validated; a bad entry fails the build here.
 import { loadOrThrow, bySection, counts } from "./entries.ts";
-import { timelineFor } from "./format.ts";
+import { timelineFor, isUnreviewed } from "./format.ts";
 import { SITE } from "../site.ts";
-import { heldInfo, type Entry, type Section } from "../schema.ts";
-import type { VerificationRecord } from "../../scripts/lib/record.ts";
+import type { Entry, Section } from "../schema.ts";
 
 const globbed = import.meta.glob("../../data/entries/*.yaml", {
   query: "?raw",
@@ -16,36 +15,15 @@ const globbed = import.meta.glob("../../data/entries/*.yaml", {
 const files: Record<string, string> = {};
 for (const [p, raw] of Object.entries(globbed)) files[p.split("/").pop()!] = raw;
 
-// The public verification records, keyed by their path under data/verifications/.
-const recordFiles = import.meta.glob("../../data/verifications/*/*.json", { import: "default", eager: true }) as Record<string, VerificationRecord>;
-const recordsByPath: Record<string, VerificationRecord> = {};
-for (const [p, rec] of Object.entries(recordFiles)) recordsByPath[p.split("/").slice(-2).join("/")] = rec;
-
-export const data = loadOrThrow(files, recordsByPath);
+export const data = loadOrThrow(files);
 export const publishable = data.publishable;
 export const held = data.held;
 export const siteCounts = counts(publishable);
-export const heldCount = held.length;
-
-export const records = new Map<string, VerificationRecord>(Object.entries(recordsByPath));
-
-// The record an entry's verification or held block names, if it is on disk.
-export function recordFor(e: Entry): { path: string; record: VerificationRecord } | null {
-  const path = e.held?.record ?? e.verification?.record;
-  if (!path) return null;
-  const record = records.get(path);
-  return record ? { path, record } : null;
-}
-
-// Held entries with their reason, for the changelog, the running head, and the JSON.
-// An entry whose file says "pass" but whose record does not bind is held as unverified.
-export const heldList = held.map((e) => {
-  const why = data.unbound.get(e.id);
-  const h = why
-    ? { reason: "verification-unavailable" as const, since: e.verification!.verifier.date, detail: `${why[0].toUpperCase()}${why.slice(1)}; the gate has to run again.`, record: e.verification!.record }
-    : heldInfo(e)!;
-  return { entry: e, held: h, record: recordFor(e) };
-});
+// Counts of entries a person has read: the tabs and the share card
+// use these; the running head adds "N unreviewed".
+export const reviewed = publishable.filter((e) => !isUnreviewed(e));
+export const reviewedCounts = counts(reviewed);
+export const unreviewedCount = publishable.length - reviewed.length;
 export const because = bySection(publishable, "because");
 export const notBecause = bySection(publishable, "not-because");
 export const notYet = bySection(publishable, "not-yet");

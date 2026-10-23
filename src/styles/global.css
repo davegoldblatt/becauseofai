@@ -115,8 +115,8 @@ img, svg { display: block; }
 .tabs a:hover { border-color: var(--ink); }
 .tabs a[aria-current] { border-color: var(--signal); }
 .tabs b { color: var(--graphite-text); font-weight: 500; margin-left: 0.2em; }
-.tabs .tab-held { color: var(--graphite-text); }
-.tabs .tab-held:hover { color: var(--ink); }
+.tabs .tab-unrev { color: var(--graphite-text); }
+.tabs .tab-unrev:hover { color: var(--ink); }
 .tabs a[aria-current] b { color: var(--ink); }
 .more { display: flex; gap: 1rem; margin-left: auto; }
 .more a { color: var(--graphite-text); text-decoration: none; }
@@ -204,7 +204,7 @@ img, svg { display: block; }
 .stamp-wi-pre .sd { background: var(--paper); padding: 1px 4px; }
 .stamp-wi-none { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
 .stamp-watch { border-color: var(--graphite); color: var(--graphite-text); }
-.stamp-held { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
+.stamp-unrev { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
 a.stamp:hover .sd { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 .stamp-xs { min-height: 22px; padding: 0 5px; font-size: 10px; }
 .stamp-xs .sg { font-size: 14px; }
@@ -464,30 +464,3 @@ tr.s-not-because td:first-child { box-shadow: inset 4px 0 0 var(--null); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-
-/* Receipts and verification ------------------------------------------- */
-.rcpt { display: inline-block; position: relative; vertical-align: middle; margin-left: 0.35rem; }
-.rcpt summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; min-height: 20px; padding: 0 5px; border: 2px solid var(--graphite); color: var(--graphite-text); font: 500 10px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; }
-.rcpt summary::-webkit-details-marker { display: none; }
-.rcpt summary:hover, .rcpt[open] summary { border-color: var(--signal); color: var(--ink); }
-.rcpt summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
-.rcpt-pop { position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; width: min(36ch, 80vw); padding: 0.6rem 0.75rem; background: var(--paper); color: var(--ink); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--signal); font: 400 0.9rem/1.45 var(--body); letter-spacing: 0; text-transform: none; white-space: normal; }
-.entry-impact .rcpt-pop, h1 + .rcpt .rcpt-pop { top: auto; bottom: calc(100% + 6px); }
-.rcpt-item + .rcpt-item { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--graphite); }
-.rcpt-item q { display: block; font: 700 0.95rem/1.35 var(--head); letter-spacing: -0.01em; quotes: "\201C" "\201D"; }
-.rcpt-item .rcpt-loc { display: block; margin-top: 0.3rem; font: 500 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--graphite-text); }
-.rcpt-item a { display: block; margin-top: 0.2rem; font: 500 11px/1.5 var(--mono); }
-.rcpt-item a .host { color: var(--graphite-text); }
-.entry-impact { position: relative; }
-.entry-impact .rcpt { display: block; margin: 0.6rem 0 0; }
-.entry-impact .rcpt summary { display: inline-flex; }
-h1.sentence + .rcpt { margin: -0.5rem 0 1rem; }
-.facts dd .rcpt { margin-left: 0.4rem; }
-.facts dd .rcpt-pop { left: auto; right: 0; }
-.verif { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.45rem 1.25rem; margin: 0; font: 500 0.85rem/1.5 var(--mono); }
-.verif dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--graphite-text); }
-.verif dd { margin: 0; word-break: break-word; }
-.verif code { font: inherit; background: var(--paper); border: 1px solid var(--graphite); padding: 0 4px; }
-.verif-note { font: 400 0.95rem/1.5 var(--body); margin: 1rem 0 0; max-width: 68ch; }
-.chg.held .chg-h { color: var(--graphite-text); }
-.chg.held .chg-type .stamp { white-space: normal; text-align: center; line-height: 1.2; padding: 2px 5px; }

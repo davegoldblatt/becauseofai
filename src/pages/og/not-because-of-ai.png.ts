@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { siteCounts } from "../../lib/site.ts";
+import { reviewedCounts as siteCounts } from "../../lib/site.ts";
 import { renderSiteOg } from "../../og/render.ts";
 
 export const GET: APIRoute = async () => {

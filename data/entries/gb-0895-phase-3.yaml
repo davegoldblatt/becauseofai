@@ -58,32 +58,3 @@ history:
       Verified the SOLAIRIA-2 registry record (NCT07359846, 786 planned, started
       20 Jan 2026) and added it as primary; this closes the verify note. The
       editor's review is still outstanding, so the entry stays unreviewed.
-rationale: The only comparison is SOLAIRIA-1's GB-0895 arm against placebo, and it has no results yet; no arm compares an AI-optimized antibody with a conventionally optimized one, so nothing yet shows what the AI contributed.
-receipts:
-  - field: headline
-    quote: A Phase 3, Randomized, Double-Blind, Placebo-Controlled Study to Assess the Efficacy and Safety of GB-0895 Adjunctive Therapy in Adults and Adolescents With Severe Uncontrolled Asthma
-    locator: protocolSection.identificationModule.officialTitle
-    source: 0
-  - field: impact
-    quote: PHASE3
-    locator: protocolSection.designModule.phases[0]
-    source: 0
-  - field: impact
-    quote: RECRUITING
-    locator: protocolSection.statusModule.overallStatus
-    source: 0
-drafted:
-  vendor: anthropic
-  model: claude-opus-5-5
-  date: 2026-10-23
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-opus-5-5
-    date: 2026-10-23
-  verifier:
-    vendor: openai
-    model: gpt-6-astra
-    date: 2026-10-23
-    verdict: pass
-  record: gb-0895-phase-3/2026-10-23.json

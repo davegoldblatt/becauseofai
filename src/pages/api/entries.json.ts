@@ -1,17 +1,20 @@
-import { data, siteCounts, heldList } from "../../lib/site.ts";
+import { data, siteCounts, reviewedCounts } from "../../lib/site.ts";
+import { isUnreviewed } from "../../lib/format.ts";
 import { SITE } from "../../site.ts";
 
-// Every entry on disk with full, unchanged fields. Held entries are included
-// as part of the complete archive; the `held` list names each one with its
-// reason, so a consumer can tell which entries the site publishes. The
-// verification records live under data/verifications/ in the repository.
+// Every entry on disk with full, unchanged fields. Held entries (no primary
+// source) are included here as the complete archive; their ids are listed
+// separately so a consumer can tell which ones the site does not publish.
+// Unreviewed entries (published by the research run, not yet read by the
+// editor) are listed the same way, so the quarantine rides in the data too.
 export function GET() {
   const body = {
     site: SITE.url,
     as_of: SITE.asOf,
     counts: siteCounts,
-    held: heldList.map(({ entry, held }) => ({ id: entry.id, reason: held.reason, since: held.since, detail: held.detail, ...(held.record ? { record: held.record } : {}) })),
-    records: `${SITE.repo}/tree/main/data/verifications`,
+    counts_reviewed: reviewedCounts,
+    held: data.held.map((e) => e.id),
+    unreviewed: data.publishable.filter(isUnreviewed).map((e) => e.id),
     entries: data.all,
   };
   return new Response(JSON.stringify(body, null, 2), {

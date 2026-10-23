@@ -7,7 +7,7 @@ import type { Entry, Section } from "../schema.ts";
 import { DOMAINS, EVIDENCE, ATTRIBUTION, WINDOW, AI_TYPES } from "../schema.ts";
 import Row from "./Row.astro";
 import LagBar from "./LagBar.astro";
-import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor, impactParts } from "../lib/format.ts";
+import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor, isUnreviewed, impactParts } from "../lib/format.ts";
 interface Props { entries: Entry[]; section: Section }
 const { entries, section } = Astro.props;
 
@@ -88,7 +88,7 @@ const total = entries.length;
             <tr class:list={[`s-${e.section}`]} data-entry data-id={e.id} data-rank={e.rank} data-achieved={achievedKey(e)} data-published={isoDate(e.dates.published)}
                 data-evidence={g.evidence ?? "none"} data-attribution={g.attribution ?? "none"} data-window={g.window ?? "none"} data-domain={e.domain} data-ai-type={e.ai_type} data-lag={lag ?? -1}>
               <td class="t-idx" data-idx={i + 1}>{i + 1}</td>
-              <td class="t-sentence"><a href={`/entry/${e.id}`}>{e.headline}</a></td>
+              <td class="t-sentence"><a href={`/entry/${e.id}`}>{e.headline}</a>{isUnreviewed(e) && <span class="stamp stamp-xs stamp-unrev" title="Drafted by the research run; no editor has read the source yet"><span class="sd">unreviewed</span></span>}</td>
               <td class="t-impact">{(() => { const imp = impactParts(e); return <><b>{imp.lead}</b>{imp.rest && <span>{imp.rest}</span>}</>; })()}</td>
               {un ? (
                 <td colspan="3"><a class="stamp stamp-xs stamp-watch" href="/method#four-tests"><span class="sd">Watchlist</span></a></td>

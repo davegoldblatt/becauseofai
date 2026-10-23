@@ -1,9 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { publishable, heldList } from "../lib/site.ts";
-import { fmtDate, isoDate, changeType, recordUrl, SECTION_LABEL, HELD_REASON_LABEL, HELD_REASON_DESCRIPTION, VENDOR_LABEL, type ChangeType } from "../lib/format.ts";
-// Held entries are named here with their reason and both verdicts, as they are
-// in /api/entries.json, but never linked: a held entry has no page.
+import { publishable, held } from "../lib/site.ts";
+import { fmtDate, isoDate, changeType, isUnreviewed, SECTION_LABEL, type ChangeType } from "../lib/format.ts";
+// Entries the research run published that no person has read yet, and entries
+// held back for lacking a primary source. Held entries are named
+// here, as they are in /api/entries.json, but never linked.
+const awaiting = publishable.filter(isUnreviewed);
 
 type Row = { date: string; id: string; headline: string; note: string; type: ChangeType | null; rest: string };
 const rows: Row[] = [];
@@ -20,23 +22,29 @@ for (const r of rows) (days.get(r.date) ?? days.set(r.date, []).get(r.date)!).pu
 <Base title="Changelog" description="Every change to every entry, newest first, with its type.">
   <h1 class="page-title">Changelog</h1>
   <p class="lede">Generated from each entry's history, newest first. A change carries a type when its note says so (added, upgraded, downgraded, updated, corrected, verified, removed, re-graded). Subscribe to <a href="/changes.xml">one item per change</a> or <a href="/feed.xml">one item per entry</a>.</p>
-  {heldList.length > 0 && (
-    <section class="log-day" id="held">
-      <h2>Held</h2>
-      <p class="chg-note">Entries the gate is holding, with the reason. A held entry is not counted, not linked, and not in the feeds until two models from different vendors agree on every number and grade; where they disagreed, both verdicts are here. <a href="/method#pipeline">How the gate works.</a></p>
+  {(awaiting.length > 0 || held.length > 0) && (
+    <section class="log-day" id="awaiting-review">
+      <h2>Awaiting review</h2>
+      <p class="chg-note">Published by the research run and not yet read by the editor (they carry an UNREVIEWED stamp and stay out of the hero), plus entries held back until they have a primary source.</p>
       <ul>
-        {heldList.map(({ entry: e, held: h, record }) => { const out = record?.record.verifier?.output as { summary?: string; grades?: { evidence: string | null; attribution: string | null; window: string | null } } | null | undefined; const ver = record?.record.verifier; return (
-          <li class="chg held">
-            <span class="chg-type"><span class="stamp stamp-xs stamp-held" title={HELD_REASON_DESCRIPTION[h.reason]}><span class="sd">{HELD_REASON_LABEL[h.reason]}</span></span></span>
+        {awaiting.map((e) => (
+          <li class="chg">
+            <span class="chg-type"><span class="stamp stamp-xs stamp-unrev"><span class="sd">unreviewed</span></span></span>
             <div>
-              <span class="chg-h">{e.headline}</span>
-              <p class="chg-note">{SECTION_LABEL[e.section]} · since <time datetime={h.since}>{fmtDate(h.since)}</time> · {h.detail}{record && <> · <a href={recordUrl(record.path)} rel="noopener">record</a></>}</p>
-              {ver && (
-                <p class="chg-note">{record!.record.drafter ? `Drafter ${VENDOR_LABEL[record!.record.drafter.vendor]} graded ${e.grades.evidence ?? "–"} · ${e.grades.attribution ?? "–"} · ${e.grades.window ?? "–"}. ` : ""}Verifier {VENDOR_LABEL[ver.vendor]}{out?.grades ? ` graded ${out.grades.evidence ?? "–"} · ${out.grades.attribution ?? "–"} · ${out.grades.window ?? "–"}` : ver.error ? ` failed: ${ver.error}` : ""}{out?.summary ? `: ${out.summary}` : "."}</p>
-              )}
+              <span class="chg-h"><a href={`/entry/${e.id}`}>{e.headline}</a></span>
+              <p class="chg-note">{SECTION_LABEL[e.section]} · {e.history[e.history.length - 1].note}</p>
             </div>
           </li>
-        ); })}
+        ))}
+        {held.map((e) => (
+          <li class="chg">
+            <span class="chg-type"><span class="stamp stamp-xs stamp-watch"><span class="sd">held</span></span></span>
+            <div>
+              <span class="chg-h">{e.headline}</span>
+              <p class="chg-note">{SECTION_LABEL[e.section]} · needs a primary source before it renders.</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   )}
