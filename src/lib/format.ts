@@ -190,6 +190,18 @@ export function splitImpact(impact: string): { lead: string; rest: string; numer
   return { lead: m[1], rest: m[2].trim(), numeric: true };
 }
 
+// The poster number for an entry: the editor's impact_number / impact_label
+// when set, otherwise the parsed split. `mod` is a leading modifier glyph
+// (~ ≈ + − $) set small next to the number; `num` is the rest of the lead.
+export type ImpactParts = { lead: string; mod: string; num: string; rest: string; numeric: boolean };
+export function impactParts(e: Entry): ImpactParts {
+  const custom = e.impact_number?.trim();
+  const base = custom ? { lead: custom, rest: (e.impact_label ?? "").trim(), numeric: true } : splitImpact(e.impact);
+  const m = /^([~≈+\-−$]+)(.+)$/.exec(base.lead);
+  const numeric = base.numeric && /\d/.test(base.lead);
+  return { lead: base.lead, mod: numeric && m ? m[1] : "", num: numeric && m ? m[2] : base.lead, rest: base.rest, numeric };
+}
+
 // ---------------------------------------------------------------------------
 // Time axis shared by every lag bar on the site (DAV-339).
 export type Timeline = { start: Date; end: Date };
@@ -287,13 +299,10 @@ export function lagFor(e: Entry): Lag | null {
   if (m === null || !ref || m < LAG_SHOW_MONTHS) return null;
   const approx = lagApprox(e);
   const what = ref === "end" ? "after the benefit ended" : "after the benefit began";
-  return {
-    months: m,
-    approx,
-    ref,
-    short: `${approx ? "~" : ""}${lagShort(m)}`,
-    sentence: `Published ${approx ? "about " : ""}${lagLong(m)} ${what}.`,
-  };
+  const short = `${approx ? "~" : ""}${lagShort(m)}`;
+  // One wording everywhere (DAV-369): the bar says "published 2.7 yrs later",
+  // prose and the aria-label say "Published 2.7 yrs after the benefit ended."
+  return { months: m, approx, ref, short, sentence: `Published ${short} ${what}.` };
 }
 
 // Sort keys for the list pages. Empty strings sort last.

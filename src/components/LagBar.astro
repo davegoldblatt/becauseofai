@@ -9,7 +9,7 @@ import type { Entry } from "../schema.ts";
 import { timeline } from "../lib/site.ts";
 import { latestDay } from "../lib/entries.ts";
 import { earliestDay, xOf, yearTicks, lagFor, fmtDate, achievedState } from "../lib/format.ts";
-interface Props { entry: Entry; size?: "row" | "entry" }
+interface Props { entry: Entry; size?: "row" | "entry" | "mini" }
 const { entry: e, size = "row" } = Astro.props;
 const d = e.dates;
 const s = d.achieved_start != null ? String(d.achieved_start) : null;

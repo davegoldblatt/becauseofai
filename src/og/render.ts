@@ -8,7 +8,7 @@ import { Resvg } from "@resvg/resvg-js";
 import fs from "node:fs";
 import path from "node:path";
 import type { Entry, Section } from "../schema.ts";
-import { achievedState, fmtDate, splitImpact, lagFor, xOf, earliestDay, yearTicks, isUnreviewed, type Timeline, EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
+import { achievedState, fmtDate, impactParts, lagFor, xOf, earliestDay, yearTicks, isUnreviewed, type Timeline, EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL } from "../lib/format.ts";
 import { latestDay } from "../lib/entries.ts";
 import { NAMEPLATE, SITE } from "../site.ts";
 
@@ -92,9 +92,16 @@ function lagBar(e: Entry, tl: Timeline, width: number): Node {
   return h("div", { position: "relative", width, height: 80, display: "flex" }, kids);
 }
 
+// The poster number with its modifier glyph (~ + $) at 45% size, top-aligned.
+function poster(imp: ReturnType<typeof impactParts>, size: number, maxWidth: number): Node {
+  const style = { display: "flex", alignItems: "flex-start", fontFamily: DISPLAY, fontSize: size, lineHeight: 0.88, color: SIGNAL, letterSpacing: -size * 0.015, ...(imp.numeric ? {} : { maxWidth }) };
+  if (!imp.mod) return h("div", style, imp.lead);
+  return h("div", style, [h("span", { display: "flex", fontSize: size * 0.45, lineHeight: 1, paddingTop: size * 0.06, marginRight: size * 0.03 }, imp.mod), h("span", { display: "flex" }, imp.num)]);
+}
+
 export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
   const g = e.grades;
-  const imp = splitImpact(e.impact);
+  const imp = impactParts(e);
   const leadSize = !imp.numeric ? (imp.lead.length > 24 ? 72 : 96) : imp.lead.length <= 4 ? 230 : imp.lead.length <= 7 ? 180 : 130;
   const sentenceSize = e.headline.length > 150 ? 30 : e.headline.length > 110 ? 34 : 40;
   const ungraded = g.evidence === null && g.attribution === null && g.window === null;
@@ -116,7 +123,7 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
     ]),
     h("div", { display: "flex", flexDirection: "column", gap: 14 }, [
       h("div", { display: "flex", alignItems: "flex-end", gap: 22, flexWrap: "wrap" }, [
-        h("div", { display: "flex", fontFamily: DISPLAY, fontSize: leadSize, lineHeight: 0.86, color: SIGNAL, letterSpacing: -leadSize * 0.015, ...(imp.numeric ? {} : { maxWidth: W - 2 * PAD }) }, imp.lead),
+        poster(imp, leadSize, W - 2 * PAD),
         ...(imp.rest ? [h("div", { display: "flex", paddingBottom: 10, maxWidth: 520, ...mono(18, GRAPHITE_T, { lineHeight: 1.3 }) }, imp.rest)] : []),
       ]),
       h("div", { display: "flex", fontFamily: HEAD, fontSize: sentenceSize, lineHeight: 1.12, letterSpacing: -0.7, color: PAPER, maxWidth: W - 2 * PAD }, e.headline),
@@ -136,11 +143,11 @@ export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
 // The home card: the nameplate, then four impact numbers from the top of the
 // list, then the counts. Numbers are the reason anyone clicks.
 export async function renderHomeOg(top: Entry[], counts: { because: number; "not-because": number; "not-yet": number }): Promise<Buffer> {
-  const cells = top.slice(0, 4).map((e) => {
-    const imp = splitImpact(e.impact);
+  const cells = top.filter((e) => !isUnreviewed(e)).slice(0, 4).map((e) => {
+    const imp = impactParts(e);
     const leadSize = !imp.numeric ? 44 : imp.lead.length <= 4 ? 118 : imp.lead.length <= 6 ? 96 : 72;
     return h("div", { display: "flex", flexDirection: "column", width: 520, gap: 8 }, [
-      h("div", { display: "flex", fontFamily: DISPLAY, fontSize: leadSize, lineHeight: 0.88, color: SIGNAL, letterSpacing: -leadSize * 0.015, ...(imp.numeric ? {} : { maxWidth: 520 }) }, imp.lead),
+      poster(imp, leadSize, 520),
       ...(imp.rest ? [h("div", { display: "flex", maxWidth: 520, ...mono(17, PAPER, { lineHeight: 1.25 }) }, imp.rest)] : []),
     ]);
   });
@@ -160,7 +167,7 @@ export async function renderHomeOg(top: Entry[], counts: { because: number; "not
 }
 
 export async function renderSiteOg(section: Section | null, counts: { because: number; "not-because": number; "not-yet": number }): Promise<Buffer> {
-  const line = `${SITE.runningHead} · ${counts.because} because · ${counts["not-because"]} not because · ${counts["not-yet"]} not yet`;
+  const line = `${SITE.runningHead} to people · ${counts.because} because · ${counts["not-because"]} not because · ${counts["not-yet"]} not yet`;
   const sub = section === "not-because"
     ? "Measured nulls and negatives, held to the same grades as the wins."
     : section === "not-yet"

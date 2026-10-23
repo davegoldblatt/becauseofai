@@ -105,6 +105,11 @@ export const EntrySchema = z
     rank: z.number().int().positive(),
     headline: NonBlank,
     impact: NonBlank,
+    // Optional editorial control of the poster number (DAV-368). When set, the
+    // number and its label drive the hero, rows, table, and share image;
+    // `impact` stays the citation phrase and the fallback.
+    impact_number: z.string().nullable().optional(),
+    impact_label: z.string().nullable().optional(),
     summary: NonBlank,
     caveat: z.string().nullable().optional(),
     domain: z.enum(DOMAINS),

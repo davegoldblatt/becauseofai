@@ -5,7 +5,7 @@ import LagBar from "../../components/LagBar.astro";
 import { publishable, byId, neighbours } from "../../lib/site.ts";
 import { SITE } from "../../site.ts";
 import {
-  fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, splitImpact, achievedState, lagFor, isUnreviewed,
+  fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, impactParts, achievedState, lagFor, isUnreviewed,
   SECTION_LABEL, SECTION_HREF, DOMAIN_LABEL, AI_TYPE_LABEL,
 } from "../../lib/format.ts";
 
@@ -17,7 +17,7 @@ const url = `${SITE.url}/entry/${e.id}`;
 const sectionHref = SECTION_HREF[e.section];
 const related = (e.related ?? []).map((id) => byId.get(id)).filter((x) => x !== undefined);
 const effect = effectLine(e);
-const imp = splitImpact(e.impact);
+const imp = impactParts(e);
 const a = achievedState(e);
 const lag = lagFor(e);
 const { prev, next } = neighbours(e);
@@ -49,7 +49,7 @@ const facets: [string, string][] = [
         <span class="muted">{DOMAIN_LABEL[e.domain]} · {AI_TYPE_LABEL[e.ai_type]}</span>
       </nav>
       <p class:list={["entry-impact", { phrase: !imp.numeric }]} data-pagefind-ignore>
-        <b data-countup={imp.numeric ? "" : undefined}>{imp.lead}</b>{imp.rest && <span class="rest">{imp.rest}</span>}
+        <b>{imp.mod && <i class="mod">{imp.mod}</i>}<span class="num" data-countup={imp.numeric ? "" : undefined}>{imp.num}</span></b>{imp.rest && <span class="rest">{imp.rest}</span>}
       </p>
       <h1 class="sentence">{e.headline}</h1>
       <div data-pagefind-ignore>

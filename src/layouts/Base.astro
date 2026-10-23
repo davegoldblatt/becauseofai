@@ -4,10 +4,8 @@
 // or NOT YET BECAUSE OF AI by section (DAV-335). Counts come from the loader.
 import "../styles/global.css";
 import { SITE, NAMEPLATE } from "../site.ts";
-import { siteCounts, publishable } from "../lib/site.ts";
-import { isUnreviewed } from "../lib/format.ts";
+import { reviewedCounts as siteCounts, unreviewedCount } from "../lib/site.ts";
 import type { Section } from "../schema.ts";
-const unreviewedCount = publishable.filter(isUnreviewed).length;
 
 interface Props {
   title: string;
@@ -93,11 +91,12 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
           {np.pre && <><span class:list={["np-pre", `np-pre-${section}`]}>{np.pre}</span>{" "}</>}<span class="np-rest">{np.rest}</span><span class="sr-only">, home</span>
         </a>
         <div class="running">
-          <p class="running-head">{SITE.runningHead} · data as of <time datetime={SITE.asOf}>{SITE.asOf}</time>{unreviewedCount > 0 && <> · <a href="/changelog#awaiting-review">{unreviewedCount} unreviewed</a></>}</p>
+          <p class="running-head">{SITE.runningHead} · as of <time datetime={SITE.asOf}>{SITE.asOf}</time></p>
           <nav class="tabs" aria-label="Sections">
             {tabs.map((t) => (
               <a href={t.href} aria-current={section === t.key ? "page" : undefined}>{t.label} <b>{t.n}</b></a>
             ))}
+            {unreviewedCount > 0 && <a class="tab-unrev" href="/changelog#awaiting-review" title="Published by the research run, not yet read by the editor">Unreviewed <b>{unreviewedCount}</b></a>}
           </nav>
           <nav class="more" aria-label="About the registry">
             {more.map((n) => (

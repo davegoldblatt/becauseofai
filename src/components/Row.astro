@@ -8,10 +8,10 @@
 import type { Entry } from "../schema.ts";
 import Stamps from "./Stamps.astro";
 import LagBar from "./LagBar.astro";
-import { splitImpact, achievedKey, isoDate, lagMonths } from "../lib/format.ts";
+import { impactParts, achievedKey, isoDate, lagMonths } from "../lib/format.ts";
 interface Props { entry: Entry; index: number }
 const { entry: e, index } = Astro.props;
-const imp = splitImpact(e.impact);
+const imp = impactParts(e);
 const lag = lagMonths(e);
 ---
 <li
@@ -42,6 +42,6 @@ const lag = lagMonths(e);
     ) : null}
   </div>
   <p class:list={["row-impact", { phrase: !imp.numeric }]}>
-    <b>{imp.lead}</b>{imp.rest && <span>{imp.rest}</span>}
+    <b>{imp.mod && <i class="mod">{imp.mod}</i>}{imp.num}</b>{imp.rest && <span>{imp.rest}</span>}
   </p>
 </li>

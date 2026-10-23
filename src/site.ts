@@ -7,7 +7,7 @@ export const SITE = {
     "Every entry here reached a human, was measured against something, and names the date it happened — not the date it was published.",
   description: "A registry of measured AI benefits to people, with what did not work and what is not yet proven.",
   // Short form for the running head under the nameplate.
-  runningHead: "Measured AI benefits to people",
+  runningHead: "Measured AI benefits",
   // GitHub repository that holds the data. Issue templates for submissions and
   // disputes live there.
   repo: "https://github.com/davegoldblatt/becauseofai",

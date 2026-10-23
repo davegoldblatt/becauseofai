@@ -2,7 +2,7 @@
 // pages never touch the filesystem at render time and dev reloads on YAML edits.
 // Everything below is validated; a bad entry fails the build here.
 import { loadOrThrow, bySection, counts } from "./entries.ts";
-import { timelineFor } from "./format.ts";
+import { timelineFor, isUnreviewed } from "./format.ts";
 import { SITE } from "../site.ts";
 import type { Entry, Section } from "../schema.ts";
 
@@ -19,6 +19,11 @@ export const data = loadOrThrow(files);
 export const publishable = data.publishable;
 export const held = data.held;
 export const siteCounts = counts(publishable);
+// Counts of entries a person has read (DAV-366): the tabs and the share card
+// use these; the running head adds "N unreviewed".
+export const reviewed = publishable.filter((e) => !isUnreviewed(e));
+export const reviewedCounts = counts(reviewed);
+export const unreviewedCount = publishable.length - reviewed.length;
 export const because = bySection(publishable, "because");
 export const notBecause = bySection(publishable, "not-because");
 export const notYet = bySection(publishable, "not-yet");
