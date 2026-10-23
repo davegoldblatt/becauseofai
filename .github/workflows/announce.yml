@@ -115,12 +115,12 @@ jobs:
           media-descriptions: ${{ matrix.post.alt }}
       - name: Mark ${{ matrix.post.id }} as posted
         if: ${{ env.DRY_RUN != 'true' && (env.X_APP_KEY != '' || env.BLUESKY_IDENTIFIER != '' || env.MASTODON_URL != '') }}
-        run: mkdir -p .posted && echo "${{ matrix.post.id }}" > ".posted/${{ matrix.post.id }}"
+        run: mkdir -p posted && echo "${{ matrix.post.id }}" > "posted/${{ matrix.post.id }}"
       - uses: actions/upload-artifact@v4
         if: ${{ env.DRY_RUN != 'true' && (env.X_APP_KEY != '' || env.BLUESKY_IDENTIFIER != '' || env.MASTODON_URL != '') }}
         with:
           name: posted-${{ matrix.post.id }}
-          path: .posted/
+          path: posted/
           retention-days: 3
   record:
     needs: [find, post]
@@ -138,12 +138,12 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: posted-*
-          path: .posted-all
+          path: posted-all
           merge-multiple: true
       - name: Record the posted ids in the ledger and push
         run: |
           set -euo pipefail
-          ids=$(ls .posted-all 2>/dev/null | tr '\n' ',' | sed 's/,$//')
+          ids=$( (ls posted-all 2>/dev/null || true) | tr '\n' ',' | sed 's/,$//')
           if [ -z "$ids" ]; then echo "nothing was posted; ledger unchanged"; exit 0; fi
           node scripts/announce.ts --record "$ids"
           git config user.name "becauseofai announcer"
