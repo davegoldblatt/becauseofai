@@ -1,7 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { publishable } from "../lib/site.ts";
-import { fmtDate, isoDate, changeType, type ChangeType } from "../lib/format.ts";
+import { publishable, held } from "../lib/site.ts";
+import { fmtDate, isoDate, changeType, isUnreviewed, SECTION_LABEL, type ChangeType } from "../lib/format.ts";
+// Entries the research run published that no person has read yet, and entries
+// held back for lacking a primary source (DAV-366). Held entries are named
+// here, as they are in /api/entries.json, but never linked.
+const awaiting = publishable.filter(isUnreviewed);
 
 type Row = { date: string; id: string; headline: string; note: string; type: ChangeType | null; rest: string };
 const rows: Row[] = [];
@@ -18,6 +22,32 @@ for (const r of rows) (days.get(r.date) ?? days.set(r.date, []).get(r.date)!).pu
 <Base title="Changelog" description="Every change to every entry, newest first, with its type.">
   <h1 class="page-title">Changelog</h1>
   <p class="lede">Generated from each entry's history, newest first. A change carries a type when its note says so (added, upgraded, downgraded, updated, corrected, verified, removed, re-graded). Subscribe to <a href="/changes.xml">one item per change</a> or <a href="/feed.xml">one item per entry</a>.</p>
+  {(awaiting.length > 0 || held.length > 0) && (
+    <section class="log-day" id="awaiting-review">
+      <h2>Awaiting review</h2>
+      <p class="chg-note">Published by the research run and not yet read by the editor (they carry an UNREVIEWED stamp and stay out of the hero), plus entries held back until they have a primary source.</p>
+      <ul>
+        {awaiting.map((e) => (
+          <li class="chg">
+            <span class="chg-type"><span class="stamp stamp-xs stamp-unrev"><span class="sd">unreviewed</span></span></span>
+            <div>
+              <span class="chg-h"><a href={`/entry/${e.id}`}>{e.headline}</a></span>
+              <p class="chg-note">{SECTION_LABEL[e.section]} · {e.history[e.history.length - 1].note}</p>
+            </div>
+          </li>
+        ))}
+        {held.map((e) => (
+          <li class="chg">
+            <span class="chg-type"><span class="stamp stamp-xs stamp-watch"><span class="sd">held</span></span></span>
+            <div>
+              <span class="chg-h">{e.headline}</span>
+              <p class="chg-note">{SECTION_LABEL[e.section]} · needs a primary source before it renders.</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
   {[...days.entries()].map(([date, items]) => (
     <section class="log-day">
       <h2><time datetime={date}>{fmtDate(date)}</time></h2>

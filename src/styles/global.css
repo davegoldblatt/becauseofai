@@ -108,6 +108,7 @@ img, svg { display: block; }
 }
 .running-head { margin: 0; color: var(--graphite-text); overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; min-width: 0; }
 .running-head time { color: inherit; }
+.running-head a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--signal); }
 .tabs { display: flex; gap: 1rem; overflow-x: auto; scrollbar-width: none; flex: 0 0 auto; }
 .tabs::-webkit-scrollbar { display: none; }
 .tabs a { color: var(--ink); text-decoration: none; padding: 0.2rem 0; border-bottom: 2px solid transparent; }
