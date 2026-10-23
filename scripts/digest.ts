@@ -1,0 +1,160 @@
+// The daily digest's facts (DAV-382): what happened in the last day, gathered
+// with no model, written as research/digest/latest.json and latest.md. A
+// scheduled routine reads them and writes Dave the email.
+//
+//   node scripts/digest.ts [--since ISO] [--out research/digest]
+// Env: X_* keys for the bot's posts and mentions; CF_ANALYTICS_TOKEN + CF_ACCOUNT_ID
+// for site traffic. Each part that lacks its credential says so instead of failing.
+import fs from "node:fs";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+import { loadEntries } from "../src/lib/entries.ts";
+import { heldInfo } from "../src/schema.ts";
+import { SITE } from "../src/site.ts";
+import { xKeysFromEnv, me, ownPosts, mentions, type XPost } from "./lib/x-api.ts";
+
+const argv = process.argv.slice(2);
+const opt = (name: string): string | null => { const i = argv.indexOf(name); return i >= 0 && i + 1 < argv.length ? argv[i + 1] : null; };
+const now = new Date();
+const since = new Date(opt("--since") ?? new Date(now.getTime() - 24 * 3600_000).toISOString());
+const sinceIso = since.toISOString().replace(/\.\d{3}Z$/, "Z");
+const outDir = opt("--out") ?? "research/digest";
+const git = (args: string[]) => execFileSync("git", args, { encoding: "utf8" }).trim();
+const day = (iso: string) => iso.slice(0, 10);
+
+type Digest = {
+  generated_at: string;
+  since: string;
+  site: string;
+  entries: { published: number; held: number; counts: Record<string, number>; changed: { id: string; headline: string; change: "added" | "changed"; state: string; url: string | null }[]; held_list: { id: string; headline: string; reason: string; since: string; detail: string }[] };
+  verifications: { id: string; date: string; result: string; reason: string | null; detail: string; record: string }[];
+  announced: { id: string; date: string; url: string }[];
+  leads_added: string[];
+  x: null | { username: string; followers: number | null; posts: { id: string; url: string; text: string; created_at: string; impressions: number | null; likes: number; replies: number; reposts: number; bookmarks: number; quotes: number }[]; mentions: { id: string; url: string; from: string; text: string; created_at: string; in_reply_to_us: boolean }[]; note?: string };
+  traffic: null | { pageviews: number; visits: number; top_paths: { path: string; views: number }[]; day: string; note?: string };
+  notes: string[];
+};
+
+async function main() {
+  const notes: string[] = [];
+  // Entries: what changed in the last day and the registry's state.
+  const changedFiles = git(["log", `--since=${sinceIso}`, "--no-merges", "--name-status", "--format=", "--", "data/entries/"]).split("\n").filter(Boolean);
+  const change = new Map<string, "added" | "changed">();
+  for (const line of changedFiles) {
+    const [status, file] = line.split(/\t/);
+    const id = path.basename(file ?? "", ".yaml");
+    if (!id) continue;
+    if (status === "A") change.set(id, "added"); else if (!change.has(id)) change.set(id, "changed");
+  }
+  const loaded = loadEntries();
+  const byId = new Map(loaded.all.map((e) => [e.id, e]));
+  const published = new Set(loaded.publishable.map((e) => e.id));
+  const changed = [...change.entries()].map(([id, c]) => {
+    const e = byId.get(id);
+    const h = e ? heldInfo(e) : null;
+    return { id, headline: e?.headline ?? id, change: c, state: !e ? "removed" : published.has(id) ? "published" : `held (${h?.reason})`, url: e && published.has(id) ? `${SITE.url}/entry/${id}` : null };
+  });
+  const held_list = loaded.held.map((e) => { const h = heldInfo(e)!; return { id: e.id, headline: e.headline, reason: h.reason, since: h.since, detail: h.detail }; });
+  const counts = { because: 0, "not-because": 0, "not-yet": 0 } as Record<string, number>;
+  for (const e of loaded.publishable) counts[e.section]++;
+
+  // Verification records dated in the last day.
+  const verifications: Digest["verifications"] = [];
+  const recDir = "data/verifications";
+  if (fs.existsSync(recDir)) {
+    for (const id of fs.readdirSync(recDir)) {
+      for (const f of fs.readdirSync(path.join(recDir, id)).filter((x) => x.endsWith(".json"))) {
+        const r = JSON.parse(fs.readFileSync(path.join(recDir, id, f), "utf8"));
+        if (r.date < day(sinceIso)) continue;
+        verifications.push({ id, date: r.date, result: r.adjudication.result, reason: r.adjudication.reason, detail: String(r.adjudication.detail).slice(0, 300), record: `${id}/${f}` });
+      }
+    }
+  }
+
+  // Announcer ledger: posted in the last two days.
+  const ledger = JSON.parse(fs.readFileSync("research/announced.json", "utf8")) as { posted: Record<string, string> };
+  const announced = Object.entries(ledger.posted).filter(([, d]) => d >= day(new Date(since.getTime() - 24 * 3600_000).toISOString())).map(([id, d]) => ({ id, date: d, url: `${SITE.url}/entry/${id}` }));
+
+  // Leads the scout added to the inbox.
+  let leads_added: string[] = [];
+  try {
+    const diff = git(["log", `--since=${sinceIso}`, "-p", "--format=", "--", "research/inbox.md"]);
+    leads_added = diff.split("\n").filter((l) => /^\+- /.test(l)).map((l) => l.slice(2).trim()).slice(0, 30);
+  } catch { /* no inbox changes */ }
+
+  // X: the bot's posts and their metrics, and mentions.
+  let x: Digest["x"] = null;
+  const keys = xKeysFromEnv();
+  if (!keys) notes.push("X: no keys in the environment, so posts and mentions are not included.");
+  else {
+    try {
+      const who = await me(keys);
+      const posts = (await ownPosts(keys, who.id, 20)).filter((p) => new Date(p.created_at) >= new Date(since.getTime() - 6 * 24 * 3600_000));
+      const ment = await mentions(keys, who.id, sinceIso, 50);
+      const metric = (p: XPost, k: string, np = false) => (np ? p.non_public_metrics?.[k] : p.public_metrics?.[k]) ?? null;
+      x = {
+        username: who.username, followers: who.followers,
+        posts: posts.map((p) => ({ id: p.id, url: `https://x.com/${who.username}/status/${p.id}`, text: p.text, created_at: p.created_at, impressions: metric(p, "impression_count", true) ?? metric(p, "impression_count"), likes: metric(p, "like_count") ?? 0, replies: metric(p, "reply_count") ?? 0, reposts: metric(p, "retweet_count") ?? 0, bookmarks: metric(p, "bookmark_count") ?? 0, quotes: metric(p, "quote_count") ?? 0 })),
+        mentions: ment.map((m) => ({ id: m.id, url: `https://x.com/${m.username ?? "i"}/status/${m.id}`, from: m.username ? `@${m.username}` : m.author_id ?? "?", text: m.text, created_at: m.created_at, in_reply_to_us: m.in_reply_to_user_id === who.id })),
+      };
+    } catch (err) {
+      x = { username: "", followers: null, posts: [], mentions: [], note: `X API failed: ${(err as Error).message}` };
+      notes.push(`X: ${(err as Error).message}`);
+    }
+  }
+
+  // Cloudflare Web Analytics for yesterday, when a token exists.
+  let traffic: Digest["traffic"] = null;
+  const { CF_ANALYTICS_TOKEN, CF_ACCOUNT_ID } = process.env;
+  if (!CF_ANALYTICS_TOKEN || !CF_ACCOUNT_ID) notes.push("Traffic: no Cloudflare analytics token yet (CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID), so pageviews are not included.");
+  else {
+    const dayStart = day(since.toISOString());
+    const dayEnd = day(now.toISOString());
+    const q = `query($account: String!, $start: Date!, $end: Date!) { viewer { accounts(filter: {accountTag: $account}) {
+      total: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {date_geq: $start, date_lt: $end}) { count sum { visits } }
+      paths: rumPageloadEventsAdaptiveGroups(limit: 8, orderBy: [count_DESC], filter: {date_geq: $start, date_lt: $end}) { count dimensions { requestPath } } } } }`;
+    try {
+      const r = await fetch("https://api.cloudflare.com/client/v4/graphql", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${CF_ANALYTICS_TOKEN}` }, body: JSON.stringify({ query: q, variables: { account: CF_ACCOUNT_ID, start: dayStart, end: dayEnd } }), signal: AbortSignal.timeout(30_000) });
+      const j = (await r.json()) as { data?: { viewer?: { accounts?: { total: { count: number; sum: { visits: number } }[]; paths: { count: number; dimensions: { requestPath: string } }[] }[] } }; errors?: { message: string }[] };
+      const acc = j.data?.viewer?.accounts?.[0];
+      if (!acc) throw new Error(j.errors?.map((e) => e.message).join("; ") || "no data");
+      traffic = { day: dayStart, pageviews: acc.total[0]?.count ?? 0, visits: acc.total[0]?.sum?.visits ?? 0, top_paths: acc.paths.map((p) => ({ path: p.dimensions.requestPath, views: p.count })) };
+    } catch (err) {
+      traffic = { day: dayStart, pageviews: 0, visits: 0, top_paths: [], note: `Cloudflare analytics failed: ${(err as Error).message}` };
+      notes.push(`Traffic: ${(err as Error).message}`);
+    }
+  }
+
+  const digest: Digest = {
+    generated_at: now.toISOString(), since: sinceIso, site: SITE.url,
+    entries: { published: loaded.publishable.length, held: loaded.held.length, counts, changed, held_list },
+    verifications, announced, leads_added, x, traffic, notes,
+  };
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, "latest.json"), JSON.stringify(digest, null, 2) + "\n");
+  fs.writeFileSync(path.join(outDir, "latest.md"), render(digest));
+  console.log(render(digest));
+}
+
+function render(d: Digest): string {
+  const L: string[] = [];
+  L.push(`# Because of AI, daily digest for ${day(d.generated_at)}`, "", `Facts since ${d.since.replace("T", " ").replace("Z", " UTC")}. Written by code; the email is written from this.`, "");
+  L.push(`## Registry`, "", `${d.entries.counts.because} because · ${d.entries.counts["not-because"]} not because · ${d.entries.counts["not-yet"]} not yet published; ${d.entries.held} held.`);
+  if (d.entries.changed.length) { L.push("", "Entries added or changed:"); for (const c of d.entries.changed) L.push(`- ${c.change}: ${c.headline} → ${c.state}${c.url ? ` ${c.url}` : ""}`); } else L.push("", "No entry was added or changed.");
+  if (d.verifications.length) { L.push("", "Gate decisions:"); for (const v of d.verifications) L.push(`- ${v.id}: ${v.result}${v.reason ? ` (${v.reason})` : ""}: ${v.detail}`); }
+  if (d.leads_added.length) { L.push("", `Leads the scout logged (${d.leads_added.length}):`); for (const l of d.leads_added.slice(0, 10)) L.push(`- ${l}`); }
+  L.push("", "## Posts", "");
+  if (d.announced.length) for (const a of d.announced) L.push(`- announced ${a.date}: ${a.url}`); else L.push("Nothing announced.");
+  if (d.x) {
+    L.push("", `@${d.x.username}: ${d.x.followers ?? "?"} followers.`);
+    if (d.x.note) L.push(d.x.note);
+    if (d.x.posts.length) { L.push("", "Recent posts (last 7 days) and how they did:"); for (const p of d.x.posts) L.push(`- ${p.created_at.slice(0, 10)} · ${p.impressions ?? "?"} views · ${p.likes} likes · ${p.replies} replies · ${p.reposts} reposts · ${p.bookmarks} bookmarks: "${p.text.replace(/\s+/g, " ").slice(0, 140)}" ${p.url}`); }
+    if (d.x.mentions.length) { L.push("", `Mentions and replies since yesterday (${d.x.mentions.length}):`); for (const m of d.x.mentions) L.push(`- ${m.from}${m.in_reply_to_us ? " (reply to us)" : ""}: "${m.text.replace(/\s+/g, " ").slice(0, 200)}" ${m.url}`); } else L.push("", "No mentions or replies since yesterday.");
+  }
+  L.push("", "## Traffic", "");
+  if (d.traffic) { L.push(`${d.traffic.day}: ${d.traffic.pageviews} pageviews, ${d.traffic.visits} visits.`); if (d.traffic.note) L.push(d.traffic.note); for (const p of d.traffic.top_paths) L.push(`- ${p.path}: ${p.views}`); } else L.push("Not wired yet.");
+  if (d.notes.length) { L.push("", "## Notes", ""); for (const n of d.notes) L.push(`- ${n}`); }
+  return L.join("\n") + "\n";
+}
+
+main().catch((err) => { console.error(err?.stack ?? err); process.exit(1); });

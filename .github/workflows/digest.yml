@@ -1,0 +1,42 @@
+name: daily digest
+# Gathers the last day's facts (entries, gate decisions, posts and how they
+# did, mentions, traffic) with no model and commits them to research/digest/.
+# A scheduled Claude routine then writes the email from those files.
+on:
+  schedule:
+    - cron: "35 14 * * *"   # 07:35 America/Los_Angeles (PDT), after the scout and before the back-catalogue drip
+  workflow_dispatch:
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Gather the day
+        env:
+          X_APP_KEY: ${{ secrets.X_APP_KEY }}
+          X_APP_SECRET: ${{ secrets.X_APP_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: node scripts/digest.ts
+      - name: Commit the digest
+        run: |
+          set -euo pipefail
+          git add research/digest/
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git config user.name "becauseofai digest"
+          git config user.email "digest@becauseofai.org"
+          git commit -m "Digest: $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4; do git fetch -q origin main && git rebase -q origin/main && git push -q origin HEAD:main && exit 0 || sleep 5; done
+          echo "could not push after 4 tries"; exit 1
