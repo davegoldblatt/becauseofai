@@ -49,3 +49,12 @@ Candidates: 102 over 2026-10-21 to 2026-10-23, 9 flagged randomized, 0 alerts, 0
 
 - Paediatric ED discharge documents, 153 children randomised to template assembly versus on-premises LLM drafting, Montpellier. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1) (NCT07874659). Read the preprint page: primary outcome (record-concordant family understanding) null, difference −0.01 (−0.12 to 0.10); 117 analysed. Possible small `not-because`. Missing: enrolment dates (only ethics approval 2025-01-28 stated), registered retrospectively on 2026-10-15, peer-reviewed version.
 - AI-INFOCARE (carried over from 2026-10-22 and 2026-10-23): [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136) full text still unread. Missing: primary read of the numbers and dates.
+
+## 2026-10-24
+
+Candidates: 129 over 2026-10-22 to 2026-10-24, 19 flagged randomized, 0 alerts, 0 source errors. No entry drafted: the one strong new lead could not be read in full as raw text, so no receipt could be quoted verbatim.
+
+- Flourish, generative-AI mobile mental-health intervention, preregistered RCT, 1,137 unscreened university students, 6 weeks versus care as usual. [PsyArXiv preprint](https://osf.io/preprints/psyarxiv/nwz9q_v8/). Randomized with real people; stress, depression and anxiety trajectories favoured Flourish (stress β = −0.03, p = 0.010 per the snippet). Missing: the full text (OSF page is script-rendered; only the abstract was reachable), study dates from methods, absolute symptom-score differences, registration id, peer-reviewed version. Effects look small; may be a candidate once the PDF is read.
+- Scaling Student Support with Conversational AI, four-year RCT of an AI text-messaging chatbot at a large urban public university. [ERIC ED681875](https://eric.ed.gov/?id=ED681875) (EdWorkingPaper 26-1409). Missing: the working paper itself (ERIC fetch failed), outcomes (enrolment or persistence), dates, absolute effects.
+- Parent-led versus AI-guided dialogic reading in children's e-books, RCT. [BJET](http://dx.doi.org/10.1111/bjet.13615) via ERIC EJ1479944. Missing: full text, dates, effect sizes, setting; likely pre-window.
+- Teaching Evaluation by AI, randomized field experiment on AI teaching reports for professors, Guangxi University of Foreign Languages. [AEA RCT Registry AEARCTR-0019796](https://www.socialscienceregistry.org/trials/19796). In development, 2026-10-12 to 2027-01-31: a protocol to watch, not a lead for results.
