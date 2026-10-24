@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-23T18:53:38.552Z",
-  "since": "2026-10-22T18:53:38Z",
+  "generated_at": "2026-10-24T17:31:38.039Z",
+  "since": "2026-10-23T17:31:38Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
-    "held": 1,
+    "held": 2,
     "counts": {
       "because": 16,
       "not-because": 5,
@@ -12,196 +12,182 @@
     },
     "changed": [
       {
+        "id": "flourish-ai-coach-students-rct",
+        "headline": "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
         "id": "advance-ai-ecg-liver",
         "headline": "Because of AI, primary care teams at Mayo Clinic diagnosed advanced liver disease in about 5 more patients per 1,000 adults who had a routine ECG.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/advance-ai-ecg-liver"
       },
       {
         "id": "ambient-scribes-nejm-ai",
         "headline": "Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a 238-physician randomized trial.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/ambient-scribes-nejm-ai"
       },
       {
         "id": "china-ai-cal-null",
         "headline": "AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chinese primary students.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/china-ai-cal-null"
       },
       {
         "id": "columbia-star-birth",
         "headline": "Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/columbia-star-birth"
       },
       {
         "id": "ethiopia-tb-ai-cxr",
         "headline": "Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs that had no radiologist to read the X-rays.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/ethiopia-tb-ai-cxr"
       },
       {
         "id": "every-cure-repurposing",
         "headline": "Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate the window.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/every-cure-repurposing"
       },
       {
         "id": "fido-northumbrian-leaks",
         "headline": "Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/fido-northumbrian-leaks"
       },
       {
         "id": "firesat-constellation",
         "headline": "Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit; no fire-response outcome has been measured yet.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/firesat-constellation"
       },
       {
         "id": "fortell-ai-hearing-aids",
         "headline": "Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that makes the device.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/fortell-ai-hearing-aids"
       },
       {
         "id": "hurricane-melissa-2025",
         "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/hurricane-melissa-2025"
       },
       {
         "id": "india-tribal-tb-ai-cxr",
         "headline": "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/india-tribal-tb-ai-cxr"
       },
       {
         "id": "kenya-ai-consult-null",
         "headline": "A GPT-4o assistant built into the medical record improved Kenyan clinicians' notes and plans but did not reduce treatment failure for 9,691 patients.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/kenya-ai-consult-null"
       },
       {
         "id": "maryland-ai-tutor-negative",
         "headline": "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student randomized trial.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/maryland-ai-tutor-negative"
       },
       {
         "id": "masai-ai-mammography",
         "headline": "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, and 12% fewer cancers surfaced between screens.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/masai-ai-mammography"
       },
       {
         "id": "nhs-derm-skin-cancer",
         "headline": "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear without waiting weeks for a dermatologist.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/nhs-derm-skin-cancer"
       },
       {
         "id": "nhs-stroke-ai-imaging",
         "headline": "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist centres 64 minutes faster.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/nhs-stroke-ai-imaging"
       },
       {
         "id": "oman-ai-retinopathy",
         "headline": "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.",
-        "change": "added",
+        "change": "changed",
         "state": "held (no-primary-source)",
         "url": null
       },
       {
         "id": "rentosertib-phase-3",
         "headline": "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet been approved anywhere.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/rentosertib-phase-3"
       },
       {
         "id": "tricorder-ai-stethoscope-null",
         "headline": "An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at 12 months.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/tricorder-ai-stethoscope-null"
       },
       {
         "id": "ucd-als-speech-bci",
         "headline": "Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a brain implant, at up to 99% word accuracy.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/ucd-als-speech-bci"
       },
       {
         "id": "ucla-chart-summarizer-rct",
         "headline": "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — while saving no time and mostly not recommending it.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/ucla-chart-summarizer-rct"
       },
       {
         "id": "uva-comet-deterioration-null",
         "headline": "Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 admissions.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/uva-comet-deterioration-null"
       },
       {
         "id": "waymo-injury-crashes",
         "headline": "Because of AI, there were an estimated 841 fewer injury-causing crashes across 270 million driverless miles.",
-        "change": "added",
+        "change": "changed",
         "state": "published",
         "url": "https://becauseofai.org/entry/waymo-injury-crashes"
-      },
-      {
-        "id": "flood-hub-flash-floods",
-        "headline": "Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert hasn't been measured.",
-        "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/flood-hub-flash-floods"
-      },
-      {
-        "id": "gb-0895-phase-3",
-        "headline": "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved.",
-        "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/gb-0895-phase-3"
-      },
-      {
-        "id": "golden-bridge-ii-stroke",
-        "headline": "Because of AI-assisted decision support, 10 fewer stroke patients per 1,000 had another stroke, heart attack, or vascular death within three months.",
-        "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/golden-bridge-ii-stroke"
-      },
-      {
-        "id": "sierra-leone-gemini-math",
-        "headline": "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks.",
-        "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/sierra-leone-gemini-math"
       }
     ],
     "held_list": [
+      {
+        "id": "flourish-ai-coach-students-rct",
+        "headline": "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.",
+        "reason": "grade-split",
+        "since": "2026-10-24",
+        "detail": "window: drafter pre, verifier in."
+      },
       {
         "id": "oman-ai-retinopathy",
         "headline": "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.",
@@ -219,6 +205,14 @@
       "reason": null,
       "detail": "The sources support operational 24-hour forecasts available in over 150 countries and retrospective forecast evaluation. They do not establish alert-driven actions or measured improvements in human outcomes.",
       "record": "flood-hub-flash-floods/2026-10-23.json"
+    },
+    {
+      "id": "flourish-ai-coach-students-rct",
+      "date": "2026-10-24",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "window: drafter pre, verifier in.",
+      "record": "flourish-ai-coach-students-rct/2026-10-24.json"
     },
     {
       "id": "gb-0895-phase-3",
@@ -270,40 +264,74 @@
       "id": "ambient-scribes-nejm-ai",
       "date": "2026-10-23",
       "url": "https://becauseofai.org/entry/ambient-scribes-nejm-ai"
+    },
+    {
+      "id": "china-ai-cal-null",
+      "date": "2026-10-23",
+      "url": "https://becauseofai.org/entry/china-ai-cal-null"
+    },
+    {
+      "id": "ethiopia-tb-ai-cxr",
+      "date": "2026-10-23",
+      "url": "https://becauseofai.org/entry/ethiopia-tb-ai-cxr"
+    },
+    {
+      "id": "every-cure-repurposing",
+      "date": "2026-10-23",
+      "url": "https://becauseofai.org/entry/every-cure-repurposing"
     }
   ],
   "leads_added": [
-    "Paediatric ED discharge documents, 153 children randomised to template assembly versus on-premises LLM drafting, Montpellier. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1) (NCT07874659). Read the preprint page: primary outcome (record-concordant family understanding) null, difference −0.01 (−0.12 to 0.10); 117 analysed. Possible small `not-because`. Missing: enrolment dates (only ethics approval 2025-01-28 stated), registered retrospectively on 2026-10-15, peer-reviewed version.",
-    "AI-INFOCARE (carried over from 2026-10-22 and 2026-10-23): [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136) full text still unread. Missing: primary read of the numbers and dates.",
-    "SPOT-TB, Pakistan stepped-wedge cluster RCT of MATCH-AI geospatial targeting for mobile TB X-ray camps, 30 vans, Oct 2023–Sep 2024 (NCT06017843). [medRxiv preprint](https://www.medrxiv.org/content/10.64898/2026.05.20.26348577v1.full). ITT yield per camp was null (aRR 1.07, 0.94–1.22); per-protocol it was positive (1.32), which mostly reflects teams not going to the recommended sites. Possible `not-because`, pre-window. Missing: peer-reviewed version; whether a Bayesian risk map counts as AI for us.",
-    "PRIMA-AI kidney-transplant RCT (NCT06056518), Charité, Jan–Sep 2024. [PMC full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13176338/). Read in full and rejected this week: stopped at 76 of 122 planned, control rate about 40% against an assumed 10–15%, OR 0.96 (0.34–2.64). An underpowered null, not a clean one. Revisit only if a larger trial follows.",
-    "ALERT trial, automated EHR alerts for valvular heart disease (win ratio 1.29 aortic stenosis, 1.23 mitral regurgitation). [JACC](https://www.jacc.org/doi/10.1016/j.jacc.2026.03.037). Missing: whether the alerts use AI or are rule-based, trial dates, absolute numbers (403 to the run).",
-    "AI-INFOCARE (carried over): the NEJM AI full text still returns 403. The protocol ([JMIR Res Protoc 2025](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12680933/)) names patient-rated interaction quality as primary and consultation length as secondary, so the vendor's 25 vs 33 min headline is a secondary outcome.",
-    "AI-INFOCARE results published (NEJM AI, Oct 15, 2026; DRKS00036810). The vendor's page reports 300 patients, patient rating 4.42 vs 4.25, and median consultation 25 vs 33 min. [Simply Onno summary](https://www.simply-onno.com/en/studie-befund-verstehen-mit-ki). Missing: the NEJM AI full text (403 to the run). A co-author is the vendor's co-founder. Recruitment May 2025–Jan 2026 straddles the window.",
-    "Kidney-transplant EHR AI risk-prediction RCT (Osmanodja et al.). [npj Digital Medicine](https://doi.org/10.1038/s41746-026-02757-5). Secondary coverage describes a 76-patient null on treatment-option conversations; possible small `not-because`. Missing: primary read, numbers, dates.",
-    "Fetal intracranial malformation PAICS self-crossover RCT, 1,584 pregnancies, reportedly Sep 2022–Nov 2023. [Lancet Digital Health](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00063-4/fulltext). Rejected this week (reader-accuracy outcome, pre-window). Revisit only if pregnancy-management outcomes appear.",
-    "Advance, AI-enabled ECG for early detection of advanced liver disease, pragmatic cluster-randomized trial, 248 enrolled, completed 2025-09-01. [ClinicalTrials.gov NCT05782283](https://clinicaltrials.gov/study/NCT05782283). Registry results posted. Missing: the results record (page did not render for the scout), comparator, absolute diagnosis rates, publication.",
-    "VITAL-MD, AI cardiac arrest prediction for general ward patients, stepped-wedge cluster RCT protocol. [JMIR Res Protoc](https://doi.org/10.2196/104230). Protocol only. Watch for results.",
-    "PM Heart, AI prognostic decision support in the EHR for ischemic heart disease, RCT rationale and design. [Am Heart J](https://doi.org/10.1016/j.ahj.2026.107631). Design paper only. Watch for results.",
-    "APOLLAI multimodal AI versus EMS personnel for prehospital stroke deficit detection. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.16.26365784v1). Missing: whether it ran on real patients prospectively or on recorded cases, and any care or outcome effect.",
-    "AI-assisted identification of potential treatment injury from discharge summaries, New Zealand district hospital. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1). Early-stage evaluation. Missing: whether it changed claims or care, comparison, dates.",
-    "AI-powered CURA application to identify at-risk pregnancies, randomised trial protocol. [BMJ Open](https://doi.org/10.1136/bmjopen-2026-124115). Protocol only. Watch for results; missing: results, dates, comparison outcomes.",
-    "Ambulatory patient experience with ambient AI scribes, qualitative study. [J Gen Intern Med](https://doi.org/10.1007/s11606-026-10931-4). Patient-side view; compare ambient-scribes-nejm-ai. Qualitative, so no measured effect; context only.",
-    "AI-INFOCARE randomized trial, previsit AI-generated document summaries and consultation time. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136?af=R&rss=currentIssue). Randomized, patient-physician communication outcome. Missing: full text, trial dates from methods, absolute consultation-time difference, registry record.",
-    "Paediatric ED discharge documents, 153 children randomised to template assembly or on-premises LLM drafting. [medRxiv preprint](https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1). Randomized with real patients. Missing: peer-reviewed version, whether the outcome is a patient benefit or only error interception, achieved dates.",
-    "Fetal intracranial malformation detection, multicentre self-crossover RCT in China. [Lancet Digital Health](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00063-4/fulltext?rss=yes). Randomized, sensitivity gain with specificity preserved. Missing: whether patient outcomes were measured (may be a reader-style outcome), study dates, absolute sensitivities.",
-    "Computerized auscultation device (VoqX) for structural cardiac pathology, 400 enrolled, completed 2024-05-02. [ClinicalTrials.gov NCT04960280](https://clinicaltrials.gov/study/NCT04960280). Registry results posted. Missing: whether it changed care or only diagnostic accuracy, comparator, absolute numbers, publication.",
-    "AI safety authentication system in ophthalmic surgery, visual alert plus time-out monitor, 1-year before-after study. [BMJ Open Quality](https://doi.org/10.1136/bmjoq-2025-004002). Deployed in real surgery. Missing: whether safety events were measured or only utilisation, validity of the before-after comparison, dates.",
-    "P-WIN, real-time personalized ML predicting critical deterioration in a paediatric ICU. [JAMIA Open](https://doi.org/10.1093/jamiaopen/ooag202). Deployment report. Missing: outcome against a comparison (compare uva-comet-deterioration-null), dates, absolute effect.",
-    "AI decision support for breast ultrasound, potential to reduce benign biopsies. [Breast Cancer Res Treat](https://doi.org/10.1007/s10549-026-08094-1). Likely retrospective given \"potential\". Missing: evidence of use on real patients.",
-    "Multi-agent LLM diagnostic teams, reversal on real emergency notes. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.09.24.26363897v3). Possible `not-because` lead, but retrospective on notes. Missing: patient contact.",
-    "AI-enabled diabetic retinopathy screening, validation to public health impact. [Frontiers in Public Health](https://doi.org/10.3389/fpubh.2026.1976572). Check for screening-uptake numbers; likely a perspective. Compare oman-ai-retinopathy.",
-    "AI sputum analysis for TB detection in south-western Uganda. [Medical Devices](https://doi.org/10.2147/MDER.S639007). Validation study. Missing: any deployment or case-finding comparison."
+    "AI-assisted radiographic fracture detection and paediatric ED length of stay, before-after cohort. [Injury](https://doi.org/10.1016/j.injury.2026.113765). Real patients with a named comparison. Missing: full text (the reader returned NOT READ), dates, absolute length-of-stay difference, whether the before-after design is confounded.",
+    "AI tool for neurology patient-portal message categorisation and routing, implementation study from January, aimed at response times. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2). Real deployment. Missing: full methods (the reader returned the page header and subject list only), end date, comparison period, absolute response-time numbers.",
+    "Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335?af=R&rss=currentIssue). Compare ambient-scribes-nejm-ai. Missing: full text, dates, comparison, absolute time savings.",
+    "AI-enhanced auscultation for left ventricular dysfunction, prospective multicentre validation. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600258?af=R&rss=currentIssue). Likely diagnostic accuracy only. Missing: any change in care or outcomes.",
+    "Flourish, generative-AI mobile mental-health intervention, preregistered RCT, 1,137 unscreened university students, 6 weeks versus care as usual. [PsyArXiv preprint](https://osf.io/preprints/psyarxiv/nwz9q_v8/). Read in full and drafted as `flourish-ai-coach-students-rct` (enrolment May–Nov 2025, NCT06668532, meaningful depression improvement 52.3% vs 31.7% among elevated-baseline students). Still missing: peer-reviewed version, the registry record check, an end date for follow-up.",
+    "Flourish, generative-AI mobile mental-health intervention, preregistered RCT, 1,137 unscreened university students, 6 weeks versus care as usual. [PsyArXiv preprint](https://osf.io/preprints/psyarxiv/nwz9q_v8/). Randomized with real people; stress, depression and anxiety trajectories favoured Flourish (stress β = −0.03, p = 0.010 per the snippet). Missing: the full text (OSF page is script-rendered; only the abstract was reachable), study dates from methods, absolute symptom-score differences, registration id, peer-reviewed version. Effects look small; may be a candidate once the PDF is read.",
+    "Scaling Student Support with Conversational AI, four-year RCT of an AI text-messaging chatbot at a large urban public university. [ERIC ED681875](https://eric.ed.gov/?id=ED681875) (EdWorkingPaper 26-1409). Missing: the working paper itself (ERIC fetch failed), outcomes (enrolment or persistence), dates, absolute effects.",
+    "Parent-led versus AI-guided dialogic reading in children's e-books, RCT. [BJET](http://dx.doi.org/10.1111/bjet.13615) via ERIC EJ1479944. Missing: full text, dates, effect sizes, setting; likely pre-window.",
+    "Teaching Evaluation by AI, randomized field experiment on AI teaching reports for professors, Guangxi University of Foreign Languages. [AEA RCT Registry AEARCTR-0019796](https://www.socialscienceregistry.org/trials/19796). In development, 2026-10-12 to 2027-01-31: a protocol to watch, not a lead for results."
   ],
   "x": {
     "username": "bcuz_of_ai",
-    "followers": 1,
+    "followers": 3,
     "posts": [
+      {
+        "id": "2113721120167784757",
+        "url": "https://x.com/bcuz_of_ai/status/2113721120167784757",
+        "text": "Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate the window.\n\nhttps://t.co/qqrKv8JFQV https://t.co/Yv4swlRAdx",
+        "created_at": "2026-10-23T19:56:00.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2113720913396916312",
+        "url": "https://x.com/bcuz_of_ai/status/2113720913396916312",
+        "text": "Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs that had no radiologist to read the X-rays.\n\nhttps://t.co/PBwSYzXKnV https://t.co/zOYte5arTN",
+        "created_at": "2026-10-23T19:55:11.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2113720703765602389",
+        "url": "https://x.com/bcuz_of_ai/status/2113720703765602389",
+        "text": "AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chinese primary students.\n\nhttps://t.co/lR2VJ8EjcQ https://t.co/YFkb1159AW",
+        "created_at": "2026-10-23T19:54:21.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2113503741655822838",
         "url": "https://x.com/bcuz_of_ai/status/2113503741655822838",
@@ -477,7 +505,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2113450666471612910",
         "text": "A public registry of measured AI benefits to people. Each entry is one sentence that has to earn it: the benefit reached real people, was measured, happened because of the AI, and on a date we know. New entries post here as they land.\n\nhttps://t.co/IvN6tbu0Bf",
         "created_at": "2026-10-23T02:01:19.000Z",
-        "impressions": 11,
+        "impressions": 12,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
