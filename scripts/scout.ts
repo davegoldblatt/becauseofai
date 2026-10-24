@@ -6,7 +6,8 @@
 //   node scripts/scout.ts --days 7
 //
 // Sources: PubMed E-utilities, medRxiv API, ClinicalTrials.gov API v2, four
-// journal RSS feeds, Crossref (update-to) for every source DOI we hold.
+// journal RSS feeds (four medical, five general-science), Crossref (update-to)
+// for every source DOI we hold.
 import fs from "node:fs";
 import path from "node:path";
 import { loadEntries, staleWindowReason } from "../src/lib/entries.ts";
@@ -105,6 +106,13 @@ async function feeds() {
     ["NEJM AI", "https://ai.nejm.org/action/showFeed?type=etoc&feed=rss&jc=ai"],
     ["Nature Medicine", "https://www.nature.com/nm.rss"],
     ["JAMA", "https://jamanetwork.com/rss/site_3/67.xml"],
+    // General-science journals (DAV-387): the field experiments in education,
+    // work and the environment run here and never reach PubMed.
+    ["Science", "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science"],
+    ["Science Advances", "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=sciadv"],
+    ["Nature", "https://www.nature.com/nature.rss"],
+    ["Nature Human Behaviour", "https://www.nature.com/nathumbehav.rss"],
+    ["PNAS", "https://www.pnas.org/action/showFeed?type=etoc&feed=rss&jc=pnas"],
   ];
   for (const [venue, url] of list) {
     try {
