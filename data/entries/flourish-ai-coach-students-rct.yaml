@@ -1,0 +1,118 @@
+id: flourish-ai-coach-students-rct
+section: because
+rank: 18
+headline: >-
+  Because of AI, 52% of students with elevated depressive symptoms who used a
+  generative-AI coaching app for six weeks improved meaningfully, against 32% given
+  care as usual.
+impact: "52% vs 32% meaningful depression improvement"
+impact_number: "52%"
+impact_label: "improved meaningfully on depression, vs 32% with care as usual"
+summary: >-
+  A preregistered RCT of 1,137 university students (2025) compared six weeks of
+  the Flourish generative-AI coaching app with care as usual. Perceived stress,
+  depressive and anxiety symptoms were all lower in the app arm by Week 6, with
+  small between-group effects; meaningful improvement was more common among
+  students who started with elevated symptoms.
+caveat: >-
+  Working paper (PsyArXiv, October 2026), not peer reviewed; written by the app's
+  maker with academic co-authors. Brief self-reported screeners (PSS-4, PHQ-2,
+  GAD-2), unblinded, no active control, and the meaningful-improvement figures
+  cover only elevated-symptom students with Week 6 data.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "Flourish app access (AI coach plus structured activities) vs care as usual, 1:1 randomization, 6 weeks"
+effect:
+  relative: "Risk ratio 1.65 (95% CI 1.16–2.34) for meaningful improvement in depressive symptoms among students with elevated baseline scores"
+  absolute: "52.3% (46/88) vs 31.7% (32/101) meaningfully improved on depression; number needed to treat 4.9"
+reach: "1,137 undergraduate students at one large North American university"
+dates:
+  achieved_start: 2025-05
+  achieved_end: 2025-11
+  published: 2026-10-22
+  added: 2026-10-24
+  updated: 2026-10-24
+sources:
+  - title: "PsyArXiv working paper: AI-Powered Prevention and Early Intervention for Stress, Depression, and Anxiety: A Randomized Clinical Trial"
+    url: https://osf.io/download/nwz9q_v8/
+    type: primary
+conflicts: "First author and a corresponding author are affiliated with Flourish Science, the maker of the app; funding in part from Harvard Business School."
+what_would_change: null
+notes: >-
+  verify: achieved_end of 2025-11 is the end of enrolment ("between May and
+  November 2025"); the last participants' six-week follow-up ran later and the
+  paper gives no end date.
+  verify: window is pre because most of the study period predates the 12-month
+  window; the last enrolled participants' follow-up may reach into it.
+  verify: the app bundles an AI coach with non-AI activities, habit tracking and a
+  moderated community, hence bundled; the arms do not isolate the AI alone.
+  verify: the meaningful-improvement analysis is limited to elevated-baseline
+  students with observed Week 6 data (88 of 123 and 101 of 153 for depression);
+  the conservative analysis counting missing as non-responders gave RR 1.79.
+  verify: primary-outcome trajectories were small (condition × time β −0.03 to
+  −0.04); Week 6 between-group d 0.18–0.22.
+  verify: registered as NCT06668532 (2024-10-29); not yet checked against the
+  registry record.
+related: []
+history:
+  - date: 2026-10-24
+    note: "Added by the daily scout."
+rationale: Students were randomized 1:1 to six weeks of the Flourish app, an AI coach bundled with structured activities, or to care as usual, so the package is tested against no app (bundled).
+receipts:
+  - field: headline
+    quote: depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;
+    locator: Results, Meaningful Improvement Among Participants with Elevated Baseline Depressive and Anxiety Symptoms
+    source: 0
+  - field: impact
+    quote: depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;
+    locator: Results, Meaningful Improvement Among Participants with Elevated Baseline Depressive and Anxiety Symptoms
+    source: 0
+  - field: impact_number
+    quote: depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;
+    locator: Results, Meaningful Improvement Among Participants with Elevated Baseline Depressive and Anxiety Symptoms
+    source: 0
+  - field: effect.relative
+    quote: RR = 1.65; 95% CI [1.16, 2.34]; p = .004;
+    locator: Results, Meaningful Improvement Among Participants with Elevated Baseline Depressive and Anxiety Symptoms
+    source: 0
+  - field: effect.absolute
+    quote: 46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65; 95% CI [1.16, 2.34]; p = .004; NNT = 4.9
+    locator: Results, Meaningful Improvement Among Participants with Elevated Baseline Depressive and Anxiety Symptoms
+    source: 0
+  - field: reach
+    quote: A total of 1137 undergraduate students were recruited through a large North American university
+    locator: Methods, Participants
+    source: 0
+  - field: dates.achieved_start
+    quote: enrolled in the study between May and November 2025
+    locator: Results, Participant Characteristics
+    source: 0
+  - field: dates.achieved_end
+    quote: enrolled in the study between May and November 2025
+    locator: Results, Participant Characteristics
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-10-24
+  content: 2c5510aedb459358c5df535054b82d89be92c4ac370fd9508a9402b830844795
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-10-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-10-24
+    verdict: fail
+  record: flourish-ai-coach-students-rct/2026-10-24.json
+held:
+  reason: grade-split
+  since: 2026-10-24
+  detail: "window: drafter pre, verifier in."
+  record: flourish-ai-coach-students-rct/2026-10-24.json

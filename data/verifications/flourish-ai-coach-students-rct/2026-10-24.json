@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "flourish-ai-coach-students-rct",
+  "date": "2026-10-24",
+  "as_of": "2026-10-22",
+  "entry_sha256": "2c5510aedb459358c5df535054b82d89be92c4ac370fd9508a9402b830844795",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-10-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://osf.io/download/nwz9q_v8/",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-10-24T04:42:31.695Z",
+      "final_url": "https://idvyorynw6xy.compat.objectstorage.us-ashburn-1.oraclecloud.com/cos-prod-osf-1-files-ash/900b9ca181cb7e79fba22d0e75b654625f7ad310c34eb116534ae56d7173f6f4?response-content-disposition=attachment%3B+filename%3D%22Cachia_et_al_2026_AI_prevention_early_intervention_RCT.pdf%22%3B+filename%2A%3DUTF-8%27%27Cachia_et_al_2026_AI_prevention_early_intervention_RCT.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=8a1e5869d3122814cba7bd4265a84ad444199855%2F20261024%2Fus-ashburn-1%2Fs3%2Faws4_request&X-Amz-Date=20261024T044231Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=8c96bb457d6290fc0baeb896725c5b5f975eb1d501b09fd2f5b8337497db335e",
+      "sha256": "b63cdc3d10998d55346750b6a3ea6da730fb3f2112a8fbe662d2c4737321f43e",
+      "chars": 53491,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "RR = 1.65; 95% CI [1.16, 2.34]; p = .004;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65; 95% CI [1.16, 2.34]; p = .004; NNT = 4.9",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 1137 undergraduate students were recruited through a large North American university",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "enrolled in the study between May and November 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "enrolled in the study between May and November 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "api",
+    "date": "2026-10-24",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "Randomization compared the complete Flourish package, including its AI coach and structured activities, with care as usual rather than the same package without AI.",
+      "achieved_dates": {
+        "from": "results",
+        "note": "Participant Characteristics gives enrollment from May through November 2025; these are enrollment bounds, not explicit final follow-up dates, and the study extends into the assessment window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses vendor affiliations but omits employee board memberships, an advisor's company shares, and another author's subsequent compensated advisory role."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preregistered randomized trial supports the reported depression-improvement figures among elevated-baseline participants with Week 6 data. It tests the complete app rather than AI alone, and its May–November 2025 enrollment span does not support classifying the benefit as wholly before the assessment window."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14828,
+      "output": 802,
+      "total": 15630,
+      "cached": 0,
+      "reasoning": 332
+    },
+    "duration_ms": 14642
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter pre, verifier in.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": "in"
+      }
+    ]
+  }
+}
