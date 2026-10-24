@@ -6,7 +6,9 @@ Read first: `research/brief.md` (the editorial rules: the four tests, achieved v
 
 ## What the candidates file holds
 
-`candidates[]`: title, url, date, venue, snippet, and flags (`ai`, `randomized`, `outcome`) from PubMed, medRxiv, ClinicalTrials.gov results postings, and four journal feeds. `alerts[]`: Crossref retractions or corrections on our own sources, and window grades that have gone stale. `existing_entry_ids` and `existing_source_urls`: what the registry already has. `errors[]`: sources that failed today.
+`candidates[]`: title, url, date, venue, snippet, and flags (`ai`, `randomized`, `outcome`) from PubMed, medRxiv, ClinicalTrials.gov results postings, ISRCTN, the AEA RCT Registry, arXiv, OSF preprints (EdArXiv, SocArXiv, PsyArXiv), ERIC, and ten journal and working-paper feeds (medical journals, Science, Nature, PNAS, NBER). `alerts[]`: Crossref retractions or corrections on our own sources, window grades that have gone stale, and a watched company page (`watch-updated`) that now reports data past an entry's achieved end. `existing_entry_ids` and `existing_source_urls`: what the registry already has. `errors[]`: sources that failed today.
+
+How to read the registry and working-paper sources. An ISRCTN or AEA record is a registration, not a result: `results posted` in the venue means the record itself holds results to read, `ended, no results posted` means the trial is over and the paper may exist elsewhere (search for it before logging the lead), and `in_development` or a future end date is a protocol to watch, not a lead. ERIC carries no add date, so the same items can reappear; skip what the inbox already holds. An arXiv, OSF or NBER paper is a preprint or working paper: it can be a lead and, when it reports a completed field experiment with achieved dates, a primary source, labelled as a preprint in the entry.
 
 ## The four tests, applied fast
 
