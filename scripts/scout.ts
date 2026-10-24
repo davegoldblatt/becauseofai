@@ -32,6 +32,7 @@ const OUTCOME = /\b(mortality|survival|detection|diagnos|outcome|patients|studen
 type Candidate = {
   source: string; id: string; title: string; url: string; date: string; venue: string;
   snippet: string; flags: { ai: boolean; randomized: boolean; outcome: boolean };
+  fulltext?: string; // a direct document link when the landing page is script-rendered or an index
 };
 type Alert = { type: string; entry: string; detail: string };
 const candidates: Candidate[] = [];
@@ -258,7 +259,7 @@ async function osfPreprints() {
         if (!(f.ai && f.randomized)) continue;
         const url = p.links?.html ?? (a.doi ? `https://doi.org/${a.doi}` : "");
         if (!url) continue;
-        push({ source: "osf", id: p.id, title: strip(a.title ?? ""), url, date: published, venue: `${provider === "edarxiv" ? "EdArXiv" : provider === "socarxiv" ? "SocArXiv" : "PsyArXiv"} preprint`, snippet: strip(a.description ?? "").slice(0, 400), flags: f });
+        push({ source: "osf", id: p.id, title: strip(a.title ?? ""), url, date: published, venue: `${provider === "edarxiv" ? "EdArXiv" : provider === "socarxiv" ? "SocArXiv" : "PsyArXiv"} preprint`, snippet: strip(a.description ?? "").slice(0, 400), flags: f, fulltext: `https://osf.io/download/${p.id}/` });
       }
     } catch (err) {
       errors.push(`osf ${provider}: ${(err as Error).message}`);
@@ -280,7 +281,8 @@ async function eric() {
     const text = `${title} ${x.description ?? ""}`;
     const url = x.url || `https://eric.ed.gov/?id=${x.id}`;
     if (inbox.includes(url) || inbox.includes(`https://eric.ed.gov/?id=${x.id}`)) continue;
-    push({ source: "eric", id: x.id, title, url, date: `${x.publicationdateyear ?? ""}`, venue: `ERIC · ${x.source ?? ""} · no add date, may recur`, snippet: strip(x.description ?? "").slice(0, 400), flags: flags(text) });
+    // ERIC hosts the PDF of its ED documents (reports, working papers); EJ journal articles live with the publisher.
+    push({ source: "eric", id: x.id, title, url, date: `${x.publicationdateyear ?? ""}`, venue: `ERIC · ${x.source ?? ""} · no add date, may recur`, snippet: strip(x.description ?? "").slice(0, 400), flags: flags(text), ...(/^ED\d+$/.test(x.id ?? "") ? { fulltext: `https://files.eric.ed.gov/fulltext/${x.id}.pdf` } : {}) });
   }
 }
 

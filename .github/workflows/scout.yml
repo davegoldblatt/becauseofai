@@ -47,6 +47,8 @@ jobs:
               git checkout -q - || true; echo "#$n failed validate or build; left open"
             fi
           done
+      - name: Install the reader's tools
+        run: sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
       - name: Pull candidates (no model)
         run: node scripts/scout.ts --days ${{ github.event.inputs.days || '2' }}
       - name: Triage and draft (Claude, subscription token)
@@ -65,7 +67,7 @@ jobs:
           claude_args: |
             --model claude-sonnet-5-5
             --max-turns 100
-            --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+            --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(npm run read:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
       - name: Hand the branch to the gate
         id: handoff
         run: |

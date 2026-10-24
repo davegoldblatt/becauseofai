@@ -17,7 +17,8 @@
     "scout": "node scripts/scout.ts",
     "test": "node --test 'tests/*.test.ts'",
     "verify": "node scripts/verify.ts",
-    "receipts": "node scripts/receipts.ts"
+    "receipts": "node scripts/receipts.ts",
+    "read": "node scripts/read-source.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
