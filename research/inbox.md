@@ -58,3 +58,12 @@ Candidates: 129 over 2026-10-22 to 2026-10-24, 19 flagged randomized, 0 alerts, 
 - Scaling Student Support with Conversational AI, four-year RCT of an AI text-messaging chatbot at a large urban public university. [ERIC ED681875](https://eric.ed.gov/?id=ED681875) (EdWorkingPaper 26-1409). Missing: the working paper itself (ERIC fetch failed), outcomes (enrolment or persistence), dates, absolute effects.
 - Parent-led versus AI-guided dialogic reading in children's e-books, RCT. [BJET](http://dx.doi.org/10.1111/bjet.13615) via ERIC EJ1479944. Missing: full text, dates, effect sizes, setting; likely pre-window.
 - Teaching Evaluation by AI, randomized field experiment on AI teaching reports for professors, Guangxi University of Foreign Languages. [AEA RCT Registry AEARCTR-0019796](https://www.socialscienceregistry.org/trials/19796). In development, 2026-10-12 to 2027-01-31: a protocol to watch, not a lead for results.
+
+## 2026-10-24 (daily scout, second pass)
+
+Candidates: 140 over 2026-10-22 to 2026-10-24, 16 flagged randomized, 0 alerts, 0 source errors. No further entry drafted: none of the leads below had a primary source the reader could return in full.
+
+- AI-assisted radiographic fracture detection and paediatric ED length of stay, before-after cohort. [Injury](https://doi.org/10.1016/j.injury.2026.113765). Real patients with a named comparison. Missing: full text (the reader returned NOT READ), dates, absolute length-of-stay difference, whether the before-after design is confounded.
+- AI tool for neurology patient-portal message categorisation and routing, implementation study from January, aimed at response times. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2). Real deployment. Missing: full methods (the reader returned the page header and subject list only), end date, comparison period, absolute response-time numbers.
+- Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335?af=R&rss=currentIssue). Compare ambient-scribes-nejm-ai. Missing: full text, dates, comparison, absolute time savings.
+- AI-enhanced auscultation for left ventricular dysfunction, prospective multicentre validation. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600258?af=R&rss=currentIssue). Likely diagnostic accuracy only. Missing: any change in care or outcomes.
