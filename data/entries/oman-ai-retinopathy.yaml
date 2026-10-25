@@ -77,4 +77,10 @@ rationale: The figures compare the programme with the ministry's own before-peri
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-10-23
+  date: 2026-10-25
+  content: df0d8cbb152db9bc4b2b2e1c57ec6ef16853660421df3cad2f642be6a9a71227
+held:
+  reason: no-primary-source
+  since: 2026-10-25
+  detail: No source is typed primary.
+  record: oman-ai-retinopathy/2026-10-25.json

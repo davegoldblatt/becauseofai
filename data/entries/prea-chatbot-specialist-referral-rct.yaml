@@ -70,7 +70,7 @@ receipts:
     locator: Abstract
     source: 0
   - field: headline
-    quote: "two academic tertiary medical centers in western China"
+    quote: two academic tertiary medical centers in western China
     locator: Results, Patient flow and baseline data
     source: 0
   - field: impact
@@ -86,7 +86,7 @@ receipts:
     locator: Results, primary outcome paragraph
     source: 0
   - field: effect.relative
-    quote: "patient-reported communication ease (mean scores 16.0% increase; 3.99 ± 0.62 versus 3.44 ± 0.97;"
+    quote: patient-reported communication ease (mean scores 16.0% increase; 3.99 ± 0.62 versus 3.44 ± 0.97;
     locator: Abstract
     source: 0
   - field: effect.absolute
@@ -98,7 +98,7 @@ receipts:
     locator: Results, Patient-centeredness and care coordination
     source: 0
   - field: reach
-    quote: "Our final analysis included 2,069 participants"
+    quote: Our final analysis included 2,069 participants
     locator: Results, Patient flow and baseline data
     source: 0
   - field: reach
@@ -113,3 +113,24 @@ receipts:
     quote: Recruitment was conducted from 8 Feb to 30 April 2025.
     locator: Methods, recruitment
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-10-25
+  content: 5d9c7ba969ccd1fba88273dd77de5783c763feffaf67dd26f799675eafc2600a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-10-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-10-25
+    verdict: fail
+  record: prea-chatbot-specialist-referral-rct/2026-10-25.json
+held:
+  reason: grade-split
+  since: 2026-10-25
+  detail: "evidence: drafter A, verifier could not grade."
+  record: prea-chatbot-specialist-referral-rct/2026-10-25.json
