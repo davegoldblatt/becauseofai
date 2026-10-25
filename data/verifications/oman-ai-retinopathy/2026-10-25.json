@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "oman-ai-retinopathy",
+  "date": "2026-10-25",
+  "as_of": "2026-10-22",
+  "entry_sha256": "df0d8cbb152db9bc4b2b2e1c57ec6ef16853660421df3cad2f642be6a9a71227",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-25"
+  },
+  "sources": [],
+  "quote_checks": [],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "no-primary-source",
+    "detail": "No source is typed primary."
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "flourish-ai-coach-students-rct",
+  "date": "2026-10-25",
+  "as_of": "2026-10-22",
+  "entry_sha256": "4c269f6542442f2edb0d68a24521b8eb8f9f3e54ceecd8d7a97e14e607f496b4",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-10-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://osf.io/download/nwz9q_v8/",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-10-25T17:11:46.962Z",
+      "final_url": "https://idvyorynw6xy.compat.objectstorage.us-ashburn-1.oraclecloud.com/cos-prod-osf-1-files-ash/900b9ca181cb7e79fba22d0e75b654625f7ad310c34eb116534ae56d7173f6f4?response-content-disposition=attachment%3B+filename%3D%22Cachia_et_al_2026_AI_prevention_early_intervention_RCT.pdf%22%3B+filename%2A%3DUTF-8%27%27Cachia_et_al_2026_AI_prevention_early_intervention_RCT.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=8a1e5869d3122814cba7bd4265a84ad444199855%2F20261025%2Fus-ashburn-1%2Fs3%2Faws4_request&X-Amz-Date=20261025T171146Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=ad46f6da36614169a50adb8ec674597fa9d9738110da2c1b34288dbc01fabf34",
+      "sha256": "b63cdc3d10998d55346750b6a3ea6da730fb3f2112a8fbe662d2c4737321f43e",
+      "chars": 53491,
+      "truncated": false
+    },
+    {
+      "index": 1,
+      "url": "https://clinicaltrials.gov/study/NCT06668532",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-10-25T17:11:47.127Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT06668532?format=json",
+      "sha256": "6967321ee826ddbff90df98f4207e8e9c8b7652b421e58f37106e4a068536f70",
+      "chars": 11709,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "depressive symptoms (46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "RR = 1.65; 95% CI [1.16, 2.34]; p = .004;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "46/88 [52.3%] vs 32/101 [31.7%]; RR = 1.65; 95% CI [1.16, 2.34]; p = .004; NNT = 4.9",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 1137 undergraduate students were recruited through a large North American university",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "enrolled in the study between May and November 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 1,
+      "quote": "\"primaryCompletionDateStruct\": {\n    \"date\": \"2025-11-28\",\n    \"type\": \"ACTUAL\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "api",
+    "date": "2026-10-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "Randomization compared the complete Flourish package, including its AI coach and structured activities, with care as usual rather than an otherwise identical non-AI app.",
+      "achieved_dates": {
+        "from": "registry",
+        "note": "The registry gives actual dates of May 5 through November 28, 2025, and the paper's Results confirm May–November enrollment; the span overlaps the assessment window, so 'pre' is incorrect."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses vendor affiliations and sponsorship but omits the disclosed board positions, advisor relationships, and one author's company shares."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The working paper supports 52.3% versus 31.7% meaningful depression improvement among elevated-baseline participants with Week 6 data in a randomized trial reporting preregistered primary outcomes. It establishes a benefit of the bundled app, not AI alone, and the study dates extend into the assessment window."
+    },
+    "error": null,
+    "tokens": {
+      "input": 17982,
+      "output": 727,
+      "total": 18709,
+      "cached": 0,
+      "reasoning": 195
+    },
+    "duration_ms": 13510
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter pre, verifier in.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": "in"
+      }
+    ]
+  }
+}

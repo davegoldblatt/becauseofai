@@ -5,6 +5,8 @@ headline: >-
   Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000
   for treatment, and cut specialist waiting lists by 87%.
 impact: "Waitlists cut 87%"
+impact_number: "62→8 days"
+impact_label: "wait for an eye appointment, ministry-reported, no comparison group"
 summary: >-
   Oman's national AI diabetic-retinopathy screening program reported 43,000+
   patients screened, ~30% referred for specialist examination, an 87% reduction
@@ -28,13 +30,16 @@ dates:
   achieved_end: 2026-08
   published: 2026-08-24
   added: 2026-10-22
-  updated: 2026-10-23
+  updated: 2026-10-25
 sources:
   - title: "Muscat Daily: Oman turns to AI to tackle diabetes-related blindness"
     url: https://www.muscatdaily.com/2026/08/24/oman-turns-to-ai-to-tackle-diabetes-related-blindness/
     type: secondary
   - title: "Oman Ministry of Health: launch of the national AI diabetic retinopathy project (17 March 2025; no results)"
     url: https://moh.gov.om/en/media-center/news/third-country-in-the-world-to-achieve-this-milestone-a-revolution-in-diagnosis-and-treatment-using-ai-to-detect-diabetic-retinopathy-in-oman/
+    type: secondary
+  - title: "Times of Oman: National AI project screens over 43,000 diabetic patients to prevent vision loss in Oman (24 August 2026)"
+    url: https://timesofoman.com/article/175984-national-ai-project-screens-over-43000-diabetic-patients-to-prevent-vision-loss-in-oman
     type: secondary
 conflicts: "Ministry of Health self-report."
 what_would_change: "Rates of sight-threatening retinopathy treated in time, vs the prior program."
@@ -47,6 +52,12 @@ notes: >-
   waiting-time figure (62 to 8 days) covers the first seven months. The vendor
   EyRIS (Nova MSC) claimed the programme in August 2025; the ministry does not
   name a vendor. Needs a ministry report, a WHO/EMRO write-up, or a paper to stand as primary.
+  The poster number (62 to 8 days) is the absolute figure behind the 87%; the
+  Times of Oman (24 August 2026, readable by the gate's reader, unlike Muscat
+  Daily) attributes it to the Director of the National Center for Virtual
+  Health. It carries no receipt because receipts must come from a primary
+  source and there is none; the search on 2026-10-25 again found no ministry,
+  WHO or journal report.
 related: []
 history:
   - date: 2026-10-22
@@ -57,7 +68,19 @@ history:
       17 March 2025, before the window opened. Retyped the Muscat Daily article as
       secondary because no ministry or programme report with the figures exists, so
       the entry is now held.
+  - date: 2026-10-25
+    note: >-
+      Updated: poster number set to the ministry-reported wait of 62 to 8 days,
+      and the Times of Oman report added as a secondary source. Still held for
+      want of a primary source.
+rationale: The figures compare the programme with the ministry's own before-period, and AI grading arrived together with a new national screening workflow across 25 facilities, so the package rather than the AI is what changed (bundled).
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-10-23
+  date: 2026-10-25
+  content: df0d8cbb152db9bc4b2b2e1c57ec6ef16853660421df3cad2f642be6a9a71227
+held:
+  reason: no-primary-source
+  since: 2026-10-25
+  detail: No source is typed primary.
+  record: oman-ai-retinopathy/2026-10-25.json
