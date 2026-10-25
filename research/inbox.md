@@ -67,3 +67,11 @@ Candidates: 140 over 2026-10-22 to 2026-10-24, 16 flagged randomized, 0 alerts, 
 - AI tool for neurology patient-portal message categorisation and routing, implementation study from January, aimed at response times. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2). Real deployment. Missing: full methods (the reader returned the page header and subject list only), end date, comparison period, absolute response-time numbers.
 - Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335?af=R&rss=currentIssue). Compare ambient-scribes-nejm-ai. Missing: full text, dates, comparison, absolute time savings.
 - AI-enhanced auscultation for left ventricular dysfunction, prospective multicentre validation. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600258?af=R&rss=currentIssue). Likely diagnostic accuracy only. Missing: any change in care or outcomes.
+
+## 2026-10-25 (daily scout)
+
+Candidates: 159 over 2026-10-23 to 2026-10-25, 17 flagged randomized, 0 alerts, 0 source errors. No entry drafted: no lead had a primary source read in full that clears the four tests.
+
+- AI-enhanced colposcopy training, randomized controlled study of trainees. [J Gynecol Obstet Hum Reprod](https://doi.org/10.1016/j.jogoh.2026.103307). Randomized with a comparison, but the outcome is trainee diagnostic reasoning, not patients. Missing: full text, dates, any patient-level effect; probably fails the reached-people test.
+- Reliance patterns on AI advice in medical imaging, randomised crossover experiment. [Lancet Digital Health](https://doi.org/10.1016/j.landig.2026.101050). Clinicians in a task, not patients. Watch only.
+- AI-assisted patient-friendly imaging report summaries in oncology, randomized QI study. [medRxiv protocol](https://doi.org/10.64898/2026.10.05.26364529). A protocol: watch for results.
