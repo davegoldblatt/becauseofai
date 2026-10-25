@@ -1,0 +1,115 @@
+id: prea-chatbot-specialist-referral-rct
+section: because
+rank: 19
+headline: >-
+  Because of AI, specialist consultations at two hospitals in western China took
+  3.14 minutes instead of 4.41 when patients first gave their history to a
+  chatbot, and patients rated communication easier.
+impact: "3.14 vs 4.41 min per visit"
+impact_number: "3.14 min"
+impact_label: "per specialist visit after a chatbot took the history, vs 4.41 min without"
+summary: >-
+  A three-arm randomized trial (February–April 2025) at two tertiary hospitals
+  in Guilin and Gansu assigned 2,069 patients to talk to PreA, a GPT-4o mini
+  chatbot that takes a history, suggests diagnoses and tests, and writes a
+  referral report, before seeing one of 111 specialists, or to usual care. With
+  the chatbot used alone, consultations were 28.7% shorter, specialists rated
+  care coordination higher, and patients rated communication easier; using it
+  with staff help made no difference.
+caveat: >-
+  The benefit is time and experience, not health: no clinical outcomes were
+  measured, patients knew their arm and rated their own experience, and the
+  control had no pre-assessment of any kind rather than a nurse-led one.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "PreA chatbot used alone before the specialist visit vs usual care with no pre-assessment (routine report of age and sex only), 1:1:1 randomization with a third staff-assisted PreA arm"
+effect:
+  relative: "28.7% shorter consultations (95% CI 22.7–34.8); patient-rated ease of communication 16.0% higher"
+  absolute: "3.14 vs 4.41 minutes per consultation; ease-of-communication score 3.99 vs 3.44 on a five-point scale"
+reach: "2,069 patients and care partners analysed, 111 specialists in 24 disciplines, two tertiary hospitals in western China"
+dates:
+  achieved_start: 2025-02-08
+  achieved_end: 2025-04-30
+  published: 2026-01-19
+  added: 2026-10-25
+  updated: 2026-10-25
+sources:
+  - title: "Nature Medicine: An LLM chatbot to facilitate primary-to-specialist care transitions: a randomized controlled trial (open access, PMC)"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13004692/
+    doi: 10.1038/s41591-025-04176-7
+    type: primary
+conflicts: >-
+  Two authors are employees of WeChat AI (Tencent), which provided computational
+  resources and technical support; the chatbot runs on OpenAI's GPT-4o mini.
+  Public research funding; no other competing interests declared.
+what_would_change: "A trial with a clinical outcome (diagnostic accuracy, time to treatment, follow-up visits) or with a nurse-led pre-assessment as the control."
+notes: >-
+  verify: the trial is registered as ChiCTR2400094159; the ID suggests
+  registration in 2024, before recruitment began on 8 Feb 2025, but the
+  registry record was not read, so evidence A rests on the paper's account of
+  prespecified primary end points.
+  Shorter is not automatically better for a patient. The paper found no
+  systematic change in specialists' clinical notes (classifier F1 0.57), and in
+  a matched-pairs analysis (not randomized) participating specialists saw more
+  patients per shift with unchanged waiting times. Patient-experience outcomes
+  were self-reported by unmasked participants. Window is pre: recruitment ended
+  30 April 2025, six months before the window opened; the paper was published
+  online 19 January 2026.
+related: [kenya-ai-consult-null, ucla-chart-summarizer-rct, ambient-scribes-nejm-ai]
+history:
+  - date: 2026-10-25
+    note: "Added. Weekly run; read in full from the Europe PMC text."
+rationale: Patients were randomized to use the PreA chatbot before the specialist visit or to usual care without it, so the arms differ only by the chatbot (isolated).
+receipts:
+  - field: headline
+    quote: showing significantly reduced physician consultation duration (28.7% reduction; 3.14 ± 2.25 min) compared to the No-PreA group (4.41 ± 2.77 min
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: "two academic tertiary medical centers in western China"
+    locator: Results, Patient flow and baseline data
+    source: 0
+  - field: impact
+    quote: PreA-only 3.14 ± 2.25 versus No-PreA 4.41 ± 2.77 min
+    locator: Results, primary outcome paragraph
+    source: 0
+  - field: impact_number
+    quote: PreA-only 3.14 ± 2.25 versus No-PreA 4.41 ± 2.77 min
+    locator: Results, primary outcome paragraph
+    source: 0
+  - field: effect.relative
+    quote: corresponding to a 28.7% (95% CI 22.7–34.8) relative reduction
+    locator: Results, primary outcome paragraph
+    source: 0
+  - field: effect.relative
+    quote: "patient-reported communication ease (mean scores 16.0% increase; 3.99 ± 0.62 versus 3.44 ± 0.97;"
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: PreA-only 3.14 ± 2.25 versus No-PreA 4.41 ± 2.77 min
+    locator: Results, primary outcome paragraph
+    source: 0
+  - field: effect.absolute
+    quote: "ease of communication: 3.99 ± 0.62 versus 3.44 ± 0.97"
+    locator: Results, Patient-centeredness and care coordination
+    source: 0
+  - field: reach
+    quote: "Our final analysis included 2,069 participants"
+    locator: Results, Patient flow and baseline data
+    source: 0
+  - field: reach
+    quote: 111 specialists from 24 medical disciplines across two health centers
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_start
+    quote: Recruitment was conducted from 8 Feb to 30 April 2025.
+    locator: Methods, recruitment
+    source: 0
+  - field: dates.achieved_end
+    quote: Recruitment was conducted from 8 Feb to 30 April 2025.
+    locator: Methods, recruitment
+    source: 0

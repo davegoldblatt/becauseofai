@@ -32,22 +32,36 @@ effect:
 reach: "1,137 undergraduate students at one large North American university"
 dates:
   achieved_start: 2025-05
-  achieved_end: 2025-11
+  achieved_end: 2025-11-28
   published: 2026-10-22
   added: 2026-10-24
-  updated: 2026-10-24
+  updated: 2026-10-25
 sources:
   - title: "PsyArXiv working paper: AI-Powered Prevention and Early Intervention for Stress, Depression, and Anxiety: A Randomized Clinical Trial"
     url: https://osf.io/download/nwz9q_v8/
     type: primary
-conflicts: "First author and a corresponding author are affiliated with Flourish Science, the maker of the app; funding in part from Harvard Business School."
+  - title: "ClinicalTrials.gov NCT06668532 (Flourish Science, University of Manitoba)"
+    url: https://clinicaltrials.gov/study/NCT06668532
+    type: primary
+conflicts: "First author and a corresponding author are affiliated with Flourish Science, the maker of the app, which is also the registered sponsor; funding in part from Harvard Business School."
 what_would_change: null
 notes: >-
-  verify: achieved_end of 2025-11 is the end of enrolment ("between May and
-  November 2025"); the last participants' six-week follow-up ran later and the
-  paper gives no end date.
-  verify: window is pre because most of the study period predates the 12-month
-  window; the last enrolled participants' follow-up may reach into it.
+  Window argued as pre (the verifier said in on 2026-10-24). The registry gives
+  an actual start of 5 May 2025 and an actual completion of 28 November 2025, so
+  about five of the study's roughly 29 weeks fall inside the window that opened
+  on 26 October 2025; the benefit mostly predates it and only the publication
+  (October 2026) is new. This is a judgment on a straddling study, not a fact
+  either side can quote; a human should settle it.
+  verify: the paper says students enrolled "between May and November 2025" with
+  six weeks of follow-up, which would run past the registry's 28 November 2025
+  completion date for anyone enrolled in late November.
+  verify: the registry (first posted 31 October 2024) lists the Flourishing
+  Scale, PHQ-8, GAD-7, PSS-4, affect and resilience as primary outcomes at six
+  weeks and three months; the paper reports PSS-4, PHQ-2 and GAD-2 at six
+  weeks, and the headline meaningful-improvement figure is an analysis of
+  elevated-baseline students. Evidence stays A for randomization and
+  registration, but the headline is not a registered primary endpoint as
+  written, and three-month results are not reported.
   verify: the app bundles an AI coach with non-AI activities, habit tracking and a
   moderated community, hence bundled; the arms do not isolate the AI alone.
   verify: the meaningful-improvement analysis is limited to elevated-baseline
@@ -55,12 +69,19 @@ notes: >-
   the conservative analysis counting missing as non-responders gave RR 1.79.
   verify: primary-outcome trajectories were small (condition × time β −0.03 to
   −0.04); Week 6 between-group d 0.18–0.22.
-  verify: registered as NCT06668532 (2024-10-29); not yet checked against the
-  registry record.
+  Registered as NCT06668532 (submitted 29 October 2024), checked against the
+  registry record on 2026-10-25; the registered site is the University of
+  Manitoba.
 related: []
 history:
   - date: 2026-10-24
     note: "Added by the daily scout."
+  - date: 2026-10-25
+    note: >-
+      Corrected achieved end from 2025-11 to 2025-11-28, the registry's actual
+      completion date, and added the ClinicalTrials.gov record as a primary
+      source. Window stays pre, argued in notes against the verifier's in;
+      flagged that the registered primary outcomes differ from those reported.
 rationale: Students were randomized 1:1 to six weeks of the Flourish app, an AI coach bundled with structured activities, or to care as usual, so the package is tested against no app (bundled).
 receipts:
   - field: headline
@@ -92,9 +113,12 @@ receipts:
     locator: Results, Participant Characteristics
     source: 0
   - field: dates.achieved_end
-    quote: enrolled in the study between May and November 2025
-    locator: Results, Participant Characteristics
-    source: 0
+    quote: |-
+      "primaryCompletionDateStruct": {
+          "date": "2025-11-28",
+          "type": "ACTUAL"
+    locator: Registry statusModule.primaryCompletionDateStruct
+    source: 1
 drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
