@@ -99,3 +99,19 @@ receipts:
           "type": "ACTUAL"
     locator: Registry statusModule.primaryCompletionDateStruct
     source: 1
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-10-26
+  content: 01c81028779ffd6210c4664cddf59c839fea26ae67e12b324c0984cff7ff7a8f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-10-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-10-26
+    verdict: pass
+  record: eagle-cadde-colonoscopy-rct/2026-10-26.json

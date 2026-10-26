@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "eagle-cadde-colonoscopy-rct",
+  "date": "2026-10-26",
+  "as_of": "2026-10-22",
+  "entry_sha256": "01c81028779ffd6210c4664cddf59c839fea26ae67e12b324c0984cff7ff7a8f",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-10-26"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41746-025-02270-1",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-10-26T18:44:34.140Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12852673/fullTextXML",
+      "sha256": "763fb72163b27af7a908bc927d2fe503bc0994aedbff62bc85f1d6a14abd7be4",
+      "chars": 51283,
+      "truncated": false
+    },
+    {
+      "index": 1,
+      "url": "https://clinicaltrials.gov/study/NCT05730192",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-10-26T18:44:34.308Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT05730192?format=json",
+      "sha256": "2c063076fac593c58e9520735236cf8490423edc0f1a2262a0e52cd31cc58377",
+      "chars": 44607,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "APC (0.82 vs. 0.62, Ratio 1.33[95% CI 1.06–1.67]), adenoma detection-rate (43.2% vs. 35.9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "significantly higher APC in the CADe-arm compared to the SoC-arm (0.82 vs. 0.62, p = 0.01)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "33% more adenomas detected (APC), and an absolute 7.3% increase in ADR",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "with 33% more adenomas detected (Ratio 1.33 [95% CI 1.06–1.67])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "33% more adenomas detected (APC), and an absolute 7.3% increase in ADR",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Patients from eight centers across four European countries (841 patients, 22 endoscopists) were randomized to standard or CADe-assisted colonoscopy",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "985 patients were invited, with 973 randomized between May and November 2023",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 1,
+      "quote": "\"primaryCompletionDateStruct\": {\n    \"date\": \"2023-11-20\",\n    \"type\": \"ACTUAL\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "api",
+    "date": "2026-10-26",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized arms compared standard colonoscopy with versus without CADDIE AI assistance under otherwise shared procedural protocols.",
+      "achieved_dates": {
+        "from": "registry",
+        "note": "The paper's Results gives May–November 2023; the registry gives an actual start of 2023-05-10 and primary completion of 2023-11-20."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Odin Medical funded and sponsored the trial, supplied CADDIE, and assisted with design; several authors disclosed consultancy fees from Odin."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized trial supports increased adenoma detection in 841 analyzed patients during 2023, not reduced subsequent cancer incidence. All receipt values are supported, although the supplied registry's results-posting date falls after the stated as-of date."
+    },
+    "error": null,
+    "tokens": {
+      "input": 26692,
+      "output": 552,
+      "total": 27244,
+      "cached": 0,
+      "reasoning": 99
+    },
+    "duration_ms": 9444
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The randomized trial supports increased adenoma detection in 841 analyzed patients during 2023, not reduced subsequent cancer incidence. All receipt values are supported, although the supplied registry's results-posting date falls after the stated as-of date."
+  }
+}
