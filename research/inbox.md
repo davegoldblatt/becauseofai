@@ -82,3 +82,12 @@ Candidates: 159 over 2026-10-23 to 2026-10-25, 17 flagged randomized, 0 alerts, 
 - Community-codesigned LLM chatbot for primary care, RCT of 2,202 residents in 11 Chinese provinces, March 2025 (ChiCTR2500098101). [Nature Health, PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12880911/). Read in full and rejected: both arms used the chatbot (e-learning plus chatbot vs chatbot only), so it is AI-vs-AI; the outcomes are awareness and ratings, with no health outcome; pre-window.
 - PSY-CHAI, six-arm double-blind trial of AI-generated vs human therapist feedback in internet CBT for social anxiety, Sweden. [ISRCTN11343758](https://www.isrctn.com/ISRCTN11343758). The scout lists it as "results posted" with a 2027-02-01 date; the registry page did not render for the run. Watch for results; an active human-feedback control would make it a clean AI-vs-human comparison.
 - AI-INFOCARE (carried over again): [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2600136) still returns 403 to the gate's reader. Missing: the primary read.
+
+## 2026-10-26 (daily scout)
+
+Candidates: 136 over 2026-10-24 to 2026-10-26, 18 flagged randomized, 0 alerts, 0 source errors. One entry drafted (EAGLE, below); the rest are registrations or non-patient outcomes.
+
+- EAGLE, cloud-based CADe polyp detection in colonoscopy, RCT. [NCT05730192](https://clinicaltrials.gov/study/NCT05730192) (results posted 2026-10-26) and [npj Digit Med](https://doi.org/10.1038/s41746-025-02270-1). Read in full with the gate's reader and drafted as `eagle-cadde-colonoscopy-rct` (adenomas per colonoscopy 0.82 vs 0.62, randomized May to November 2023, window pre). Still missing: any interval-cancer or later outcome.
+- Does the Design of AI Tutors Matter? Field experiment in an introductory economics course, German university. [AEARCTR-0019960](https://www.socialscienceregistry.org/trials/19960). In development, 2026-10-14 to 2027-02-19: a protocol to watch for results.
+- Expert vs. AI Feedback, large-scale math experiment, primary schools in Peru. [AEARCTR-0020025](https://www.socialscienceregistry.org/trials/20025). In development, one-week experiment from 2026-10-25: a protocol to watch for results.
+- AI, Decision Rights, and the Returns to Decentralization, randomized field experiment in US home care. [AEARCTR-0020016](https://www.socialscienceregistry.org/trials/20016). Ongoing to 2028-06-30; no results yet. Watch.

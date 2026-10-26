@@ -1,0 +1,101 @@
+id: eagle-cadde-colonoscopy-rct
+section: because
+rank: 20
+headline: >-
+  Because of AI, colonoscopists using a cloud-based polyp detector found 0.82
+  adenomas per colonoscopy against 0.62 without it, and 43.2% of patients had an
+  adenoma against 35.9%.
+impact: "0.82 vs 0.62 adenomas per colonoscopy"
+impact_number: "7.3 pts"
+impact_label: "more patients with an adenoma found (43.2% vs 35.9%)"
+summary: >-
+  EAGLE randomized screening and surveillance colonoscopy patients at eight
+  centers in four European countries to standard colonoscopy or colonoscopy with
+  CADDIE, a cloud-based real-time polyp-detection aid. The aided arm found more
+  adenomas per colonoscopy (0.82 vs 0.62), more large polyps and more sessile
+  serrated lesions, with no rise in unnecessary resections.
+caveat: >-
+  The outcome is detection of adenomas during the procedure, not cancers
+  prevented or later interval cancers, which the trial did not follow. The
+  sponsor and device maker, Odin Medical, funded the trial and helped design
+  it; endoscopists had to have an adenoma detection rate of at least 25% and
+  all equipment was Olympus. Fieldwork was in 2023.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Colonoscopy with the CADDIE computer-aided detection system vs standard high-definition white-light colonoscopy, 1:1 randomization in blocks of four"
+effect:
+  relative: "Adenomas per colonoscopy ratio 1.33 (95% CI 1.06–1.67), 33% more adenomas detected"
+  absolute: "0.82 vs 0.62 adenomas per colonoscopy (p = 0.01); adenoma detection rate 43.2% vs 35.9%, an absolute 7.3% increase"
+reach: "841 patients, 22 endoscopists, eight centers in four European countries"
+dates:
+  achieved_start: 2023-05
+  achieved_end: 2023-11-20
+  published: 2025-12-26
+  added: 2026-10-26
+  updated: 2026-10-26
+sources:
+  - title: "Kader et al., npj Digital Medicine 2025: A novel cloud-based artificial intelligence for real-time detection of colorectal neoplasia – a randomized controlled trial (EAGLE)"
+    url: https://doi.org/10.1038/s41746-025-02270-1
+    type: primary
+  - title: "ClinicalTrials.gov NCT05730192 (Odin Medical), results posted 2026-10-26"
+    url: https://clinicaltrials.gov/study/NCT05730192
+    type: primary
+conflicts: "Funded and sponsored by Odin Medical Ltd., which supplied the CADDIE system and assisted in study design; several authors have received consultancy fees from Odin Medical."
+what_would_change: null
+notes: >-
+  verify: the headline outcome is adenoma detection, a surrogate for interval
+  colorectal cancer, which the trial did not measure; the paper itself says the
+  link between adenomas per colonoscopy and interval cancer needs more research.
+  verify: the registry results record (posted 2026-10-26) reports the
+  detection-rate counts as 180 of 417 and 152 of 424 colonoscopies, which is
+  43.2% and 35.8%; the paper's abstract gives 35.9% for the control arm.
+  verify: achieved start is the paper's randomization window (May to November
+  2023); the registry gives an actual start of 2023-05-10 and a primary
+  completion of 2023-11-20, used as the achieved end.
+  verify: the paper is from December 2025 and the registry results are new this
+  week; no earlier entry or inbox line covers this trial.
+related: []
+history:
+  - date: 2026-10-26
+    note: "Added by the daily scout."
+rationale: Patients were randomized 1:1 to colonoscopy with or without the CADDIE detection aid, so the arms differ only by the AI and adenoma yield is compared directly (isolated).
+receipts:
+  - field: headline
+    quote: APC (0.82 vs. 0.62, Ratio 1.33[95% CI 1.06–1.67]), adenoma detection-rate (43.2% vs. 35.9%)
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: significantly higher APC in the CADe-arm compared to the SoC-arm (0.82 vs. 0.62, p = 0.01)
+    locator: Results, Primary endpoints
+    source: 0
+  - field: impact_number
+    quote: 33% more adenomas detected (APC), and an absolute 7.3% increase in ADR
+    locator: Discussion
+    source: 0
+  - field: effect.relative
+    quote: with 33% more adenomas detected (Ratio 1.33 [95% CI 1.06–1.67])
+    locator: Results, Primary endpoints
+    source: 0
+  - field: effect.absolute
+    quote: 33% more adenomas detected (APC), and an absolute 7.3% increase in ADR
+    locator: Discussion
+    source: 0
+  - field: reach
+    quote: Patients from eight centers across four European countries (841 patients, 22 endoscopists) were randomized to standard or CADe-assisted colonoscopy
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: 985 patients were invited, with 973 randomized between May and November 2023
+    locator: Results
+    source: 0
+  - field: dates.achieved_end
+    quote: |-
+      "primaryCompletionDateStruct": {
+          "date": "2023-11-20",
+          "type": "ACTUAL"
+    locator: Registry statusModule.primaryCompletionDateStruct
+    source: 1
