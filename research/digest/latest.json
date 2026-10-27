@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T20:03:36.232Z",
-  "since": "2026-10-25T20:03:36Z",
+  "generated_at": "2026-10-27T00:45:04.056Z",
+  "since": "2026-10-26T00:45:04Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -51,48 +51,9 @@
       "reason": null,
       "detail": "The randomized trial supports increased adenoma detection in 841 analyzed patients during 2023, not reduced subsequent cancer incidence. All receipt values are supported, although the supplied registry's results-posting date falls after the stated as-of date.",
       "record": "eagle-cadde-colonoscopy-rct/2026-10-26.json"
-    },
-    {
-      "id": "flourish-ai-coach-students-rct",
-      "date": "2026-10-25",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "window: drafter pre, verifier in.",
-      "record": "flourish-ai-coach-students-rct/2026-10-25.json"
-    },
-    {
-      "id": "oman-ai-retinopathy",
-      "date": "2026-10-25",
-      "result": "held",
-      "reason": "no-primary-source",
-      "detail": "No source is typed primary.",
-      "record": "oman-ai-retinopathy/2026-10-25.json"
-    },
-    {
-      "id": "prea-chatbot-specialist-referral-rct",
-      "date": "2026-10-25",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "prea-chatbot-specialist-referral-rct/2026-10-25.json"
     }
   ],
   "announced": [
-    {
-      "id": "fido-northumbrian-leaks",
-      "date": "2026-10-24",
-      "url": "https://becauseofai.org/entry/fido-northumbrian-leaks"
-    },
-    {
-      "id": "firesat-constellation",
-      "date": "2026-10-24",
-      "url": "https://becauseofai.org/entry/firesat-constellation"
-    },
-    {
-      "id": "flood-hub-flash-floods",
-      "date": "2026-10-24",
-      "url": "https://becauseofai.org/entry/flood-hub-flash-floods"
-    },
     {
       "id": "fortell-ai-hearing-aids",
       "date": "2026-10-25",
@@ -107,6 +68,21 @@
       "id": "hurricane-melissa-2025",
       "date": "2026-10-25",
       "url": "https://becauseofai.org/entry/hurricane-melissa-2025"
+    },
+    {
+      "id": "eagle-cadde-colonoscopy-rct",
+      "date": "2026-10-26",
+      "url": "https://becauseofai.org/entry/eagle-cadde-colonoscopy-rct"
+    },
+    {
+      "id": "india-tribal-tb-ai-cxr",
+      "date": "2026-10-26",
+      "url": "https://becauseofai.org/entry/india-tribal-tb-ai-cxr"
+    },
+    {
+      "id": "maryland-ai-tutor-negative",
+      "date": "2026-10-26",
+      "url": "https://becauseofai.org/entry/maryland-ai-tutor-negative"
     }
   ],
   "leads_added": [
@@ -117,17 +93,53 @@
   ],
   "x": {
     "username": "bcuz_of_ai",
-    "followers": 4,
+    "followers": 5,
     "posts": [
+      {
+        "id": "2114824468681875676",
+        "url": "https://x.com/bcuz_of_ai/status/2114824468681875676",
+        "text": "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student randomized trial.\n\nhttps://t.co/H31gR6d2Po https://t.co/yQME0fLtow",
+        "created_at": "2026-10-26T21:00:19.000Z",
+        "impressions": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2114824288364548411",
+        "url": "https://x.com/bcuz_of_ai/status/2114824288364548411",
+        "text": "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.\n\nhttps://t.co/6M2tnupKhi https://t.co/tZuDnxCZ4G",
+        "created_at": "2026-10-26T20:59:36.000Z",
+        "impressions": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2114824079882539128",
+        "url": "https://x.com/bcuz_of_ai/status/2114824079882539128",
+        "text": "Because of AI, colonoscopists using a cloud-based polyp detector found 0.82 adenomas per colonoscopy against 0.62 without it, and 43.2% of patients had an adenoma against 35.9%.\n\nhttps://t.co/2lTzIoQgcz https://t.co/08dsqTbkuN",
+        "created_at": "2026-10-26T20:58:46.000Z",
+        "impressions": 2,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2114430106861007125",
         "url": "https://x.com/bcuz_of_ai/status/2114430106861007125",
         "text": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.\n\nhttps://t.co/xuJbHJWCMI https://t.co/0jTjwNQ3he",
         "created_at": "2026-10-25T18:53:16.000Z",
-        "impressions": 1,
-        "likes": 0,
+        "impressions": 5,
+        "likes": 1,
         "replies": 0,
-        "reposts": 0,
+        "reposts": 1,
         "bookmarks": 0,
         "quotes": 0
       },
@@ -316,43 +328,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2113494415541141740",
         "text": "@jillnephew @davegoldblatt @azeem @ExponentialView https://t.co/fZvsFmv984",
         "created_at": "2026-10-23T04:55:10.000Z",
-        "impressions": 9,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113494077090201841",
-        "url": "https://x.com/bcuz_of_ai/status/2113494077090201841",
-        "text": "@jillnephew @davegoldblatt @azeem @ExponentialView three for frontier llms, and 14 for narrow AIs. you can filter for it: https://t.co/lwwD3yqvYP. LLMs are all modest (two scribe RCTs on clinician burnout, one bundled Gemini tutoring RCT). Two of the five nulls are LLMs too. The hard-outcome evidence is almost all narrow models",
-        "created_at": "2026-10-23T04:53:49.000Z",
-        "impressions": 13,
-        "likes": 0,
-        "replies": 1,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113492594319671392",
-        "url": "https://x.com/bcuz_of_ai/status/2113492594319671392",
-        "text": "Because of AI, physicians using ambient scribes reported modestly less burnout, exhaustion, and task load in a 238-physician randomized trial.\n\nhttps://t.co/PvLJ875Mf2 https://t.co/SEs7J0v0ip",
-        "created_at": "2026-10-23T04:47:55.000Z",
-        "impressions": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113491592350941292",
-        "url": "https://x.com/bcuz_of_ai/status/2113491592350941292",
-        "text": "Because of AI, a baby girl was born to a couple who had been told there was no sperm to work with.\n\nhttps://t.co/LtFFbhDDfe https://t.co/OlKrUTzUGY",
-        "created_at": "2026-10-23T04:43:57.000Z",
-        "impressions": 1,
+        "impressions": 10,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -362,8 +338,44 @@
     ],
     "mentions": []
   },
-  "traffic": null,
-  "notes": [
-    "Traffic: no Cloudflare analytics token yet (CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID), so pageviews are not included."
-  ]
+  "traffic": {
+    "day": "2026-10-26",
+    "pageviews": 310,
+    "visits": 199,
+    "top_paths": [
+      {
+        "path": "/",
+        "views": 211
+      },
+      {
+        "path": "/not-because-of-ai",
+        "views": 23
+      },
+      {
+        "path": "/about",
+        "views": 22
+      },
+      {
+        "path": "/not-yet",
+        "views": 17
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 8
+      },
+      {
+        "path": "/changelog",
+        "views": 8
+      },
+      {
+        "path": "/method",
+        "views": 6
+      },
+      {
+        "path": "/entry/ethiopia-tb-ai-cxr",
+        "views": 3
+      }
+    ]
+  },
+  "notes": []
 }
