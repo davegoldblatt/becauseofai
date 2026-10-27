@@ -111,15 +111,17 @@ async function main() {
   // Cloudflare Web Analytics for yesterday, when a token exists.
   let traffic: Digest["traffic"] = null;
   const { CF_ANALYTICS_TOKEN, CF_ACCOUNT_ID } = process.env;
+  // GraphQL uses the site ID, which differs from the public beacon token.
+  const site = process.env.CF_SITE_TAG ?? "7ac6b33a46224b33bb96dfecabf3f2c9";
   if (!CF_ANALYTICS_TOKEN || !CF_ACCOUNT_ID) notes.push("Traffic: no Cloudflare analytics token yet (CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID), so pageviews are not included.");
   else {
     const dayStart = day(since.toISOString());
     const dayEnd = day(now.toISOString());
-    const q = `query($account: String!, $start: Date!, $end: Date!) { viewer { accounts(filter: {accountTag: $account}) {
-      total: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {date_geq: $start, date_lt: $end}) { count sum { visits } }
-      paths: rumPageloadEventsAdaptiveGroups(limit: 8, orderBy: [count_DESC], filter: {date_geq: $start, date_lt: $end}) { count dimensions { requestPath } } } } }`;
+    const q = `query($account: String!, $site: String!, $start: Date!, $end: Date!) { viewer { accounts(filter: {accountTag: $account}) {
+      total: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $site, date_geq: $start, date_lt: $end}) { count sum { visits } }
+      paths: rumPageloadEventsAdaptiveGroups(limit: 8, orderBy: [count_DESC], filter: {siteTag: $site, date_geq: $start, date_lt: $end}) { count dimensions { requestPath } } } } }`;
     try {
-      const r = await fetch("https://api.cloudflare.com/client/v4/graphql", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${CF_ANALYTICS_TOKEN}` }, body: JSON.stringify({ query: q, variables: { account: CF_ACCOUNT_ID, start: dayStart, end: dayEnd } }), signal: AbortSignal.timeout(30_000) });
+      const r = await fetch("https://api.cloudflare.com/client/v4/graphql", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${CF_ANALYTICS_TOKEN}` }, body: JSON.stringify({ query: q, variables: { account: CF_ACCOUNT_ID, site, start: dayStart, end: dayEnd } }), signal: AbortSignal.timeout(30_000) });
       const j = (await r.json()) as { data?: { viewer?: { accounts?: { total: { count: number; sum: { visits: number } }[]; paths: { count: number; dimensions: { requestPath: string } }[] }[] } }; errors?: { message: string }[] };
       const acc = j.data?.viewer?.accounts?.[0];
       if (!acc) throw new Error(j.errors?.map((e) => e.message).join("; ") || "no data");
