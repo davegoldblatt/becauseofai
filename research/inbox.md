@@ -91,3 +91,18 @@ Candidates: 136 over 2026-10-24 to 2026-10-26, 18 flagged randomized, 0 alerts, 
 - Does the Design of AI Tutors Matter? Field experiment in an introductory economics course, German university. [AEARCTR-0019960](https://www.socialscienceregistry.org/trials/19960). In development, 2026-10-14 to 2027-02-19: a protocol to watch for results.
 - Expert vs. AI Feedback, large-scale math experiment, primary schools in Peru. [AEARCTR-0020025](https://www.socialscienceregistry.org/trials/20025). In development, one-week experiment from 2026-10-25: a protocol to watch for results.
 - AI, Decision Rights, and the Returns to Decentralization, randomized field experiment in US home care. [AEARCTR-0020016](https://www.socialscienceregistry.org/trials/20016). Ongoing to 2028-06-30; no results yet. Watch.
+
+## 2026-10-27 (daily scout)
+
+Candidates: 191 over 2026-10-25 to 2026-10-27, 21 flagged randomized, 1 alert, 0 source errors. No entry drafted today.
+
+- Making AI Tutoring Productive (NUMI), randomized field experiment, 6,327 delayed-test students in Hamilton County Schools, Tennessee, AI tutor vs the same platform without AI. [NBER w35621](https://www.nber.org/papers/w35621) (PDF read in full with the gate's reader; AEARCTR-0018678). Practice March 23-27 2026, delayed test the following week. Not drafted: the AI effect on delayed learning is near zero in the full-sample table (Table 5), and the only positive result is a subgroup (mastery arm, practiced Exercise 1: 37.0% vs 40.2%, p = 0.065, which the authors call suggestive). It could be a `not-because` or mixed entry, but needs an editorial call on which estimate is the headline. Missing: a pooled AI-vs-CAL-only estimate across both mastery arms.
+- DEEP-AF, multicenter RCT of AI-based ECG for atrial fibrillation detection in patients with suspected symptoms. [Heart Rhythm O2](https://doi.org/10.1016/j.hroo.2026.07.009), July 2026. The reader returned only a landing page. Missing: full text (try Europe PMC or the trial registry), enrolment dates, absolute detection rates.
+- AI for Proactive Mental Health, multi-institutional longitudinal RCT. [NEJM AI](https://doi.org/10.1056/AIoa2501293), Aug 2026. The reader gets a 403. Missing: the primary read, comparison, dates, effect sizes.
+- AI-Assisted Tutoring and Child Development, 80 classes in rural China, four arms including a direct-answer tutor. [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058). Ongoing to 2027-09-30; watch for results.
+- Administrative Burden and Algorithmic Equity, AI chatbot vs human navigator in benefits enrollment. [AEARCTR-0019906](https://www.socialscienceregistry.org/trials/19906). Starts 2026-12-01; a protocol to watch.
+- AI-assisted volunteer teaching and rural students' AI literacy, cluster RCT in Shaanxi. [AEARCTR-0019963](https://www.socialscienceregistry.org/trials/19963). In development, from 2026-10-25; the outcome is AI literacy. Watch only.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: validate warns that the verification record `data/verifications/eagle-cadde-colonoscopy-rct/2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`), so the verification is not shown. The gate has to run again on this entry.
