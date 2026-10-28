@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-27T19:33:36.012Z",
-  "since": "2026-10-26T19:33:36Z",
+  "generated_at": "2026-10-28T19:45:47.832Z",
+  "since": "2026-10-27T19:45:47Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -35,32 +35,8 @@
       }
     ]
   },
-  "verifications": [
-    {
-      "id": "eagle-cadde-colonoscopy-rct",
-      "date": "2026-10-26",
-      "result": "published",
-      "reason": null,
-      "detail": "The randomized trial supports increased adenoma detection in 841 analyzed patients during 2023, not reduced subsequent cancer incidence. All receipt values are supported, although the supplied registry's results-posting date falls after the stated as-of date.",
-      "record": "eagle-cadde-colonoscopy-rct/2026-10-26.json"
-    }
-  ],
+  "verifications": [],
   "announced": [
-    {
-      "id": "fortell-ai-hearing-aids",
-      "date": "2026-10-25",
-      "url": "https://becauseofai.org/entry/fortell-ai-hearing-aids"
-    },
-    {
-      "id": "gb-0895-phase-3",
-      "date": "2026-10-25",
-      "url": "https://becauseofai.org/entry/gb-0895-phase-3"
-    },
-    {
-      "id": "hurricane-melissa-2025",
-      "date": "2026-10-25",
-      "url": "https://becauseofai.org/entry/hurricane-melissa-2025"
-    },
     {
       "id": "eagle-cadde-colonoscopy-rct",
       "date": "2026-10-26",
@@ -75,21 +51,71 @@
       "id": "maryland-ai-tutor-negative",
       "date": "2026-10-26",
       "url": "https://becauseofai.org/entry/maryland-ai-tutor-negative"
+    },
+    {
+      "id": "masai-ai-mammography",
+      "date": "2026-10-27",
+      "url": "https://becauseofai.org/entry/masai-ai-mammography"
+    },
+    {
+      "id": "nhs-derm-skin-cancer",
+      "date": "2026-10-27",
+      "url": "https://becauseofai.org/entry/nhs-derm-skin-cancer"
+    },
+    {
+      "id": "nhs-stroke-ai-imaging",
+      "date": "2026-10-27",
+      "url": "https://becauseofai.org/entry/nhs-stroke-ai-imaging"
     }
   ],
   "leads_added": [
-    "Making AI Tutoring Productive (NUMI), randomized field experiment, 6,327 delayed-test students in Hamilton County Schools, Tennessee, AI tutor vs the same platform without AI. [NBER w35621](https://www.nber.org/papers/w35621) (PDF read in full with the gate's reader; AEARCTR-0018678). Practice March 23-27 2026, delayed test the following week. Not drafted: the AI effect on delayed learning is near zero in the full-sample table (Table 5), and the only positive result is a subgroup (mastery arm, practiced Exercise 1: 37.0% vs 40.2%, p = 0.065, which the authors call suggestive). It could be a `not-because` or mixed entry, but needs an editorial call on which estimate is the headline. Missing: a pooled AI-vs-CAL-only estimate across both mastery arms.",
-    "DEEP-AF, multicenter RCT of AI-based ECG for atrial fibrillation detection in patients with suspected symptoms. [Heart Rhythm O2](https://doi.org/10.1016/j.hroo.2026.07.009), July 2026. The reader returned only a landing page. Missing: full text (try Europe PMC or the trial registry), enrolment dates, absolute detection rates.",
-    "AI for Proactive Mental Health, multi-institutional longitudinal RCT. [NEJM AI](https://doi.org/10.1056/AIoa2501293), Aug 2026. The reader gets a 403. Missing: the primary read, comparison, dates, effect sizes.",
-    "AI-Assisted Tutoring and Child Development, 80 classes in rural China, four arms including a direct-answer tutor. [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058). Ongoing to 2027-09-30; watch for results.",
-    "Administrative Burden and Algorithmic Equity, AI chatbot vs human navigator in benefits enrollment. [AEARCTR-0019906](https://www.socialscienceregistry.org/trials/19906). Starts 2026-12-01; a protocol to watch.",
-    "AI-assisted volunteer teaching and rural students' AI literacy, cluster RCT in Shaanxi. [AEARCTR-0019963](https://www.socialscienceregistry.org/trials/19963). In development, from 2026-10-25; the outcome is AI literacy. Watch only.",
-    "`eagle-cadde-colonoscopy-rct`: validate warns that the verification record `data/verifications/eagle-cadde-colonoscopy-rct/2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`), so the verification is not shown. The gate has to run again on this entry."
+    "Impact of unrestricted AI scribe deployment in a single health system on clinician workload and productivity, quality improvement study. [Annals of Internal Medicine](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Real deployment, comparison likely. Compare ambient-scribes-nejm-ai. Missing: the primary read (HTTP 403; try Europe PMC), dates, absolute workload numbers.",
+    "Implementation of an AI-triggered rapid response and association with mortality. [NEJM AI](https://doi.org/10.1056/AIoa2500973) (Sep 2026). Real patients, mortality outcome. Compare uva-comet-deterioration-null. Missing: the primary read (HTTP 403), design and comparison, dates, absolute mortality difference.",
+    "Real-world AI-assisted PERT workflow, retrospective cohort. [Eur Heart J Digit Health](https://doi.org/10.1093/ehjdh/ztag165). Retrospective; watch only unless full text shows a clean before/after with dates.",
+    "Carried over, still unread: DEEP-AF ([Heart Rhythm O2](https://doi.org/10.1016/j.hroo.2026.07.009)), AI for Proactive Mental Health ([NEJM AI](https://doi.org/10.1056/AIoa2501293)).",
+    "New registrations, protocols to watch: [AEARCTR-0019963](https://www.socialscienceregistry.org/trials/19963), [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058), [AEARCTR-0019906](https://www.socialscienceregistry.org/trials/19906).",
+    "`eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
+      {
+        "id": "2115180594636247177",
+        "url": "https://x.com/bcuz_of_ai/status/2115180594636247177",
+        "text": "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist centres 64 minutes faster.\n\nhttps://t.co/f7vNGwGY1k https://t.co/7b7101yFBe",
+        "created_at": "2026-10-27T20:35:26.000Z",
+        "impressions": 17,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2115180361294700731",
+        "url": "https://x.com/bcuz_of_ai/status/2115180361294700731",
+        "text": "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear without waiting weeks for a dermatologist.\n\nhttps://t.co/zV3GclSJBl https://t.co/sjt6AscZrE",
+        "created_at": "2026-10-27T20:34:30.000Z",
+        "impressions": 26,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2115180174966661595",
+        "url": "https://x.com/bcuz_of_ai/status/2115180174966661595",
+        "text": "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, and 12% fewer cancers surfaced between screens.\n\nhttps://t.co/nZwykyXtV4 https://t.co/Nl8lSFQxou",
+        "created_at": "2026-10-27T20:33:46.000Z",
+        "impressions": 12,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2114824468681875676",
         "url": "https://x.com/bcuz_of_ai/status/2114824468681875676",
@@ -131,7 +157,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114430106861007125",
         "text": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.\n\nhttps://t.co/xuJbHJWCMI https://t.co/0jTjwNQ3he",
         "created_at": "2026-10-25T18:53:16.000Z",
-        "impressions": 15,
+        "impressions": 17,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -293,82 +319,46 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2113502186189758618",
-        "url": "https://x.com/bcuz_of_ai/status/2113502186189758618",
-        "text": "@cgnorthcutt two term-scale RCTs, mixed signs: a gemini tutoring bundle in sierra leone moved math +0.26 SD in 8 weeks; a GPT-4o tutor inside a US university platform was tied to lower grades, n=2,379. one-hour and term-long gains may be different animals. https://t.co/H31gR6dAEW",
-        "created_at": "2026-10-23T05:26:02.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113501406619644367",
-        "url": "https://x.com/bcuz_of_ai/status/2113501406619644367",
-        "text": "@semafor for scale: over its first 270M driverless miles waymo logged an estimated 841 fewer injury crashes than human drivers would have, about 82% fewer. company-reported data, so we grade the evidence C, but the gap is not subtle. https://t.co/0rIsGnw4Xy",
-        "created_at": "2026-10-23T05:22:56.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113494415541141740",
-        "url": "https://x.com/bcuz_of_ai/status/2113494415541141740",
-        "text": "@jillnephew @davegoldblatt @azeem @ExponentialView https://t.co/fZvsFmv984",
-        "created_at": "2026-10-23T04:55:10.000Z",
-        "impressions": 10,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-26",
-    "pageviews": 310,
-    "visits": 199,
+    "day": "2026-10-27",
+    "pageviews": 358,
+    "visits": 240,
     "top_paths": [
       {
         "path": "/",
-        "views": 211
+        "views": 244
       },
       {
         "path": "/not-because-of-ai",
         "views": 23
       },
       {
-        "path": "/about",
-        "views": 22
-      },
-      {
         "path": "/not-yet",
-        "views": 17
+        "views": 18
       },
       {
         "path": "/entry/hurricane-melissa-2025",
-        "views": 8
+        "views": 17
       },
       {
-        "path": "/changelog",
-        "views": 8
+        "path": "/about",
+        "views": 9
       },
       {
         "path": "/method",
-        "views": 6
+        "views": 9
       },
       {
-        "path": "/entry/ethiopia-tb-ai-cxr",
-        "views": 3
+        "path": "/entry/waymo-injury-crashes",
+        "views": 9
+      },
+      {
+        "path": "/changelog",
+        "views": 7
       }
     ]
   },
