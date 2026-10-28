@@ -106,3 +106,17 @@ Candidates: 191 over 2026-10-25 to 2026-10-27, 21 flagged randomized, 1 alert, 0
 ### Alerts
 
 - `eagle-cadde-colonoscopy-rct`: validate warns that the verification record `data/verifications/eagle-cadde-colonoscopy-rct/2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`), so the verification is not shown. The gate has to run again on this entry.
+
+## 2026-10-28 (daily scout)
+
+Candidates: 199 over 2026-10-26 to 2026-10-28, 18 flagged randomized, 1 alert, 1 source error. No entry drafted: the two strongest leads returned `NOT READ` (HTTP 403) from the reader, and the rest are registrations or non-patient outcomes.
+
+- Impact of unrestricted AI scribe deployment in a single health system on clinician workload and productivity, quality improvement study. [Annals of Internal Medicine](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Real deployment, comparison likely. Compare ambient-scribes-nejm-ai. Missing: the primary read (HTTP 403; try Europe PMC), dates, absolute workload numbers.
+- Implementation of an AI-triggered rapid response and association with mortality. [NEJM AI](https://doi.org/10.1056/AIoa2500973) (Sep 2026). Real patients, mortality outcome. Compare uva-comet-deterioration-null. Missing: the primary read (HTTP 403), design and comparison, dates, absolute mortality difference.
+- Real-world AI-assisted PERT workflow, retrospective cohort. [Eur Heart J Digit Health](https://doi.org/10.1093/ehjdh/ztag165). Retrospective; watch only unless full text shows a clean before/after with dates.
+- Carried over, still unread: DEEP-AF ([Heart Rhythm O2](https://doi.org/10.1016/j.hroo.2026.07.009)), AI for Proactive Mental Health ([NEJM AI](https://doi.org/10.1056/AIoa2501293)).
+- New registrations, protocols to watch: [AEARCTR-0019963](https://www.socialscienceregistry.org/trials/19963), [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058), [AEARCTR-0019906](https://www.socialscienceregistry.org/trials/19906).
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
