@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-28T19:45:47.832Z",
-  "since": "2026-10-27T19:45:47Z",
+  "generated_at": "2026-10-29T19:46:40.370Z",
+  "since": "2026-10-28T19:46:40Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -38,21 +38,6 @@
   "verifications": [],
   "announced": [
     {
-      "id": "eagle-cadde-colonoscopy-rct",
-      "date": "2026-10-26",
-      "url": "https://becauseofai.org/entry/eagle-cadde-colonoscopy-rct"
-    },
-    {
-      "id": "india-tribal-tb-ai-cxr",
-      "date": "2026-10-26",
-      "url": "https://becauseofai.org/entry/india-tribal-tb-ai-cxr"
-    },
-    {
-      "id": "maryland-ai-tutor-negative",
-      "date": "2026-10-26",
-      "url": "https://becauseofai.org/entry/maryland-ai-tutor-negative"
-    },
-    {
       "id": "masai-ai-mammography",
       "date": "2026-10-27",
       "url": "https://becauseofai.org/entry/masai-ai-mammography"
@@ -66,26 +51,70 @@
       "id": "nhs-stroke-ai-imaging",
       "date": "2026-10-27",
       "url": "https://becauseofai.org/entry/nhs-stroke-ai-imaging"
+    },
+    {
+      "id": "rentosertib-phase-3",
+      "date": "2026-10-28",
+      "url": "https://becauseofai.org/entry/rentosertib-phase-3"
+    },
+    {
+      "id": "sierra-leone-gemini-math",
+      "date": "2026-10-28",
+      "url": "https://becauseofai.org/entry/sierra-leone-gemini-math"
+    },
+    {
+      "id": "tricorder-ai-stethoscope-null",
+      "date": "2026-10-28",
+      "url": "https://becauseofai.org/entry/tricorder-ai-stethoscope-null"
     }
   ],
-  "leads_added": [
-    "Impact of unrestricted AI scribe deployment in a single health system on clinician workload and productivity, quality improvement study. [Annals of Internal Medicine](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Real deployment, comparison likely. Compare ambient-scribes-nejm-ai. Missing: the primary read (HTTP 403; try Europe PMC), dates, absolute workload numbers.",
-    "Implementation of an AI-triggered rapid response and association with mortality. [NEJM AI](https://doi.org/10.1056/AIoa2500973) (Sep 2026). Real patients, mortality outcome. Compare uva-comet-deterioration-null. Missing: the primary read (HTTP 403), design and comparison, dates, absolute mortality difference.",
-    "Real-world AI-assisted PERT workflow, retrospective cohort. [Eur Heart J Digit Health](https://doi.org/10.1093/ehjdh/ztag165). Retrospective; watch only unless full text shows a clean before/after with dates.",
-    "Carried over, still unread: DEEP-AF ([Heart Rhythm O2](https://doi.org/10.1016/j.hroo.2026.07.009)), AI for Proactive Mental Health ([NEJM AI](https://doi.org/10.1056/AIoa2501293)).",
-    "New registrations, protocols to watch: [AEARCTR-0019963](https://www.socialscienceregistry.org/trials/19963), [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058), [AEARCTR-0019906](https://www.socialscienceregistry.org/trials/19906).",
-    "`eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry."
-  ],
+  "leads_added": [],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
       {
+        "id": "2115548313919299598",
+        "url": "https://x.com/bcuz_of_ai/status/2115548313919299598",
+        "text": "An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at 12 months.\n\nhttps://t.co/mkuNQfBXJi https://t.co/fRLZp8doZV",
+        "created_at": "2026-10-28T20:56:37.000Z",
+        "impressions": 36,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2115548123749560696",
+        "url": "https://x.com/bcuz_of_ai/status/2115548123749560696",
+        "text": "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks.\n\nhttps://t.co/xsoJ50PbYK https://t.co/6hN28wB8yN",
+        "created_at": "2026-10-28T20:55:52.000Z",
+        "impressions": 51,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2115547897848537496",
+        "url": "https://x.com/bcuz_of_ai/status/2115547897848537496",
+        "text": "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet been approved anywhere.\n\nhttps://t.co/yS15K7zBWw https://t.co/Te6dORXAfi",
+        "created_at": "2026-10-28T20:54:58.000Z",
+        "impressions": 23,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
         "id": "2115180594636247177",
         "url": "https://x.com/bcuz_of_ai/status/2115180594636247177",
         "text": "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist centres 64 minutes faster.\n\nhttps://t.co/f7vNGwGY1k https://t.co/7b7101yFBe",
         "created_at": "2026-10-27T20:35:26.000Z",
-        "impressions": 17,
+        "impressions": 18,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -97,7 +126,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2115180361294700731",
         "text": "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear without waiting weeks for a dermatologist.\n\nhttps://t.co/zV3GclSJBl https://t.co/sjt6AscZrE",
         "created_at": "2026-10-27T20:34:30.000Z",
-        "impressions": 26,
+        "impressions": 28,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -109,7 +138,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2115180174966661595",
         "text": "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, and 12% fewer cancers surfaced between screens.\n\nhttps://t.co/nZwykyXtV4 https://t.co/Nl8lSFQxou",
         "created_at": "2026-10-27T20:33:46.000Z",
-        "impressions": 12,
+        "impressions": 14,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -121,7 +150,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114824468681875676",
         "text": "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student randomized trial.\n\nhttps://t.co/H31gR6d2Po https://t.co/yQME0fLtow",
         "created_at": "2026-10-26T21:00:19.000Z",
-        "impressions": 5,
+        "impressions": 6,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -133,7 +162,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114824288364548411",
         "text": "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.\n\nhttps://t.co/6M2tnupKhi https://t.co/tZuDnxCZ4G",
         "created_at": "2026-10-26T20:59:36.000Z",
-        "impressions": 3,
+        "impressions": 4,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -145,7 +174,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114824079882539128",
         "text": "Because of AI, colonoscopists using a cloud-based polyp detector found 0.82 adenomas per colonoscopy against 0.62 without it, and 43.2% of patients had an adenoma against 35.9%.\n\nhttps://t.co/2lTzIoQgcz https://t.co/08dsqTbkuN",
         "created_at": "2026-10-26T20:58:46.000Z",
-        "impressions": 2,
+        "impressions": 3,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -157,7 +186,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114430106861007125",
         "text": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.\n\nhttps://t.co/xuJbHJWCMI https://t.co/0jTjwNQ3he",
         "created_at": "2026-10-25T18:53:16.000Z",
-        "impressions": 17,
+        "impressions": 18,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -169,7 +198,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114429915689009533",
         "text": "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved.\n\nhttps://t.co/2PRWUez584 https://t.co/PqCBeW98GT",
         "created_at": "2026-10-25T18:52:30.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -181,7 +210,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114429728933237042",
         "text": "Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that makes the device.\n\nhttps://t.co/32xYAjb0rC https://t.co/BrUXl8jgxn",
         "created_at": "2026-10-25T18:51:46.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -193,7 +222,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114065498048475574",
         "text": "Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert hasn't been measured.\n\nhttps://t.co/Swie2LUiwp https://t.co/kZnWKL8qKA",
         "created_at": "2026-10-24T18:44:26.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -205,7 +234,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114065301306536149",
         "text": "Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit; no fire-response outcome has been measured yet.\n\nhttps://t.co/1yLmiDLukq https://t.co/8HljGbfQBB",
         "created_at": "2026-10-24T18:43:39.000Z",
-        "impressions": 0,
+        "impressions": 1,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -217,7 +246,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2114065128425451705",
         "text": "Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day.\n\nhttps://t.co/f5va1ua6PI https://t.co/fp4vP8saj0",
         "created_at": "2026-10-24T18:42:58.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -229,7 +258,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2113721120167784757",
         "text": "Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate the window.\n\nhttps://t.co/qqrKv8JFQV https://t.co/Yv4swlRAdx",
         "created_at": "2026-10-23T19:56:00.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -241,7 +270,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2113720913396916312",
         "text": "Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs that had no radiologist to read the X-rays.\n\nhttps://t.co/PBwSYzXKnV https://t.co/zOYte5arTN",
         "created_at": "2026-10-23T19:55:11.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -253,7 +282,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2113720703765602389",
         "text": "AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chinese primary students.\n\nhttps://t.co/lR2VJ8EjcQ https://t.co/YFkb1159AW",
         "created_at": "2026-10-23T19:54:21.000Z",
-        "impressions": 1,
+        "impressions": 2,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -283,81 +312,45 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2113502819517096286",
-        "url": "https://x.com/bcuz_of_ai/status/2113502819517096286",
-        "text": "@BoWang87 agreed on urgency, and on 'we still have to prove it'. for the record: no AI-discovered drug has been approved anywhere yet. the first generative-AI-discovered one (rentosertib, IPF) entered phase 3 in september 2026. our running not-yet list: https://t.co/yS15K7A9M4",
-        "created_at": "2026-10-23T05:28:33.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113502817134792952",
-        "url": "https://x.com/bcuz_of_ai/status/2113502817134792952",
-        "text": "@CBSMornings @celinegounder different job (5-year risk vs reading today's mammogram), but the biggest measured win in breast screening so far is on the reading side: sweden's MASAI trial found 29% more cancers with 44% less radiologist reading time, 12% fewer interval cancers. https://t.co/nZwykyY1KC",
-        "created_at": "2026-10-23T05:28:33.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113502187548799019",
-        "url": "https://x.com/bcuz_of_ai/status/2113502187548799019",
-        "text": "@thesupermannx harvard's study is real but small: 194 students, one course. term-long RCTs are messier: a GPT-4o tutor in a university platform was tied to lower grades (n=2,379); a gemini bundle in sierra leone moved math +0.26 SD in 8 weeks. both signs exist. https://t.co/H31gR6dAEW",
-        "created_at": "2026-10-23T05:26:03.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-27",
-    "pageviews": 358,
-    "visits": 240,
+    "day": "2026-10-28",
+    "pageviews": 430,
+    "visits": 270,
     "top_paths": [
       {
         "path": "/",
-        "views": 244
+        "views": 304
       },
       {
         "path": "/not-because-of-ai",
-        "views": 23
+        "views": 29
       },
       {
         "path": "/not-yet",
-        "views": 18
-      },
-      {
-        "path": "/entry/hurricane-melissa-2025",
-        "views": 17
-      },
-      {
-        "path": "/about",
-        "views": 9
+        "views": 26
       },
       {
         "path": "/method",
-        "views": 9
-      },
-      {
-        "path": "/entry/waymo-injury-crashes",
-        "views": 9
+        "views": 12
       },
       {
         "path": "/changelog",
+        "views": 9
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 8
+      },
+      {
+        "path": "/entry/india-tribal-tb-ai-cxr",
+        "views": 7
+      },
+      {
+        "path": "/entry/columbia-star-birth",
         "views": 7
       }
     ]
