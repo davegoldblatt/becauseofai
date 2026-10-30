@@ -26,6 +26,7 @@
     "tricorder-ai-stethoscope-null": "2026-10-28",
     "ucd-als-speech-bci": "2026-10-29",
     "ucla-chart-summarizer-rct": "2026-10-29",
-    "uva-comet-deterioration-null": "2026-10-29"
+    "uva-comet-deterioration-null": "2026-10-29",
+    "waymo-injury-crashes": "2026-10-30"
   }
 }
