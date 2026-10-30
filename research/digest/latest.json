@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T19:46:40.370Z",
-  "since": "2026-10-28T19:46:40Z",
+  "generated_at": "2026-10-30T19:36:10.362Z",
+  "since": "2026-10-29T19:36:10Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -38,21 +38,6 @@
   "verifications": [],
   "announced": [
     {
-      "id": "masai-ai-mammography",
-      "date": "2026-10-27",
-      "url": "https://becauseofai.org/entry/masai-ai-mammography"
-    },
-    {
-      "id": "nhs-derm-skin-cancer",
-      "date": "2026-10-27",
-      "url": "https://becauseofai.org/entry/nhs-derm-skin-cancer"
-    },
-    {
-      "id": "nhs-stroke-ai-imaging",
-      "date": "2026-10-27",
-      "url": "https://becauseofai.org/entry/nhs-stroke-ai-imaging"
-    },
-    {
       "id": "rentosertib-phase-3",
       "date": "2026-10-28",
       "url": "https://becauseofai.org/entry/rentosertib-phase-3"
@@ -66,6 +51,21 @@
       "id": "tricorder-ai-stethoscope-null",
       "date": "2026-10-28",
       "url": "https://becauseofai.org/entry/tricorder-ai-stethoscope-null"
+    },
+    {
+      "id": "ucd-als-speech-bci",
+      "date": "2026-10-29",
+      "url": "https://becauseofai.org/entry/ucd-als-speech-bci"
+    },
+    {
+      "id": "ucla-chart-summarizer-rct",
+      "date": "2026-10-29",
+      "url": "https://becauseofai.org/entry/ucla-chart-summarizer-rct"
+    },
+    {
+      "id": "uva-comet-deterioration-null",
+      "date": "2026-10-29",
+      "url": "https://becauseofai.org/entry/uva-comet-deterioration-null"
     }
   ],
   "leads_added": [],
@@ -73,6 +73,42 @@
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
+      {
+        "id": "2115911709739126877",
+        "url": "https://x.com/bcuz_of_ai/status/2115911709739126877",
+        "text": "Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 admissions.\n\nhttps://t.co/suxKV9YVl7 https://t.co/ZTdsZSTcIa",
+        "created_at": "2026-10-29T21:00:37.000Z",
+        "impressions": 2,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2115911523264520513",
+        "url": "https://x.com/bcuz_of_ai/status/2115911523264520513",
+        "text": "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — while saving no time and mostly not recommending it.\n\nhttps://t.co/znXpzWEf1E https://t.co/WmRGP36vDd",
+        "created_at": "2026-10-29T20:59:53.000Z",
+        "impressions": 36,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 1,
+        "quotes": 0
+      },
+      {
+        "id": "2115911339524628783",
+        "url": "https://x.com/bcuz_of_ai/status/2115911339524628783",
+        "text": "Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a brain implant, at up to 99% word accuracy.\n\nhttps://t.co/wM5dXp5Qfn https://t.co/Aa5tln0jyn",
+        "created_at": "2026-10-29T20:59:09.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2115548313919299598",
         "url": "https://x.com/bcuz_of_ai/status/2115548313919299598",
@@ -90,7 +126,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2115548123749560696",
         "text": "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks.\n\nhttps://t.co/xsoJ50PbYK https://t.co/6hN28wB8yN",
         "created_at": "2026-10-28T20:55:52.000Z",
-        "impressions": 51,
+        "impressions": 53,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -102,7 +138,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2115547897848537496",
         "text": "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet been approved anywhere.\n\nhttps://t.co/yS15K7zBWw https://t.co/Te6dORXAfi",
         "created_at": "2026-10-28T20:54:58.000Z",
-        "impressions": 23,
+        "impressions": 24,
         "likes": 1,
         "replies": 0,
         "reposts": 1,
@@ -276,82 +312,46 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2113720703765602389",
-        "url": "https://x.com/bcuz_of_ai/status/2113720703765602389",
-        "text": "AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chinese primary students.\n\nhttps://t.co/lR2VJ8EjcQ https://t.co/YFkb1159AW",
-        "created_at": "2026-10-23T19:54:21.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113503741655822838",
-        "url": "https://x.com/bcuz_of_ai/status/2113503741655822838",
-        "text": "@GoogleDeepMind real capability, outcome not yet measured. once there's a number on the ground (hectares protected, enforcement actions, anything), it earns a row. same bucket as flood hub for now: https://t.co/Swie2LUQlX",
-        "created_at": "2026-10-23T05:32:13.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113503532926300217",
-        "url": "https://x.com/bcuz_of_ai/status/2113503532926300217",
-        "text": "@EricTopol @ScienceMagazine @NEJM bench numbers keep improving; we wait for the bedside. closest AI-to-outcome RCTs so far: an AI-ECG screen found advanced liver disease in ~5 more patients per 1,000, and stroke decision support cut repeat strokes/MIs/vascular deaths by 10 per 1,000. https://t.co/ovxmID4zA1",
-        "created_at": "2026-10-23T05:31:23.000Z",
-        "impressions": 9,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-28",
-    "pageviews": 430,
-    "visits": 270,
+    "day": "2026-10-29",
+    "pageviews": 78,
+    "visits": 67,
     "top_paths": [
       {
         "path": "/",
-        "views": 304
+        "views": 62
       },
       {
         "path": "/not-because-of-ai",
-        "views": 29
-      },
-      {
-        "path": "/not-yet",
-        "views": 26
-      },
-      {
-        "path": "/method",
-        "views": 12
-      },
-      {
-        "path": "/changelog",
-        "views": 9
+        "views": 6
       },
       {
         "path": "/entry/hurricane-melissa-2025",
-        "views": 8
+        "views": 3
+      },
+      {
+        "path": "/not-yet",
+        "views": 2
+      },
+      {
+        "path": "/about",
+        "views": 2
+      },
+      {
+        "path": "/entry/golden-bridge-ii-stroke",
+        "views": 1
       },
       {
         "path": "/entry/india-tribal-tb-ai-cxr",
-        "views": 7
+        "views": 1
       },
       {
-        "path": "/entry/columbia-star-birth",
-        "views": 7
+        "path": "/changelog",
+        "views": 1
       }
     ]
   },

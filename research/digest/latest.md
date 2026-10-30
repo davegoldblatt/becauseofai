@@ -1,17 +1,20 @@
-Because of AI, the day in plain words. Facts gathered 2026-10-29 19:46 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-10-30 19:36 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
-- 2026-10-27: "masai-ai-mammography" https://becauseofai.org/entry/masai-ai-mammography
-- 2026-10-27: "nhs-derm-skin-cancer" https://becauseofai.org/entry/nhs-derm-skin-cancer
-- 2026-10-27: "nhs-stroke-ai-imaging" https://becauseofai.org/entry/nhs-stroke-ai-imaging
 - 2026-10-28: "rentosertib-phase-3" https://becauseofai.org/entry/rentosertib-phase-3
 - 2026-10-28: "sierra-leone-gemini-math" https://becauseofai.org/entry/sierra-leone-gemini-math
 - 2026-10-28: "tricorder-ai-stethoscope-null" https://becauseofai.org/entry/tricorder-ai-stethoscope-null
+- 2026-10-29: "ucd-als-speech-bci" https://becauseofai.org/entry/ucd-als-speech-bci
+- 2026-10-29: "ucla-chart-summarizer-rct" https://becauseofai.org/entry/ucla-chart-summarizer-rct
+- 2026-10-29: "uva-comet-deterioration-null" https://becauseofai.org/entry/uva-comet-deterioration-null
 
 HOW THE POSTS ARE DOING (last 7 days, newest first)
+- 2 views, 0 likes, 0 replys, 0 reposts: "Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 ad" https://x.com/bcuz_of_ai/status/2115911709739126877
+- 36 views, 2 likes, 0 replys, 1 repost: "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — whi" https://x.com/bcuz_of_ai/status/2115911523264520513
+- 1 view, 0 likes, 0 replys, 0 reposts: "Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a br" https://x.com/bcuz_of_ai/status/2115911339524628783
 - 36 views, 1 like, 0 replys, 1 repost: "An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at" https://x.com/bcuz_of_ai/status/2115548313919299598
-- 51 views, 1 like, 0 replys, 1 repost: "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standa" https://x.com/bcuz_of_ai/status/2115548123749560696
-- 23 views, 1 like, 0 replys, 1 repost: "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet be" https://x.com/bcuz_of_ai/status/2115547897848537496
+- 53 views, 1 like, 0 replys, 1 repost: "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standa" https://x.com/bcuz_of_ai/status/2115548123749560696
+- 24 views, 1 like, 0 replys, 1 repost: "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet be" https://x.com/bcuz_of_ai/status/2115547897848537496
 - 18 views, 1 like, 0 replys, 1 repost: "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist ce" https://x.com/bcuz_of_ai/status/2115180594636247177
 - 28 views, 1 like, 0 replys, 1 repost: "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear wi" https://x.com/bcuz_of_ai/status/2115180361294700731
 - 14 views, 1 like, 0 replys, 1 repost: "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, an" https://x.com/bcuz_of_ai/status/2115180174966661595
@@ -26,11 +29,6 @@ HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day." https://x.com/bcuz_of_ai/status/2114065128425451705
 - 2 views, 0 likes, 0 replys, 0 reposts: "Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate t" https://x.com/bcuz_of_ai/status/2113721120167784757
 - 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs" https://x.com/bcuz_of_ai/status/2113720913396916312
-- 2 views, 0 likes, 0 replys, 0 reposts: "AI-personalized computer-assisted learning did no better than non-personalized software for 8,647 rural Chines" https://x.com/bcuz_of_ai/status/2113720703765602389
-
-THE ACCOUNT'S OWN REPLIES TO OTHERS (2 in the last 7 days)
-- to @GoogleDeepMind: 1 view, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113503741655822838
-- to @EricTopol: 9 views, 0 likes, 0 replys https://x.com/bcuz_of_ai/status/2113503532926300217
 
 FOLLOWERS: 5
 
@@ -38,15 +36,15 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-10-28: 430 page views, 270 visits.
-  - /: 304
-  - /not-because-of-ai: 29
-  - /not-yet: 26
-  - /method: 12
-  - /changelog: 9
-  - /entry/hurricane-melissa-2025: 8
-  - /entry/india-tribal-tb-ai-cxr: 7
-  - /entry/columbia-star-birth: 7
+- 2026-10-29: 78 page views, 67 visits.
+  - /: 62
+  - /not-because-of-ai: 6
+  - /entry/hurricane-melissa-2025: 3
+  - /not-yet: 2
+  - /about: 2
+  - /entry/golden-bridge-ii-stroke: 1
+  - /entry/india-tribal-tb-ai-cxr: 1
+  - /changelog: 1
 
 THE REGISTRY
 - Live on the site: 17 benefits, 5 null results, 5 watchlist items. Held off the site: 3.
