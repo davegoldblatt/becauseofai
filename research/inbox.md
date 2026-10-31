@@ -120,3 +120,23 @@ Candidates: 199 over 2026-10-26 to 2026-10-28, 18 flagged randomized, 1 alert, 1
 ### Alerts
 
 - `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
+
+## 2026-10-31 (daily scout)
+
+Candidates: 163 over 2026-10-29 to 2026-10-31, 23 flagged randomized, 2 alerts, 1 source error. No entry drafted: the one primary source read in full has conflicting dates, and the others are registrations or unreadable.
+
+- AI-facilitated individualized nutritional guidance after GI cancer surgery, single-centre RCT (n=90, DeepSeek v3.2 plus dietitian review vs handout). [Support Care Cancer](https://doi.org/10.1007/s00520-026-11401-7) (2026-10-29). Read in full via Europe PMC. Energy adequacy 66.7% vs 40.0% (OR 3.0), protein 62.2% vs 35.6%; no difference in weight, labs or complications. Not drafted: the paper says it cannot isolate AI from individualization and quantified targets, the enrolment window is January to March 2026 in Methods but December 2025 to February 2026 in Results, and the complication rate differs between text and Fig. 2. Missing: a consistent achieved window.
+- AI rainfall-onset forecasts for Ethiopian smallholder farmers, 64-woreda cluster RCT. [AEARCTR-0020000](https://www.socialscienceregistry.org/trials/20000) (ongoing, intervention 2026-06-01 to 2026-07-19). A registration, no results. Missing: a results paper with planting and input outcomes.
+- AI-generated draft response tool, message turnaround and after-hours replies. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364) (2026-10-01). Real deployment. Compare ucla-chart-summarizer-rct. Missing: the primary read (HTTP 403; try Europe PMC), design, dates, absolute minutes.
+- Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335) (2026-10-23). Compare ambient-scribes-nejm-ai. Missing: the primary read, comparison, dates, absolute numbers.
+- Carried over, still unread: Annals scribe deployment study ([doi](https://doi.org/10.7326/ANNALS-25-05294)), AI-triggered rapid response and mortality ([NEJM AI](https://doi.org/10.1056/AIoa2500973)).
+- Protocols to watch: [AEARCTR-0020087](https://www.socialscienceregistry.org/trials/20087) (AI tutoring for young people with disabilities, Cali, from 2027-03), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI parenting RCT).
+
+### Alerts
+
+- `hurricane-melissa-2025`: the "in" window has gone stale; the achieved date 2025-10-28 falls before 2025-10-31, the start of the 12-month window. Re-grade the window or re-verify.
+- `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
+
+### Source errors
+
+- PNAS feed returned 403.
