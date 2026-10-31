@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T19:36:10.362Z",
-  "since": "2026-10-29T19:36:10Z",
+  "generated_at": "2026-10-31T18:41:06.491Z",
+  "since": "2026-10-30T18:41:06Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -38,21 +38,6 @@
   "verifications": [],
   "announced": [
     {
-      "id": "rentosertib-phase-3",
-      "date": "2026-10-28",
-      "url": "https://becauseofai.org/entry/rentosertib-phase-3"
-    },
-    {
-      "id": "sierra-leone-gemini-math",
-      "date": "2026-10-28",
-      "url": "https://becauseofai.org/entry/sierra-leone-gemini-math"
-    },
-    {
-      "id": "tricorder-ai-stethoscope-null",
-      "date": "2026-10-28",
-      "url": "https://becauseofai.org/entry/tricorder-ai-stethoscope-null"
-    },
-    {
       "id": "ucd-als-speech-bci",
       "date": "2026-10-29",
       "url": "https://becauseofai.org/entry/ucd-als-speech-bci"
@@ -66,13 +51,40 @@
       "id": "uva-comet-deterioration-null",
       "date": "2026-10-29",
       "url": "https://becauseofai.org/entry/uva-comet-deterioration-null"
+    },
+    {
+      "id": "waymo-injury-crashes",
+      "date": "2026-10-30",
+      "url": "https://becauseofai.org/entry/waymo-injury-crashes"
     }
   ],
-  "leads_added": [],
+  "leads_added": [
+    "AI-facilitated individualized nutritional guidance after GI cancer surgery, single-centre RCT (n=90, DeepSeek v3.2 plus dietitian review vs handout). [Support Care Cancer](https://doi.org/10.1007/s00520-026-11401-7) (2026-10-29). Read in full via Europe PMC. Energy adequacy 66.7% vs 40.0% (OR 3.0), protein 62.2% vs 35.6%; no difference in weight, labs or complications. Not drafted: the paper says it cannot isolate AI from individualization and quantified targets, the enrolment window is January to March 2026 in Methods but December 2025 to February 2026 in Results, and the complication rate differs between text and Fig. 2. Missing: a consistent achieved window.",
+    "AI rainfall-onset forecasts for Ethiopian smallholder farmers, 64-woreda cluster RCT. [AEARCTR-0020000](https://www.socialscienceregistry.org/trials/20000) (ongoing, intervention 2026-06-01 to 2026-07-19). A registration, no results. Missing: a results paper with planting and input outcomes.",
+    "AI-generated draft response tool, message turnaround and after-hours replies. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364) (2026-10-01). Real deployment. Compare ucla-chart-summarizer-rct. Missing: the primary read (HTTP 403; try Europe PMC), design, dates, absolute minutes.",
+    "Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335) (2026-10-23). Compare ambient-scribes-nejm-ai. Missing: the primary read, comparison, dates, absolute numbers.",
+    "Carried over, still unread: Annals scribe deployment study ([doi](https://doi.org/10.7326/ANNALS-25-05294)), AI-triggered rapid response and mortality ([NEJM AI](https://doi.org/10.1056/AIoa2500973)).",
+    "Protocols to watch: [AEARCTR-0020087](https://www.socialscienceregistry.org/trials/20087) (AI tutoring for young people with disabilities, Cali, from 2027-03), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI parenting RCT).",
+    "`hurricane-melissa-2025`: the \"in\" window has gone stale; the achieved date 2025-10-28 falls before 2025-10-31, the start of the 12-month window. Re-grade the window or re-verify.",
+    "`eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.",
+    "PNAS feed returned 403."
+  ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
+      {
+        "id": "2116268375995289752",
+        "url": "https://x.com/bcuz_of_ai/status/2116268375995289752",
+        "text": "Because of AI, there were an estimated 841 fewer injury-causing crashes across 270 million driverless miles.\n\nhttps://t.co/0rIsGnvx80 https://t.co/yttz2SbLkn",
+        "created_at": "2026-10-30T20:37:53.000Z",
+        "impressions": 33,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2115911709739126877",
         "url": "https://x.com/bcuz_of_ai/status/2115911709739126877",
@@ -90,7 +102,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2115911523264520513",
         "text": "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — while saving no time and mostly not recommending it.\n\nhttps://t.co/znXpzWEf1E https://t.co/WmRGP36vDd",
         "created_at": "2026-10-29T20:59:53.000Z",
-        "impressions": 36,
+        "impressions": 37,
         "likes": 2,
         "replies": 0,
         "reposts": 1,
@@ -288,69 +300,41 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2113721120167784757",
-        "url": "https://x.com/bcuz_of_ai/status/2113721120167784757",
-        "text": "Every Cure's AI ranks 75 million drug–disease pairs; its patient wins so far came from clinicians or predate the window.\n\nhttps://t.co/qqrKv8JFQV https://t.co/Yv4swlRAdx",
-        "created_at": "2026-10-23T19:56:00.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2113720913396916312",
-        "url": "https://x.com/bcuz_of_ai/status/2113720913396916312",
-        "text": "Because of AI, 1,660 TB cases were found in Ethiopia between January 2025 and March 2026 in screening programs that had no radiologist to read the X-rays.\n\nhttps://t.co/PBwSYzXKnV https://t.co/zOYte5arTN",
-        "created_at": "2026-10-23T19:55:11.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-29",
-    "pageviews": 78,
-    "visits": 67,
+    "day": "2026-10-30",
+    "pageviews": 95,
+    "visits": 62,
     "top_paths": [
       {
         "path": "/",
-        "views": 62
+        "views": 74
       },
       {
         "path": "/not-because-of-ai",
-        "views": 6
-      },
-      {
-        "path": "/entry/hurricane-melissa-2025",
-        "views": 3
+        "views": 7
       },
       {
         "path": "/not-yet",
-        "views": 2
-      },
-      {
-        "path": "/about",
-        "views": 2
-      },
-      {
-        "path": "/entry/golden-bridge-ii-stroke",
-        "views": 1
-      },
-      {
-        "path": "/entry/india-tribal-tb-ai-cxr",
-        "views": 1
+        "views": 4
       },
       {
         "path": "/changelog",
+        "views": 4
+      },
+      {
+        "path": "/method",
+        "views": 3
+      },
+      {
+        "path": "/entry/tricorder-ai-stethoscope-null",
+        "views": 2
+      },
+      {
+        "path": "/entry/sierra-leone-gemini-math",
         "views": 1
       }
     ]
