@@ -114,5 +114,10 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-10-23
-  via: claude-login
+  date: 2026-11-01
+  content: 6182b6a321430ec468f2e7aa69250be91b7fc512701d5d973d2e8b2b5ee09a90
+held:
+  reason: ungrounded
+  since: 2026-11-01
+  detail: No receipt for effect.relative, reach.
+  record: hurricane-melissa-2025/2026-11-01.json
