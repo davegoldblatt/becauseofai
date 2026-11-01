@@ -1,33 +1,33 @@
-# Last research run — 2026-10-25
+# Last research run — 2026-11-01
 
-Window: 2025-10-26 to 2026-10-25. Inputs: 28 entries, the inbox, `.scout/candidates.json` (251 candidates over 8 days, 27 flagged randomized, 0 alerts, 0 errors), and `npm run validate` (2 held).
+Window: 2025-11-01 to 2026-11-01. Inputs: 30 entries, the inbox, `.scout/candidates.json` (258 candidates over 8 days, 34 flagged randomized, 2 alerts, 1 source error), and `npm run validate` (3 held, 2 warnings).
 
 ## Added
-- **prea-chatbot-specialist-referral-rct** (rank 19, at the end; a human sets rank). Tao et al., Nature Medicine (doi 10.1038/s41591-025-04176-7), read in full from Europe PMC. This was a three-arm RCT at two hospitals in western China, with 2,069 patients analysed and 111 specialists. In the arm where patients used the PreA chatbot (GPT-4o mini) alone, consultations ran 3.14 vs 4.41 min (−28.7%, CI 22.7–34.8) and patient-rated communication ease was 3.99 vs 3.44. Graded **A / isolated / pre**: recruitment ran 8 Feb–30 Apr 2025, so only the publication (19 Jan 2026) is new. The caveat says it plainly: the gains are time and experience, not health. Patients were unmasked, and the control had no pre-assessment at all. Two authors work at Tencent WeChat AI.
+None. No candidate cleared all four tests this week, and an empty week is a valid result.
 
 ## Changed
-- **flourish-ai-coach-students-rct** (held, grade-split on window). Added the registry (NCT06668532) as a primary source. **Corrected achieved_end 2025-11 → 2025-11-28**, the registry's actual completion date, with a new receipt. Window stays **pre**, argued in notes: about 5 of the study's ~29 weeks fall inside the window. A new `verify:` line notes that the registered primary outcomes (Flourishing Scale, PHQ-8, GAD-7, PSS-4, resilience, at 6 weeks and 3 months) are not what the paper headlines (PHQ-2 meaningful improvement in an elevated-baseline subgroup at 6 weeks). The registered site is the University of Manitoba.
-- **oman-ai-retinopathy** (held, no primary). Poster number set to **62→8 days** (the absolute figure behind the 87%). Added Times of Oman as a secondary source and a rationale. There is no receipt because receipts must come from a primary source, and there still isn't one.
+- **hurricane-melissa-2025**: **re-graded window in → pre.** The benefit ran from the first Category 5 forecast (25 Oct 2025) to landfall (28 Oct 2025). The window rolled past it on 1 Nov 2026, and only the season verification and the NHC report now fall inside it. No value changed, so the receipts stand. This is a downgrade forced by the calendar, not by new evidence. The entry still holds rank 1, which is a human's call to revisit.
 
-No downgrades. One I'd argue: Flourish evidence A. The trial is randomized and registered, but the headline is not a registered primary endpoint as written. I flagged it rather than downgraded it, since a grade change would only add a second split.
+No poster numbers were needed: every `because` entry already has `impact_number` and `impact_label`.
 
 ## Rejected (reached humans · measured against something · AI made the difference · we know when)
-- **Community-codesigned primary-care chatbot** (Nature Health, PMC, read in full): fails **AI made the difference**, because both arms used the chatbot (AI vs AI). The outcomes were awareness and ratings with no health outcome, and it ran March 2025.
-- **Change.org AI writing tool** (Nature Human Behaviour; arXiv abstract read): **reached humans** is doubtful as a benefit to people, since the outcome is petition engagement. **AI made the difference** is weak because the estimate is of tool access, via difference-in-differences, not of use. The rollout was in late 2023. Sent to the inbox as a possible `not-because`.
-- **AI-INFOCARE**: still unread (NEJM AI 403). **Measured** is unconfirmed. Kept in the inbox.
-- Other scout candidates were reviews, protocols, retrospective model development, or clinician-task experiments, so **reached humans** fails.
+- **Hong Kong chatbot alcohol SBI** (Drug Alcohol Depend; NCT06602882; abstract read via Europe PMC). A clean null (−10.2 g/week, CI crosses zero), but it fails **we know when**: fieldwork was Dec 2023 to about mid-2025, so the window is pre, and the actual dates sit behind a paywall. **AI made the difference** is unconfirmed: nothing says the chatbot is more than scripted. Registered retrospectively. Sent to the inbox as a possible `not-because`.
+- **Voice-guided AI for EUS** (CGH; RCT, n=266). Fails **reached humans** as a benefit, because the outcome is scanning-station completeness, a process measure, and procedures took longer. The dates are unknown.
+- **AI-triggered rapid response** (NEJM AI; abstract via Europe PMC). An uncontrolled pre/post design (Oct 2022 to Aug 2024) weakens **measured against something**. **AI made the difference** is bundled (alert plus automatic RRT activation). The window is pre. The full text is still unread.
+- **Heidi scribe deployment** (Annals) and **Epic draft replies** (JAMA Netw Open): observational, with clinician-time outcomes. The draft-reply study is mixed and its window is pre. Both went to the inbox.
+- **Oxford LLM symptom-advice RCT** (Nature Medicine, Feb 2026, surfaced by the null search). Fails **reached humans**, because participants worked through vignettes, not their own illness. The fieldwork predates the window.
+- The other scout hits were registrations, protocols, reviews, education or rating experiments, or did not involve AI.
 
 ## Not-yet checks
-None met. FireSat: no agency response or timing data after commissioning; coverage is still about the July launch. Rentosertib and GB-0895: no change since 23 Oct (Phase 3s recruiting). Flood Hub and Every Cure: nothing new found.
+None met. FireSat: no documented detection or agency response found. Rentosertib: Phase 3 enrolling since July 2026. GB-0895: SOLAIRIA-1/2 still recruiting (Q2 2026 release). Flood Hub: no independent impact evaluation. Every Cure: ARPA-H funding news but no patient outcome tied to MATRIX.
 
 ## Searched, empty
-- Waymo hub: still through June 2026 (271.3M miles, 82%). No change.
-- Oman: no ministry, WHO or journal report. The same August 2026 statements appear in Times of Oman, Muscat Daily, Kuwait Times and Zawya.
-- Null search ("did not improve", AI, randomized): only Kenya and UVA CoMET, both already entries.
-- Retraction Watch: not run beyond the scout's Crossref check (0 alerts).
+- Waymo hub: still through June 2026 (271.3M miles). No new quarter found.
+- ChiCTR2400094159 (PreA registration date): web search found no record. chictr.org.cn needs to be read directly.
+- Null search ("did not improve", AI, randomized, recent): nothing new in the window.
 
 ## Needs a human
-- PreA: read ChiCTR2400094159 to confirm it was registered before 8 Feb 2025 (evidence A depends on it). Also decide whether a shorter visit counts as a benefit to patients here.
-- Flourish: settle the window (pre vs in) and the evidence grade given the outcome mismatch. The paper's "May and November 2025" enrolment doesn't fit the registry's 28 Nov completion.
-- Sixteen published entries still lack receipts for some numeric fields (see `npm run validate`). That is the next re-sourcing job.
-- Carried over: Melissa TCR forecast-verification section; China CAL methods and the call on evidence A; STAR figures against the Lancet letter; NHS stroke DIDO/mRS; India TB 162 vs 173; the GOLDEN BRIDGE II CDSS vendor.
+- **Melissa rank 1** now sits on a pre-window entry. Decide whether it should stay first.
+- **eagle-cadde-colonoscopy-rct**: the verification record is still malformed (`verifier.tokens` keys `cached`, `reasoning`). Re-run the gate (`node scripts/verify.ts --entry eagle-cadde-colonoscopy-rct`) and check the record schema against the vendor output.
+- **PreA**: read ChiCTR2400094159 directly. The held grade-split on evidence depends on it.
+- Carried over: the Flourish window and evidence grade; the Melissa TCR forecast-verification section; China CAL evidence A; STAR against the Lancet letter; NHS stroke DIDO/mRS; India TB 162 vs 173; the GOLDEN BRIDGE II CDSS vendor. Sixteen published entries still lack some receipts (see `npm run validate`).
