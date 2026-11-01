@@ -21,7 +21,7 @@ ai_type: classic-ml
 grades:
   evidence: B
   attribution: isolated
-  window: in
+  window: pre
 comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
 effect:
   relative: "Lowest season track and intensity error of any model; roughly one extra day of forecast accuracy in 2023–2025 hindcasts"
@@ -32,7 +32,7 @@ dates:
   achieved_end: 2025-10-28
   published: 2025-11-29
   added: 2026-10-22
-  updated: 2026-10-23
+  updated: 2026-11-01
 sources:
   - title: "NHC Tropical Cyclone Report: Hurricane Melissa (AL132025), 25 Feb 2026"
     url: https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf
@@ -82,6 +82,13 @@ history:
       Corrected the summary's "80-mph" to 80 kt (90 mph), as the discussion states.
   - date: 2026-10-22
     note: "Poster number and label set from the entry's own figures."
+  - date: 2026-11-01
+    note: >-
+      Re-graded window from in to pre: the benefit ran from the first Category 5
+      forecast (25 Oct 2025) to landfall (28 Oct 2025), and the 12-month window
+      ending 1 Nov 2026 now starts on 1 Nov 2025. Only the season verification
+      (late Nov 2025) and the NHC report (Feb 2026) fall inside it. No values
+      changed.
 rationale: The comparison is the NHC report's head-to-head check of the Google DeepMind ensemble (GDMI) against the official forecast and the other guidance models for Melissa (Tables 5b and 6b), together with the report's statement that GDMI guidance increased forecaster confidence in predicting rapid intensification at unusually long lead times.
 receipts:
   - field: headline
