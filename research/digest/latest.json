@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-31T18:41:06.491Z",
-  "since": "2026-10-30T18:41:06Z",
+  "generated_at": "2026-11-01T16:56:11.792Z",
+  "since": "2026-10-31T16:56:11Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 27,
@@ -37,21 +37,6 @@
   },
   "verifications": [],
   "announced": [
-    {
-      "id": "ucd-als-speech-bci",
-      "date": "2026-10-29",
-      "url": "https://becauseofai.org/entry/ucd-als-speech-bci"
-    },
-    {
-      "id": "ucla-chart-summarizer-rct",
-      "date": "2026-10-29",
-      "url": "https://becauseofai.org/entry/ucla-chart-summarizer-rct"
-    },
-    {
-      "id": "uva-comet-deterioration-null",
-      "date": "2026-10-29",
-      "url": "https://becauseofai.org/entry/uva-comet-deterioration-null"
-    },
     {
       "id": "waymo-injury-crashes",
       "date": "2026-10-30",
@@ -264,77 +249,37 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2114065498048475574",
-        "url": "https://x.com/bcuz_of_ai/status/2114065498048475574",
-        "text": "Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert hasn't been measured.\n\nhttps://t.co/Swie2LUiwp https://t.co/kZnWKL8qKA",
-        "created_at": "2026-10-24T18:44:26.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2114065301306536149",
-        "url": "https://x.com/bcuz_of_ai/status/2114065301306536149",
-        "text": "Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit; no fire-response outcome has been measured yet.\n\nhttps://t.co/1yLmiDLukq https://t.co/8HljGbfQBB",
-        "created_at": "2026-10-24T18:43:39.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2114065128425451705",
-        "url": "https://x.com/bcuz_of_ai/status/2114065128425451705",
-        "text": "Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day.\n\nhttps://t.co/f5va1ua6PI https://t.co/fp4vP8saj0",
-        "created_at": "2026-10-24T18:42:58.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-30",
-    "pageviews": 95,
-    "visits": 62,
+    "day": "2026-10-31",
+    "pageviews": 29,
+    "visits": 19,
     "top_paths": [
       {
         "path": "/",
-        "views": 74
+        "views": 22
       },
       {
-        "path": "/not-because-of-ai",
-        "views": 7
-      },
-      {
-        "path": "/not-yet",
-        "views": 4
-      },
-      {
-        "path": "/changelog",
-        "views": 4
-      },
-      {
-        "path": "/method",
-        "views": 3
-      },
-      {
-        "path": "/entry/tricorder-ai-stethoscope-null",
+        "path": "/entry/rentosertib-phase-3",
         "views": 2
       },
       {
-        "path": "/entry/sierra-leone-gemini-math",
+        "path": "/not-because-of-ai",
+        "views": 2
+      },
+      {
+        "path": "/entry/columbia-star-birth",
+        "views": 1
+      },
+      {
+        "path": "/not-yet",
+        "views": 1
+      },
+      {
+        "path": "/method",
         "views": 1
       }
     ]

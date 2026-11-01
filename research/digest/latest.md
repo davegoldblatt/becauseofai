@@ -1,9 +1,6 @@
-Because of AI, the day in plain words. Facts gathered 2026-10-31 18:41 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-11-01 16:56 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
-- 2026-10-29: "ucd-als-speech-bci" https://becauseofai.org/entry/ucd-als-speech-bci
-- 2026-10-29: "ucla-chart-summarizer-rct" https://becauseofai.org/entry/ucla-chart-summarizer-rct
-- 2026-10-29: "uva-comet-deterioration-null" https://becauseofai.org/entry/uva-comet-deterioration-null
 - 2026-10-30: "waymo-injury-crashes" https://becauseofai.org/entry/waymo-injury-crashes
 
 HOW THE POSTS ARE DOING (last 7 days, newest first)
@@ -23,9 +20,6 @@ HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 18 views, 1 like, 0 replys, 1 repost: "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Meliss" https://x.com/bcuz_of_ai/status/2114430106861007125
 - 2 views, 0 likes, 0 replys, 0 reposts: "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved." https://x.com/bcuz_of_ai/status/2114429915689009533
 - 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that m" https://x.com/bcuz_of_ai/status/2114429728933237042
-- 2 views, 0 likes, 0 replys, 0 reposts: "Google's urban flash-flood model now gives up to 24 hours' notice worldwide; whether anyone acted on an alert " https://x.com/bcuz_of_ai/status/2114065498048475574
-- 1 view, 0 likes, 0 replys, 0 reposts: "Three FireSat satellites launched in July 2026 to spot 5×5 m fires from orbit; no fire-response outcome has be" https://x.com/bcuz_of_ai/status/2114065301306536149
-- 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, Northumbrian Water stopped losing about 6.4 million litres of drinking water a day." https://x.com/bcuz_of_ai/status/2114065128425451705
 
 FOLLOWERS: 5
 
@@ -33,14 +27,13 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-10-30: 95 page views, 62 visits.
-  - /: 74
-  - /not-because-of-ai: 7
-  - /not-yet: 4
-  - /changelog: 4
-  - /method: 3
-  - /entry/tricorder-ai-stethoscope-null: 2
-  - /entry/sierra-leone-gemini-math: 1
+- 2026-10-31: 29 page views, 19 visits.
+  - /: 22
+  - /entry/rentosertib-phase-3: 2
+  - /not-because-of-ai: 2
+  - /entry/columbia-star-birth: 1
+  - /not-yet: 1
+  - /method: 1
 
 THE REGISTRY
 - Live on the site: 17 benefits, 5 null results, 5 watchlist items. Held off the site: 3.
