@@ -140,3 +140,21 @@ Candidates: 163 over 2026-10-29 to 2026-10-31, 23 flagged randomized, 2 alerts, 
 ### Source errors
 
 - PNAS feed returned 403.
+
+## 2026-11-01 (daily scout)
+
+Candidates: 120 over 2026-10-30 to 2026-11-01, 15 flagged randomized, 2 alerts, 1 source error. No entry drafted: the randomized hits are registrations, education or reader-study experiments, a secondary analysis, or a record that does not involve AI.
+
+- Calibrated LLMs in a year-long randomized medical education intervention (Neurology Grand Rounds summaries and quizzes). [medRxiv](https://www.medrxiv.org/content/10.64898/2026.10.30.26366878v1) (2026-10-30). Randomized, real trainees. Missing: the primary read, comparison arm, dates, absolute score difference; outcome may be education-only.
+- AI rainfall-onset forecasts for Ethiopian smallholders, carried over. [AEARCTR-0020000](https://www.socialscienceregistry.org/trials/20000). Registration, no results. Missing: a results paper.
+- Protocols to watch: [AEARCTR-0020087](https://www.socialscienceregistry.org/trials/20087), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133), [AEARCTR-0018826](https://www.socialscienceregistry.org/trials/18826).
+- Skipped: NCT05614492 (PrEP decision aid; the record does not mention AI), the OSA subgroup secondary analysis of SAVE (retrospective), the Lancet Digital Health reliance-patterns crossover (reader study).
+
+### Alerts
+
+- `hurricane-melissa-2025`: the "in" window has gone stale; the achieved date 2025-10-28 falls before 2025-11-01, the start of the 12-month window. Re-grade the window or re-verify.
+- `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
+
+### Source errors
+
+- PNAS feed returned 403.
