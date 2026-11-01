@@ -4,7 +4,11 @@ name: daily digest
 # A scheduled Claude routine then writes the email from those files.
 on:
   schedule:
-    - cron: "35 14 * * *"   # 07:35 America/Los_Angeles (PDT), after the scout and before the back-catalogue drip
+    # GitHub has been starting scheduled jobs four to five hours late, which
+    # put this after the 15:00 UTC email. Gather soon after Pacific midnight,
+    # with a backup run that does nothing if the first one already ran today.
+    - cron: "10 8 * * *"
+    - cron: "10 12 * * *"
   workflow_dispatch:
 jobs:
   digest:
@@ -16,12 +20,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Skip the backup run if today's facts already exist
+        id: gate
+        run: |
+          if [ "${{ github.event.schedule }}" = "10 12 * * *" ] && node -e 'const g = require("./research/digest/latest.json").generated_at; process.exit(g.slice(0, 10) === new Date().toISOString().slice(0, 10) ? 0 : 1)'; then
+            echo "Today's facts already exist."; echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.skip != '1'
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      - if: steps.gate.outputs.skip != '1'
+        run: npm ci
       - name: Gather the day
+        if: steps.gate.outputs.skip != '1'
         env:
           X_APP_KEY: ${{ secrets.X_APP_KEY }}
           X_APP_SECRET: ${{ secrets.X_APP_SECRET }}
@@ -31,6 +44,7 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: node scripts/digest.ts
       - name: Commit the digest
+        if: steps.gate.outputs.skip != '1'
         run: |
           set -euo pipefail
           git add research/digest/
