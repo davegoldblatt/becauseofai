@@ -166,3 +166,18 @@ Candidates: 120 over 2026-10-30 to 2026-11-01, 15 flagged randomized, 2 alerts, 
 - AI-triggered rapid response (Epic Deterioration Index plus automated RRT activation), 11 hospitals. [NEJM AI](https://doi.org/10.1056/AIoa2500973), [PubMed 42932707](https://pubmed.ncbi.nlm.nih.gov/42932707/). Abstract now read via Europe PMC: quasi-experimental staggered pre/post, Oct 2022 to Aug 2024, 23,132 patients, unadjusted mortality 18.6% vs 23.1%, adjusted OR 0.82. Window pre, evidence at most C, and attribution bundled (alert plus automatic activation). Missing: the full text, to establish whether the staggered rollout gives a concurrent control. Compare uva-comet-deterioration-null.
 - Unrestricted Heidi ambient-scribe deployment, 902 clinicians, Boston. [Annals](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Abstract via Europe PMC: interrupted time series, Jul 2024 to Jan 2026; −1.21 min note-active time per encounter; no change in after-hours closure or wRVUs. Observational, and the outcome is clinician time. Compare ambient-scribes-nejm-ai. Missing: the full text.
 - Epic AI draft-reply tool, Columbia. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364), open access as PMC13723026. Retrospective cohort, Mar 2023 to May 2025, mixed results (adoption associated with longer turnaround, use with shorter). Window pre, observational, mixed. Not drafted. Kept for comparison with ucla-chart-summarizer-rct.
+
+## 2026-11-02 (daily scout)
+
+Candidates: 91 over 2026-10-31 to 2026-11-02, 8 flagged randomized, 1 alert, 0 source errors. No entry drafted: the two leads worth a read could not be read in full by `npm run read` (landing page only), and the randomized hits are registrations, education experiments, or an online consumer-ratings experiment.
+
+- Generative AI and the temporary upskilling of knowledge workers. [Nature Human Behaviour](https://www.nature.com/articles/s41562-026-02566-6) (2026-10-26). Possible experimental evidence on workers; the reader returned NOT READ and the feed carries no snippet. Missing: the primary read, whether it reached real workers, dates, absolute effect.
+- AI-supported patient navigation for social drivers of health, safety-net family medicine and geriatrics clinics. [J Health Care Poor Underserved](https://doi.org/10.1353/hpu.2026.a1005870) (2026-01-01). Real deployment possible; the reader returned NOT READ. Missing: the primary read, design and comparison, dates, absolute numbers.
+- Deep-learning versus manual proton therapy planning, oropharyngeal cancer, real-world matched cohort. [Radiother Oncol](https://doi.org/10.1016/j.radonc.2026.111856) (2026-11-01). Patients treated, but a retrospective matched cohort (window likely pre, evidence C at best). Missing: the full text, dates, absolute outcome differences.
+- ML-assisted intraoperative hyperspectral imaging in meningioma surgery, interim results. [Neurosurg Focus](https://doi.org/10.3171/2026.8.FOCUS26414) (2026-11-01). Ongoing study, interim. Missing: the primary read, comparison, patient outcomes.
+- Protocol to watch: [AEARCTR-0018826](https://www.socialscienceregistry.org/trials/18826) (AI information and Chinese high school students' major choices; ongoing to 2028-12-31, no results; an information experiment, probably outside the four tests).
+- Skipped: reader studies, retrospective model validations, surveys, reviews, editorials, JAMA commentary and letters, the physical-therapy consumer-ratings online experiment (ratings, not benefit), ERIC chatbot education items (no add date).
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
