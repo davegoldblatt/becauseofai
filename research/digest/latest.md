@@ -1,7 +1,7 @@
-Because of AI, the day in plain words. Facts gathered 2026-11-01 16:56 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-11-02 18:14 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
-- 2026-10-30: "waymo-injury-crashes" https://becauseofai.org/entry/waymo-injury-crashes
+- Nothing new was posted to the account.
 
 HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 33 views, 1 like, 0 replys, 1 repost: "Because of AI, there were an estimated 841 fewer injury-causing crashes across 270 million driverless miles." https://x.com/bcuz_of_ai/status/2116268375995289752
@@ -17,9 +17,6 @@ HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 6 views, 0 likes, 0 replys, 0 reposts: "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student r" https://x.com/bcuz_of_ai/status/2114824468681875676
 - 4 views, 0 likes, 0 replys, 0 reposts: "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confir" https://x.com/bcuz_of_ai/status/2114824288364548411
 - 3 views, 0 likes, 0 replys, 0 reposts: "Because of AI, colonoscopists using a cloud-based polyp detector found 0.82 adenomas per colonoscopy against 0" https://x.com/bcuz_of_ai/status/2114824079882539128
-- 18 views, 1 like, 0 replys, 1 repost: "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Meliss" https://x.com/bcuz_of_ai/status/2114430106861007125
-- 2 views, 0 likes, 0 replys, 0 reposts: "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved." https://x.com/bcuz_of_ai/status/2114429915689009533
-- 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that m" https://x.com/bcuz_of_ai/status/2114429728933237042
 
 FOLLOWERS: 5
 
@@ -27,30 +24,32 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-10-31: 29 page views, 19 visits.
-  - /: 22
-  - /entry/rentosertib-phase-3: 2
-  - /not-because-of-ai: 2
-  - /entry/columbia-star-birth: 1
+- 2026-11-01: 22 page views, 17 visits.
+  - /: 17
+  - /entry/hurricane-melissa-2025: 1
+  - /entry/rentosertib-phase-3: 1
+  - /not-because-of-ai: 1
   - /not-yet: 1
   - /method: 1
 
 THE REGISTRY
-- Live on the site: 17 benefits, 5 null results, 5 watchlist items. Held off the site: 3.
-- No entry was added or changed.
+- Live on the site: 16 benefits, 5 null results, 5 watchlist items. Held off the site: 4.
 
-STILL HELD OFF THE SITE (3)
+ENTRIES ADDED OR CHANGED IN THE LAST DAY
+- changed: "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1." (held because a number on the entry is not in the source word for word)
+
+WHAT THE SECOND MODEL DECIDED IN THE LAST DAY
+- "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.": held because a number on the entry is not in the source word for word. No receipt for effect.relative, reach.
+
+STILL HELD OFF THE SITE (4)
 - "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.": the two models graded it differently (since 2026-10-24). window: drafter pre, verifier in.
+- "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.": a number on the entry is not in the source word for word (since 2026-11-01). No receipt for effect.relative, reach.
 - "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.": it has no primary source, only a press release or a news story (since 2026-10-25). No source is typed primary.
 - "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.": the two models graded it differently (since 2026-10-25). evidence: drafter A, verifier could not grade.
 
-LEADS THE MORNING SCAN LOGGED (9)
-- AI-facilitated individualized nutritional guidance after GI cancer surgery, single-centre RCT (n=90, DeepSeek v3.2 plus dietitian review vs handout). [Support Care Cancer](https://doi.org/10.1007/s00520-026-11401-7) (2026-10-29). Read in full via Europe PMC. Energy adequacy 66.7% vs 40.0% (OR 3.0), protein 62.2% vs 35.6%; no difference in weight, labs or complications. Not drafted: the paper says it cannot isolate AI from individualization and quantified targets, the enrolment window is January to March 2026 in Methods but December 2025 to February 2026 in Results, and the complication rate differs between text and Fig. 2. Missing: a consistent achieved window.
-- AI rainfall-onset forecasts for Ethiopian smallholder farmers, 64-woreda cluster RCT. [AEARCTR-0020000](https://www.socialscienceregistry.org/trials/20000) (ongoing, intervention 2026-06-01 to 2026-07-19). A registration, no results. Missing: a results paper with planting and input outcomes.
-- AI-generated draft response tool, message turnaround and after-hours replies. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364) (2026-10-01). Real deployment. Compare ucla-chart-summarizer-rct. Missing: the primary read (HTTP 403; try Europe PMC), design, dates, absolute minutes.
-- Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335) (2026-10-23). Compare ambient-scribes-nejm-ai. Missing: the primary read, comparison, dates, absolute numbers.
-- Carried over, still unread: Annals scribe deployment study ([doi](https://doi.org/10.7326/ANNALS-25-05294)), AI-triggered rapid response and mortality ([NEJM AI](https://doi.org/10.1056/AIoa2500973)).
-- Protocols to watch: [AEARCTR-0020087](https://www.socialscienceregistry.org/trials/20087) (AI tutoring for young people with disabilities, Cali, from 2027-03), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI parenting RCT).
-- `hurricane-melissa-2025`: the "in" window has gone stale; the achieved date 2025-10-28 falls before 2025-10-31, the start of the 12-month window. Re-grade the window or re-verify.
-- `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
-- PNAS feed returned 403.
+LEADS THE MORNING SCAN LOGGED (5)
+- Chatbot-delivered alcohol screening and brief intervention, working-age adults, Hong Kong, waitlist RCT (n=304). [Drug Alcohol Depend](https://doi.org/10.1016/j.drugalcdep.2026.113391) (2026-10-19), registry [NCT06602882](https://clinicaltrials.gov/study/NCT06602882). Abstract via Europe PMC: −10.2 g/week vs control, CI crosses zero (null). Possible `not-because`. Not drafted: start was 2023-12-01 with completion around mid-2025, so the window is pre; it was registered after the start (first posted 2024-09-19); the full text is paywalled; neither the registry nor the abstract says the chatbot is AI rather than scripted. Missing: the full text, the actual enrolment dates, the chatbot's technology.
+- Real-time voice-guided AI for biliopancreatic EUS station completeness, single-centre RCT (266 patients). [Clin Gastroenterol Hepatol](https://doi.org/10.1016/j.cgh.2026.10.008) (2026-10-28). Abstract via Europe PMC: median completeness 1.00 vs 0.81, procedures 2 min longer. Not drafted: the outcome is a process measure with no diagnostic yield or patient outcome, the full text is paywalled, and the dates are unknown. Missing: enrolment dates, diagnostic-yield results.
+- AI-triggered rapid response (Epic Deterioration Index plus automated RRT activation), 11 hospitals. [NEJM AI](https://doi.org/10.1056/AIoa2500973), [PubMed 42932707](https://pubmed.ncbi.nlm.nih.gov/42932707/). Abstract now read via Europe PMC: quasi-experimental staggered pre/post, Oct 2022 to Aug 2024, 23,132 patients, unadjusted mortality 18.6% vs 23.1%, adjusted OR 0.82. Window pre, evidence at most C, and attribution bundled (alert plus automatic activation). Missing: the full text, to establish whether the staggered rollout gives a concurrent control. Compare uva-comet-deterioration-null.
+- Unrestricted Heidi ambient-scribe deployment, 902 clinicians, Boston. [Annals](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Abstract via Europe PMC: interrupted time series, Jul 2024 to Jan 2026; −1.21 min note-active time per encounter; no change in after-hours closure or wRVUs. Observational, and the outcome is clinician time. Compare ambient-scribes-nejm-ai. Missing: the full text.
+- Epic AI draft-reply tool, Columbia. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364), open access as PMC13723026. Retrospective cohort, Mar 2023 to May 2025, mixed results (adoption associated with longer turnaround, use with shorter). Window pre, observational, mixed. Not drafted. Kept for comparison with ucla-chart-summarizer-rct.

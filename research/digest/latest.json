@@ -1,16 +1,24 @@
 {
-  "generated_at": "2026-11-01T16:56:11.792Z",
-  "since": "2026-10-31T16:56:11Z",
+  "generated_at": "2026-11-02T18:14:09.177Z",
+  "since": "2026-11-01T18:14:09Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 27,
-    "held": 3,
+    "published": 26,
+    "held": 4,
     "counts": {
-      "because": 17,
+      "because": 16,
       "not-because": 5,
       "not-yet": 5
     },
-    "changed": [],
+    "changed": [
+      {
+        "id": "hurricane-melissa-2025",
+        "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
+        "change": "changed",
+        "state": "held (ungrounded)",
+        "url": null
+      }
+    ],
     "held_list": [
       {
         "id": "flourish-ai-coach-students-rct",
@@ -18,6 +26,13 @@
         "reason": "grade-split",
         "since": "2026-10-24",
         "detail": "window: drafter pre, verifier in."
+      },
+      {
+        "id": "hurricane-melissa-2025",
+        "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
+        "reason": "ungrounded",
+        "since": "2026-11-01",
+        "detail": "No receipt for effect.relative, reach."
       },
       {
         "id": "oman-ai-retinopathy",
@@ -35,24 +50,23 @@
       }
     ]
   },
-  "verifications": [],
-  "announced": [
+  "verifications": [
     {
-      "id": "waymo-injury-crashes",
-      "date": "2026-10-30",
-      "url": "https://becauseofai.org/entry/waymo-injury-crashes"
+      "id": "hurricane-melissa-2025",
+      "date": "2026-11-01",
+      "result": "held",
+      "reason": "ungrounded",
+      "detail": "No receipt for effect.relative, reach.",
+      "record": "hurricane-melissa-2025/2026-11-01.json"
     }
   ],
+  "announced": [],
   "leads_added": [
-    "AI-facilitated individualized nutritional guidance after GI cancer surgery, single-centre RCT (n=90, DeepSeek v3.2 plus dietitian review vs handout). [Support Care Cancer](https://doi.org/10.1007/s00520-026-11401-7) (2026-10-29). Read in full via Europe PMC. Energy adequacy 66.7% vs 40.0% (OR 3.0), protein 62.2% vs 35.6%; no difference in weight, labs or complications. Not drafted: the paper says it cannot isolate AI from individualization and quantified targets, the enrolment window is January to March 2026 in Methods but December 2025 to February 2026 in Results, and the complication rate differs between text and Fig. 2. Missing: a consistent achieved window.",
-    "AI rainfall-onset forecasts for Ethiopian smallholder farmers, 64-woreda cluster RCT. [AEARCTR-0020000](https://www.socialscienceregistry.org/trials/20000) (ongoing, intervention 2026-06-01 to 2026-07-19). A registration, no results. Missing: a results paper with planting and input outcomes.",
-    "AI-generated draft response tool, message turnaround and after-hours replies. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364) (2026-10-01). Real deployment. Compare ucla-chart-summarizer-rct. Missing: the primary read (HTTP 403; try Europe PMC), design, dates, absolute minutes.",
-    "Does AI-powered clinical documentation enhance clinician efficiency? Longitudinal study. [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIx2601335) (2026-10-23). Compare ambient-scribes-nejm-ai. Missing: the primary read, comparison, dates, absolute numbers.",
-    "Carried over, still unread: Annals scribe deployment study ([doi](https://doi.org/10.7326/ANNALS-25-05294)), AI-triggered rapid response and mortality ([NEJM AI](https://doi.org/10.1056/AIoa2500973)).",
-    "Protocols to watch: [AEARCTR-0020087](https://www.socialscienceregistry.org/trials/20087) (AI tutoring for young people with disabilities, Cali, from 2027-03), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI parenting RCT).",
-    "`hurricane-melissa-2025`: the \"in\" window has gone stale; the achieved date 2025-10-28 falls before 2025-10-31, the start of the 12-month window. Re-grade the window or re-verify.",
-    "`eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.",
-    "PNAS feed returned 403."
+    "Chatbot-delivered alcohol screening and brief intervention, working-age adults, Hong Kong, waitlist RCT (n=304). [Drug Alcohol Depend](https://doi.org/10.1016/j.drugalcdep.2026.113391) (2026-10-19), registry [NCT06602882](https://clinicaltrials.gov/study/NCT06602882). Abstract via Europe PMC: −10.2 g/week vs control, CI crosses zero (null). Possible `not-because`. Not drafted: start was 2023-12-01 with completion around mid-2025, so the window is pre; it was registered after the start (first posted 2024-09-19); the full text is paywalled; neither the registry nor the abstract says the chatbot is AI rather than scripted. Missing: the full text, the actual enrolment dates, the chatbot's technology.",
+    "Real-time voice-guided AI for biliopancreatic EUS station completeness, single-centre RCT (266 patients). [Clin Gastroenterol Hepatol](https://doi.org/10.1016/j.cgh.2026.10.008) (2026-10-28). Abstract via Europe PMC: median completeness 1.00 vs 0.81, procedures 2 min longer. Not drafted: the outcome is a process measure with no diagnostic yield or patient outcome, the full text is paywalled, and the dates are unknown. Missing: enrolment dates, diagnostic-yield results.",
+    "AI-triggered rapid response (Epic Deterioration Index plus automated RRT activation), 11 hospitals. [NEJM AI](https://doi.org/10.1056/AIoa2500973), [PubMed 42932707](https://pubmed.ncbi.nlm.nih.gov/42932707/). Abstract now read via Europe PMC: quasi-experimental staggered pre/post, Oct 2022 to Aug 2024, 23,132 patients, unadjusted mortality 18.6% vs 23.1%, adjusted OR 0.82. Window pre, evidence at most C, and attribution bundled (alert plus automatic activation). Missing: the full text, to establish whether the staggered rollout gives a concurrent control. Compare uva-comet-deterioration-null.",
+    "Unrestricted Heidi ambient-scribe deployment, 902 clinicians, Boston. [Annals](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Abstract via Europe PMC: interrupted time series, Jul 2024 to Jan 2026; −1.21 min note-active time per encounter; no change in after-hours closure or wRVUs. Observational, and the outcome is clinician time. Compare ambient-scribes-nejm-ai. Missing: the full text.",
+    "Epic AI draft-reply tool, Columbia. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364), open access as PMC13723026. Retrospective cohort, Mar 2023 to May 2025, mixed results (adoption associated with longer turnaround, use with shorter). Window pre, observational, mixed. Not drafted. Kept for comparison with ucla-chart-summarizer-rct."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -213,65 +227,29 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2114430106861007125",
-        "url": "https://x.com/bcuz_of_ai/status/2114430106861007125",
-        "text": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.\n\nhttps://t.co/xuJbHJWCMI https://t.co/0jTjwNQ3he",
-        "created_at": "2026-10-25T18:53:16.000Z",
-        "impressions": 18,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 1,
-        "quotes": 0
-      },
-      {
-        "id": "2114429915689009533",
-        "url": "https://x.com/bcuz_of_ai/status/2114429915689009533",
-        "text": "An AI-optimized antibody for severe asthma is in Phase 3 — no AI-designed antibody has been approved.\n\nhttps://t.co/2PRWUez584 https://t.co/PqCBeW98GT",
-        "created_at": "2026-10-25T18:52:30.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2114429728933237042",
-        "url": "https://x.com/bcuz_of_ai/status/2114429728933237042",
-        "text": "Because of AI, 30 hearing-aid users understood far more words in heavy noise — according to the company that makes the device.\n\nhttps://t.co/32xYAjb0rC https://t.co/BrUXl8jgxn",
-        "created_at": "2026-10-25T18:51:46.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-10-31",
-    "pageviews": 29,
-    "visits": 19,
+    "day": "2026-11-01",
+    "pageviews": 22,
+    "visits": 17,
     "top_paths": [
       {
         "path": "/",
-        "views": 22
+        "views": 17
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 1
       },
       {
         "path": "/entry/rentosertib-phase-3",
-        "views": 2
+        "views": 1
       },
       {
         "path": "/not-because-of-ai",
-        "views": 2
-      },
-      {
-        "path": "/entry/columbia-star-birth",
         "views": 1
       },
       {
