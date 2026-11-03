@@ -2,13 +2,12 @@ name: daily digest
 # Gathers the last day's facts (entries, gate decisions, posts and how they
 # did, mentions, traffic) with no model and commits them to research/digest/.
 # A scheduled Claude routine then writes the email from those files.
+#
+# No GitHub schedule: GitHub started scheduled runs 4 to 10 hours late
+# (2026-10-28..11-03), after the 15:00 UTC email. A Claude routine
+# ("Morning emails: start the three fact gathers", 14:10 UTC) starts this
+# by hand instead, and a run started by hand begins within seconds.
 on:
-  schedule:
-    # GitHub has been starting scheduled jobs four to five hours late, which
-    # put this after the 15:00 UTC email. Gather soon after Pacific midnight,
-    # with a backup run that does nothing if the first one already ran today.
-    - cron: "10 8 * * *"
-    - cron: "10 12 * * *"
   workflow_dispatch:
 jobs:
   digest:
@@ -20,21 +19,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Skip the backup run if today's facts already exist
-        id: gate
-        run: |
-          if [ "${{ github.event.schedule }}" = "10 12 * * *" ] && node -e 'const g = require("./research/digest/latest.json").generated_at; process.exit(g.slice(0, 10) === new Date().toISOString().slice(0, 10) ? 0 : 1)'; then
-            echo "Today's facts already exist."; echo "skip=1" >> "$GITHUB_OUTPUT"
-          fi
       - uses: actions/setup-node@v4
-        if: steps.gate.outputs.skip != '1'
         with:
           node-version: 24
           cache: npm
-      - if: steps.gate.outputs.skip != '1'
-        run: npm ci
+      - run: npm ci
       - name: Gather the day
-        if: steps.gate.outputs.skip != '1'
         env:
           X_APP_KEY: ${{ secrets.X_APP_KEY }}
           X_APP_SECRET: ${{ secrets.X_APP_SECRET }}
@@ -44,7 +34,6 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: node scripts/digest.ts
       - name: Commit the digest
-        if: steps.gate.outputs.skip != '1'
         run: |
           set -euo pipefail
           git add research/digest/
