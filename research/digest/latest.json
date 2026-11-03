@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T18:14:09.177Z",
-  "since": "2026-11-01T18:14:09Z",
+  "generated_at": "2026-11-03T16:08:47.561Z",
+  "since": "2026-11-02T16:08:47Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
@@ -10,15 +10,7 @@
       "not-because": 5,
       "not-yet": 5
     },
-    "changed": [
-      {
-        "id": "hurricane-melissa-2025",
-        "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
-        "change": "changed",
-        "state": "held (ungrounded)",
-        "url": null
-      }
-    ],
+    "changed": [],
     "held_list": [
       {
         "id": "flourish-ai-coach-students-rct",
@@ -50,23 +42,16 @@
       }
     ]
   },
-  "verifications": [
-    {
-      "id": "hurricane-melissa-2025",
-      "date": "2026-11-01",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for effect.relative, reach.",
-      "record": "hurricane-melissa-2025/2026-11-01.json"
-    }
-  ],
+  "verifications": [],
   "announced": [],
   "leads_added": [
-    "Chatbot-delivered alcohol screening and brief intervention, working-age adults, Hong Kong, waitlist RCT (n=304). [Drug Alcohol Depend](https://doi.org/10.1016/j.drugalcdep.2026.113391) (2026-10-19), registry [NCT06602882](https://clinicaltrials.gov/study/NCT06602882). Abstract via Europe PMC: −10.2 g/week vs control, CI crosses zero (null). Possible `not-because`. Not drafted: start was 2023-12-01 with completion around mid-2025, so the window is pre; it was registered after the start (first posted 2024-09-19); the full text is paywalled; neither the registry nor the abstract says the chatbot is AI rather than scripted. Missing: the full text, the actual enrolment dates, the chatbot's technology.",
-    "Real-time voice-guided AI for biliopancreatic EUS station completeness, single-centre RCT (266 patients). [Clin Gastroenterol Hepatol](https://doi.org/10.1016/j.cgh.2026.10.008) (2026-10-28). Abstract via Europe PMC: median completeness 1.00 vs 0.81, procedures 2 min longer. Not drafted: the outcome is a process measure with no diagnostic yield or patient outcome, the full text is paywalled, and the dates are unknown. Missing: enrolment dates, diagnostic-yield results.",
-    "AI-triggered rapid response (Epic Deterioration Index plus automated RRT activation), 11 hospitals. [NEJM AI](https://doi.org/10.1056/AIoa2500973), [PubMed 42932707](https://pubmed.ncbi.nlm.nih.gov/42932707/). Abstract now read via Europe PMC: quasi-experimental staggered pre/post, Oct 2022 to Aug 2024, 23,132 patients, unadjusted mortality 18.6% vs 23.1%, adjusted OR 0.82. Window pre, evidence at most C, and attribution bundled (alert plus automatic activation). Missing: the full text, to establish whether the staggered rollout gives a concurrent control. Compare uva-comet-deterioration-null.",
-    "Unrestricted Heidi ambient-scribe deployment, 902 clinicians, Boston. [Annals](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Abstract via Europe PMC: interrupted time series, Jul 2024 to Jan 2026; −1.21 min note-active time per encounter; no change in after-hours closure or wRVUs. Observational, and the outcome is clinician time. Compare ambient-scribes-nejm-ai. Missing: the full text.",
-    "Epic AI draft-reply tool, Columbia. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364), open access as PMC13723026. Retrospective cohort, Mar 2023 to May 2025, mixed results (adoption associated with longer turnaround, use with shorter). Window pre, observational, mixed. Not drafted. Kept for comparison with ucla-chart-summarizer-rct."
+    "Generative AI and the temporary upskilling of knowledge workers. [Nature Human Behaviour](https://www.nature.com/articles/s41562-026-02566-6) (2026-10-26). Possible experimental evidence on workers; the reader returned NOT READ and the feed carries no snippet. Missing: the primary read, whether it reached real workers, dates, absolute effect.",
+    "AI-supported patient navigation for social drivers of health, safety-net family medicine and geriatrics clinics. [J Health Care Poor Underserved](https://doi.org/10.1353/hpu.2026.a1005870) (2026-01-01). Real deployment possible; the reader returned NOT READ. Missing: the primary read, design and comparison, dates, absolute numbers.",
+    "Deep-learning versus manual proton therapy planning, oropharyngeal cancer, real-world matched cohort. [Radiother Oncol](https://doi.org/10.1016/j.radonc.2026.111856) (2026-11-01). Patients treated, but a retrospective matched cohort (window likely pre, evidence C at best). Missing: the full text, dates, absolute outcome differences.",
+    "ML-assisted intraoperative hyperspectral imaging in meningioma surgery, interim results. [Neurosurg Focus](https://doi.org/10.3171/2026.8.FOCUS26414) (2026-11-01). Ongoing study, interim. Missing: the primary read, comparison, patient outcomes.",
+    "Protocol to watch: [AEARCTR-0018826](https://www.socialscienceregistry.org/trials/18826) (AI information and Chinese high school students' major choices; ongoing to 2028-12-31, no results; an information experiment, probably outside the four tests).",
+    "Skipped: reader studies, retrospective model validations, surveys, reviews, editorials, JAMA commentary and letters, the physical-therapy consumer-ratings online experiment (ratings, not benefit), ERIC chatbot education items (no add date).",
+    "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -191,73 +176,45 @@
         "reposts": 1,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2114824468681875676",
-        "url": "https://x.com/bcuz_of_ai/status/2114824468681875676",
-        "text": "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student randomized trial.\n\nhttps://t.co/H31gR6d2Po https://t.co/yQME0fLtow",
-        "created_at": "2026-10-26T21:00:19.000Z",
-        "impressions": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2114824288364548411",
-        "url": "https://x.com/bcuz_of_ai/status/2114824288364548411",
-        "text": "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confirmed cases in people with no symptoms.\n\nhttps://t.co/6M2tnupKhi https://t.co/tZuDnxCZ4G",
-        "created_at": "2026-10-26T20:59:36.000Z",
-        "impressions": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2114824079882539128",
-        "url": "https://x.com/bcuz_of_ai/status/2114824079882539128",
-        "text": "Because of AI, colonoscopists using a cloud-based polyp detector found 0.82 adenomas per colonoscopy against 0.62 without it, and 43.2% of patients had an adenoma against 35.9%.\n\nhttps://t.co/2lTzIoQgcz https://t.co/08dsqTbkuN",
-        "created_at": "2026-10-26T20:58:46.000Z",
-        "impressions": 3,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-01",
-    "pageviews": 22,
-    "visits": 17,
+    "day": "2026-11-02",
+    "pageviews": 79,
+    "visits": 27,
     "top_paths": [
       {
         "path": "/",
-        "views": 17
-      },
-      {
-        "path": "/entry/hurricane-melissa-2025",
-        "views": 1
-      },
-      {
-        "path": "/entry/rentosertib-phase-3",
-        "views": 1
+        "views": 58
       },
       {
         "path": "/not-because-of-ai",
-        "views": 1
+        "views": 8
       },
       {
         "path": "/not-yet",
-        "views": 1
+        "views": 4
+      },
+      {
+        "path": "/changelog",
+        "views": 2
       },
       {
         "path": "/method",
+        "views": 2
+      },
+      {
+        "path": "/entry/golden-bridge-ii-stroke",
+        "views": 1
+      },
+      {
+        "path": "/entry/tricorder-ai-stethoscope-null",
+        "views": 1
+      },
+      {
+        "path": "/entry/uva-comet-deterioration-null",
         "views": 1
       }
     ]

@@ -1,4 +1,4 @@
-Because of AI, the day in plain words. Facts gathered 2026-11-02 18:14 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-11-03 16:08 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
 - Nothing new was posted to the account.
@@ -14,9 +14,6 @@ HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 18 views, 1 like, 0 replys, 1 repost: "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist ce" https://x.com/bcuz_of_ai/status/2115180594636247177
 - 28 views, 1 like, 0 replys, 1 repost: "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear wi" https://x.com/bcuz_of_ai/status/2115180361294700731
 - 14 views, 1 like, 0 replys, 1 repost: "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, an" https://x.com/bcuz_of_ai/status/2115180174966661595
-- 6 views, 0 likes, 0 replys, 0 reposts: "A GPT-4o tutor built into a university learning platform was associated with lower grades in a 2,379-student r" https://x.com/bcuz_of_ai/status/2114824468681875676
-- 4 views, 0 likes, 0 replys, 0 reposts: "Because of AI, TB case notifications rose 80% in a tribal district of Chhattisgarh, India, including 20 confir" https://x.com/bcuz_of_ai/status/2114824288364548411
-- 3 views, 0 likes, 0 replys, 0 reposts: "Because of AI, colonoscopists using a cloud-based polyp detector found 0.82 adenomas per colonoscopy against 0" https://x.com/bcuz_of_ai/status/2114824079882539128
 
 FOLLOWERS: 5
 
@@ -24,22 +21,19 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-11-01: 22 page views, 17 visits.
-  - /: 17
-  - /entry/hurricane-melissa-2025: 1
-  - /entry/rentosertib-phase-3: 1
-  - /not-because-of-ai: 1
-  - /not-yet: 1
-  - /method: 1
+- 2026-11-02: 79 page views, 27 visits.
+  - /: 58
+  - /not-because-of-ai: 8
+  - /not-yet: 4
+  - /changelog: 2
+  - /method: 2
+  - /entry/golden-bridge-ii-stroke: 1
+  - /entry/tricorder-ai-stethoscope-null: 1
+  - /entry/uva-comet-deterioration-null: 1
 
 THE REGISTRY
 - Live on the site: 16 benefits, 5 null results, 5 watchlist items. Held off the site: 4.
-
-ENTRIES ADDED OR CHANGED IN THE LAST DAY
-- changed: "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1." (held because a number on the entry is not in the source word for word)
-
-WHAT THE SECOND MODEL DECIDED IN THE LAST DAY
-- "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.": held because a number on the entry is not in the source word for word. No receipt for effect.relative, reach.
+- No entry was added or changed.
 
 STILL HELD OFF THE SITE (4)
 - "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.": the two models graded it differently (since 2026-10-24). window: drafter pre, verifier in.
@@ -47,9 +41,11 @@ STILL HELD OFF THE SITE (4)
 - "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.": it has no primary source, only a press release or a news story (since 2026-10-25). No source is typed primary.
 - "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.": the two models graded it differently (since 2026-10-25). evidence: drafter A, verifier could not grade.
 
-LEADS THE MORNING SCAN LOGGED (5)
-- Chatbot-delivered alcohol screening and brief intervention, working-age adults, Hong Kong, waitlist RCT (n=304). [Drug Alcohol Depend](https://doi.org/10.1016/j.drugalcdep.2026.113391) (2026-10-19), registry [NCT06602882](https://clinicaltrials.gov/study/NCT06602882). Abstract via Europe PMC: −10.2 g/week vs control, CI crosses zero (null). Possible `not-because`. Not drafted: start was 2023-12-01 with completion around mid-2025, so the window is pre; it was registered after the start (first posted 2024-09-19); the full text is paywalled; neither the registry nor the abstract says the chatbot is AI rather than scripted. Missing: the full text, the actual enrolment dates, the chatbot's technology.
-- Real-time voice-guided AI for biliopancreatic EUS station completeness, single-centre RCT (266 patients). [Clin Gastroenterol Hepatol](https://doi.org/10.1016/j.cgh.2026.10.008) (2026-10-28). Abstract via Europe PMC: median completeness 1.00 vs 0.81, procedures 2 min longer. Not drafted: the outcome is a process measure with no diagnostic yield or patient outcome, the full text is paywalled, and the dates are unknown. Missing: enrolment dates, diagnostic-yield results.
-- AI-triggered rapid response (Epic Deterioration Index plus automated RRT activation), 11 hospitals. [NEJM AI](https://doi.org/10.1056/AIoa2500973), [PubMed 42932707](https://pubmed.ncbi.nlm.nih.gov/42932707/). Abstract now read via Europe PMC: quasi-experimental staggered pre/post, Oct 2022 to Aug 2024, 23,132 patients, unadjusted mortality 18.6% vs 23.1%, adjusted OR 0.82. Window pre, evidence at most C, and attribution bundled (alert plus automatic activation). Missing: the full text, to establish whether the staggered rollout gives a concurrent control. Compare uva-comet-deterioration-null.
-- Unrestricted Heidi ambient-scribe deployment, 902 clinicians, Boston. [Annals](https://doi.org/10.7326/ANNALS-25-05294) (2026-10-27). Abstract via Europe PMC: interrupted time series, Jul 2024 to Jan 2026; −1.21 min note-active time per encounter; no change in after-hours closure or wRVUs. Observational, and the outcome is clinician time. Compare ambient-scribes-nejm-ai. Missing: the full text.
-- Epic AI draft-reply tool, Columbia. [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41364), open access as PMC13723026. Retrospective cohort, Mar 2023 to May 2025, mixed results (adoption associated with longer turnaround, use with shorter). Window pre, observational, mixed. Not drafted. Kept for comparison with ucla-chart-summarizer-rct.
+LEADS THE MORNING SCAN LOGGED (7)
+- Generative AI and the temporary upskilling of knowledge workers. [Nature Human Behaviour](https://www.nature.com/articles/s41562-026-02566-6) (2026-10-26). Possible experimental evidence on workers; the reader returned NOT READ and the feed carries no snippet. Missing: the primary read, whether it reached real workers, dates, absolute effect.
+- AI-supported patient navigation for social drivers of health, safety-net family medicine and geriatrics clinics. [J Health Care Poor Underserved](https://doi.org/10.1353/hpu.2026.a1005870) (2026-01-01). Real deployment possible; the reader returned NOT READ. Missing: the primary read, design and comparison, dates, absolute numbers.
+- Deep-learning versus manual proton therapy planning, oropharyngeal cancer, real-world matched cohort. [Radiother Oncol](https://doi.org/10.1016/j.radonc.2026.111856) (2026-11-01). Patients treated, but a retrospective matched cohort (window likely pre, evidence C at best). Missing: the full text, dates, absolute outcome differences.
+- ML-assisted intraoperative hyperspectral imaging in meningioma surgery, interim results. [Neurosurg Focus](https://doi.org/10.3171/2026.8.FOCUS26414) (2026-11-01). Ongoing study, interim. Missing: the primary read, comparison, patient outcomes.
+- Protocol to watch: [AEARCTR-0018826](https://www.socialscienceregistry.org/trials/18826) (AI information and Chinese high school students' major choices; ongoing to 2028-12-31, no results; an information experiment, probably outside the four tests).
+- Skipped: reader studies, retrospective model validations, surveys, reviews, editorials, JAMA commentary and letters, the physical-therapy consumer-ratings online experiment (ratings, not benefit), ERIC chatbot education items (no add date).
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
