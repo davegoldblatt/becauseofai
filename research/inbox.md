@@ -181,3 +181,19 @@ Candidates: 91 over 2026-10-31 to 2026-11-02, 8 flagged randomized, 1 alert, 0 s
 ### Alerts
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
+
+## 2026-11-03 (daily scout)
+
+Candidates: 85 over 2026-11-01 to 2026-11-03, 8 flagged randomized, 1 alert, 1 source error. No entry drafted: the one randomized result with a primary record in hand is not AI, and the rest are registrations, protocols, reviews, or retrospective model validations.
+
+- ALERT-PA, cluster-randomized EHR alert for primary aldosteronism screening, 12,501 patients, Brigham and Women's. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results first posted 2026-11-03). Read in full via the registry record: real patients, randomized by clinician, 2024-03-13 start, primary completion 2024-12-09. Not drafted: the intervention is a rule-based Epic Best Practice Advisory, not AI, so it fails the "AI did something" test. Missing: any indication that the alert uses a model.
+- Protocol to watch: [AEARCTR-0020106](https://www.socialscienceregistry.org/trials/20106) (physician incentives, managed care vs fee-for-service; in development, 2028 to 2030; not an AI benefit lead).
+- Skipped: systematic reviews (smoking cessation, LVO stroke), retrospective model validations (cardiac MRI segmentation, osteonecrosis, ILD on notes, ECG foundation models), benchmarks, a qualitative interview study, medical-education items, an AI-moderated interviews methods preprint.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
+### Source errors
+
+- ERIC returned 504.
