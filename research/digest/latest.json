@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-03T17:33:26.755Z",
-  "since": "2026-11-02T17:33:26Z",
+  "generated_at": "2026-11-04T14:12:15.849Z",
+  "since": "2026-11-03T14:12:15Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
@@ -45,13 +45,11 @@
   "verifications": [],
   "announced": [],
   "leads_added": [
-    "Generative AI and the temporary upskilling of knowledge workers. [Nature Human Behaviour](https://www.nature.com/articles/s41562-026-02566-6) (2026-10-26). Possible experimental evidence on workers; the reader returned NOT READ and the feed carries no snippet. Missing: the primary read, whether it reached real workers, dates, absolute effect.",
-    "AI-supported patient navigation for social drivers of health, safety-net family medicine and geriatrics clinics. [J Health Care Poor Underserved](https://doi.org/10.1353/hpu.2026.a1005870) (2026-01-01). Real deployment possible; the reader returned NOT READ. Missing: the primary read, design and comparison, dates, absolute numbers.",
-    "Deep-learning versus manual proton therapy planning, oropharyngeal cancer, real-world matched cohort. [Radiother Oncol](https://doi.org/10.1016/j.radonc.2026.111856) (2026-11-01). Patients treated, but a retrospective matched cohort (window likely pre, evidence C at best). Missing: the full text, dates, absolute outcome differences.",
-    "ML-assisted intraoperative hyperspectral imaging in meningioma surgery, interim results. [Neurosurg Focus](https://doi.org/10.3171/2026.8.FOCUS26414) (2026-11-01). Ongoing study, interim. Missing: the primary read, comparison, patient outcomes.",
-    "Protocol to watch: [AEARCTR-0018826](https://www.socialscienceregistry.org/trials/18826) (AI information and Chinese high school students' major choices; ongoing to 2028-12-31, no results; an information experiment, probably outside the four tests).",
-    "Skipped: reader studies, retrospective model validations, surveys, reviews, editorials, JAMA commentary and letters, the physical-therapy consumer-ratings online experiment (ratings, not benefit), ERIC chatbot education items (no add date).",
-    "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry."
+    "ALERT-PA, cluster-randomized EHR alert for primary aldosteronism screening, 12,501 patients, Brigham and Women's. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results first posted 2026-11-03). Read in full via the registry record: real patients, randomized by clinician, 2024-03-13 start, primary completion 2024-12-09. Not drafted: the intervention is a rule-based Epic Best Practice Advisory, not AI, so it fails the \"AI did something\" test. Missing: any indication that the alert uses a model.",
+    "Protocol to watch: [AEARCTR-0020106](https://www.socialscienceregistry.org/trials/20106) (physician incentives, managed care vs fee-for-service; in development, 2028 to 2030; not an AI benefit lead).",
+    "Skipped: systematic reviews (smoking cessation, LVO stroke), retrospective model validations (cardiac MRI segmentation, osteonecrosis, ILD on notes, ECG foundation models), benchmarks, a qualitative interview study, medical-education items, an AI-moderated interviews methods preprint.",
+    "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.",
+    "ERIC returned 504."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -140,81 +138,45 @@
         "reposts": 1,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2115180594636247177",
-        "url": "https://x.com/bcuz_of_ai/status/2115180594636247177",
-        "text": "Because of AI, stroke patients in England were 57% more likely to get a thrombectomy and reached specialist centres 64 minutes faster.\n\nhttps://t.co/f7vNGwGY1k https://t.co/7b7101yFBe",
-        "created_at": "2026-10-27T20:35:26.000Z",
-        "impressions": 18,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2115180361294700731",
-        "url": "https://x.com/bcuz_of_ai/status/2115180361294700731",
-        "text": "Because of AI, about a third of urgent skin-cancer referrals at some NHS hospitals got a same-day all-clear without waiting weeks for a dermatologist.\n\nhttps://t.co/zV3GclSJBl https://t.co/sjt6AscZrE",
-        "created_at": "2026-10-27T20:34:30.000Z",
-        "impressions": 28,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2115180174966661595",
-        "url": "https://x.com/bcuz_of_ai/status/2115180174966661595",
-        "text": "Because of AI, Swedish mammography screening found 29% more cancers with 44% less radiologist reading time, and 12% fewer cancers surfaced between screens.\n\nhttps://t.co/nZwykyXtV4 https://t.co/Nl8lSFQxou",
-        "created_at": "2026-10-27T20:33:46.000Z",
-        "impressions": 14,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-02",
-    "pageviews": 79,
-    "visits": 27,
+    "day": "2026-11-03",
+    "pageviews": 38,
+    "visits": 20,
     "top_paths": [
       {
         "path": "/",
-        "views": 58
+        "views": 26
       },
       {
         "path": "/not-because-of-ai",
-        "views": 8
+        "views": 3
+      },
+      {
+        "path": "/entry/waymo-injury-crashes",
+        "views": 2
       },
       {
         "path": "/not-yet",
-        "views": 4
+        "views": 2
       },
       {
-        "path": "/changelog",
-        "views": 2
+        "path": "/entry/ambient-scribes-nejm-ai",
+        "views": 1
       },
       {
         "path": "/method",
-        "views": 2
-      },
-      {
-        "path": "/entry/golden-bridge-ii-stroke",
         "views": 1
       },
       {
-        "path": "/entry/tricorder-ai-stethoscope-null",
+        "path": "/changelog",
         "views": 1
       },
       {
-        "path": "/entry/uva-comet-deterioration-null",
+        "path": "/entry/fido-northumbrian-leaks",
         "views": 1
       }
     ]
