@@ -197,3 +197,16 @@ Candidates: 85 over 2026-11-01 to 2026-11-03, 8 flagged randomized, 1 alert, 1 s
 ### Source errors
 
 - ERIC returned 504.
+
+## 2026-11-04 (daily scout)
+
+Candidates: 124 over 2026-11-02 to 2026-11-04, 13 flagged randomized, 1 alert, 0 source errors. No entry drafted: no candidate reached real people with a measured comparison and a primary record in hand. The randomized hits are registrations, reviews, education or survey-method experiments, or a non-benefit trial-augmentation paper.
+
+- Leveraging technology to enhance access to financial advice (trust, uptake, advisor adoption). [AEARCTR-0018280](https://www.socialscienceregistry.org/trials/18280) (AEA RCT Registry, in development, 2026-05-20 to 2026-12-31). Protocol to watch: a field experiment with AI in financial advice. Missing: results, achieved dates, absolute effects.
+- AI and the fight against disinformation: experiment 2. [AEARCTR-0020071](https://www.socialscienceregistry.org/trials/20071) (in development, 2026-10-27 to 2026-11-12). Protocol to watch; an information experiment, probably outside the four tests.
+- MERIT, multi-agent EHR-grounded risk identification for early cognitive decline in primary care. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.02.26367125v1) (2026-11-03). Check whether it was used in real clinics; likely a retrospective model study. Missing: deployment, comparison, patient outcomes.
+- Skipped: systematic reviews (smoking cessation, LVO stroke, drowning detection, radiomics meta-analysis), retrospective model validations (cardiac MRI segmentation, osteonecrosis, lung cancer screening intervals, ILD, schistosomiasis ultrasound, ECG foundation models, mammography triage), benchmarks and commentary, an AI-moderated interviews methods preprint, ERIC chatbot education items (no add date, already seen).
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
