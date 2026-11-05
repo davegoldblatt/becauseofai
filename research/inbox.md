@@ -210,3 +210,16 @@ Candidates: 124 over 2026-11-02 to 2026-11-04, 13 flagged randomized, 1 alert, 0
 ### Alerts
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
+## 2026-11-05 (daily scout)
+
+Candidates: 123 over 2026-11-03 to 2026-11-05, 14 flagged randomized, 1 alert, 0 source errors. No entry drafted: the one strong lead could not be read in full by the gate's reader.
+
+- Generative AI and maternal health outcomes in pregnant and postpartum individuals: a randomized clinical trial (Rosie chatbot). [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41062) (2026-11-04; full text at https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856248). Measured null for `not-because`: 400 participants, 1:1 against a book-club control, 12-month GAD-7 and PHQ-9 differences not significant (per a WebFetch summary, unverified). Missing: verbatim quotes from the full text (`npm run read` returns HTTP 403, so the gate may not read it either), exact absolute figures, and trial dates from the methods. Try Europe PMC or the registry record for a readable primary source.
+- ALERT-PA, electronic alert for primary aldosteronism testing. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results posted 2026-11-03, cluster-randomized, 2024-03-13 to 2024-12-09). Likely a rule-based EHR best-practice alert, not AI; probably outside scope. Missing: evidence that any AI is involved.
+- AI documentation in human services, randomized field experiment. [AEARCTR-0018700](https://www.socialscienceregistry.org/trials/18700) (in development, 2026-04-29 to 2028-12-01). Protocol to watch. Missing: results, achieved dates.
+- Skipped: protocols (physical-education mHealth, AI-delivered CBT for diabetes), a physician-incentives registration for 2028, systematic reviews and meta-analyses, retrospective model validations and simulations, commentary, and ERIC education items already seen. AEARCTR-0018280 was already logged 2026-11-04.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
