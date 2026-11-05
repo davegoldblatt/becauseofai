@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T14:12:15.849Z",
-  "since": "2026-11-03T14:12:15Z",
+  "generated_at": "2026-11-05T14:15:35.793Z",
+  "since": "2026-11-04T14:15:35Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
@@ -45,11 +45,11 @@
   "verifications": [],
   "announced": [],
   "leads_added": [
-    "ALERT-PA, cluster-randomized EHR alert for primary aldosteronism screening, 12,501 patients, Brigham and Women's. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results first posted 2026-11-03). Read in full via the registry record: real patients, randomized by clinician, 2024-03-13 start, primary completion 2024-12-09. Not drafted: the intervention is a rule-based Epic Best Practice Advisory, not AI, so it fails the \"AI did something\" test. Missing: any indication that the alert uses a model.",
-    "Protocol to watch: [AEARCTR-0020106](https://www.socialscienceregistry.org/trials/20106) (physician incentives, managed care vs fee-for-service; in development, 2028 to 2030; not an AI benefit lead).",
-    "Skipped: systematic reviews (smoking cessation, LVO stroke), retrospective model validations (cardiac MRI segmentation, osteonecrosis, ILD on notes, ECG foundation models), benchmarks, a qualitative interview study, medical-education items, an AI-moderated interviews methods preprint.",
-    "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.",
-    "ERIC returned 504."
+    "Leveraging technology to enhance access to financial advice (trust, uptake, advisor adoption). [AEARCTR-0018280](https://www.socialscienceregistry.org/trials/18280) (AEA RCT Registry, in development, 2026-05-20 to 2026-12-31). Protocol to watch: a field experiment with AI in financial advice. Missing: results, achieved dates, absolute effects.",
+    "AI and the fight against disinformation: experiment 2. [AEARCTR-0020071](https://www.socialscienceregistry.org/trials/20071) (in development, 2026-10-27 to 2026-11-12). Protocol to watch; an information experiment, probably outside the four tests.",
+    "MERIT, multi-agent EHR-grounded risk identification for early cognitive decline in primary care. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.02.26367125v1) (2026-11-03). Check whether it was used in real clinics; likely a retrospective model study. Missing: deployment, comparison, patient outcomes.",
+    "Skipped: systematic reviews (smoking cessation, LVO stroke, drowning detection, radiomics meta-analysis), retrospective model validations (cardiac MRI segmentation, osteonecrosis, lung cancer screening intervals, ILD, schistosomiasis ultrasound, ECG foundation models, mammography triage), benchmarks and commentary, an AI-moderated interviews methods preprint, ERIC chatbot education items (no add date, already seen).",
+    "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -102,81 +102,41 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2115548313919299598",
-        "url": "https://x.com/bcuz_of_ai/status/2115548313919299598",
-        "text": "An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at 12 months.\n\nhttps://t.co/mkuNQfBXJi https://t.co/fRLZp8doZV",
-        "created_at": "2026-10-28T20:56:37.000Z",
-        "impressions": 36,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2115548123749560696",
-        "url": "https://x.com/bcuz_of_ai/status/2115548123749560696",
-        "text": "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standard deviations in math in eight weeks.\n\nhttps://t.co/xsoJ50PbYK https://t.co/6hN28wB8yN",
-        "created_at": "2026-10-28T20:55:52.000Z",
-        "impressions": 53,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2115547897848537496",
-        "url": "https://x.com/bcuz_of_ai/status/2115547897848537496",
-        "text": "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet been approved anywhere.\n\nhttps://t.co/yS15K7zBWw https://t.co/Te6dORXAfi",
-        "created_at": "2026-10-28T20:54:58.000Z",
-        "impressions": 24,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-03",
-    "pageviews": 38,
+    "day": "2026-11-04",
+    "pageviews": 25,
     "visits": 20,
     "top_paths": [
       {
         "path": "/",
-        "views": 26
+        "views": 17
       },
       {
-        "path": "/not-because-of-ai",
-        "views": 3
+        "path": "/entry/nhs-derm-skin-cancer",
+        "views": 2
       },
       {
         "path": "/entry/waymo-injury-crashes",
         "views": 2
       },
       {
-        "path": "/not-yet",
-        "views": 2
-      },
-      {
-        "path": "/entry/ambient-scribes-nejm-ai",
+        "path": "/entry/maryland-ai-tutor-negative",
         "views": 1
       },
       {
-        "path": "/method",
+        "path": "/entry/columbia-star-birth",
         "views": 1
       },
       {
-        "path": "/changelog",
+        "path": "/entry/golden-bridge-ii-stroke",
         "views": 1
       },
       {
-        "path": "/entry/fido-northumbrian-leaks",
+        "path": "/about",
         "views": 1
       }
     ]

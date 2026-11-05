@@ -1,4 +1,4 @@
-Because of AI, the day in plain words. Facts gathered 2026-11-04 14:12 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-11-05 14:15 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
 - Nothing new was posted to the account.
@@ -8,9 +8,6 @@ HOW THE POSTS ARE DOING (last 7 days, newest first)
 - 2 views, 0 likes, 0 replys, 0 reposts: "Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 ad" https://x.com/bcuz_of_ai/status/2115911709739126877
 - 37 views, 2 likes, 0 replys, 1 repost: "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — whi" https://x.com/bcuz_of_ai/status/2115911523264520513
 - 1 view, 0 likes, 0 replys, 0 reposts: "Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a br" https://x.com/bcuz_of_ai/status/2115911339524628783
-- 36 views, 1 like, 0 replys, 1 repost: "An AI stethoscope rolled out to 205 NHS GP practices did not significantly increase heart-failure detection at" https://x.com/bcuz_of_ai/status/2115548313919299598
-- 53 views, 1 like, 0 replys, 1 repost: "Because of AI (plus tablets and pair work), junior secondary students in Sierra Leone gained about 0.26 standa" https://x.com/bcuz_of_ai/status/2115548123749560696
-- 24 views, 1 like, 0 replys, 1 repost: "The first generative-AI-discovered drug entered Phase III in September 2026 — no AI-discovered drug has yet be" https://x.com/bcuz_of_ai/status/2115547897848537496
 
 FOLLOWERS: 5
 
@@ -18,15 +15,14 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-11-03: 38 page views, 20 visits.
-  - /: 26
-  - /not-because-of-ai: 3
+- 2026-11-04: 25 page views, 20 visits.
+  - /: 17
+  - /entry/nhs-derm-skin-cancer: 2
   - /entry/waymo-injury-crashes: 2
-  - /not-yet: 2
-  - /entry/ambient-scribes-nejm-ai: 1
-  - /method: 1
-  - /changelog: 1
-  - /entry/fido-northumbrian-leaks: 1
+  - /entry/maryland-ai-tutor-negative: 1
+  - /entry/columbia-star-birth: 1
+  - /entry/golden-bridge-ii-stroke: 1
+  - /about: 1
 
 THE REGISTRY
 - Live on the site: 16 benefits, 5 null results, 5 watchlist items. Held off the site: 4.
@@ -39,8 +35,8 @@ STILL HELD OFF THE SITE (4)
 - "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.": the two models graded it differently (since 2026-10-25). evidence: drafter A, verifier could not grade.
 
 LEADS THE MORNING SCAN LOGGED (5)
-- ALERT-PA, cluster-randomized EHR alert for primary aldosteronism screening, 12,501 patients, Brigham and Women's. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results first posted 2026-11-03). Read in full via the registry record: real patients, randomized by clinician, 2024-03-13 start, primary completion 2024-12-09. Not drafted: the intervention is a rule-based Epic Best Practice Advisory, not AI, so it fails the "AI did something" test. Missing: any indication that the alert uses a model.
-- Protocol to watch: [AEARCTR-0020106](https://www.socialscienceregistry.org/trials/20106) (physician incentives, managed care vs fee-for-service; in development, 2028 to 2030; not an AI benefit lead).
-- Skipped: systematic reviews (smoking cessation, LVO stroke), retrospective model validations (cardiac MRI segmentation, osteonecrosis, ILD on notes, ECG foundation models), benchmarks, a qualitative interview study, medical-education items, an AI-moderated interviews methods preprint.
+- Leveraging technology to enhance access to financial advice (trust, uptake, advisor adoption). [AEARCTR-0018280](https://www.socialscienceregistry.org/trials/18280) (AEA RCT Registry, in development, 2026-05-20 to 2026-12-31). Protocol to watch: a field experiment with AI in financial advice. Missing: results, achieved dates, absolute effects.
+- AI and the fight against disinformation: experiment 2. [AEARCTR-0020071](https://www.socialscienceregistry.org/trials/20071) (in development, 2026-10-27 to 2026-11-12). Protocol to watch; an information experiment, probably outside the four tests.
+- MERIT, multi-agent EHR-grounded risk identification for early cognitive decline in primary care. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.02.26367125v1) (2026-11-03). Check whether it was used in real clinics; likely a retrospective model study. Missing: deployment, comparison, patient outcomes.
+- Skipped: systematic reviews (smoking cessation, LVO stroke, drowning detection, radiomics meta-analysis), retrospective model validations (cardiac MRI segmentation, osteonecrosis, lung cancer screening intervals, ILD, schistosomiasis ultrasound, ECG foundation models, mammography triage), benchmarks and commentary, an AI-moderated interviews methods preprint, ERIC chatbot education items (no add date, already seen).
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
-- ERIC returned 504.
