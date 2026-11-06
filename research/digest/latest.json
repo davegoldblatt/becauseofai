@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-05T14:15:35.793Z",
-  "since": "2026-11-04T14:15:35Z",
+  "generated_at": "2026-11-06T14:16:31.224Z",
+  "since": "2026-11-05T14:16:31Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 26,
@@ -45,10 +45,10 @@
   "verifications": [],
   "announced": [],
   "leads_added": [
-    "Leveraging technology to enhance access to financial advice (trust, uptake, advisor adoption). [AEARCTR-0018280](https://www.socialscienceregistry.org/trials/18280) (AEA RCT Registry, in development, 2026-05-20 to 2026-12-31). Protocol to watch: a field experiment with AI in financial advice. Missing: results, achieved dates, absolute effects.",
-    "AI and the fight against disinformation: experiment 2. [AEARCTR-0020071](https://www.socialscienceregistry.org/trials/20071) (in development, 2026-10-27 to 2026-11-12). Protocol to watch; an information experiment, probably outside the four tests.",
-    "MERIT, multi-agent EHR-grounded risk identification for early cognitive decline in primary care. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.02.26367125v1) (2026-11-03). Check whether it was used in real clinics; likely a retrospective model study. Missing: deployment, comparison, patient outcomes.",
-    "Skipped: systematic reviews (smoking cessation, LVO stroke, drowning detection, radiomics meta-analysis), retrospective model validations (cardiac MRI segmentation, osteonecrosis, lung cancer screening intervals, ILD, schistosomiasis ultrasound, ECG foundation models, mammography triage), benchmarks and commentary, an AI-moderated interviews methods preprint, ERIC chatbot education items (no add date, already seen).",
+    "Generative AI and maternal health outcomes in pregnant and postpartum individuals: a randomized clinical trial (Rosie chatbot). [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41062) (2026-11-04; full text at https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856248). Measured null for `not-because`: 400 participants, 1:1 against a book-club control, 12-month GAD-7 and PHQ-9 differences not significant (per a WebFetch summary, unverified). Missing: verbatim quotes from the full text (`npm run read` returns HTTP 403, so the gate may not read it either), exact absolute figures, and trial dates from the methods. Try Europe PMC or the registry record for a readable primary source.",
+    "ALERT-PA, electronic alert for primary aldosteronism testing. [NCT05925569](https://clinicaltrials.gov/study/NCT05925569) (results posted 2026-11-03, cluster-randomized, 2024-03-13 to 2024-12-09). Likely a rule-based EHR best-practice alert, not AI; probably outside scope. Missing: evidence that any AI is involved.",
+    "AI documentation in human services, randomized field experiment. [AEARCTR-0018700](https://www.socialscienceregistry.org/trials/18700) (in development, 2026-04-29 to 2028-12-01). Protocol to watch. Missing: results, achieved dates.",
+    "Skipped: protocols (physical-education mHealth, AI-delivered CBT for diabetes), a physician-incentives registration for 2028, systematic reviews and meta-analyses, retrospective model validations and simulations, commentary, and ERIC education items already seen. AEARCTR-0018280 was already logged 2026-11-04.",
     "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again."
   ],
   "x": {
@@ -66,73 +66,29 @@
         "reposts": 1,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2115911709739126877",
-        "url": "https://x.com/bcuz_of_ai/status/2115911709739126877",
-        "text": "Displaying AI deterioration-risk scores on a cardiology ward did not improve patient outcomes across 10,422 admissions.\n\nhttps://t.co/suxKV9YVl7 https://t.co/ZTdsZSTcIa",
-        "created_at": "2026-10-29T21:00:37.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2115911523264520513",
-        "url": "https://x.com/bcuz_of_ai/status/2115911523264520513",
-        "text": "Because of AI, 284 UCLA clinicians reported modestly lower task load and burnout from a chart summarizer — while saving no time and mostly not recommending it.\n\nhttps://t.co/znXpzWEf1E https://t.co/WmRGP36vDd",
-        "created_at": "2026-10-29T20:59:53.000Z",
-        "impressions": 37,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 1,
-        "quotes": 0
-      },
-      {
-        "id": "2115911339524628783",
-        "url": "https://x.com/bcuz_of_ai/status/2115911339524628783",
-        "text": "Because of AI, a man with ALS has spoken with his family and kept working from home for two years through a brain implant, at up to 99% word accuracy.\n\nhttps://t.co/wM5dXp5Qfn https://t.co/Aa5tln0jyn",
-        "created_at": "2026-10-29T20:59:09.000Z",
-        "impressions": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-04",
-    "pageviews": 25,
-    "visits": 20,
+    "day": "2026-11-05",
+    "pageviews": 17,
+    "visits": 16,
     "top_paths": [
       {
         "path": "/",
-        "views": 17
+        "views": 13
       },
       {
         "path": "/entry/nhs-derm-skin-cancer",
-        "views": 2
+        "views": 1
       },
       {
         "path": "/entry/waymo-injury-crashes",
-        "views": 2
-      },
-      {
-        "path": "/entry/maryland-ai-tutor-negative",
         "views": 1
       },
       {
-        "path": "/entry/columbia-star-birth",
-        "views": 1
-      },
-      {
-        "path": "/entry/golden-bridge-ii-stroke",
+        "path": "/method",
         "views": 1
       },
       {
