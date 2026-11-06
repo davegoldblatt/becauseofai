@@ -211,6 +211,21 @@ Candidates: 124 over 2026-11-02 to 2026-11-04, 13 flagged randomized, 1 alert, 0
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
 
+## 2026-11-06 (daily scout)
+
+Candidates: 137 over 2026-11-04 to 2026-11-06, 15 flagged randomized, 1 alert, 0 source errors. No entry drafted: the strongest leads could not be read in full by the gate's reader, and the rest are registrations, surveys, reviews or retrospective validations.
+
+- Generative AI and maternal health outcomes in pregnant and postpartum individuals: a randomized clinical trial (Rosie chatbot). [JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41062) (2026-11-02). Still a measured-null lead for `not-because`; `npm run read` returns HTTP 403 again today. Missing: a readable primary source (registry record or Europe PMC full text), verbatim quotes, trial dates from the methods.
+- Evaluating frontline health workers' responses to patient inquiries with and without LLM support. [JMIR](https://doi.org/10.2196/86578) (2026-11-05). Possible comparison with real workers; `npm run read` returns only a landing page. Missing: full text, whether patients were reached, design, absolute effects.
+- AI-assisted microdissection testicular sperm extraction improves sperm retrieval efficiency. [Asian J Androl](https://doi.org/10.4103/aja202644) (2026-11-06). Check whether prospective or retrospective. Missing: design, comparison, clinical outcome, full text.
+- An experimental study of AI decision support and human judgment. [AEARCTR-0019001](https://www.socialscienceregistry.org/trials/19001) (completed 2026-06-26 to 2026-11-02, online, Norway). Results may follow; likely an online experiment. Missing: results, whether it reached real decisions.
+- Protocol to watch: AI-assisted tutoring and child development in rural China, [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058) (2027-01-15 to 2028-04-30).
+- Skipped: disclaimer survey experiments (PsyArXiv), physical-education mHealth and AI-delivered CBT protocols, systematic reviews, ERIC chatbot education items already seen, AEARCTR-0018700 (logged 2026-11-05), retrospective model validations, benchmarks, simulations and commentary.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
 ## 2026-11-05 (daily scout)
 
 Candidates: 123 over 2026-11-03 to 2026-11-05, 14 flagged randomized, 1 alert, 0 source errors. No entry drafted: the one strong lead could not be read in full by the gate's reader.
