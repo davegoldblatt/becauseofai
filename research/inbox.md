@@ -226,6 +226,19 @@ Candidates: 137 over 2026-11-04 to 2026-11-06, 15 flagged randomized, 1 alert, 0
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
 
+## 2026-11-07 (daily scout)
+
+Candidates: 116 over 2026-11-05 to 2026-11-07, 16 flagged randomized, 1 alert, 0 source errors. No entry drafted: the only completed randomized items could not be read in full or are not field outcomes; the rest are registrations, protocols, reviews or retrospective validations.
+
+- AI feedback for clinician assessment of umbilical and middle cerebral artery Doppler ultrasound: a multicenter randomized trial. [AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192) (2026-11-06). Randomized, but likely clinician performance rather than patient outcomes; `npm run read` returns NOT READ (11 characters). Missing: full text, whether patients were reached, absolute effects.
+- Protocols to watch: usage feedback, reminders and generative-AI use at work in a Chinese export firm, [AEARCTR-0019968](https://www.socialscienceregistry.org/trials/19968) (2026-10-26 to 2027-10-31); AI-assisted tutoring in rural China, [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058) (2027-01-15 to 2028-04-30).
+- Still open from 2026-11-06: Rosie chatbot maternal-health null (JAMA Netw Open) and AEARCTR-0019001; no readable primary source or results yet.
+- Skipped: EdArXiv and PsyArXiv survey-style experiments, protocols, systematic reviews, ERIC items already seen, medRxiv retrospective models and simulations, and a feasibility study of AI-enhanced VR CBT.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
 ## 2026-11-05 (daily scout)
 
 Candidates: 123 over 2026-11-03 to 2026-11-05, 14 flagged randomized, 1 alert, 0 source errors. No entry drafted: the one strong lead could not be read in full by the gate's reader.
