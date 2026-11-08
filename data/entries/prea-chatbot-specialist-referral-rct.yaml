@@ -36,11 +36,14 @@ dates:
   achieved_end: 2025-04-30
   published: 2026-01-19
   added: 2026-10-25
-  updated: 2026-10-25
+  updated: 2026-11-08
 sources:
   - title: "Nature Medicine: An LLM chatbot to facilitate primary-to-specialist care transitions: a randomized controlled trial (open access, PMC)"
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13004692/
     doi: 10.1038/s41591-025-04176-7
+    type: primary
+  - title: "WHO ICTRP record of ChiCTR2400094159 (registered 17 Dec 2024, prospective)"
+    url: https://trialsearch.who.int/Trial2.aspx?TrialID=ChiCTR2400094159
     type: primary
 conflicts: >-
   Two authors are employees of WeChat AI (Tencent), which provided computational
@@ -48,10 +51,13 @@ conflicts: >-
   Public research funding; no other competing interests declared.
 what_would_change: "A trial with a clinical outcome (diagnostic accuracy, time to treatment, follow-up visits) or with a nurse-led pre-assessment as the control."
 notes: >-
-  verify: the trial is registered as ChiCTR2400094159; the ID suggests
-  registration in 2024, before recruitment began on 8 Feb 2025, but the
-  registry record was not read, so evidence A rests on the paper's account of
-  prespecified primary end points.
+  Evidence A, argued: the WHO ICTRP copy of ChiCTR2400094159 (read
+  2026-11-08; chictr.org.cn itself refused the fetch) gives a registration
+  date of 17 December 2024, marks it prospective, gives first enrolment as 8
+  February 2025, and lists consultation duration, care coordination and ease
+  of communication as primary outcomes, the three the paper reports as
+  primary. The verifier could not grade evidence on 2026-10-25 without the
+  registry; it is now a source.
   Shorter is not automatically better for a patient. The paper found no
   systematic change in specialists' clinical notes (classifier F1 0.57), and in
   a matched-pairs analysis (not randomized) participating specialists saw more
@@ -63,6 +69,12 @@ related: [kenya-ai-consult-null, ucla-chart-summarizer-rct, ambient-scribes-nejm
 history:
   - date: 2026-10-25
     note: "Added. Weekly run; read in full from the Europe PMC text."
+  - date: 2026-11-08
+    note: >-
+      Verified prospective registration: added the WHO ICTRP record of
+      ChiCTR2400094159 (registered 17 Dec 2024, first enrolment 8 Feb 2025,
+      primary outcomes matching the paper) as a primary source, answering the
+      verifier's inability to grade evidence. No value changed.
 rationale: Patients were randomized to use the PreA chatbot before the specialist visit or to usual care without it, so the arms differ only by the chatbot (isolated).
 receipts:
   - field: headline

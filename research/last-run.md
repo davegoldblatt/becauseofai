@@ -1,33 +1,36 @@
-# Last research run — 2026-11-01
+# Last research run — 2026-11-08
 
-Window: 2025-11-01 to 2026-11-01. Inputs: 30 entries, the inbox, `.scout/candidates.json` (258 candidates over 8 days, 34 flagged randomized, 2 alerts, 1 source error), and `npm run validate` (3 held, 2 warnings).
+Window: 2025-11-08 to 2026-11-08. Inputs: 30 entries, the inbox, `.scout/candidates.json` (215 candidates over 8 days, 21 flagged randomized, 1 alert, 0 errors), and `npm run validate` (4 held, 1 warning).
 
 ## Added
-None. No candidate cleared all four tests this week, and an empty week is a valid result.
+- **rosie-chatbot-maternal-null** (`not-because`, A · bundled · pre). JAMA Netw Open, 4 Nov 2026; NCT06053515. 400 pregnant and postpartum people from minoritized groups were randomized to the Rosie generative-AI chatbot or a monthly book club. At 12 months GAD-7 differed by 0.10 points and PHQ-9 by −0.23, and the moderate-or-severe prevalence ratios crossed 1. A clean null against an active control. **Bundled** because the chatbot came with videos, a syllabus and social-worker-reviewed alerts. **Window pre**, argued: enrollment ran Oct 2023 to Dec 2024 and follow-up ended Dec 2025, so only the final weeks fall inside the window. Flag: the registry's primary outcomes (PHQ-9, ER visits, well-baby visits) differ from the paper's (GAD-7, PHQ-9). Read through a web fetch, but the gate's reader got HTTP 403 on 5 Nov, so it may be held as `no-full-text` until a PMC copy appears.
 
-## Changed
-- **hurricane-melissa-2025**: **re-graded window in → pre.** The benefit ran from the first Category 5 forecast (25 Oct 2025) to landfall (28 Oct 2025). The window rolled past it on 1 Nov 2026, and only the season verification and the NHC report now fall inside it. No value changed, so the receipts stand. This is a downgrade forced by the calendar, not by new evidence. The entry still holds rank 1, which is a human's call to revisit.
+## Changed (held list first)
+- **hurricane-melissa-2025** (held `ungrounded`): **corrected.** Removed the "extra day in 2023–2025 hindcasts" clause, which came from Gizmodo (secondary), and the population and season year from `reach`. No primary source I could read carries them: the NHC report PDF exceeds the fetch limit and the Lowry post returns 403. The claims the report supports stay.
+- **prea-chatbot-specialist-referral-rct** (held `grade-split`, evidence): **verified registration.** The WHO ICTRP copy of ChiCTR2400094159 shows prospective registration on 17 Dec 2024, first enrolment 8 Feb 2025, and the same three primary outcomes as the paper. Added it as a primary source. Evidence A is unchanged and now argued in the notes.
+- No poster numbers were needed: every `because` entry already has `impact_number` and `impact_label`.
 
-No poster numbers were needed: every `because` entry already has `impact_number` and `impact_label`.
+## Left as is
+- **flourish** (`grade-split`, window): no change. It is an argument, not a value, and the window rolling forward makes `pre` stronger.
+- **oman** (`no-primary-source`): searched again and found only press relaying ministry statements. Third week held. If no primary appears, a human should decide whether to remove it.
 
 ## Rejected (reached humans · measured against something · AI made the difference · we know when)
-- **Hong Kong chatbot alcohol SBI** (Drug Alcohol Depend; NCT06602882; abstract read via Europe PMC). A clean null (−10.2 g/week, CI crosses zero), but it fails **we know when**: fieldwork was Dec 2023 to about mid-2025, so the window is pre, and the actual dates sit behind a paywall. **AI made the difference** is unconfirmed: nothing says the chatbot is more than scripted. Registered retrospectively. Sent to the inbox as a possible `not-because`.
-- **Voice-guided AI for EUS** (CGH; RCT, n=266). Fails **reached humans** as a benefit, because the outcome is scanning-station completeness, a process measure, and procedures took longer. The dates are unknown.
-- **AI-triggered rapid response** (NEJM AI; abstract via Europe PMC). An uncontrolled pre/post design (Oct 2022 to Aug 2024) weakens **measured against something**. **AI made the difference** is bundled (alert plus automatic RRT activation). The window is pre. The full text is still unread.
-- **Heidi scribe deployment** (Annals) and **Epic draft replies** (JAMA Netw Open): observational, with clinician-time outcomes. The draft-reply study is mixed and its window is pre. Both went to the inbox.
-- **Oxford LLM symptom-advice RCT** (Nature Medicine, Feb 2026, surfaced by the null search). Fails **reached humans**, because participants worked through vignettes, not their own illness. The fieldwork predates the window.
-- The other scout hits were registrations, protocols, reviews, education or rating experiments, or did not involve AI.
+- **ALERT-PA** (NCT05925569): fails **AI made the difference**. The registry describes a rules-based Epic best-practice alert with no AI.
+- **AI Doppler feedback RCT** (AJOG MFM): likely fails **reached humans**, since the outcome is clinician assessment, a process measure. Abstract unread; sent to the inbox.
+- **LATENT AI-ECG** (Circulation): publisher 403 and no indexed abstract. The registered primary is AF detection, which raises the **reached humans** question. Sent to the inbox.
+- The rest were protocols, AEA registrations still in development, retrospective model validations, reviews, surveys and vignette studies.
 
 ## Not-yet checks
-None met. FireSat: no documented detection or agency response found. Rentosertib: Phase 3 enrolling since July 2026. GB-0895: SOLAIRIA-1/2 still recruiting (Q2 2026 release). Flood Hub: no independent impact evaluation. Every Cure: ARPA-H funding news but no patient outcome tied to MATRIX.
+None met. FireSat: launched Jul 2026, live data to agencies expected by year end, but no documented detection or response. Rentosertib: GENESIS-IPF-3 first patient dosed Sep 2026, completion 2029. GB-0895: SOLAIRIA-1/2 still recruiting. Flood Hub: no independent evaluation (a Bihar case study went to the inbox). Every Cure: nothing new found.
 
 ## Searched, empty
-- Waymo hub: still through June 2026 (271.3M miles). No new quarter found.
-- ChiCTR2400094159 (PreA registration date): web search found no record. chictr.org.cn needs to be read directly.
-- Null search ("did not improve", AI, randomized, recent): nothing new in the window.
+- Waymo hub: still through June 2026 (271.3M miles).
+- Null search ("did not improve" / "no significant", AI, randomized): nothing new beyond Rosie.
+- Rosie and LATENT in Europe PMC: not yet indexed.
 
 ## Needs a human
-- **Melissa rank 1** now sits on a pre-window entry. Decide whether it should stay first.
-- **eagle-cadde-colonoscopy-rct**: the verification record is still malformed (`verifier.tokens` keys `cached`, `reasoning`). Re-run the gate (`node scripts/verify.ts --entry eagle-cadde-colonoscopy-rct`) and check the record schema against the vendor output.
-- **PreA**: read ChiCTR2400094159 directly. The held grade-split on evidence depends on it.
-- Carried over: the Flourish window and evidence grade; the Melissa TCR forecast-verification section; China CAL evidence A; STAR against the Lancet letter; NHS stroke DIDO/mRS; India TB 162 vs 173; the GOLDEN BRIDGE II CDSS vendor. Sixteen published entries still lack some receipts (see `npm run validate`).
+- **Rosie**: if the gate holds it for `no-full-text`, add the PMC copy when it appears. Rank 6 is a placeholder at the end of not-because.
+- **Melissa**: confirm "lowest season track and intensity error of any model" against TCR Tables 5b and 6b. Rank 1 still sits on a pre-window entry.
+- **Oman**: remove it, or keep holding.
+- **eagle-cadde**: the verification record is still malformed. Re-run the gate.
+- Carried over: Flourish window, China CAL evidence A, STAR vs the Lancet letter, NHS stroke DIDO/mRS, India TB 162 vs 173, GOLDEN BRIDGE II CDSS vendor, and fifteen published entries still lacking some receipts.
