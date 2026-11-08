@@ -24,15 +24,15 @@ grades:
   window: pre
 comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
 effect:
-  relative: "Lowest season track and intensity error of any model; roughly one extra day of forecast accuracy in 2023–2025 hindcasts"
+  relative: "Lowest season track and intensity error of any model"
   absolute: null
-reach: "Jamaica (pop. ~2.8M), Haiti, Cuba, Bahamas; 2025 Atlantic season"
+reach: "Jamaica, Haiti, Cuba and the Bahamas"
 dates:
   achieved_start: 2025-10-25
   achieved_end: 2025-10-28
   published: 2025-11-29
   added: 2026-10-22
-  updated: 2026-11-01
+  updated: 2026-11-08
 sources:
   - title: "NHC Tropical Cyclone Report: Hurricane Melissa (AL132025), 25 Feb 2026"
     url: https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf
@@ -67,6 +67,11 @@ notes: >-
   discussions (15 to 17) held the forecast at 135 kt while noting DeepMind members
   at Category 5. Landfall near New Hope, Jamaica, at 1700 UTC 28 Oct at 185 mph, per
   the NHC update: about 68 hours after the first Cat 5 forecast.
+  verify: "lowest season track and intensity error of any model" rests on the
+  Lowry verification post (unreadable to the weekly run, HTTP 403) and the
+  NHC report's Tables 5b and 6b; a human should confirm the report's own
+  wording. The extra-day hindcast claim was removed on 2026-11-08 for want of a
+  primary source.
   verify: the Tropical Cyclone Report (original date 25 Feb 2026, later updated) is
   published but the PDF exceeded the weekly run's fetch limit. Read its forecast
   verification section and its Jamaica death toll; no evacuation-timing analysis was found.
@@ -89,6 +94,13 @@ history:
       ending 1 Nov 2026 now starts on 1 Nov 2025. Only the season verification
       (late Nov 2025) and the NHC report (Feb 2026) fall inside it. No values
       changed.
+  - date: 2026-11-08
+    note: >-
+      Corrected effect and reach to what a primary source carries: removed the
+      "one extra day in 2023–2025 hindcasts" clause (from Gizmodo, a secondary
+      source) and the population figure and season year from reach (no primary
+      source states them). The entry was held as ungrounded on both fields; no
+      other value changed.
 rationale: The comparison is the NHC report's head-to-head check of the Google DeepMind ensemble (GDMI) against the official forecast and the other guidance models for Melissa (Tables 5b and 6b), together with the report's statement that GDMI guidance increased forecaster confidence in predicting rapid intensification at unusually long lead times.
 receipts:
   - field: headline
@@ -114,10 +126,21 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-01
-  content: 6182b6a321430ec468f2e7aa69250be91b7fc512701d5d973d2e8b2b5ee09a90
+  date: 2026-11-08
+  content: 7e1fa3a9b769d3b75837d9cb54b4f4d20c1a6e1cccfcba53414d369802b3b1c9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-08
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-08
+    verdict: fail
+  record: hurricane-melissa-2025/2026-11-08.json
 held:
   reason: ungrounded
   since: 2026-11-01
-  detail: No receipt for effect.relative, reach.
-  record: hurricane-melissa-2025/2026-11-01.json
+  detail: "impact_number (receipt 3): unsupported, The quoted passage establishes the intensity categories, not the approximately three-day warning duration.."
+  record: hurricane-melissa-2025/2026-11-08.json

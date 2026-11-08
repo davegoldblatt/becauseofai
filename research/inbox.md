@@ -265,3 +265,11 @@ Candidates: 123 over 2026-11-03 to 2026-11-05, 14 flagged randomized, 1 alert, 0
 ### Alerts
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
+## 2026-11-08 (weekly run)
+
+- AI-assisted microdissection TESE improves sperm retrieval efficiency. [Asian J Androl](https://doi.org/10.4103/aja202644) (Nov 2026). Possible `only-path` case (sperm a technician could not find), but design, dates and comparison are unknown: PubMed and the publisher page were unreadable to the weekly run. Missing: abstract, whether randomized or retrospective, achieved dates.
+- LATENT: AI-ECG alerts for early detection of atrial fibrillation, randomized. [Circulation](https://doi.org/10.1161/CIRCULATIONAHA.126.083540) (2026-11-07); registry [NCT06847932](https://clinicaltrials.gov/study/NCT06847932) (Taiwan, about 14,700 listed, primary completion July 2026). The publisher returned HTTP 403 and no abstract was indexed. Registered primary outcome is new AF diagnoses within 90 days, a detection measure; needs a treatment change or patient outcome to clear "reached humans". Missing: abstract, results, dates.
+- AI feedback for clinician assessment of umbilical and MCA Doppler, multicenter randomized trial. [AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192) (2026-11-06). Title suggests the outcome is clinician measurement accuracy, a process measure. Missing: abstract, any patient outcome.
+- Bihar flood early-warning evaluation using Google flood forecasts: alerted communities reportedly had 30% lower medical costs after flooding. [PreventionWeb case study](https://www.preventionweb.net/quick/96851) (2025). Relevant to `flood-hub-flash-floods`' what_would_change. Missing: the underlying evaluation (evaluator, design, dates); the case study names none.
+- Improving farm productivity and profitability through AI diffusion, Punjab, Pakistan. [Frontiers in AI](https://doi.org/10.3389/frai.2026.1890862) (2026). Observational, judging by the title. Missing: design, comparison, dates.

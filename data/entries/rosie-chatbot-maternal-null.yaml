@@ -1,0 +1,124 @@
+id: rosie-chatbot-maternal-null
+section: not-because
+rank: 6
+headline: >-
+  A generative-AI maternal health chatbot did not reduce anxiety or depression
+  over 12 months among 400 pregnant and postpartum people, compared with a
+  monthly children's book club.
+impact: "Null on anxiety and depression (RCT, active control)"
+summary: >-
+  A randomized trial (JAMA Network Open, November 2026) recruited pregnant and
+  postpartum people from minoritized racial and ethnic groups across the US
+  between October 2023 and December 2024 and gave half access to Rosie, a
+  generative-AI chatbot answering maternal and infant health questions, and
+  half a monthly board book. At 12 months, anxiety and depression scores did
+  not differ, nor did the share with moderate or severe symptoms.
+caveat: >-
+  The control was an attention-matched book club, not no contact, and the
+  population was not selected for elevated symptoms, so a modest benefit in a
+  higher-risk group cannot be ruled out. Participants were paid per question
+  asked.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "Access to the Rosie chatbot (with video library, resources, FAQ, daily syllabus and social-worker-reviewed safety alerts) vs a monthly children's book club, 1:1 randomization, 12-month follow-up"
+effect:
+  relative: "Moderate or severe anxiety aPR 1.06 (95% CI 0.61–1.83); moderate or severe depression aPR 1.28 (0.70–2.36); neither significant"
+  absolute: "GAD-7 adjusted mean difference 0.10 points (95% CI −0.77 to 0.96); PHQ-9 −0.23 points (−1.05 to 0.59)"
+reach: "400 pregnant and postpartum people from minoritized racial and ethnic groups in 49 US states and the District of Columbia"
+dates:
+  achieved_start: 2023-10
+  achieved_end: 2025-12
+  published: 2026-11-04
+  added: 2026-11-08
+  updated: 2026-11-08
+sources:
+  - title: "JAMA Network Open: Generative Artificial Intelligence and Maternal Health Outcomes in Pregnant and Postpartum Individuals — A Randomized Clinical Trial (Norell et al.)"
+    url: https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856248
+    doi: 10.1001/jamanetworkopen.2026.41062
+    type: primary
+  - title: "ClinicalTrials.gov NCT06053515: Rosie the Chatbot (University of Maryland, College Park)"
+    url: https://clinicaltrials.gov/study/NCT06053515
+    type: primary
+conflicts: >-
+  Funded by the National Institute on Minority Health and Health Disparities,
+  which had no role in design or conduct; one author reported personal fees
+  from Rashi.ai. The registry sponsor is the University of Maryland, College
+  Park; the paper says only that the chatbot was developed using
+  community-engaged methods, not who built it.
+what_would_change: "A trial in people with elevated baseline symptoms, or one powered for the registered emergency-visit and well-baby-visit outcomes, showing a benefit."
+notes: >-
+  Window argued as pre: the 12-month outcomes were collected between about
+  October 2024 and December 2025, so only the last weeks of follow-up fall
+  inside the window that opened on 8 November 2025; the result is new, the
+  experience it measures mostly is not.
+  verify: the registry lists PHQ-9 depression, emergency room visits and
+  well-baby visit attendance as primary outcomes; the paper reports GAD-7 and
+  PHQ-9 as co-primary, and emergency department visits (adjusted rate ratio
+  1.20, 95% CI 0.83–1.74) as secondary. PHQ-9 is registered primary and null,
+  so evidence stays A, but the outcome set changed between registry and paper.
+  verify: registry completion is 23 January 2026, a month after the paper's
+  December 2025 end of follow-up.
+  The full article was read through a web fetch on 2026-11-08; it was not yet
+  in Europe PMC. The gate's reader got HTTP 403 from the JAMA page on
+  2026-11-05, so the entry may be held as no-full-text until a PMC copy
+  (JAMA Network Open is open access) can be added as a source.
+related: [kenya-ai-consult-null, flourish-ai-coach-students-rct]
+history:
+  - date: 2026-11-08
+    note: "Added. Weekly run; read from the JAMA Network Open article and the ClinicalTrials.gov record."
+rationale: The chatbot came packaged with a video library, resources, a daily syllabus and social-worker-reviewed safety alerts, and the package was tested against a book club, so the arms do not isolate the generative AI (bundled).
+receipts:
+  - field: headline
+    quote: Of 400 randomized participants,
+    locator: Results
+    source: 0
+  - field: headline
+    quote: Enrollment occurred from October 2023 to December 2024, with 12-month follow-up completed in December 2025.
+    locator: Abstract, Design, Setting, and Participants
+    source: 0
+  - field: effect.relative
+    quote: adjusted prevalence ratio [aPR], 1.06; 95% CI, 0.61 to 1.83
+    locator: Results, moderate or severe anxiety
+    source: 0
+  - field: effect.relative
+    quote: (aPR, 1.28; 95% CI, 0.70 to 2.36)
+    locator: Results, moderate or severe depression
+    source: 0
+  - field: effect.absolute
+    quote: adjusted mean difference, 0.10; 95% CI, −0.77 to 0.96
+    locator: Abstract, Results (GAD-7)
+    source: 0
+  - field: effect.absolute
+    quote: adjusted mean difference, −0.23; 95% CI, −1.05 to 0.59
+    locator: Abstract, Results (PHQ-9)
+    source: 0
+  - field: reach
+    quote: Of 400 randomized participants,
+    locator: Results
+    source: 0
+  - field: reach
+    quote: across 49 US states and the District of Columbia
+    locator: Abstract, Design, Setting, and Participants
+    source: 0
+  - field: dates.achieved_start
+    quote: Enrollment occurred from October 2023 to December 2024, with 12-month follow-up completed in December 2025.
+    locator: Abstract, Design, Setting, and Participants
+    source: 0
+  - field: dates.achieved_end
+    quote: Enrollment occurred from October 2023 to December 2024, with 12-month follow-up completed in December 2025.
+    locator: Abstract, Design, Setting, and Participants
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-11-08
+  content: 029d459377355299c062eafafe08d3395c1dc69e10e4f3b2958d9dd2d3c93302
+held:
+  reason: no-full-text
+  since: 2026-11-08
+  detail: source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked.
+  record: rosie-chatbot-maternal-null/2026-11-08.json
