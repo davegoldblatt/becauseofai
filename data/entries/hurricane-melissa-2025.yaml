@@ -126,10 +126,21 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-01
-  content: 6182b6a321430ec468f2e7aa69250be91b7fc512701d5d973d2e8b2b5ee09a90
+  date: 2026-11-08
+  content: 7e1fa3a9b769d3b75837d9cb54b4f4d20c1a6e1cccfcba53414d369802b3b1c9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-08
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-08
+    verdict: fail
+  record: hurricane-melissa-2025/2026-11-08.json
 held:
   reason: ungrounded
   since: 2026-11-01
-  detail: No receipt for effect.relative, reach.
-  record: hurricane-melissa-2025/2026-11-01.json
+  detail: "impact_number (receipt 3): unsupported, The quoted passage establishes the intensity categories, not the approximately three-day warning duration.."
+  record: hurricane-melissa-2025/2026-11-08.json

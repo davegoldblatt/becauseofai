@@ -116,3 +116,9 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-08
+  content: 029d459377355299c062eafafe08d3395c1dc69e10e4f3b2958d9dd2d3c93302
+held:
+  reason: no-full-text
+  since: 2026-11-08
+  detail: source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked.
+  record: rosie-chatbot-maternal-null/2026-11-08.json
