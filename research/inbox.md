@@ -226,6 +226,20 @@ Candidates: 137 over 2026-11-04 to 2026-11-06, 15 flagged randomized, 1 alert, 0
 
 - `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
 
+## 2026-11-08 (daily scout)
+
+Candidates: 99 over 2026-11-06 to 2026-11-08, 14 flagged randomized, 1 alert, 0 source errors. No entry drafted: the one randomized clinical lead cannot be read by the gate's reader, and the readable clinical item is a retrospective cohort.
+
+- Leveraging AI-ECG Technology for Early Notification and Tracking of AF Development (LATENT): a randomized controlled trial. [Circulation](https://doi.org/10.1161/CIRCULATIONAHA.126.083540). Randomized AI-ECG trial; `npm run read` returns HTTP 403. Missing: readable primary source (registry record or Europe PMC full text), trial dates, comparison, absolute effects, whether patients were reached.
+- AI-assisted micro-TESE for non-obstructive azoospermia. [Asian J Androl](https://doi.org/10.4103/aja202644). Read in full. Retrospective two-centre cohort, 2020-01 to 2024-12, 542 AI vs 744 conventional; sperm retrieval 68.1% vs 47.6%, live birth +11.5 points. Real patients and a named comparison, but not randomized and allocation was by surgical technique, so attribution is weak; kept as a lead. Missing: how patients were allocated, whether the groups overlapped in time, prospective or randomized confirmation.
+- Still open: Rosie chatbot maternal-health null ([JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41062), unreadable); Doppler AI-feedback RCT ([AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192), unreadable, likely clinician performance); [AEARCTR-0019001](https://www.socialscienceregistry.org/trials/19001) (completed 2026-11-02, no results posted).
+- Protocols to watch: [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058) (AI tutoring, rural China), [AEARCTR-0019968](https://www.socialscienceregistry.org/trials/19968) (gen-AI use at work), [AEARCTR-0020014](https://www.socialscienceregistry.org/trials/20014) (AI in political campaigns), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI).
+- Skipped: EdArXiv and PsyArXiv survey-style experiments, ERIC education items, reviews, retrospective model validations, benchmarks, commentary.
+
+### Alerts
+
+- `eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again.
+
 ## 2026-11-07 (daily scout)
 
 Candidates: 116 over 2026-11-05 to 2026-11-07, 16 flagged randomized, 1 alert, 0 source errors. No entry drafted: the only completed randomized items could not be read in full or are not field outcomes; the rest are registrations, protocols, reviews or retrospective validations.
