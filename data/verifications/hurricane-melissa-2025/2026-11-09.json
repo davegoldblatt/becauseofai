@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "hurricane-melissa-2025",
+  "date": "2026-11-09",
+  "as_of": "2026-10-22",
+  "entry_sha256": "b562b054bb36173c53b0044f9835fd1abb054455f5bca1e1d036a7a9d1000efe",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-09"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-09T18:44:18.465Z",
+      "final_url": "https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf",
+      "sha256": "7365908388f6cd9191f01867cd7a8ab86961c780f71793d8c023c0bfb69fb62d",
+      "chars": 146879,
+      "truncated": false
+    },
+    {
+      "index": 1,
+      "url": "https://www.nhc.noaa.gov/archive/2025/al13/al132025.discus.018.shtml",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-09T18:44:18.807Z",
+      "final_url": "https://www.nhc.noaa.gov/archive/2025/al13/al132025.discus.018.shtml",
+      "sha256": "491dd569d7a724f70204f02e3ebf977aa9f622255b1177fbca01b05f32396377",
+      "chars": 8296,
+      "truncated": false
+    },
+    {
+      "index": 2,
+      "url": "https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-09T18:44:19.050Z",
+      "final_url": "https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast",
+      "sha256": "838d3aad957abe9cd31a0ea172dd7be59bfe6c38fae7316fdffe2831881d2436",
+      "chars": 8420,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 1,
+      "quote": "INIT 25/2100Z 16.6N 75.5W 80 KT 90 MPH",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 2,
+      "quote": "DeepMind has been the top performing model for track and intensity in both the Atlantic and the Pacific basins this season",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Melissa made landfall as an estimated 160-kt category 5 hurricane near New Hope, Jamaica, around 1725 UTC 28 October.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-09",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "Verified official forecasts combined DeepMind, conventional hurricane models and human judgment, with comparisons against observed outcomes, other guidance and historical baselines.",
+      "achieved_dates": {
+        "from": "report-body",
+        "note": "The dated operational discussion establishes 25 October 2025; the report body establishes landfall on 28 October 2025."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses the Google–NHC evaluation partnership described in source 2, but the supplied text establishes no vendor funding, employment, equity, patent or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The sources support nearly three days of advance Category 5 warning delivered through operational forecasts, with an identifiable contribution from DeepMind alongside other guidance. They do not quantify additional warning attributable solely to AI or lives saved, and the seasonwide model ranking is preliminary."
+    },
+    "error": null,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 50372
+    },
+    "duration_ms": 17163
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The sources support nearly three days of advance Category 5 warning delivered through operational forecasts, with an identifiable contribution from DeepMind alongside other guidance. They do not quantify additional warning attributable solely to AI or lives saved, and the seasonwide model ranking is preliminary."
+  }
+}

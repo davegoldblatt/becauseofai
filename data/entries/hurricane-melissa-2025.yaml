@@ -20,8 +20,8 @@ domain: disaster
 ai_type: classic-ml
 grades:
   evidence: B
-  attribution: isolated
-  window: pre
+  attribution: bundled
+  window: in
 comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
 effect:
   relative: "Lowest season track and intensity error of any model"
@@ -32,7 +32,7 @@ dates:
   achieved_end: 2025-10-28
   published: 2025-11-29
   added: 2026-10-22
-  updated: 2026-11-08
+  updated: 2026-11-09
 sources:
   - title: "NHC Tropical Cyclone Report: Hurricane Melissa (AL132025), 25 Feb 2026"
     url: https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf
@@ -40,14 +40,14 @@ sources:
   - title: "NHC Forecast Discussion 18, 2100 UTC 25 Oct 2025 (first 140 kt forecast)"
     url: https://www.nhc.noaa.gov/archive/2025/al13/al132025.discus.018.shtml
     type: primary
-  - title: "NHC Tropical Cyclone Update, 1700 UTC 28 Oct 2025 (Jamaica landfall)"
-    url: https://www.nhc.noaa.gov/archive/2025/al13/al132025.update.10281700.shtml
+  - title: "Michael Lowry: Two forecast models stand out (2025 season verification)"
+    url: https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast
     type: primary
   - title: "NWS: AI hurricane forecasting Q&A (2025 season)"
     url: https://www.weather.gov/news/261102-AI-Hurricane-Forecasting
     type: primary
-  - title: "Michael Lowry: Two forecast models stand out (2025 season verification)"
-    url: https://michaelrlowry.substack.com/p/this-hurricane-season-two-forecast
+  - title: "NHC Tropical Cyclone Update, 1700 UTC 28 Oct 2025 (Jamaica landfall)"
+    url: https://www.nhc.noaa.gov/archive/2025/al13/al132025.update.10281700.shtml
     type: primary
   - title: "NPR: The future of hurricane forecasting is AI"
     url: https://www.npr.org/2025/11/29/nx-s1-5604290/atlantic-hurricane-season-forecast-ai-google
@@ -101,7 +101,17 @@ history:
       source) and the population figure and season year from reach (no primary
       source states them). The entry was held as ungrounded on both fields; no
       other value changed.
-rationale: The comparison is the NHC report's head-to-head check of the Google DeepMind ensemble (GDMI) against the official forecast and the other guidance models for Melissa (Tables 5b and 6b), together with the report's statement that GDMI guidance increased forecaster confidence in predicting rapid intensification at unusually long lead times.
+  - date: 2026-11-09
+    note: >-
+      The "about three days" figure now cites the report's "nearly three days of
+      advance notice" sentence, and the season result cites Michael Lowry's report
+      of a retired NHC chief forecaster's analysis (readable, moved into the first
+      three primary sources). Attribution re-graded from isolated to bundled: the
+      Category 5 call came from forecasters using the DeepMind model alongside other
+      guidance, with no with-versus-without-AI comparison. Window set back to in:
+      the site's as-of date is 22 Oct 2026, so its 12-month window starts 22 Oct
+      2025 and the benefit (25 to 28 Oct 2025) falls inside it.
+rationale: The bundled grade rests on the NHC Tropical Cyclone Report. Table 6b compares the Google DeepMind ensemble (GDMI) with every other intensity guidance model and the official forecast for Melissa on the same forecast cases. The Category 5 call itself came from forecasters using GDMI together with the HAFS, HWRF and HMON hurricane models, which the report says made them more confident in predicting rapid intensification at long lead times. No comparison removes the AI alone.
 receipts:
   - field: headline
     quote: Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane,
@@ -112,13 +122,17 @@ receipts:
     locator: Forecast and Warning Critique, Intensity Forecast, p. 17
     source: 0
   - field: impact_number
-    quote: predicted a storm to reach Category 5 strength from that low of an initial intensity (80 kt - Category 1).
+    quote: Subsequent forecasts provided nearly three days of advance notice prior to landfall that Melissa would make landfall as a powerful Category 5 hurricane
     locator: Forecast and Warning Critique, Intensity Forecast, p. 17
     source: 0
   - field: dates.achieved_start
     quote: INIT 25/2100Z 16.6N 75.5W 80 KT 90 MPH
     locator: Discussion 18 body, Forecast Positions and Max Winds (issued 500 PM EDT Sat Oct 25 2025)
     source: 1
+  - field: effect.relative
+    quote: DeepMind has been the top performing model for track and intensity in both the Atlantic and the Pacific basins this season
+    locator: A banner year for Google DeepMind
+    source: 2
   - field: dates.achieved_end
     quote: Melissa made landfall as an estimated 160-kt category 5 hurricane near New Hope, Jamaica, around 1725 UTC 28 October.
     locator: Synoptic History, p. 4
@@ -126,21 +140,16 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-08
-  content: 7e1fa3a9b769d3b75837d9cb54b4f4d20c1a6e1cccfcba53414d369802b3b1c9
+  date: 2026-11-09
+  content: b562b054bb36173c53b0044f9835fd1abb054455f5bca1e1d036a7a9d1000efe
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-08
+    date: 2026-11-09
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-08
-    verdict: fail
-  record: hurricane-melissa-2025/2026-11-08.json
-held:
-  reason: ungrounded
-  since: 2026-11-01
-  detail: "impact_number (receipt 3): unsupported, The quoted passage establishes the intensity categories, not the approximately three-day warning duration.."
-  record: hurricane-melissa-2025/2026-11-08.json
+    date: 2026-11-09
+    verdict: pass
+  record: hurricane-melissa-2025/2026-11-09.json
