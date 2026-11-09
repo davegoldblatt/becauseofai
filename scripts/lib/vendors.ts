@@ -29,9 +29,37 @@ export type Result<T> =
 export type Availability = { via: "api" | "codex-login" | "claude-login" } | { via: null; why: string };
 
 const CODEX = process.env.CODEX_BIN || "codex";
+// Every Codex feature that gives the model a way to act (the same list as
+// Pundit Claims's scripts/lib/subscription.ts). With them off, the verifier
+// can only read the prompt and write the answer: no shell, so no way to read
+// its own login file whatever a source page says.
+export const CODEX_DISABLED_FEATURES = [
+  "shell_tool", "unified_exec", "unified_exec_tty", "shell_snapshot", "apps", "browser_use", "browser_use_external",
+  "browser_use_full_cdp_access", "computer_use", "image_generation", "multi_agent", "plugins", "remote_plugin", "hooks",
+  "view_image", "tool_suggest", "skill_search", "skill_mcp_dependency_install", "sleep_tool", "in_app_browser",
+  "in_app_local_automation", "goals", "workspace_dependencies", "code_mode_host", "code_mode_interrupt",
+];
 const CLAUDE = process.env.CLAUDE_BIN || "claude";
 
 let codexHomeCache: string | null | undefined;
+let writeback: { from: string; to: string; last: string } | null = null;
+
+// Copies a refreshed login back to where it was read from, at once (after
+// every call, so a cancelled job loses nothing already refreshed) and
+// atomically. Only a well-formed login with a refresh token is written.
+// Throws when the copy fails, so the run stops instead of carrying on with a
+// login the next run cannot use.
+export function saveRefreshedLogin(): boolean {
+  if (!writeback) return false;
+  const now = fs.readFileSync(writeback.from, "utf8");
+  if (now === writeback.last) return false;
+  if (!JSON.parse(now)?.tokens?.refresh_token) throw new Error("the refreshed ChatGPT login has no refresh token; not saved");
+  const tmp = `${writeback.to}.tmp-${process.pid}`;
+  fs.writeFileSync(tmp, now, { mode: 0o600 });
+  fs.renameSync(tmp, writeback.to);
+  writeback.last = now;
+  return true;
+}
 // Where Codex finds its login. CODEX_AUTH_JSON (the file's contents, from a
 // secret) wins; then CODEX_HOME; then ~/.codex. The model always runs against
 // a fresh temporary home holding only auth.json (0600, removed at exit), never
@@ -39,18 +67,29 @@ let codexHomeCache: string | null | undefined;
 export function codexHome(): string | null {
   if (codexHomeCache !== undefined) return codexHomeCache;
   let auth: string | null = null;
+  let source: string | null = null;
   const fromSecret = process.env.CODEX_AUTH_JSON;
   if (fromSecret && fromSecret.trim()) auth = fromSecret;
   else {
     for (const dir of [process.env.CODEX_HOME, path.join(os.homedir(), ".codex")]) {
       const f = dir && path.join(dir, "auth.json");
-      if (f && fs.existsSync(f)) { auth = fs.readFileSync(f, "utf8"); break; }
+      if (f && fs.existsSync(f)) { auth = fs.readFileSync(f, "utf8"); source = f; break; }
     }
   }
   if (!auth) return (codexHomeCache = null);
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "boa-codex-"));
   fs.chmodSync(dir, 0o700);
   fs.writeFileSync(path.join(dir, "auth.json"), auth, { mode: 0o600 });
+  // A ChatGPT login refreshes itself about every ten days, and the old refresh
+  // token stops working once it has been used. With CODEX_LOGIN_WRITEBACK=1
+  // (CI, where the login is fetched from private storage and saved back after
+  // the run), a refreshed login is copied back to where it was read from, or
+  // the next run would start from a dead one. Only a well-formed login with
+  // tokens is written back.
+  if (source && process.env.CODEX_LOGIN_WRITEBACK === "1") {
+    writeback = { from: path.join(dir, "auth.json"), to: source, last: auth };
+    process.on("exit", () => { try { saveRefreshedLogin(); } catch { /* reported by the run that refreshed it */ } });
+  }
   process.on("exit", () => fs.rmSync(dir, { recursive: true, force: true }));
   return (codexHomeCache = dir);
 }
@@ -74,18 +113,22 @@ export function looksLikeSecret(output: unknown): string | null {
 }
 
 export function availability(vendor: Vendor): Availability {
+  // Dave, 2026-11-09: every call runs on his personal subscriptions. An API
+  // key in the environment is ignored unless BOA_ALLOW_API=1 says otherwise,
+  // so a stray secret can never start billing the API.
+  const apiAllowed = process.env.BOA_ALLOW_API === "1";
   if (vendor === "openai") {
-    if (process.env.OPENAI_API_KEY) return { via: "api" };
+    if (apiAllowed && process.env.OPENAI_API_KEY) return { via: "api" };
     // The CLI route runs an agent with a read-only shell. On a shared runner
     // that is a tool the verifier does not need; the API has none. It takes an
     // explicit opt-in there.
     if (process.env.GITHUB_ACTIONS && process.env.ALLOW_CODEX_LOGIN_IN_CI !== "1") {
-      return { via: null, why: "no OPENAI_API_KEY; the Codex login route is not used in CI unless ALLOW_CODEX_LOGIN_IN_CI=1" };
+      return { via: null, why: "the Codex login route is not used in CI unless ALLOW_CODEX_LOGIN_IN_CI=1" };
     }
     if (codexHome()) return { via: "codex-login" };
     return { via: null, why: "no OPENAI_API_KEY and no Codex login (CODEX_AUTH_JSON or CODEX_HOME/auth.json)" };
   }
-  if (process.env.ANTHROPIC_API_KEY) return { via: "api" };
+  if (apiAllowed && process.env.ANTHROPIC_API_KEY) return { via: "api" };
   if (process.env.CLAUDE_CODE_OAUTH_TOKEN || process.env.CLAUDE_CONFIG_DIR || fs.existsSync(path.join(os.homedir(), ".claude"))) return { via: "claude-login" };
   return { via: null, why: "no ANTHROPIC_API_KEY and no Claude Code login (CLAUDE_CODE_OAUTH_TOKEN)" };
 }
@@ -166,16 +209,25 @@ async function codexCli<T>(req: Request<T>): Promise<Raw> {
   try {
     const args = [
       "exec", "--skip-git-repo-check", "--ignore-user-config", "--ignore-rules", "--ephemeral", "--sandbox", "read-only", "-C", cwd,
-      "-m", req.model, "-c", `model_reasoning_effort="${req.effort ?? "high"}"`, "--output-schema", schemaFile, "-o", outFile, "-",
+      ...CODEX_DISABLED_FEATURES.flatMap((f) => ["--disable", f]), "-c", 'web_search="disabled"',
+      "-m", req.model, "-c", `model_reasoning_effort="${req.effort ?? "high"}"`, "--output-schema", schemaFile, "-o", outFile, "--json", "-",
     ];
     const prompt = `${req.system}\n\nAnswer with one JSON object matching the output schema and nothing else.\n\n${req.user}`;
     const r = await run(CODEX, args, { cwd, env: cliEnv({ CODEX_HOME: home }), stdin: prompt, timeoutMs: req.timeoutMs ?? 900_000 });
+    saveRefreshedLogin();
+    // The event stream lists every item the run produced. Anything other than
+    // the model's own message and reasoning (and "error" notices, such as a
+    // disabled tool failing closed) means a tool ran: refuse the answer.
+    const events = r.stdout.split("\n").filter((l) => l.startsWith("{")).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) as { type: string; item?: { type?: string }; usage?: Record<string, number> }[];
+    const acted = events.filter((e) => e.item?.type && !["agent_message", "reasoning", "error"].includes(e.item.type));
+    if (acted.length) throw new Error(`codex used a tool (${[...new Set(acted.map((e) => e.item!.type))].join(", ")}); answer refused`);
     if (!fs.existsSync(outFile)) throw new Error(`codex exec exited ${r.code} without output: ${(r.stderr || r.stdout).trim().slice(-400)}`);
     const text = fs.readFileSync(outFile, "utf8").trim();
     if (!text) throw new Error(`codex exec wrote an empty answer (exit ${r.code})`);
+    const turn = events.filter((e) => e.type === "turn.completed").at(-1)?.usage;
     const m = /tokens used\s*\n?\s*([\d,]+)/i.exec(r.stdout + "\n" + r.stderr);
-    const total = m ? Number(m[1].replace(/,/g, "")) : null;
-    return { output: JSON.parse(text), tokens: total != null ? { input: 0, output: 0, total } : null };
+    const total = turn ? (turn.input_tokens ?? 0) + (turn.output_tokens ?? 0) : m ? Number(m[1].replace(/,/g, "")) : null;
+    return { output: JSON.parse(text), tokens: total != null ? { input: turn?.input_tokens ?? 0, output: turn?.output_tokens ?? 0, total, cached: turn?.cached_input_tokens ?? 0, reasoning: turn?.reasoning_output_tokens ?? 0 } : null };
   } finally {
     fs.rmSync(work, { recursive: true, force: true });
   }

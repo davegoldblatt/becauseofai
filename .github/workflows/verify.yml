@@ -3,9 +3,11 @@ name: verify
 #   dispatch mode=verify     run the gate over the entries named (or all, or changed)
 #   dispatch mode=receipts   the drafter writes receipts for the entries named (migration, or an entry a person edited)
 #   issues labeled "dispute" both vendors assess the dispute; the entry is amended, the issue closed, or the entry held
-# Each run commits what it wrote to the branch it ran on. The verifier needs
-# OPENAI_API_KEY (or CODEX_AUTH_JSON); without one, entries hold as
-# verification-unavailable, which is the rule: never publish on one vendor.
+# Each run commits what it wrote to the branch it ran on. The verifier is the
+# robot's ChatGPT login (Dave's personal ChatGPT), fetched from private storage
+# by scripts/ci/codex-login.sh and saved back after the run; without it,
+# entries hold as verification-unavailable, which is the rule: never publish
+# on one vendor.
 on:
   workflow_dispatch:
     inputs:
@@ -44,16 +46,18 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.label.name == 'dispute' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    # Every job that uses the robot's ChatGPT login waits for the others: a
+    # login refreshed by one run kills the copy another run is holding.
+    concurrency:
+      group: boai-codex-login
+      cancel-in-progress: false
     # Writes land on a branch or in a pull request; nothing here pushes main.
     permissions:
       contents: write
       issues: write
       pull-requests: write
     env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
       ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPO: ${{ github.repository }}
@@ -69,7 +73,13 @@ jobs:
       - name: Install the vendor CLIs and pdftotext
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
-          npm install -g @openai/codex @anthropic-ai/claude-code
+          npm install -g @openai/codex@0.166.0 @anthropic-ai/claude-code
+      - name: Fetch the robot's ChatGPT login (Dave's personal ChatGPT, from private storage)
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        run: bash scripts/ci/codex-login.sh fetch boai
       - name: Check the inputs
         if: ${{ github.event_name == 'workflow_dispatch' }}
         env:
@@ -140,3 +150,10 @@ jobs:
           git push -q -u origin "$branch"
           gh pr create --head "$branch" --base main --title "Gate: $LABEL" --body "Written by the verify workflow ($LABEL). Entry files and verification records only. The next scheduled scout run merges it once validate and build pass."
           echo "opened a pull request from $branch; the scheduled scout run lands it"
+      - name: Save the robot's ChatGPT login if the run refreshed it
+        if: always()
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        run: bash scripts/ci/codex-login.sh save boai

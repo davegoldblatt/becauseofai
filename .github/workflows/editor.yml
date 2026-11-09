@@ -68,6 +68,11 @@ jobs:
     needs: draft
     if: ${{ needs.draft.outputs.branch != '' }}
     runs-on: ubuntu-latest
+    # Every job that uses the robot's ChatGPT login waits for the others: a
+    # login refreshed by one run kills the copy another run is holding.
+    concurrency:
+      group: boai-codex-login
+      cancel-in-progress: false
     timeout-minutes: 90
     permissions:
       contents: write
@@ -97,11 +102,15 @@ jobs:
       - name: Install the verifier's tools
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
-          npm install -g @openai/codex
+          npm install -g @openai/codex@0.166.0
+      - name: Fetch the robot's ChatGPT login (Dave's personal ChatGPT, from private storage)
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        run: bash scripts/ci/codex-login.sh fetch boai
       - name: The gate (second vendor, independent)
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
           ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
         run: |
           set -euo pipefail
@@ -116,6 +125,13 @@ jobs:
             git commit -m "Gate: verify the run's entries"
             git push origin "HEAD:$BRANCH"
           fi
+      - name: Save the robot's ChatGPT login if the run refreshed it
+        if: always()
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        run: bash scripts/ci/codex-login.sh save boai
       - name: Validate and build the result
         run: npm run validate && npm run build
       - name: Merge the run's pull request
