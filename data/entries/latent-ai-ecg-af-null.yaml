@@ -1,0 +1,116 @@
+id: latent-ai-ecg-af-null
+section: not-because
+rank: 8
+headline: >-
+  An AI-ECG screen of 14,665 adults at a Taiwanese hospital did not
+  significantly increase atrial fibrillation diagnoses (0.3% vs 0.2%) or the
+  start of antiarrhythmic treatment, compared with usual care.
+impact: "No more AF found or treated (RCT)"
+impact_number: "0.3% vs 0.2%"
+impact_label: "AF or flutter detected, AI-ECG vs usual care, not significant"
+summary: >-
+  A randomized trial (Circulation, November 2026) applied an AI-ECG model to
+  past ECGs of adults aged 40 to 85 without known AF and offered up to seven
+  days of Holter monitoring to those it flagged as high risk, against usual
+  care with matched controls monitored the same way; new AF or flutter and
+  treatment starts did not differ, and the composite primary outcome, driven by
+  pre-AF findings such as premature atrial beats, was only marginally higher.
+caveat: >-
+  Only 84 intervention participants were flagged (78 in control) and 48
+  monitored, so the trial had little
+  room to change AF diagnoses; the composite primary outcome was nominally
+  positive but changes to P = 0.057 if one event is reclassified; only the
+  abstract could be read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: ongoing
+comparison: "AI-ECG risk flag with targeted Holter monitoring vs usual care (age- and sex-matched controls given identical monitoring), 1:1 randomization, single centre"
+effect:
+  relative: "Composite of new AF, flutter or pre-AF findings OR 1.54 (95% CI 1.01–2.37), P = 0.046; P = 0.057 if one event is reclassified"
+  absolute: "AF or flutter detected 0.3% vs 0.2%; antiarrhythmic therapy started by 180 days 2.3% vs 2.4%; composite 0.74% vs 0.48%"
+reach: "14,665 adults aged 40 to 85 without previous AF, randomized at a single centre in Taiwan; 48 flagged participants and 48 matched controls monitored"
+dates:
+  achieved_start: 2025-07-01
+  achieved_end: null
+  published: 2026-11-07
+  added: 2026-11-09
+  updated: 2026-11-09
+sources:
+  - title: "Circulation: Leveraging AI-ECG Technology for Early Notification and Tracking of AF Development (LATENT) — A Randomized Controlled Trial (Lee et al.), abstract via Europe PMC"
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42998297?resultType=core&format=xml
+    doi: 10.1161/CIRCULATIONAHA.126.083540
+    type: primary
+  - title: "ClinicalTrials.gov NCT06847932: LATENT (National Defense Medical Center, Taiwan)"
+    url: https://clinicaltrials.gov/study/NCT06847932
+    type: primary
+conflicts: >-
+  Investigator-led and sponsored by the National Defense Medical Center,
+  Taiwan; several authors are from its Military Digital Medical Center. The
+  abstract read carries no funding or disclosure statement, and does not say
+  who developed the AI-ECG model.
+what_would_change: "A larger trial, powered for AF diagnosis, anticoagulation and stroke, showing that AI-ECG-guided monitoring changes treatment or outcomes."
+notes: >-
+  Filed under not-because: the outcomes that would matter to a patient (AF or
+  flutter found, treatment started) did not differ, and the authors call the
+  composite primary result fragile. A human may prefer to read it as a narrow
+  detection gain; the headline states only what the abstract supports.
+  Window argued as ongoing: the registry gives an actual start of 1 July 2025,
+  four months before the window opened on 9 November 2025, with 90- and 180-day
+  follow-up and an estimated primary completion of July 2026, so the trial
+  began before the window and most of its data fall inside it. Not in, because
+  it started earlier; not pre, because most of it is in-window. The end is left
+  unverified because the registry's completion dates are estimates.
+  Evidence A: registered on 26 February 2025, before the start.
+  Placed as reasonable: the Circulation page returns HTTP 403 to the gate's
+  reader and the paper is not in PMC. The full text would raise it.
+  verify: whether the AI-ECG model was developed by the authors' institution,
+  and any commercial licence, from the full text's disclosures.
+related: [advance-ai-ecg-liver, tricorder-ai-stethoscope-null]
+history:
+  - date: 2026-11-09
+    note: "Added. Weekly run; read from the Circulation abstract (Europe PMC) and the ClinicalTrials.gov record."
+rationale: Both arms had the same care and the matched controls the same monitoring, and the only difference was whether the AI-ECG model chose who was monitored, so the comparison isolates the AI (isolated).
+receipts:
+  - field: headline
+    quote: 14 665 adults 40 to 85 years of age without previous AF/AFl were randomized to an AI-ECG-guided strategy or usual care
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: "(0.48%; odds ratio, 1.54 [95% CI, 1.01-2.37]; P=0.046)"
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: Hypothetical reclassification of 1 intervention event to a nonevent changed the primary analysis P value to 0.057.
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: The primary outcome occurred in 54 intervention participants (0.74%) versus 35 control participants (0.48%
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: 14 665 adults 40 to 85 years of age without previous AF/AFl were randomized to an AI-ECG-guided strategy or usual care
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: Of the 84 high-risk intervention participants, 48 (57.1%) underwent monitoring, as did 48 matched controls.
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_start
+    quote: '"startDateStruct": { "date": "2025-07-01", "type": "ACTUAL"'
+    locator: statusModule, startDateStruct
+    source: 1

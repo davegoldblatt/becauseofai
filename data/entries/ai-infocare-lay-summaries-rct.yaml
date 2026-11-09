@@ -1,0 +1,114 @@
+id: ai-infocare-lay-summaries-rct
+section: because
+rank: 21
+headline: >-
+  Because of AI, neurosurgery outpatients in Dresden who were given an
+  AI-written plain-language summary of their own findings before the visit rated
+  the conversation with their doctor higher, and the consultation was shorter
+  (median 25 vs 33 minutes).
+impact: "Better-rated visits, 25 vs 33 min"
+impact_number: "25 min"
+impact_label: "median consultation, vs 33 min without the AI summary"
+summary: >-
+  A prospectively registered single-centre RCT (NEJM AI, October 2026) gave 300
+  adult outpatients at a German university neurosurgery department their usual
+  report with or without a quality-checked AI lay-language summary before the
+  consultation; patient-rated interaction quality, the primary outcome, was
+  higher with the summary, mainly on shared decision-making, and consultations
+  were about a fifth shorter.
+caveat: >-
+  The gain on the primary outcome is small (Hedges' g 0.33), consultation time
+  is a secondary outcome with confidence intervals not adjusted for
+  multiplicity, physicians rated their own autonomy support slightly lower, and
+  no clinical outcome was measured; only the abstract could be read.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Usual medical report plus a quality-checked AI lay-language summary (Simply Onno) before the consultation vs the usual report alone, 1:1 randomization"
+effect:
+  relative: "Consultations about 21% shorter (ratio of geometric means 0.79, 95% CI 0.70–0.88); interaction-quality difference 0.17 points (95% CI 0.05–0.29), Hedges' g 0.33"
+  absolute: "Median consultation 25 vs 33 minutes; mean patient-rated interaction quality (FAPI) 4.42 vs 4.25"
+reach: "300 adult outpatients at the neurosurgery department of University Hospital Carl Gustav Carus, Dresden"
+dates:
+  achieved_start: 2025-05-26
+  achieved_end: 2026-01-08
+  published: 2026-10-15
+  added: 2026-11-09
+  updated: 2026-11-09
+sources:
+  - title: "NEJM AI: Effect of Previsit AI-Generated Document Summaries on Consultation Time and Patient-Physician Communication — The AI-INFOCARE Randomized Controlled Trial (Benker-Hasani et al.), abstract via Europe PMC"
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42932468?resultType=core&format=xml
+    doi: 10.1056/AIoa2600136
+    type: primary
+  - title: "German Clinical Trials Register DRKS00036810: AI-INFOCARE"
+    url: https://drks.de/search/en/trial/DRKS00036810
+    type: primary
+conflicts: >-
+  The summaries were produced by a tool developed by Simply Onno GmbH, and the
+  registry lists a Simply Onno contact for public queries; the trial was
+  investigator-initiated and paid from the department's own budget with no
+  external funding. The abstract read does not carry the authors' disclosures.
+what_would_change: "A clinical outcome (adherence, decisional regret, follow-up attendance), a second site, or the full text showing a conflict not stated here."
+notes: >-
+  Window argued as pre: the registry gives an actual start of 26 May 2025 and an
+  actual completion of 8 January 2026, so about two of the trial's seven and a
+  half months fall inside the window that opened on 9 November 2025. Same
+  reasoning as flourish-ai-coach-students-rct and rosie-chatbot-maternal-null;
+  the result is new, the experience it measures mostly is not.
+  Evidence A: registered prospectively (DRKS, 5 May 2025, three weeks before
+  the first patient) with the same primary outcome (FAPI) the paper reports.
+  Placed as reasonable, not strict: the NEJM AI page returns HTTP 403 to the
+  gate's reader and the paper is not in PMC, so the numbers come from the
+  abstract. The full text would raise it.
+  verify: the vendor's own page (simply-onno.com) says a co-author is the
+  vendor's co-founder; the abstract's author list shows only Dresden
+  affiliations. Check the disclosures in the full text.
+related: [prea-chatbot-specialist-referral-rct, ucla-chart-summarizer-rct]
+history:
+  - date: 2026-11-09
+    note: "Added. Weekly run; read from the NEJM AI abstract (Europe PMC) and the DRKS registry record."
+rationale: The arms differed only in whether the patient also received the AI-generated lay summary before the visit, and no human would otherwise have written one, so the comparison isolates the AI output (isolated).
+receipts:
+  - field: headline
+    quote: Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: an approximate 21% relative reduction (ratio of geometric means, 0.79; 95% CI, 0.70 to 0.88)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: difference, 0.17; 95% confidence interval [CI], 0.05 to 0.29; P=0.005; Hedges' g=0.33
+    locator: Abstract, Results (primary end point, FAPI)
+    source: 0
+  - field: effect.absolute
+    quote: Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: The mean FAPI score was higher in the intervention group (4.42±0.51 vs. 4.25±0.54
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 300 adults were randomly assigned 1:1 to standard care with or without a quality-checked, AI-generated layperson summary
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: "Actual study start date: 2025-05-26"
+    locator: Recruitment period and number of participants
+    source: 1
+  - field: dates.achieved_end
+    quote: "Actual Study Completion Date: 2026-01-08"
+    locator: Recruitment period and number of participants
+    source: 1

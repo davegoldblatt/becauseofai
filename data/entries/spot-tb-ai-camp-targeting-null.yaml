@@ -1,0 +1,119 @@
+id: spot-tb-ai-camp-targeting-null
+section: not-because
+rank: 7
+headline: >-
+  Sending Pakistan's mobile TB X-ray camps to sites picked by AI did not find
+  significantly more tuberculosis per camp than sites picked by field staff,
+  across 3,936 camps and 269,254 people screened, in the trial's primary
+  analysis.
+impact: "Null on TB found per camp (cluster RCT, ITT)"
+impact_number: "+7%"
+impact_label: "TB cases found per camp with AI-picked sites, not significant"
+summary: >-
+  A stepped-wedge cluster RCT (medRxiv preprint, May 2026) moved 30 mobile chest
+  X-ray van teams in 68 Pakistani districts, in random order, from staff-chosen
+  camp sites to sites recommended by MATCH-AI, a Bayesian TB-hotspot model,
+  between August 2023 and September 2024; in the intention-to-treat analysis,
+  bacteriologically confirmed TB found per camp did not differ significantly,
+  and no secondary outcome did either.
+caveat: >-
+  Teams often did not go where the AI pointed: only 613 of 1,890 intervention
+  camps were verified within 5 km of a recommended site, and in those camps
+  yield was 32% higher, so the null may reflect adherence more than the model.
+  Not yet peer reviewed.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Camp sites guided by MATCH-AI hotspot predictions vs conventional site selection by district field staff, stepped-wedge randomization of 30 van teams"
+effect:
+  relative: "Camp positivity yield 7% higher, not significant (adjusted RR 1.07, 95% CI 0.94–1.22); in camps verified within 5 km of an AI site, 32% higher (adjusted RR 1.32, 1.12–1.54)"
+  absolute: "Mean bacteriologically confirmed TB cases per camp 0.85 with AI-guided teams vs 0.94 in control, before adjustment for time"
+reach: "269,254 people screened at 3,936 camps in 68 districts of Pakistan, by 30 mobile X-ray vans"
+dates:
+  achieved_start: 2023-08
+  achieved_end: 2024-09
+  published: 2026-05
+  added: 2026-11-09
+  updated: 2026-11-09
+sources:
+  - title: "medRxiv preprint: Geographical targeting of active case finding for tuberculosis in Pakistan using artificial intelligence software (SPOT-TB): a pragmatic stepped wedge cluster randomized control trial (Mahfooz et al.)"
+    url: https://www.medrxiv.org/content/10.64898/2026.05.20.26348577v1.full
+    doi: 10.64898/2026.05.20.26348577
+    type: primary
+  - title: "ClinicalTrials.gov NCT06017843: SPOT-TB (Centre for Global Public Health Pakistan)"
+    url: https://clinicaltrials.gov/study/NCT06017843
+    type: primary
+conflicts: >-
+  Funded by the Gates Foundation, which advised on design and reviewed the
+  manuscript; sponsored by the Centre for Global Public Health Pakistan, the
+  first author's institution, with Mercy Corps, the national programme's
+  implementing partner, whose staff are co-authors. The authors declare no
+  competing interests.
+what_would_change: "A trial in which teams actually screen at the recommended sites (the validated per-protocol result) and that shows the gain under intention to treat."
+notes: >-
+  Filed under not-because on the registered primary analysis (intention to
+  treat). The per-protocol result is real but chosen after randomization by
+  adherence, so it cannot carry a "because" headline; the paper's own
+  interpretation leads with it.
+  The unadjusted means run the other way (0.85 vs 0.94 per camp); the adjusted
+  1.07 accounts for time trends in a stepped-wedge design. Both are shown.
+  Evidence A argued: registered on ClinicalTrials.gov on 30 August 2023, before
+  the randomized switches began in October 2023, with yield of TB cases per
+  camp as the aim; a preprint, so it may change in review.
+  Window pre: camps ran August 2023 to September 2024.
+  verify: whether the Centre for Global Public Health Pakistan or its staff
+  developed MATCH-AI (the paper calls it "commercially available software"
+  and cites its model description without naming the developer).
+related: [india-tribal-tb-ai-cxr, ethiopia-tb-ai-cxr]
+history:
+  - date: 2026-11-09
+    note: "Added. Weekly run; read in full from the medRxiv preprint and checked against the ClinicalTrials.gov record."
+rationale: Both arms used the same vans, X-ray screening and testing, and differed only in whether camp sites came from the AI model or from staff judgement, so the comparison isolates the AI's site choice (isolated).
+receipts:
+  - field: headline
+    quote: Between August 2023 and September 2024, a total of 3,936 camps were conducted in the study districts
+    locator: Results, first paragraph
+    source: 0
+  - field: headline
+    quote: A total of 269,254 individuals participated in the screening camps during the study
+    locator: Results, participants
+    source: 0
+  - field: impact_number
+    quote: "Camp Positivity Yield, was 7% higher in the intervention arm relative to the control (adjusted RR: 1.07, 95% CI: 0.94 – 1.22"
+    locator: Results, intention-to-treat analysis
+    source: 0
+  - field: effect.relative
+    quote: "Camp Positivity Yield, was 7% higher in the intervention arm relative to the control (adjusted RR: 1.07, 95% CI: 0.94 – 1.22"
+    locator: Results, intention-to-treat analysis
+    source: 0
+  - field: effect.relative
+    quote: "Camp Positivity Yield was 32% higher in the intervention arm compared to the control (adjusted RR: 1.32, 95% CI: 1.12 – 1.54"
+    locator: Results, validated per-protocol analysis
+    source: 0
+  - field: effect.absolute
+    quote: 1,923 (mean per camp= 0.94, SD= 1.20) were in the control arm and 1,599 (mean per camp = 0.85
+    locator: Results, participants
+    source: 0
+  - field: reach
+    quote: A total of 269,254 individuals participated in the screening camps during the study
+    locator: Results, participants
+    source: 0
+  - field: reach
+    quote: Between August 2023 and September 2024, a total of 3,936 camps were conducted in the study districts
+    locator: Results, first paragraph
+    source: 0
+  - field: reach
+    quote: stepped-wedge cluster randomized trial in 68 districts and four provinces of Pakistan using a fleet of 30 mobile X-ray vans
+    locator: Methods, Study design and participants
+    source: 0
+  - field: dates.achieved_start
+    quote: Between August 2023 and September 2024, a total of 3,936 camps were conducted in the study districts
+    locator: Results, first paragraph
+    source: 0
+  - field: dates.achieved_end
+    quote: Between August 2023 and September 2024, a total of 3,936 camps were conducted in the study districts
+    locator: Results, first paragraph
+    source: 0
