@@ -112,6 +112,7 @@ jobs:
       - name: The gate (second vendor, independent)
         env:
           ALLOW_CODEX_LOGIN_IN_CI: ${{ vars.ALLOW_CODEX_LOGIN_IN_CI }}
+          SUBSTACK_VIA: https://punditclaims.ai
         run: |
           set -euo pipefail
           node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-opus-5-5" --max 0 --force

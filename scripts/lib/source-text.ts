@@ -248,12 +248,33 @@ export function pdfToText(buf: Buffer): { ok: true; text: string } | { ok: false
   }
 }
 
+// Substack refuses GitHub's runners (HTTP 403), so a *.substack.com post
+// read by the gate on GitHub goes through SUBSTACK_VIA: Dave's other site,
+// punditclaims.ai, whose function fetches the same public page from
+// Cloudflare and returns it as inert text (no backend on this site).
+function substackVia(url: string): string | null {
+  const via = process.env.SUBSTACK_VIA;
+  if (!via) return null;
+  try {
+    const u = new URL(url);
+    const name = /^([a-z0-9-]+)\.substack\.com$/.exec(u.hostname)?.[1];
+    const slug = /^\/p\/([a-z0-9-]+)\/?$/.exec(u.pathname)?.[1];
+    return name && slug ? `${via.replace(/\/$/, "")}/feeds/substack-post/${name}/${slug}` : null;
+  } catch { return null; }
+}
+
 async function direct(url: string, timeoutMs: number, maxChars: number, retried = 0): Promise<SourceText> {
   let r: Response;
+  const target = substackVia(url) ?? url;
   try {
-    r = await get(url, "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.5", timeoutMs);
+    r = await get(target, "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.5", timeoutMs);
   } catch (err) {
     return { ok: false, url, method: "html", reason: `fetch failed: ${(err as Error).message}` };
+  }
+  // Substack rate-limits now and then: one more try after a pause.
+  if (r.status === 429 && target !== url && retried < 2) {
+    await new Promise((res) => setTimeout(res, 20000));
+    return direct(url, timeoutMs, maxChars, retried + 1);
   }
   if (!r.ok) return { ok: false, url, method: "html", reason: `HTTP ${r.status}` };
   const type = (r.headers.get("content-type") || "").toLowerCase();
