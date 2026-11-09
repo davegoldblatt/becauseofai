@@ -1,0 +1,127 @@
+id: rwjbarnabas-ai-rapid-response
+section: because
+rank: 22
+headline: >-
+  Because of AI, in-hospital deaths among high-risk ward patients fell from
+  23.1% to 18.6% after 11 hospitals let a deterioration model page the rapid
+  response team automatically (adjusted odds ratio 0.82).
+impact: "4.5 points fewer in-hospital deaths"
+impact_number: "−4.5 points"
+impact_label: "in-hospital deaths among flagged ward patients (18.6% vs 23.1%)"
+summary: >-
+  A staggered pre/post study (NEJM AI, September 2026) of 23,132 adult
+  medical-surgical admissions flagged by the Epic Deterioration Index across an
+  11-hospital New Jersey system found that, once the score triggered EHR alerts
+  and automatic push notifications to the rapid response team, team activations
+  rose and risk-adjusted in-hospital mortality fell, with no rise in
+  escalations of care.
+caveat: >-
+  Not randomized and with no concurrent control: the comparison is before
+  versus after rollout over October 2022 to August 2024, so falling post-COVID
+  mortality or other changes could account for part of the drop; only the
+  abstract could be read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Patients with a Deterioration Index of 60 or more before vs after implementation of model-triggered alerts plus automatic rapid response team notification, staggered across 11 hospitals, risk-adjusted"
+effect:
+  relative: "Adjusted odds of in-hospital death 0.82 (95% CI 0.74–0.91); rapid response activations 37.5% vs 25.3% (adjusted OR 1.74)"
+  absolute: "In-hospital mortality 18.6% vs 23.1%, a difference of −4.5 percentage points (95% CI −5.6 to −3.5), unadjusted"
+reach: "23,132 adult medical-surgical admissions with a Deterioration Index of 60 or more at 11 acute care hospitals"
+dates:
+  achieved_start: null
+  achieved_end: 2024-08-30
+  published: 2026-09
+  added: 2026-11-09
+  updated: 2026-11-09
+sources:
+  - title: "NEJM AI: Implementation of an AI-Triggered Rapid Response — Association with Mortality (Nahass et al.), abstract via Europe PMC"
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42932707?resultType=core&format=xml
+    doi: 10.1056/AIoa2500973
+    type: primary
+conflicts: >-
+  The authors are RWJBarnabas Health and Rutgers staff evaluating their own
+  system's rollout of a vendor (Epic) model; the abstract read carries no
+  funding or disclosure statement.
+what_would_change: "A concurrent control (a stepped-wedge analysis by hospital and month, or a randomized rollout), or the full text showing the staggered start dates and per-hospital results."
+notes: >-
+  The post-implementation period begins at a different date in each hospital
+  and the abstract does not give the dates, so the achieved start is left
+  unverified; the study window runs from 1 October 2022 (which includes the
+  pre-period) to 30 August 2024. Window pre either way.
+  Evidence B argued: a large health-system cohort with a before-period benchmark
+  and risk adjustment, but no randomization and no concurrent control. If the
+  full text shows the staggered rollout was not used as a control, C is
+  defensible.
+  Placed as reasonable: the NEJM AI page returns HTTP 403 to the gate's reader
+  and the paper is not in PMC. The full text would raise it.
+  Compare uva-comet-deterioration-null, where a different deterioration score
+  without automatic team activation did not reduce deaths.
+  verify: funding and disclosures in the full text.
+related: [uva-comet-deterioration-null]
+history:
+  - date: 2026-11-09
+    note: "Added. Weekly run; read from the NEJM AI abstract (Europe PMC)."
+rationale: The model's score came packaged with an automatic page to the rapid response team, and the package was compared with the period before it, so the AI's prediction is not separated from the change in team activation (bundled).
+receipts:
+  - field: headline
+    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: The setting was a regional health system with 11 acute care hospitals
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: were lower in the intervention group (adjusted odds ratio, 0.82
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: (adjusted odds ratio, 0.82 [95% CI, 0.74 to 0.91])
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: increased RRT activations (37.5% vs. 25.3%; absolute difference, 12.2 percentage points [95% CI, 11.0 to 13.4]; adjusted odds ratio, 1.74
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points [95% CI, -5.6 to -3.5])
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: The study included 23,132 patients.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Participants included adult medical-surgical admissions with an EDI greater than or equal to 60
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: The setting was a regional health system with 11 acute care hospitals
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: from October 1, 2022, to August 30, 2024
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-11-09
+  content: d059f99086d1082ea91a65f9449e895ef31d86605453179cf928e92732d73d77
+held:
+  reason: ungrounded
+  since: 2026-11-09
+  detail: "effect.relative: the quote is not in source 0 (quote not found in the source text)."
+  record: rwjbarnabas-ai-rapid-response/2026-11-09.json

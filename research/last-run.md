@@ -1,36 +1,35 @@
-# Last research run — 2026-11-08
+# Last research run — 2026-11-09
 
-Window: 2025-11-08 to 2026-11-08. Inputs: 30 entries, the inbox, `.scout/candidates.json` (215 candidates over 8 days, 21 flagged randomized, 1 alert, 0 errors), and `npm run validate` (4 held, 1 warning).
+Window: 2025-11-09 to 2026-11-09. Scope this run (DAV-469 backfill): work the inbox from the top for leads that qualify at any level; no weekly review of existing entries and no edits to them. Inputs: the inbox, `.scout/candidates.json` (217 candidates over 8 days, 24 flagged randomized, 0 alerts, 0 errors), and `npm run validate`. Every number was quoted from text `npm run read` printed.
 
-## Added
-- **rosie-chatbot-maternal-null** (`not-because`, A · bundled · pre). JAMA Netw Open, 4 Nov 2026; NCT06053515. 400 pregnant and postpartum people from minoritized groups were randomized to the Rosie generative-AI chatbot or a monthly book club. At 12 months GAD-7 differed by 0.10 points and PHQ-9 by −0.23, and the moderate-or-severe prevalence ratios crossed 1. A clean null against an active control. **Bundled** because the chatbot came with videos, a syllabus and social-worker-reviewed alerts. **Window pre**, argued: enrollment ran Oct 2023 to Dec 2024 and follow-up ended Dec 2025, so only the final weeks fall inside the window. Flag: the registry's primary outcomes (PHQ-9, ER visits, well-baby visits) differ from the paper's (GAD-7, PHQ-9). Read through a web fetch, but the gate's reader got HTTP 403 on 5 Nov, so it may be held as `no-full-text` until a PMC copy appears.
+## Added (6)
+- **ai-infocare-lay-summaries-rct** (because, A · isolated · pre; **reasonable**). NEJM AI; DRKS00036810. 300 Dresden neurosurgery outpatients; AI lay summary before the visit: interaction quality 4.42 vs 4.25 (primary), consultations 25 vs 33 min. Pre: May 2025 to Jan 2026.
+- **rwjbarnabas-ai-rapid-response** (because, B · bundled · pre; **reasonable**). NEJM AI. Epic Deterioration Index plus automatic rapid-response paging, 11 hospitals, 23,132 patients: mortality 18.6% vs 23.1%, adjusted OR 0.82. Pre/post with no concurrent control; start date left unverified.
+- **heidi-ambient-scribe-boston** (because, B · isolated · ongoing; **reasonable**). Annals. 902 clinicians: −1.21 min of note time per encounter, no change in after-hours work. A Heidi Health co-author is stated as a conflict.
+- **spot-tb-ai-camp-targeting-null** (not-because, A · isolated · pre; **strict**). medRxiv; NCT06017843. AI-sited TB X-ray camps in Pakistan, 269,254 screened: ITT RR 1.07 (0.94–1.22). The per-protocol +32% is shown but not used as the headline.
+- **latent-ai-ecg-af-null** (not-because, A · isolated · ongoing; **reasonable**). Circulation; NCT06847932. 14,665 adults: AF found 0.3% vs 0.2%, treatment started 2.3% vs 2.4%; the composite primary is fragile (P 0.046, or 0.057 if one event is reclassified).
+- **columbia-epic-ai-draft-replies-null** (not-because, B · isolated · pre; **strict**). JAMA Netw Open (PMC). Adoption came with 8.6% slower turnaround and no drop in after-hours replies; the −29.5% on messages where the draft was used is selection.
 
-## Changed (held list first)
-- **hurricane-melissa-2025** (held `ungrounded`): **corrected.** Removed the "extra day in 2023–2025 hindcasts" clause, which came from Gizmodo (secondary), and the population and season year from `reach`. No primary source I could read carries them: the NHC report PDF exceeds the fetch limit and the Lowry post returns 403. The claims the report supports stay.
-- **prea-chatbot-specialist-referral-rct** (held `grade-split`, evidence): **verified registration.** The WHO ICTRP copy of ChiCTR2400094159 shows prospective registration on 17 Dec 2024, first enrolment 8 Feb 2025, and the same three primary outcomes as the paper. Added it as a primary source. Evidence A is unchanged and now argued in the notes.
-- No poster numbers were needed: every `because` entry already has `impact_number` and `impact_label`.
-
-## Left as is
-- **flourish** (`grade-split`, window): no change. It is an argument, not a value, and the window rolling forward makes `pre` stronger.
-- **oman** (`no-primary-source`): searched again and found only press relaying ministry statements. Third week held. If no primary appears, a human should decide whether to remove it.
+## Placed below strict, and what would raise them
+AI-INFOCARE, RWJBarnabas, Heidi and LATENT are reasonable because the publishers (NEJM AI, Annals, Circulation) return 403 and none is in PMC, so the numbers come from Europe PMC abstracts. A PMC copy or a readable full text would raise each to strict. RWJBarnabas would also need its achieved start, which only the full text has.
 
 ## Rejected (reached humans · measured against something · AI made the difference · we know when)
-- **ALERT-PA** (NCT05925569): fails **AI made the difference**. The registry describes a rules-based Epic best-practice alert with no AI.
-- **AI Doppler feedback RCT** (AJOG MFM): likely fails **reached humans**, since the outcome is clinician assessment, a process measure. Abstract unread; sent to the inbox.
-- **LATENT AI-ECG** (Circulation): publisher 403 and no indexed abstract. The registered primary is AF detection, which raises the **reached humans** question. Sent to the inbox.
-- The rest were protocols, AEA registrations still in development, retrospective model validations, reviews, surveys and vignette studies.
+- **GI-cancer DeepSeek nutrition RCT** (Support Care Cancer): fails **we know when**. Methods says screening ran Jan to Mar 2026, Results says Dec 2025 to Feb 2026, and the paper was received 29 Mar 2026 with 30-day follow-up complete for all 90. The Methods window is impossible.
+- **AI-assisted micro-TESE** (Asian J Androl): fails **AI made the difference**. Allocation was by "availability" of the AI microscope over 2020 to 2024, with no timing given, so the AI is confounded with time. Inclusion criterion 5 (ICSI with retrieved sperm) also contradicts the 44% with no retrieval.
+- **Paediatric ED LLM discharge documents** (medRxiv): not a clean null. The CI allows ±10 points, post-randomisation replacement left an evaluable group not protected by randomisation, and it was registered retrospectively. Same call as PRIMA-AI.
+- **Frontline workers with ChatGPT, Lagos** (JMIR): fails **reached humans**. Vignette questions, rated by panels.
+- **Calibrated LLM grand-rounds summaries** (medRxiv): no measured benefit; the between-student difference was +0.28/10 (P = 0.28) on quizzes.
+- **DEEP-AF** (Heart Rhythm O2): a design paper with no results.
+- **AI for Proactive Mental Health** (NEJM AI): the same Flourish app in fall 2024 (pre), and the abstract gives no effect sizes. Context for the Flourish entry, not a new entry.
 
-## Not-yet checks
-None met. FireSat: launched Jul 2026, live data to agencies expected by year end, but no documented detection or response. Rentosertib: GENESIS-IPF-3 first patient dosed Sep 2026, completion 2029. GB-0895: SOLAIRIA-1/2 still recruiting. Flood Hub: no independent evaluation (a Bihar case study went to the inbox). Every Cure: nothing new found.
-
-## Searched, empty
-- Waymo hub: still through June 2026 (271.3M miles).
-- Null search ("did not improve" / "no significant", AI, randomized): nothing new beyond Rosie.
-- Rosie and LATENT in Europe PMC: not yet indexed.
+## Searched, empty or unreadable
+- NUMI AI tutoring (NBER w35621): PDF only, and `pdftotext` is not installed in this session's environment, so the reader could not print it. The gate on GitHub can; the next run should retry.
+- Bihar flood warnings (PreventionWeb): HTTP 403. Four-year university chatbot RCT (EdWorkingPaper 26-1409): the HTML page has no numbers or dates, and the paper is a PDF.
+- Candidates: the 24 randomized hits were registrations, protocols, survey experiments, reader studies, or leads already in the inbox. The only new result was LATENT, drafted above.
 
 ## Needs a human
-- **Rosie**: if the gate holds it for `no-full-text`, add the PMC copy when it appears. Rank 6 is a placeholder at the end of not-because.
-- **Melissa**: confirm "lowest season track and intensity error of any model" against TCR Tables 5b and 6b. Rank 1 still sits on a pre-window entry.
-- **Oman**: remove it, or keep holding.
-- **eagle-cadde**: the verification record is still malformed. Re-run the gate.
-- Carried over: Flourish window, China CAL evidence A, STAR vs the Lancet letter, NHS stroke DIDO/mRS, India TB 162 vs 173, GOLDEN BRIDGE II CDSS vendor, and fifteen published entries still lacking some receipts.
+- **Window calls on straddling studies**: AI-INFOCARE is pre (2 of 7.5 months in window), LATENT is ongoing (it started 4 months before the window opened), and Heidi is ongoing (3 months of in-window data). Each is argued in its notes; the verifier may split.
+- **LATENT section**: not-because on detection and treatment. A human could read it as a narrow detection gain instead.
+- **RWJBarnabas evidence B vs C**: a pre/post with risk adjustment and no concurrent control. C is defensible if the full text shows no staggered control.
+- **Conflicts to check in the full texts**: AI-INFOCARE (the vendor page says a co-author is a co-founder), LATENT (who built the model), SPOT-TB (whether the sponsor developed MATCH-AI).
+- Carried over, untouched this run as scoped: Rosie no-full-text, Oman no-primary-source, Flourish grade-split, Melissa TCR tables, eagle-cadde record, and published entries still lacking receipts.

@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "columbia-epic-ai-draft-replies-null",
+  "date": "2026-11-09",
+  "as_of": "2026-11-09",
+  "entry_sha256": "fbddb8ed534312c911b4848c20ba84a5a7200deeabcf0d7a5fb8fc0673899783",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-09"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13723026/",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-09T21:35:28.755Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13723026/fullTextXML",
+      "sha256": "40771bcbfbd4904484700548fb8bc5aba2eb9164e39ccc5d818e5f755fc5497c",
+      "chars": 41499,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Response tool use was not associated with an overall reduction of after-hours messaging burden",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The analysis included 983 154 responses from 1542 clinicians",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Using the tool was associated with a significant reduction in turnaround time (−29.5% [95% CI, −34.5% to −24.1%]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Response tool use was not associated with an overall reduction of after-hours messaging burden (0.61 [95% CI, −1.02 to 2.24] percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The analysis included 983 154 responses from 1542 clinicians (770 [49.9%] female) and 272 091 patients",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "we restricted our analysis to clinicians who first adopted the tool on or after September 12, 2024, the date of the final prompt update",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "between March 1, 2023, and May 15, 2025, were analyzed",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-09",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The study compared the same clinicians before and after AI-tool adoption, with clinician and calendar-month fixed effects and no identified accompanying intervention.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods specify September 12, 2024 as the earliest eligible adoption date and May 15, 2025 as the observation endpoint; March 1, 2023 begins the baseline period."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The source reports public and nonprofit grants, which the entry discloses, but no vendor funding, employment, equity, patent, or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports the reported associations, sample counts, and dates, including 8.6% longer turnaround after adoption and no significant overall after-hours reduction. Its observational design does not establish that AI caused these outcomes."
+    },
+    "error": null,
+    "tokens": {
+      "input": 23081,
+      "output": 641,
+      "total": 23722,
+      "cached": 0,
+      "reasoning": 87
+    },
+    "duration_ms": 16680
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The source supports the reported associations, sample counts, and dates, including 8.6% longer turnaround after adoption and no significant overall after-hours reduction. Its observational design does not establish that AI caused these outcomes.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

@@ -1,0 +1,124 @@
+id: columbia-epic-ai-draft-replies-null
+section: not-because
+rank: 9
+headline: >-
+  Clinicians at Columbia who adopted Epic's AI-drafted replies to patient
+  messages answered 8.6% more slowly afterwards, and their after-hours replying
+  did not fall, across 983,154 responses.
+impact: "8.6% slower turnaround after adoption"
+impact_number: "+8.6%"
+impact_label: "message turnaround after clinicians adopted AI-drafted replies"
+summary: >-
+  A cohort study (JAMA Network Open, October 2026) followed 1,542 clinicians at
+  Columbia University Irving Medical Center before and after their first use of
+  Epic's generative-AI draft-reply tool, with clinician and calendar-month fixed
+  effects; adoption was associated with longer time to answer patients, and
+  using a draft was not associated with less after-hours replying overall.
+caveat: >-
+  Observational, not randomized. Messages answered with the draft were 29.5%
+  faster, but clinicians chose which messages to use it on, likely the routine
+  ones; for test-result queries received in working hours, after-hours replies
+  fell, and for messages received after hours they rose.
+domain: work
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Each clinician's first responses to patient portal messages before vs after first use of the AI draft-reply tool, clinician and month fixed effects, March 2023 to May 2025"
+effect:
+  relative: "Turnaround 8.6% longer after adoption (95% CI 4.6%–12.9%); 29.5% shorter on messages where the draft was used (95% CI −34.5% to −24.1%)"
+  absolute: "After-hours responses +0.61 percentage points with tool use (95% CI −1.02 to 2.24), not significant"
+reach: "983,154 first responses from 1,542 clinicians to 272,091 patients at Columbia University Irving Medical Center, New York"
+dates:
+  achieved_start: 2024-09-12
+  achieved_end: 2025-05-15
+  published: 2026-10-30
+  added: 2026-11-09
+  updated: 2026-11-09
+sources:
+  - title: "JAMA Network Open: AI-Generated Draft Response Tool, Message Turnaround Time, and After-Hours Replies Among Health Care Professionals (Jeanselme et al.), PMC"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13723026/
+    doi: 10.1001/jamanetworkopen.2026.41364
+    type: primary
+conflicts: >-
+  No vendor authors; one author reported grants from the CDC, the NIH Office of
+  the Director and PCORI. The model was OpenAI's, integrated by Epic, and the
+  authors had no access to its configuration.
+what_would_change: "A randomized or staggered rollout showing that access to AI drafts shortens time to answer patients or reduces after-hours work."
+notes: >-
+  Filed under not-because on the adoption estimate, the one that reflects
+  having the tool at all; the 29.5% faster figure for messages answered with a
+  draft compares messages clinicians selected, which the authors themselves
+  flag as prone to selection bias. Both are shown.
+  Dates: the analysis keeps clinicians who first adopted the tool on or after
+  12 September 2024 (the final prompt update), and the data end on 15 May 2025;
+  enterprise rollout was 17 December 2024. Window pre.
+  Compare ucla-chart-summarizer-rct and ambient-scribes-nejm-ai.
+related: [ucla-chart-summarizer-rct, ambient-scribes-nejm-ai]
+history:
+  - date: 2026-11-09
+    note: "Added. Weekly run; read in full from the PMC copy of the JAMA Network Open article."
+rationale: Each clinician is compared with their own replies before first using the AI drafts, with month fixed effects for secular change and nothing else introduced at adoption, so the comparison isolates access to the tool, though without randomization (isolated).
+receipts:
+  - field: headline
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Response tool use was not associated with an overall reduction of after-hours messaging burden
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: The analysis included 983 154 responses from 1542 clinicians
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: Using the tool was associated with a significant reduction in turnaround time (−29.5% [95% CI, −34.5% to −24.1%]
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Response tool use was not associated with an overall reduction of after-hours messaging burden (0.61 [95% CI, −1.02 to 2.24] percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: The analysis included 983 154 responses from 1542 clinicians (770 [49.9%] female) and 272 091 patients
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: we restricted our analysis to clinicians who first adopted the tool on or after September 12, 2024, the date of the final prompt update
+    locator: Methods, Data
+    source: 0
+  - field: dates.achieved_end
+    quote: between March 1, 2023, and May 15, 2025, were analyzed
+    locator: Abstract, Design, Setting, and Participants
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-11-09
+  content: fbddb8ed534312c911b4848c20ba84a5a7200deeabcf0d7a5fb8fc0673899783
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-09
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-09
+    verdict: pass
+  record: columbia-epic-ai-draft-replies-null/2026-11-09.json
+  confidence: strict
