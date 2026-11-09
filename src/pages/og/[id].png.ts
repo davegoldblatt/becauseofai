@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { publishable, timeline } from "../../lib/site.ts";
+import { publishable, timeline, levelOf } from "../../lib/site.ts";
 import { renderEntryOg } from "../../og/render.ts";
 
 export function getStaticPaths() {
@@ -7,6 +7,6 @@ export function getStaticPaths() {
 }
 
 export const GET: APIRoute = async ({ props }) => {
-  const png = await renderEntryOg(props.entry, timeline);
+  const png = await renderEntryOg(props.entry, timeline, levelOf(props.entry));
   return new Response(png, { headers: { "Content-Type": "image/png" } });
 };

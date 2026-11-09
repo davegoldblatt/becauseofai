@@ -92,30 +92,34 @@ async function main() {
   const loaded = loadOrThrow();
   const ledger = JSON.parse(fs.readFileSync(LEDGER, "utf8")) as { posted: Record<string, string> };
   const already = new Set(Object.keys(ledger.posted));
+  // Only strict entries are announced (DAV-469): a reasonable or speculative
+  // entry is on the site, labelled, but never pushed to followers.
+  const strict = loaded.publishable.filter((e) => (loaded.levels.get(e.id) ?? "strict") === "strict");
   let ids: string[];
   if (arg("--entry")) ids = arg("--entry")!.split(",").map((s) => s.trim()).filter(Boolean);
   else if (arg("--before") && arg("--after")) ids = addedIds(arg("--before")!, arg("--after")!);
   else if (arg("--backfill")) {
     const n = Number(arg("--backfill"));
-    ids = loaded.publishable
+    ids = strict
       .filter((e) => !already.has(e.id))
       .sort((a, b) => String(b.dates.added).localeCompare(String(a.dates.added)) || a.id.localeCompare(b.id))
       .slice(0, n)
       .map((e) => e.id);
-    console.log(`backfill: ${ids.length} of ${loaded.publishable.length - already.size} never-announced entries`);
+    console.log(`backfill: ${ids.length} of ${strict.filter((e) => !already.has(e.id)).length} never-announced strict entries`);
   } else throw new Error("pass --before <sha> --after <sha>, --entry <id>, or --backfill <n>");
   if (!flag("--force")) {
     const dup = ids.filter((id) => already.has(id));
     for (const id of dup) console.log(`skip ${id}: already announced on ${ledger.posted[id]}`);
     ids = ids.filter((id) => !already.has(id));
   }
-  const byId = new Map(loaded.publishable.map((e) => [e.id, e]));
+  const byId = new Map(strict.map((e) => [e.id, e]));
+  const lowered = new Set(loaded.publishable.filter((e) => loaded.levels.get(e.id) !== "strict").map((e) => e.id));
   const heldIds = new Set(loaded.held.map((e) => e.id));
   const posts: Post[] = [];
   for (const id of ids) {
     const e = byId.get(id);
     if (!e) {
-      console.log(heldIds.has(id) ? `skip ${id}: held, nothing to announce` : `skip ${id}: not a publishable entry`);
+      console.log(heldIds.has(id) ? `skip ${id}: held, nothing to announce` : lowered.has(id) ? `skip ${id}: ${loaded.levels.get(id)}, only strict entries are announced` : `skip ${id}: not a publishable entry`);
       continue;
     }
     const url = `${SITE}/entry/${id}`;

@@ -2,13 +2,14 @@
 // their reason, receipt coverage, and stale window warnings; exit non-zero
 // only on errors.
 import { loadEntries, counts } from "../src/lib/entries.ts";
-import { heldInfo, missingReceipts } from "../src/schema.ts";
+import { missingReceipts } from "../src/schema.ts";
+import { heldBlock } from "../src/lib/entries.ts";
 
 const r = loadEntries();
 for (const p of r.errors) console.error(`ERROR  ${p.file}: ${p.message}`);
 for (const p of r.warnings) console.warn(`WARN   ${p.file}: ${p.message}`);
 for (const e of r.held) {
-  const h = heldInfo(e)!;
+  const h = heldBlock(e, r)!;
   console.log(`held   ${e.id}.yaml: ${h.reason} since ${h.since}: ${h.detail}`);
 }
 const verified = r.publishable.filter((e) => e.verification && !r.unbound.has(e.id)).length;

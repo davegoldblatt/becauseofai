@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 import Registry from "../components/Registry.astro";
-import { because, siteCounts as c } from "../lib/site.ts";
+import { because, siteCounts as c, isStrict } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 const org = { "@type": "Organization", name: SITE.name, url: SITE.url };
 const jsonLd = [
@@ -11,7 +11,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: `${SITE.name}: a registry of measured AI benefits to people`,
-    description: `${SITE.description} Every entry passes four tests (the benefit reached people, it was measured against something, the AI did something that would not otherwise have happened, and the date it happened is known) and carries three grades: evidence, attribution, window.`,
+    description: `${SITE.description} Every strict entry passes four tests (the benefit reached people, it was measured against something, the AI did something that would not otherwise have happened, and the date it happened is known) and carries three grades: evidence, attribution, window.`,
     url: SITE.url,
     sameAs: [SITE.repo],
     license: "https://creativecommons.org/licenses/by/4.0/",
@@ -30,6 +30,6 @@ const description = `What AI has measurably done for people: ${c.because} benefi
 ---
 <Base title="Because of AI" ogTitle="Because of AI" description={description} section="because" nameplate="full" jsonLd={jsonLd}>
   <h1 class="sr-only">Because of AI: a registry of measured AI benefits to people</h1>
-  <Hero entries={because} />
+  <Hero entries={because.filter(isStrict)} />
   <Registry entries={because} section="because" />
 </Base>

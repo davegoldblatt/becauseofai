@@ -10,10 +10,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
-import { EntrySchema, isPublished, type Entry, type Section, type DateLike } from "../schema.ts";
+import { EntrySchema, isPublished, heldInfo, type Confidence, type Entry, type Section, type DateLike } from "../schema.ts";
+import { LEGACY_STRICT_IDS } from "./legacy.ts";
 import { contentSha256 } from "./entry-text.ts";
 import type { VerificationRecord } from "../../scripts/lib/record.ts";
-import { VerdictSchema } from "../../scripts/lib/verdict-schema.ts";
+import { StoredVerdictSchema as VerdictSchema } from "../../scripts/lib/verdict-schema.ts";
 import { RecordSchema } from "../../scripts/lib/record-schema.ts";
 import { adjudicate } from "../../scripts/lib/adjudicate.ts";
 import { topBlocks } from "./entry-text.ts";
@@ -31,7 +32,22 @@ export type LoadResult = {
   // is missing, is another entry's, did not publish, or was made for
   // different content. The entry stays published; the gate runs again on it.
   unbound: Map<string, string>;
+  // How sure each published entry is (DAV-469): its bound record's level, or
+  // strict for a grandfathered entry (src/lib/legacy.ts).
+  levels: Map<string, Confidence>;
+  // Entries whose file says "pass" but that have no bound record and are not
+  // grandfathered: held until the gate runs, with the reason.
+  gateDue: Map<string, string>;
 };
+
+// The held block for a held entry, including one held only because its
+// verification does not bind (gateDue).
+export function heldBlock(e: Entry, r: Pick<LoadResult, "gateDue">) {
+  const h = heldInfo(e);
+  if (h) return h;
+  const why = r.gateDue.get(e.id);
+  return why ? { reason: "verification-unavailable" as const, since: String(e.dates.updated).slice(0, 10), detail: `The verification on file does not stand (${why}); the gate has to run again.` } : null;
+}
 export type Records = Record<string, VerificationRecord>;
 
 // The verification block is a claim; the record under data/verifications is
@@ -70,6 +86,8 @@ export function recordMismatch(e: Entry, raw: string, records: Records): string 
   if (rec.quote_checks.length !== receipts.length || rec.quote_checks.some((c, i) => c.field !== receipts[i].field || c.quote !== receipts[i].quote || c.source !== receipts[i].source || !c.found || !okIdx.has(c.source))) return `record ${v.record} did not check the entry's receipts against its sources`;
   const again = adjudicate({ entry: e, drafterVendor: rec.drafter.vendor, verifierVendor: rec.verifier.vendor, sources: rec.sources, quoteChecks: rec.quote_checks, verifier: { ok: true, output: verdict.data } });
   if (again.result !== "published") return `record ${v.record} does not re-derive as published (${again.reason})`;
+  // The level on the entry is the one its record derives, exactly (DAV-469).
+  if ((v.confidence ?? "strict") !== (again.confidence ?? "strict")) return `the entry says ${v.confidence ?? "strict"} but record ${v.record} derives ${again.confidence ?? "strict"}`;
   return null;
 }
 
@@ -186,9 +204,17 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
     byRank.set(key, e.id);
   }
-  const held = all.filter((e) => !isPublished(e));
-  const publishable = all.filter(isPublished);
-  return { all, publishable, held, errors, warnings, unbound };
+  // An entry the gate has not bound publishes only if it is grandfathered.
+  const gateDue = new Map<string, string>();
+  for (const e of all) {
+    if (!isPublished(e) || LEGACY_STRICT_IDS.has(e.id)) continue;
+    if (!e.verification) gateDue.set(e.id, "no verification");
+    else if (unbound.has(e.id)) gateDue.set(e.id, unbound.get(e.id)!);
+  }
+  const held = all.filter((e) => !isPublished(e) || gateDue.has(e.id));
+  const publishable = all.filter((e) => isPublished(e) && !gateDue.has(e.id));
+  const levels = new Map<string, Confidence>(publishable.map((e) => [e.id, unbound.has(e.id) ? "strict" : (e.verification?.confidence ?? "strict")]));
+  return { all, publishable, held, errors, warnings, unbound, levels, gateDue };
 }
 
 export function bySection(entries: Entry[], section: Section): Entry[] {

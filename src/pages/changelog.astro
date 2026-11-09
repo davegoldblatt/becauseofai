@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
-import { publishable, heldList } from "../lib/site.ts";
+import { publishable, heldList, levelOf } from "../lib/site.ts";
+import { CONFIDENCE_LABEL } from "../lib/format.ts";
 import { fmtDate, isoDate, changeType, recordUrl, SECTION_LABEL, HELD_REASON_LABEL, HELD_REASON_DESCRIPTION, VENDOR_LABEL, type ChangeType } from "../lib/format.ts";
 // Held entries are named here with their reason and both verdicts, as they are
 // in /api/entries.json, but never linked: a held entry has no page.
@@ -10,7 +11,7 @@ const rows: Row[] = [];
 for (const e of publishable) {
   for (const h of e.history) {
     const ct = changeType(h.note);
-    rows.push({ date: isoDate(h.date), id: e.id, headline: e.headline, note: h.note, type: ct?.type ?? null, rest: ct?.rest ?? h.note });
+    rows.push({ date: isoDate(h.date), id: e.id, headline: e.headline, note: h.note, type: ct?.type ?? null, rest: ct?.rest ?? h.note, level: levelOf(e) });
   }
 }
 rows.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id)));
@@ -48,7 +49,7 @@ for (const r of rows) (days.get(r.date) ?? days.set(r.date, []).get(r.date)!).pu
           <li class:list={["chg", r.type]}>
             <span class="chg-type">{r.type && <span class="stamp stamp-xs"><span class="sd">{r.type}</span></span>}</span>
             <div>
-              <span class="chg-h"><a href={`/entry/${r.id}`}>{r.headline}</a></span>
+              <span class="chg-h"><a href={`/entry/${r.id}`}>{r.headline}</a>{r.level !== "strict" && <span class="muted"> · {CONFIDENCE_LABEL[r.level]}</span>}</span>
               {r.rest && <p class="chg-note">{r.rest}</p>}
             </div>
           </li>

@@ -87,7 +87,9 @@ export async function runGate(id: string, o: GateOptions): Promise<GateResult> {
   };
   const rel = writeRecord(record);
   const verification = run && run.error === null
-    ? { drafter: record.drafter!, verifier: { vendor: run.vendor, model: run.model, date: o.date, verdict: final.result === "published" ? "pass" : "fail" }, record: rel }
+    ? { drafter: record.drafter!, verifier: { vendor: run.vendor, model: run.model, date: o.date, verdict: final.result === "published" ? "pass" : "fail" }, record: rel,
+        // How sure (DAV-469): only on a pass, exactly as the record's adjudication says.
+        ...(final.result === "published" && final.confidence ? { confidence: final.confidence, ...(final.relaxed?.length ? { relaxed: final.relaxed } : {}) } : {}) }
     : undefined;
   const since = e.held && e.held.reason === final.reason ? e.held.since : o.date;
   const held = final.result === "held"

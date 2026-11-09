@@ -6,14 +6,22 @@
 // to its definition on /method and carries that same sentence as a tooltip.
 // Never collapsed into one score.
 import type { Entry } from "../schema.ts";
-import { EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION, WATCHLIST_DESCRIPTION } from "../lib/format.ts";
+import { EVIDENCE_WORD, ATTRIBUTION_LABEL, WINDOW_LABEL, GRADE_DESCRIPTION, WATCHLIST_DESCRIPTION, CONFIDENCE_LABEL, CONFIDENCE_DESCRIPTION } from "../lib/format.ts";
+import { levelOf } from "../lib/site.ts";
 interface Props { entry: Entry; scope: string }
 const { entry: e, scope } = Astro.props;
 const g = e.grades;
 const ungraded = g.evidence === null && g.attribution === null && g.window === null;
+const level = levelOf(e);
 const uid = (k: string) => `tip-${scope}-${e.id}-${k}`;
 ---
 <div class="stamps" data-pagefind-ignore>
+  {level !== "strict" && (
+    <a class={`stamp stamp-sure stamp-sure-${level}`} href={`/method#how-sure`} aria-describedby={uid("s")}>
+      <span class="sr-only">How sure: </span><span class="sd">{CONFIDENCE_LABEL[level]}</span>
+      <span class="tip" role="tooltip" id={uid("s")} aria-hidden="true">{CONFIDENCE_LABEL[level]}: {CONFIDENCE_DESCRIPTION[level]}</span>
+    </a>
+  )}
   {ungraded ? (
     <a class="stamp stamp-watch" href="/method#four-tests" aria-describedby={uid("w")}>
       <span class="sd">Watchlist</span>

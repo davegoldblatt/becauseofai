@@ -13,9 +13,13 @@ export const UA_EMAIL = "dave@becauseofai.org";
 export const UA = `becauseofai-verifier/1.0 (https://becauseofai.org; mailto:${UA_EMAIL})`;
 export const MAX_CHARS = 600_000;
 export const MIN_FULL_TEXT_CHARS = 2_000;
+// Shorter than a full document but long enough to be an abstract or a summary
+// that can carry numbers: kept as partial text (a "reasonable" entry at best,
+// DAV-469) instead of dropped. Anything shorter is a stub.
+export const MIN_PARTIAL_CHARS = 600;
 
 export type SourceText =
-  | { ok: true; url: string; finalUrl: string; method: string; text: string; sha256: string; chars: number; truncated: boolean }
+  | { ok: true; url: string; finalUrl: string; method: string; text: string; sha256: string; chars: number; truncated: boolean; partial?: boolean }
   | { ok: false; url: string; method: string; reason: string };
 
 const sha = (s: string) => createHash("sha256").update(s).digest("hex");
@@ -94,11 +98,12 @@ function finish(url: string, finalUrl: string, method: string, text: string, opt
   text = dropReferences(text);
   const title = opts.html ? titleOf(opts.html) : "";
   if (/just a moment|attention required|access denied|are you a robot/i.test(title)) return { ok: false, url, method, reason: `blocked by the site (${title})` };
-  if (text.length < opts.minChars) return { ok: false, url, method, reason: `only ${text.length} characters of text: a landing page or an abstract, not the full document` };
-  if (text.length < 8_000 && PAYWALL.test(text)) return { ok: false, url, method, reason: "paywalled: the page offers the abstract and a purchase or sign-in prompt" };
+  if (text.length < MIN_PARTIAL_CHARS) return { ok: false, url, method, reason: `only ${text.length} characters of text: a stub, not even an abstract` };
+  // An abstract, a summary, or a paywalled page's abstract: kept, marked partial.
+  const partial = text.length < opts.minChars || (text.length < 8_000 && PAYWALL.test(text));
   const truncated = text.length > opts.maxChars;
   const body = truncated ? text.slice(0, opts.maxChars) : text;
-  return { ok: true, url, finalUrl, method, text: body, sha256: sha(body), chars: body.length, truncated };
+  return { ok: true, url, finalUrl, method, text: body, sha256: sha(body), chars: body.length, truncated, ...(partial ? { partial: true } : {}) };
 }
 
 // A fetch that follows redirects itself and keeps cookies across the hops.
@@ -289,7 +294,7 @@ async function direct(url: string, timeoutMs: number, maxChars: number, retried 
   const out = finish(url, r.url, "html", htmlToText(html), { minChars: MIN_FULL_TEXT_CHARS, maxChars, html });
   // Some sites (PMC among them) answer a first contact with a stub page and
   // the article on the next; one more try after a pause before giving up.
-  if (!out.ok && /^only \d+ characters/.test(out.reason) && retried < 2) {
+  if (((!out.ok && /^only \d+ characters/.test(out.reason)) || (out.ok && out.partial)) && retried < 2) {
     await new Promise((res) => setTimeout(res, retried ? 15000 : 5000));
     return direct(url, timeoutMs, maxChars, retried + 1);
   }

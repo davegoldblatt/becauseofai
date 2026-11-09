@@ -3,7 +3,8 @@ import Base from "../../layouts/Base.astro";
 import Stamps from "../../components/Stamps.astro";
 import LagBar from "../../components/LagBar.astro";
 import Receipt from "../../components/Receipt.astro";
-import { publishable, byId, neighbours, verifiedRecord } from "../../lib/site.ts";
+import { publishable, byId, neighbours, verifiedRecord, levelOf } from "../../lib/site.ts";
+import { CONFIDENCE_LABEL, CONFIDENCE_DESCRIPTION } from "../../lib/format.ts";
 import { SITE } from "../../site.ts";
 import {
   fmtDate, isoDate, primarySources, secondarySources, hostOf, effectLine, impactParts, achievedState, lagFor,
@@ -60,6 +61,7 @@ const facets: [string, string][] = [
   <article class:list={["entry", `s-${e.section}`]} data-pagefind-body>
     {facets.map(([k, v]) => <span hidden data-pagefind-filter={`${k}:${v}`} data-pagefind-meta={`${k}:${v}`}></span>)}
     <span hidden data-pagefind-meta={`impact:${e.impact}`}></span>
+    <span hidden data-pagefind-filter={`how sure:${CONFIDENCE_LABEL[levelOf(e)]}`} data-pagefind-meta={`sure:${CONFIDENCE_LABEL[levelOf(e)]}`}></span>
     <header class="entry-head">
       <nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <a href={sectionHref} data-back={sectionHref}>← Back to the list</a>
@@ -108,7 +110,7 @@ const facets: [string, string][] = [
           <>
             <h2 data-pagefind-ignore>Related</h2>
             <ul class="related" data-pagefind-ignore>
-              {related.map((r) => <li><a href={`/entry/${r.id}`}>{r.headline}</a></li>)}
+              {related.map((r) => <li><a href={`/entry/${r.id}`}>{r.headline}</a>{levelOf(r) !== "strict" && <span class="muted"> · {CONFIDENCE_LABEL[levelOf(r)]}</span>}</li>)}
             </ul>
           </>
         )}
@@ -122,9 +124,10 @@ const facets: [string, string][] = [
             <dl class="verif" data-pagefind-ignore>
               <dt>Drafted by</dt><dd>{VENDOR_LABEL[v.drafter.vendor]} <code>{v.drafter.model}</code> <time datetime={v.drafter.date}>{fmtDate(v.drafter.date)}</time></dd>
               <dt>Verified by</dt><dd>{VENDOR_LABEL[v.verifier.vendor]} <code>{v.verifier.model}</code> <time datetime={v.verifier.date}>{fmtDate(v.verifier.date)}</time> · {v.verifier.verdict}</dd>
+              <dt>How sure</dt><dd><a href="/method#how-sure">{CONFIDENCE_LABEL[levelOf(e)]}</a>{(v.relaxed ?? []).length > 0 && <ul class="relaxed">{v.relaxed!.map((r) => <li>{r}</li>)}</ul>}</dd>
               <dt>Record</dt><dd><a href={recordUrl(v.record)} rel="noopener">data/verifications/{v.record}</a>{rec?.record.verifier?.output && typeof (rec.record.verifier.output as { summary?: string }).summary === "string" && <span class="muted"> · {(rec.record.verifier.output as { summary: string }).summary}</span>}</dd>
             </dl>
-            <p class="verif-note" data-pagefind-ignore>Two models from different vendors read the primary source independently; this entry is published because they agreed on every receipt and every grade. The models grading an AI registry have an interest in the answer. Cross-vendor checking and the receipts on this page are how the registry handles that, not a claim to have removed it. <a href="/method#pipeline">How the gate works</a> · <a href={`${SITE.repo}/issues/new?template=dispute-entry.yml&title=${encodeURIComponent(`Dispute: ${e.id}`)}`}>Dispute this entry</a></p>
+            <p class="verif-note" data-pagefind-ignore>Two models from different vendors read the primary source independently; this entry is published because they agreed on every receipt and every grade.{levelOf(e) !== "strict" && <> It is marked {CONFIDENCE_LABEL[levelOf(e)].toLowerCase()}: {CONFIDENCE_DESCRIPTION[levelOf(e)]}</>} The models grading an AI registry have an interest in the answer. Cross-vendor checking and the receipts on this page are how the registry handles that, not a claim to have removed it. <a href="/method#pipeline">How the gate works</a> · <a href={`${SITE.repo}/issues/new?template=dispute-entry.yml&title=${encodeURIComponent(`Dispute: ${e.id}`)}`}>Dispute this entry</a></p>
           </>
         )}
         <h2 data-pagefind-ignore>Cite this entry</h2>
@@ -155,8 +158,8 @@ const facets: [string, string][] = [
     </div>
 
     <nav class="pager" aria-label="Previous and next in this section" data-pagefind-ignore>
-      <div>{prev && <a href={`/entry/${prev.id}`} rel="prev">Previous<span class="pager-h">{prev.headline}</span></a>}</div>
-      <div class="next">{next && <a href={`/entry/${next.id}`} rel="next">Next<span class="pager-h">{next.headline}</span></a>}</div>
+      <div>{prev && <a href={`/entry/${prev.id}`} rel="prev">Previous{levelOf(prev) !== "strict" && <> · {CONFIDENCE_LABEL[levelOf(prev)]}</>}<span class="pager-h">{prev.headline}</span></a>}</div>
+      <div class="next">{next && <a href={`/entry/${next.id}`} rel="next">Next{levelOf(next) !== "strict" && <> · {CONFIDENCE_LABEL[levelOf(next)]}</>}<span class="pager-h">{next.headline}</span></a>}</div>
     </nav>
   </article>
 </Base>

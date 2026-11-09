@@ -1,10 +1,10 @@
 // The site's single data entry point. Vite resolves the glob at build time, so
 // pages never touch the filesystem at render time and dev reloads on YAML edits.
 // Everything below is validated; a bad entry fails the build here.
-import { loadOrThrow, bySection, counts } from "./entries.ts";
+import { loadOrThrow, bySection, counts, heldBlock } from "./entries.ts";
 import { timelineFor } from "./format.ts";
 import { SITE } from "../site.ts";
-import { heldInfo, type Entry, type Section } from "../schema.ts";
+import { CONFIDENCE, SECTIONS, type Confidence, type Entry, type Section } from "../schema.ts";
 import type { VerificationRecord } from "../../scripts/lib/record.ts";
 
 const globbed = import.meta.glob("../../data/entries/*.yaml", {
@@ -24,7 +24,16 @@ for (const [p, rec] of Object.entries(recordFiles)) recordsByPath[p.split("/").s
 export const data = loadOrThrow(files, recordsByPath);
 export const publishable = data.publishable;
 export const held = data.held;
-export const siteCounts = counts(publishable);
+// How sure each published entry is (DAV-469). Strict is the original bar.
+export function levelOf(e: Entry): Confidence { return data.levels.get(e.id) ?? "strict"; }
+export const isStrict = (e: Entry) => levelOf(e) === "strict";
+export const strictOnly = publishable.filter(isStrict);
+// The running head, the hero, the share images, and the page descriptions
+// count strict entries only, so their meaning did not change with the levels.
+export const siteCounts = counts(strictOnly);
+// Every published entry, at any level, by section (the API's counts).
+export const allCounts = counts(publishable);
+export const levelCounts = Object.fromEntries(SECTIONS.map((s) => [s, Object.fromEntries(CONFIDENCE.map((c) => [c, publishable.filter((e) => e.section === s && levelOf(e) === c).length]))])) as Record<Section, Record<Confidence, number>>;
 export const heldCount = held.length;
 
 export const records = new Map<string, VerificationRecord>(Object.entries(recordsByPath));
@@ -38,7 +47,7 @@ export function recordFor(e: Entry): { path: string; record: VerificationRecord 
 }
 
 // Held entries with their reason, for the changelog, the running head, and the JSON.
-export const heldList = held.map((e) => ({ entry: e, held: heldInfo(e)!, record: recordFor(e) }));
+export const heldList = held.map((e) => ({ entry: e, held: heldBlock(e, data)!, record: recordFor(e) }));
 
 // A verification is shown on an entry page only when its record binds to the
 // entry as it stands now.

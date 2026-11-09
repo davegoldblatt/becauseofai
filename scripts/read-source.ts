@@ -19,5 +19,5 @@ if (!r.ok) {
   process.exit(1);
 }
 const full = r.chars >= MIN_FULL_TEXT_CHARS && !r.truncated;
-console.log(`READ ${r.url}\nfinal url: ${r.finalUrl}\nmethod: ${r.method}\nchars: ${r.chars}${r.truncated ? " (truncated by the reader)" : ""}\nfull text: ${full ? "likely" : "no: too short or cut; treat as an abstract or landing page"}\n---`);
+console.log(`READ ${r.url}\nfinal url: ${r.finalUrl}\nmethod: ${r.method}\nchars: ${r.chars}${r.truncated ? " (truncated by the reader)" : ""}\nfull text: ${full && !r.partial ? "likely" : r.partial ? "no: an abstract or summary (kept as partial text; an entry from it can be at most reasonable)" : "no: cut by the reader; treat as partial"}\n---`);
 console.log(r.text.length > max ? `${r.text.slice(0, max)}\n--- [cut at ${max} chars; rerun with --max for more]` : r.text);

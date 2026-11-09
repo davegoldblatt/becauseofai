@@ -8,8 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
-import { loadEntries } from "../src/lib/entries.ts";
-import { heldInfo } from "../src/schema.ts";
+import { loadEntries, heldBlock } from "../src/lib/entries.ts";
 import { SITE } from "../src/site.ts";
 import { xKeysFromEnv, me, ownPosts, mentions, type XPost } from "./lib/x-api.ts";
 import { renderHtml } from "./lib/digest-html.ts";
@@ -27,7 +26,7 @@ type Digest = {
   generated_at: string;
   since: string;
   site: string;
-  entries: { published: number; held: number; counts: Record<string, number>; changed: { id: string; headline: string; change: "added" | "changed"; state: string; url: string | null }[]; held_list: { id: string; headline: string; reason: string; since: string; detail: string }[] };
+  entries: { published: number; held: number; counts: Record<string, number>; lower_levels?: Record<string, number>; changed: { id: string; headline: string; change: "added" | "changed"; state: string; url: string | null }[]; held_list: { id: string; headline: string; reason: string; since: string; detail: string }[] };
   verifications: { id: string; date: string; result: string; reason: string | null; detail: string; record: string }[];
   announced: { id: string; date: string; url: string }[];
   leads_added: string[];
@@ -52,12 +51,16 @@ async function main() {
   const published = new Set(loaded.publishable.map((e) => e.id));
   const changed = [...change.entries()].map(([id, c]) => {
     const e = byId.get(id);
-    const h = e ? heldInfo(e) : null;
-    return { id, headline: e?.headline ?? id, change: c, state: !e ? "removed" : published.has(id) ? "published" : `held (${h?.reason})`, url: e && published.has(id) ? `${SITE.url}/entry/${id}` : null };
+    const h = e ? heldBlock(e, loaded) : null;
+    const level = loaded.levels.get(id) ?? "strict";
+    return { id, headline: e?.headline ?? id, change: c, state: !e ? "removed" : published.has(id) ? (level === "strict" ? "published" : `published as ${level}`) : `held (${h?.reason})`, url: e && published.has(id) ? `${SITE.url}/entry/${id}` : null };
   });
-  const held_list = loaded.held.map((e) => { const h = heldInfo(e)!; return { id: e.id, headline: e.headline, reason: h.reason, since: h.since, detail: h.detail }; });
+  const held_list = loaded.held.map((e) => { const h = heldBlock(e, loaded)!; return { id: e.id, headline: e.headline, reason: h.reason, since: h.since, detail: h.detail }; });
+  // Strict entries, as the site's running head counts them; the less certain
+  // levels are counted separately (DAV-469).
   const counts = { because: 0, "not-because": 0, "not-yet": 0 } as Record<string, number>;
-  for (const e of loaded.publishable) counts[e.section]++;
+  const lowerLevels = { reasonable: 0, speculative: 0 } as Record<string, number>;
+  for (const e of loaded.publishable) { const l = loaded.levels.get(e.id) ?? "strict"; if (l === "strict") counts[e.section]++; else lowerLevels[l]++; }
 
   // Gate decisions of the last day: only the records an entry currently stands
   // on (its verification or its hold). Older records of the same entry are
@@ -70,7 +73,7 @@ async function main() {
     if (!fs.existsSync(p)) continue;
     const r = JSON.parse(fs.readFileSync(p, "utf8"));
     if (r.date < day(sinceIso)) continue;
-    verifications.push({ id: e.id, date: r.date, result: published.has(e.id) ? "published" : "held", reason: published.has(e.id) ? null : (heldInfo(e)?.reason ?? null), detail: String(r.adjudication.detail).slice(0, 300), record: rel });
+    verifications.push({ id: e.id, date: r.date, result: published.has(e.id) ? "published" : "held", reason: published.has(e.id) ? null : (heldBlock(e, loaded)?.reason ?? null), detail: String(r.adjudication.detail).slice(0, 300), record: rel });
   }
 
   // Announcer ledger: posted in the last two days.
@@ -134,7 +137,7 @@ async function main() {
 
   const digest: Digest = {
     generated_at: now.toISOString(), since: sinceIso, site: SITE.url,
-    entries: { published: loaded.publishable.length, held: loaded.held.length, counts, changed, held_list },
+    entries: { published: loaded.publishable.length, held: loaded.held.length, counts, lower_levels: lowerLevels, changed, held_list },
     verifications, announced, leads_added, x, traffic, notes,
   };
   fs.mkdirSync(outDir, { recursive: true });
@@ -188,7 +191,7 @@ function render(d: Digest): string {
   else L.push("- Not connected yet. Dave would need to make a Cloudflare analytics token; until then there are no traffic numbers.");
 
   L.push("", "THE REGISTRY");
-  L.push(`- Live on the site: ${d.entries.counts.because} benefits, ${d.entries.counts["not-because"]} null results, ${d.entries.counts["not-yet"]} watchlist items. Held off the site: ${d.entries.held}.`);
+  L.push(`- Live on the site, strict: ${d.entries.counts.because} benefits, ${d.entries.counts["not-because"]} null results, ${d.entries.counts["not-yet"]} watchlist items. Less certain, behind the switch: ${d.entries.lower_levels?.reasonable ?? 0} reasonable, ${d.entries.lower_levels?.speculative ?? 0} speculative. Held off the site: ${d.entries.held}.`);
   if (d.entries.changed.length > 10) L.push(`- A bulk change touched ${d.entries.changed.length} entries at once (a rebuild of the files, not ${d.entries.changed.length} new entries).`);
   else if (d.entries.changed.length) { L.push("", "ENTRIES ADDED OR CHANGED IN THE LAST DAY"); for (const c of d.entries.changed) { const reason = /^held \((.*)\)$/.exec(c.state)?.[1]; L.push(`- ${c.change}: "${c.headline}" (${c.url ? `live: ${c.url}` : reason ? `held because ${REASON[reason] ?? reason}` : c.state})`); } }
   else L.push("- No entry was added or changed.");

@@ -10,10 +10,31 @@ export const RECEIPT_STATUSES = ["supported", "contradicted", "unsupported"] as 
 
 const Field = z.enum(RECEIPT_FIELDS);
 
+export const SourceFindings = z
+  .array(
+    z
+      .object({
+        source: z.number().int().describe("the source index, as given"),
+        kind: z.enum(SOURCE_KINDS).describe("what this source's text is"),
+        full_text: z.boolean().describe("true when this source's text is the complete document; false for an abstract, a summary, a landing page, or a fragment"),
+      })
+      .strict(),
+  )
+  .describe("one item per source you were given, in index order");
+
+export const AchievedDates = z
+  .object({
+    from: z.enum(DATE_ORIGINS).describe("where the entry's achieved dates can be read in the text given: methods, results, registry, report-body, abstract, or press-release; not-found when no part of the text gives them; not-applicable when the entry has no achieved dates"),
+    conflicting: z.boolean().describe("true when another part of the text gives different achieved dates (for example the abstract and the methods disagree)"),
+    note: z.string(),
+  })
+  .strict();
+
 export const VerdictSchema = z
   .object({
     full_text: z.boolean().describe("true when the text given is the complete document (methods and results, or the whole registry record or report); false for an abstract, a landing page, or a fragment"),
     source_kind: z.enum(SOURCE_KINDS).describe("what the primary source text is"),
+    source_findings: SourceFindings,
     receipts: z
       .array(
         z
@@ -34,12 +55,7 @@ export const VerdictSchema = z
       .strict()
       .describe("your own grades from the source alone; null when the source does not let you decide, or for a not-yet entry"),
     attribution_rationale: z.string().describe("one sentence naming the comparison that justifies your attribution grade"),
-    achieved_dates: z
-      .object({
-        from: z.enum(DATE_ORIGINS).describe("where the entry's achieved dates can be read in the source: methods, results, registry, and report-body are acceptable (the body of the document, at the stated precision); abstract and press-release are not; not-found when the body does not give them; not-applicable when the entry has no achieved dates"),
-        note: z.string(),
-      })
-      .strict(),
+    achieved_dates: AchievedDates,
     conflict: z
       .object({
         in_source: z.boolean().describe("the source shows a conflict: a company-run study or dashboard, vendor funding, authors employed by or holding equity in the vendor, a patent or licence"),
@@ -61,6 +77,14 @@ export const VerdictSchema = z
   })
   .strict();
 export type Verdict = z.infer<typeof VerdictSchema>;
+
+// A stored record's verdict, read back by the loader. Records written before
+// 2026-11-09 have no source_findings and no achieved_dates.conflicting; they
+// still bind (the gate treats a missing conflicting as true).
+export const StoredVerdictSchema = VerdictSchema.extend({
+  source_findings: SourceFindings.optional(),
+  achieved_dates: AchievedDates.extend({ conflicting: z.boolean().optional() }).strict(),
+});
 
 export const ReceiptsDraftSchema = z
   .object({

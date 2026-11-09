@@ -21,10 +21,10 @@ ai_type: classic-ml
 grades:
   evidence: B
   attribution: bundled
-  window: in
+  window: pre
 comparison: "DeepMind ensemble vs all other operational models and the NHC official forecast, full 2025 Atlantic season verification"
 effect:
-  relative: "Lowest season track and intensity error of any model"
+  relative: "Considerably more skillful than most other track guidance for Melissa, and very good at intensity and rapid intensification"
   absolute: null
 reach: "Jamaica, Haiti, Cuba and the Bahamas"
 dates:
@@ -111,6 +111,17 @@ history:
       guidance, with no with-versus-without-AI comparison. Window set back to in:
       the site's as-of date is 22 Oct 2026, so its 12-month window starts 22 Oct
       2025 and the benefit (25 to 28 Oct 2025) falls inside it.
+  - date: 2026-11-09
+    note: >-
+      Re-graded window from in to pre: the gate now grades windows against the
+      run date, like the weekly editor and the validator, so the 12-month window
+      ending 9 Nov 2026 starts 9 Nov 2025 and the benefit (25 to 28 Oct 2025)
+      predates it.
+  - date: 2026-11-09
+    note: >-
+      Corrected the relative effect to what the NHC report states for Melissa
+      (considerably more skillful than most other track guidance) instead of the
+      season ranking, which rests on Michael Lowry's newsletter.
 rationale: The bundled grade rests on the NHC Tropical Cyclone Report. Table 6b compares the Google DeepMind ensemble (GDMI) with every other intensity guidance model and the official forecast for Melissa on the same forecast cases. The Category 5 call itself came from forecasters using GDMI together with the HAFS, HWRF and HMON hurricane models, which the report says made them more confident in predicting rapid intensification at long lead times. No comparison removes the AI alone.
 receipts:
   - field: headline
@@ -130,9 +141,9 @@ receipts:
     locator: Discussion 18 body, Forecast Positions and Max Winds (issued 500 PM EDT Sat Oct 25 2025)
     source: 1
   - field: effect.relative
-    quote: DeepMind has been the top performing model for track and intensity in both the Atlantic and the Pacific basins this season
-    locator: A banner year for Google DeepMind
-    source: 2
+    quote: performed remarkably well at all time periods and was considerably more skillful than most of the other track guidance
+    locator: Forecast and Warning Critique, Track Forecast
+    source: 0
   - field: dates.achieved_end
     quote: Melissa made landfall as an estimated 160-kt category 5 hurricane near New Hope, Jamaica, around 1725 UTC 28 October.
     locator: Synoptic History, p. 4
@@ -141,7 +152,7 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-09
-  content: b562b054bb36173c53b0044f9835fd1abb054455f5bca1e1d036a7a9d1000efe
+  content: e7cde7ac32a0fafaea82dfa9d3781cf7acc134f415f531c05be29eaee6f27c63
 verification:
   drafter:
     vendor: anthropic
@@ -152,4 +163,5 @@ verification:
     model: gpt-6.1-sol
     date: 2026-11-09
     verdict: pass
-  record: hurricane-melissa-2025/2026-11-09.json
+  record: hurricane-melissa-2025/2026-11-09-4.json
+  confidence: strict

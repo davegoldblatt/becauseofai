@@ -83,7 +83,7 @@ export async function fetchPrimaries(e: Entry, log: (s: string) => void = () => 
     const fetched_at = new Date().toISOString();
     if (r.ok) {
       texts.set(index, r);
-      fetches.push({ index, url: s.url, ok: true, method: r.method, fetched_at, final_url: r.finalUrl, sha256: r.sha256, chars: r.chars, truncated: r.truncated });
+      fetches.push({ index, url: s.url, ok: true, method: r.method, fetched_at, final_url: r.finalUrl, sha256: r.sha256, chars: r.chars, truncated: r.truncated, ...(r.partial ? { partial: true } : {}) });
       log(`  source ${index}: ${r.method} ${r.chars} chars${r.truncated ? " (truncated)" : ""} ${Date.now() - t0} ms`);
     } else {
       fetches.push({ index, url: s.url, ok: false, method: r.method, fetched_at, reason: r.reason });
@@ -140,6 +140,10 @@ export function writeOwned(d: DraftEntry, owned: Owned): void {
   fs.writeFileSync(d.file, assertEntry(withOwned(d.raw, owned), `${d.id}.yaml`));
 }
 
-export const asOf = SITE.asOf;
+// The window's reference date for the gate: today, the same date the weekly
+// editor and the validator use (DAV-383). It was the fixed SITE.asOf, so the
+// editor and the gate disagreed on window grades as time passed, and an entry
+// flipped between in and pre every week (Hurricane Melissa, 2026-11).
+export const asOf = new Date().toISOString().slice(0, 10);
 export const fmtTokens = (t: { input?: number; output?: number; total: number; cached?: number; reasoning?: number } | null | undefined) =>
   t ? `${t.total.toLocaleString("en-US")} tokens${t.input ? ` (in ${t.input.toLocaleString("en-US")}${t.cached ? `, cached ${t.cached.toLocaleString("en-US")}` : ""}, out ${(t.output ?? 0).toLocaleString("en-US")}${t.reasoning ? `, reasoning ${t.reasoning.toLocaleString("en-US")}` : ""})` : ""}` : "tokens n/a";

@@ -1,14 +1,16 @@
 // The shape of a verification record, as the loader checks it before a record
 // may bind an entry. Mirrors record.ts; a record that fails this binds nothing.
 import { z } from "zod";
-import { HELD_REASONS, VENDORS } from "../../src/schema.ts";
+import { CONFIDENCE, HELD_REASONS, VENDORS } from "../../src/schema.ts";
 import { VerdictSchema } from "./verdict-schema.ts";
 
 const Date_ = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
-const Tokens = z.object({ input: z.number(), output: z.number(), total: z.number() }).strict();
+// cached and reasoning are reported by the OpenAI API and by the Codex event
+// stream (since 2026-11-09); a record carrying them must still bind.
+const Tokens = z.object({ input: z.number(), output: z.number(), total: z.number(), cached: z.number().optional(), reasoning: z.number().optional() }).strict();
 export const SourceFetchSchema = z.object({
   index: z.number().int().nonnegative(), url: z.string(), ok: z.boolean(), method: z.string(), fetched_at: z.string(),
-  final_url: z.string().optional(), sha256: z.string().optional(), chars: z.number().optional(), truncated: z.boolean().optional(), reason: z.string().optional(),
+  final_url: z.string().optional(), sha256: z.string().optional(), chars: z.number().optional(), truncated: z.boolean().optional(), partial: z.boolean().optional(), reason: z.string().optional(),
 }).strict();
 export const QuoteCheckSchema = z.object({
   field: z.string(), source: z.number().int(), quote: z.string(), found: z.boolean(), exact: z.boolean(),
@@ -31,6 +33,7 @@ export const RecordSchema = z.object({
   adjudication: z.object({
     result: z.enum(["published", "held"]), reason: z.enum(HELD_REASONS).nullable(), detail: z.string(),
     splits: z.array(z.object({ grade: z.string(), drafter: z.string().nullable(), verifier: z.string().nullable() }).strict()).optional(),
+    confidence: z.enum(CONFIDENCE).optional(), relaxed: z.array(z.string()).optional(),
   }).strict(),
   dispute: z.object({
     issue: z.number().int(), title: z.string(), claim: z.string(), verdicts: z.array(VendorRunRecordSchema), outcome: z.enum(["upheld", "rejected", "split"]),

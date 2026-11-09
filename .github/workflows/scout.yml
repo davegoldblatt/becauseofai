@@ -132,6 +132,10 @@ jobs:
           SUBSTACK_VIA: https://punditclaims.ai
         run: |
           set -euo pipefail
+          # DAV-469: a bounded run. Too many changed entries means nothing is verified
+          # or merged, so the gate's quota on the personal ChatGPT login stays small.
+          n=$(git diff --name-only "$BASE_SHA" HEAD -- data/entries | wc -l | tr -d ' ')
+          if [ "$n" -gt 6 ]; then echo "::error::this run changed $n entry files (budget 6); nothing is verified or merged"; exit 1; fi
           node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-sonnet-5-5" --max 0 --force
           git checkout -- . ':!data/' || true
           bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)

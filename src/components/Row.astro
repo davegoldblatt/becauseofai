@@ -9,6 +9,7 @@ import type { Entry } from "../schema.ts";
 import Stamps from "./Stamps.astro";
 import LagBar from "./LagBar.astro";
 import { impactParts, achievedKey, isoDate, lagMonths } from "../lib/format.ts";
+import { levelOf } from "../lib/site.ts";
 interface Props { entry: Entry; index: number }
 const { entry: e, index } = Astro.props;
 const imp = impactParts(e);
@@ -29,6 +30,7 @@ const lag = lagMonths(e);
   data-domain={e.domain}
   data-ai-type={e.ai_type}
   data-lag={lag ?? -1}
+  data-sure={levelOf(e)}
 >
   <span class="idx" data-idx={index} aria-hidden="true"></span>
   <div class="row-main">

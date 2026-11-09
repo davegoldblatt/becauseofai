@@ -156,6 +156,15 @@ export const GRADE_DESCRIPTION = {
   },
 } as const;
 
+// How sure (DAV-469). The list control, the stamps, the method page, and the
+// API read this one table.
+export const CONFIDENCE_LABEL = { strict: "Strict", reasonable: "Reasonable", speculative: "Speculative" } as const;
+export const CONFIDENCE_DESCRIPTION = {
+  strict: "The full primary source was read, the result was measured against something and dated from the source's methods or record, and both checking models agree on every number and grade.",
+  reasonable: "Only the abstract or a summary of the source could be read, or the dates come from the abstract. Every number is still quoted from the source, and both checking models agree.",
+  speculative: "The source is a press release or a news report, or the benefit has not yet been measured against anything. Every number is still quoted from the source, and both checking models agree.",
+} as const;
+
 export const WATCHLIST_DESCRIPTION = "Not graded yet: this candidate has not passed the four tests. The entry says what would change that.";
 
 export function primarySources(e: Entry) {

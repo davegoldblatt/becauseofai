@@ -1,7 +1,7 @@
 // The public record of one verification or dispute run. One JSON file per run
 // under data/verifications/<entry-id>/<date>.json, committed with the entry, so
 // a reader can see what graded what and where the two vendors disagreed.
-import type { HeldReason, Vendor } from "../../src/schema.ts";
+import type { Confidence, HeldReason, Vendor } from "../../src/schema.ts";
 
 export type Tokens = { input: number; output: number; total: number; cached?: number; reasoning?: number };
 
@@ -15,6 +15,7 @@ export type SourceFetch = {
   sha256?: string;
   chars?: number;
   truncated?: boolean;
+  partial?: boolean;        // an abstract or summary, shorter than a full document (DAV-469)
   reason?: string;          // why it failed, when ok is false
 };
 
@@ -37,6 +38,10 @@ export type Adjudication = {
   reason: HeldReason | null;
   detail: string;
   splits?: Split[];
+  // How sure (DAV-469), on a published result only: decided by code from the
+  // gate's findings, with one plain sentence per finding that lowered it.
+  confidence?: Confidence;
+  relaxed?: string[];
 };
 
 export type VendorRunRecord = {

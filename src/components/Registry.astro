@@ -7,7 +7,9 @@ import type { Entry, Section } from "../schema.ts";
 import { DOMAINS, EVIDENCE, ATTRIBUTION, WINDOW, AI_TYPES } from "../schema.ts";
 import Row from "./Row.astro";
 import LagBar from "./LagBar.astro";
-import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor, impactParts } from "../lib/format.ts";
+import { DOMAIN_LABEL, EVIDENCE_LABEL, ATTRIBUTION_LABEL, WINDOW_LABEL, AI_TYPE_LABEL, CONFIDENCE_LABEL, CONFIDENCE_DESCRIPTION, achievedState, fmtDate, isoDate, achievedKey, lagMonths, lagFor, impactParts } from "../lib/format.ts";
+import { CONFIDENCE } from "../schema.ts";
+import { levelOf } from "../lib/site.ts";
 interface Props { entries: Entry[]; section: Section }
 const { entries, section } = Astro.props;
 
@@ -29,9 +31,15 @@ const sorts: [string, string][] = [
   ["evidence", "Evidence, A to D"],
   ["lag", "Largest publication lag"],
 ];
-const total = entries.length;
+// How sure (DAV-469): cumulative. Strict shows strict entries, reasonable adds
+// reasonable ones, speculative shows everything. The page starts on strict and
+// shows only strict entries without JavaScript.
+const levelIdx = (e: Entry) => CONFIDENCE.indexOf(levelOf(e));
+const sureCount = (c: (typeof CONFIDENCE)[number]) => entries.filter((e) => levelIdx(e) <= CONFIDENCE.indexOf(c)).length;
+const total = sureCount("strict");
+const anyLess = entries.some((e) => levelOf(e) !== "strict");
 ---
-<div class="registry" data-registry data-total={total} data-sort="rank">
+<div class="registry" data-registry data-total={total} data-sort="rank" data-sure="strict">
   <aside class="rail" aria-label="Filters">
     <details class="filters" data-filters>
       <summary><span>Filter</span><span class="filters-summary" data-filter-summary></span></summary>
@@ -50,6 +58,14 @@ const total = entries.length;
     </details>
   </aside>
   <div class="registry-main">
+    <div class="sure" role="group" aria-label="How sure?" data-sure-control>
+      <span class="sure-label"><a href="/method#how-sure">How sure?</a></span>
+      {CONFIDENCE.map((c) => (
+        <button type="button" class="stamp stamp-chip" data-sure-value={c} aria-pressed={c === "strict" ? "true" : "false"} title={`${CONFIDENCE_LABEL[c]}: ${CONFIDENCE_DESCRIPTION[c]}`} disabled={c !== "strict" && !anyLess}>
+          <span class="sd">{CONFIDENCE_LABEL[c]}</span><span class="n">{sureCount(c)}</span>
+        </button>
+      ))}
+    </div>
     <div class="toolbar">
       <p class="count"><span data-filter-count aria-live="polite">{total} entries</span></p>
       <label class="sort">Sort
@@ -85,10 +101,10 @@ const total = entries.length;
         </thead>
         <tbody>
           {entries.map((e, i) => { const lag = lagMonths(e); const g = e.grades; const un = g.evidence === null && g.attribution === null && g.window === null; return (
-            <tr class:list={[`s-${e.section}`]} data-entry data-id={e.id} data-rank={e.rank} data-achieved={achievedKey(e)} data-published={isoDate(e.dates.published)}
+            <tr class:list={[`s-${e.section}`]} data-entry data-id={e.id} data-sure={levelOf(e)} data-rank={e.rank} data-achieved={achievedKey(e)} data-published={isoDate(e.dates.published)}
                 data-evidence={g.evidence ?? "none"} data-attribution={g.attribution ?? "none"} data-window={g.window ?? "none"} data-domain={e.domain} data-ai-type={e.ai_type} data-lag={lag ?? -1}>
               <td class="t-idx" data-idx={i + 1}>{i + 1}</td>
-              <td class="t-sentence"><a href={`/entry/${e.id}`}>{e.headline}</a></td>
+              <td class="t-sentence"><a href={`/entry/${e.id}`}>{e.headline}</a>{levelOf(e) !== "strict" && <> <a class={`stamp stamp-xs stamp-sure stamp-sure-${levelOf(e)}`} href="/method#how-sure" title={CONFIDENCE_DESCRIPTION[levelOf(e)]}><span class="sd">{CONFIDENCE_LABEL[levelOf(e)]}</span></a></>}</td>
               <td class="t-impact">{(() => { const imp = impactParts(e); return <><b>{imp.lead}</b>{imp.rest && <span>{imp.rest}</span>}</>; })()}</td>
               {un ? (
                 <td colspan="3"><a class="stamp stamp-xs stamp-watch" href="/method#four-tests"><span class="sd">Watchlist</span></a></td>
@@ -117,6 +133,8 @@ const total = entries.length;
     type Key = (typeof KEYS)[number];
     const DATA: Record<Key, string> = { domain: "domain", evidence: "evidence", attribution: "attribution", window: "window", ai_type: "aiType" };
     const SORTS = ["rank", "achieved", "published", "evidence", "lag"];
+    const SURE = ["strict", "reasonable", "speculative"];
+    const sureBtns = Array.from(root.querySelectorAll<HTMLButtonElement>("button[data-sure-value]"));
     const EV = ["A", "B", "C", "D", "none"];
     const details = root.querySelector<HTMLDetailsElement>("[data-filters]")!;
     const chips = Array.from(root.querySelectorAll<HTMLButtonElement>("button[data-filter]"));
@@ -134,7 +152,7 @@ const total = entries.length;
     const emptyChips = root.querySelector<HTMLElement>("[data-empty-chips]")!;
     const total = Number(root.dataset.total || rows.length);
     const allowed = Object.fromEntries(KEYS.map((k) => [k, new Set(chips.filter((b) => b.dataset.filter === k).map((b) => b.dataset.value!))])) as Record<Key, Set<string>>;
-    const state = { f: Object.fromEntries(KEYS.map((k) => [k, new Set<string>()])) as Record<Key, Set<string>>, sort: "rank", view: "ledger" };
+    const state = { f: Object.fromEntries(KEYS.map((k) => [k, new Set<string>()])) as Record<Key, Set<string>>, sort: "rank", view: "ledger", sure: "strict" };
     const mq = matchMedia("(min-width: 1024px)");
 
     function readUrl() {
@@ -143,18 +161,23 @@ const total = entries.length;
       const s = q.get("sort") || "rank";
       state.sort = SORTS.includes(s) ? s : "rank";
       state.view = q.get("view") === "table" ? "table" : "ledger";
+      const su = q.get("sure") || "strict";
+      state.sure = SURE.includes(su) ? su : "strict";
     }
     function writeUrl() {
       const q = new URLSearchParams();
       for (const k of KEYS) if (state.f[k].size) q.set(k, Array.from(state.f[k]).join(","));
       if (state.sort !== "rank") q.set("sort", state.sort);
       if (state.view !== "ledger") q.set("view", state.view);
+      if (state.sure !== "strict") q.set("sure", state.sure);
       const s = q.toString();
       history.replaceState(null, "", s ? `${location.pathname}?${s}` : location.pathname);
       try { sessionStorage.setItem(`boa:list:${location.pathname}`, s ? `?${s}` : ""); } catch {}
     }
     const matches = (el: HTMLElement, k: Key) => !state.f[k].size || state.f[k].has(el.dataset[DATA[k]] || "");
-    const visible = (el: HTMLElement) => KEYS.every((k) => matches(el, k));
+    const sureOk = (el: HTMLElement) => SURE.indexOf(el.dataset.sure || "strict") <= SURE.indexOf(state.sure);
+    const visible = (el: HTMLElement) => sureOk(el) && KEYS.every((k) => matches(el, k));
+    const levelTotal = () => rows.filter(sureOk).length;
     const byRank = (a: HTMLElement, b: HTMLElement) => Number(a.dataset.rank) - Number(b.dataset.rank);
     function cmp(a: HTMLElement, b: HTMLElement): number {
       const s = state.sort;
@@ -197,7 +220,7 @@ const total = entries.length;
       for (const b of chips) {
         const k = b.dataset.filter as Key, v = b.dataset.value!;
         const on = state.f[k].has(v);
-        const n = rows.filter((r) => r.dataset[DATA[k]] === v && KEYS.every((kk) => kk === k || matches(r, kk))).length;
+        const n = rows.filter((r) => sureOk(r) && r.dataset[DATA[k]] === v && KEYS.every((kk) => kk === k || matches(r, kk))).length;
         b.setAttribute("aria-pressed", String(on));
         const nEl = b.querySelector("[data-chip-count]");
         if (nEl) nEl.textContent = String(n);
@@ -205,7 +228,10 @@ const total = entries.length;
       }
       const active = KEYS.reduce((n, k) => n + state.f[k].size, 0);
       clearBtn.hidden = !(active || state.sort !== "rank");
-      countEl.textContent = active ? `${shown} of ${total}` : `${total} entries`;
+      const all = levelTotal();
+      countEl.textContent = active ? `${shown} of ${all}` : `${all} entries`;
+      root.dataset.sure = state.sure;
+      for (const b of sureBtns) b.setAttribute("aria-pressed", String(b.dataset.sureValue === state.sure));
       summaryEl.textContent = active ? `${active} active` : "";
       emptyEl.hidden = shown > 0;
       emptyChips.replaceChildren(...chips.filter((b) => state.f[b.dataset.filter as Key].has(b.dataset.value!)).map((b) => {
@@ -232,6 +258,8 @@ const total = entries.length;
         set.has(chip.dataset.value!) ? set.delete(chip.dataset.value!) : set.add(chip.dataset.value!);
         writeUrl(); apply(); return;
       }
+      const sure = t.closest<HTMLButtonElement>("button[data-sure-value]");
+      if (sure) { state.sure = sure.dataset.sureValue!; writeUrl(); apply(); return; }
       const view = t.closest<HTMLButtonElement>("button[data-view]");
       if (view) { state.view = view.dataset.view === "table" ? "table" : "ledger"; writeUrl(); apply(); return; }
       const th = t.closest<HTMLButtonElement>("button[data-sort-by]");
@@ -252,6 +280,7 @@ const total = entries.length;
     mq.addEventListener("change", syncRail);
     const remember = () => { try { sessionStorage.setItem(`boa:list:${location.pathname}`, location.search); } catch {} };
     addEventListener("popstate", () => { readUrl(); apply(); remember(); });
+    root.dataset.js = "1";
     readUrl();
     syncRail();
     apply();

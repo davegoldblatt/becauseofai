@@ -1,4 +1,4 @@
-import { data, siteCounts, heldList } from "../../lib/site.ts";
+import { data, allCounts, levelCounts, heldList, levelOf } from "../../lib/site.ts";
 import { SITE } from "../../site.ts";
 
 // Every entry on disk with full, unchanged fields. Held entries are included
@@ -9,7 +9,11 @@ export function GET() {
   const body = {
     site: SITE.url,
     as_of: SITE.asOf,
-    counts: siteCounts,
+    // Published entries per section, at every level (the meaning these counts
+    // always had), and the same split by how sure (DAV-469).
+    counts: allCounts,
+    counts_by_level: levelCounts,
+    levels: Object.fromEntries(data.publishable.map((e) => [e.id, levelOf(e)])),
     held: heldList.map(({ entry, held }) => ({ id: entry.id, reason: held.reason, since: held.since, detail: held.detail, ...(held.record ? { record: held.record } : {}) })),
     records: `${SITE.repo}/tree/main/data/verifications`,
     entries: data.all,

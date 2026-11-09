@@ -20,9 +20,11 @@ Read `HANDOFF.md` (the spec) and `README.md` (layout, decisions made) first. The
 
 `data/entries/*.yaml` → `src/schema.ts` (zod, build fails on a bad entry) → `src/lib/entries.ts` (parse, cross-file checks, held entries) → `src/lib/site.ts` (the one import pages use) → pages. An entry is published only with a passing `verification` whose drafter and verifier are different vendors, a receipt on every numeric field, no `held` block, and a `type: primary` source; anything else is held: validated, in `/api/entries.json` under `held` with its reason, listed on `/changelog#held`, but not rendered, counted, or linked.
 
+How sure (DAV-469, 2026-11-09): a published entry is **strict**, **reasonable**, or **speculative**. Code decides it in `scripts/lib/adjudicate.ts` from the verifier's structured findings (a source read only in part, dates from an abstract or press release, a press-release or news source, no comparison or no date); it is written to `verification.confidence` with the reasons in `verification.relaxed`, and the loader checks it against the bound record. Every list starts on strict; `levelOf()` in `src/lib/site.ts` is the one accessor. The running head, hero, home and section share images, page descriptions, and the X announcer are strict only. An entry with no bound verification publishes only if it is in `src/lib/legacy.ts` (frozen); otherwise it is held until the gate runs.
+
 ## The daily scout
 
-`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most two drafted entries per day with receipts, never an edit to an existing entry, always a pull request. The gate then runs on the branch (`scripts/verify.ts --changed`), and the workflow merges when validate and build pass. Treat `.scout/` as scratch.
+`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most four drafted entries per day with receipts (at any level, DAV-469), never an edit to an existing entry, always a pull request. The gate then runs on the branch (`scripts/verify.ts --changed`), and the workflow merges when validate and build pass. Treat `.scout/` as scratch.
 
 ## The gate
 

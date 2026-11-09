@@ -78,14 +78,20 @@ function record(over: Partial<VerificationRecord> = {}): VerificationRecord {
   };
 }
 
-test("a pass marker is shown as a verification only with a matching record; the entry stays published either way", () => {
+test("a pass marker binds only with a matching record; an unbound entry that is not grandfathered is held until the gate runs (DAV-469)", () => {
   const ok = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record() } });
   assert.equal(ok.errors.length, 0);
   assert.equal(ok.publishable.length, 1);
   assert.equal(ok.unbound.size, 0);
   const none = parseEntryFiles({ "x.yaml": FILE }, { records: {} });
-  assert.equal(none.publishable.length, 1);
+  assert.equal(none.publishable.length, 0);
+  assert.equal(none.held.length, 1);
   assert.match(none.unbound.get("x")!, /not on disk/);
+  assert.match(none.gateDue.get("x")!, /not on disk/);
+  // Control: a grandfathered entry with the same unbound marker stays published, as strict.
+  const legacy = parseEntryFiles({ "waymo-injury-crashes.yaml": FILE.replace(/^id: x$/m, "id: waymo-injury-crashes") }, { records: {} });
+  assert.equal(legacy.publishable.length, 1);
+  assert.equal(legacy.levels.get("waymo-injury-crashes"), "strict");
   const other = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ entry: "y" }) } });
   assert.match(other.unbound.get("x")!, /belongs to y/);
   const heldRec = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ adjudication: { result: "held", reason: "grade-split", detail: "d" } }) } });
@@ -124,10 +130,20 @@ test("aliases are refused, so a value cannot change through an excluded field", 
 test("changing a number or a receipt after verification drops the verification from view; a note does not", () => {
   const changed = FILE.replace("10 fewer patients per 1,000 had an event.", "12 fewer patients per 1,000 had an event.");
   const r = parseEntryFiles({ "x.yaml": changed }, { records: { "x/2026-10-23.json": record() } });
-  assert.equal(r.publishable.length, 1);
+  assert.equal(r.publishable.length, 0);
   assert.match(r.unbound.get("x")!, /changed after/);
   const receipt = FILE.replace("quote: enrolled from January 2021", "quote: enrolled from January 2020");
   assert.match(parseEntryFiles({ "x.yaml": receipt }, { records: { "x/2026-10-23.json": record() } }).unbound.get("x")!, /changed after/);
   const noted = FILE.replace("history:", "notes: an editor's note\nhistory:");
   assert.equal(parseEntryFiles({ "x.yaml": noted }, { records: { "x/2026-10-23.json": record() } }).unbound.size, 0);
+});
+
+test("the level on the entry must be the one its record derives (DAV-469)", () => {
+  const ok = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record() } });
+  assert.equal(ok.levels.get("x"), "strict");
+  // A hand-edited level that the record does not derive does not bind, and the entry is held.
+  const lied = FILE.replace(/^(  record: .*)$/m, "$1\n  confidence: speculative");
+  const r = parseEntryFiles({ "x.yaml": lied }, { records: { "x/2026-10-23.json": record() } });
+  assert.match(r.unbound.get("x") ?? "", /derives strict/);
+  assert.equal(r.publishable.length, 0);
 });

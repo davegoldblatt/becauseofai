@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
-import { publishable } from "../lib/site.ts";
+import { publishable, levelOf } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 import { isoDate, changeType } from "../lib/format.ts";
 
@@ -18,11 +18,11 @@ export function GET(context: APIContext) {
       // anchors #h-1, #h-2, … in the order the lines were written.
       items.push({
         sortKey: `${date}\u0000${e.id}\u0000${String(i).padStart(4, "0")}`,
-        title: `${type}: ${e.headline}`,
+        title: `${type}: ${levelOf(e) === "strict" ? "" : `[${levelOf(e)}] `}${e.headline}`,
         link: `/entry/${e.id}#h-${i + 1}`,
         ...(/^\d{4}-\d{2}-\d{2}$/.test(date) ? { pubDate: new Date(`${date}T00:00:00Z`) } : {}),
         description: [h.note, /^\d{4}-\d{2}-\d{2}$/.test(date) ? "" : `Dated ${date}.`].filter(Boolean).join(" "),
-        categories: [ct?.type ?? "change", e.section],
+        categories: [ct?.type ?? "change", e.section, levelOf(e)],
       });
     });
   }

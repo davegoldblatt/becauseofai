@@ -1,4 +1,6 @@
 // The gate's fixtures (DAV-376): six that must hold, one that must publish.
+// DAV-469 adds the levels: findings that lower an entry to reasonable or
+// speculative instead of holding it, each with a control that still holds.
 // No model runs here; each case feeds the adjudicator what the code would have
 // fetched and checked and what the verifier would have answered.
 import { test } from "node:test";
@@ -44,11 +46,11 @@ const allFound = (e: Entry): QuoteCheck[] => (e.receipts ?? []).map((r) => ({ fi
 
 function verdict(e: Entry, over: Partial<Verdict> = {}): Verdict {
   const v: Verdict = {
-    full_text: true, source_kind: "paper",
+    full_text: true, source_kind: "paper", source_findings: [{ source: 0, kind: "paper", full_text: true }],
     receipts: (e.receipts ?? []).map((r) => ({ field: r.field, status: "supported", note: "" })),
     grades: { evidence: "A", attribution: "bundled", window: "pre" },
     attribution_rationale: "Hospitals were randomized to the AI package or usual care.",
-    achieved_dates: { from: "methods", note: "" },
+    achieved_dates: { from: "methods", conflicting: false, note: "" },
     conflict: { in_source: true, stated_in_entry: true, note: "vendor funding, disclosed" },
     tests: { reached_people: true, measured_against: true, ai_counterfactual: true, dated: true, note: "" },
     summary: "Every number is in Table 2 and the methods.",
@@ -66,11 +68,13 @@ test("publishes a clean RCT with every receipt supported and matching grades", (
   const a = adjudicate(input(e));
   assert.equal(a.result, "published");
   assert.equal(a.reason, null);
+  assert.equal(a.confidence, "strict");
+  assert.deepEqual(a.relaxed, []);
 });
 
 test("1. achieved dates taken from the abstract when the methods give different ones: held ungrounded", () => {
   const e = entry();
-  const v = verdict(e, { achieved_dates: { from: "abstract", note: "the methods section gives January 2021 to June 2023; the abstract says 2022" } });
+  const v = verdict(e, { achieved_dates: { from: "abstract", conflicting: true, note: "the methods section gives January 2021 to June 2023; the abstract says 2022" } });
   const a = adjudicate(input(e, { verifier: { ok: true, output: v } }));
   assert.equal(a.result, "held");
   assert.equal(a.reason, "ungrounded");
@@ -92,12 +96,13 @@ test("2. a number present in the press release but absent from the paper: held u
   assert.equal(b.reason, "ungrounded");
 });
 
-test("3. a press release listed as the only primary source: held no-primary-source", () => {
+test("3. a press release as the only primary source: speculative, never strict; no primary at all still holds", () => {
   const e = entry({ sources: [{ title: "Press release", url: "https://example.org/press", type: "primary" }] });
-  const v = verdict(e, { source_kind: "press-release" });
+  const v = verdict(e, { source_kind: "press-release", source_findings: [{ source: 0, kind: "press-release", full_text: true }] });
   const a = adjudicate(input(e, { verifier: { ok: true, output: v } }));
-  assert.equal(a.result, "held");
-  assert.equal(a.reason, "no-primary-source");
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "speculative");
+  assert.match(a.relaxed!.join(" "), /press release/);
   // No primary at all holds before anything is fetched.
   const f = entry({ sources: [{ title: "Press release", url: "https://example.org/press", type: "secondary" }], receipts: [] });
   assert.equal(adjudicate(input(f, { verifier: null })).reason, "no-primary-source");
@@ -133,14 +138,23 @@ test("6. vendor B unavailable: held verification-unavailable, never published on
   assert.match(c.detail, /both anthropic/);
 });
 
-test("no full text: nothing fetched, or the verifier saw only an abstract on a page", () => {
+test("nothing fetched still holds; an abstract on a page is reasonable; a registry or Europe PMC read stays strict", () => {
   const e = entry();
   assert.equal(adjudicate(input(e, { sources: [unfetched()], verifier: null })).reason, "no-full-text");
-  const v = verdict(e, { full_text: false, summary: "Only the abstract was provided." });
+  const v = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], summary: "Only the abstract was provided." });
   const page: SourceFetch = { ...fetched(), method: "html" };
-  assert.equal(adjudicate(input(e, { sources: [page], verifier: { ok: true, output: v } })).reason, "no-full-text");
-  // A registry record or a Europe PMC article is complete by construction: the verifier's doubt does not hold it.
-  assert.equal(adjudicate(input(e, { sources: [fetched()], verifier: { ok: true, output: v } })).result, "published");
+  const a = adjudicate(input(e, { sources: [page], verifier: { ok: true, output: v } }));
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "reasonable");
+  // A registry record or a Europe PMC article is complete by construction: the verifier's doubt does not lower it.
+  const b = adjudicate(input(e, { sources: [fetched()], verifier: { ok: true, output: v } }));
+  assert.equal(b.confidence, "strict");
+  // Text the reader itself kept only in part is never strict, whatever the verifier says.
+  const c = adjudicate(input(e, { sources: [{ ...fetched(), partial: true }] }));
+  assert.equal(c.confidence, "reasonable");
+  // Control: an abstract whose receipt the verifier cannot support still holds.
+  const bad = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], receipts: verdict(e).receipts.map((r) => (r.field === "reach" ? { ...r, status: "unsupported" as const, note: "not in the abstract" } : r)) });
+  assert.equal(adjudicate(input(e, { sources: [page], verifier: { ok: true, output: bad } })).reason, "ungrounded");
 });
 
 test("grade split: any disagreement holds, with the split recorded", () => {
@@ -154,10 +168,16 @@ test("grade split: any disagreement holds, with the split recorded", () => {
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: w } })).reason, "grade-split");
 });
 
-test("a failed test holds; a not-yet entry is not tested or grade-compared", () => {
+test("no comparison is speculative; not reaching people or no AI counterfactual holds; a not-yet entry is not tested", () => {
   const e = entry();
   const v = verdict(e, { tests: { reached_people: true, measured_against: false, ai_counterfactual: true, dated: true, note: "no comparison arm" } });
-  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: v } })).reason, "fails-test");
+  const a = adjudicate(input(e, { verifier: { ok: true, output: v } }));
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "speculative");
+  const lab = verdict(e, { tests: { reached_people: false, measured_against: true, ai_counterfactual: true, dated: true, note: "a benchmark, no patients" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: lab } })).reason, "fails-test");
+  const noAi = verdict(e, { tests: { reached_people: true, measured_against: false, ai_counterfactual: false, dated: true, note: "" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: noAi } })).reason, "fails-test");
   const ny = entry({ section: "not-yet", grades: { evidence: null, attribution: null, window: null }, what_would_change: "An outcome." });
   const w = verdict(ny, { grades: { evidence: null, attribution: null, window: null }, tests: { reached_people: false, measured_against: false, ai_counterfactual: false, dated: false, note: "not a result" } });
   assert.equal(adjudicate(input(ny, { verifier: { ok: true, output: w } })).result, "published");
@@ -203,9 +223,9 @@ test("receipt verdicts must name the entry's receipts, in order", () => {
 
 test("not-applicable date provenance counts only when the entry has no achieved dates", () => {
   const e = entry();
-  const v = verdict(e, { achieved_dates: { from: "not-applicable", note: "" } });
+  const v = verdict(e, { achieved_dates: { from: "not-applicable", conflicting: false, note: "" } });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: v } })).reason, "ungrounded");
-  const r = verdict(e, { achieved_dates: { from: "results", note: "the screening span is given in Results" } });
+  const r = verdict(e, { achieved_dates: { from: "results", conflicting: false, note: "the screening span is given in Results" } });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: r } })).result, "published");
 });
 
@@ -222,4 +242,40 @@ test("a receipt whose source could not be read is a reading failure", () => {
   const a = adjudicate(input(e, { sources: [unfetched(0, "HTTP 403"), fetched(1)], quoteChecks: checks, verifier: null }));
   assert.equal(a.reason, "no-full-text");
   assert.match(a.detail, /HTTP 403/);
+});
+
+test("dates from the abstract are reasonable, from a press release speculative, and conflicting dates hold", () => {
+  const e = entry();
+  const abs = verdict(e, { achieved_dates: { from: "abstract", conflicting: false, note: "only the abstract gives the enrolment span" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: abs } })).confidence, "reasonable");
+  const pr = verdict(e, { achieved_dates: { from: "press-release", conflicting: false, note: "" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: pr } })).confidence, "speculative");
+  // Control: a stored verdict from before the levels has no conflicting field, so it is assumed and holds.
+  const old = { ...verdict(e), achieved_dates: { from: "abstract", note: "" } } as unknown as Verdict;
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: old } })).reason, "ungrounded");
+});
+
+test("only the sources the receipts quote decide the level; the lowest level wins", () => {
+  const two = entry({ sources: [{ title: "BMJ paper", url: "https://doi.org/10.1136/bmj-2025-085810", type: "primary" }, { title: "Press release", url: "https://example.org/press", type: "primary" }] });
+  const findings = [{ source: 0, kind: "paper" as const, full_text: true }, { source: 1, kind: "press-release" as const, full_text: true }];
+  // Every receipt quotes the paper: the release beside it does not lower the entry.
+  const a = adjudicate(input(two, { sources: [fetched(0), { ...fetched(1), method: "html" }], verifier: { ok: true, output: verdict(two, { source_findings: findings }) } }));
+  assert.equal(a.confidence, "strict");
+  // One receipt quotes the release: speculative.
+  const mixed = entry({ sources: two.sources, receipts: (two.receipts ?? []).map((r) => (r.field === "reach" ? { ...r, source: 1 } : r)) });
+  const b = adjudicate(input(mixed, { sources: [fetched(0), { ...fetched(1), method: "html" }], verifier: { ok: true, output: verdict(mixed, { source_findings: findings }) } }));
+  assert.equal(b.confidence, "speculative");
+  // Abstract-only paper plus press-release dates: the lower, speculative, wins and both reasons are kept.
+  const both = verdict(two, { source_findings: [{ source: 0, kind: "paper", full_text: false }, findings[1]], achieved_dates: { from: "press-release", conflicting: false, note: "" } });
+  const c = adjudicate(input(two, { sources: [{ ...fetched(0), method: "html" }, { ...fetched(1), method: "html" }], verifier: { ok: true, output: both } }));
+  assert.equal(c.confidence, "speculative");
+  assert.equal(c.relaxed!.length, 2);
+});
+
+test("a lowered entry still holds on a grade split or an unstated conflict", () => {
+  const e = entry();
+  const split = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], grades: { evidence: "B", attribution: "bundled", window: "pre" } });
+  assert.equal(adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], verifier: { ok: true, output: split } })).reason, "grade-split");
+  const pr = verdict(e, { source_findings: [{ source: 0, kind: "press-release", full_text: true }], conflict: { in_source: true, stated_in_entry: false, note: "a company announcement" } });
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: pr } })).reason, "fails-test");
 });

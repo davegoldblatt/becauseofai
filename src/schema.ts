@@ -22,6 +22,13 @@ export const SOURCE_TYPES = ["primary", "secondary"] as const;
 // verifier of a published entry must differ, and the schema enforces that.
 export const VENDORS = ["anthropic", "openai"] as const;
 export const VERDICTS = ["pass", "fail"] as const;
+// How sure (DAV-469). Strict is the original bar; the gate lowers an entry to
+// reasonable (a source read only in part, dates from the abstract) or
+// speculative (a press release or news source, dates from a press release, no
+// comparison, or undated) instead of holding it. Decided by code
+// (scripts/lib/adjudicate.ts), never by a model.
+export const CONFIDENCE = ["strict", "reasonable", "speculative"] as const;
+export type Confidence = (typeof CONFIDENCE)[number];
 // Why an entry is held rather than published. The changelog lists every held
 // entry with its reason; the adjudicator in scripts/lib/adjudicate.ts is the
 // only thing that sets one.
@@ -170,6 +177,11 @@ export const Verification = z
     verifier: VendorRun.extend({ verdict: z.enum(VERDICTS) }).strict(),
     // Path under data/verifications/ of the public record of this run.
     record: NonBlank.max(200),
+    // How sure, as the gate decided it (DAV-469). Absent on entries verified
+    // before 2026-11-09: those are strict. The loader checks it against the
+    // bound record, so a hand-edited level never publishes.
+    confidence: z.enum(CONFIDENCE).optional(),
+    relaxed: z.array(NonBlank.max(400)).max(10).optional(),
   })
   .strict()
   .refine((v) => v.drafter.vendor !== v.verifier.vendor, {
@@ -361,6 +373,14 @@ export function missingReceipts(e: ReceiptFieldSource & { receipts?: { field: Re
 // entry the gate has not run on yet stays published; only the gate holds an
 // entry, and only by writing a held block. A passing verification is shown on
 // the entry page once it has one.
+// How sure a published entry is (DAV-469); null for an entry that is not
+// published. An entry verified before the levels existed, or never verified
+// (grandfathered in DAV-376), is strict, as it always was.
+export function confidenceOf(e: Pick<Entry, "verification" | "held" | "sources">): Confidence | null {
+  if (!isPublished(e)) return null;
+  return e.verification?.confidence ?? "strict";
+}
+
 export function isPublished(e: Pick<Entry, "verification" | "held" | "sources">): boolean {
   return hasPrimarySource(e) && !e.held && e.verification?.verifier.verdict !== "fail";
 }

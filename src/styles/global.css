@@ -204,6 +204,11 @@ img, svg { display: block; }
 .stamp-wi-pre .sd { background: var(--paper); padding: 1px 4px; }
 .stamp-wi-none { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
 .stamp-watch { border-color: var(--graphite); color: var(--graphite-text); }
+/* How sure (DAV-469): reasonable is a dashed outline, speculative a dotted one;
+   strict carries no extra stamp. */
+.stamp-sure { border-color: var(--graphite); color: var(--graphite-text); }
+.stamp-sure-reasonable { border-style: dashed; }
+.stamp-sure-speculative { border-style: dotted; }
 .stamp-held { border-color: var(--graphite); border-style: dashed; color: var(--graphite-text); }
 a.stamp:hover .sd { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 .stamp-xs { min-height: 22px; padding: 0 5px; font-size: 10px; }
@@ -491,3 +496,9 @@ h1.sentence + .rcpt { margin: -0.5rem 0 1rem; }
 .verif-note { font: 400 0.95rem/1.5 var(--body); margin: 1rem 0 0; max-width: 68ch; }
 .chg.held .chg-h { color: var(--graphite-text); }
 .chg.held .chg-type .stamp { white-space: normal; text-align: center; line-height: 1.2; padding: 2px 5px; }
+
+/* How sure? control (DAV-469). Without JavaScript only strict rows show. */
+.sure { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 10px; }
+.sure-label { font-family: var(--mono, ui-monospace, monospace); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; margin-right: 4px; }
+.sure-label a { color: inherit; }
+.registry:not([data-js]) [data-sure="reasonable"], .registry:not([data-js]) [data-sure="speculative"] { display: none; }

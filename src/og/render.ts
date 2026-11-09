@@ -99,16 +99,18 @@ function poster(imp: ReturnType<typeof impactParts>, size: number, maxWidth: num
   return h("div", style, [h("span", { display: "flex", fontSize: size * 0.45, lineHeight: 1, paddingTop: size * 0.06, marginRight: size * 0.03 }, imp.mod), h("span", { display: "flex" }, imp.num)]);
 }
 
-export async function renderEntryOg(e: Entry, tl: Timeline): Promise<Buffer> {
+export async function renderEntryOg(e: Entry, tl: Timeline, level: "strict" | "reasonable" | "speculative" = "strict"): Promise<Buffer> {
   const g = e.grades;
   const imp = impactParts(e);
   const leadSize = !imp.numeric ? (imp.lead.length > 24 ? 72 : 96) : imp.lead.length <= 4 ? 230 : imp.lead.length <= 7 ? 180 : 130;
   const sentenceSize = e.headline.length > 150 ? 30 : e.headline.length > 110 ? 34 : 40;
   const ungraded = g.evidence === null && g.attribution === null && g.window === null;
   const a = achievedState(e);
+  // A reasonable or speculative entry says so on its share image (DAV-469).
+  const sure = level === "strict" ? [] : [stamp("watch", level === "reasonable" ? "Reasonable" : "Speculative")];
   const stamps = ungraded
-    ? [stamp("watch", "Watchlist")]
-    : [
+    ? [...sure, stamp("watch", "Watchlist")]
+    : [...sure,
         ...(g.evidence ? [stamp("ev", EVIDENCE_WORD[g.evidence], g.evidence)] : []),
         ...(g.attribution ? [stamp("at", ATTRIBUTION_LABEL[g.attribution])] : []),
         g.window ? stamp(`wi-${g.window}` as "wi-in", WINDOW_LABEL[g.window]) : stamp("wi-none", "window unverified"),

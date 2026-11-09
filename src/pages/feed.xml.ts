@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
-import { publishable } from "../lib/site.ts";
+import { publishable, levelOf } from "../lib/site.ts";
 import { SITE } from "../site.ts";
 import { isoDate, effectLine } from "../lib/format.ts";
 
@@ -15,7 +15,7 @@ export function GET(context: APIContext) {
       const added = isoDate(e.dates.added);
       const effect = effectLine(e);
       return {
-        title: e.headline,
+        title: levelOf(e) === "strict" ? e.headline : `[${levelOf(e)}] ${e.headline}`,
         link: `/entry/${e.id}`,
         // Only a complete YYYY-MM-DD becomes a pubDate. A month or year as written
         // is kept as text in the description instead of inventing a day.
