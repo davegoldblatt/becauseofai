@@ -1,16 +1,38 @@
 {
-  "generated_at": "2026-11-08T14:11:11.245Z",
-  "since": "2026-11-07T14:11:11Z",
+  "generated_at": "2026-11-09T14:17:51.560Z",
+  "since": "2026-11-08T14:17:51Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 26,
+    "published": 27,
     "held": 4,
     "counts": {
-      "because": 16,
+      "because": 17,
       "not-because": 5,
       "not-yet": 5
     },
-    "changed": [],
+    "changed": [
+      {
+        "id": "hurricane-melissa-2025",
+        "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
+        "change": "changed",
+        "state": "held (ungrounded)",
+        "url": null
+      },
+      {
+        "id": "prea-chatbot-specialist-referral-rct",
+        "headline": "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.",
+        "change": "changed",
+        "state": "published",
+        "url": "https://becauseofai.org/entry/prea-chatbot-specialist-referral-rct"
+      },
+      {
+        "id": "rosie-chatbot-maternal-null",
+        "headline": "A generative-AI maternal health chatbot did not reduce anxiety or depression over 12 months among 400 pregnant and postpartum people, compared with a monthly children's book club.",
+        "change": "added",
+        "state": "held (no-full-text)",
+        "url": null
+      }
+    ],
     "held_list": [
       {
         "id": "flourish-ai-coach-students-rct",
@@ -24,7 +46,7 @@
         "headline": "Because of AI, the Hurricane Center called a Category 5 landfall in Jamaica about three days out, while Melissa was still a Category 1.",
         "reason": "ungrounded",
         "since": "2026-11-01",
-        "detail": "No receipt for effect.relative, reach."
+        "detail": "impact_number (receipt 3): unsupported, The quoted passage establishes the intensity categories, not the approximately three-day warning duration.."
       },
       {
         "id": "oman-ai-retinopathy",
@@ -34,44 +56,90 @@
         "detail": "No source is typed primary."
       },
       {
-        "id": "prea-chatbot-specialist-referral-rct",
-        "headline": "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.",
-        "reason": "grade-split",
-        "since": "2026-10-25",
-        "detail": "evidence: drafter A, verifier could not grade."
+        "id": "rosie-chatbot-maternal-null",
+        "headline": "A generative-AI maternal health chatbot did not reduce anxiety or depression over 12 months among 400 pregnant and postpartum people, compared with a monthly children's book club.",
+        "reason": "no-full-text",
+        "since": "2026-11-08",
+        "detail": "source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked."
       }
     ]
   },
-  "verifications": [],
-  "announced": [],
+  "verifications": [
+    {
+      "id": "hurricane-melissa-2025",
+      "date": "2026-11-08",
+      "result": "held",
+      "reason": "ungrounded",
+      "detail": "impact_number (receipt 3): unsupported, The quoted passage establishes the intensity categories, not the approximately three-day warning duration..",
+      "record": "hurricane-melissa-2025/2026-11-08.json"
+    },
+    {
+      "id": "prea-chatbot-specialist-referral-rct",
+      "date": "2026-11-08",
+      "result": "published",
+      "reason": null,
+      "detail": "The prospectively registered randomized trial supports the reported consultation-duration and communication-rating improvements during February–April 2025, but does not establish improved health outcomes or shorter total patient visit time. Staff assistance showed no additional benefit over independ",
+      "record": "prea-chatbot-specialist-referral-rct/2026-11-08.json"
+    },
+    {
+      "id": "rosie-chatbot-maternal-null",
+      "date": "2026-11-08",
+      "result": "held",
+      "reason": "no-full-text",
+      "detail": "source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked.",
+      "record": "rosie-chatbot-maternal-null/2026-11-08.json"
+    }
+  ],
+  "announced": [
+    {
+      "id": "prea-chatbot-specialist-referral-rct",
+      "date": "2026-11-08",
+      "url": "https://becauseofai.org/entry/prea-chatbot-specialist-referral-rct"
+    }
+  ],
   "leads_added": [
-    "AI feedback for clinician assessment of umbilical and middle cerebral artery Doppler ultrasound: a multicenter randomized trial. [AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192) (2026-11-06). Randomized, but likely clinician performance rather than patient outcomes; `npm run read` returns NOT READ (11 characters). Missing: full text, whether patients were reached, absolute effects.",
-    "Protocols to watch: usage feedback, reminders and generative-AI use at work in a Chinese export firm, [AEARCTR-0019968](https://www.socialscienceregistry.org/trials/19968) (2026-10-26 to 2027-10-31); AI-assisted tutoring in rural China, [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058) (2027-01-15 to 2028-04-30).",
-    "Still open from 2026-11-06: Rosie chatbot maternal-health null (JAMA Netw Open) and AEARCTR-0019001; no readable primary source or results yet.",
-    "Skipped: EdArXiv and PsyArXiv survey-style experiments, protocols, systematic reviews, ERIC items already seen, medRxiv retrospective models and simulations, and a feasibility study of AI-enhanced VR CBT.",
+    "AI-assisted microdissection TESE improves sperm retrieval efficiency. [Asian J Androl](https://doi.org/10.4103/aja202644) (Nov 2026). Possible `only-path` case (sperm a technician could not find), but design, dates and comparison are unknown: PubMed and the publisher page were unreadable to the weekly run. Missing: abstract, whether randomized or retrospective, achieved dates.",
+    "LATENT: AI-ECG alerts for early detection of atrial fibrillation, randomized. [Circulation](https://doi.org/10.1161/CIRCULATIONAHA.126.083540) (2026-11-07); registry [NCT06847932](https://clinicaltrials.gov/study/NCT06847932) (Taiwan, about 14,700 listed, primary completion July 2026). The publisher returned HTTP 403 and no abstract was indexed. Registered primary outcome is new AF diagnoses within 90 days, a detection measure; needs a treatment change or patient outcome to clear \"reached humans\". Missing: abstract, results, dates.",
+    "AI feedback for clinician assessment of umbilical and MCA Doppler, multicenter randomized trial. [AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192) (2026-11-06). Title suggests the outcome is clinician measurement accuracy, a process measure. Missing: abstract, any patient outcome.",
+    "Bihar flood early-warning evaluation using Google flood forecasts: alerted communities reportedly had 30% lower medical costs after flooding. [PreventionWeb case study](https://www.preventionweb.net/quick/96851) (2025). Relevant to `flood-hub-flash-floods`' what_would_change. Missing: the underlying evaluation (evaluator, design, dates); the case study names none.",
+    "Improving farm productivity and profitability through AI diffusion, Punjab, Pakistan. [Frontiers in AI](https://doi.org/10.3389/frai.2026.1890862) (2026). Observational, judging by the title. Missing: design, comparison, dates.",
+    "Leveraging AI-ECG Technology for Early Notification and Tracking of AF Development (LATENT): a randomized controlled trial. [Circulation](https://doi.org/10.1161/CIRCULATIONAHA.126.083540). Randomized AI-ECG trial; `npm run read` returns HTTP 403. Missing: readable primary source (registry record or Europe PMC full text), trial dates, comparison, absolute effects, whether patients were reached.",
+    "AI-assisted micro-TESE for non-obstructive azoospermia. [Asian J Androl](https://doi.org/10.4103/aja202644). Read in full. Retrospective two-centre cohort, 2020-01 to 2024-12, 542 AI vs 744 conventional; sperm retrieval 68.1% vs 47.6%, live birth +11.5 points. Real patients and a named comparison, but not randomized and allocation was by surgical technique, so attribution is weak; kept as a lead. Missing: how patients were allocated, whether the groups overlapped in time, prospective or randomized confirmation.",
+    "Still open: Rosie chatbot maternal-health null ([JAMA Netw Open](https://doi.org/10.1001/jamanetworkopen.2026.41062), unreadable); Doppler AI-feedback RCT ([AJOG MFM](https://doi.org/10.1016/j.ajogmf.2026.102192), unreadable, likely clinician performance); [AEARCTR-0019001](https://www.socialscienceregistry.org/trials/19001) (completed 2026-11-02, no results posted).",
+    "Protocols to watch: [AEARCTR-0020058](https://www.socialscienceregistry.org/trials/20058) (AI tutoring, rural China), [AEARCTR-0019968](https://www.socialscienceregistry.org/trials/19968) (gen-AI use at work), [AEARCTR-0020014](https://www.socialscienceregistry.org/trials/20014) (AI in political campaigns), [AEARCTR-0019133](https://www.socialscienceregistry.org/trials/19133) (Chat2Learn-AI).",
+    "Skipped: EdArXiv and PsyArXiv survey-style experiments, ERIC education items, reviews, retrospective model validations, benchmarks, commentary.",
     "`eagle-cadde-colonoscopy-rct`: the verification record `2026-10-26.json` is still malformed (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
-    "posts": [],
+    "posts": [
+      {
+        "id": "2119525681491005525",
+        "url": "https://x.com/bcuz_of_ai/status/2119525681491005525",
+        "text": "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.\n\nhttps://t.co/lGILQVBv9r https://t.co/gCIAIN55fp",
+        "created_at": "2026-11-08T20:21:16.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      }
+    ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-07",
-    "pageviews": 15,
-    "visits": 8,
+    "day": "2026-11-08",
+    "pageviews": 5,
+    "visits": 5,
     "top_paths": [
       {
         "path": "/",
-        "views": 12
+        "views": 4
       },
       {
-        "path": "/not-because-of-ai",
-        "views": 2
-      },
-      {
-        "path": "/not-yet",
+        "path": "/entry/hurricane-melissa-2025",
         "views": 1
       }
     ]
