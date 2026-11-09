@@ -46,11 +46,13 @@ jobs:
             Receipts: every entry you add or change carries `receipts` (one verbatim quote of 25 words or fewer from a primary source for every field named in the brief that holds a number, with a locator and the source index) and a one-line `rationale` for the attribution grade. A second model from another vendor checks every receipt against the source text and the entry is held if any fails, so quote exactly and from the source you read. When you change a value, replace its receipt. Never edit the `verification` or `held` blocks: the gate owns them. Never change the rank of an existing entry.
             Poster number: every entry has optional `impact_number` (a short lead such as "5 per 1,000", "2×", "−0.37 SD", "26%"; a leading ~ ≈ + − or $ is set small as a modifier) and `impact_label` (the short phrase after it, such as "more liver-disease diagnoses"). Pick the figure a stranger would screenshot, absolute over relative when both exist, taken only from the entry's own effect fields or sources, and fill both fields. Do this for every entry you add and for every `because` entry that still lacks them (that counts as a change: history line dated today, no stamp).
             Extra scope for this run, if any (treat as part of the brief): ${{ github.event.inputs.focus }}
+            Do all reading and writing yourself in this session, one source after another. Do not start background or helper agents: this run ends when your turn ends, and their work would be lost (run 42700714998 ended with nothing written that way).
             Then run `npm run validate` (must pass), create branch editor/YYYY-MM-DD, commit, push, and open a pull request against main with `gh pr create` whose body summarises additions, changes, downgrades, rejections (and which of the four tests each failed), empty searches, and what a human should check. Do not merge.
           claude_args: |
             --model claude-opus-5-5
             --max-turns 250
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(npm run read:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
+            --disallowedTools "Agent,Task"
       - name: Hand the branch to the gate
         id: handoff
         run: |
