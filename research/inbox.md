@@ -283,3 +283,14 @@ Candidates: 123 over 2026-11-03 to 2026-11-05, 14 flagged randomized, 1 alert, 0
 - AI-assisted micro-TESE (carried over). [Asian J Androl](https://doi.org/10.4103/aja202644). Read in full and rejected this run: allocation was by availability of the AI microscope over 2020 to 2024 with no timing given, and inclusion criterion 5 contradicts the reported retrieval rate. Revisit only if a prospective or randomized study appears.
 - AI-facilitated nutrition guidance after GI cancer surgery (carried over). [Support Care Cancer](https://doi.org/10.1007/s00520-026-11401-7). Rejected again: besides the Methods/Results date conflict, the paper was received 29 Mar 2026, which rules out the Methods window (screening to March 2026 plus 30-day follow-up). Revisit if a correction gives one enrolment window.
 - Bihar flood early warnings (carried over). [PreventionWeb](https://www.preventionweb.net/quick/96851) still returns HTTP 403 to the reader. Missing: the underlying evaluation.
+
+## 2026-11-09 (daily scout)
+
+Candidates: 78 over 2026-11-07 to 2026-11-09, 15 flagged randomized, 0 alerts, 2 source errors. No entry drafted: the clinical leads could not be read by the gate's reader, and the readable one has no comparison.
+
+- Obstetric point-of-care AI ultrasound in routine antenatal care, Lusaka Province, Zambia. [Int J Gynaecol Obstet](https://doi.org/10.1002/ijgo.71476) (2026-11-09). Real deployment with pregnant women; `npm run read` returns HTTP 403. Missing: full text, design, comparison, dates, absolute effects.
+- Explainable AI for diabetic foot ulcer prognosis, derivation and validation with a prospective randomised component. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104284) (2026-10-31). `npm run read` returns an 11-character stub. Missing: abstract, what the randomised part compared, patient outcomes, dates.
+- ARIA holographic AI concierge in an ambulatory lobby, Mayo Clinic. [Mayo Clin Proc Digit Health](https://doi.org/10.1016/j.mcpdig.2026.100427) (PMC13744326). Read in full: single-site descriptive pilot, 2025-10-21 to 2026-02-02, 1429 sessions, no comparison and no outcome. Not an entry; revisit if a prospective evaluation appears.
+- Protocol to watch: ROMIAE-2 AI-ECG rule-out of myocardial infarction, noninferiority RCT ([Clin Exp Emerg Med](https://doi.org/10.15441/ceem.26.305)). AEARCTR-0019968 was already logged 2026-11-07.
+- Still open: LATENT (Circulation, unreadable), as logged 2026-11-08.
+- Skipped: reviews, editorials, retrospective validations, benchmarks, AI-for-science news, ERIC items already seen, EdArXiv items without field outcomes.
