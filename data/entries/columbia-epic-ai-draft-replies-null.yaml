@@ -62,7 +62,7 @@ history:
 rationale: Each clinician is compared with their own replies before first using the AI drafts, with month fixed effects for secular change and nothing else introduced at adoption, so the comparison isolates access to the tool, though without randomization (isolated).
 receipts:
   - field: headline
-    quote: "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time."
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
     locator: Abstract, Results
     source: 0
   - field: headline
@@ -74,23 +74,23 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time."
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time."
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time."
+    quote: Response tool adoption was associated with an 8.6% (95% CI, 4.6%-12.9%; P  < .001) increase in overall message turnaround time.
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "Using the tool was associated with a significant reduction in turnaround time (−29.5% [95% CI, −34.5% to −24.1%]"
+    quote: Using the tool was associated with a significant reduction in turnaround time (−29.5% [95% CI, −34.5% to −24.1%]
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "Response tool use was not associated with an overall reduction of after-hours messaging burden (0.61 [95% CI, −1.02 to 2.24] percentage points"
+    quote: Response tool use was not associated with an overall reduction of after-hours messaging burden (0.61 [95% CI, −1.02 to 2.24] percentage points
     locator: Abstract, Results
     source: 0
   - field: reach
@@ -105,3 +105,20 @@ receipts:
     quote: between March 1, 2023, and May 15, 2025, were analyzed
     locator: Abstract, Design, Setting, and Participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-11-09
+  content: fbddb8ed534312c911b4848c20ba84a5a7200deeabcf0d7a5fb8fc0673899783
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-09
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-09
+    verdict: pass
+  record: columbia-epic-ai-draft-replies-null/2026-11-09.json
+  confidence: strict

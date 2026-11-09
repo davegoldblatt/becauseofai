@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "heidi-ambient-scribe-boston",
+  "date": "2026-11-09",
+  "as_of": "2026-11-09",
+  "entry_sha256": "a024643049563cc82099639025b870a556214f951f3fecb1292038885ee7e70b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-09"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.7326/ANNALS-25-05294&resultType=core&format=xml",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-09T21:35:46.791Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.7326/ANNALS-25-05294&resultType=core&format=xml",
+      "sha256": "35da99190bfa54e62cf706cdb2f22e77a2b812ebc48986eee8d5b926fe5cf49b",
+      "chars": 5198,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "14-hospital health system in Boston, Massachusetts.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Enrollment was associated with an immediate reduction in note-active time (-1.21 minutes [95% CI, -1.74 to -0.68 minutes])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Enrollment was associated with an immediate reduction in note-active time (-1.21 minutes [95% CI, -1.74 to -0.68 minutes])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Enrollment was associated with an immediate reduction in note-active time (-1.21 minutes [95% CI, -1.74 to -0.68 minutes])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Enrollment was associated with an immediate reduction in note-active time (-1.21 minutes [95% CI, -1.74 to -0.68 minutes])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "with larger reductions among high users (-2.50 minutes [CI, -3.55 to -1.45 minutes])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "902 outpatient clinicians enrolled in Heidi; 605 users and 297 enrolled nonusers.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "1 637 227 encounters had notes authored by enrolled clinicians between 1 July 2024 and 31 January 2026.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "14-hospital health system in Boston, Massachusetts.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Heidi enrollment after system-wide implementation beginning January 2025.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "1 637 227 encounters had notes authored by enrolled clinicians between 1 July 2024 and 31 January 2026.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text)."
+  }
+}

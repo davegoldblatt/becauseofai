@@ -87,7 +87,7 @@ receipts:
     locator: Abstract
     source: 0
   - field: effect.relative
-    quote: "(0.48%; odds ratio, 1.54 [95% CI, 1.01-2.37]; P=0.046)"
+    quote: (0.48%; odds ratio, 1.54 [95% CI, 1.01-2.37]; P=0.046)
     locator: Abstract
     source: 0
   - field: effect.relative
@@ -114,3 +114,24 @@ receipts:
     quote: '"startDateStruct": { "date": "2025-07-01", "type": "ACTUAL"'
     locator: statusModule, startDateStruct
     source: 1
+drafted:
+  vendor: anthropic
+  model: claude-opus-5-5
+  date: 2026-11-09
+  content: 9ac598aa5a065ec483c10fc4fb041904c06bde9fdc829735b3babf0daa38c634
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-09
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-09
+    verdict: fail
+  record: latent-ai-ecg-af-null/2026-11-09.json
+held:
+  reason: grade-split
+  since: 2026-11-09
+  detail: "window: drafter ongoing, verifier could not grade."
+  record: latent-ai-ecg-af-null/2026-11-09.json

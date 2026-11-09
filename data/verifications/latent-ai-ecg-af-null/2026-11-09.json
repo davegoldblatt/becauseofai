@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "latent-ai-ecg-af-null",
+  "date": "2026-11-09",
+  "as_of": "2026-11-09",
+  "entry_sha256": "9ac598aa5a065ec483c10fc4fb041904c06bde9fdc829735b3babf0daa38c634",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-09"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42998297?resultType=core&format=xml",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-09T21:35:47.438Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42998297?resultType=core&format=xml",
+      "sha256": "41ae34958647e44e34e9f9d04f7685a6b6905604a7068b55a0412691402be75a",
+      "chars": 10575,
+      "truncated": false
+    },
+    {
+      "index": 1,
+      "url": "https://clinicaltrials.gov/study/NCT06847932",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-09T21:35:47.628Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT06847932?format=json",
+      "sha256": "cfe260f8a66cf8f88991564f5079a06323b3f4293ecf9435a3fa66b3ddcd2548",
+      "chars": 8526,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "14 665 adults 40 to 85 years of age without previous AF/AFl were randomized to an AI-ECG-guided strategy or usual care",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "(0.48%; odds ratio, 1.54 [95% CI, 1.01-2.37]; P=0.046)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Hypothetical reclassification of 1 intervention event to a nonevent changed the primary analysis P value to 0.057.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "AF/AFl detection (0.3% versus 0.2%) and antiarrhythmic therapy initiation at 180 days (2.3% versus 2.4%) did not differ significantly",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The primary outcome occurred in 54 intervention participants (0.74%) versus 35 control participants (0.48%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "14 665 adults 40 to 85 years of age without previous AF/AFl were randomized to an AI-ECG-guided strategy or usual care",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Of the 84 high-risk intervention participants, 48 (57.1%) underwent monitoring, as did 48 matched controls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 1,
+      "quote": "\"startDateStruct\": { \"date\": \"2025-07-01\", \"type\": \"ACTUAL\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-09",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        },
+        {
+          "source": 1,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "Randomization compared AI-guided selection for monitoring with usual care, with matched controls receiving identical monitoring.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "The registry gives an actual start of 2025-07-01; completion dates are estimates, and neither source dates the reported observations sufficiently to establish ongoing delivery within the window."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Institutional sponsorship and author affiliations are disclosed, but no vendor involvement, commercial funding, equity, patent or licence is shown."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The abstract and preregistered trial record support the reported numbers and a randomized null finding for AF/flutter detection and treatment initiation. They do not establish continued delivery or the calendar dates of the reported outcome measurements."
+    },
+    "error": null,
+    "tokens": {
+      "input": 18387,
+      "output": 831,
+      "total": 19218,
+      "cached": 0,
+      "reasoning": 228
+    },
+    "duration_ms": 19593
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter ongoing, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "ongoing",
+        "verifier": null
+      }
+    ]
+  }
+}
