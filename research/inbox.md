@@ -294,3 +294,15 @@ Candidates: 78 over 2026-11-07 to 2026-11-09, 15 flagged randomized, 0 alerts, 2
 - Protocol to watch: ROMIAE-2 AI-ECG rule-out of myocardial infarction, noninferiority RCT ([Clin Exp Emerg Med](https://doi.org/10.15441/ceem.26.305)). AEARCTR-0019968 was already logged 2026-11-07.
 - Still open: LATENT (Circulation, unreadable), as logged 2026-11-08.
 - Skipped: reviews, editorials, retrospective validations, benchmarks, AI-for-science news, ERIC items already seen, EdArXiv items without field outcomes.
+
+## 2026-11-10 (daily scout)
+
+Candidates: 103 over 2026-11-08 to 2026-11-10, 17 flagged randomized, 0 alerts, 2 source errors (Crossref 404s). One entry drafted: `mend-aki-pharmacist-alert-null`.
+
+- MEnD-AKI results posted: pharmacist-delivered ML alerting for drug-associated AKI, cluster RCT, null on MAKE30. [NCT06264752](https://clinicaltrials.gov/study/NCT06264752). Drafted as an entry from the registry record. Missing: a peer-reviewed paper, reconciled absolute counts.
+- AI chest-radiograph triage and workflow efficiency in hospitals. [Radiography](https://doi.org/10.1016/j.radi.2026.103626) (2026-11-09). Labelled a review in PubMed; `npm run read` returned an 11-character stub. Missing: full text, design, dates.
+- PREVERY AI-supported health management, before-and-after observational study. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367492v1). No concurrent comparison, so unlikely to pass; check for a control group.
+- Head-to-head randomized trial of two ambient AI documentation tools, protocol only. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1). Protocol to watch for results.
+- Ghana literacy intervention, World Bank PRWP 11433. [ERIC](https://eric.ed.gov/?id=ED683456). Flagged AI by keyword; the Tools for Foundational Learning Improvement program looks like a non-AI intervention. Missing: whether AI is a component.
+- Still open: LATENT (Circulation), obstetric AI ultrasound in Zambia, EClinicalMedicine diabetic foot ulcer trial, all logged earlier and unreadable.
+- Skipped: AEA registrations in development, protocols, reviews, retrospective validations, benchmarks, surveys.

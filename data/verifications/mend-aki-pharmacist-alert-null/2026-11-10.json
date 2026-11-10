@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mend-aki-pharmacist-alert-null",
+  "date": "2026-11-10",
+  "as_of": "2026-11-10",
+  "entry_sha256": "0f95185711756d409ad781211dbec1dd7ad03b569853ab11bae1fca8683dc6f5",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-10"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://clinicaltrials.gov/study/NCT06264752",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-10T19:41:01.141Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT06264752?format=json",
+      "sha256": "c729e1449a289804a280f13811c49303affe68951e3afb96c160a7b26a746944",
+      "chars": 50633,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Researchers will randomize 38 hospital service clusters to receive either",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "\"paramValue\": \"1.05\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "\"paramValue\": \"1.05\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "\"pValue\": \"0.711\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "\"ciLowerLimit\": \"0.82\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "\"ciUpperLimit\": \"1.35\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "\"count\": 698,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "randomized controlled trial at eight hospitals within the University of Pittsburgh Medical Center-UPMC system",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "\"date\": \"2024-02-15\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "\"date\": \"2025-07-15\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-10",
+    "output": {
+      "full_text": true,
+      "source_kind": "registry-record",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized clusters received either machine-learning-triggered pharmacist recommendations or usual passive alerts, testing the algorithm and pharmacist service together.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "Actual study dates are February 15, 2024, through July 15, 2025; participant flow confirms the intervention start."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "University sponsorship and investigator employment are disclosed, but the text establishes no vendor, commercial funding, equity, patent, or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The registry supports a cluster-randomized trial with a registered primary endpoint and no significant MAKE30 improvement: OR 1.05, 95% CI 0.82–1.35, p=0.711. It tests a bundled intervention, cannot isolate the algorithm's contribution, and counts 698 enrolled physicians rather than patients."
+    },
+    "error": null,
+    "tokens": {
+      "input": 24906,
+      "output": 784,
+      "total": 25690,
+      "cached": 0,
+      "reasoning": 236
+    },
+    "duration_ms": 19616
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier A.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": "A"
+      }
+    ]
+  }
+}
