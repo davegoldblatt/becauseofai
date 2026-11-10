@@ -92,3 +92,24 @@ receipts:
     quote: '"date": "2025-07-15",'
     locator: Status module, completionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-10
+  content: 0f95185711756d409ad781211dbec1dd7ad03b569853ab11bae1fca8683dc6f5
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-10
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-10
+    verdict: fail
+  record: mend-aki-pharmacist-alert-null/2026-11-10.json
+held:
+  reason: grade-split
+  since: 2026-11-10
+  detail: "evidence: drafter B, verifier A."
+  record: mend-aki-pharmacist-alert-null/2026-11-10.json
