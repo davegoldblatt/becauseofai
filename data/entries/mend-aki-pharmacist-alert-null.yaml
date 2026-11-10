@@ -1,0 +1,94 @@
+id: mend-aki-pharmacist-alert-null
+section: not-because
+rank: 10
+headline: >-
+  A machine-learning kidney-injury alert that sent pharmacists to advise
+  physicians did not reduce major adverse kidney events across 38 hospital
+  service clusters.
+impact: "Null on kidney outcomes (cluster RCT)"
+impact_number: "OR 1.05"
+impact_label: "for major adverse kidney events, 95% CI 0.82–1.35"
+summary: >-
+  The MEnD-AKI cluster-randomized trial at eight UPMC hospitals compared a
+  pharmacist-delivered, algorithm-triggered intervention for drug-associated
+  acute kidney injury with the standard passive EMR alert. The posted results
+  show an odds ratio of 1.05 (p=0.711) for the primary outcome, MAKE30.
+caveat: >-
+  Results are a ClinicalTrials.gov posting, not a peer-reviewed paper; outcomes
+  were assessed from retrospective de-identified encounter data, and the
+  intervention bundles an algorithm with pharmacist time.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Pharmacist-delivered, algorithm-triggered stage-based recommendations vs the standard Cerner passive AKI alert, hospital service clusters randomized 1:1"
+effect:
+  relative: "MAKE30 odds ratio 1.05 (95% CI 0.82 to 1.35), p=0.711"
+  absolute: null
+reach: "698 enrolled (registry count) across eight UPMC hospitals; physicians were the enrolled subjects and patient encounters were analysed"
+dates:
+  achieved_start: 2024-02-15
+  achieved_end: 2025-07-15
+  published: 2026-11-10
+  added: 2026-11-10
+  updated: 2026-11-10
+sources:
+  - title: "ClinicalTrials.gov NCT06264752 record with posted results (MEnD-AKI)"
+    url: https://clinicaltrials.gov/study/NCT06264752
+    type: primary
+conflicts: >-
+  Funded by NIDDK (R01DK121730); run by the University of Pittsburgh team that
+  designed the intervention.
+what_would_change: "A peer-reviewed analysis, or a trial of the alert with more actionable alerts, showing fewer major adverse kidney events."
+notes: >-
+  verify: the registry's enrolment count (698) and the analysed counts (251 and 229 physicians; 3,841 and 2,098 patient encounters) are different units.
+  verify: the outcome description says encounters came from a retrospective cohort and that many alerts were non-actionable; the intent-to-treat analysis includes them.
+  verify: absolute MAKE30 counts are posted but the denominators were not reconciled, so no absolute effect is stated.
+related: [kenya-ai-consult-null, uva-comet-deterioration-null]
+history:
+  - date: 2026-11-10
+    note: Added by the daily scout.
+rationale: Hospital service clusters were randomized to the pharmacist-delivered algorithm-triggered intervention or to the standard passive alert, but the arms differ by both the algorithm and pharmacist outreach, so the attribution is bundled.
+receipts:
+  - field: headline
+    quote: Researchers will randomize 38 hospital service clusters to receive either
+    locator: Detailed description
+    source: 0
+  - field: impact_number
+    quote: '"paramValue": "1.05",'
+    locator: Results, primary outcome analysis (MAKE30)
+    source: 0
+  - field: effect.relative
+    quote: '"paramValue": "1.05",'
+    locator: Results, primary outcome analysis (MAKE30)
+    source: 0
+  - field: effect.relative
+    quote: '"pValue": "0.711",'
+    locator: Results, primary outcome analysis (MAKE30)
+    source: 0
+  - field: effect.relative
+    quote: '"ciLowerLimit": "0.82",'
+    locator: Results, primary outcome analysis (MAKE30)
+    source: 0
+  - field: effect.relative
+    quote: '"ciUpperLimit": "1.35"'
+    locator: Results, primary outcome analysis (MAKE30)
+    source: 0
+  - field: reach
+    quote: '"count": 698,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: reach
+    quote: randomized controlled trial at eight hospitals within the University of Pittsburgh Medical Center-UPMC system
+    locator: Brief summary
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2024-02-15",'
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2025-07-15",'
+    locator: Status module, completionDateStruct
+    source: 0
