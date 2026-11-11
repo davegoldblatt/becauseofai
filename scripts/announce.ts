@@ -43,7 +43,9 @@ function addedIds(before: string, after: string): string[] {
 // would refuse the whole thing.
 function compose(e: { headline: string }, url: string): string {
   const tail = "\n\n";
-  const room = X_LIMIT - URL_WEIGHT - tail.length;
+  // X counts a link as 23 characters, but the posting action refuses any
+  // message whose raw text is over 280, so a long link counts at full length.
+  const room = X_LIMIT - Math.max(URL_WEIGHT, url.length) - tail.length;
   let head = e.headline.trim();
   if (head.length > room) {
     head = head.slice(0, room - 1);
