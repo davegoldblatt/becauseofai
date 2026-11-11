@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tongji-ai-nutrition-gi-surgery-rct",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "f3a6d590394516a8bc0764d265bb0c2498ddee2ea97a1fb20a84107d88c90fe4",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s00520-026-11401-7",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-11T23:50:45.002Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13719733/fullTextXML",
+      "sha256": "6f3404b08461a381ced4a4846fa14626b5fb79d0ca8b37db059c07e9d52b25ca",
+      "chars": 63962,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "unsupported",
+          "note": "The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline."
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "Randomization compared AI generation plus individualized targets, written guidance and clinician review with standard generic discharge advice.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": true,
+        "note": "The entry has no achieved dates; methods give screening January–March 2026, while results give December 2025–February 2026, with outcomes 30 days after discharge."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The source reports foundation funding and declares no competing interests; no vendor conflict is shown."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preregistered randomized trial supports improved short-term dietary adequacy from a bundled AI-assisted intervention in 90 patients, within the reporting window despite conflicting recruitment dates. It does not isolate AI's contribution or establish improved clinical outcomes."
+    },
+    "error": null,
+    "tokens": {
+      "input": 25672,
+      "output": 819,
+      "total": 26491,
+      "cached": 0,
+      "reasoning": 247
+    },
+    "duration_ms": 19971
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 2): unsupported, The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline.."
+  }
+}

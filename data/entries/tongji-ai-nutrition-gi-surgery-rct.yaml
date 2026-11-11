@@ -96,3 +96,24 @@ receipts:
     quote: 90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: f3a6d590394516a8bc0764d265bb0c2498ddee2ea97a1fb20a84107d88c90fe4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+held:
+  reason: ungrounded
+  since: 2026-11-11
+  detail: "headline (receipt 2): unsupported, The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline.."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
