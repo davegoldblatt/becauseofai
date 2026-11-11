@@ -65,18 +65,14 @@ related: [uva-comet-deterioration-null]
 history:
   - date: 2026-11-09
     note: "Added. Weekly run; read from the NEJM AI abstract (Europe PMC)."
-rationale: The model's score came packaged with an automatic page to the rapid response team, and the package was compared with the period before it, so the AI's prediction is not separated from the change in team activation (bundled).
+rationale: "The grade is bundled because the study compares flagged patients before and after a rollout that was tested as one package: Epic Deterioration Index alerts together with automatic rapid response team push notifications, so the model's share of the effect cannot be separated out."
 receipts:
   - field: headline
-    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points
+    quote: decreased unadjusted inhospital mortality (18.6% vs. 23.1%; absolute difference, -4.5 percentage points [95% CI, -5.6 to -3.5])
     locator: Abstract, Results
     source: 0
   - field: headline
-    quote: The setting was a regional health system with 11 acute care hospitals
-    locator: Abstract, Methods
-    source: 0
-  - field: headline
-    quote: were lower in the intervention group (adjusted odds ratio, 0.82
+    quote: were lower in the intervention group (adjusted odds ratio, 0.82 [95% CI, 0.74 to 0.91])
     locator: Abstract, Results
     source: 0
   - field: impact
@@ -88,11 +84,11 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: (adjusted odds ratio, 0.82 [95% CI, 0.74 to 0.91])
+    quote: were lower in the intervention group (adjusted odds ratio, 0.82 [95% CI, 0.74 to 0.91])
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: increased RRT activations (37.5% vs. 25.3%; absolute difference, 12.2 percentage points [95% CI, 11.0 to 13.4]; adjusted odds ratio, 1.74
+    quote: increased RRT activations (37.5% vs. 25.3%; absolute difference, 12.2 percentage points [95% confidence interval (CI), 11.0 to 13.4]; adjusted odds ratio, 1.74
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -104,22 +100,19 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: reach
-    quote: Participants included adult medical-surgical admissions with an EDI greater than or equal to 60
-    locator: Abstract, Methods
-    source: 0
-  - field: reach
-    quote: The setting was a regional health system with 11 acute care hospitals
+    quote: The setting was a regional health system with 11 acute care hospitals including academic, community teaching, and nonteaching facilities.
     locator: Abstract, Methods
     source: 0
   - field: dates.achieved_end
-    quote: from October 1, 2022, to August 30, 2024
-    locator: Abstract, Methods
+    quote: Participants included adult medical-surgical admissions with an EDI greater than or equal to 60 from October 1, 2022, to August 30, 2024.
+    locator: Abstract, Methods (only the abstract was available)
     source: 0
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-09
-  content: d059f99086d1082ea91a65f9449e895ef31d86605453179cf928e92732d73d77
+  date: 2026-11-11
+  via: claude-login
+  content: 9d2d43134f1a92d802cb35ea36df0fe2c7be54a64f7df4cd3cc29f17945df13b
 held:
   reason: ungrounded
   since: 2026-11-09
