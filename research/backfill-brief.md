@@ -43,6 +43,15 @@ A measured null or harm is an entry too: section `not-because`.
 
 **Evidence grade**: use the definitions in `HANDOFF.md` §3 literally. If a study fits none of them cleanly (for example a randomized trial that was registered after it ended), take the lower grade that does fit and say why in `notes`.
 
+**Receipts that hold entries** (each of these held an entry from an earlier run):
+- A receipt whose quote carries no number that appears in its field. Do not add a receipt for context such as the sample size or the setting unless that number is in the field. One receipt per number is enough.
+- A quote that was shortened or tidied. Copy it from the printed text, character for character.
+- A guessed window (see above).
+
+## Work the whole slice
+
+You have about 200 turns and most runs need more than 100 of them. For an `inbox` slice, read every lead in the file with `npm run read` unless it is plainly a protocol or already an entry; "not reached this run" is not an acceptable line in the log. For an `announce` slice, the counts above (twenty queries, fifteen pages read) are a floor. For an `academic` slice, read at least fifteen candidates. Stop early only when you have eight entries.
+
 ## Limits
 
 - At most **eight** new entries in this run. Take the strongest first. Stop when you reach eight or the slice is done. The gate refuses a run that changed more than ten entry files.
