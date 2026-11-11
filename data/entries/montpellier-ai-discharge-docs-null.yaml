@@ -1,0 +1,89 @@
+id: montpellier-ai-discharge-docs-null
+section: not-because
+rank: 11
+headline: >-
+  An LLM that drafted discharge documents for 153 children leaving a paediatric
+  emergency department did not improve how well families understood them.
+impact: "No difference in family understanding (randomized trial)"
+impact_number: "−0.01"
+impact_label: "difference in record-concordant understanding, 95% CI −0.12 to 0.10"
+summary: >-
+  Montpellier University Hospital randomized children discharged from its
+  paediatric emergency department to conventional template documents or
+  documents drafted by an on-premises open-weight LLM, each validated by the
+  discharging clinician. Family understanding at follow-up, the primary outcome,
+  did not differ between arms.
+caveat: >-
+  A medRxiv preprint, registered retrospectively; 117 of 153 children were
+  analysed, and the trial was not powered to detect small differences. Only the
+  abstract could be read.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "LLM-drafted discharge documents vs conventional template assembly, both validated by the discharging clinician; children randomized"
+effect:
+  relative: "Record-concordant understanding at follow-up did not differ (difference −0.01; 95% CI −0.12 to 0.10)"
+  absolute: null
+reach: "153 children randomized, 117 analysed (59 conventional, 58 LLM-assisted)"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-22
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "medRxiv: From clinician review to measurable human oversight of AI-drafted paediatric discharge documents"
+    url: https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1
+    type: primary
+conflicts: "Authors are from the hospital's own Office of Data Governance and AI, which built the drafting system; the competing-interest statement declares none."
+what_would_change: "A peer-reviewed version or a larger trial showing a difference in family understanding or in clinical outcomes."
+notes: >-
+  verify: trial dates are not in the abstract; achieved dates left null.
+  verify: registered retrospectively as NCT07874659, first posted 15 October 2026.
+  verify: the abstract also reports exploratory error-interception results (clinicians edited 48 of 58 drafts); these are not the entry's headline.
+related: [columbia-epic-ai-draft-replies-null]
+history:
+  - date: 2026-11-11
+    note: Added by the backfill run.
+rationale: Children were randomized to LLM-drafted documents or conventional template documents with the same clinician validation, so the LLM drafting is the only difference between arms.
+receipts:
+  - field: headline
+    quote: We randomised 153 children discharged from a paediatric emergency department to conventional template assembly or drafting by an on-premises open-weight LLM
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: record-concordant understanding at follow-up, the primary outcome, did not differ (difference −0.01; 95% CI −0.12 to 0.10)
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: record-concordant understanding at follow-up, the primary outcome, did not differ (difference −0.01; 95% CI −0.12 to 0.10)
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: analysed 117 (59 conventional, 58 LLM-assisted)
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: d2ce66cfefe5487ecd6a7e37017cc9475dc3c1d75ca105251ad4283c9f469029
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: montpellier-ai-discharge-docs-null/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade."
+  record: montpellier-ai-discharge-docs-null/2026-11-11.json

@@ -1,0 +1,104 @@
+id: nz-wairarapa-ai-treatment-injury
+section: because
+rank: 24
+headline: >-
+  An LLM screening 2,642 discharge summaries at a New Zealand district hospital
+  flagged 102 confirmed cases of harm from care, and seven injury-compensation
+  claims followed.
+impact: "Compensation claims lodged after AI-assisted identification"
+impact_number: "7"
+impact_label: "ACC claims lodged following AI-assisted identification"
+summary: >-
+  Wairarapa Hospital ran a six-month service evaluation in which a large
+  language model screened every inpatient discharge summary for potential
+  treatment injury and clinicians reviewed each flagged case. The workflow
+  generated 237 candidate signals; clinicians confirmed 102 as iatrogenic harm,
+  and seven claims to the Accident Compensation Corporation were lodged
+  following AI-assisted identification.
+caveat: >-
+  A single-site preprint service evaluation with no independent chart-review
+  reference standard, so the 102 confirmed harms are clinician-adjudicated
+  flags and not a measured detection rate. Whether the seven claims would have
+  been lodged anyway is not shown. Only the abstract could be read.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "AI-flagged cases compared with the 68 organisational ACC claims in the same period; no control group"
+effect:
+  relative: null
+  absolute: "17 of 68 organisational ACC claims in the period overlapped with AI-identified cases; 7 claims were lodged following AI-assisted identification"
+reach: "All 2,642 inpatient discharge summaries produced during the six-month pilot at Wairarapa Hospital"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-13
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "medRxiv: AI-assisted screening of inpatient discharge summaries for potential treatment injury, a single-site service evaluation in a New Zealand district hospital"
+    url: https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1
+    type: primary
+conflicts: "The authors are practitioners at Health New Zealand who ran and report their own quality-improvement pilot; no formal ethics committee approval was obtained before it began."
+what_would_change: "A prospective evaluation against an independent chart-review reference standard, with a comparison showing claims or care changed."
+notes: >-
+  verify: the pilot dates are not in the abstract (six months only); achieved dates left null.
+  verify: positive predictive value was 43.0% for confirmed harm; this is clinician-adjudicated, not an independent reference standard.
+  verify: whether the seven claims reached acceptance by the Accident Compensation Corporation is not stated in the abstract.
+related: []
+history:
+  - date: 2026-11-11
+    note: Added by the backfill run.
+rationale: There is no control group, and the screening and clinician adjudication are bundled in one workflow, so attribution to the model alone cannot be isolated.
+receipts:
+  - field: headline
+    quote: All inpatient discharge summaries produced during the pilot period (n=2,642).
+    locator: Abstract, Participants
+    source: 0
+  - field: headline
+    quote: Clinicians classified 102 as confirmed iatrogenic harm, 43 as possible harm, 81 as no harm and 11 as unsupported outputs.
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Seven ACC claims were lodged following AI-assisted identification.
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Seven ACC claims were lodged following AI-assisted identification.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Of 68 organisational ACC claims during the same period, 17 overlapped with AI-identified cases.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Seven ACC claims were lodged following AI-assisted identification.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: All inpatient discharge summaries produced during the pilot period (n=2,642).
+    locator: Abstract, Participants
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 33153df28aba26f211c993717eba491b255c3477fdb7a078a186632bcecc083f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: nz-wairarapa-ai-treatment-injury/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "window: drafter pre, verifier could not grade."
+  record: nz-wairarapa-ai-treatment-injury/2026-11-11.json
