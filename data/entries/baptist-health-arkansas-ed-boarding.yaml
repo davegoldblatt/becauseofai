@@ -1,0 +1,75 @@
+id: baptist-health-arkansas-ed-boarding
+section: because
+rank: 25
+headline: >-
+  Because of AI, Baptist Health in Arkansas says it has cut emergency-room
+  boarding by about 525 patients a month, using predictive discharge analytics
+  across its 12 hospitals.
+impact: "~525 fewer ER boarders a month"
+impact_number: "~525"
+impact_label: "fewer patients boarding in the ER each month"
+summary: >-
+  In a September 2026 interview with a trade outlet, a Baptist Health (Arkansas)
+  executive said that AI-powered predictive analytics for early discharge,
+  supplied by LeanTaaS, moved discharge orders earlier and reduced ED boarding
+  by about 525 patients each month.
+caveat: >-
+  An executive's account in an interview, with no baseline period, no
+  comparison group and no dates given; the change also rested on process and
+  governance changes beyond the model.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Boarding volume after the predictive discharge tool and the accompanying command-centre process changes, against an unstated earlier level"
+effect:
+  relative: "Not stated; the source gives no baseline or percentage"
+  absolute: "Decreased boarding by about 525 patients each month"
+reach: "Baptist Health in Arkansas, 12 hospitals"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-14
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Chief Healthcare Executive: How Baptist Health in Arkansas reduced ER boarding (interview with Greg Brown, Baptist Health)"
+    url: https://www.chiefhealthcareexecutive.com/view/how-baptist-health-in-arkansas-reduced-er-boarding
+    type: primary
+conflicts: >-
+  The figure is the health system's own account of its own programme, given in a
+  trade-press interview; the tool is from the vendor LeanTaaS, which is Baptist
+  Health's partner. No independent audit.
+what_would_change: "A baseline and follow-up period with counts, or a peer-reviewed or vendor-independent evaluation."
+notes: >-
+  verify: the source gives no period for the 525-patient figure, so dates and
+  the window grade are left empty.
+  verify: the article does not say which AI model or which baseline the monthly
+  reduction is measured against.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: "The grade is bundled because the reduction is credited to the predictive discharge tool together with governance and process redesign, so the tool's own share cannot be separated out."
+receipts:
+  - field: headline
+    quote: Baptist Health has decreased boarding by about 525 patients each month
+    locator: Article body, paragraph 4
+    source: 0
+  - field: impact
+    quote: Baptist Health has decreased boarding by about 525 patients each month
+    locator: Article body, paragraph 4
+    source: 0
+  - field: impact_number
+    quote: Baptist Health has decreased boarding by about 525 patients each month
+    locator: Article body, paragraph 4
+    source: 0
+  - field: effect.absolute
+    quote: Baptist Health has decreased boarding by about 525 patients each month
+    locator: Article body, paragraph 4
+    source: 0
+  - field: reach
+    quote: Baptist Health in Arkansas, which operates 12 hospitals
+    locator: Article body, paragraph 3
+    source: 0
