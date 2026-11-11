@@ -32,6 +32,12 @@ function drafterIsMoreCautious(s: Split): boolean {
   return false;
 }
 
+// Hosts that carry nothing but press releases.
+const PRESS_WIRES = /(^|\.)(prnewswire\.com|businesswire\.com|globenewswire\.com|newswire\.ca|newswire\.com|prweb\.com|einpresswire\.com|accesswire\.com|eurekalert\.org|prnewswire\.co\.uk)$/i;
+export function isPressWire(url: string): boolean {
+  try { return PRESS_WIRES.test(new URL(url).hostname); } catch { return false; }
+}
+
 const hold = (reason: Adjudication["reason"], detail: string, extra: Partial<Adjudication> = {}): Adjudication => ({ result: "held", reason, detail, ...extra });
 
 export function adjudicate(input: AdjudicationInput): Adjudication {
@@ -101,7 +107,13 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
     const kind = f?.kind ?? v.source_kind;
     const fullByVerifier = f ? f.full_text : v.full_text;
     const complete = !s.partial && (/^(clinicaltrials|europepmc)/.test(s.method) || fullByVerifier);
+    // Code decides this as well as the verifier: a source the entry marks as
+    // an announcement, or one on a press-release wire, caps the entry at
+    // speculative even when the verifier calls the page a report.
+    const src = e.sources[s.index];
+    const wire = isPressWire(src?.url ?? s.url);
     if (NOT_PRIMARY.has(kind)) lower("speculative", `Source ${s.index} is a ${kind.replace("-", " ")}, not a study, a registry record, or an official report.`);
+    else if (src?.announcement || wire) lower("speculative", `Source ${s.index} is ${wire ? "a press release on a wire service" : "the organisation's own announcement"}, not a study, a registry record, or an official report.`);
     else if (!complete) lower("reasonable", `Source ${s.index} could be read only in part (an abstract or a summary), not the full document.`);
   }
 

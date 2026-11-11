@@ -115,6 +115,12 @@ export const Source = z
     // corrections. The research run backfills it.
     doi: z.string().regex(/^10\.\d{4,9}\/\S+$/, "DOI must look like 10.xxxx/...").optional(),
     type: z.enum(SOURCE_TYPES),
+    // An organisation's own account of its own work: a press release, a
+    // newsroom post, a company report, an interview (DAV-475). An entry whose
+    // numbers are quoted from one is speculative at most, whatever the
+    // verifier calls the page. Part of the verified content, so it cannot be
+    // taken off without the gate running again.
+    announcement: z.boolean().optional(),
   })
   .strict();
 

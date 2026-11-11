@@ -1,13 +1,17 @@
 // The backfill plan (DAV-475): the past twelve months, cut into slices that one
-// run can finish. Deterministic, no model, no state: slice N is always the
-// same work, and the workflow takes the next N from its run number, so the
-// plan repeats once it has been through.
+// run can finish. Deterministic, no model. Slice N is always the same work.
+// What is done is read from research/backfill-log.md: a run writes a heading
+// "## <date>, slice N: <label>" there, and the heading reaches main only when
+// the run's result merges. A run that fails leaves no heading, so its slice
+// comes round again. When every slice has a heading the plan is finished and
+// the workflow stops calling a model.
 //
-//   node scripts/backfill-slice.ts --index 7     # print slice 7 as JSON, write .scout/slice.json
-//   node scripts/backfill-slice.ts --count       # how many slices there are
+//   node scripts/backfill-slice.ts --next --salt 12   # the next undone slice (one of the first three, by salt)
+//   node scripts/backfill-slice.ts --index 7          # slice 7, whatever the log says
+//   node scripts/backfill-slice.ts --count            # how many slices there are
 //
 // Three kinds:
-//   inbox     a fifth of the leads already logged in research/inbox.md
+//   inbox     a fifth of the leads logged in research/inbox.md up to the anchor day
 //   announce  one sector in one quarter: announcements found by web search
 //   academic  one week of papers, preprints, and posted trial results
 import fs from "node:fs";
@@ -62,24 +66,60 @@ export function plan(): Slice[] {
   return out.map((s, index) => ({ ...s, index }) as Slice);
 }
 
-// The inbox's lead lines, oldest first, cut into equal parts.
+// The inbox's lead lines up to the anchor day, oldest first, cut into equal
+// parts. Sections dated after the anchor are left out: the inbox keeps growing,
+// and a part must hold the same leads on every run.
 export function inboxPart(text: string, part: number, of: number): string[] {
-  const leads = text.split("\n").filter((l) => /^- /.test(l) && /https?:\/\//.test(l) && !/^- (Skipped|Still open|Protocols to watch)/i.test(l));
+  const leads: string[] = [];
+  let day = "";
+  for (const l of text.split("\n")) {
+    const h = /^## (\d{4}-\d{2}-\d{2})/.exec(l);
+    if (h) { day = h[1]; continue; }
+    if (day && day > ANCHOR) continue;
+    if (/^- /.test(l) && /https?:\/\//.test(l) && !/^- (Skipped|Still open|Protocols to watch)/i.test(l)) leads.push(l);
+  }
   const size = Math.ceil(leads.length / of);
   return leads.slice((part - 1) * size, part * size);
+}
+
+// Slice indexes that have a heading in the log.
+export function doneSlices(log: string): Set<number> {
+  return new Set([...log.matchAll(/^## .*\bslice (\d+):/gm)].map((m) => Number(m[1])));
+}
+
+// The next slice to run: one of the first three that are not done, picked by
+// the salt, so a slice that keeps failing cannot hold up the rest. Null when
+// the plan is finished.
+export function nextSlice(log: string, salt: number): Slice | null {
+  const done = doneSlices(log);
+  const open = plan().filter((s) => !done.has(s.index)).slice(0, 3);
+  return open.length ? open[Math.abs(Math.trunc(salt)) % open.length] : null;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   const slices = plan();
   if (args.includes("--count")) { console.log(slices.length); process.exit(0); }
-  const raw = args[args.indexOf("--index") + 1];
-  const n = Number(raw);
-  if (!args.includes("--index") || !Number.isInteger(n) || n < 0) { console.error("usage: node scripts/backfill-slice.ts --index <n> | --count"); process.exit(2); }
-  const slice = slices[n % slices.length];
+  const dir0 = path.resolve(process.cwd(), ".scout");
+  let slice: Slice | null;
+  if (args.includes("--next")) {
+    const salt = Number(args[args.indexOf("--salt") + 1] || 0) || 0;
+    const log = fs.existsSync("research/backfill-log.md") ? fs.readFileSync("research/backfill-log.md", "utf8") : "";
+    slice = nextSlice(log, salt);
+    if (!slice) {
+      fs.mkdirSync(dir0, { recursive: true });
+      fs.writeFileSync(path.join(dir0, "slice.json"), JSON.stringify({ kind: "done", total: slices.length }, null, 2));
+      console.log(JSON.stringify({ kind: "done", total: slices.length }));
+      process.exit(0);
+    }
+  } else {
+    const n = Number(args[args.indexOf("--index") + 1]);
+    if (!args.includes("--index") || !Number.isInteger(n) || n < 0 || n >= slices.length) { console.error(`usage: node scripts/backfill-slice.ts --next [--salt <n>] | --index <0..${slices.length - 1}> | --count`); process.exit(2); }
+    slice = slices[n];
+  }
   const dir = path.resolve(process.cwd(), ".scout");
   fs.mkdirSync(dir, { recursive: true });
-  const out: Record<string, unknown> = { ...slice, total: slices.length };
+  const out: Record<string, unknown> = { ...slice, total: slices.length, done: doneSlices(fs.existsSync("research/backfill-log.md") ? fs.readFileSync("research/backfill-log.md", "utf8") : "").size };
   if (slice.kind === "inbox") {
     const leads = inboxPart(fs.readFileSync("research/inbox.md", "utf8"), slice.part, slice.of);
     fs.writeFileSync(path.join(dir, "backfill-leads.md"), leads.join("\n") + "\n");

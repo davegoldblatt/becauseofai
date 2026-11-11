@@ -426,7 +426,9 @@ async function main() {
   // A past week holds several hundred hits. The back-search keeps the ones that
   // name a trial design or an outcome, at most 150, so one run can read them all.
   if (back) {
-    const kept = candidates.filter((c) => c.flags.randomized || c.flags.outcome).slice(0, 150);
+    // Sources an entry already cites are left out before the cut, so they do not use up the 150.
+    const have = new Set(r.all.flatMap((e) => (e.sources as any[]).map((s) => s.url)));
+    const kept = candidates.filter((c) => !have.has(c.url) && (c.flags.randomized || c.flags.outcome)).slice(0, 150);
     candidates.length = 0;
     candidates.push(...kept.map((c) => ({ ...c, snippet: c.snippet.slice(0, 240) })));
   }

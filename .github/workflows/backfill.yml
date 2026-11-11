@@ -1,9 +1,10 @@
 name: backfill
 # DAV-475: fill in the past twelve months, one slice per run. The plan is
 # scripts/backfill-slice.ts (inbox leads, announcements by sector and quarter,
-# papers by week). Each run takes the next slice from its run number, drafts at
-# most eight entries under research/backfill-brief.md, and hands them to the
-# same gate as the daily scout. To pause it, disable this workflow in the
+# papers by week). Each run takes the next slice that has no heading in
+# research/backfill-log.md, drafts at most eight entries under
+# research/backfill-brief.md, and hands them to the same gate as the daily
+# scout. When every slice has a heading the runs stop calling a model. To pause it, disable this workflow in the
 # Actions tab; nothing else depends on it.
 on:
   schedule:
@@ -47,15 +48,25 @@ jobs:
           RUN_NUMBER: ${{ github.run_number }}
         run: |
           set -euo pipefail
-          case "$SLICE" in ''|*[!0-9]*) index=$((RUN_NUMBER - 1)) ;; *) index=$SLICE ;; esac
-          node scripts/backfill-slice.ts --index "$index" | tee "$RUNNER_TEMP/slice.json"
+          case "$SLICE" in
+            ''|*[!0-9]*) node scripts/backfill-slice.ts --next --salt "$RUN_NUMBER" ;;
+            *) node scripts/backfill-slice.ts --index "$SLICE" ;;
+          esac
           kind=$(jq -r .kind .scout/slice.json)
-          echo "index=$(jq -r .index .scout/slice.json)" >> "$GITHUB_OUTPUT"
+          echo "kind=$kind" >> "$GITHUB_OUTPUT"
+          if [ "$kind" = "done" ]; then echo "every slice in the plan has a log entry; nothing to do"; exit 0; fi
+          index=$(jq -r .index .scout/slice.json)
+          echo "index=$index" >> "$GITHUB_OUTPUT"
           echo "label=$(jq -r .label .scout/slice.json)" >> "$GITHUB_OUTPUT"
+          # A branch left by an earlier try at this slice would refuse this run's push.
+          git ls-remote --heads origin "backfill/*-$index" | awk '{print $2}' | sed 's|refs/heads/||' | while read -r old; do
+            if [ -n "$old" ]; then git push origin --delete "$old" && echo "removed the stale branch $old"; fi
+          done
           if [ "$kind" = "academic" ]; then
             node scripts/scout.ts --days "$(jq -r .days .scout/slice.json)" --until "$(jq -r .to .scout/slice.json)"
           fi
       - name: Triage and draft (Claude, subscription token)
+        if: ${{ steps.slice.outputs.kind != 'done' }}
         uses: anthropics/claude-code-action@v1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -68,7 +79,7 @@ jobs:
             Your slice is in .scout/slice.json: slice ${{ steps.slice.outputs.index }}, "${{ steps.slice.outputs.label }}".
             Every entry you draft carries receipts and a rationale; a second model from another vendor will check every receipt against the source, and the entry is held if any fails.
             The shell only runs single plain commands (no cd, pipes, loops, or chaining): read one source per call with `npm run read -- <url>` and use the Read, Grep, and Glob tools for files. A refused command is never a reason to stop; run the plain form.
-            Finish by opening the pull request described in the brief. Do not merge anything.
+            Finish as the brief says: the log section, validate, then commit and push the branch. Do not open a pull request and do not merge anything.
           claude_args: |
             --model claude-sonnet-5-5
             --max-turns 220
@@ -76,11 +87,20 @@ jobs:
             --disallowedTools "Agent,Task"
       - name: Hand the branch to the gate
         id: handoff
+        env:
+          KIND: ${{ steps.slice.outputs.kind }}
+          INDEX: ${{ steps.slice.outputs.index }}
         run: |
           set -euo pipefail
+          if [ "$KIND" = "done" ]; then echo "branch=" >> "$GITHUB_OUTPUT"; exit 0; fi
+          # A finished run is a branch with a commit and a log heading for this
+          # slice, even when it drafted nothing. Anything less is a failed run:
+          # the slice stays open and comes round again.
           branch=$(git rev-parse --abbrev-ref HEAD)
-          if [ "$branch" = "main" ] || [ -z "$(git log "${{ github.sha }}..HEAD" --oneline)" ]; then echo "branch=" >> "$GITHUB_OUTPUT"; echo "nothing drafted"; exit 0; fi
-          git push -u origin "$branch" 2>/dev/null || true
+          if [ "$branch" = "main" ] || [ "$branch" = "HEAD" ] || [ -z "$(git log "${{ github.sha }}..HEAD" --oneline)" ]; then echo "::error::the drafter left no commit on a branch for slice $INDEX"; exit 1; fi
+          if ! grep -qE "^## .*slice $INDEX:" research/backfill-log.md; then echo "::error::research/backfill-log.md has no heading for slice $INDEX"; exit 1; fi
+          git push -u origin "$branch"
+          [ "$(git ls-remote --heads origin "$branch" | cut -f1)" = "$(git rev-parse HEAD)" ] || { echo "::error::the branch on GitHub is not this run's commit"; exit 1; }
           echo "branch=$branch" >> "$GITHUB_OUTPUT"
 
   # Job 2: the gate and the merge, from a fresh checkout of what job 1 pushed.
@@ -143,6 +163,9 @@ jobs:
           n=$(git diff --name-only "$BASE_SHA" HEAD -- data/entries | wc -l | tr -d ' ')
           if [ "$n" -gt 10 ]; then echo "::error::this run changed $n entry files (budget 10); nothing is verified or merged"; exit 1; fi
           node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-sonnet-5-5" --max 0 --force
+          # A verifier that did not answer is an outage, not a verdict: merge nothing,
+          # so the slice stays open and is drafted and checked again.
+          if git diff --name-only "$BASE_SHA" -- data/entries | xargs -r grep -lE "^  reason: verification-unavailable" 2>/dev/null | grep -q .; then echo "::error::the verifier was unavailable for at least one entry; nothing merges"; exit 1; fi
           git checkout -- . ':!data/' || true
           bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)
           if [ -n "$bad" ]; then echo "the gate wrote outside the data:"; echo "$bad"; exit 1; fi
@@ -167,9 +190,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          n=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
+          # Only this repository's own pull request for the branch, and only at the
+          # commit this job verified: a pull request from a fork that borrows the
+          # branch name is never picked up, and nothing pushed since is merged.
+          sha=$(git rev-parse HEAD)
+          [ "$(git rev-parse "origin/$BRANCH")" = "$sha" ] || { echo "::error::origin/$BRANCH is not the commit this job verified"; exit 1; }
+          n=$(gh pr list --head "$BRANCH" --base main --state open --json number,isCrossRepository,headRefOid -q '[.[] | select(.isCrossRepository == false)] | .[0].number // empty')
           if [ -z "$n" ]; then
-            title=$(git log -1 --format=%s "origin/$BRANCH" -- data/entries research 2>/dev/null || git log -1 --format=%s)
+            title=$(git log --reverse --format=%s "$BASE_SHA..HEAD" | head -1)
             body_file="$RUNNER_TEMP/pr-body.md"
             git log "$BASE_SHA..HEAD" --format=%B > "$body_file"
             if url=$(gh pr create --head "$BRANCH" --base main --title "$title" --body-file "$body_file" 2>&1); then
@@ -184,5 +212,5 @@ jobs:
               exit 0
             fi
           fi
-          gh pr merge "$n" --squash --delete-branch
-          echo "merged #$n from $BRANCH"
+          gh pr merge "$n" --squash --delete-branch --match-head-commit "$sha"
+          echo "merged #$n from $BRANCH at $sha"

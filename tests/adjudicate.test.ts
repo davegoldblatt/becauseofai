@@ -5,7 +5,7 @@
 // fetched and checked and what the verifier would have answered.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { adjudicate, type AdjudicationInput } from "../scripts/lib/adjudicate.ts";
+import { adjudicate, isPressWire, type AdjudicationInput } from "../scripts/lib/adjudicate.ts";
 import { VerdictSchema, type Verdict } from "../scripts/lib/verdict.ts";
 import { DraftEntrySchema, type Entry } from "../src/schema.ts";
 import type { QuoteCheck, SourceFetch } from "../scripts/lib/record.ts";
@@ -335,4 +335,29 @@ test("from an abstract as the reader prints it to a reasonable entry: the quote 
   // Control: a number the abstract does not carry still holds as ungrounded.
   const wrong = adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], quoteChecks: checks((q) => q.replace("21,603", "31,603")), verifier: { ok: true, output: v } }));
   assert.equal(wrong.reason, "ungrounded");
+});
+
+test("an announcement caps the entry at speculative even when the verifier calls the page a report (DAV-475)", () => {
+  const report = { source_kind: "operational-report" as const, source_findings: [{ source: 0, kind: "operational-report" as const, full_text: true }], grades: { evidence: "C" as const, attribution: "bundled" as const, window: "pre" as const } };
+  const mk = (src: Record<string, unknown>) => entry({ grades: { evidence: "C", attribution: "bundled", window: "pre" }, sources: [{ title: "Newsroom", url: "https://example.org/newsroom/ai-results", type: "primary", ...src }, { title: "Press", url: "https://example.org/press", type: "secondary" }] as Entry["sources"] });
+  // Control: the same verdict with no marker is strict, so the cap below is the marker's doing.
+  const plain = mk({});
+  assert.equal(adjudicate(input(plain, { verifier: { ok: true, output: verdict(plain, report) } })).confidence, "strict");
+  // Marked by the drafter.
+  const marked = mk({ announcement: true });
+  const a = adjudicate(input(marked, { verifier: { ok: true, output: verdict(marked, report) } }));
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "speculative");
+  assert.match(a.relaxed!.join(" "), /organisation's own announcement/);
+  // Not marked, but on a press-release wire.
+  const wire = mk({ url: "https://www.prnewswire.com/news-releases/ai-results-302389211.html" });
+  const w = adjudicate(input(wire, { verifier: { ok: true, output: verdict(wire, report) } }));
+  assert.equal(w.confidence, "speculative");
+  assert.match(w.relaxed!.join(" "), /wire service/);
+  // A marked source nobody quotes from does not lower the entry: receipts decide which sources count.
+  const unquoted = entry({ sources: [{ title: "Paper", url: "https://doi.org/10.1136/bmj-2025-085810", type: "primary" }, { title: "Release", url: "https://example.org/press", type: "primary", announcement: true }] as Entry["sources"] });
+  assert.equal(adjudicate(input(unquoted, { verifier: { ok: true, output: verdict(unquoted) } })).confidence, "strict");
+  assert.equal(isPressWire("https://www.businesswire.com/news/home/1/en/"), true);
+  assert.equal(isPressWire("https://www.nejm.org/doi/full/10.1056/x"), false);
+  assert.equal(isPressWire("not a url"), false);
 });

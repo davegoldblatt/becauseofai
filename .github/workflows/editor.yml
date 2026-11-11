@@ -146,7 +146,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          n=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')
+          # Only this repository's own pull request for the branch, and only at the
+          # commit this job verified: a pull request from a fork that borrows the
+          # branch name is never picked up, and nothing pushed since is merged.
+          sha=$(git rev-parse HEAD)
+          [ "$(git rev-parse "origin/$BRANCH")" = "$sha" ] || { echo "::error::origin/$BRANCH is not the commit this job verified"; exit 1; }
+          n=$(gh pr list --head "$BRANCH" --base main --state open --json number,isCrossRepository,headRefOid -q '[.[] | select(.isCrossRepository == false)] | .[0].number // empty')
           if [ -z "$n" ]; then
             title=$(git log -1 --format=%s "origin/$BRANCH" -- data/entries research 2>/dev/null || git log -1 --format=%s)
             body_file="$RUNNER_TEMP/pr-body.md"
@@ -163,5 +168,5 @@ jobs:
               exit 0
             fi
           fi
-          gh pr merge "$n" --squash --delete-branch
-          echo "merged #$n from $BRANCH"
+          gh pr merge "$n" --squash --delete-branch --match-head-commit "$sha"
+          echo "merged #$n from $BRANCH at $sha"
