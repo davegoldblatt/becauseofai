@@ -30,3 +30,19 @@ Rejected:
 - Kaiser, UChicago, Intermountain scribes: 2025 results, outside the window.
 - Providence, NYP, Springhill length of stay; PointClickCare readmissions; no-show vendor blogs: undated, vendor marketing, or unreadable.
 - Readmission simulation paper: model only, no patients.
+
+## 2026-11-11, slice 2: inbox leads, part 3 of 5
+
+Drafted (1):
+- tongji-ai-nutrition-gi-surgery-rct: DeepSeek-drafted dietary guidance after GI cancer surgery, energy adequacy 66.7% vs 40.0% (RCT, n=90; bundled; dates left empty because Methods and Results disagree).
+
+Rejected:
+- DEEP-AF (Heart Rhythm O2): design paper, no results.
+- AI for Proactive Mental Health (NEJM AI): already an entry (flourish-ai-coach-students-rct).
+- Annals Heidi scribe, Columbia Epic draft replies, AI-triggered rapid response (NEJM AI): already entries.
+- Nature Cancer immune-adverse-event review: reader study of staff, no patients.
+- AEA registrations (0020058, 0019906, 0019963, 0020000): protocols, no results.
+- Alcohol chatbot Hong Kong: full text paywalled, AI not established, window pre; not read again.
+- EUS voice-guided AI: process measure only, paywalled.
+- PERT workflow: retrospective, not read.
+- NEJM AI scribe longitudinal, Neurology medRxiv summaries: not reached this run.

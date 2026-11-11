@@ -1,0 +1,119 @@
+id: tongji-ai-nutrition-gi-surgery-rct
+section: because
+rank: 26
+headline: >-
+  Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and
+  colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30
+  days after discharge, against 40.0% given standard advice.
+impact: "66.7% vs 40.0% met energy target"
+impact_number: "66.7%"
+impact_label: "of cancer-surgery patients met their energy target at 30 days, vs 40.0% with standard advice"
+summary: >-
+  A single-centre randomized trial of 90 patients after laparoscopic gastric or
+  colorectal cancer surgery compared individualized dietary guidance drafted by
+  DeepSeek v3.2 and reviewed by a clinician with standard discharge advice.
+  More patients in the AI-guided group reached their energy and protein targets
+  and reported fewer symptoms; weight, blood nutrition markers and
+  complications did not differ.
+caveat: >-
+  The authors say the trial cannot separate AI from individualization,
+  quantified targets and clinician review; it is one hospital, 90 patients, 30
+  days, and no clinical outcome improved.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "AI-drafted individualized guidance (DeepSeek v3.2, ABC-structured prompt) with clinician review vs standard discharge dietary advice, 1:1 randomization"
+effect:
+  relative: "Energy adequacy OR 3.0 (95% CI 1.3–7.1); protein adequacy OR 2.9 (95% CI 1.2–6.8)"
+  absolute: "Energy adequacy 66.7% vs 40.0%; protein adequacy 62.2% vs 35.6% at 30 days after discharge; no difference in weight change, serum nutritional markers or complications"
+reach: "90 patients after laparoscopic gastric or colorectal cancer surgery, Tongji Hospital, Wuhan"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-29
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Supportive Care in Cancer: AI-facilitated individualized nutritional guidance with ABC-structured prompts after gastrointestinal cancer surgery: a randomized controlled trial (open access, Europe PMC)"
+    url: https://doi.org/10.1007/s00520-026-11401-7
+    doi: 10.1007/s00520-026-11401-7
+    type: primary
+conflicts: >-
+  No conflict was read in the text this entry draws on; the authors are
+  clinicians at the hospital that ran the trial.
+what_would_change: "A trial with a similarly individualized non-AI counselling arm, longer follow-up, or a clinical outcome such as complications or readmission."
+notes: >-
+  verify: the source gives inconsistent enrolment periods (screening January to
+  March 2026 in Methods; earlier backfill notes record December 2025 to
+  February 2026 in Results), so no achieved dates are given and the window is
+  left empty.
+  verify: backfill notes record a complication-rate mismatch between text and
+  Fig. 2; no complication number is used here.
+  Evidence B rather than A: registered with ChiCTR before enrolment, but this
+  entry does not establish that the primary endpoint was the registered one.
+related: [prea-chatbot-specialist-referral-rct]
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The AI-guided arm also received individualization, quantified targets and clinician review, and the authors state the trial cannot isolate AI, so the comparison is bundled.
+receipts:
+  - field: headline
+    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: 90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1
+    locator: Abstract, Methods
+    source: 0
+  - field: impact
+    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: f3a6d590394516a8bc0764d265bb0c2498ddee2ea97a1fb20a84107d88c90fe4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+held:
+  reason: ungrounded
+  since: 2026-11-11
+  detail: "headline (receipt 2): unsupported, The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline.."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
