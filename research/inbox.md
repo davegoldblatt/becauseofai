@@ -306,3 +306,14 @@ Candidates: 103 over 2026-11-08 to 2026-11-10, 17 flagged randomized, 0 alerts, 
 - Ghana literacy intervention, World Bank PRWP 11433. [ERIC](https://eric.ed.gov/?id=ED683456). Flagged AI by keyword; the Tools for Foundational Learning Improvement program looks like a non-AI intervention. Missing: whether AI is a component.
 - Still open: LATENT (Circulation), obstetric AI ultrasound in Zambia, EClinicalMedicine diabetic foot ulcer trial, all logged earlier and unreadable.
 - Skipped: AEA registrations in development, protocols, reviews, retrospective validations, benchmarks, surveys.
+
+## 2026-11-11 (daily scout)
+
+Candidates: 120 over 2026-11-09 to 2026-11-11, 13 flagged randomized, 0 alerts, 2 source errors (Crossref 404s). No entry drafted: the new randomized hits are protocols, simulations, or unreadable.
+
+- PARTNER pregnancy risk assessment and decision support, trial ended, no results posted. [ISRCTN15732844](https://www.isrctn.com/ISRCTN15732844). `npm run read` returns a 6-character stub. Missing: the paper or results, comparison, dates, absolute effects.
+- Reasoning LLM as scaffold for junior anesthesiologists. [BMC Anesthesiol](https://doi.org/10.1186/s12871-026-04173-4). Read in full: randomized but simulation-based with 20 scenarios and no patients, so it fails the reached-people test. Not an entry.
+- AI chatbot and preservice teachers' responsive teaching, and NLP for EFL speaking skills (ERIC: [JCAL](http://dx.doi.org/10.1111/jcal.13091), [JECR](http://dx.doi.org/10.1177/07356331251377414)). Education experiments flagged randomized; not read in full. Missing: whether real learners outside a lab, outcomes, dates.
+- Protocols to watch: ambient AI scribe head-to-head ([medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1), logged 2026-11-10), ROMIAE-2 AI-ECG ([CEEM](https://doi.org/10.15441/ceem.26.305), logged 2026-11-09).
+- Still open: LATENT (Circulation), Zambia AI ultrasound, EClinicalMedicine diabetic foot ulcer trial, all unreadable as logged earlier.
+- Skipped: AEA registrations in development, protocols, reviews, retrospective validations, benchmarks, model-accuracy papers, news and commentary.
