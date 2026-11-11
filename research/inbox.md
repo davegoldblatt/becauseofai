@@ -121,6 +121,10 @@ Candidates: 199 over 2026-10-26 to 2026-10-28, 18 flagged randomized, 1 alert, 1
 
 - `eagle-cadde-colonoscopy-rct`: still the malformed verification record (verifier.tokens has unrecognized keys `cached` and `reasoning`). The gate has to run again on this entry.
 
+## 2026-10-29 (user-submitted lead)
+
+- Agentic AI for immune-related adverse-event review. [Nature Cancer](https://www.nature.com/articles/s43018-026-01264-6) (published 2026-10-29). Indexed paper sections report a randomized crossover study of 17 clinical research staff reviewing 20 notes each: AI assistance reduced annotation time by 2.71 minutes and improved accuracy and agreement. A separate silent prospective phase processed 884 notes during May–July 2025; it did not demonstrate improved patient care. Retain as a research lead: the current scout rules exclude reader studies without patients. A possible work-domain claim concerns faster, more accurate research annotation, subject to an explicit editorial decision on whether controlled annotation tasks qualify. Missing: full-text retrieval (the gate's reader returned `NOT READ`), verified dates for the randomized study, and source receipts before any entry is drafted. Do not use the publication date or the silent-phase dates as the achieved dates for the randomized benefit.
+
 ## 2026-10-31 (daily scout)
 
 Candidates: 163 over 2026-10-29 to 2026-10-31, 23 flagged randomized, 2 alerts, 1 source error. No entry drafted: the one primary source read in full has conflicting dates, and the others are registrations or unreadable.

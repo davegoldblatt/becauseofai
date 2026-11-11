@@ -41,7 +41,7 @@ A measured null or harm is an entry too: section `not-because`.
 
 ## Limits
 
-- At most **eight** new entries in this run. Take the strongest first. Stop when you reach eight or the slice is done.
+- At most **eight** new entries in this run. Take the strongest first. Stop when you reach eight or the slice is done. The gate refuses a run that changed more than ten entry files.
 - Never edit an existing entry. Never write `verification` or `held`.
 - Check `data/entries/` before drafting: one entry per result. A second announcement of the same result is not a new entry.
 - `rank`: one higher than the current maximum in that section, then count up for each entry you add.
@@ -52,6 +52,8 @@ A measured null or harm is an entry too: section `not-because`.
 
 1. Append a short section to `research/backfill-log.md` (create it if missing): a heading with today's date and the slice label, the entries you drafted (id and one line each), and what you looked at and rejected with the reason in a few words each. Under 25 lines.
 2. Run `npm run validate`. It must pass. Fix what it reports.
-3. Create branch `backfill/<today>-<slice index>`, commit the entry files and the log, push, and open a pull request against main with `gh pr create`. The title is `Backfill <slice index>: <N> drafted (<slice label>)`. Do not merge.
+3. Write the pull request body to `.scout/pr-body.md` with the Write tool: the slice, the entries drafted with their sources, and what was rejected.
+4. Create the branch with `git checkout -b backfill/<today>-<slice index>`, `git add` the entry files and `research/backfill-log.md` by name, commit with the message `Backfill <slice index>: <N> drafted (<slice label>)`, and `git push -u origin <branch>`.
+5. Open the pull request with exactly `gh pr create --base main --title "<the commit message>" --body-file .scout/pr-body.md` on one line, no shell substitutions. If that command is refused, stop there: the workflow opens the pull request from your branch itself. Do not merge.
 
 If nothing in the slice qualifies, still write the log section, commit it on the branch, and open the pull request with `0 drafted`. That is a valid run.
