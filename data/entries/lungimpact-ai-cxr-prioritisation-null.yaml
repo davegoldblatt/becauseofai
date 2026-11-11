@@ -1,0 +1,86 @@
+id: lungimpact-ai-cxr-prioritisation-null
+section: not-because
+rank: 12
+headline: >-
+  Not because of AI: prioritising abnormal chest X-rays with AI did not speed up
+  lung cancer diagnosis in five English hospitals, with median times of 44 days
+  against 46 days.
+impact: "44 vs 46 days to diagnosis, no difference"
+impact_number: "44 vs 46 days"
+impact_label: "median chest X-ray to lung cancer diagnosis, with and without AI prioritisation"
+summary: >-
+  In the LungIMPACT randomised trial across five NHS trusts, AI flagged
+  abnormal GP-requested chest X-rays for immediate radiologist review on
+  randomised days; this did not shorten time to CT, to referral, to treatment,
+  or to diagnosis.
+caveat: >-
+  AI was available in both arms and only prioritisation was randomised, so the
+  trial tests whether prioritising AI flags alone speeds the pathway, not
+  whether AI-assisted reading is useful; the authors say the wider pathway needs
+  redesign.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Days on which AI-flagged chest X-rays were prioritised for immediate review vs days on which they were not, randomised by day"
+effect:
+  relative: "Ratio of geometric means for time to diagnosis 0.98, not significant"
+  absolute: "Median 44 days with AI prioritisation against 46 days without, among 558 people diagnosed with lung cancer"
+reach: "93,326 chest X-rays from primary care analysed across five NHS trusts in England"
+dates:
+  achieved_start: 2023-07-17
+  achieved_end: 2024-12-31
+  published: 2026-03-24
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Woznitza et al., AI-based chest X-ray prioritization in the lung cancer diagnostic pathway: the LungIMPACT randomized controlled trial. Nature Medicine 2026"
+    url: https://doi.org/10.1038/s41591-026-04253-5
+    type: primary
+  - title: "University Hospitals Birmingham: AI-driven technology does not speed up lung cancer diagnosis"
+    url: https://www.uhb.nhs.uk/news-and-events/news/ai-driven-technology-does-not-speed-up-lung-cancer-diagnosis/
+    type: secondary
+conflicts: "Funded through an SBRI Healthcare award; no conflict affecting a null result was identified in the text read."
+what_would_change: "A trial in which an AI flag automatically triggers a same-day CT and referral, which the authors propose as the next test."
+notes: >-
+  verify: dates are the period over which chest X-rays were performed;
+  follow-up ran to 5 June 2025.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The arms differed only in whether AI flags were prioritised, randomised by day with AI otherwise available in both, so the null result isolates AI prioritisation.
+receipts:
+  - field: headline
+    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: "with a ratio of geometric means of 0.98"
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: "Lung cancer was diagnosed in 558 people (0.6% of CXRs)."
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: "resulting in 93,326 CXRs analyzed"
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_start
+    quote: "Between 17 July 2023 and 31 December 2024"
+    locator: Results, Descriptive statistics
+    source: 0
+  - field: dates.achieved_end
+    quote: "Between 17 July 2023 and 31 December 2024"
+    locator: Results, Descriptive statistics
+    source: 0

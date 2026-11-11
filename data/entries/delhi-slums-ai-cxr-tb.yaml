@@ -1,0 +1,87 @@
+id: delhi-slums-ai-cxr-tb
+section: because
+rank: 28
+headline: >-
+  Because of AI-read chest X-rays, Delhi's slum screening programme confirmed TB
+  in 877 people among 168,568 residents screened.
+impact: "877 TB cases confirmed in slum screening"
+impact_number: "877"
+impact_label: "people with TB confirmed among 168,568 slum residents screened with AI-read chest X-rays"
+summary: >-
+  Delhi's TB elimination programme used Qure.ai to read chest X-rays taken at
+  community camps across 349 urban slum clusters; people flagged were offered
+  sputum collection and molecular testing, which confirmed TB in 877 people.
+caveat: >-
+  A programme report with no comparison group, so it does not show how many of
+  these cases symptom-based screening would have found; read from a news report
+  of the paper, not the paper.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: ongoing
+comparison: "None; single-arm programme results, with AI-flagged X-rays followed by molecular testing"
+effect:
+  relative: "877 confirmed cases were 0.52% of everyone screened and 5.2% of those who completed molecular testing"
+  absolute: "520 bacteriologically confirmed TB cases per 100,000 people screened"
+reach: "168,568 residents aged 15 and over in 349 notified urban slum clusters in six Delhi districts"
+dates:
+  achieved_start: 2025-07
+  achieved_end: 2026-03
+  published: 2026-10-07
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "ThePrint (PTI): AI-assisted X-rays flag 18,377 people for TB testing in Delhi slums, 877 confirmed (report of a paper in the Indian Journal of Tuberculosis, 23 August 2026)"
+    url: https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a news-agency account of a paper by the programme's own
+  managers (Delhi State Health Mission, Delhi State TB Elimination Programme,
+  The Union), about their own programme; the AI tool is from the vendor Qure.ai.
+  The journal paper itself could not be read.
+what_would_change: "The paper's full text with a comparison to symptom-based screening yield in the same clusters, and treatment outcomes of the people found."
+notes: >-
+  verify: the paper in the Indian Journal of Tuberculosis could not be found or
+  read, so every figure comes from the PTI report.
+  verify: the report gives the period of screening as July 2025 to March 2026
+  and says the programme was evaluated in April 2026.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: There is no comparison arm, and the AI read X-rays inside a package of community camps, sputum collection and molecular testing, so the yield belongs to the package (bundled).
+receipts:
+  - field: headline
+    quote: "with molecular tests subsequently confirming TB in 877 people"
+    locator: Article, paragraph 1
+    source: 0
+  - field: impact
+    quote: "with molecular tests subsequently confirming TB in 877 people"
+    locator: Article, paragraph 1
+    source: 0
+  - field: impact_number
+    quote: "with molecular tests subsequently confirming TB in 877 people"
+    locator: Article, paragraph 1
+    source: 0
+  - field: effect.relative
+    quote: "They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened."
+    locator: Article, paragraph 10
+    source: 0
+  - field: effect.absolute
+    quote: "the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened"
+    locator: Article, paragraph 11
+    source: 0
+  - field: reach
+    quote: "with 1,68,568 people undergoing chest X-ray screening."
+    locator: Article, paragraph 9
+    source: 0
+  - field: dates.achieved_start
+    quote: "Between July 2025 and March 2026, 3,566 community screening camps were organised"
+    locator: Article, paragraph 9
+    source: 0
+  - field: dates.achieved_end
+    quote: "Between July 2025 and March 2026, 3,566 community screening camps were organised"
+    locator: Article, paragraph 9
+    source: 0

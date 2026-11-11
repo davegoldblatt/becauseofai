@@ -1,0 +1,68 @@
+id: malaysia-lung-health-ai-cxr
+section: because
+rank: 29
+headline: >-
+  Because of AI-assisted chest X-rays, Malaysia's lung health pilot screened
+  14,350 people at seven clinics and found abnormal results in 25.5%, a third
+  of them with lung nodules now being assessed for cancer and TB.
+impact: "14,350 screened, 25.5% abnormal"
+impact_number: "25.5%"
+impact_label: "of 14,350 people screened with AI-assisted chest X-rays had abnormal findings"
+summary: >-
+  The Health Ministry told The Star that its National Lung Health Initiative
+  pilot, which pairs AI-assisted chest X-ray with spirometry and TB testing at
+  health clinics, screened 14,350 people, and the programme has now gone
+  nationwide.
+caveat: >-
+  A ministry statement to a newspaper: it reports how many were screened and
+  flagged, not how many cancers or TB cases were confirmed, and gives no
+  comparison or dates.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None stated; flagged results are not compared with any other screening method"
+effect:
+  relative: "Not stated; the source gives no baseline or comparison"
+  absolute: "14,350 people screened at seven clinics, 25.5% with abnormal findings"
+reach: "Seven participating Malaysian health clinics in the pilot of the National Lung Health Initiative"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-07
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "The Star: One in four at risk of lung disease (Health Ministry statement)"
+    url: https://www.thestar.com.my/news/nation/2026/10/07/one-in-four-at-risk-of-lung-disease
+    type: primary
+    announcement: true
+conflicts: "The figures are the Health Ministry's own account of its own programme, given to a newspaper. No independent audit, and the AI vendor is not named."
+what_would_change: "Confirmed cancer and TB cases among the flagged people, with the screening period and a comparison with symptom-led case-finding."
+notes: >-
+  verify: the source gives no period for the 14,350 screenings, so dates and
+  the window grade are left empty.
+  verify: the article does not name the AI tool.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The ministry reports screening numbers for a package of AI-assisted X-ray, spirometry, TB testing and referral, with no comparison, so the AI's own contribution cannot be separated (bundled).
+receipts:
+  - field: headline
+    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    locator: Article, paragraph 2
+    source: 0
+  - field: impact
+    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    locator: Article, paragraph 2
+    source: 0
+  - field: impact_number
+    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    locator: Article, paragraph 2
+    source: 0
+  - field: effect.absolute
+    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    locator: Article, paragraph 2
+    source: 0

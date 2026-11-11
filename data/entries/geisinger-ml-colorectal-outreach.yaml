@@ -1,0 +1,76 @@
+id: geisinger-ml-colorectal-outreach
+section: because
+rank: 32
+headline: >-
+  Because of a machine-learning model that found people overdue for bowel cancer
+  screening, Geisinger patients who got nurse outreach were 6% more likely to
+  have a colonoscopy within three months, and two-year mortality was 6.2% lower.
+impact: "6.2% lower two-year mortality"
+impact_number: "6.2%"
+impact_label: "reduction in two-year mortality associated with ML-guided colorectal screening outreach at Geisinger"
+summary: >-
+  Geisinger health system used a model on blood counts, age and sex to pick
+  patients at elevated colorectal cancer risk who were overdue for screening,
+  and nurse coordinators contacted them. A study in Manufacturing & Service
+  Operations Management compared them with similar patients not contacted.
+caveat: >-
+  Read from the journal publisher's press release, not the paper; the mortality
+  result is an observational association, and the outreach combines the model's
+  selection with human nurse contact.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Patients targeted by the machine-learning outreach program vs similar patients who did not receive outreach"
+effect:
+  relative: "A 6.2% reduction in two-year mortality, a 43% decrease relative to the study's control group"
+  absolute: "6% more likely to complete a colonoscopy within three months and 6.9% within six months"
+reach: "Patients of the Geisinger health system overdue for colorectal cancer screening"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-06
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "INFORMS press release: AI-Guided Outreach Increased Cancer Screenings and Reduced Mortality, New Study Finds (6 July 2026)"
+    url: https://www.informs.org/News-Room/INFORMS-Releases/News-Releases/AI-Guided-Outreach-Increased-Cancer-Screenings-and-Reduced-Mortality-New-Study-Finds
+    type: primary
+    announcement: true
+conflicts: "The source is the publisher's press release about a study whose authors include Geisinger staff evaluating Geisinger's own programme. The paper was not read."
+what_would_change: "The paper's full text with its matching method and mortality confidence interval, and replication outside Geisinger."
+notes: >-
+  verify: the release says the program has operated since 2019 but gives no
+  period for the study, so dates and the window grade are left empty.
+  verify: the release gives no sample size.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: Patients reached by the model-guided nurse outreach were compared with similar patients not reached, but the effect combines the model's targeting with nurse education and scheduling, so the AI's share is not separable (bundled).
+receipts:
+  - field: headline
+    quote: "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months"
+    locator: Press release, paragraph 3
+    source: 0
+  - field: headline
+    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    locator: Press release, paragraph 3
+    source: 0
+  - field: impact
+    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    locator: Press release, paragraph 3
+    source: 0
+  - field: impact_number
+    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    locator: Press release, paragraph 3
+    source: 0
+  - field: effect.relative
+    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    locator: Press release, paragraph 3
+    source: 0
+  - field: effect.absolute
+    quote: "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months"
+    locator: Press release, paragraph 3
+    source: 0

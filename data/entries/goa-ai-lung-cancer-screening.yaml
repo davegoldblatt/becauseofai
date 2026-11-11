@@ -1,0 +1,76 @@
+id: goa-ai-lung-cancer-screening
+section: because
+rank: 31
+headline: >-
+  Because of AI review of routine chest X-rays, Goa's public hospitals have made
+  18 confirmed lung cancer diagnoses and cut the average time to diagnosis by
+  more than 50%, the state says.
+impact: "18 lung cancers confirmed; diagnosis 50%+ faster"
+impact_number: "18"
+impact_label: "confirmed lung cancer diagnoses from 106,248 routine chest X-rays reviewed by AI in Goa's public hospitals"
+summary: >-
+  Goa's health department, with Qure.ai and AstraZeneca, runs AI over every chest
+  X-ray taken at 18 public facilities, whatever the reason for the scan. By
+  February 2026 it had flagged 10,564 lung nodules and led to 18 confirmed lung
+  cancers.
+caveat: >-
+  The state's and vendor's own early outcomes: no comparison group, no period
+  given, and the baseline for the time-to-diagnosis claim is not stated.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Average time to diagnosis after the programme began against an unstated earlier level"
+effect:
+  relative: "Reduced the average time to diagnosis by more than 50%"
+  absolute: "18 confirmed lung cancer diagnoses from 1,06,248 chest X-rays analysed; 10,564 nodules flagged, 1,619 high-risk"
+reach: "18 public healthcare sites across Goa, India"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-03
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Qure.ai: Goa Crosses 1 Lakh Chest X-Rays Reviewed Using AI in Public Health System, Identifies 18 Lung Cancer Cases (3 February 2026)"
+    url: https://qure.ai/news_press_coverages/goa-crosses-1-lakh-chest-x-rays-reviewed-using-ai-in-public-health-system-identifies-18-lung-cancer-cases
+    type: primary
+    announcement: true
+conflicts: "The source is a press release by the vendor Qure.ai, sharing outcomes with the Government of Goa and AstraZeneca, who are its partners in the programme. No independent audit."
+what_would_change: "A baseline period for the time-to-diagnosis claim, stage at diagnosis, and a government or peer-reviewed report."
+notes: >-
+  verify: the release says "Since deployment" without a start date, so dates
+  and the window grade are left empty.
+  verify: later press coverage gives larger screening counts (127,836 by May
+  2026) but no updated cancer count was found in a readable primary source.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The result comes from a state programme that put AI review into routine X-ray workflow alongside clinician triage and referral, with no comparison arm, so the AI's own share is not separable (bundled).
+receipts:
+  - field: headline
+    quote: "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%."
+    locator: Press release, paragraph 5
+    source: 0
+  - field: impact
+    quote: "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%."
+    locator: Press release, paragraph 5
+    source: 0
+  - field: impact_number
+    quote: "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%."
+    locator: Press release, paragraph 5
+    source: 0
+  - field: effect.relative
+    quote: "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%."
+    locator: Press release, paragraph 5
+    source: 0
+  - field: effect.absolute
+    quote: "The AI system flagged 10,564 lung nodules, including 1,619 classified as high-risk"
+    locator: Press release, paragraph 5
+    source: 0
+  - field: reach
+    quote: "Since deployment, the initiative has analyzed 1,06,248 chest X-rays across 18 public healthcare sites in the state."
+    locator: Press release, paragraph 5
+    source: 0
