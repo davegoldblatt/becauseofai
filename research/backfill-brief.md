@@ -6,6 +6,10 @@ No human reviews entries. After you, a second model from a different vendor rece
 
 Read first: `research/scout-brief.md` (step 2, **Entries** and **Receipts**: every rule there about reading with `npm run read`, receipts, rationale, grades, ranks, dates, and history notes applies here), `research/brief.md` (the four tests and the levels), `HANDOFF.md` §3 (the data model), and two or three files in `data/entries/` as templates.
 
+## The shell here is narrow
+
+Only these commands run, each as one plain command with nothing joined to it: `npm run read -- <url>`, `npm run validate`, `git checkout`, `git add`, `git commit`, `git push`, `git status`, `git diff`, `git log`, `gh pr create`, `gh pr list`, `date`. No `cd`, no pipes, no `;` or `&&`, no loops, no redirection, no `cat` or `grep` in the shell: a command like that is refused. Read one source per call (`npm run read -- https://doi.org/...`), and use the Read, Grep, and Glob tools for files. If a command is refused, run the plain form and keep going. Never end the run because a command was refused.
+
 ## The three levels, and what this run is for
 
 - **Strict**: the full paper or registry record was read, there is a comparison, and the dates come from the methods or the registry.

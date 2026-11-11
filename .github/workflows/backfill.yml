@@ -67,6 +67,7 @@ jobs:
             Run one backfill slice for becauseofai.org. Follow research/backfill-brief.md exactly.
             Your slice is in .scout/slice.json: slice ${{ steps.slice.outputs.index }}, "${{ steps.slice.outputs.label }}".
             Every entry you draft carries receipts and a rationale; a second model from another vendor will check every receipt against the source, and the entry is held if any fails.
+            The shell only runs single plain commands (no cd, pipes, loops, or chaining): read one source per call with `npm run read -- <url>` and use the Read, Grep, and Glob tools for files. A refused command is never a reason to stop; run the plain form.
             Finish by opening the pull request described in the brief. Do not merge anything.
           claude_args: |
             --model claude-sonnet-5-5
