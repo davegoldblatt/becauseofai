@@ -51,7 +51,7 @@ notes: >-
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
-rationale: "The grade is bundled because the reduction is credited to the predictive discharge tool together with governance and process redesign, so the tool's own share cannot be separated out."
+rationale: The grade is bundled because the reduction is credited to the predictive discharge tool together with governance and process redesign, so the tool's own share cannot be separated out.
 receipts:
   - field: headline
     quote: Baptist Health has decreased boarding by about 525 patients each month
@@ -73,3 +73,23 @@ receipts:
     quote: Baptist Health in Arkansas, which operates 12 hospitals
     locator: Article body, paragraph 3
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 8155cb0c5bbbcc6ad27f2176af09961266d76d0058ee5a854ab550537390e9ae
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: pass
+  record: baptist-health-arkansas-ed-boarding/2026-11-11.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The reported decrease implies comparison with an earlier boarding level, but neither that baseline nor the measurement period is specified; the dated test fails.).
