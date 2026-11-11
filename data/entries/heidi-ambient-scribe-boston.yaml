@@ -115,8 +115,18 @@ drafted:
   model: claude-opus-5-5
   date: 2026-11-09
   content: a024643049563cc82099639025b870a556214f951f3fecb1292038885ee7e70b
-held:
-  reason: ungrounded
-  since: 2026-11-09
-  detail: "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text)."
-  record: heidi-ambient-scribe-boston/2026-11-09.json
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-09
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: pass
+  record: heidi-ambient-scribe-boston/2026-11-11.json
+  confidence: reasonable
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - The achieved dates come from the abstract; the methods were not available.

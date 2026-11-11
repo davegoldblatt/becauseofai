@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-infocare-lay-summaries-rct",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "11f166e5c54f2467c4f57b0ab29b989587291ef3d46abfe5772a9aade52f4c72",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-09"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42932468?resultType=core&format=xml",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-11T23:09:11.381Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42932468?resultType=core&format=xml",
+      "sha256": "40e315c66f00300938c5e41f08e1b4b57883189112a89dfd030d39f0aa754b9c",
+      "chars": 5967,
+      "truncated": false
+    },
+    {
+      "index": 1,
+      "url": "https://drks.de/search/en/trial/DRKS00036810",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-11T23:09:12.648Z",
+      "final_url": "https://drks.de/search/en/trial/DRKS00036810",
+      "sha256": "0904a0d3a8aea98cc21b7c02a3a7800246e1218c073804bde412d9d4c57a47c0",
+      "chars": 10361,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "an approximate 21% relative reduction (ratio of geometric means, 0.79; 95% CI, 0.70 to 0.88)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "difference, 0.17; 95% confidence interval [CI], 0.05 to 0.29; P=0.005; Hedges' g=0.33",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Median consultation time was 25 versus 33 minutes in the intervention group versus the control group, respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The mean FAPI score was higher in the intervention group (4.42±0.51 vs. 4.25±0.54",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "300 adults were randomly assigned 1:1 to standard care with or without a quality-checked, AI-generated layperson summary",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 1,
+      "quote": "Actual study start date: 2025-05-26",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 1,
+      "quote": "Actual Study Completion Date: 2026-01-08",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        },
+        {
+          "source": 1,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "Randomized groups received standard care with or without the quality-checked AI summary before consultation.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "Actual study dates are 2025-05-26 through 2026-01-08, overlapping the assessment window; the different planned completion date is not a conflicting actual date."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses the vendor's public-query contact role, but the sources do not establish vendor funding, company control, author employment, equity, patents, or licensing interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The abstract and prospective registry support a randomized trial of 300 patients with improved interaction scores and shorter consultations, with all receipted numbers and dates supported. The benefit period overlaps the assessment window, so the entry's pre grade is incorrect; clinical benefits remain unestablished."
+    },
+    "error": null,
+    "tokens": {
+      "input": 16430,
+      "output": 582,
+      "total": 17012,
+      "cached": 0,
+      "reasoning": 152
+    },
+    "duration_ms": 14578
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The abstract and prospective registry support a randomized trial of 300 patients with improved interaction scores and shorter consultations, with all receipted numbers and dates supported. The benefit period overlaps the assessment window, so the entry's pre grade is incorrect; clinical benefits remain unestablished.",
+    "confidence": "reasonable",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "The two checkers disagreed on window: the drafter said pre and the verifier said in. The entry shows the more cautious of the two, pre."
+    ],
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": "in"
+      }
+    ]
+  }
+}

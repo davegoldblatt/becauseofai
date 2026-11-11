@@ -132,11 +132,9 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-10-25
-    verdict: fail
-  record: flourish-ai-coach-students-rct/2026-10-25.json
-held:
-  reason: grade-split
-  since: 2026-10-24
-  detail: "window: drafter pre, verifier in."
-  record: flourish-ai-coach-students-rct/2026-10-25.json
+    date: 2026-11-11
+    verdict: pass
+  record: flourish-ai-coach-students-rct/2026-11-11.json
+  confidence: reasonable
+  relaxed:
+    - "The two checkers disagreed on window: the drafter said pre and the verifier said in. The entry shows the more cautious of the two, pre."
