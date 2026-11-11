@@ -66,3 +66,24 @@ receipts:
     quote: analysed 117 (59 conventional, 58 LLM-assisted)
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: d2ce66cfefe5487ecd6a7e37017cc9475dc3c1d75ca105251ad4283c9f469029
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: montpellier-ai-discharge-docs-null/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade."
+  record: montpellier-ai-discharge-docs-null/2026-11-11.json
