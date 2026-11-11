@@ -9,7 +9,7 @@ export function GET(context: APIContext) {
   const items = [...publishable]
     .sort((a, b) => {
       const da = isoDate(a.dates.added), db = isoDate(b.dates.added);
-      return da < db ? 1 : da > db ? -1 : a.section === b.section ? a.rank - b.rank : a.section.localeCompare(b.section);
+      return da < db ? 1 : da > db ? -1 : a.section === b.section ? a.rank - b.rank || a.id.localeCompare(b.id) : a.section.localeCompare(b.section);
     })
     .map((e) => {
       const added = isoDate(e.dates.added);

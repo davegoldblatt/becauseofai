@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       branch: ${{ steps.handoff.outputs.branch }}
-    timeout-minutes: 45
+    timeout-minutes: 70
     permissions:
       contents: write
       id-token: write
@@ -66,7 +66,7 @@ jobs:
             Finish by opening the pull request described in the brief. Do not merge anything.
           claude_args: |
             --model claude-sonnet-5-5
-            --max-turns 100
+            --max-turns 160
             --allowedTools "Read,Glob,Grep,Write,Edit,WebFetch,WebSearch,Bash(npm run validate),Bash(npm run read:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(date:*)"
             --disallowedTools "Agent,Task"
       - name: Hand the branch to the gate
@@ -136,7 +136,7 @@ jobs:
           # DAV-469: a bounded run. Too many changed entries means nothing is verified
           # or merged, so the gate's quota on the personal ChatGPT login stays small.
           n=$(git diff --name-only "$BASE_SHA" HEAD -- data/entries | wc -l | tr -d ' ')
-          if [ "$n" -gt 6 ]; then echo "::error::this run changed $n entry files (budget 6); nothing is verified or merged"; exit 1; fi
+          if [ "$n" -gt 10 ]; then echo "::error::this run changed $n entry files (budget 10); nothing is verified or merged"; exit 1; fi
           node scripts/verify.ts --changed --base "$BASE_SHA" --drafter "anthropic:claude-sonnet-5-5" --max 0 --force
           git checkout -- . ':!data/' || true
           bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -vE '^(data/entries/[a-z0-9-]+\.yaml|data/verifications/[a-z0-9-]+/[A-Za-z0-9._-]+\.json)$' | grep -v '^$' || true)

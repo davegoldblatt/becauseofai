@@ -99,7 +99,13 @@ async function main() {
   const strict = loaded.publishable.filter((e) => (loaded.levels.get(e.id) ?? "strict") === "strict");
   let ids: string[];
   if (arg("--entry")) ids = arg("--entry")!.split(",").map((s) => s.trim()).filter(Boolean);
-  else if (arg("--before") && arg("--after")) ids = addedIds(arg("--before")!, arg("--after")!);
+  else if (arg("--before") && arg("--after")) {
+    // At most two posts for one merge (DAV-475: a backfill run can add eight
+    // entries at once). The daily drip announces the rest, three a day.
+    const added = addedIds(arg("--before")!, arg("--after")!);
+    const strictIds = new Set(strict.map((e) => e.id));
+    ids = [...added.filter((id) => strictIds.has(id)).slice(0, 2), ...added.filter((id) => !strictIds.has(id))];
+  }
   else if (arg("--backfill")) {
     const n = Number(arg("--backfill"));
     ids = strict

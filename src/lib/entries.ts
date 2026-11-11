@@ -202,11 +202,14 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     const stale = staleWindowReason(e, today);
     if (stale) warnings.push({ file: `${e.id}.yaml`, message: stale });
   }
-  // Rank must be unique within a section, or the editorial order is ambiguous.
+  // Rank should be unique within a section; a tie is broken by id.
   const byRank = new Map<string, string>();
   for (const e of all) {
     const key = `${e.section}:${e.rank}`;
-    if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
+    // Two research runs can land the same rank at the same time (DAV-475). That
+    // is a warning, not an error: a tie is broken by id, so the order is still
+    // fixed, and one bad pair must not stop every later run.
+    if (byRank.has(key)) warnings.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}; the tie is broken by id` });
     byRank.set(key, e.id);
   }
   // An entry the gate has not bound publishes only if it is grandfathered:
@@ -232,7 +235,7 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
 }
 
 export function bySection(entries: Entry[], section: Section): Entry[] {
-  return entries.filter((e) => e.section === section).sort((a, b) => a.rank - b.rank);
+  return entries.filter((e) => e.section === section).sort((a, b) => a.rank - b.rank || a.id.localeCompare(b.id));
 }
 
 export function counts(entries: Entry[]): Record<Section, number> {

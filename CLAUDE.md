@@ -24,7 +24,11 @@ How sure (DAV-469, 2026-11-09): a published entry is **strict**, **reasonable**,
 
 ## The daily scout
 
-`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most four drafted entries per day with receipts (at any level, DAV-469), never an edit to an existing entry, always a pull request. The gate then runs on the branch (`scripts/verify.ts --changed`), and the workflow merges when validate and build pass. Treat `.scout/` as scratch.
+`scripts/scout.ts` is deterministic and never calls a model. The model step runs in `.github/workflows/scout.yml` under `research/scout-brief.md`: inbox lines, at most eight drafted entries per day with receipts (at any level, DAV-469), never an edit to an existing entry, always a pull request. The gate then runs on the branch (`scripts/verify.ts --changed`), and the workflow merges when validate and build pass. Treat `.scout/` as scratch.
+
+## The backfill (DAV-475)
+
+`.github/workflows/backfill.yml` runs six times a day. `scripts/backfill-slice.ts` is the plan: 105 fixed slices of the past twelve months (five parts of the inbox, twelve sectors of announcements in four quarters, fifty-two weeks of papers). A run takes the next slice from its run number, the model drafts at most eight entries under `research/backfill-brief.md` (announcements by web search, then `npm run read` on the organisation's own page), writes `research/backfill-log.md`, and the same gate decides. An announcement-sourced entry can only be speculative. To pause the backfill, disable the workflow; nothing depends on it. `scripts/scout.ts --until YYYY-MM-DD` pulls a past window (PubMed, medRxiv, ClinicalTrials.gov only); without it the scout also pulls announcements (`kind: "announcement"`). The reader falls back to the Europe PMC abstract when a paper cannot be read (method `europepmc-abstract`, always partial, so reasonable at best). A rank tie within a section is a warning and is broken by id.
 
 ## The gate
 

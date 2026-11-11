@@ -20,8 +20,14 @@ import type { Entry } from "../src/schema.ts";
 
 const UA = "becauseofai-scout/0.1 (https://becauseofai.org; mailto:dave@vibecap.co)";
 const args = process.argv.slice(2);
-const days = Math.max(1, Number(args[args.indexOf("--days") + 1] || 2) || 2);
-const today = new Date();
+const argOf = (name: string) => (args.includes(name) ? args[args.indexOf(name) + 1] : undefined);
+const days = Math.max(1, Number(argOf("--days") || 2) || 2);
+// --until YYYY-MM-DD: a window in the past (the back-search). Only the sources
+// that can be asked for a date range run then; alerts and "latest" feeds do not.
+const until = argOf("--until");
+if (until && !/^\d{4}-\d{2}-\d{2}$/.test(until)) { console.error("usage: --until YYYY-MM-DD"); process.exit(2); }
+const back = !!until;
+const today = until ? new Date(`${until}T23:59:59Z`) : new Date();
 const from = new Date(today.getTime() - days * 86400000);
 const iso = (d: Date) => d.toISOString().slice(0, 10);
 
@@ -33,6 +39,7 @@ type Candidate = {
   source: string; id: string; title: string; url: string; date: string; venue: string;
   snippet: string; flags: { ai: boolean; randomized: boolean; outcome: boolean };
   fulltext?: string; // a direct document link when the landing page is script-rendered or an index
+  kind?: "announcement"; // a press release, an agency notice, or a news report: a speculative entry at best
 };
 type Alert = { type: string; entry: string; detail: string };
 const candidates: Candidate[] = [];
@@ -66,12 +73,17 @@ function push(c: Candidate) {
 async function pubmed() {
   const term = '("artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "large language model"[Title/Abstract] OR "neural network"[Title/Abstract]) AND (randomized[Title/Abstract] OR randomised[Title/Abstract] OR "cluster randomised"[Title/Abstract] OR "stepped wedge"[Title/Abstract] OR "before and after"[Title/Abstract] OR deployment[Title/Abstract] OR implementation[Title/Abstract])';
   const base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
-  const s = await getJson(`${base}esearch.fcgi?db=pubmed&term=${encodeURIComponent(term)}&reldate=${days}&datetype=edat&retmode=json&retmax=200`);
+  const range = back ? `mindate=${iso(from).replace(/-/g, "/")}&maxdate=${iso(today).replace(/-/g, "/")}` : `reldate=${days}`;
+  const s = await getJson(`${base}esearch.fcgi?db=pubmed&term=${encodeURIComponent(term)}&${range}&datetype=edat&retmode=json&retmax=${back ? 400 : 200}`);
   const ids: string[] = s.esearchresult?.idlist ?? [];
   if (!ids.length) return;
-  const sum = await getJson(`${base}esummary.fcgi?db=pubmed&id=${ids.join(",")}&retmode=json`);
+  const result: Record<string, any> = {};
+  for (let i = 0; i < ids.length; i += 200) {
+    if (i) await new Promise((res) => setTimeout(res, 400)); // E-utilities allows three requests a second without a key
+    Object.assign(result, (await getJson(`${base}esummary.fcgi?db=pubmed&id=${ids.slice(i, i + 200).join(",")}&retmode=json`)).result ?? {});
+  }
   for (const id of ids) {
-    const d = sum.result?.[id];
+    const d = result[id];
     if (!d) continue;
     const doi = (d.articleids ?? []).find((a: any) => a.idtype === "doi")?.value;
     const title = strip(d.title ?? "");
@@ -99,7 +111,7 @@ async function medrxiv() {
 }
 
 async function clinicaltrials() {
-  const term = `AREA[ResultsFirstPostDate]RANGE[${iso(from)},MAX] AND ("artificial intelligence" OR "machine learning" OR "deep learning" OR "neural network" OR "large language model" OR "decision support" OR "computer-aided" OR "AI-enabled" OR "AI-based")`;
+  const term = `AREA[ResultsFirstPostDate]RANGE[${iso(from)},${back ? iso(today) : "MAX"}] AND ("artificial intelligence" OR "machine learning" OR "deep learning" OR "neural network" OR "large language model" OR "decision support" OR "computer-aided" OR "AI-enabled" OR "AI-based")`;
   const fields = "NCTId,BriefTitle,OfficialTitle,ResultsFirstPostDate,PrimaryCompletionDate,StartDate,OverallStatus,DesignAllocation,EnrollmentCount,Condition,InterventionName";
   const d = await getJson(`https://clinicaltrials.gov/api/v2/studies?query.term=${encodeURIComponent(term)}&fields=${fields}&pageSize=100`);
   for (const s of d.studies ?? []) {
@@ -150,11 +162,79 @@ async function feeds() {
   }
 }
 
+// Announcements (DAV-475): what organisations say about AI they have put to
+// use. A news search over the past week by sector, two press-release wires,
+// and two agency feeds. Everything here is a lead for a speculative entry: the
+// drafting model has to find the organisation's own announcement and read it.
+const DEPLOYED = /\b(patients?|residents|students|drivers|riders|customers|farmers|households|people|lives|cases|crashes|injur|deaths|wait(ing)? times?|hours|days|percent|%|\d[\d,.]*\s?(million|thousand|k\b))/i;
+const RESULT = /\b(reduc|cut|fewer|lower|saved?|sav(es|ing)|detect|found|caught|prevent|avoid|improv|increas|faster|earlier|first|results?|report(s|ed)?|show(s|ed|n)?|data|study|trial|pilot|rollout|roll(ed|s)? out|deploy|launch(ed)? in|now (in )?use)/i;
+const NEWS_QUERIES: [string, string][] = [
+  ["health systems", '"AI" hospital patients (reduced OR detected OR saved OR fewer) results'],
+  ["screening programmes", '"artificial intelligence" screening programme (cancers OR cases) detected results'],
+  ["emergency and weather", '"AI" (wildfire OR flood OR hurricane OR earthquake) (warning OR detected) earlier'],
+  ["roads and transport", '"AI" (crashes OR collisions OR injuries) reduced (city OR fleet OR railway)'],
+  ["schools", '"AI" (tutor OR tutoring) students (scores OR results OR gains) district'],
+  ["utilities", '"AI" (water OR grid OR energy) (leaks OR outages OR emissions) reduced utility'],
+  ["accessibility", '"AI" (blind OR deaf OR "speech impairment" OR paralysis) users (restored OR enabled)'],
+  ["public services", '"AI" (council OR agency OR government) ("wait times" OR backlog OR claims) reduced'],
+  ["agriculture", '"AI" farmers (yield OR income OR losses) (increased OR reduced) programme'],
+  ["conservation", '"AI" (poaching OR wildlife OR deforestation OR fisheries) detected (rangers OR patrol)'],
+  ["drugs and trials", '"AI-discovered" OR "AI-designed" drug (phase OR trial) results patients'],
+  ["workplace", '"AI" workers (injuries OR "hours saved" OR productivity) (study OR results) company'],
+];
+const ymdOf = (d: string) => { const t = Date.parse(d); return Number.isNaN(t) ? "" : new Date(t).toISOString().slice(0, 10); };
+function pushAnnouncement(venue: string, title: string, link: string, desc: string, date: string) {
+  const text = `${title} ${desc}`;
+  if (!AI.test(text) || !DEPLOYED.test(text) || !RESULT.test(text)) return;
+  const day = ymdOf(date);
+  if (day && (day < iso(new Date(from.getTime() - 7 * 86400000)) || day > iso(today))) return;
+  let host = ""; try { host = new URL(link).hostname.replace(/^www\./, ""); } catch { return; }
+  push({ source: "announce", id: link, title, url: link, date: day, venue: `${venue} · ${host}`, snippet: desc.slice(0, 400), flags: flags(text), kind: "announcement" });
+}
+const rssItems = (xml: string) => [...xml.matchAll(/<item\b[\s\S]*?<\/item>/g)].map((m) => {
+  const item = m[0];
+  const pick = (tag: string) => strip(item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`))?.[1] ?? "");
+  return { title: pick("title"), link: pick("link") || pick("guid"), desc: pick("description"), date: pick("pubDate") || pick("dc:date") };
+});
+async function announcements() {
+  const browser = "Mozilla/5.0 (compatible; becauseofai-scout/0.1; +https://becauseofai.org)";
+  for (const [sector, q] of NEWS_QUERIES) {
+    try {
+      // interval="8" is the past week; sortbydate puts the newest first.
+      const r = await fetch(`https://www.bing.com/news/search?q=${encodeURIComponent(q)}&qft=${encodeURIComponent('interval="8"+sortbydate="1"')}&format=rss`, { headers: { "User-Agent": browser } });
+      if (!r.ok) throw new Error(`${r.status}`);
+      for (const it of rssItems(await r.text())) {
+        // The feed links through a redirect that carries the article's own address.
+        let link = it.link;
+        try { link = new URL(it.link).searchParams.get("url") || it.link; } catch { /* keep as is */ }
+        if (/bing\.com|msn\.com/i.test(link)) continue; // an aggregator copy, not a source
+        pushAnnouncement(`news search: ${sector}`, it.title, link, it.desc, it.date);
+      }
+    } catch (e) {
+      errors.push(`news search (${sector}): ${(e as Error).message}`);
+    }
+    await new Promise((res) => setTimeout(res, 1500));
+  }
+  const wires: [string, string][] = [
+    ["PR Newswire health", "https://www.prnewswire.com/rss/health-latest-news/health-latest-news-list.rss"],
+    ["PR Newswire technology", "https://www.prnewswire.com/rss/consumer-technology-latest-news/consumer-technology-latest-news-list.rss"],
+    ["NHS England", "https://www.england.nhs.uk/feed/"],
+    ["FDA press", "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml"],
+  ];
+  for (const [venue, url] of wires) {
+    try {
+      for (const it of rssItems(await getText(url))) pushAnnouncement(venue, it.title, it.link, it.desc, it.date);
+    } catch (e) {
+      errors.push(`${venue}: ${(e as Error).message}`);
+    }
+  }
+}
+
 function doisOf(e: Entry): string[] {
   const out = new Set<string>();
   for (const s of e.sources as any[]) {
     if (s.doi) out.add(s.doi);
-    const m = /10\.\d{4,9}\/[^\s?#]+/.exec(s.url);
+    const m = /10\.\d{4,9}\/[^\s?#&]+/.exec(s.url);
     if (m) {
       let doi = m[0];
       while (/\.(pdf|full|abstract|html)$/i.test(doi)) doi = doi.replace(/\.(pdf|full|abstract|html)$/i, "");
@@ -328,28 +408,39 @@ async function crossref(entries: Entry[]) {
 
 async function main() {
   const r = loadEntries({ today });
-  for (const e of r.all) {
+  for (const e of back ? [] : r.all) {
     const stale = staleWindowReason(e, today);
     if (stale) alerts.push({ type: "stale-window", entry: e.id, detail: stale });
   }
-  for (const w of r.warnings) if (!alerts.some((a) => a.entry + a.detail === w.file.replace(".yaml", "") + w.message)) alerts.push({ type: "validate-warning", entry: w.file.replace(".yaml", ""), detail: w.message });
-  const jobs: [string, () => Promise<void>][] = [
-    ["pubmed", pubmed], ["medrxiv", medrxiv], ["clinicaltrials", clinicaltrials], ["isrctn", isrctn], ["aea-registry", aeaRegistry],
-    ["arxiv", arxiv], ["osf", osfPreprints], ["eric", eric], ["rss", feeds], ["watch", () => watched(r.all)], ["crossref", () => crossref(r.all)],
-  ];
+  for (const w of back ? [] : r.warnings) if (!alerts.some((a) => a.entry + a.detail === w.file.replace(".yaml", "") + w.message)) alerts.push({ type: "validate-warning", entry: w.file.replace(".yaml", ""), detail: w.message });
+  const jobs: [string, () => Promise<void>][] = back
+    ? [["pubmed", pubmed], ["medrxiv", medrxiv], ["clinicaltrials", clinicaltrials]]
+    : [
+      ["pubmed", pubmed], ["medrxiv", medrxiv], ["clinicaltrials", clinicaltrials], ["isrctn", isrctn], ["aea-registry", aeaRegistry],
+      ["arxiv", arxiv], ["osf", osfPreprints], ["eric", eric], ["rss", feeds], ["announce", announcements], ["watch", () => watched(r.all)], ["crossref", () => crossref(r.all)],
+    ];
   for (const [name, job] of jobs) {
     try { await job(); } catch (e) { errors.push(`${name}: ${(e as Error).message}`); }
   }
   candidates.sort((a, b) => Number(b.flags.randomized) - Number(a.flags.randomized) || Number(b.flags.outcome) - Number(a.flags.outcome) || (b.date > a.date ? 1 : -1));
+  // A past week holds several hundred hits. The back-search keeps the ones that
+  // name a trial design or an outcome, at most 150, so one run can read them all.
+  if (back) {
+    const kept = candidates.filter((c) => c.flags.randomized || c.flags.outcome).slice(0, 150);
+    candidates.length = 0;
+    candidates.push(...kept.map((c) => ({ ...c, snippet: c.snippet.slice(0, 240) })));
+  }
   const known = new Set(r.all.flatMap((e) => (e.sources as any[]).map((s) => s.url)));
   const out = {
     generated_at: today.toISOString(), window: { from: iso(from), to: iso(today), days },
-    counts: { candidates: candidates.length, randomized: candidates.filter((c) => c.flags.randomized).length, alerts: alerts.length, errors: errors.length },
+    counts: { candidates: candidates.length, randomized: candidates.filter((c) => c.flags.randomized).length, announcements: candidates.filter((c) => c.kind === "announcement").length, alerts: alerts.length, errors: errors.length },
     existing_entry_ids: r.all.map((e) => e.id), existing_source_urls: [...known],
     candidates, alerts, errors,
   };
   fs.mkdirSync(path.resolve(process.cwd(), ".scout"), { recursive: true });
-  fs.writeFileSync(path.resolve(process.cwd(), ".scout/candidates.json"), JSON.stringify(out, null, 2));
+  // One candidate per line in the back-search, so the file stays short enough to read whole.
+  const body = back ? JSON.stringify({ ...out, candidates: undefined }, null, 2).replace(/\n}$/, `,\n  "candidates": [\n${candidates.map((c) => "    " + JSON.stringify(c)).join(",\n")}\n  ]\n}`) : JSON.stringify(out, null, 2);
+  fs.writeFileSync(path.resolve(process.cwd(), ".scout/candidates.json"), body);
   console.log(`scout ${out.window.from}..${out.window.to}: ${candidates.length} candidates (${out.counts.randomized} randomized), ${alerts.length} alerts, ${errors.length} source errors`);
   for (const c of candidates.slice(0, 15)) console.log(`  [${c.source}${c.flags.randomized ? " RCT" : ""}] ${c.date} ${c.title.slice(0, 90)} — ${c.venue.slice(0, 50)}`);
   for (const a of alerts) console.log(`  ALERT ${a.type} ${a.entry}: ${a.detail.slice(0, 120)}`);

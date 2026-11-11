@@ -244,6 +244,21 @@ async function europePmc(url: string, doi: string, timeoutMs: number, maxChars: 
   return europePmcFullText(url, pmc, timeoutMs, maxChars);
 }
 
+// The abstract Europe PMC holds for a DOI, when the paper itself cannot be
+// read anywhere (a publisher that refuses robots and no open copy). Always
+// partial: an entry built on it is reasonable at best, never strict.
+async function europePmcAbstract(url: string, doi: string, timeoutMs: number, maxChars: number): Promise<SourceText | null> {
+  const q = `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent(`DOI:"${doi}"`)}&format=json&resultType=core`;
+  const r = await get(q, "application/json", timeoutMs);
+  if (!r.ok) return null;
+  const json = (await r.json()) as { resultList?: { result?: { doi?: string; title?: string; abstractText?: string; journalInfo?: { journal?: { title?: string } }; firstPublicationDate?: string; authorString?: string }[] } };
+  const hit = (json.resultList?.result ?? []).find((x) => (x.doi ?? "").toLowerCase() === doi.toLowerCase());
+  if (!hit?.abstractText) return null;
+  const head = [hit.title, hit.authorString, [hit.journalInfo?.journal?.title, hit.firstPublicationDate].filter(Boolean).join(", ")].filter(Boolean).join("\n");
+  const text = `${htmlToText(head)}\n\nAbstract (the full text could not be read)\n\n${htmlToText(hit.abstractText)}`;
+  return finish(url, q, "europepmc-abstract", text, { minChars: Number.POSITIVE_INFINITY, maxChars });
+}
+
 export function pdfToText(buf: Buffer): { ok: true; text: string } | { ok: false; reason: string } {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "boa-pdf-"));
   const file = path.join(dir, "doc.pdf");
@@ -327,6 +342,9 @@ export async function fetchSourceText(url: string, opts: { timeoutMs?: number; m
     if (doi) {
       const oa = await unpaywall(url, doi, timeoutMs, maxChars).catch(() => null);
       if (oa && oa.ok) return oa;
+      // Last resort: the abstract, kept as partial text.
+      const ab = await europePmcAbstract(url, doi, timeoutMs, maxChars).catch(() => null);
+      if (ab && ab.ok) return ab;
     }
     return d;
   } catch (err) {
