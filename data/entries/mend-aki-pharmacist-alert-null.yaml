@@ -105,11 +105,9 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-10
-    verdict: fail
-  record: mend-aki-pharmacist-alert-null/2026-11-10.json
-held:
-  reason: grade-split
-  since: 2026-11-10
-  detail: "evidence: drafter B, verifier A."
-  record: mend-aki-pharmacist-alert-null/2026-11-10.json
+    date: 2026-11-11
+    verdict: pass
+  record: mend-aki-pharmacist-alert-null/2026-11-11.json
+  confidence: reasonable
+  relaxed:
+    - "The two checkers disagreed on evidence: the drafter said B and the verifier said A. The entry shows the more cautious of the two, B."
