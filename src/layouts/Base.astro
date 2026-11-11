@@ -102,7 +102,7 @@ const fullTitle = path === "/" ? `${SITE.name} — a registry of measured AI ben
           <p class="running-head">{SITE.runningHead} · as of <time datetime={SITE.asOf}>{SITE.asOf}</time></p>
           <nav class="tabs" aria-label="Sections">
             {tabs.map((t) => (
-              <a href={t.href} aria-current={section === t.key ? "page" : undefined}>{t.label} <b>{t.n}</b></a>
+              <a href={t.href} aria-current={section === t.key ? "page" : undefined} title={`${t.n} strict ${t.n === 1 ? "entry" : "entries"}; less certain ones are behind the How sure? switch on the list`}>{t.label} <b>{t.n}</b></a>
             ))}
             {heldCount > 0 && <a class="tab-held" href="/changelog#held" title="Entries the gate is holding, with the reason">Held <b>{heldCount}</b></a>}
           </nav>

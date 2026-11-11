@@ -38,6 +38,9 @@ const levelIdx = (e: Entry) => CONFIDENCE.indexOf(levelOf(e));
 const sureCount = (c: (typeof CONFIDENCE)[number]) => entries.filter((e) => levelIdx(e) <= CONFIDENCE.indexOf(c)).length;
 const total = sureCount("strict");
 const anyLess = entries.some((e) => levelOf(e) !== "strict");
+// One button per level that adds entries; a level that adds none is not offered.
+const sureSteps = CONFIDENCE.map((level, i) => ({ level, add: i === 0 ? total : sureCount(level) - sureCount(CONFIDENCE[i - 1]) })).filter((x, i) => i === 0 || x.add > 0);
+const less = entries.length - total;
 ---
 <div class="registry" data-registry data-total={total} data-sort="rank" data-sure="strict">
   <aside class="rail" aria-label="Filters">
@@ -58,13 +61,20 @@ const anyLess = entries.some((e) => levelOf(e) !== "strict");
     </details>
   </aside>
   <div class="registry-main">
-    <div class="sure" role="group" aria-label="How sure?" data-sure-control>
+    <div class:list={["sure", { "sure-live": anyLess }]} role="group" aria-label="How sure?" data-sure-control>
       <span class="sure-label"><a href="/method#how-sure">How sure?</a></span>
-      {CONFIDENCE.map((c) => (
-        <button type="button" class="stamp stamp-chip" data-sure-value={c} aria-pressed={c === "strict" ? "true" : "false"} title={`${CONFIDENCE_LABEL[c]}: ${CONFIDENCE_DESCRIPTION[c]}`} disabled={c !== "strict" && !anyLess}>
-          <span class="sd">{CONFIDENCE_LABEL[c]}</span><span class="n">{sureCount(c)}</span>
-        </button>
-      ))}
+      {anyLess ? (
+        <>
+          {sureSteps.map(({ level, add }) => (
+            <button type="button" class="stamp stamp-chip" data-sure-value={level} aria-pressed={level === "strict" ? "true" : "false"} title={`${CONFIDENCE_LABEL[level]}: ${CONFIDENCE_DESCRIPTION[level]}`}>
+              <span class="sd">{level === "strict" ? CONFIDENCE_LABEL[level] : `+ ${CONFIDENCE_LABEL[level]}`}</span><span class="n">{level === "strict" ? total : `${add} more`}</span>
+            </button>
+          ))}
+          <span class="sure-hint">Showing strict entries first. {less} less certain {less === 1 ? "entry is" : "entries are"} behind this switch, labelled.</span>
+        </>
+      ) : (
+        <span class="sure-none">{total === 1 ? "The one entry here is" : `All ${total} entries here are`} strict. Nothing less certain has been published in this list yet.</span>
+      )}
     </div>
     <div class="toolbar">
       <p class="count"><span data-filter-count aria-live="polite">{total} entries</span></p>
@@ -163,6 +173,9 @@ const anyLess = entries.some((e) => levelOf(e) !== "strict");
       state.view = q.get("view") === "table" ? "table" : "ledger";
       const su = q.get("sure") || "strict";
       state.sure = SURE.includes(su) ? su : "strict";
+      // A level with no button adds nothing here: fall back to the widest level offered below it.
+      const offered = sureBtns.map((b) => b.dataset.sureValue!).filter((v) => SURE.indexOf(v) <= SURE.indexOf(state.sure));
+      state.sure = offered.length ? offered[offered.length - 1] : "strict";
     }
     function writeUrl() {
       const q = new URLSearchParams();

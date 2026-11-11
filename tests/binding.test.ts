@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { parseEntryFiles } from "../src/lib/entries.ts";
-import { contentSha256 } from "../src/lib/entry-text.ts";
+import { contentSha256, withOwned } from "../src/lib/entry-text.ts";
 import type { VerificationRecord } from "../scripts/lib/record.ts";
 
 const FILE = `id: x
@@ -88,10 +88,29 @@ test("a pass marker binds only with a matching record; an unbound entry that is 
   assert.equal(none.held.length, 1);
   assert.match(none.unbound.get("x")!, /not on disk/);
   assert.match(none.gateDue.get("x")!, /not on disk/);
-  // Control: a grandfathered entry with the same unbound marker stays published, as strict.
-  const legacy = parseEntryFiles({ "waymo-injury-crashes.yaml": FILE.replace(/^id: x$/m, "id: waymo-injury-crashes") }, { records: {} });
+  // Grandfathering (2026-11-11): only the frozen content, with no verification
+  // block and no gate record since the freeze, publishes without a bound record.
+  const bare = withOwned(FILE, { verification: undefined });
+  const frozen = new Map([["x", contentSha256(bare)]]);
+  const legacy = parseEntryFiles({ "x.yaml": bare }, { records: {}, legacy: frozen });
   assert.equal(legacy.publishable.length, 1);
-  assert.equal(legacy.levels.get("waymo-injury-crashes"), "strict");
+  assert.equal(legacy.levels.get("x"), "strict");
+  // The same entry without the list is held (the control the other way).
+  assert.equal(parseEntryFiles({ "x.yaml": bare }, { records: {}, legacy: new Map() }).publishable.length, 0);
+  // A grandfathered id with a verification block that does not bind is held, not shown as strict.
+  const marked = parseEntryFiles({ "x.yaml": FILE }, { records: {}, legacy: frozen });
+  assert.equal(marked.publishable.length, 0);
+  assert.match(marked.gateDue.get("x")!, /not on disk/);
+  // Changed content is no longer the grandfathered entry.
+  const edited = parseEntryFiles({ "x.yaml": bare.replace("1,000", "2,000") }, { records: {}, legacy: frozen });
+  assert.notEqual(bare.replace("1,000", "2,000"), bare);
+  assert.equal(edited.publishable.length, 0);
+  assert.match(edited.gateDue.get("x")!, /changed since it was grandfathered/);
+  // Once the gate has made a verification record after the freeze, taking the block off does not bring it back.
+  const after = parseEntryFiles({ "x.yaml": bare }, { records: { "x/2026-11-10.json": record() }, legacy: frozen });
+  assert.equal(after.publishable.length, 0);
+  // A record from before the freeze (the October migration) does not count.
+  assert.equal(parseEntryFiles({ "x.yaml": bare }, { records: { "x/2026-10-23.json": record() }, legacy: frozen }).publishable.length, 1);
   const other = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ entry: "y" }) } });
   assert.match(other.unbound.get("x")!, /belongs to y/);
   const heldRec = parseEntryFiles({ "x.yaml": FILE }, { records: { "x/2026-10-23.json": record({ adjudication: { result: "held", reason: "grade-split", detail: "d" } }) } });
@@ -146,4 +165,21 @@ test("the level on the entry must be the one its record derives (DAV-469)", () =
   const r = parseEntryFiles({ "x.yaml": lied }, { records: { "x/2026-10-23.json": record() } });
   assert.match(r.unbound.get("x") ?? "", /derives strict/);
   assert.equal(r.publishable.length, 0);
+});
+
+test("the reasons shown for a lower level must be the ones the record derives (2026-11-11)", () => {
+  const partial = { ...VERDICT, full_text: false };
+  const rec = () => record({ sources: [{ ...record().sources[0], method: "html" }], verifier: { ...record().verifier!, output: partial } });
+  const reason = "Source 0 could be read only in part (an abstract or a summary), not the full document.";
+  const at = (lines: string) => FILE.replace(/^(  record: .*)$/m, `$1\n  confidence: reasonable\n${lines}`);
+  const ok = parseEntryFiles({ "x.yaml": at(`  relaxed:\n    - "${reason}"`) }, { records: { "x/2026-10-23.json": rec() } });
+  assert.equal(ok.unbound.size, 0, ok.unbound.get("x"));
+  assert.equal(ok.levels.get("x"), "reasonable");
+  // Rewritten reasons do not bind.
+  const rewritten = parseEntryFiles({ "x.yaml": at(`  relaxed:\n    - "No limitations; the whole paper was read."`) }, { records: { "x/2026-10-23.json": rec() } });
+  assert.match(rewritten.unbound.get("x") ?? "", /reasons on the entry/);
+  assert.equal(rewritten.publishable.length, 0);
+  // Deleted reasons do not bind either.
+  const deleted = parseEntryFiles({ "x.yaml": at("").replace(/\n\n$/, "\n") }, { records: { "x/2026-10-23.json": rec() } });
+  assert.match(deleted.unbound.get("x") ?? "", /reasons on the entry/);
 });

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EntrySchema, SECTIONS, HELD_REASONS, FullDate } from "../../schema.ts";
+import { EntrySchema, SECTIONS, HELD_REASONS, FullDate, CONFIDENCE } from "../../schema.ts";
 
 // JSON Schema for /api/entries.json, generated from the same zod schema the
 // build validates entries against, so the two cannot drift. Refinements
@@ -11,6 +11,8 @@ export function GET() {
     site: z.string().describe("Canonical site URL"),
     as_of: z.string().describe("Editorial reference date for the 12-month window (YYYY-MM-DD)"),
     counts: Counts.describe("Published entries per section: a passing cross-vendor verification, a receipt on every number, a primary source"),
+    counts_by_level: z.object(Object.fromEntries(SECTIONS.map((s) => [s, z.object(Object.fromEntries(CONFIDENCE.map((c) => [c, z.number().int()])))]))).describe("Published entries per section at each level (strict, reasonable, speculative). `counts` is the strict ones"),
+    levels: z.record(z.string(), z.enum(CONFIDENCE)).describe("How sure each published entry is, by id"),
     held: z.array(z.object({
       id: z.string(),
       reason: z.enum(HELD_REASONS),

@@ -72,6 +72,11 @@ export function htmlToText(html: string): string {
   s = s.replace(/<\/(td|th)\s*>/gi, "\t");
   s = s.replace(/<[^>]+>/g, " ");
   s = decodeEntities(s);
+  // Markup that was escaped inside XML (Europe PMC sends a structured abstract
+  // as text with "<h4>Setting</h4>" in it) is markup again after decoding.
+  // Only named tags go: "p < 0.05" and "<5 years" are text.
+  s = s.replace(/<\/(p|div|li|h[1-6]|sec|title)\s*>/gi, "\n");
+  s = s.replace(/<\/?(p|div|li|ul|ol|h[1-6]|sec|title|b|i|em|strong|sub|sup|span|br)(\s[^<>]{0,120})?\/?>/gi, " ");
   s = s.replace(/ /g, " ");
   s = s.replace(/[ \t]*\t[ \t]*/g, "\t").replace(/ {2,}/g, " ").replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n");
   return s.trim();

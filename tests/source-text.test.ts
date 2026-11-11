@@ -162,3 +162,14 @@ test("round 3: operator neighbours, leading decimals, tags, flow sequences in pl
   assert.throws(() => topBlocks(RAW.split("\n").map((l) => (l ? "  " + l : l)).join("\n")), /column 0/);
   assert.throws(() => topBlocks("{ id: x, section: because }\n"), /flow mapping/);
 });
+
+test("htmlToText: markup escaped inside XML does not hide the words after it", () => {
+  // Europe PMC sends a structured abstract with its section tags escaped.
+  const xml = "<result><abstractText>&lt;h4&gt;Setting&lt;/h4&gt;14-hospital health system in Boston.&lt;h4&gt;Participants&lt;/h4&gt;902 outpatient clinicians enrolled; p &lt; 0.05 and &lt;5 years.</abstractText></result>";
+  const t = htmlToText(xml);
+  assert.ok(!/<\/?h4>/.test(t), t);
+  assert.equal(findQuote(t, "14-hospital health system in Boston.").found, true);
+  assert.equal(findQuote(t, "902 outpatient clinicians enrolled").found, true);
+  // Comparison signs in the text are not markup and stay.
+  assert.ok(t.includes("p < 0.05") && t.includes("<5 years"), t);
+});

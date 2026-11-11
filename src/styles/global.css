@@ -498,7 +498,11 @@ h1.sentence + .rcpt { margin: -0.5rem 0 1rem; }
 .chg.held .chg-type .stamp { white-space: normal; text-align: center; line-height: 1.2; padding: 2px 5px; }
 
 /* How sure? control (DAV-469). Without JavaScript only strict rows show. */
-.sure { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 10px; }
+.sure { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 10px; }
+.sure-live { border: 2px solid var(--ink); padding: 10px 12px; }
+.sure-live .stamp-chip { min-height: 32px; padding: 0 10px; font-size: 13px; }
+.sure-hint, .sure-none { font: 400 0.9rem/1.4 var(--body); color: var(--graphite-text); }
+.sure-hint { flex-basis: 100%; }
 .sure-label { font-family: var(--mono, ui-monospace, monospace); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; margin-right: 4px; }
 .sure-label a { color: inherit; }
 .registry:not([data-js]) [data-sure="reasonable"], .registry:not([data-js]) [data-sure="speculative"] { display: none; }

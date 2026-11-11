@@ -279,3 +279,60 @@ test("a lowered entry still holds on a grade split or an unstated conflict", () 
   const pr = verdict(e, { source_findings: [{ source: 0, kind: "press-release", full_text: true }], conflict: { in_source: true, stated_in_entry: false, note: "a company announcement" } });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: pr } })).reason, "fails-test");
 });
+
+test("a split where the entry already shows the weaker claim publishes below strict and says so (2026-11-11)", () => {
+  const e = entry(); // A · bundled · pre
+  // Window: the entry says pre, the verifier read in.
+  const w = adjudicate(input(e, { verifier: { ok: true, output: verdict(e, { grades: { evidence: "A", attribution: "bundled", window: "in" } }) } }));
+  assert.equal(w.result, "published");
+  assert.equal(w.confidence, "reasonable");
+  assert.deepEqual(w.splits, [{ grade: "window", drafter: "pre", verifier: "in" }]);
+  assert.match(w.relaxed![0], /disagreed on window: the drafter said pre and the verifier said in\. The entry shows the more cautious of the two, pre\./);
+  // Evidence: the entry says B, the verifier read A.
+  const b = entry({ grades: { evidence: "B", attribution: "bundled", window: "pre" } });
+  const ev = adjudicate(input(b, { verifier: { ok: true, output: verdict(b, { grades: { evidence: "A", attribution: "bundled", window: "pre" } }) } }));
+  assert.equal(ev.result, "published");
+  assert.equal(ev.confidence, "reasonable");
+  // It never raises a level that something else lowered further.
+  const pr = adjudicate(input(b, { verifier: { ok: true, output: verdict(b, { source_findings: [{ source: 0, kind: "press-release", full_text: true }], grades: { evidence: "A", attribution: "bundled", window: "pre" } }) } }));
+  assert.equal(pr.confidence, "speculative");
+  assert.equal(pr.relaxed!.length, 2);
+
+  // Controls the other way: each of these still holds.
+  const holds = (ent: Entry, grades: Verdict["grades"]) => adjudicate(input(ent, { verifier: { ok: true, output: verdict(ent, { grades }) } }));
+  // The entry makes the stronger claim (A against the verifier's B; in against pre).
+  assert.equal(holds(e, { evidence: "B", attribution: "bundled", window: "pre" }).reason, "grade-split");
+  const inWin = entry({ grades: { evidence: "A", attribution: "bundled", window: "in" } });
+  assert.equal(holds(inWin, { evidence: "A", attribution: "bundled", window: "pre" }).reason, "grade-split");
+  // in against ongoing has no order.
+  assert.equal(holds(inWin, { evidence: "A", attribution: "bundled", window: "ongoing" }).reason, "grade-split");
+  // Attribution has no order.
+  assert.equal(holds(e, { evidence: "A", attribution: "isolated", window: "pre" }).reason, "grade-split");
+  // A verifier that could not grade made no claim.
+  assert.equal(holds(e, { evidence: "A", attribution: "bundled", window: null }).reason, "grade-split");
+  // One cautious split next to one that is not: held.
+  assert.equal(holds(b, { evidence: "A", attribution: "isolated", window: "pre" }).reason, "grade-split");
+  // And a cautious split does not rescue an unsupported receipt.
+  const bad = verdict(e, { grades: { evidence: "A", attribution: "bundled", window: "in" } });
+  bad.receipts[0] = { ...bad.receipts[0], status: "contradicted", note: "the table says 12" };
+  assert.equal(adjudicate(input(e, { verifier: { ok: true, output: bad } })).reason, "ungrounded");
+});
+
+test("from an abstract as the reader prints it to a reasonable entry: the quote check is real, not injected", async () => {
+  const { htmlToText, findQuote } = await import("../scripts/lib/source-text.ts");
+  // Europe PMC's XML: a structured abstract whose section tags are escaped.
+  const xml = "<result><title>AI package for stroke care</title><abstractText>&lt;h4&gt;Methods&lt;/h4&gt;21,603 patients from 77 hospitals enrolled between January 2021 and June 2023.&lt;h4&gt;Results&lt;/h4&gt;10 fewer events per 1,000 patients, a 26% relative reduction.</abstractText></result>";
+  const text = htmlToText(xml);
+  const e = entry();
+  const checks = (quoteIn: (q: string) => string = (q) => q): QuoteCheck[] => (e.receipts ?? []).map((r) => {
+    const f = findQuote(text, quoteIn(r.quote));
+    return { field: r.field, source: r.source, quote: r.quote, found: f.found, exact: f.exact, status: f.found ? "supported" : "unsupported" };
+  });
+  const v = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], achieved_dates: { from: "abstract", conflicting: false, note: "" } });
+  const a = adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], quoteChecks: checks(), verifier: { ok: true, output: v } }));
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "reasonable");
+  // Control: a number the abstract does not carry still holds as ungrounded.
+  const wrong = adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], quoteChecks: checks((q) => q.replace("21,603", "31,603")), verifier: { ok: true, output: v } }));
+  assert.equal(wrong.reason, "ungrounded");
+});

@@ -4,7 +4,7 @@ export const SITE = {
   domain: "becauseofai.org",
   url: "https://becauseofai.org",
   thesis:
-    "Every entry here reached a human, was measured against something, and names the date it happened — not the date it was published.",
+    "Every strict entry here reached a human, was measured against something, and names the date it happened — not the date it was published. Less certain entries sit behind a switch, labelled.",
   description: "A registry of measured AI benefits to people, with what did not work and what is not yet proven.",
   // Short form for the running head under the nameplate.
   runningHead: "Measured AI benefits",

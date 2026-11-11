@@ -161,8 +161,8 @@ export const GRADE_DESCRIPTION = {
 export const CONFIDENCE_LABEL = { strict: "Strict", reasonable: "Reasonable", speculative: "Speculative" } as const;
 export const CONFIDENCE_DESCRIPTION = {
   strict: "The full primary source was read, the result was measured against something and dated from the source's methods or record, and both checking models agree on every number and grade.",
-  reasonable: "Only the abstract or a summary of the source could be read, or the dates come from the abstract. Every number is still quoted from the source, and both checking models agree.",
-  speculative: "The source is a press release or a news report, or the benefit has not yet been measured against anything. Every number is still quoted from the source, and both checking models agree.",
+  reasonable: "Only the abstract or a summary of the source could be read, or the dates come from the abstract, or the two checking models disagreed on one grade and the entry shows the more cautious one. Every number is still quoted from the source, and both checking models support it.",
+  speculative: "The source is a press release or a news report, or the benefit has not yet been measured against anything. Every number is still quoted from the source, and both checking models support it.",
 } as const;
 
 export const WATCHLIST_DESCRIPTION = "Not graded yet: this candidate has not passed the four tests. The entry says what would change that.";

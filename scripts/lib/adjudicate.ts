@@ -1,7 +1,7 @@
 // The gate. Deterministic: given what the code fetched and checked and what
 // the second vendor answered, decide published or held, and say why. No model
 // decides this, and no rule here votes on a fact.
-import { CONFIDENCE, hasPrimarySource, missingReceipts, type Confidence, type Entry, type Vendor } from "../../src/schema.ts";
+import { CONFIDENCE, EVIDENCE, hasPrimarySource, missingReceipts, type Confidence, type Entry, type Vendor } from "../../src/schema.ts";
 import type { Adjudication, QuoteCheck, SourceFetch, Split } from "./record.ts";
 import type { Verdict } from "./verdict.ts";
 
@@ -18,6 +18,19 @@ export type AdjudicationInput = {
 
 const ACCEPTED_DATE_ORIGINS = new Set(["methods", "results", "registry", "report-body"]);
 const NOT_PRIMARY = new Set(["press-release", "news"]);
+
+// True when the entry's grade is the weaker claim of the two. Only evidence
+// (A strongest, D weakest) and window ("pre" claims nothing recent) have an
+// order.
+function drafterIsMoreCautious(s: Split): boolean {
+  if (s.drafter == null || s.verifier == null) return false;
+  if (s.grade === "evidence") {
+    const d = (EVIDENCE as readonly string[]).indexOf(s.drafter), v = (EVIDENCE as readonly string[]).indexOf(s.verifier);
+    return d >= 0 && v >= 0 && d > v;
+  }
+  if (s.grade === "window") return s.drafter === "pre" && (s.verifier === "in" || s.verifier === "ongoing");
+  return false;
+}
 
 const hold = (reason: Adjudication["reason"], detail: string, extra: Partial<Adjudication> = {}): Adjudication => ({ result: "held", reason, detail, ...extra });
 
@@ -100,6 +113,11 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
     if (from === "not-found" || from === "not-applicable") {
       return hold("ungrounded", `The achieved dates come from nowhere in the source${v.achieved_dates.note ? ` (${v.achieved_dates.note})` : ""}.`);
     }
+    // The conflict flag counts only when the dates come from a weak place (an
+    // abstract, a press release). Dates from the methods, the results, a
+    // registry, or a report body stand even when another part of the text
+    // differs by a little: one live entry (SPOT-TB, results against a
+    // registry estimate one month off) publishes on exactly that.
     if (!ACCEPTED_DATE_ORIGINS.has(from)) {
       if (conflicting) return hold("ungrounded", `The achieved dates come from the ${from.replace("-", " ")}, and another part of the text gives different dates${v.achieved_dates.note ? ` (${v.achieved_dates.note})` : ""}.`);
       if (from === "abstract") lower("reasonable", "The achieved dates come from the abstract; the methods were not available.");
@@ -130,7 +148,19 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
     if (v.grades[g] !== e.grades[g]) splits.push({ grade: g, drafter: e.grades[g], verifier: v.grades[g] });
   }
   if (splits.length) {
-    return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
+    // A split holds, with one exception (2026-11-11). When every split is on
+    // a grade that has an order, and the entry already carries the weaker
+    // claim of the two (evidence further down A to D; window "pre" where the
+    // verifier read "in" or "ongoing"), the entry publishes below strict with
+    // its own grade and says the two checkers disagreed. Nothing is averaged
+    // and nobody is outvoted: the claim shown is one both sides grant at
+    // least. Attribution has no order, and a side that could not grade has
+    // made no claim, so those still hold.
+    if (!splits.every(drafterIsMoreCautious)) {
+      return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
+    }
+    for (const s of splits) lower("reasonable", `The two checkers disagreed on ${s.grade}: the drafter said ${s.drafter} and the verifier said ${s.verifier}. The entry shows the more cautious of the two, ${s.drafter}.`);
+    return { result: "published", reason: null, detail: v.summary || "Every receipt supported; the grades differ and the entry shows the more cautious one.", confidence: level, relaxed, splits };
   }
 
   return { result: "published", reason: null, detail: v.summary || "Every receipt supported; grades agree.", confidence: level, relaxed };

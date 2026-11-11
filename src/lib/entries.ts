@@ -11,7 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
 import { EntrySchema, isPublished, heldInfo, type Confidence, type Entry, type Section, type DateLike } from "../schema.ts";
-import { LEGACY_STRICT_IDS } from "./legacy.ts";
+import { LEGACY_STRICT, LEGACY_FROZEN_ON } from "./legacy.ts";
 import { contentSha256 } from "./entry-text.ts";
 import type { VerificationRecord } from "../../scripts/lib/record.ts";
 import { StoredVerdictSchema as VerdictSchema } from "../../scripts/lib/verdict-schema.ts";
@@ -88,6 +88,8 @@ export function recordMismatch(e: Entry, raw: string, records: Records): string 
   if (again.result !== "published") return `record ${v.record} does not re-derive as published (${again.reason})`;
   // The level on the entry is the one its record derives, exactly (DAV-469).
   if ((v.confidence ?? "strict") !== (again.confidence ?? "strict")) return `the entry says ${v.confidence ?? "strict"} but record ${v.record} derives ${again.confidence ?? "strict"}`;
+  // So are the reasons shown for a level below strict.
+  if (JSON.stringify(v.relaxed ?? []) !== JSON.stringify(again.relaxed ?? [])) return `the reasons on the entry for its level are not the ones record ${v.record} derives`;
   return null;
 }
 
@@ -151,14 +153,16 @@ export function loadEntries(opts: { today?: Date; records?: Records } = {}): Loa
   return parseEntryFiles(readEntryFiles(), { ...opts, records: opts.records ?? readRecordFiles() });
 }
 
-export function parseEntryFiles(files: Record<string, string>, opts: { today?: Date; records?: Records } = {}): LoadResult {
+export function parseEntryFiles(files: Record<string, string>, opts: { today?: Date; records?: Records; legacy?: ReadonlyMap<string, string> } = {}): LoadResult {
   const today = opts.today ?? new Date();
   const records = opts.records ?? {};
+  const legacy = opts.legacy ?? LEGACY_STRICT;
   const all: Entry[] = [];
   const errors: Problem[] = [];
   const warnings: Problem[] = [];
   const unbound = new Map<string, string>();
   const seenIds = new Map<string, string>();
+  const raws = new Map<string, string>();
   for (const file of Object.keys(files).sort()) {
     const raw = files[file];
     let doc: unknown;
@@ -182,6 +186,7 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (`${e.id}.yaml` !== file) errors.push({ file, message: `id "${e.id}" does not match the filename` });
     if (seenIds.has(e.id)) errors.push({ file, message: `duplicate id "${e.id}" (also in ${seenIds.get(e.id)})` });
     seenIds.set(e.id, file);
+    raws.set(e.id, raw);
     if (isPublished(e)) {
       let why: string | null;
       try { why = recordMismatch(e, raw, records); } catch (err) { why = `could not hash the entry: ${(err as Error).message}`; }
@@ -204,11 +209,20 @@ export function parseEntryFiles(files: Record<string, string>, opts: { today?: D
     if (byRank.has(key)) errors.push({ file: `${e.id}.yaml`, message: `rank ${e.rank} is already used in ${e.section} by ${byRank.get(key)}` });
     byRank.set(key, e.id);
   }
-  // An entry the gate has not bound publishes only if it is grandfathered.
+  // An entry the gate has not bound publishes only if it is grandfathered:
+  // on the frozen list, its content unchanged since the freeze, and no gate
+  // verification record made for it after the freeze. An entry that carries
+  // a verification block is never grandfathered; its record must bind.
+  const verifiedSinceFreeze = new Set<string>();
+  for (const [key, rec] of Object.entries(records)) {
+    const [id, file] = key.split("/");
+    if (legacy.has(id) && (rec as { kind?: string } | null)?.kind === "verification" && file.slice(0, 10) > LEGACY_FROZEN_ON) verifiedSinceFreeze.add(id);
+  }
+  const grandfathered = (id: string) => legacy.has(id) && !verifiedSinceFreeze.has(id) && raws.has(id) && contentSha256(raws.get(id)!) === legacy.get(id);
   const gateDue = new Map<string, string>();
   for (const e of all) {
-    if (!isPublished(e) || LEGACY_STRICT_IDS.has(e.id)) continue;
-    if (!e.verification) gateDue.set(e.id, "no verification");
+    if (!isPublished(e)) continue;
+    if (!e.verification) { if (!grandfathered(e.id)) gateDue.set(e.id, legacy.has(e.id) ? "changed since it was grandfathered, and not verified" : "no verification"); }
     else if (unbound.has(e.id)) gateDue.set(e.id, unbound.get(e.id)!);
   }
   const held = all.filter((e) => !isPublished(e) || gateDue.has(e.id));
