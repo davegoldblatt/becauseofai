@@ -35,9 +35,13 @@ A measured null or harm is an entry too: section `not-because`.
 1. Find the primary announcement (the organisation's own page, not a rewrite of it). If a paper or a registry record exists for the same result, use that as the source and the entry may reach reasonable or strict.
 2. Run `npm run read -- <url>`. If it prints `NOT READ`, try the organisation's other pages or a wire copy of the same release (prnewswire, businesswire, globenewswire, gov.uk, a university newsroom). If nothing reads, skip it: the gate cannot check what it cannot read.
 3. Draft the entry from the printed text only. Type that source `primary`. In `conflicts`, say plainly that the source is the organisation's own announcement about its own product or programme, and name any vendor. Evidence is usually `C` (operational report) or `D` (single case); attribution is your honest call; use `caveat` for what the announcement does not show (no control group, self-reported, no independent audit).
-4. Dates: `dates.achieved_start` and `dates.achieved_end` only as the source states them, each with a receipt. If the source gives no period for the benefit, leave them null and say so in `notes` as a `verify:` line; the entry is then speculative.
+4. Dates: `dates.achieved_start` and `dates.achieved_end` only as the source states them, each with a receipt.
 
 **`academic`**: the workflow has already pulled that week's candidates into `.scout/candidates.json` (PubMed, medRxiv, ClinicalTrials.gov posted results). Take the ones flagged `randomized` or `outcome` first. Read each promising one with `npm run read`, and draft those that pass. An abstract is enough for a reasonable entry.
+
+**When the source does not say when the benefit happened**: leave `dates.achieved_start` and `dates.achieved_end` null, set `grades.window: null`, and write a `verify:` line in `notes` saying the source gives no period. Do not guess `pre` or `in` from the publication date. The verifier cannot grade a window without dates either: when you both leave it empty the entry publishes as speculative, and when you guess, the two of you disagree and the entry is held. Give a window grade only when you can quote the dates.
+
+**Evidence grade**: use the definitions in `HANDOFF.md` §3 literally. If a study fits none of them cleanly (for example a randomized trial that was registered after it ended), take the lower grade that does fit and say why in `notes`.
 
 ## Limits
 
