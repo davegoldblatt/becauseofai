@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "delhi-slums-ai-cxr-tb",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "4d820bda0758551c502c7cbf1487b51d5d94fb23c11b7ec71703d9980c9adafb",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-11T23:59:53.933Z",
+      "final_url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "sha256": "f786fe00d513c0e3d9ff1ee13b8564f19834aa1d1da1a6ee6dbce18f94f89c4d",
+      "chars": 8046,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "with 1,68,568 people undergoing chest X-ray screening.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The single-arm programme combined AI screening, community mobilisation, sputum collection and molecular testing, with no comparison isolating AI.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "Screening ran from July 2025 through March 2026; April 2026 was the evaluation date, and continued delivery is not established."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses programme self-evaluation and names Qure.ai, but the source establishes no vendor funding, employment, equity, patent or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "No control, prior-period comparison or credible benchmark measures the programme's benefit; cited prevalence-survey findings provide background only."
+      },
+      "summary": "The complete news article reports 877 confirmed TB cases among 168,568 people screened during July 2025–March 2026. It establishes programme yield but no comparative benefit or ongoing delivery."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13986,
+      "output": 888,
+      "total": 14874,
+      "cached": 8448,
+      "reasoning": 374
+    },
+    "duration_ms": 25175
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter ongoing, verifier in.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "ongoing",
+        "verifier": "in"
+      }
+    ]
+  }
+}

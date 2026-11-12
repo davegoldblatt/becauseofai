@@ -1,0 +1,102 @@
+id: vastra-gotaland-brainomix-thrombectomy-times
+section: because
+rank: 30
+headline: >-
+  Because of AI imaging support, stroke patients in western Sweden got to
+  thrombectomy faster: the adjusted median from CT to groin puncture fell from
+  47 to 35 minutes, though outcomes did not differ.
+impact: "CT-to-puncture 47 → 35 min"
+impact_number: "47→35 min"
+impact_label: "adjusted median from CT to groin puncture after Brainomix 360 Stroke, with no change in patient outcomes"
+summary: >-
+  A register-based cohort of 970 thrombectomy patients at Sahlgrenska University
+  Hospital compared the periods before and after regional introduction of the
+  Brainomix 360 Stroke imaging tool; workflow times fell, mainly at primary
+  stroke centres.
+caveat: >-
+  A retrospective before-and-after comparison with no concurrent control, and no
+  significant difference in clinical outcomes; read from the vendor's summary of
+  the journal abstract.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Adjusted median times in the period before Brainomix 360 Stroke was introduced vs the learning and established periods after, in the same region"
+effect:
+  relative: "Not stated as a percentage"
+  absolute: "Adjusted median CT to groin puncture 47 min before, 36 min in the learning period and 35 min in the established period"
+reach: "970 thrombectomy patients treated at Sahlgrenska University Hospital from the Region Västra Götaland"
+dates:
+  achieved_start: 2021-06
+  achieved_end: 2024-05
+  published: 2026-08-24
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Brainomix clinical evidence page: Karlsson A et al., European Stroke Journal (abstract summary)"
+    url: https://www.brainomix.com/brain/implementation-of-an-ai-supported-decision-making-tool-in-a-high-volume-stroke-system-with-routine-perfusion-imaging
+    type: primary
+    announcement: true
+conflicts: "The source is the vendor Brainomix's own page summarising a paper about its product. The journal article itself was not read."
+what_would_change: "The journal full text with its comparison methods, or a concurrent control showing patient outcomes improve."
+notes: >-
+  verify: the dates are the study period of the cohort as given in the abstract
+  summary, not the dates of any one patient's benefit.
+  verify: the page is dated 24 August 2026 by the vendor, which may not be the
+  journal publication date.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The comparison is the same region before and after the tool arrived, with no concurrent control, and the tool came with changes to workflow around it, so attribution is bundled.
+receipts:
+  - field: headline
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
+    locator: Results
+    source: 0
+  - field: impact
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
+    locator: Results
+    source: 0
+  - field: impact_number
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
+    locator: Results
+    source: 0
+  - field: effect.absolute
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
+    locator: Results
+    source: 0
+  - field: reach
+    quote: A total of 970 EVT patients were included.
+    locator: Results
+    source: 0
+  - field: dates.achieved_start
+    quote: consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024
+    locator: Patients and methods
+    source: 0
+  - field: dates.achieved_end
+    quote: consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024
+    locator: Patients and methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 38ac8e3a837d25e43151373d630ae667e99d3a55cb00125a497eb855a4b2ebaa
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: vastra-gotaland-brainomix-thrombectomy-times/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "attribution: drafter bundled, verifier isolated."
+  record: vastra-gotaland-brainomix-thrombectomy-times/2026-11-11.json

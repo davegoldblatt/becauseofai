@@ -1,0 +1,116 @@
+id: tanzania-ai-dr-screening-rct
+section: because
+rank: 27
+headline: >-
+  Because of AI, people in Tanzania with referable diabetic retinopathy were
+  about twice as likely to reach the eye clinic within 8 weeks: 35.9% against
+  18.2% with standard screening.
+impact: "35.9% vs 18.2% reached the eye clinic"
+impact_number: "35.9%"
+impact_label: "of people with referable retinopathy reached the eye clinic within 8 weeks, against 18.2% with standard screening"
+summary: >-
+  In a randomised trial across 24 hospital clinics in the Kilimanjaro and Arusha
+  regions of Tanzania, diabetes patients screened with an AI system that gave a
+  result and face-to-face counselling on the spot attended the central eye
+  clinic more often than patients who heard their result by phone weeks later.
+caveat: >-
+  Attendance is a process outcome, not sight saved; even in the AI group about
+  two in three people with referable disease did not attend within 8 weeks, and
+  the effect bundles the immediate result with face-to-face counselling.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "AI-supported screening with a point-of-screening result and face-to-face counselling vs standard screening with deferred human grading and telephone counselling, individually randomised 1:1"
+effect:
+  relative: "A 97% relative increase in attendance; odds ratio 2.52 (95% CI 1.86 to 3.42)"
+  absolute: "17.7 percentage points more attended within 8 weeks (95% CI 12.0 to 23.4)"
+reach: "2378 participants enrolled at 24 hospital clinics in Kilimanjaro and Arusha, Tanzania; 904 with true referable retinopathy"
+dates:
+  achieved_start: 2023-03-08
+  achieved_end: 2024-08-31
+  published: 2026-09-23
+  added: 2026-11-11
+  updated: 2026-11-11
+sources:
+  - title: "Cleland et al., Artificial intelligence-supported diabetic retinopathy screening in Tanzania: a randomised controlled trial. Lancet Global Health 2026"
+    url: https://doi.org/10.1016/j.langlo.2026.104062
+    type: primary
+  - title: "ISRCTN18317152 trial registration"
+    url: https://www.isrctn.com/ISRCTN18317152
+    type: secondary
+conflicts: "Funded by the British Council for the Prevention of Blindness, Christian Blind Mission and the Sir Halley Stewart Trust; the Tanzanian Ministry of Health is a collaborator. Several authors are from the groups that run the programme."
+what_would_change: "Evidence that earlier attendance means retinopathy treated in time and less sight loss, or a rollout evaluation outside the trial."
+notes: >-
+  verify: the publication date is taken from the press coverage of the paper
+  (September 2026); the printed PDF text carries no day.
+  verify: dates are the enrolment period; follow-up ran 8 weeks beyond it.
+  The paper's decimal points are printed as middle dots, and receipts copy them.
+history:
+  - date: 2026-11-11
+    note: "Added by the backfill run."
+rationale: The trial randomised patients to AI-supported same-visit results and counselling versus deferred grading and phone counselling, so the difference is credited to the AI pathway as a whole, and the AI result and counselling cannot be separated (bundled).
+receipts:
+  - field: headline
+    quote: 157/437 (35⋅9%)
+    locator: Table 2, primary outcome
+    source: 0
+  - field: headline
+    quote: 85/467 (18⋅2%)
+    locator: Table 2, primary outcome
+    source: 0
+  - field: impact
+    quote: 157/437 (35⋅9%)
+    locator: Table 2, primary outcome
+    source: 0
+  - field: impact
+    quote: 85/467 (18⋅2%)
+    locator: Table 2, primary outcome
+    source: 0
+  - field: impact_number
+    quote: 157/437 (35⋅9%)
+    locator: Table 2, primary outcome
+    source: 0
+  - field: effect.relative
+    quote: between the groups and a 97%
+    locator: Results, paragraph 3
+    source: 0
+  - field: effect.absolute
+    quote: These values give an absolute difference of 17⋅7 percentage
+    locator: Results, paragraph 3
+    source: 0
+  - field: reach
+    quote: "leaving 2378 unique participants:"
+    locator: Results, paragraph 1
+    source: 0
+  - field: dates.achieved_start
+    quote: Between March 8, 2023, and Aug 31, 2024, 2439 individuals
+    locator: Results, paragraph 1
+    source: 0
+  - field: dates.achieved_end
+    quote: Between March 8, 2023, and Aug 31, 2024, 2439 individuals
+    locator: Results, paragraph 1
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 152504c2bd54e227aff758e037a2e54c6da4230bac86ada2b1f208bbcbf98353
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: tanzania-ai-dr-screening-rct/2026-11-11.json
+held:
+  reason: fails-test
+  since: 2026-11-11
+  detail: "The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
+  record: tanzania-ai-dr-screening-rct/2026-11-11.json
