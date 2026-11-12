@@ -58,60 +58,50 @@ related: [prea-chatbot-specialist-referral-rct]
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
-rationale: The AI-guided arm also received individualization, quantified targets and clinician review, and the authors state the trial cannot isolate AI, so the comparison is bundled.
+rationale: The grade is bundled because the trial randomized a package (AI generation, individualization, quantified targets, written guidance and clinician review) against standard generic discharge advice, and the authors say it cannot isolate AI's own contribution.
 receipts:
   - field: headline
-    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
-    locator: Abstract, Results
-    source: 0
-  - field: headline
-    quote: 90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1
-    locator: Abstract, Methods
+    quote: The AI-guided group achieved significantly higher energy intake adequacy at 30 days post-discharge compared with the standard care group (66.7% vs. 40.0%,
+    locator: Results, Primary and secondary outcome
     source: 0
   - field: impact
-    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
-    locator: Abstract, Results
+    quote: The 66.7% energy adequacy rate in the AI-guided group represents a meaningful improvement over the 40% baseline observed with standard care
+    locator: Discussion, Clinical implications
     source: 0
   - field: impact_number
     quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
-    locator: Abstract, Results
+    quote: (66.7% vs. 40.0%, odds ratio OR = 3.0, 95% confidence interval CI 1.3–7.1
+    locator: Results, Primary and secondary outcome
     source: 0
   - field: effect.relative
-    quote: protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8
-    locator: Abstract, Results
+    quote: Protein intake adequacy was also significantly higher in the AI-guided group (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8
+    locator: Results, Primary and secondary outcome
     source: 0
   - field: effect.absolute
-    quote: The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1
-    locator: Abstract, Results
+    quote: The AI-guided group achieved significantly higher energy intake adequacy at 30 days post-discharge compared with the standard care group (66.7% vs. 40.0%,
+    locator: Results, Primary and secondary outcome
     source: 0
   - field: effect.absolute
-    quote: protein adequacy (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8
-    locator: Abstract, Results
+    quote: Protein intake adequacy was also significantly higher in the AI-guided group (62.2% vs. 35.6%,
+    locator: Results, Primary and secondary outcome
     source: 0
   - field: reach
-    quote: 90 patients undergoing laparoscopic gastric or colorectal cancer surgery were assigned 1:1
-    locator: Abstract, Methods
+    quote: In this randomized controlled trial of 90 patients undergoing laparoscopic gastric or colorectal cancer surgery
+    locator: Discussion, Principal findings
+    source: 0
+  - field: reach
+    quote: we screened 187 patients undergoing elective laparoscopic gastrointestinal cancer surgery at Tongji Hospital.
+    locator: Results, Study population
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-11
-  content: f3a6d590394516a8bc0764d265bb0c2498ddee2ea97a1fb20a84107d88c90fe4
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-11
-  verifier:
-    vendor: openai
-    model: gpt-6.1-sol
-    date: 2026-11-11
-    verdict: fail
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+  model: claude-opus-5-5
+  date: 2026-11-12
+  via: claude-login
+  content: c8b3617652a6c34c0cf4ebeb52baca2e9ce1763eb276046f7fb580a4c664271d
 held:
   reason: ungrounded
   since: 2026-11-11
