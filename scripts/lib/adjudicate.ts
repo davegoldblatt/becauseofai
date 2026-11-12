@@ -160,19 +160,25 @@ export function adjudicate(input: AdjudicationInput): Adjudication {
     if (v.grades[g] !== e.grades[g]) splits.push({ grade: g, drafter: e.grades[g], verifier: v.grades[g] });
   }
   if (splits.length) {
-    // A split holds, with one exception (2026-11-11). When every split is on
-    // a grade that has an order, and the entry already carries the weaker
-    // claim of the two (evidence further down A to D; window "pre" where the
-    // verifier read "in" or "ongoing"), the entry publishes below strict with
-    // its own grade and says the two checkers disagreed. Nothing is averaged
-    // and nobody is outvoted: the claim shown is one both sides grant at
-    // least. Attribution has no order, and a side that could not grade has
-    // made no claim, so those still hold.
-    if (!splits.every(drafterIsMoreCautious)) {
+    // What a split does (2026-11-11). The numbers are not in question here:
+    // every receipt above was found in the source and supported by both
+    // sides. A grade is a judgment, and two judgments differ.
+    // - A side that could not grade made no judgment. There is no second
+    //   opinion to show, so the entry is held.
+    // - The entry already carries the weaker claim of the two (evidence
+    //   further down A to D; window "pre" where the verifier read "in" or
+    //   "ongoing"): it publishes at reasonable and says so.
+    // - Any other split: it publishes at speculative, with both grades
+    //   stated. Nothing is averaged and nobody is outvoted; the reader is
+    //   told the grade is unsettled.
+    if (splits.some((s) => s.drafter == null || s.verifier == null)) {
       return hold("grade-split", splits.map((s) => `${s.grade}: drafter ${s.drafter ?? "no grade"}, verifier ${s.verifier ?? "could not grade"}`).join("; ") + ".", { splits });
     }
-    for (const s of splits) lower("reasonable", `The two checkers disagreed on ${s.grade}: the drafter said ${s.drafter} and the verifier said ${s.verifier}. The entry shows the more cautious of the two, ${s.drafter}.`);
-    return { result: "published", reason: null, detail: v.summary || "Every receipt supported; the grades differ and the entry shows the more cautious one.", confidence: level, relaxed, splits };
+    for (const s of splits) {
+      if (drafterIsMoreCautious(s)) lower("reasonable", `The two checkers disagreed on ${s.grade}: the drafter said ${s.drafter} and the verifier said ${s.verifier}. The entry shows the more cautious of the two, ${s.drafter}.`);
+      else lower("speculative", `The two checkers disagreed on ${s.grade}: the drafter said ${s.drafter} and the verifier said ${s.verifier}. The entry shows the drafter's grade, ${s.drafter}; treat that grade as unsettled.`);
+    }
+    return { result: "published", reason: null, detail: v.summary || "Every receipt supported; the two checkers differ on a grade and the entry says so.", confidence: level, relaxed, splits };
   }
 
   return { result: "published", reason: null, detail: v.summary || "Every receipt supported; grades agree.", confidence: level, relaxed };

@@ -162,7 +162,7 @@ export const CONFIDENCE_LABEL = { strict: "Strict", reasonable: "Reasonable", sp
 export const CONFIDENCE_DESCRIPTION = {
   strict: "The full primary source was read, the result was measured against something and dated from the source's methods or record, and both checking models agree on every number and grade.",
   reasonable: "Only the abstract or a summary of the source could be read, or the dates come from the abstract, or the two checking models disagreed on one grade and the entry shows the more cautious one. Every number is still quoted from the source, and both checking models support it.",
-  speculative: "The source is a press release or a news report, or the benefit has not yet been measured against anything. Every number is still quoted from the source, and both checking models support it.",
+  speculative: "The source is a press release, a news report, or the organisation's own announcement, or the benefit has not yet been measured against anything or dated, or the two checking models disagreed on a grade. Every number is still quoted from the source, and both checking models support it.",
 } as const;
 
 export const WATCHLIST_DESCRIPTION = "Not graded yet: this candidate has not passed the four tests. The entry says what would change that.";
@@ -357,7 +357,7 @@ export const HELD_REASON_LABEL: Record<HeldReason, string> = {
 export const HELD_REASON_DESCRIPTION: Record<HeldReason, string> = {
   ungrounded: "A number on the entry was not supported by a sentence in the primary source.",
   "no-full-text": "The primary source could not be read in full, so nothing on the entry could be checked against it.",
-  "grade-split": "The two vendors graded the entry differently and the registry does not vote.",
+  "grade-split": "One of the two vendors could not grade the entry, so there is no second opinion to show.",
   "fails-test": "The verifier failed the entry on one of the four tests, or a conflict the source shows is not stated.",
   "verification-unavailable": "The second vendor could not be reached. The registry never publishes on one vendor.",
   "no-primary-source": "There is no primary source, or the only one is a press release or a news article.",

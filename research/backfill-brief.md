@@ -47,6 +47,7 @@ A measured null or harm is an entry too: section `not-because`.
 - A receipt whose quote carries no number that appears in its field. Do not add a receipt for context such as the sample size or the setting unless that number is in the field. One receipt per number is enough.
 - A quote that was shortened or tidied. Copy it from the printed text, character for character.
 - A guessed window (see above).
+- A conflict the source discloses and the entry does not state. Put every one in `conflicts`: funding, free or donated software, author ties to the vendor, the organisation reporting on itself.
 
 ## Work the whole slice
 

@@ -157,12 +157,14 @@ test("nothing fetched still holds; an abstract on a page is reasonable; a regist
   assert.equal(adjudicate(input(e, { sources: [page], verifier: { ok: true, output: bad } })).reason, "ungrounded");
 });
 
-test("grade split: any disagreement holds, with the split recorded", () => {
+test("grade split: both grades given publishes as speculative with the split recorded; a side that could not grade holds", () => {
   const e = entry();
   const v = verdict(e, { grades: { evidence: "A", attribution: "isolated", window: "pre" } });
   const a = adjudicate(input(e, { verifier: { ok: true, output: v } }));
-  assert.equal(a.reason, "grade-split");
+  assert.equal(a.result, "published");
+  assert.equal(a.confidence, "speculative");
   assert.deepEqual(a.splits, [{ grade: "attribution", drafter: "bundled", verifier: "isolated" }]);
+  assert.match(a.relaxed![0], /disagreed on attribution: the drafter said bundled and the verifier said isolated\. The entry shows the drafter's grade, bundled; treat that grade as unsettled\./);
   // A verifier that cannot grade is a split too.
   const w = verdict(e, { grades: { evidence: null, attribution: "bundled", window: "pre" } });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: w } })).reason, "grade-split");
@@ -272,10 +274,13 @@ test("only the sources the receipts quote decide the level; the lowest level win
   assert.equal(c.relaxed!.length, 2);
 });
 
-test("a lowered entry still holds on a grade split or an unstated conflict", () => {
+test("a lowered entry still holds when a side could not grade or on an unstated conflict", () => {
   const e = entry();
   const split = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], grades: { evidence: "B", attribution: "bundled", window: "pre" } });
-  assert.equal(adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], verifier: { ok: true, output: split } })).reason, "grade-split");
+  // (2026-11-11) A split with both grades given lowers further, to speculative; it no longer holds.
+  assert.equal(adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], verifier: { ok: true, output: split } })).confidence, "speculative");
+  const cannot = verdict(e, { full_text: false, source_findings: [{ source: 0, kind: "paper", full_text: false }], grades: { evidence: null, attribution: "bundled", window: "pre" } });
+  assert.equal(adjudicate(input(e, { sources: [{ ...fetched(), method: "html" }], verifier: { ok: true, output: cannot } })).reason, "grade-split");
   const pr = verdict(e, { source_findings: [{ source: 0, kind: "press-release", full_text: true }], conflict: { in_source: true, stated_in_entry: false, note: "a company announcement" } });
   assert.equal(adjudicate(input(e, { verifier: { ok: true, output: pr } })).reason, "fails-test");
 });
@@ -298,20 +303,23 @@ test("a split where the entry already shows the weaker claim publishes below str
   assert.equal(pr.confidence, "speculative");
   assert.equal(pr.relaxed!.length, 2);
 
-  // Controls the other way: each of these still holds.
-  const holds = (ent: Entry, grades: Verdict["grades"]) => adjudicate(input(ent, { verifier: { ok: true, output: verdict(ent, { grades }) } }));
-  // The entry makes the stronger claim (A against the verifier's B; in against pre).
-  assert.equal(holds(e, { evidence: "B", attribution: "bundled", window: "pre" }).reason, "grade-split");
+  // The other way round, the entry makes the stronger claim: speculative, not reasonable, and the reason says the grade is unsettled.
+  const out = (ent: Entry, grades: Verdict["grades"]) => adjudicate(input(ent, { verifier: { ok: true, output: verdict(ent, { grades }) } }));
+  const stronger = out(e, { evidence: "B", attribution: "bundled", window: "pre" });
+  assert.equal(stronger.confidence, "speculative");
+  assert.match(stronger.relaxed![0], /treat that grade as unsettled/);
   const inWin = entry({ grades: { evidence: "A", attribution: "bundled", window: "in" } });
-  assert.equal(holds(inWin, { evidence: "A", attribution: "bundled", window: "pre" }).reason, "grade-split");
-  // in against ongoing has no order.
-  assert.equal(holds(inWin, { evidence: "A", attribution: "bundled", window: "ongoing" }).reason, "grade-split");
-  // Attribution has no order.
-  assert.equal(holds(e, { evidence: "A", attribution: "isolated", window: "pre" }).reason, "grade-split");
-  // A verifier that could not grade made no claim.
-  assert.equal(holds(e, { evidence: "A", attribution: "bundled", window: null }).reason, "grade-split");
-  // One cautious split next to one that is not: held.
-  assert.equal(holds(b, { evidence: "A", attribution: "isolated", window: "pre" }).reason, "grade-split");
+  assert.equal(out(inWin, { evidence: "A", attribution: "bundled", window: "pre" }).confidence, "speculative");
+  // in against ongoing, and attribution, have no order: speculative.
+  assert.equal(out(inWin, { evidence: "A", attribution: "bundled", window: "ongoing" }).confidence, "speculative");
+  assert.equal(out(e, { evidence: "A", attribution: "isolated", window: "pre" }).confidence, "speculative");
+  // One cautious split next to one that is not: the lower level wins, and both are listed.
+  const mixed = out(b, { evidence: "A", attribution: "isolated", window: "pre" });
+  assert.equal(mixed.confidence, "speculative");
+  assert.equal(mixed.splits!.length, 2);
+  // A verifier that could not grade made no judgment: held, whatever else agrees.
+  assert.equal(out(e, { evidence: "A", attribution: "bundled", window: null }).reason, "grade-split");
+  assert.equal(out(b, { evidence: "A", attribution: "bundled", window: null }).reason, "grade-split");
   // And a cautious split does not rescue an unsupported receipt.
   const bad = verdict(e, { grades: { evidence: "A", attribution: "bundled", window: "in" } });
   bad.receipts[0] = { ...bad.receipts[0], status: "contradicted", note: "the table says 12" };
