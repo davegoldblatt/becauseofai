@@ -86,10 +86,20 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-12
-  via: claude-login
   content: 583fb93b348218a1a4a14da671eaf7137810b0f8fabaa1e50f67e30ffb62f9f7
-held:
-  reason: ungrounded
-  since: 2026-11-11
-  detail: "effect.absolute (receipt 5): unsupported, The quote establishes the two nodule counts but does not establish the diagnosis or chest X-ray counts included in this field.."
-  record: goa-ai-lung-cancer-screening/2026-11-11.json
+  via: claude-login
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-12
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-12
+    verdict: pass
+  record: goa-ai-lung-cancer-screening/2026-11-12.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (The claimed reduction has no identifiable comparison group or baseline period, and the dates of the reported benefits cannot be established.).

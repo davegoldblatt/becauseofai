@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "lungimpact-ai-cxr-prioritisation-null",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "2f9f61ae32f1edf8f0c84a240242cadfc67c4953bfc999fe503d8e83d596e216",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-12"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41591-026-04253-5",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-12T00:12:48.358Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13190311/fullTextXML",
+      "sha256": "7c7416501f75f4d93f95d5fde9af4a9553e8cac44a796f362d4ae6d9cd2db14f",
+      "chars": 57899,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the median time to lung cancer diagnosis was 44 days (IQR = 26–90 days) for AI prioritization days and 46 days",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the median time to lung cancer diagnosis was 44 days (IQR = 26–90 days) for AI prioritization days and 46 days",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "to lung cancer diagnosis between AI prioritization days, with a ratio of geometric means of 0.98 (95% CI = 0.83–1.16",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the median time to lung cancer diagnosis was 44 days (IQR = 26–90 days) for AI prioritization days and 46 days",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "A total of 558 patients were diagnosed with lung cancer and were included in the analysis of time to cancer diagnosis",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "After data cleaning, 93,326 CXRs from 86,945 patients were included in the study analysis.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "a total of 97,731 CXRs were performed across five diverse National Health Service (NHS) Trusts",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between 17 July 2023 and 31 December 2024, a total of 97,731 CXRs were performed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between 17 July 2023 and 31 December 2024, a total of 97,731 CXRs were performed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "unsupported",
+          "note": "The quote establishes 44 and 46 days but does not establish the headline's five hospitals."
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "ai-vs-ai",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized comparison tested AI prioritization on versus off, with AI-assisted reporting available in both arms.",
+      "achieved_dates": {
+        "from": "results",
+        "conflicting": false,
+        "note": "Results give CXR dates of 17 July 2023–31 December 2024; follow-up continued until 5 June 2025, also before the window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": false,
+        "note": "The paper discloses a Qure.ai travel grant to N.W. and SBRI funding involving collaboration with Qure.ai; the entry omits these vendor ties."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "All four tests pass; evidence grade remains null because registration is stated but preregistration of the primary endpoints cannot be verified from the supplied text."
+      },
+      "summary": "The trial supports no statistically significant improvement in lung cancer diagnosis time with AI prioritization: medians were 44 versus 46 days among 558 people diagnosed. Both arms used AI, so it does not establish the effect of AI-assisted reporting versus reporting without AI."
+    },
+    "error": null,
+    "tokens": {
+      "input": 25907,
+      "output": 897,
+      "total": 26804,
+      "cached": 0,
+      "reasoning": 247
+    },
+    "duration_ms": 20851
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 1): unsupported, The quote establishes 44 and 46 days but does not establish the headline's five hospitals.."
+  }
+}

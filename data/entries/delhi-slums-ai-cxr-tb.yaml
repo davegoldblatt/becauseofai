@@ -97,10 +97,21 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-12
-  via: claude-login
   content: 5a073fa516ecf5e3af0a62bf4fd4e3f3b91b072cc72d693cd9549ebfc99c81e5
+  via: claude-login
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-12
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-12
+    verdict: fail
+  record: delhi-slums-ai-cxr-tb/2026-11-12.json
 held:
-  reason: grade-split
-  since: 2026-11-11
-  detail: "window: drafter ongoing, verifier in."
-  record: delhi-slums-ai-cxr-tb/2026-11-11.json
+  reason: ungrounded
+  since: 2026-11-12
+  detail: "reach (receipt 8): unsupported, The reach receipts establish age eligibility, 349 clusters and six districts, but neither establishes the claimed 168,568 residents.."
+  record: delhi-slums-ai-cxr-tb/2026-11-12.json
