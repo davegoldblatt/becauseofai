@@ -112,9 +112,9 @@ verification:
     model: gpt-6.1-sol
     date: 2026-11-12
     verdict: fail
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12-2.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "reach (receipt 9): unsupported, This quote establishes 187 screened patients, not the field's 90 randomized patients.."
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json
+  detail: "reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients.."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12-2.json
