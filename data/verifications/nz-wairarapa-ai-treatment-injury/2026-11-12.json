@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nz-wairarapa-ai-treatment-injury",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "33153df28aba26f211c993717eba491b255c3477fdb7a078a186632bcecc083f",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:06:49.763Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365175v1",
+      "sha256": "eddeb1ee15c109651ddda428c7a9c8e88637a19e5c9eb47ac72d0521087fd5c9",
+      "chars": 10286,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "All inpatient discharge summaries produced during the pilot period (n=2,642).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Clinicians classified 102 as confirmed iatrogenic harm, 43 as possible harm, 81 as no harm and 11 as unsupported outputs.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Seven ACC claims were lodged following AI-assisted identification.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Seven ACC claims were lodged following AI-assisted identification.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Of 68 organisational ACC claims during the same period, 17 overlapped with AI-identified cases.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Seven ACC claims were lodged following AI-assisted identification.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "All inpatient discharge summaries produced during the pilot period (n=2,642).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "AI screening plus clinician adjudication was assessed against organisational ACC claims, without a comparison isolating the AI contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives a six-month duration without calendar dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The authors disclose that they are practitioners reporting their own quality-improvement exercise, which the entry states."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The calendar dates of the pilot cannot be established; the organisational claims comparison does not establish how many claims would otherwise have been lodged."
+      },
+      "summary": "The abstract supports all quoted counts, including seven claims lodged following AI-assisted identification. It does not establish achieved dates, the claimed pre-window timing, or an incremental benefit over usual practice."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14096,
+      "output": 682,
+      "total": 14778,
+      "cached": 0,
+      "reasoning": 217
+    },
+    "duration_ms": 18528
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter pre, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": null
+      }
+    ]
+  }
+}

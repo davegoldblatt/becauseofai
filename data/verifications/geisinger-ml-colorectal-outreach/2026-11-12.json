@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "geisinger-ml-colorectal-outreach",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "368d7008b82d9ac59324129966cfc30beb3ca7e20c7494b90ae3367920610f08",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.informs.org/News-Room/INFORMS-Releases/News-Releases/AI-Guided-Outreach-Increased-Cancer-Screenings-and-Reduced-Mortality-New-Study-Finds",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:07:29.713Z",
+      "final_url": "https://www.informs.org/News-Room/INFORMS-Releases/News-Releases/AI-Guided-Outreach-Increased-Cancer-Screenings-and-Reduced-Mortality-New-Study-Finds",
+      "sha256": "bb9ae25c7659c7cc018b8c8cf27938a1c00fbc15d16218b4b4eb9c4a1b26d17a",
+      "chars": 6447,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison tests machine-learning selection plus nurse outreach against similar patients who received no outreach.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the release says the program has operated since 2019 but does not date the measured outcomes."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Geisinger staff coauthored the evaluation of their own health system's program, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The measured outcomes are not dated; evidence grade is indeterminate because sample size and comparison methods are absent."
+      },
+      "summary": "The complete press release supports all quoted numbers and describes a measured benefit from a package combining machine learning and nurse outreach. It does not establish the outcome dates or provide enough study detail to assign an evidence grade."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13298,
+      "output": 641,
+      "total": 13939,
+      "cached": 0,
+      "reasoning": 154
+    },
+    "duration_ms": 16847
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

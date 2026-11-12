@@ -109,11 +109,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "headline (receipt 2): unsupported, The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline.."
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+  detail: "headline (receipt 2): unsupported, The quote establishes sample size and allocation, neither of which is a numeric claim in the headline.."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json

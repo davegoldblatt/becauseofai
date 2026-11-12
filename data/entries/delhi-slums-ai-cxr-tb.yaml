@@ -98,11 +98,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: delhi-slums-ai-cxr-tb/2026-11-11.json
+  record: delhi-slums-ai-cxr-tb/2026-11-12.json
 held:
-  reason: grade-split
-  since: 2026-11-11
-  detail: "window: drafter ongoing, verifier in."
-  record: delhi-slums-ai-cxr-tb/2026-11-11.json
+  reason: ungrounded
+  since: 2026-11-12
+  detail: "headline (receipt 1): unsupported, The quote establishes 877 confirmations but does not establish the headline's 168,568 screened.; effect.relative (receipt 4): unsupported, The quote establishes 5.2% and 0.52% but does not establish the field's 877 confirmed cases.; reach (receipt 6): unsupported, The quote establishes 168,568 screened but does not establish age 15, 349 clusters, or six districts.."
+  record: delhi-slums-ai-cxr-tb/2026-11-12.json

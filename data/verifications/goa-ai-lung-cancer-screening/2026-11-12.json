@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "goa-ai-lung-cancer-screening",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "6383ff09da4dafbce08f2351facf86a83fb7edb8b7a015d3ae8e04e03f3f535e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://qure.ai/news_press_coverages/goa-crosses-1-lakh-chest-x-rays-reviewed-using-ai-in-public-health-system-identifies-18-lung-cancer-cases",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:06:34.517Z",
+      "final_url": "https://www.qure.ai/us/news-press-coverages/goa-crosses-1-lakh-chest-x-rays-reviewed-using-ai-in-public-health-system-identifies-18-lung-cancer-cases",
+      "sha256": "31bde02cfcd3946ee25e55e50f284275d70628c2dfcde9b4d7ac0c2dce825269",
+      "chars": 4228,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The AI system flagged 10,564 lung nodules, including 1,619 classified as high-risk",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Since deployment, the initiative has analyzed 1,06,248 chest X-rays across 18 public healthcare sites in the state.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "unsupported",
+          "note": "The quote establishes 10,564 nodules and 1,619 high-risk findings, but no receipt for this field establishes 18 diagnoses or 106,248 chest X-rays."
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The claimed reduction concerns AI triaging integrated with clinical follow-up protocols, but the release provides no comparison isolating AI.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source gives a publication date but no deployment date or outcome measurement period."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Qure.ai publishes outcomes from its own programme with Goa and AstraZeneca, and the entry discloses these relationships."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "No comparator or baseline is identified for the claimed time reduction, and no dates establish when the outcomes occurred."
+      },
+      "summary": "The release reports 18 confirmed cancers and a greater than 50% reduction in diagnostic time within an AI-enabled clinical programme. It supplies neither an identifiable comparison nor an achieved measurement period."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12886,
+      "output": 602,
+      "total": 13488,
+      "cached": 0,
+      "reasoning": 75
+    },
+    "duration_ms": 14670
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "effect.absolute (receipt 5): unsupported, The quote establishes 10,564 nodules and 1,619 high-risk findings, but no receipt for this field establishes 18 diagnoses or 106,248 chest X-rays.."
+  }
+}

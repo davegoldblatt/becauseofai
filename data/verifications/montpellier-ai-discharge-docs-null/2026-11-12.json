@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "montpellier-ai-discharge-docs-null",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "d2ce66cfefe5487ecd6a7e37017cc9475dc3c1d75ca105251ad4283c9f469029",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:07:12.915Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.10.20.26365977v1",
+      "sha256": "816854742194efe21fd09385038a317c583f6081c2fe6d34866bdc9c987ec699",
+      "chars": 10490,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "We randomised 153 children discharged from a paediatric emergency department to conventional template assembly or drafting by an on-premises open-weight LLM",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "record-concordant understanding at follow-up, the primary outcome, did not differ (difference −0.01; 95% CI −0.12 to 0.10)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "record-concordant understanding at follow-up, the primary outcome, did not differ (difference −0.01; 95% CI −0.12 to 0.10)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "analysed 117 (59 conventional, 58 LLM-assisted)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "unsupported",
+          "note": "The receipt establishes 117 analysed and the 59/58 split, but no reach receipt establishes 153 randomized."
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "Randomization compared conventional template assembly with LLM drafting, with both arms validated by the discharging clinician.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "Neither study conduct nor follow-up dates are given; ethics approval, registration and publication dates do not establish achieved dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses an institutional developer relationship, but the supplied text establishes only hospital affiliations and declares no competing interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Study dates are absent, so the dated test fails and the window is unknown; retrospective registration does not establish a preregistered primary endpoint, and this randomized trial does not fit the other evidence grades."
+      },
+      "summary": "The abstract supports a randomized comparison involving 153 children, 117 analysed, and an understanding difference of −0.01 (95% CI −0.12 to 0.10). It provides no achieved dates or preregistered endpoint evidence, so the entry's pre window and B evidence grade cannot be established."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14220,
+      "output": 626,
+      "total": 14846,
+      "cached": 0,
+      "reasoning": 118
+    },
+    "duration_ms": 16622
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "reach (receipt 4): unsupported, The receipt establishes 117 analysed and the 59/58 split, but no reach receipt establishes 153 randomized.."
+  }
+}

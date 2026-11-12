@@ -79,11 +79,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: montpellier-ai-discharge-docs-null/2026-11-11.json
+  record: montpellier-ai-discharge-docs-null/2026-11-12.json
 held:
-  reason: grade-split
-  since: 2026-11-11
-  detail: "evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade."
-  record: montpellier-ai-discharge-docs-null/2026-11-11.json
+  reason: ungrounded
+  since: 2026-11-12
+  detail: "reach (receipt 4): unsupported, The receipt establishes 117 analysed and the 59/58 split, but no reach receipt establishes 153 randomized.."
+  record: montpellier-ai-discharge-docs-null/2026-11-12.json

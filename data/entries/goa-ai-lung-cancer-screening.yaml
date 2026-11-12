@@ -87,11 +87,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: goa-ai-lung-cancer-screening/2026-11-11.json
+  record: goa-ai-lung-cancer-screening/2026-11-12.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "effect.absolute (receipt 5): unsupported, The quote establishes the two nodule counts but does not establish the diagnosis or chest X-ray counts included in this field.."
-  record: goa-ai-lung-cancer-screening/2026-11-11.json
+  detail: "effect.absolute (receipt 5): unsupported, The quote establishes 10,564 nodules and 1,619 high-risk findings, but no receipt for this field establishes 18 diagnoses or 106,248 chest X-rays.."
+  record: goa-ai-lung-cancer-screening/2026-11-12.json

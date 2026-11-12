@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "delhi-slums-ai-cxr-tb",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "4d820bda0758551c502c7cbf1487b51d5d94fb23c11b7ec71703d9980c9adafb",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:05:24.449Z",
+      "final_url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "sha256": "f09a1a614e149585bd6d3d9c057e1445f32dd38cadadca76b813a716a62eb67b",
+      "chars": 7998,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "with molecular tests subsequently confirming TB in 877 people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "with 1,68,568 people undergoing chest X-ray screening.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "unsupported",
+          "note": "The quote establishes 877 confirmations but does not establish the headline's 168,568 screened."
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "unsupported",
+          "note": "The quote establishes 5.2% and 0.52% but does not establish the field's 877 confirmed cases."
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "unsupported",
+          "note": "The quote establishes 168,568 screened but does not establish age 15, 349 clusters, or six districts."
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The single-arm programme combined AI X-ray interpretation with community mobilisation, screening camps, sputum collection and molecular testing, without a comparison isolating AI.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "Screening ran July 2025 through March 2026, overlapping the assessment window; April 2026 was the evaluation date, and continued delivery is not established."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Programme organisations studied their own intervention, as disclosed in the entry; vendor funding or financial ties are not reported."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "No control, prior-period comparison or comparable yield benchmark is reported; the cited prevalence survey does not compare this programme's outcomes."
+      },
+      "summary": "The complete news report supports 877 confirmed TB cases among 168,568 screened during July 2025–March 2026. It provides no comparison establishing additional benefit from the AI-assisted programme or evidence of continued delivery."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14052,
+      "output": 1065,
+      "total": 15117,
+      "cached": 0,
+      "reasoning": 428
+    },
+    "duration_ms": 29384
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 1): unsupported, The quote establishes 877 confirmations but does not establish the headline's 168,568 screened.; effect.relative (receipt 4): unsupported, The quote establishes 5.2% and 0.52% but does not establish the field's 877 confirmed cases.; reach (receipt 6): unsupported, The quote establishes 168,568 screened but does not establish age 15, 349 clusters, or six districts.."
+  }
+}

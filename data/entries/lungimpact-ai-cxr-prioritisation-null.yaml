@@ -97,11 +97,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-11.json
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "effect.absolute (receipt 5): unsupported, The quote establishes 558 diagnoses but does not establish the claimed median times of 44 and 46 days.."
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-11.json
+  detail: "headline (receipt 1): unsupported, The quote establishes 44 and 46 days, but no headline receipt establishes five hospitals.; effect.absolute (receipt 5): unsupported, The quote establishes 558 people, but no receipt for this field establishes 44 and 46 days.; reach (receipt 6): unsupported, The quote establishes 93,326 CXRs, but no reach receipt establishes five NHS trusts.."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json

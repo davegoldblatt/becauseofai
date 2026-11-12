@@ -94,11 +94,11 @@ verification:
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
+    date: 2026-11-12
     verdict: fail
-  record: nz-wairarapa-ai-treatment-injury/2026-11-11.json
+  record: nz-wairarapa-ai-treatment-injury/2026-11-12.json
 held:
   reason: grade-split
   since: 2026-11-11
   detail: "window: drafter pre, verifier could not grade."
-  record: nz-wairarapa-ai-treatment-injury/2026-11-11.json
+  record: nz-wairarapa-ai-treatment-injury/2026-11-12.json
