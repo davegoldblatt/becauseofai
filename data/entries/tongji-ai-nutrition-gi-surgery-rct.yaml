@@ -100,10 +100,21 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-12
-  via: claude-login
   content: c8b3617652a6c34c0cf4ebeb52baca2e9ce1763eb276046f7fb580a4c664271d
+  via: claude-login
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-12
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-12
+    verdict: fail
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "headline (receipt 2): unsupported, The quote establishes sample size and allocation, not the percentages or 30-day endpoint in the headline.."
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-11.json
+  detail: "reach (receipt 9): unsupported, This quote establishes 187 screened patients, not the field's 90 randomized patients.."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12.json

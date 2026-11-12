@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "delhi-slums-ai-cxr-tb",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "5a073fa516ecf5e3af0a62bf4fd4e3f3b91b072cc72d693cd9549ebfc99c81e5",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-12"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:12:21.962Z",
+      "final_url": "https://theprint.in/india/ai-assisted-x-rays-flag-18377-people-for-tb-testing-in-delhi-slums-877-confirmed-study/3064481/",
+      "sha256": "f786fe00d513c0e3d9ff1ee13b8564f19834aa1d1da1a6ee6dbce18f94f89c4d",
+      "chars": 8046,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The testing confirmed TB in 877 people.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised, with 1,68,568 people undergoing chest X-ray screening.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "The testing confirmed TB in 877 people.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The testing confirmed TB in 877 people.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The researchers calculated that the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The intervention covered 349 notified urban slum clusters across six districts under the National Tuberculosis Elimination Programme, with an estimated population of 18.3 lakh.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "All residents aged 15 years and above in the selected communities were screened.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between July 2025 and March 2026, 3,566 community screening camps were organised",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "unsupported",
+          "note": "The reach receipts establish age eligibility, 349 clusters and six districts, but neither establishes the claimed 168,568 residents."
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The single-arm programme combined AI-read X-rays, community mobilisation, sputum collection and molecular testing, with no comparison isolating AI's contribution.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "The news report gives July 2025–March 2026; April 2026 is the evaluation date, and continued delivery is not established."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses programme-affiliated researchers, but the source establishes no vendor employment, funding, equity, patent or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "No control, prior-period comparison or credible benchmark measures the programme's benefit; the cited prevalence survey provides background only."
+      },
+      "summary": "The complete news article reports 877 confirmed TB cases among 168,568 people screened during July 2025–March 2026. It establishes programme yield but provides no comparison showing additional cases attributable to the intervention."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14219,
+      "output": 982,
+      "total": 15201,
+      "cached": 8448,
+      "reasoning": 346
+    },
+    "duration_ms": 24421
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "reach (receipt 8): unsupported, The reach receipts establish age eligibility, 349 clusters and six districts, but neither establishes the claimed 168,568 residents.."
+  }
+}

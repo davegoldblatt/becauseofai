@@ -96,10 +96,21 @@ drafted:
   vendor: anthropic
   model: claude-opus-5-5
   date: 2026-11-12
-  via: claude-login
   content: 2f9f61ae32f1edf8f0c84a240242cadfc67c4953bfc999fe503d8e83d596e216
+  via: claude-login
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-12
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-12
+    verdict: fail
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json
 held:
   reason: ungrounded
   since: 2026-11-11
-  detail: "effect.absolute (receipt 5): unsupported, The quote establishes 558 diagnoses but does not establish the claimed median times of 44 and 46 days.."
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-11.json
+  detail: "headline (receipt 1): unsupported, The quote establishes 44 and 46 days but does not establish the headline's five hospitals.."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json
