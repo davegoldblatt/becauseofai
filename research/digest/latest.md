@@ -1,11 +1,11 @@
-Because of AI, the day in plain words. Facts gathered 2026-11-11 14:15 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
+Because of AI, the day in plain words. Facts gathered 2026-11-12 20:22 UTC, covering the last 24 hours. The email is written from this file; every number here is measured.
 
 WHAT WE POSTED
 - 2026-11-10: "columbia-epic-ai-draft-replies-null" https://becauseofai.org/entry/columbia-epic-ai-draft-replies-null
 
 HOW THE POSTS ARE DOING (last 7 days, newest first)
-- 3 views, 0 likes, 0 replys, 0 reposts: "Clinicians at Columbia who adopted Epic's AI-drafted replies to patient messages answered 8.6% more slowly aft" https://x.com/bcuz_of_ai/status/2119944324079071708
-- 1 view, 0 likes, 0 replys, 0 reposts: "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 wh" https://x.com/bcuz_of_ai/status/2119525681491005525
+- 4 views, 0 likes, 0 replys, 0 reposts: "Clinicians at Columbia who adopted Epic's AI-drafted replies to patient messages answered 8.6% more slowly aft" https://x.com/bcuz_of_ai/status/2119944324079071708
+- 2 views, 0 likes, 0 replys, 0 reposts: "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 wh" https://x.com/bcuz_of_ai/status/2119525681491005525
 
 FOLLOWERS: 5
 
@@ -13,40 +13,49 @@ PEOPLE WHO REPLIED TO OR MENTIONED THE ACCOUNT (last 7 days, 0 new since yesterd
 - None.
 
 SITE TRAFFIC
-- 2026-11-10: 130 page views, 85 visits.
-  - /: 98
-  - /not-because-of-ai: 8
-  - /not-yet: 4
-  - /entry/hurricane-melissa-2025: 4
-  - /changelog: 4
-  - /method: 3
-  - /entry/ethiopia-tb-ai-cxr: 2
-  - /entry/tricorder-ai-stethoscope-null: 1
+- 2026-11-11: 392 page views, 235 visits.
+  - /: 264
+  - /not-because-of-ai: 46
+  - /not-yet: 22
+  - /method: 12
+  - /changelog: 9
+  - /entry/hurricane-melissa-2025: 6
+  - /entry/waymo-injury-crashes: 6
+  - /entry/columbia-star-birth: 5
 
 THE REGISTRY
-- Live on the site, strict: 18 benefits, 7 null results, 5 watchlist items. Less certain, behind the switch: 0 reasonable, 0 speculative. Held off the site: 8.
-
-ENTRIES ADDED OR CHANGED IN THE LAST DAY
-- added: "A machine-learning kidney-injury alert that sent pharmacists to advise physicians did not reduce major adverse kidney events across 38 hospital service clusters." (held because the two models graded it differently)
+- Live on the site, strict: 18 benefits, 7 null results, 5 watchlist items. Less certain, behind the switch: 5 reasonable, 4 speculative. Held off the site: 10.
+- A bulk change touched 16 entries at once (a rebuild of the files, not 16 new entries).
 
 WHAT THE SECOND MODEL DECIDED IN THE LAST DAY
-- "A machine-learning kidney-injury alert that sent pharmacists to advise physicians did not reduce major adverse kidney events across 38 hospital service clusters.": held because the two models graded it differently. evidence: drafter B, verifier A.
+- "Because of AI, neurosurgery outpatients in Dresden who were given an AI-written plain-language summary of their own findings before the visit rated the conversation with their doctor higher, and the consultation was shorter (median 25 vs 33 minutes).": agreed, so it is live. The abstract and prospective registry support a randomized trial of 300 patients with improved interaction scores and shorter consultations, with all receipted numbers and dates supported. The benefit period overlaps the assessment window, so the entry's pre grade is incorrect; clinical benefits rem
+- "Because of AI, Baptist Health in Arkansas says it has cut emergency-room boarding by about 525 patients a month, using predictive discharge analytics across its 12 hospitals.": agreed, so it is live. The source supports an executive-reported reduction of about 525 boarding patients per month from a programme combining AI and process changes at a 12-hospital system. It supplies no achieved dates, baseline counts or independent comparison.
+- "Because of AI-read chest X-rays, Delhi's slum screening programme confirmed TB in 877 people among 168,568 residents screened.": agreed, so it is live. The complete news article supports 877 confirmed TB cases among 168,568 people screened during July 2025–March 2026. It provides no comparative estimate of the programme's benefit or AI's incremental contribution.
+- "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.": agreed, so it is live. The randomized working paper supports the reported improvement figures among elevated-symptom students with Week 6 data, with attribution to the complete app package. It reports preregistered primary outcomes, although the registry lists different depression and anxiety instruments; the completed st
+- "Because of a machine-learning model that found people overdue for bowel cancer screening, Geisinger patients who got nurse outreach were 6% more likely to have a colonoscopy within three months, and two-year mortality was 6.2% lower.": held because the two models graded it differently. evidence: drafter B, verifier could not grade.
+- "Because of AI review of routine chest X-rays, Goa's public hospitals have made 18 confirmed lung cancer diagnoses and cut the average time to diagnosis by more than 50%, the state says.": agreed, so it is live. The complete vendor press release supports all quoted numbers as reported programme outcomes. It supplies neither an identifiable benchmark for the diagnosis-time reduction nor an achieved period sufficient to determine the window.
+- "Because of AI, outpatient clinicians in a 14-hospital Boston health system who enrolled in the Heidi ambient scribe spent 1.21 minutes less on each note, though their after-hours note work did not change.": agreed, so it is live. The abstract supports the reported reductions in note-active time, participant and encounter counts, and achieved dates. It establishes an observational association, without demonstrating causal effects, reduced burnout, or improved patient outcomes.
+- "Not because of AI: prioritising abnormal chest X-rays with AI did not speed up lung cancer diagnosis in five English hospitals, with median times of 44 days against 46 days.": held because the second model failed it on one of the four tests, or the source shows a conflict the entry does not state. The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose.
+- "Because of AI-assisted chest X-rays, Malaysia's lung health pilot screened 14,350 people at seven clinics and found abnormal results in 25.5%, a third of them with lung nodules now being assessed for cancer and TB.": agreed, so it is live. The article supports 14,350 people screened at seven clinics, 25.5% with abnormal findings, and nodules in about a third of those with abnormalities. It provides no comparator, screening period or confirmed clinical outcomes, so the entry fails the comparison and dating tests.
+- "A machine-learning kidney-injury alert that sent pharmacists to advise physicians did not reduce major adverse kidney events across 38 hospital service clusters.": agreed, so it is live. The complete registry supports a cluster-randomized null primary outcome: MAKE30 OR 1.05, 95% CI 0.82–1.35, p=0.711, with study completion before the window. It tests a bundled intervention and does not isolate the algorithm's contribution; 698 refers to enrolled physicians.
+- "An LLM that drafted discharge documents for 153 children leaving a paediatric emergency department did not improve how well families understood them.": held because the two models graded it differently. evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade.
+- "An LLM screening 2,642 discharge summaries at a New Zealand district hospital flagged 102 confirmed cases of harm from care, and seven injury-compensation claims followed.": held because the two models graded it differently. window: drafter pre, verifier could not grade.
+- "Because of AI, in-hospital deaths among high-risk ward patients fell from 23.1% to 18.6% after 11 hospitals let a deterioration model page the rapid response team automatically (adjusted odds ratio 0.82).": agreed, so it is live. The abstract supports all receipted numbers and an association between the combined intervention and lower mortality in a large adjusted pre/post study. It does not establish an isolated causal effect of AI, and the observed benefit predates the reporting window.
+- "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.": held because the second model failed it on one of the four tests, or the source shows a conflict the entry does not state. The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures.
+- "Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30 days after discharge, against 40.0% given standard advice.": held because a number on the entry is not in the source word for word. reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients..
+- "Because of AI imaging support, stroke patients in western Sweden got to thrombectomy faster: the adjusted median from CT to groin puncture fell from 47 to 35 minutes, though outcomes did not differ.": held because the two models graded it differently. attribution: drafter bundled, verifier isolated.
 
-STILL HELD OFF THE SITE (8)
-- "Because of AI, neurosurgery outpatients in Dresden who were given an AI-written plain-language summary of their own findings before the visit rated the conversation with their doctor higher, and the consultation was shorter (median 25 vs 33 minutes).": the two models graded it differently (since 2026-11-09). window: drafter pre, verifier in.
-- "Because of AI, 52% of students with elevated depressive symptoms who used a generative-AI coaching app for six weeks improved meaningfully, against 32% given care as usual.": the two models graded it differently (since 2026-10-24). window: drafter pre, verifier in.
-- "Because of AI, outpatient clinicians in a 14-hospital Boston health system who enrolled in the Heidi ambient scribe spent 1.21 minutes less on each note, though their after-hours note work did not change.": a number on the entry is not in the source word for word (since 2026-11-09). headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text).
+STILL HELD OFF THE SITE (10)
+- "Because of a machine-learning model that found people overdue for bowel cancer screening, Geisinger patients who got nurse outreach were 6% more likely to have a colonoscopy within three months, and two-year mortality was 6.2% lower.": the two models graded it differently (since 2026-11-11). evidence: drafter B, verifier could not grade.
 - "An AI-ECG screen of 14,665 adults at a Taiwanese hospital did not significantly increase atrial fibrillation diagnoses (0.3% vs 0.2%) or the start of antiarrhythmic treatment, compared with usual care.": the two models graded it differently (since 2026-11-09). window: drafter ongoing, verifier could not grade.
-- "A machine-learning kidney-injury alert that sent pharmacists to advise physicians did not reduce major adverse kidney events across 38 hospital service clusters.": the two models graded it differently (since 2026-11-10). evidence: drafter B, verifier A.
+- "Not because of AI: prioritising abnormal chest X-rays with AI did not speed up lung cancer diagnosis in five English hospitals, with median times of 44 days against 46 days.": the second model failed it on one of the four tests, or the source shows a conflict the entry does not state (since 2026-11-12). The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose.
+- "An LLM that drafted discharge documents for 153 children leaving a paediatric emergency department did not improve how well families understood them.": the two models graded it differently (since 2026-11-11). evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade.
+- "An LLM screening 2,642 discharge summaries at a New Zealand district hospital flagged 102 confirmed cases of harm from care, and seven injury-compensation claims followed.": the two models graded it differently (since 2026-11-11). window: drafter pre, verifier could not grade.
 - "Because of AI, Oman screened 43,000 diabetics for retinopathy, flagged 12,000 for treatment, and cut specialist waiting lists by 87%.": it has no primary source, only a press release or a news story (since 2026-10-25). No source is typed primary.
 - "A generative-AI maternal health chatbot did not reduce anxiety or depression over 12 months among 400 pregnant and postpartum people, compared with a monthly children's book club.": we could not read the source in full (the publisher blocks automated readers, or only an abstract is public) (since 2026-11-08). source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked.
-- "Because of AI, in-hospital deaths among high-risk ward patients fell from 23.1% to 18.6% after 11 hospitals let a deterioration model page the rapid response team automatically (adjusted odds ratio 0.82).": a number on the entry is not in the source word for word (since 2026-11-09). effect.relative: the quote is not in source 0 (quote not found in the source text).
+- "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.": the second model failed it on one of the four tests, or the source shows a conflict the entry does not state (since 2026-11-11). The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures.
+- "Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30 days after discharge, against 40.0% given standard advice.": a number on the entry is not in the source word for word (since 2026-11-11). reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients..
+- "Because of AI imaging support, stroke patients in western Sweden got to thrombectomy faster: the adjusted median from CT to groin puncture fell from 47 to 35 minutes, though outcomes did not differ.": the two models graded it differently (since 2026-11-11). attribution: drafter bundled, verifier isolated.
 
-LEADS THE MORNING SCAN LOGGED (7)
-- MEnD-AKI results posted: pharmacist-delivered ML alerting for drug-associated AKI, cluster RCT, null on MAKE30. [NCT06264752](https://clinicaltrials.gov/study/NCT06264752). Drafted as an entry from the registry record. Missing: a peer-reviewed paper, reconciled absolute counts.
-- AI chest-radiograph triage and workflow efficiency in hospitals. [Radiography](https://doi.org/10.1016/j.radi.2026.103626) (2026-11-09). Labelled a review in PubMed; `npm run read` returned an 11-character stub. Missing: full text, design, dates.
-- PREVERY AI-supported health management, before-and-after observational study. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367492v1). No concurrent comparison, so unlikely to pass; check for a control group.
-- Head-to-head randomized trial of two ambient AI documentation tools, protocol only. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1). Protocol to watch for results.
-- Ghana literacy intervention, World Bank PRWP 11433. [ERIC](https://eric.ed.gov/?id=ED683456). Flagged AI by keyword; the Tools for Foundational Learning Improvement program looks like a non-AI intervention. Missing: whether AI is a component.
-- Still open: LATENT (Circulation), obstetric AI ultrasound in Zambia, EClinicalMedicine diabetic foot ulcer trial, all logged earlier and unreadable.
-- Skipped: AEA registrations in development, protocols, reviews, retrospective validations, benchmarks, surveys.
+LEADS THE MORNING SCAN LOGGED (1)
+- Agentic AI for immune-related adverse-event review. [Nature Cancer](https://www.nature.com/articles/s43018-026-01264-6) (published 2026-10-29). Indexed paper sections report a randomized crossover study of 17 clinical research staff reviewing 20 notes each: AI assistance reduced annotation time by 2.71 minutes and improved accuracy and agreement. A separate silent prospective phase processed 884 notes during May–July 2025; it did not demonstrate improved patient care. Retain as a research lead: the current scout rules exclude reader studies without patients. A possible work-domain claim concerns faster, more accurate research annotation, subject to an explicit editorial decision on whether controlled annotation tasks qualify. Missing: full-text retrieval (the gate's reader returned `NOT READ`), verified dates for the randomized study, and source receipts before any entry is drafted. Do not use the publication date or the silent-phase dates as the achieved dates for the randomized benefit.
