@@ -51,18 +51,38 @@ history:
 rationale: The ministry reports screening numbers for a package of AI-assisted X-ray, spirometry, TB testing and referral, with no comparison, so the AI's own contribution cannot be separated (bundled).
 receipts:
   - field: headline
-    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    quote: A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.
     locator: Article, paragraph 2
     source: 0
   - field: impact
-    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    quote: A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.
     locator: Article, paragraph 2
     source: 0
   - field: impact_number
-    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    quote: A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.
     locator: Article, paragraph 2
     source: 0
   - field: effect.absolute
-    quote: "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings."
+    quote: A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.
     locator: Article, paragraph 2
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: cbfaef874fac72ef262137467c91f7646ef00d1efe3e72fce6c5afb2c6faa37f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: pass
+  record: malaysia-lung-health-ai-cxr/2026-11-11.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (No comparison or screening dates are provided; publication and directive dates do not establish when the reported screenings occurred.).

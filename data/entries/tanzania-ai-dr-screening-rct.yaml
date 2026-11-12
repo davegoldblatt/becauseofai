@@ -54,31 +54,31 @@ history:
 rationale: The trial randomised patients to AI-supported same-visit results and counselling versus deferred grading and phone counselling, so the difference is credited to the AI pathway as a whole, and the AI result and counselling cannot be separated (bundled).
 receipts:
   - field: headline
-    quote: "157/437 (35⋅9%)"
+    quote: 157/437 (35⋅9%)
     locator: Table 2, primary outcome
     source: 0
   - field: headline
-    quote: "85/467 (18⋅2%)"
+    quote: 85/467 (18⋅2%)
     locator: Table 2, primary outcome
     source: 0
   - field: impact
-    quote: "157/437 (35⋅9%)"
+    quote: 157/437 (35⋅9%)
     locator: Table 2, primary outcome
     source: 0
   - field: impact
-    quote: "85/467 (18⋅2%)"
+    quote: 85/467 (18⋅2%)
     locator: Table 2, primary outcome
     source: 0
   - field: impact_number
-    quote: "157/437 (35⋅9%)"
+    quote: 157/437 (35⋅9%)
     locator: Table 2, primary outcome
     source: 0
   - field: effect.relative
-    quote: "between the groups and a 97%"
+    quote: between the groups and a 97%
     locator: Results, paragraph 3
     source: 0
   - field: effect.absolute
-    quote: "These values give an absolute difference of 17⋅7 percentage"
+    quote: These values give an absolute difference of 17⋅7 percentage
     locator: Results, paragraph 3
     source: 0
   - field: reach
@@ -86,10 +86,31 @@ receipts:
     locator: Results, paragraph 1
     source: 0
   - field: dates.achieved_start
-    quote: "Between March 8, 2023, and Aug 31, 2024, 2439 individuals"
+    quote: Between March 8, 2023, and Aug 31, 2024, 2439 individuals
     locator: Results, paragraph 1
     source: 0
   - field: dates.achieved_end
-    quote: "Between March 8, 2023, and Aug 31, 2024, 2439 individuals"
+    quote: Between March 8, 2023, and Aug 31, 2024, 2439 individuals
     locator: Results, paragraph 1
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 152504c2bd54e227aff758e037a2e54c6da4230bac86ada2b1f208bbcbf98353
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: tanzania-ai-dr-screening-rct/2026-11-11.json
+held:
+  reason: fails-test
+  since: 2026-11-11
+  detail: "The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
+  record: tanzania-ai-dr-screening-rct/2026-11-11.json

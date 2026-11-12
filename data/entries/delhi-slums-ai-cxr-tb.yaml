@@ -54,34 +54,55 @@ history:
 rationale: There is no comparison arm, and the AI read X-rays inside a package of community camps, sputum collection and molecular testing, so the yield belongs to the package (bundled).
 receipts:
   - field: headline
-    quote: "with molecular tests subsequently confirming TB in 877 people"
+    quote: with molecular tests subsequently confirming TB in 877 people
     locator: Article, paragraph 1
     source: 0
   - field: impact
-    quote: "with molecular tests subsequently confirming TB in 877 people"
+    quote: with molecular tests subsequently confirming TB in 877 people
     locator: Article, paragraph 1
     source: 0
   - field: impact_number
-    quote: "with molecular tests subsequently confirming TB in 877 people"
+    quote: with molecular tests subsequently confirming TB in 877 people
     locator: Article, paragraph 1
     source: 0
   - field: effect.relative
-    quote: "They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened."
+    quote: They accounted for 5.2 per cent of those who completed molecular testing and 0.52 per cent of the total population screened.
     locator: Article, paragraph 10
     source: 0
   - field: effect.absolute
-    quote: "the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened"
+    quote: the programme detected 520 bacteriologically confirmed TB cases for every one lakh people screened
     locator: Article, paragraph 11
     source: 0
   - field: reach
-    quote: "with 1,68,568 people undergoing chest X-ray screening."
+    quote: with 1,68,568 people undergoing chest X-ray screening.
     locator: Article, paragraph 9
     source: 0
   - field: dates.achieved_start
-    quote: "Between July 2025 and March 2026, 3,566 community screening camps were organised"
+    quote: Between July 2025 and March 2026, 3,566 community screening camps were organised
     locator: Article, paragraph 9
     source: 0
   - field: dates.achieved_end
-    quote: "Between July 2025 and March 2026, 3,566 community screening camps were organised"
+    quote: Between July 2025 and March 2026, 3,566 community screening camps were organised
     locator: Article, paragraph 9
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 4d820bda0758551c502c7cbf1487b51d5d94fb23c11b7ec71703d9980c9adafb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: delhi-slums-ai-cxr-tb/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "window: drafter ongoing, verifier in."
+  record: delhi-slums-ai-cxr-tb/2026-11-11.json

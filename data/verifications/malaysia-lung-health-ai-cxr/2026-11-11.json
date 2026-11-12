@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "malaysia-lung-health-ai-cxr",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "cbfaef874fac72ef262137467c91f7646ef00d1efe3e72fce6c5afb2c6faa37f",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.thestar.com.my/news/nation/2026/10/07/one-in-four-at-risk-of-lung-disease",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:01:15.617Z",
+      "final_url": "https://www.thestar.com.my/news/nation/2026/10/07/one-in-four-at-risk-of-lung-disease",
+      "sha256": "d926420b8cbda9606cbb16497290b267b902a329bfb2c51a0977284d786a717e",
+      "chars": 6055,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "A total of 14,350 people have undergone AI-assisted chest X-ray screening at seven participating health clinics, with 25.5% recording abnormal findings.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "No comparator is reported; AI-assisted chest X-rays form part of an integrated screening package with spirometry, tuberculosis testing and selected CT scans.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives no screening period; Aug 21 dates the directive."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The ministry reports its own programme, which the entry discloses, but the text establishes no vendor, financial or commercial conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "No comparison or screening dates are provided; publication and directive dates do not establish when the reported screenings occurred."
+      },
+      "summary": "The article supports 14,350 people screened at seven clinics, 25.5% with abnormal findings, and nodules in about a third of those with abnormalities. It provides no comparator, screening period or confirmed clinical outcomes, so the entry fails the comparison and dating tests."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13128,
+      "output": 669,
+      "total": 13797,
+      "cached": 0,
+      "reasoning": 205
+    },
+    "duration_ms": 16619
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The article supports 14,350 people screened at seven clinics, 25.5% with abnormal findings, and nodules in about a third of those with abnormalities. It provides no comparator, screening period or confirmed clinical outcomes, so the entry fails the comparison and dating tests.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "Not measured against something or dated yet (No comparison or screening dates are provided; publication and directive dates do not establish when the reported screenings occurred.)."
+    ]
+  }
+}

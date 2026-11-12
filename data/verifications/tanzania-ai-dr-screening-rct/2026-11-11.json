@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tanzania-ai-dr-screening-rct",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "152504c2bd54e227aff758e037a2e54c6da4230bac86ada2b1f208bbcbf98353",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.langlo.2026.104062",
+      "ok": true,
+      "method": "unpaywall:pdf",
+      "fetched_at": "2026-11-12T00:02:21.575Z",
+      "final_url": "https://researchonline.lshtm.ac.uk/id/eprint/4683712/1/Cleland-etal-2026-Artificial-intelligence-supported.pdf",
+      "sha256": "ecb915bb8f4be68d3e0ed5694d86993268077ff1519cf8f40d77ef7b2a4902cb",
+      "chars": 85156,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "85/467 (18⋅2%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "85/467 (18⋅2%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "between the groups and a 97%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "These values give an absolute difference of 17⋅7 percentage",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "leaving 2378 unique participants:",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between March 8, 2023, and Aug 31, 2024, 2439 individuals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between March 8, 2023, and Aug 31, 2024, 2439 individuals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomisation compared AI screening with immediate results and face-to-face counselling against deferred human grading and telephone counselling, so the package's components were not isolated.",
+      "achieved_dates": {
+        "from": "results",
+        "conflicting": false,
+        "note": "Results and abstract give March 8, 2023–August 31, 2024 as the recruitment span; attendance was assessed within 8 weeks after screening, so these are not exact attendance boundaries."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": false,
+        "note": "The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomised trial supports the reported attendance rates and effect estimates for the AI-enabled screening package, with recruitment dates before the window. Registration and a published protocol are mentioned, but the supplied text does not establish prospective registration of the primary endpoint, so evidence grade A cannot be confirmed."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27014,
+      "output": 763,
+      "total": 27777,
+      "cached": 0,
+      "reasoning": 245
+    },
+    "duration_ms": 20350
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "fails-test",
+    "detail": "The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
+  }
+}

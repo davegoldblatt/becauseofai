@@ -53,34 +53,55 @@ history:
 rationale: The arms differed only in whether AI flags were prioritised, randomised by day with AI otherwise available in both, so the null result isolates AI prioritisation.
 receipts:
   - field: headline
-    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    quote: Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively
     locator: Abstract
     source: 0
   - field: impact
-    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    quote: Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively
     locator: Abstract
     source: 0
   - field: impact_number
-    quote: "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively"
+    quote: Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively
     locator: Abstract
     source: 0
   - field: effect.relative
-    quote: "with a ratio of geometric means of 0.98"
+    quote: with a ratio of geometric means of 0.98
     locator: Abstract
     source: 0
   - field: effect.absolute
-    quote: "Lung cancer was diagnosed in 558 people (0.6% of CXRs)."
+    quote: Lung cancer was diagnosed in 558 people (0.6% of CXRs).
     locator: Abstract
     source: 0
   - field: reach
-    quote: "resulting in 93,326 CXRs analyzed"
+    quote: resulting in 93,326 CXRs analyzed
     locator: Abstract
     source: 0
   - field: dates.achieved_start
-    quote: "Between 17 July 2023 and 31 December 2024"
+    quote: Between 17 July 2023 and 31 December 2024
     locator: Results, Descriptive statistics
     source: 0
   - field: dates.achieved_end
-    quote: "Between 17 July 2023 and 31 December 2024"
+    quote: Between 17 July 2023 and 31 December 2024
     locator: Results, Descriptive statistics
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 7c4df4bc7eda162824f52ad6fe91eb68ca0d76334432a31237757a98a7194c3e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-11.json
+held:
+  reason: ungrounded
+  since: 2026-11-11
+  detail: "effect.absolute (receipt 5): unsupported, The quote establishes 558 diagnoses but does not establish the claimed median times of 44 and 46 days.."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-11.json

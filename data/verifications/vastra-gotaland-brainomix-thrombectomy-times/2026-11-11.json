@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "vastra-gotaland-brainomix-thrombectomy-times",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "38ac8e3a837d25e43151373d630ae667e99d3a55cb00125a497eb855a4b2ebaa",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.brainomix.com/brain/implementation-of-an-ai-supported-decision-making-tool-in-a-high-volume-stroke-system-with-routine-perfusion-imaging",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-12T00:02:42.170Z",
+      "final_url": "https://www.brainomix.com/brain/implementation-of-an-ai-supported-decision-making-tool-in-a-high-volume-stroke-system-with-routine-perfusion-imaging",
+      "sha256": "f206ec9bfcfd4dd0c46d1d133a70164a116049f49b2021f2ab54ac47c41104b1",
+      "chars": 2991,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 970 EVT patients were included.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The study compares periods before and after introduction of the AI imaging tool, with no additional intervention package described, although the retrospective comparison leaves temporal confounding unresolved.",
+      "achieved_dates": {
+        "from": "abstract",
+        "conflicting": false,
+        "note": "The abstract's Patients and methods section gives June 2021 through May 2024."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Brainomix hosts the abstract on its own clinical evidence page about its product, as the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The vendor-hosted abstract supports the reported workflow reductions among 970 patients during June 2021–May 2024. It reports no significant clinical outcome differences and does not establish that AI alone caused the reductions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12693,
+      "output": 641,
+      "total": 13334,
+      "cached": 0,
+      "reasoning": 181
+    },
+    "duration_ms": 15885
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier isolated.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      }
+    ]
+  }
+}

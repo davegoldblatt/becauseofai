@@ -52,30 +52,51 @@ history:
 rationale: The comparison is the same region before and after the tool arrived, with no concurrent control, and the tool came with changes to workflow around it, so attribution is bundled.
 receipts:
   - field: headline
-    quote: "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively."
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
     locator: Results
     source: 0
   - field: impact
-    quote: "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively."
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
     locator: Results
     source: 0
   - field: impact_number
-    quote: "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively."
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
     locator: Results
     source: 0
   - field: effect.absolute
-    quote: "Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively."
+    quote: Adjusted median CT–puncture significantly decreased from 47 min pre-implementation to 36 and 35 min in the learning and established periods, respectively.
     locator: Results
     source: 0
   - field: reach
-    quote: "A total of 970 EVT patients were included."
+    quote: A total of 970 EVT patients were included.
     locator: Results
     source: 0
   - field: dates.achieved_start
-    quote: "consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024"
+    quote: consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024
     locator: Patients and methods
     source: 0
   - field: dates.achieved_end
-    quote: "consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024"
+    quote: consecutive patients treated with EVT at Sahlgrenska University Hospital from June 2021 to May 2024
     locator: Patients and methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 38ac8e3a837d25e43151373d630ae667e99d3a55cb00125a497eb855a4b2ebaa
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: vastra-gotaland-brainomix-thrombectomy-times/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "attribution: drafter bundled, verifier isolated."
+  record: vastra-gotaland-brainomix-thrombectomy-times/2026-11-11.json

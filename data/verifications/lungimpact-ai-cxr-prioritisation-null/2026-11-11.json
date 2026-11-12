@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "lungimpact-ai-cxr-prioritisation-null",
+  "date": "2026-11-11",
+  "as_of": "2026-11-11",
+  "entry_sha256": "7c4df4bc7eda162824f52ad6fe91eb68ca0d76334432a31237757a98a7194c3e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-11"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41591-026-04253-5",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-12T00:00:55.711Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13190311/fullTextXML",
+      "sha256": "7c7416501f75f4d93f95d5fde9af4a9553e8cac44a796f362d4ae6d9cd2db14f",
+      "chars": 57899,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "with a ratio of geometric means of 0.98",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Lung cancer was diagnosed in 558 people (0.6% of CXRs).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "resulting in 93,326 CXRs analyzed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between 17 July 2023 and 31 December 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between 17 July 2023 and 31 December 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-11",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "unsupported",
+          "note": "The quote establishes 558 diagnoses but does not establish the claimed median times of 44 and 46 days."
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "ai-vs-ai",
+        "window": "pre"
+      },
+      "attribution_rationale": "Both arms used AI-assisted reading; randomization compared AI prioritization switched on versus off.",
+      "achieved_dates": {
+        "from": "results",
+        "conflicting": false,
+        "note": "Results give 17 July 2023–31 December 2024 for CXRs and follow-up until 5 June 2025; methods give consistent study months."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": false,
+        "note": "The source discloses a Qure.ai travel grant to N.W. and SBRI funding in collaboration with Qure.ai; the entry does not disclose these relationships."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The full paper supports a measured null result: median diagnosis times were 44 versus 46 days, with AI available in both arms. Registration is reported, but its timing does not establish preregistration of the primary endpoints, so evidence grade A cannot be confirmed from the supplied text."
+    },
+    "error": null,
+    "tokens": {
+      "input": 25587,
+      "output": 721,
+      "total": 26308,
+      "cached": 0,
+      "reasoning": 185
+    },
+    "duration_ms": 18194
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "effect.absolute (receipt 5): unsupported, The quote establishes 558 diagnoses but does not establish the claimed median times of 44 and 46 days.."
+  }
+}

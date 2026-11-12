@@ -51,26 +51,47 @@ history:
 rationale: Patients reached by the model-guided nurse outreach were compared with similar patients not reached, but the effect combines the model's targeting with nurse education and scheduling, so the AI's share is not separable (bundled).
 receipts:
   - field: headline
-    quote: "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months"
+    quote: 6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months
     locator: Press release, paragraph 3
     source: 0
   - field: headline
-    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    quote: the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group
     locator: Press release, paragraph 3
     source: 0
   - field: impact
-    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    quote: the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group
     locator: Press release, paragraph 3
     source: 0
   - field: impact_number
-    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    quote: the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group
     locator: Press release, paragraph 3
     source: 0
   - field: effect.relative
-    quote: "the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group"
+    quote: the program was associated with a 6.2% reduction in two-year mortality, representing a 43% decrease relative to the study's control group
     locator: Press release, paragraph 3
     source: 0
   - field: effect.absolute
-    quote: "6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months"
+    quote: 6% more likely to complete a colonoscopy within three months and 6.9% more likely within six months
     locator: Press release, paragraph 3
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-11
+  content: 368d7008b82d9ac59324129966cfc30beb3ca7e20c7494b90ae3367920610f08
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-11
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-11
+    verdict: fail
+  record: geisinger-ml-colorectal-outreach/2026-11-11.json
+held:
+  reason: grade-split
+  since: 2026-11-11
+  detail: "evidence: drafter B, verifier could not grade."
+  record: geisinger-ml-colorectal-outreach/2026-11-11.json
