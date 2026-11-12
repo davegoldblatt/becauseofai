@@ -48,48 +48,46 @@ notes: >-
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
-rationale: The result comes from a state programme that put AI review into routine X-ray workflow alongside clinician triage and referral, with no comparison arm, so the AI's own share is not separable (bundled).
+rationale: The grade is bundled because the only comparison is the programme's average time to diagnosis against an unstated earlier level, and the AI review was rolled out together with clinician triage and follow-up pathways, so the AI's own share can't be separated out.
 receipts:
   - field: headline
     quote: To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.
-    locator: Press release, paragraph 5
+    locator: Press release body, outcomes paragraph
     source: 0
   - field: impact
     quote: To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.
-    locator: Press release, paragraph 5
+    locator: Press release body, outcomes paragraph
     source: 0
   - field: impact_number
-    quote: To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.
-    locator: Press release, paragraph 5
+    quote: To date, this has led to 18 confirmed lung cancer diagnoses
+    locator: Press release body, outcomes paragraph
     source: 0
   - field: effect.relative
-    quote: To date, this has led to 18 confirmed lung cancer diagnoses and reduced the average time to diagnosis by more than 50%.
-    locator: Press release, paragraph 5
+    quote: reduced the average time to diagnosis by more than 50%.
+    locator: Press release body, outcomes paragraph
+    source: 0
+  - field: effect.absolute
+    quote: Since deployment, the initiative has analyzed 1,06,248 chest X-rays across 18 public healthcare sites in the state.
+    locator: Press release body, outcomes paragraph
     source: 0
   - field: effect.absolute
     quote: The AI system flagged 10,564 lung nodules, including 1,619 classified as high-risk
-    locator: Press release, paragraph 5
+    locator: Press release body, outcomes paragraph
+    source: 0
+  - field: effect.absolute
+    quote: To date, this has led to 18 confirmed lung cancer diagnoses
+    locator: Press release body, outcomes paragraph
     source: 0
   - field: reach
     quote: Since deployment, the initiative has analyzed 1,06,248 chest X-rays across 18 public healthcare sites in the state.
-    locator: Press release, paragraph 5
+    locator: Press release body, outcomes paragraph
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-11
-  content: 6383ff09da4dafbce08f2351facf86a83fb7edb8b7a015d3ae8e04e03f3f535e
-verification:
-  drafter:
-    vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-11
-  verifier:
-    vendor: openai
-    model: gpt-6.1-sol
-    date: 2026-11-11
-    verdict: fail
-  record: goa-ai-lung-cancer-screening/2026-11-11.json
+  model: claude-opus-5-5
+  date: 2026-11-12
+  via: claude-login
+  content: 583fb93b348218a1a4a14da671eaf7137810b0f8fabaa1e50f67e30ffb62f9f7
 held:
   reason: ungrounded
   since: 2026-11-11
