@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tongji-ai-nutrition-gi-surgery-rct",
+  "date": "2026-11-12",
+  "as_of": "2026-11-12",
+  "entry_sha256": "c8b3617652a6c34c0cf4ebeb52baca2e9ce1763eb276046f7fb580a4c664271d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-12"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s00520-026-11401-7",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-12T00:16:05.261Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13719733/fullTextXML",
+      "sha256": "6f3404b08461a381ced4a4846fa14626b5fb79d0ca8b37db059c07e9d52b25ca",
+      "chars": 63962,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy intake adequacy at 30 days post-discharge compared with the standard care group (66.7% vs. 40.0%,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "The 66.7% energy adequacy rate in the AI-guided group represents a meaningful improvement over the 40% baseline observed with standard care",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy adequacy (66.7% vs. 40.0%, OR 3.0, 95% CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "(66.7% vs. 40.0%, odds ratio OR = 3.0, 95% confidence interval CI 1.3–7.1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Protein intake adequacy was also significantly higher in the AI-guided group (62.2% vs. 35.6%, OR 2.9, 95% CI 1.2–6.8",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The AI-guided group achieved significantly higher energy intake adequacy at 30 days post-discharge compared with the standard care group (66.7% vs. 40.0%,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Protein intake adequacy was also significantly higher in the AI-guided group (62.2% vs. 35.6%,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "In this randomized controlled trial of 90 patients undergoing laparoscopic gastric or colorectal cancer surgery",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "we screened 187 patients undergoing elective laparoscopic gastrointestinal cancer surgery at Tongji Hospital.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-12",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "unsupported",
+          "note": "The quote establishes 187 screened patients, not the field's 90 randomized patients."
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The randomized comparison tested AI generation, individualization, quantified targets, written guidance and clinician review together against standard generic discharge advice.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": true,
+        "note": "The entry has no achieved dates; Methods gives January–March 2026 screening, whereas Results gives December 2025–February 2026, followed by 30-day post-discharge assessment."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The authors declare no competing interests; the disclosed foundation funding establishes no vendor conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "Conflicting recruitment months prevent exact dating, but both accounts place the measured benefits within the window."
+      },
+      "summary": "The source supports improved short-term dietary target achievement in a randomized trial of 90 patients with a prespecified primary endpoint and registration before enrollment. It does not isolate AI's contribution or establish longer-term nutritional or clinical benefits."
+    },
+    "error": null,
+    "tokens": {
+      "input": 25762,
+      "output": 855,
+      "total": 26617,
+      "cached": 0,
+      "reasoning": 312
+    },
+    "duration_ms": 19688
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients.."
+  }
+}

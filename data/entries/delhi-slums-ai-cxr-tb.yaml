@@ -108,10 +108,10 @@ verification:
     vendor: openai
     model: gpt-6.1-sol
     date: 2026-11-12
-    verdict: fail
-  record: delhi-slums-ai-cxr-tb/2026-11-12.json
-held:
-  reason: ungrounded
-  since: 2026-11-12
-  detail: "reach (receipt 8): unsupported, The reach receipts establish age eligibility, 349 clusters and six districts, but neither establishes the claimed 168,568 residents.."
-  record: delhi-slums-ai-cxr-tb/2026-11-12.json
+    verdict: pass
+  record: delhi-slums-ai-cxr-tb/2026-11-12-2.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not measured against something yet (The measured-against test fails because no control, prior period or comparable benchmark is reported; the cited prevalence survey is contextual.).
+    - "The two checkers disagreed on window: the drafter said ongoing and the verifier said in. The entry shows the drafter's grade, ongoing; treat that grade as unsettled."

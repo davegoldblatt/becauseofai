@@ -108,9 +108,9 @@ verification:
     model: gpt-6.1-sol
     date: 2026-11-12
     verdict: fail
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
 held:
-  reason: ungrounded
-  since: 2026-11-11
-  detail: "headline (receipt 1): unsupported, The quote establishes 44 and 46 days but does not establish the headline's five hospitals.."
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12.json
+  reason: fails-test
+  since: 2026-11-12
+  detail: "The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
