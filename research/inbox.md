@@ -321,3 +321,18 @@ Candidates: 120 over 2026-11-09 to 2026-11-11, 13 flagged randomized, 0 alerts, 
 - Protocols to watch: ambient AI scribe head-to-head ([medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1), logged 2026-11-10), ROMIAE-2 AI-ECG ([CEEM](https://doi.org/10.15441/ceem.26.305), logged 2026-11-09).
 - Still open: LATENT (Circulation), Zambia AI ultrasound, EClinicalMedicine diabetic foot ulcer trial, all unreadable as logged earlier.
 - Skipped: AEA registrations in development, protocols, reviews, retrospective validations, benchmarks, model-accuracy papers, news and commentary.
+
+## 2026-11-13 (daily scout)
+
+Candidates: 146 over 2026-11-11 to 2026-11-13, 16 flagged randomized, 0 alerts, 5 source errors (Crossref 404s and one 429). No entry drafted: the new hits are unreadable, registrations, or fail the tests.
+
+- SPOT-TB published in Lancet Global Health. [doi](https://doi.org/10.1016/j.langlo.2026.104090) (2026-11-12). Same trial as the existing entry `spot-tb-ai-camp-targeting-null`; abstract matches (ITT RR 1.07, 0.94–1.22; per-protocol 1.32; 3,936 camps, 269,254 screened). Missing for a strict upgrade: full text, which the reader could not get.
+- Geospatial AI (AI-NETRA) targeting of TB case finding in Pune, quasi-experimental, four TB Units. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.11.26367599v1). Reader returned a stub. Missing: full text, dates, absolute yields, comparison design.
+- Generative AI vs primary care physicians for chronic disease management. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.10.26367736v1). Reader returned a stub. Missing: design, whether real patients, outcomes.
+- CT-based AI risk support for cystic renal masses, randomized implementation study. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Reader returned a stub. Missing: full text, whether the randomized part involved patients.
+- PARTNER pregnancy decision support, ended with no results posted. [ISRCTN15732844](https://www.isrctn.com/ISRCTN15732844). Still a stub; logged 2026-11-11.
+- Skipped: AEA registrations in development, simulation and reader studies, benchmarks, reviews, news and market pieces.
+
+### Alerts
+
+- `spot-tb-ai-camp-targeting-null`: the peer-reviewed Lancet Global Health version is out (doi above); its abstract matches the entry's numbers. Check whether to add it as a source and drop "Not yet peer reviewed" in the caveat.
