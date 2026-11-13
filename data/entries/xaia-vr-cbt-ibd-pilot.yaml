@@ -1,0 +1,82 @@
+id: xaia-vr-cbt-ibd-pilot
+section: because
+rank: 38
+headline: >-
+  Because of an AI conversational avatar in virtual reality, adults with inflammatory bowel disease
+  reported lower pain and anxiety right after a single cognitive-behavioral-therapy session, in a
+  small two-centre pilot with no control group.
+impact: "Lower anxiety after one session (pilot)"
+impact_number: "−10.65"
+impact_label: "change in State-Trait Anxiety Inventory score after one 30-minute AI virtual-reality CBT session"
+summary: >-
+  Thirty-four adults with IBD at two US medical centres completed one session with the XAIA conversational
+  avatar, and pain and anxiety were measured before and after.
+caveat: >-
+  A single-arm pilot with before-and-after scores on the same day, no control group, and an exploratory outcome;
+  nothing shows the effect lasts.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "The same participants' pain and anxiety scores before vs after one 30-minute session with the XAIA avatar; no control group"
+effect:
+  relative: "Pain improved (-0.46; P = .011) and anxiety (-10.65; P"
+  absolute: null
+reach: "34 adults with inflammatory bowel disease at the University of Chicago and Cedars-Sinai"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-11-05
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "The application of an artificial intelligence-enhanced virtual reality cognitive behavioral therapy tool is feasible and acceptable in patients with inflammatory bowel disease: A multicenter mixed methods pilot study (Inflammatory Bowel Diseases)"
+    url: https://doi.org/10.1093/ibd/izag208
+    type: primary
+conflicts: "The abstract states no funding or author relationships. The tool is the authors' own study product; one recruiting centre is the authors' own institution. Vendor ties not visible in the abstract."
+what_would_change: null
+notes: >-
+  verify: only the abstract could be read; the source gives no period for the study, so dates and the window grade are left empty.
+  verify: the abstract gives the pain change as -0.46 without its scale and cuts off after the anxiety P value.
+  verify: author or developer ties to the XAIA tool are not shown in the abstract.
+related: []
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: Each participant is compared only with their own earlier score after a single session with no control group, so the change cannot be separated from the setting, attention, or the passage of time and attribution is bundled.
+receipts:
+  - field: impact_number
+    quote: improvement in pain (-0.46; P = .011) and anxiety (-10.65; P
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: improvement in pain (-0.46; P = .011) and anxiety (-10.65; P
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Thirty-four participants (median age 34 years
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 1e0d4156444e95787cd825b603545831167ba998f4ee6240274d2345cf990c97
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: xaia-vr-cbt-ibd-pilot/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "evidence: drafter D, verifier could not grade."
+  record: xaia-vr-cbt-ibd-pilot/2026-11-13.json

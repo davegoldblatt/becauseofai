@@ -97,3 +97,21 @@ Rejected:
 - Already entries: AI-INFOCARE, Montpellier discharge documents, Flourish, EAGLE, CSUN chatbot, NUMI (the Hamilton County entry exists).
 - Protocols or no results: AEA registry trials 19796, 19960, 20025, 20016; medRxiv imaging-summary protocol.
 - Diagnostic accuracy or clinician task only: AI auscultation (NEJM AI), reliance patterns (Lancet Digital Health), community chatbot (AI vs AI, no health outcome).
+
+## 2026-11-13, slice 6: papers and trial results, 2026-11-02 to 2026-11-09
+
+Drafted:
+- tsm-al-llm-residents-clinical-reasoning-rct: 68 orthopedic residents randomized to LLM-integrated teaching vs traditional, unassisted final reasoning score 7.32 vs 5.12 (BMC Med Educ, full text; no dates, window empty).
+- ai-generated-forensic-images-medical-students-reasoning: 249 MBBS students, non-randomized, adjusted reasoning difference 2.4 points (Cureus, full text; no dates).
+- xaia-vr-cbt-ibd-pilot: 34 IBD patients, single AI-VR CBT session, anxiety change -10.65, no control (IBD abstract only; no dates).
+
+Rejected:
+- Maternal health generative AI RCT (JAMA Netw Open): already an entry (rosie-chatbot-maternal-null).
+- ALERT-PA (NCT05925569, results read): rule-based electronic alert, no AI.
+- Doppler AI feedback RCT (AJOG MFM, abstract): clinicians on image vignettes, no patients.
+- Diabetic foot ulcer XAI (EClinicalMedicine, full text): primary outcome is expert rating of recommendations; patient-level numbers only in a supplement; usual-care arm's AI versions never reached patients.
+- NHREF OtoScan (medRxiv, full text): deployed but no prospective results reported.
+- Acne trial with synthetic data (JDD): protocol, no results.
+- Pharmacology tutorial AI (BMC Med Educ): student perceptions; edge-AI pose estimation (medRxiv): HTTP 429, feasibility only.
+- Protocols and reviews: ambient scribe head-to-head, ROMIAE-2, AI smoking-cessation and cardiology meta-analyses, other retrospective model studies, surveys.
+- Already entries: LATENT AF trial.

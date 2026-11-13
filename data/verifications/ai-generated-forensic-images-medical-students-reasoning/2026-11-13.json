@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-generated-forensic-images-medical-students-reasoning",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "e5feabef4cb80adcbdb620fad6ee734f76d37b0a2116837fdf4f1f62d76ddf70",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.7759/cureus.117464",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-13T17:28:51.376Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13732507/fullTextXML",
+      "sha256": "e4e9b4945ee92ed0654cccaed555617fe91c95b2b9dbefeb712e55c62a218a30",
+      "chars": 57560,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "enrolled and allocated 249 Phase II and Phase III MBBS students",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-13",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison changed the image source while holding cases, faculty, teaching procedures, duration, and expert review constant, although nonrandomized allocation limits causal inference.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods give January–July 2025 as the study period; the entry leaves achieved dates unset."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The authors declare no funding or financial or other relationships; the entry acknowledges that they evaluated their own intervention."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports a 2.4-point adjusted clinical reasoning advantage in a nonrandomized comparison, with 249 students allocated and 227 analyzed for the primary outcome. The study occurred before the window, at one institution, and does not establish causation or transfer to clinical practice."
+    },
+    "error": null,
+    "tokens": {
+      "input": 23044,
+      "output": 618,
+      "total": 23662,
+      "cached": 0,
+      "reasoning": 202
+    },
+    "duration_ms": 19664
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

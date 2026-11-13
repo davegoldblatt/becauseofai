@@ -1,0 +1,90 @@
+id: tsm-al-llm-residents-clinical-reasoning-rct
+section: because
+rank: 36
+headline: >-
+  Because of AI, orthopedic surgery residents trained with a structured, faculty-supervised
+  large-language-model framework scored higher on clinical reasoning in an unassisted final
+  examination than residents taught the traditional way, in a randomized trial in Shanghai.
+impact: "Higher unassisted clinical reasoning (RCT)"
+impact_number: "7.32 vs 5.12"
+impact_label: "clinical reasoning score in the unassisted final exam, LLM-framework residents vs traditionally taught residents"
+summary: >-
+  Residents at one hospital were randomly assigned to a five-step case-analysis framework
+  in which a large language model acted as a supervised aid, or to traditional teaching,
+  and were compared over 16 weeks of formative assessments and a final examination taken
+  without the model.
+caveat: >-
+  A single-centre trial of orthopedic residents using standardized case materials and no change to patient care;
+  the outcomes are examination and faculty ratings, not patient outcomes, and the framework is a package of
+  teaching method plus LLM.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Residents randomly assigned to the Teacher-Student-Machine Interaction Autonomous Learning (LLM-integrated) framework vs residents taught by traditional teaching"
+effect:
+  relative: "Fewer LLM-framework residents needed complete supervision (11.76% vs. 29.41%)"
+  absolute: "Unassisted final examination clinical reasoning score 7.32 ± 2.30 vs. 5.12 ± 1.66"
+reach: "68 orthopedic surgery residents at Changzheng Hospital, Shanghai"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-04
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "Teacher-student-machine interaction autonomous learning: a structured LLM-integrated framework for developing independent clinical reasoning in residency training (BMC Medical Education)"
+    url: https://doi.org/10.1186/s12909-026-09650-5
+    type: primary
+conflicts: "No competing interests declared; no external funding. The authors designed and evaluated their own teaching framework."
+what_would_change: null
+notes: >-
+  verify: the source gives no calendar period for the 16-week training, so dates and the window grade are left empty.
+  verify: the trial registration is not stated in the text read, so evidence is B rather than A.
+  verify: the EPA and faculty-rating percentages in the results text do not all match the counts shown for n = 34 per group.
+  verify: the outcomes are examinations and faculty ratings on standardized cases; no patient outcomes were measured.
+related: []
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: Residents were randomized to the LLM-integrated framework or traditional teaching, but the arms differ in the whole teaching package, not only the model, so attribution is bundled.
+receipts:
+  - field: impact_number
+    quote: 7.32 ± 2.30 vs. 5.12 ± 1.66
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 7.32 ± 2.30 vs. 5.12 ± 1.66
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: fewer TSM-AL residents requiring complete supervision (11.76% vs. 29.41%)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 68 orthopedic surgery residents enrolled in standardized
+    locator: Results, Study population and baseline characteristics
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 8c7443aded01703dde3cdcbb9e7c0e38045b8a13f2250e44b10efec21c243b20
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json

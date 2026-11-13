@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tsm-al-llm-residents-clinical-reasoning-rct",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "8c7443aded01703dde3cdcbb9e7c0e38045b8a13f2250e44b10efec21c243b20",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12909-026-09650-5",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-13T17:29:13.522Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13726233/fullTextXML",
+      "sha256": "31b724d0b9d23017967449c42c2a7625cb089ebe880faf8d72e2651956271514",
+      "chars": 48081,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "7.32 ± 2.30 vs. 5.12 ± 1.66",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "7.32 ± 2.30 vs. 5.12 ± 1.66",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "fewer TSM-AL residents requiring complete supervision (11.76% vs. 29.41%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 68 orthopedic surgery residents enrolled in standardized",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-13",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized comparison tested a structured, supervised LLM teaching framework against traditional teaching, without separating the model from the pedagogical changes.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods date the study to September 2024–June 2025; the entry leaves achieved dates null."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor-related conflict is shown; however, the Funding section lists institutional program support despite the entry's claim of no external funding."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports improved unassisted examination performance among actual residents receiving the bundled intervention before the window. Evidence is ungraded because this randomized study has no stated preregistered primary endpoint and fits none of the other evidence categories; patient benefits were not measured."
+    },
+    "error": null,
+    "tokens": {
+      "input": 22145,
+      "output": 597,
+      "total": 22742,
+      "cached": 0,
+      "reasoning": 161
+    },
+    "duration_ms": 19412
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}
