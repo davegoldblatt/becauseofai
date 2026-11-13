@@ -1,0 +1,63 @@
+id: ai-generated-forensic-images-medical-students-reasoning
+section: because
+rank: 37
+headline: >-
+  Because of AI-generated teaching images, medical students in a forensic medicine course in India
+  scored higher on clinical reasoning than classmates who used conventional forensic photographs,
+  in a non-randomized comparison.
+impact: "Higher clinical reasoning scores (controlled study)"
+impact_number: "+2.4 pts"
+impact_label: "adjusted clinical reasoning score, AI-generated images vs conventional images"
+summary: >-
+  MBBS students in case-based forensic-medicine sessions were allocated to images made with GPT-Image-1
+  and checked by faculty, or to conventional forensic images, and compared on clinical reasoning
+  after the sessions and again five to six weeks later.
+caveat: >-
+  Non-randomized allocation, sessions taught separately by group, and the authors state the result is an
+  association that does not establish that AI imagery alone caused the difference; the outcome is a
+  reasoning score, not clinical practice.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Students taught with expert-validated GPT-Image-1 forensic images vs students taught with conventional forensic images, same cases, facilitators and questions, adjusted for baseline reasoning"
+effect:
+  relative: "Adjusted mean difference of 2.4 points (95% CI, 1.4-3.4"
+  absolute: null
+reach: "249 Phase II and Phase III MBBS students at Indian medical colleges"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-05
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "Use of Expert-Validated AI-Generated Forensic Images in Case-Based Learning and Clinical Reasoning Among Undergraduate Medical Students: A Two-Arm Educational Intervention Study (Cureus)"
+    url: https://doi.org/10.7759/cureus.117464
+    type: primary
+conflicts: "Authors declare no financial support and no financial or other relationships. The authors ran and evaluated their own teaching intervention."
+what_would_change: null
+notes: >-
+  verify: the source gives no calendar period for the sessions, so dates and the window grade are left empty.
+  verify: allocation was non-randomized; the arms were taught in separate sessions and clustering by session was not modelled.
+  verify: the unit of the reasoning score is the study's own scale (means about 25 vs 23), not a standard scale.
+related: []
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: The two groups had identical learning objectives, cases, facilitators and questions and differed in the source of the images, but allocation was not random, so attribution rests on a controlled non-randomized comparison.
+receipts:
+  - field: impact_number
+    quote: with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: enrolled and allocated 249 Phase II and Phase III MBBS students
+    locator: Abstract, Methods
+    source: 0
