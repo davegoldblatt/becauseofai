@@ -90,3 +90,13 @@ receipts:
     quote: March 30–April 3, teachers selected a class period to administer a short delayed assessment,
     locator: Section 3.1 Setting
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 1b06bb70779882e3df1ade1861c5b58769e74dea0fbb81bfc57cdc2b72211e05
+held:
+  reason: ungrounded
+  since: 2026-11-13
+  detail: No receipt for headline.
+  record: numi-ai-math-tutoring-hamilton-county/2026-11-13.json

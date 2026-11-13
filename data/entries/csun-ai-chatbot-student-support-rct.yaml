@@ -75,3 +75,24 @@ receipts:
     quote: Information from Fall 2018 to Spring 2023
     locator: Impact estimates on enrollment and graduation
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: ba26dedaaee3a963568a43320841ec5a276640266776c5046b0869666500c560
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: csun-ai-chatbot-student-support-rct/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled."
+  record: csun-ai-chatbot-student-support-rct/2026-11-13.json
