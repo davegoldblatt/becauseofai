@@ -65,3 +65,21 @@ Rejected:
 - Hopkins AI eye-exam referrals (HTTP 403), Bradford skin cancer (403), LSHTM Tanzania page (403; paper read instead).
 - Viz.ai transfer times (vendor, door-in-door-out), Italian stroke abstract, ARDA million screened, Uganda/Rwanda/AffEx (no outcome number), NHS breast AI trial (no results yet), RadNet ASSURE (US private network, 2025).
 - Gastric AI trial in China (null, not read), Goa 127,836 count (no outcome figure).
+
+## 2026-11-13, slice 4: inbox leads, part 5 of 5
+
+Drafted (2):
+- csun-ai-chatbot-student-support-rct: RCT of an AI text chatbot, about 4,361 vs 4,347 first-year students; +34 points enrolled after first reminder, no effect on GPA, persistence or graduation (not-because; PDF read; window pre, 2018 cohorts).
+- numi-ai-math-tutoring-hamilton-county: NBER RCT, grades 6 to 8 in 20 schools; LLM tutor +3.1 points on a delayed test (p=0.065, suggestive) and +8.5 points next-attempt correctness (PDF read).
+
+Rejected:
+- AJOG Doppler AI feedback: standardized image vignettes, no patients.
+- Punjab AI diffusion (Frontiers): cross-sectional survey of 101 farmers, perceived outcomes.
+- Flourish NEJM AI: already an entry. MEnD-AKI, ARIA Mayo, micro-TESE, Tongji nutrition: already entries or rejected earlier.
+- Zambia AI obstetric POCUS (IJGO): abstract only; outcome is dating discrepancy vs LMP (51% met re-dating criteria), no outcome measured.
+- DFU explainable AI (EClinicalMedicine): randomised part scored offline expert ratings of recommendations; patient outcome numbers only in supplement.
+- AI chest-radiograph triage (Radiography): narrative review.
+- PREVERY (medRxiv): before-and-after, self-report, no control, no effect numbers in abstract.
+- Ghana literacy (World Bank): AI only used to write lesson plans, effect not attributable to AI.
+- Bihar flood warnings (PreventionWeb) and ISRCTN15732844 PARTNER: HTTP 403 and 6-character stub; both ERIC education papers (JCAL, JECR): HTTP 403.
+- Protocols: DEEP-AF, ROMIAE-2, ambient scribe head-to-head.

@@ -1,0 +1,77 @@
+id: csun-ai-chatbot-student-support-rct
+section: not-because
+rank: 13
+headline: >-
+  An AI text-messaging chatbot at a large public university, tested in a
+  randomized trial of two entering cohorts, sped up enrollment steps but left
+  GPA, persistence and graduation unchanged over four years.
+impact: "Faster paperwork, no change in grades or persistence (RCT)"
+impact_number: "+34 pts"
+impact_label: "more treated students enrolled by August 16 after the first text reminder; no detectable effect on GPA or persistence"
+summary: >-
+  California State University, Northridge sent text messages through an
+  AI-enabled chatbot to about 4,361 randomly chosen first-year undergraduates
+  in the 2018 and 2019 cohorts and compared them with about 4,347 controls. The
+  working paper finds large gains on time-sensitive administrative steps and no
+  statistically significant difference in enrollment, persistence, credits, GPA
+  or four-year graduation.
+caveat: >-
+  Working paper, not peer-reviewed; the cohorts entered in 2018 and 2019, before
+  generative chatbots, so it describes an earlier generation of the tool; most
+  targeted-campaign effects (for example FAFSA reminders) could not be measured.
+domain: education
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Students randomly assigned to receive the chatbot's text messages vs students randomly assigned to receive none, within two entering cohorts"
+effect:
+  relative: "Treated students 34 percentage points more likely to enroll by August 16 after the first reminder; no statistically significant difference in enrollment, persistence, GPA or graduation"
+  absolute: null
+reach: "About 4,361 treated and 4,347 control first-year undergraduates at CSUN"
+dates:
+  achieved_start: 2018
+  achieved_end: 2023
+  published: 2026-07
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "EdWorkingPaper 26-1409: Scaling student support with conversational artificial intelligence (Mata, Russell, Page)"
+    url: https://edworkingpapers.com/sites/default/files/ai26-1409.pdf
+    type: primary
+conflicts: "none found"
+what_would_change: null
+notes: >-
+  verify: the landing page is titled "Sustaining AI-Enabled Student Support: A Four-Year Implementation and Impact Study" (July 2026); the PDF read is dated February 2026 and titled "Scaling student support with conversational artificial intelligence".
+  verify: the achieved window is the span of outcome data (Fall 2018 to Spring 2023); the paper does not give message start and end dates.
+related: [maryland-ai-tutor-negative]
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: Students were randomly assigned within cohorts to receive the chatbot's messages or none, so differences between the arms are attributable to the chatbot.
+receipts:
+  - field: impact_number
+    quote: treated students being 34 percentage points more
+    locator: Targeted campaigns and impact estimates on enrollment
+    source: 0
+  - field: effect.relative
+    quote: treated students being 34 percentage points more
+    locator: Targeted campaigns and impact estimates on enrollment
+    source: 0
+  - field: reach
+    quote: cohorts, the tool was experimentally tested with approximately 4,361 undergraduates, with another
+    locator: Experimental Design
+    source: 0
+  - field: reach
+    quote: 4,347 students assigned to the control group.
+    locator: Experimental Design
+    source: 0
+  - field: dates.achieved_start
+    quote: Information from Fall 2018 to Spring 2023
+    locator: Impact estimates on enrollment and graduation
+    source: 0
+  - field: dates.achieved_end
+    quote: Information from Fall 2018 to Spring 2023
+    locator: Impact estimates on enrollment and graduation
+    source: 0
