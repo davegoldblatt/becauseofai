@@ -83,3 +83,17 @@ Rejected:
 - Ghana literacy (World Bank): AI only used to write lesson plans, effect not attributable to AI.
 - Bihar flood warnings (PreventionWeb) and ISRCTN15732844 PARTNER: HTTP 403 and 6-character stub; both ERIC education papers (JCAL, JECR): HTTP 403.
 - Protocols: DEEP-AF, ROMIAE-2, ambient scribe head-to-head.
+
+## 2026-11-13, slice 1: inbox leads, part 2 of 5
+
+Drafted:
+- mgb-neurology-portal-message-routing: Epic AI message routing, controlled ITS, median time to first action 11.3 h to 1.0 h (medRxiv, full text).
+- gleamer-boneview-paediatric-ed-fracture-exclusion: BoneView second read in a paediatric ED, consult rate 73% to 68.3%, stay 2.25 to 1.78 h without consult (Injury abstract only).
+
+Rejected:
+- Change.org write-with-AI (arXiv, read in full): outcome is petition comments and signatures, platform engagement, not a benefit to a person.
+- Colposcopy training RCT (JOGHR, abstract): trainees' test scores, no patients.
+- NEJM AI clinical documentation (AIx2601335), BJET dialogic reading, PSY-CHAI ISRCTN: HTTP 403 or 6-character stub; not readable.
+- Already entries: AI-INFOCARE, Montpellier discharge documents, Flourish, EAGLE, CSUN chatbot, NUMI (the Hamilton County entry exists).
+- Protocols or no results: AEA registry trials 19796, 19960, 20025, 20016; medRxiv imaging-summary protocol.
+- Diagnostic accuracy or clinician task only: AI auscultation (NEJM AI), reliance patterns (Lancet Digital Health), community chatbot (AI vs AI, no health outcome).
