@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mgb-neurology-portal-message-routing",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "aa5e30c00bcf1695bdfcebcbc4ac0d37457d9ac0b83c9ced7bd2f23901a70ef2",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2.full",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-13T08:48:39.132Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2.full",
+      "sha256": "7bd38372f4746b6386e7dfc1cc0076e0cf76fb66d0a59aa18ecc17381072f5ef",
+      "chars": 35109,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "significant immediate differential level change in median weekly hours to first action at Site A (−92.5%, 95% CI: −97.5% to −78.0%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Pre-intervention, median weekly time to first action was 11.3 hours (Site A) and 16.1 hours (Site B)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "fell to 1.0 hours (Site A; Figure 1 ) and 0.6 hours (Site B; Figure 2 )",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Among 24,142 messages analyzed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "On April 12th, 2026, we implemented Epic's In Basket PMAR Categorization and Augmented Response Technology (ART)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "We included messages from January 11, 2026, to May 1, 2026",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-13",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "The controlled interrupted time series compares divisions receiving the AI tools with concurrent matched divisions retaining their existing workflows.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": true,
+        "note": "Methods explicitly give April 12, 2026 implementation and May 1, 2026 data cutoff, but these dates cannot accommodate the stated seven-week or four-week post-intervention follow-up."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor funding, vendor employment, equity, patent, or licence is disclosed; the source names philanthropic funding and reports no author conflicts."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preprint supports faster initial action on real patient messages against concurrent matched controls, including all quoted numerical results. Message closure did not significantly improve, and the stated follow-up durations conflict with the explicit calendar dates."
+    },
+    "error": null,
+    "tokens": {
+      "input": 19269,
+      "output": 692,
+      "total": 19961,
+      "cached": 0,
+      "reasoning": 178
+    },
+    "duration_ms": 20403
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The preprint supports faster initial action on real patient messages against concurrent matched controls, including all quoted numerical results. Message closure did not significantly improve, and the stated follow-up durations conflict with the explicit calendar dates.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

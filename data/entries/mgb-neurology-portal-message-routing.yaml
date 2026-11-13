@@ -52,27 +52,27 @@ history:
 rationale: The epilepsy division's message times were compared with those of two volume-matched neurology divisions without the tool across the same weeks, so the controlled before-after difference is attributable to the categorization and routing tool.
 receipts:
   - field: headline
-    quote: 'pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)'
+    quote: "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)"
     locator: Abstract, Results
     source: 0
   - field: headline
-    quote: 'falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)'
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: 'falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)'
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: 'pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)'
+    quote: "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)"
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: 'falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)'
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: 'significant immediate differential level change in median weekly hours to first action at Site A (−92.5%, 95% CI: −97.5% to −78.0%)'
+    quote: "significant immediate differential level change in median weekly hours to first action at Site A (−92.5%, 95% CI: −97.5% to −78.0%)"
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -95,3 +95,20 @@ receipts:
     quote: We included messages from January 11, 2026, to May 1, 2026
     locator: Methods, Study Design
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: aa5e30c00bcf1695bdfcebcbc4ac0d37457d9ac0b83c9ced7bd2f23901a70ef2
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: pass
+  record: mgb-neurology-portal-message-routing/2026-11-13.json
+  confidence: strict

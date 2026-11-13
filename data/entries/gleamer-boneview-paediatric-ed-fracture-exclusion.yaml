@@ -78,3 +78,24 @@ receipts:
     quote: AI-RFDT (BoneView, Gleamer, Paris, France) was deployed on 1 October 2023
     locator: Abstract, Patients and methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 8d0a54f12376e72d62a0ac4ca81447b76f0a61dd3229c8f1fe52515e3406194d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: gleamer-boneview-paediatric-ed-fracture-exclusion/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "window: drafter pre, verifier could not grade."
+  record: gleamer-boneview-paediatric-ed-fracture-exclusion/2026-11-13.json
