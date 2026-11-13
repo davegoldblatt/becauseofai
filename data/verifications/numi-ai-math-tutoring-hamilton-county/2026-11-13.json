@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "numi-ai-math-tutoring-hamilton-county",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "1b06bb70779882e3df1ade1861c5b58769e74dea0fbb81bfc57cdc2b72211e05",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-13T00:48:10.915Z",
+      "final_url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "sha256": "6924720c044a0ffd8f0875afc6fdffecede7cce5a4b8c7b9d934c07c63993d63",
+      "chars": 178614,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Among mastery students, CAL-only students answered 37.0 percent of the practiced",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Students assigned to AI answered 40.2 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "interpreted as suggestive.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "AI increased the probability that the next attempt was correct by 8.5 percentage points.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The study included students in grades 6 through 8 across 20 schools and just under",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "March 23–27, 2026, teachers selected one regular math",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "March 30–April 3, teachers selected a class period to administer a short delayed assessment,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for headline."
+  }
+}

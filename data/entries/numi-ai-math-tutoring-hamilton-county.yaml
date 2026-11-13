@@ -1,0 +1,102 @@
+id: numi-ai-math-tutoring-hamilton-county
+section: because
+rank: 33
+headline: >-
+  An LLM math tutor given to middle-school students in Hamilton County, Tennessee
+  helped them recover from mistakes and, inside a mastery workflow, scored 3.1
+  points higher on a delayed test of practiced material, a suggestive result.
+impact: "Small, imprecise gain on a one-week delayed test (RCT)"
+impact_number: "+3.1 pts"
+impact_label: "on a delayed test of practiced material, AI vs computer-assisted practice alone (p=0.065)"
+summary: >-
+  An NBER working paper reports a randomized field experiment in which middle
+  school students in 20 Hamilton County schools practiced math on the NUMI
+  platform with or without an LLM tutor. Among students in the mastery
+  workflow, those with the AI tutor answered 40.2 percent of practiced delayed
+  test questions correctly against 37.0 percent for those with practice alone.
+caveat: >-
+  Working paper, not peer-reviewed; the authors call the delayed-test estimate
+  imprecise (p=0.065) and suggestive, the AI arm progressed more slowly, and the
+  test came one week after a single 50-minute session.
+domain: education
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: in
+comparison: "NUMI with an LLM tutor vs NUMI computer-assisted learning only, students randomized to each; mastery-workflow students compared on a delayed test one week later"
+effect:
+  relative: "Practiced Exercise 1 delayed-test correct: 40.2 percent with AI vs 37.0 percent CAL-only among mastery students"
+  absolute: "3.1 percentage points higher (p=0.065); after a mistake, the next attempt was 8.5 percentage points more likely to be correct"
+reach: "Grades 6 through 8 in 20 Hamilton County schools, just under 100 teachers"
+dates:
+  achieved_start: 2026-03-23
+  achieved_end: 2026-04-03
+  published: 2026-08
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "NBER Working Paper 35621: Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment"
+    url: https://www.nber.org/system/files/working_papers/w35621/w35621.pdf
+    type: primary
+conflicts: >-
+  Supported by the Smith Richardson Foundation, SSHRC, NSERC and J-PAL; the
+  authors' team developed the NUMI platform used in the experiment (the paper
+  thanks its developers). Registered as AEARCTR-0018678.
+what_would_change: "A replication with larger samples or a longer follow-up showing durable gains."
+notes: >-
+  verify: the practiced Exercise 1 gain is reported by the authors as suggestive (p=0.065); the unpracticed question shows about zero effect.
+  verify: the sample size was not located in the text read.
+  verify: the dates are the activity week (March 23 to 27, 2026) and the delayed assessment week ending April 3; the paper gives no year for the second week's dates beyond context.
+related: [maryland-ai-tutor-negative, sierra-leone-gemini-math]
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: Students were randomized to the AI tutor or to computer-assisted practice alone with the same platform, so the delayed-test gap isolates the tutor, though it is imprecise.
+receipts:
+  - field: impact_number
+    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
+    locator: Section 5.5, Delayed learning among mastery students
+    source: 0
+  - field: effect.relative
+    quote: Among mastery students, CAL-only students answered 37.0 percent of the practiced
+    locator: Section 5.5
+    source: 0
+  - field: effect.relative
+    quote: Students assigned to AI answered 40.2 percent
+    locator: Section 5.5
+    source: 0
+  - field: effect.absolute
+    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
+    locator: Section 5.5
+    source: 0
+  - field: effect.absolute
+    quote: interpreted as suggestive.
+    locator: Section 5.5
+    source: 0
+  - field: effect.absolute
+    quote: AI increased the probability that the next attempt was correct by 8.5 percentage points.
+    locator: Section 5.3
+    source: 0
+  - field: reach
+    quote: The study included students in grades 6 through 8 across 20 schools and just under
+    locator: Section 3.1 Setting
+    source: 0
+  - field: dates.achieved_start
+    quote: March 23–27, 2026, teachers selected one regular math
+    locator: Section 3.1 Setting
+    source: 0
+  - field: dates.achieved_end
+    quote: March 30–April 3, teachers selected a class period to administer a short delayed assessment,
+    locator: Section 3.1 Setting
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 1b06bb70779882e3df1ade1861c5b58769e74dea0fbb81bfc57cdc2b72211e05
+held:
+  reason: ungrounded
+  since: 2026-11-13
+  detail: No receipt for headline.
+  record: numi-ai-math-tutoring-hamilton-county/2026-11-13.json

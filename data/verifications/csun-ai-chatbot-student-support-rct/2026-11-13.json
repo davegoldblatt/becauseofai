@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "csun-ai-chatbot-student-support-rct",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "ba26dedaaee3a963568a43320841ec5a276640266776c5046b0869666500c560",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://edworkingpapers.com/sites/default/files/ai26-1409.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-13T00:47:53.400Z",
+      "final_url": "https://edworkingpapers.com/sites/default/files/ai26-1409.pdf",
+      "sha256": "136dee072ee79b0a6877702214a12cc64891c3df3061016edea165266d52c7d6",
+      "chars": 46041,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "treated students being 34 percentage points more",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "treated students being 34 percentage points more",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "cohorts, the tool was experimentally tested with approximately 4,361 undergraduates, with another",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "4,347 students assigned to the control group.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Information from Fall 2018 to Spring 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Information from Fall 2018 to Spring 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-13",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The trial compared AI-enabled chatbot outreach, including staff-crafted reminders and human support, against no chatbot outreach, so it tested the communication package.",
+      "achieved_dates": {
+        "from": "results",
+        "conflicting": false,
+        "note": "The outcome-data section explicitly gives Fall 2018 through Spring 2023."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Kresge Foundation funding and a CSUN-affiliated author are disclosed, but no vendor funding, employment, equity, patent or licence is shown."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The working paper supports the enrollment-reminder gain, sample sizes, study dates and lack of detectable effects on longer-term academic outcomes. Randomization is documented, but preregistration of a primary endpoint is not established, so evidence grade A cannot be confirmed."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20693,
+      "output": 595,
+      "total": 21288,
+      "cached": 0,
+      "reasoning": 105
+    },
+    "duration_ms": 15163
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}
