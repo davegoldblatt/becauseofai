@@ -1,0 +1,114 @@
+id: mgb-neurology-portal-message-routing
+section: because
+rank: 34
+headline: >-
+  Because of an AI tool that categorizes and routes patient portal messages, the
+  median time to first action in a Boston epilepsy clinic fell from 11.3 hours
+  to 1.0 hour.
+impact: "Messages acted on in about 1 hour, down from 11"
+impact_number: "11.3 → 1.0 h"
+impact_label: "median weekly time to first action on epilepsy portal messages, Site A"
+summary: >-
+  Two Mass General Brigham neurology sites switched on Epic's AI message
+  categorization and routing in their epilepsy divisions in April 2026. A
+  controlled interrupted time series against volume-matched neurology divisions
+  found much faster first action on patient messages, but no significant change
+  in time to closure.
+caveat: >-
+  A medRxiv preprint with 7 weeks of follow-up at one site and 4 weeks at the
+  other; only the epilepsy division of two sites was studied, and time to
+  closure did not significantly improve.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: in
+comparison: "Epilepsy division vs two message-volume-matched neurology control divisions, before and after the April 2026 switch-on (controlled interrupted time series)"
+effect:
+  relative: "Immediate differential change in median weekly hours to first action at Site A of −92.5% (95% CI −97.5% to −78.0%)"
+  absolute: "Median weekly time to first action fell from 11.3 hours to 1.0 hour at Site A and from 16.1 hours to 0.6 hours at Site B"
+reach: "24,142 patient portal messages analysed at two neurology sites"
+dates:
+  achieved_start: 2026-04-12
+  achieved_end: 2026-05-01
+  published: 2026-10-19
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "medRxiv: AI Tool Implementation to Assist with Management of Patient Portal Messages: Auto-Categorization and Routing"
+    url: https://www.medrxiv.org/content/10.64898/2026.10.19.26365557v2.full
+    type: primary
+conflicts: "The tool is Epic's own In Basket categorization and Augmented Response Technology, evaluated by its customer; funded by the Baker Family Initiative in Patient Experience and Outcomes; the authors report no conflicts of interest."
+what_would_change: null
+notes: >-
+  verify: publication date taken from the medRxiv DOI (2026.10.19); the page printed no posting date.
+  verify: the control divisions had no AI tool, but the study is not randomized.
+  verify: the outcome is a process measure (message response time), not a patient health outcome; no patient outcomes were measured.
+  verify: Site B's first-action effect was a downward trend (−43.5% per week), not a significant immediate level change; the headline uses Site A.
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: The epilepsy division's message times were compared with those of two volume-matched neurology divisions without the tool across the same weeks, so the controlled before-after difference is attributable to the categorization and routing tool.
+receipts:
+  - field: headline
+    quote: "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)"
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: "pre-intervention median weekly time to first action was 11.3 hours [IQR: 5.6, 15.1] (Site A)"
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: "falling post-intervention to 1.0 hour [IQR: 0, 3.1] (Site A)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: "significant immediate differential level change in median weekly hours to first action at Site A (−92.5%, 95% CI: −97.5% to −78.0%)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Pre-intervention, median weekly time to first action was 11.3 hours (Site A) and 16.1 hours (Site B)
+    locator: Results, first paragraph
+    source: 0
+  - field: effect.absolute
+    quote: fell to 1.0 hours (Site A; Figure 1 ) and 0.6 hours (Site B; Figure 2 )
+    locator: Results, first paragraph
+    source: 0
+  - field: reach
+    quote: Among 24,142 messages analyzed
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: On April 12th, 2026, we implemented Epic's In Basket PMAR Categorization and Augmented Response Technology (ART)
+    locator: Methods, Post In Basket Tools Intervention Workflow
+    source: 0
+  - field: dates.achieved_end
+    quote: We included messages from January 11, 2026, to May 1, 2026
+    locator: Methods, Study Design
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: aa5e30c00bcf1695bdfcebcbc4ac0d37457d9ac0b83c9ced7bd2f23901a70ef2
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: pass
+  record: mgb-neurology-portal-message-routing/2026-11-13.json
+  confidence: strict

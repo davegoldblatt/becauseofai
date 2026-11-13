@@ -1,0 +1,101 @@
+id: gleamer-boneview-paediatric-ed-fracture-exclusion
+section: because
+rank: 35
+headline: >-
+  Because of an AI fracture-detection second read, children sent home from a
+  paediatric emergency department without an orthopaedic consultation stayed
+  1.78 hours instead of 2.25.
+impact: "28 minutes shorter stay without orthopaedic consultation"
+impact_number: "−28 min"
+impact_label: "emergency stay for children with fractures ruled out and no orthopaedic consult"
+summary: >-
+  A tertiary paediatric emergency department added Gleamer's BoneView as a
+  passive second reader on radiographs in October 2023. A before-after cohort of
+  4,172 children with fractures ruled out found fewer orthopaedic consultations
+  and a shorter stay among those discharged without one, with no change in
+  length of stay among children with confirmed fractures.
+caveat: >-
+  A retrospective before-after study at a single hospital, so other changes over
+  time could contribute; only the abstract could be read, and the headline
+  length-of-stay figure for all children was cut off in the abstract text.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Children with fractures ruled out before vs after the AI tool, with children with confirmed fractures as an internal control"
+effect:
+  relative: "Orthopaedic consultation rate fell from 73% to 68.3%"
+  absolute: "Length of stay for children discharged without orthopaedic consultation fell from 2.25 to 1.78 hours, 28 minutes"
+reach: "4,172 paediatric patients with fractures ruled out at one tertiary paediatric emergency department"
+dates:
+  achieved_start: 2023-10-01
+  achieved_end: null
+  published: 2026-10-07
+  added: 2026-11-13
+  updated: 2026-11-13
+sources:
+  - title: "Injury: Effect of AI-assisted radiographic fracture detection on paediatric emergency department length of stay through fracture exclusion: A before-after cohort study (abstract via Europe PMC)"
+    url: https://doi.org/10.1016/j.injury.2026.113765
+    type: primary
+conflicts: "The tool is Gleamer's BoneView, evaluated by the hospital using it; the abstract states no funding or competing interests, and the full text could not be read."
+what_would_change: null
+notes: >-
+  verify: the abstract gives the deployment date (1 October 2023) but no end of the post-AI period, so achieved_end is empty.
+  verify: the abstract text is cut off after the subgroup stay figure (p-value and overall length-of-stay result missing); the full text could not be read.
+  verify: the before-after design cannot rule out other changes over time; the confirmed-fracture control group is the study's guard against this.
+history:
+  - date: 2026-11-13
+    note: Added by the backfill run.
+rationale: The hospital compared children with fractures ruled out before and after the tool, and children with confirmed fractures, who would not benefit from fracture exclusion, showed no change in stay.
+receipts:
+  - field: headline
+    quote: patients discharged without orthopaedic consultation (2.25→1.78 h, Δ -28 min
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: patients discharged without orthopaedic consultation (2.25→1.78 h, Δ -28 min
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: patients discharged without orthopaedic consultation (2.25→1.78 h, Δ -28 min
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: Orthopaedic consultation rates in the paediatric ED decreased from 73% to 68.3%
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: patients discharged without orthopaedic consultation (2.25→1.78 h, Δ -28 min
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: The study population comprised 4172 paediatric patients with rule-out fracture diagnoses
+    locator: Abstract, Patients and methods
+    source: 0
+  - field: dates.achieved_start
+    quote: AI-RFDT (BoneView, Gleamer, Paris, France) was deployed on 1 October 2023
+    locator: Abstract, Patients and methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 8d0a54f12376e72d62a0ac4ca81447b76f0a61dd3229c8f1fe52515e3406194d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: gleamer-boneview-paediatric-ed-fracture-exclusion/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "window: drafter pre, verifier could not grade."
+  record: gleamer-boneview-paediatric-ed-fracture-exclusion/2026-11-13.json
