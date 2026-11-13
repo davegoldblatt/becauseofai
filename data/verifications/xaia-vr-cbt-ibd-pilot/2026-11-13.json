@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "xaia-vr-cbt-ibd-pilot",
+  "date": "2026-11-13",
+  "as_of": "2026-11-13",
+  "entry_sha256": "1e0d4156444e95787cd825b603545831167ba998f4ee6240274d2345cf990c97",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-13"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1093/ibd/izag208",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-13T17:29:34.467Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fibd%2Fizag208%22&format=json&resultType=core",
+      "sha256": "6ebfcbcb5fdcbfb060c4d9a5503ec79c7f3d37739b7c5ca136b405a17c50d43e",
+      "chars": 2323,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "improvement in pain (-0.46; P = .011) and anxiety (-10.65; P",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "improvement in pain (-0.46; P = .011) and anxiety (-10.65; P",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Thirty-four participants (median age 34 years",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-13",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison measures participants before and after the combined AI avatar, immersive VR, and CBT session, without separating the components.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract provides no study dates; publication does not establish when benefits occurred."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract discloses no funding, vendor relationships, ownership, or patents; the entry's assertion of author ownership is not established."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The study dates are absent; the small uncontrolled research pilot also does not fit any supplied evidence-grade definition."
+      },
+      "summary": "The abstract supports immediate before-and-after pain and anxiety improvements in 34 participants receiving the combined intervention. It provides neither study dates nor a comparison isolating AI's contribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12285,
+      "output": 511,
+      "total": 12796,
+      "cached": 0,
+      "reasoning": 95
+    },
+    "duration_ms": 14550
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": null
+      }
+    ]
+  }
+}

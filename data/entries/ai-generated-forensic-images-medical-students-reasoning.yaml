@@ -61,3 +61,24 @@ receipts:
     quote: enrolled and allocated 249 Phase II and Phase III MBBS students
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: e5feabef4cb80adcbdb620fad6ee734f76d37b0a2116837fdf4f1f62d76ddf70
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: ai-generated-forensic-images-medical-students-reasoning/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "window: drafter no grade, verifier pre."
+  record: ai-generated-forensic-images-medical-students-reasoning/2026-11-13.json

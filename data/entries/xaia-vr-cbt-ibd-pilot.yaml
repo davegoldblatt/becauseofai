@@ -59,3 +59,24 @@ receipts:
     quote: Thirty-four participants (median age 34 years
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 1e0d4156444e95787cd825b603545831167ba998f4ee6240274d2345cf990c97
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: xaia-vr-cbt-ibd-pilot/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "evidence: drafter D, verifier could not grade."
+  record: xaia-vr-cbt-ibd-pilot/2026-11-13.json

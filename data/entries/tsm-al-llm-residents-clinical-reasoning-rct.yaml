@@ -67,3 +67,24 @@ receipts:
     quote: A total of 68 orthopedic surgery residents enrolled in standardized
     locator: Results, Study population and baseline characteristics
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-13
+  content: 8c7443aded01703dde3cdcbb9e7c0e38045b8a13f2250e44b10efec21c243b20
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-13
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-13
+    verdict: fail
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json
+held:
+  reason: grade-split
+  since: 2026-11-13
+  detail: "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json
