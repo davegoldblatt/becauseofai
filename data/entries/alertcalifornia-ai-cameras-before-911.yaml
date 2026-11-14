@@ -1,0 +1,80 @@
+id: alertcalifornia-ai-cameras-before-911
+section: because
+rank: 40
+headline: >-
+  Because of AI-watched cameras, more than half of the wildfires flagged by
+  California's ALERTCalifornia network were detected before any 911 call.
+impact: "More than half flagged before any 911 call"
+impact_number: "50%+"
+impact_label: "of flagged wildfire incidents detected before a 911 call"
+summary: >-
+  A trade-press report citing CAL FIRE data says ALERTCalifornia's AI-enabled
+  camera network flagged approximately 3,600 wildfire incidents in a recent
+  12-month span, and more than half of those detections came before the public
+  placed any 911 call, so crews could verify and deploy sooner.
+caveat: >-
+  A secondhand trade-press summary of agency data, with no period dates and no
+  measure of fires saved or acres averted; early detection is not shown to change
+  the outcome, and it does not say which detections the AI made versus people.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Time of the camera network's detection against the time of the first 911 call, across about 3,600 flagged incidents, per CAL FIRE data"
+effect:
+  relative: "More than half of those detections occurred before any 911 calls were placed by the public"
+  absolute: "The platform flagged approximately 3,600 wildfire incidents during a recent 12-month span"
+reach: "California, a network of more than 1,200 cameras"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-23
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Security Today: AI Camera Network Boosts Early California Wildfire Detection, 23 June 2026"
+    url: https://securitytoday.com/articles/2026/06/23/ai-camera-network-boosts-early-california-wildfire-detection.aspx
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are CAL FIRE's own data as relayed by a security-industry
+  trade outlet that also promotes the camera vendor Axis Communications; the
+  programme is run by UC San Diego. The report is not independent of the
+  vendor or the agency.
+what_would_change: "CAL FIRE's or ALERTCalifornia's published detection log with alert and 911 times, and the acreage of fires caught early against comparable fires."
+notes: >-
+  verify: the source says "a recent 12-month span" without dates, so dates and
+  the window grade are left empty.
+  verify: the same article's link to an Axis Communications customer story was
+  not read.
+history:
+  - date: 2026-11-14
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the camera detections go through human review and agency response, and the source compares detection time with 911 call time but not fire outcomes with and without the system.
+receipts:
+  - field: headline
+    quote: More than half of those detections occurred before any 911 calls were placed by the public
+    locator: Article body, paragraph 3
+    source: 0
+  - field: impact
+    quote: More than half of those detections occurred before any 911 calls were placed by the public
+    locator: Article body, paragraph 3
+    source: 0
+  - field: impact_number
+    quote: More than half of those detections occurred before any 911 calls were placed by the public
+    locator: Article body, paragraph 3
+    source: 0
+  - field: effect.relative
+    quote: More than half of those detections occurred before any 911 calls were placed by the public
+    locator: Article body, paragraph 3
+    source: 0
+  - field: effect.absolute
+    quote: the platform flagged approximately 3,600 wildfire incidents during a recent 12-month span
+    locator: Article body, paragraph 3
+    source: 0
+  - field: reach
+    quote: an expanded network of more than 1,200 cameras paired with artificial intelligence
+    locator: Article body, paragraph 1
+    source: 0

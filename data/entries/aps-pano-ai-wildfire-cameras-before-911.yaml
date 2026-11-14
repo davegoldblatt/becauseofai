@@ -1,0 +1,72 @@
+id: aps-pano-ai-wildfire-cameras-before-911
+section: because
+rank: 39
+headline: >-
+  Because of AI smoke-detection cameras, Arizona Public Service says it is
+  notified of wildfires about 45 minutes faster on average than the first 911
+  call.
+impact: "~45 min earlier than the first 911 call"
+impact_number: "~45"
+impact_label: "minutes earlier than the first 911 call, on average, for a utility's wildfire alerts"
+summary: >-
+  An Associated Press report says Arizona Public Service uses Pano AI cameras that
+  flag smoke for human analysts to verify; a utility meteorologist said the
+  alerts arrive about 45 minutes faster on average than the first 911 call, and
+  the Diamond Fire in Coconino National Forest was contained before it passed
+  7 acres.
+caveat: >-
+  A utility meteorologist's statement in a news report, with no data, period or
+  method shown; the cameras sit in remote areas where 911 calls are slow, and
+  human analysts verify each detection.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Time of the camera system's alert against the time of the first 911 call, as stated by the utility, with no data shown"
+effect:
+  relative: null
+  absolute: "Notifies them about 45 minutes faster on average than the first 911 call"
+reach: "Arizona Public Service's service area, Arizona"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-05-10
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "FireRescue1 (Associated Press): AI joins the wildfire watch across the West, 10 May 2026"
+    url: https://www.firerescue1.com/artificial-intelligence/ai-joins-the-wildfire-watch-across-the-west
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure is a statement by the utility's own meteorologist about its own
+  camera programme, reported in a news article; the cameras are supplied by the
+  vendor Pano AI, whose co-founder is also quoted. No independent audit.
+what_would_change: "The utility's alert and 911 timestamps for a stated set of fires, or an independent evaluation."
+notes: >-
+  verify: the source gives no period for the 45-minute average, so dates and the
+  window grade are left empty.
+  verify: the article does not say how many fires the average covers.
+history:
+  - date: 2026-11-14
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the camera alert is paired with human analysts who verify each detection and with the response that follows, and the source gives no comparison of outcomes with and without the system.
+receipts:
+  - field: headline
+    quote: the technology notifies them about 45 minutes faster on average than the first 911 call
+    locator: Article body, section "Where there are fewer eyes, AI looks for fires"
+    source: 0
+  - field: impact
+    quote: the technology notifies them about 45 minutes faster on average than the first 911 call
+    locator: Article body, section "Where there are fewer eyes, AI looks for fires"
+    source: 0
+  - field: impact_number
+    quote: the technology notifies them about 45 minutes faster on average than the first 911 call
+    locator: Article body, section "Where there are fewer eyes, AI looks for fires"
+    source: 0
+  - field: effect.absolute
+    quote: the technology notifies them about 45 minutes faster on average than the first 911 call
+    locator: Article body, section "Where there are fewer eyes, AI looks for fires"
+    source: 0
