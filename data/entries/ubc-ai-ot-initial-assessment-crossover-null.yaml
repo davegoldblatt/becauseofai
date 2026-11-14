@@ -76,3 +76,13 @@ receipts:
     quote: 28 gave reflection interviews
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: d27db685bd53134bcbbc38e80f2e8cf587095dc9659da262bc25ebe267764d00
+held:
+  reason: ungrounded
+  since: 2026-11-14
+  detail: "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text)."
+  record: ubc-ai-ot-initial-assessment-crossover-null/2026-11-14.json

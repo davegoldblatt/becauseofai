@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ubc-ai-ot-initial-assessment-crossover-null",
+  "date": "2026-11-14",
+  "as_of": "2026-11-14",
+  "entry_sha256": "d27db685bd53134bcbbc38e80f2e8cf587095dc9659da262bc25ebe267764d00",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-14"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42867899?resultType=core&format=xml",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-14T23:28:00.091Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42867899?resultType=core&format=xml",
+      "sha256": "bddec738e5d3360ccbe989f3fa1f8c39f8f84099210d1a5c76e4b287cda15900",
+      "chars": 4333,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Overall, 83% (25/30) preferred the human format.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Overall, 83% (25/30) preferred the human format.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "median 9.90 vs 7.53; Hodges-Lehmann difference 2.39, 95% CI 1.56-3.11; p < 0.001",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Overall, 83% (25/30) preferred the human format.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "28 gave reflection interviews",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text)."
+  }
+}
