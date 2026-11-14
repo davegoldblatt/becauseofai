@@ -68,3 +68,13 @@ receipts:
     quote: (May 2023-September 2025)
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: 7867e2cfe9ffd4a47411d1745731169008837dd591f4d6b72e005614ca010d45
+held:
+  reason: ungrounded
+  since: 2026-11-14
+  detail: No receipt for headline.
+  record: yan-ai-virtual-patient-colposcopy-residents-rct/2026-11-14.json

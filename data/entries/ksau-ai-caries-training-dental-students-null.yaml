@@ -53,3 +53,13 @@ receipts:
     quote: Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: f8ce52aa9c7226ce46dc5267a95af13aa4d0a89723ba5be5b522dc29246fc542
+held:
+  reason: ungrounded
+  since: 2026-11-14
+  detail: No receipt for headline.
+  record: ksau-ai-caries-training-dental-students-null/2026-11-14.json
