@@ -67,3 +67,13 @@ receipts:
     quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
     locator: Article body, NTIA white paper paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: 4edf55c628567d5816794957d81539a7b1342a09b8351e35ad039ca89c3cc36e
+held:
+  reason: ungrounded
+  since: 2026-11-14
+  detail: No receipt for reach.
+  record: jeffcom-911-ai-administrative-calls/2026-11-14.json

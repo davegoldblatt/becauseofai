@@ -78,3 +78,23 @@ receipts:
     quote: an expanded network of more than 1,200 cameras paired with artificial intelligence
     locator: Article body, paragraph 1
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: 4163607ad8695693c243172302222e0071c69e89ca26c2d4094367e0e38c9d85
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-14
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-14
+    verdict: pass
+  record: alertcalifornia-ai-cameras-before-911/2026-11-14.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The reporting period has no calendar boundaries, so the achieved dates and window cannot be established.).

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "jeffcom-911-ai-administrative-calls",
+  "date": "2026-11-14",
+  "as_of": "2026-11-14",
+  "entry_sha256": "4edf55c628567d5816794957d81539a7b1342a09b8351e35ad039ca89c3cc36e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-14"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-14T00:32:13.915Z",
+      "final_url": "https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine",
+      "sha256": "e5cc6efae03023f6a2ddd457f99161bee970174d28fe19f1a739deb1ed61e464",
+      "chars": 7444,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for reach."
+  }
+}

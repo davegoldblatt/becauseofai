@@ -70,3 +70,23 @@ receipts:
     quote: the technology notifies them about 45 minutes faster on average than the first 911 call
     locator: Article body, section "Where there are fewer eyes, AI looks for fires"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: f4d71a80039d728ac9dfe7a938179f14e4884acecdb88f198bf03dd2f7ac183b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-14
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-14
+    verdict: pass
+  record: aps-pano-ai-wildfire-cameras-before-911/2026-11-14.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The measurement period for the claimed average notification advantage is not given.).
