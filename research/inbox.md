@@ -336,3 +336,13 @@ Candidates: 146 over 2026-11-11 to 2026-11-13, 16 flagged randomized, 0 alerts, 
 ### Alerts
 
 - `spot-tb-ai-camp-targeting-null`: the peer-reviewed Lancet Global Health version is out (doi above); its abstract matches the entry's numbers. Check whether to add it as a source and drop "Not yet peer reviewed" in the caveat.
+
+## 2026-11-14 (daily scout)
+
+Candidates: 166 over 2026-11-12 to 2026-11-14, 15 flagged randomized, 10 announcements, 0 alerts, 4 source errors (Crossref 404s). No entry drafted: the new hits are registrations in development, protocols, simulations, or not AI.
+
+- Adaptive math practice and teacher data use, 440 schools in Tashkent, Uzbekistan, randomized. [AEA 19200](https://www.socialscienceregistry.org/trials/19200). In development (ends 2026-12-31). Missing: results, dates, effects. Watch.
+- AI decision support for public grant evaluators in Romania. [AEA 19908](https://www.socialscienceregistry.org/trials/19908). In development to 2029; protocol to watch.
+- Echo chambers / echo machines, LLM conversation and belief certainty. [PsyArXiv](https://osf.io/preprints/psyarxiv/7et5g_v3/). Preprint; not read; likely lab experiment on belief, not a benefit to people. Missing: whether any real-world benefit is measured.
+- Still open: SPOT-TB Lancet Global Health version, PARTNER (ISRCTN15732844), AI-NETRA Pune, CT cystic renal masses (EClinicalMedicine), all logged earlier and unreadable.
+- Skipped: HerzMobil heart failure telemonitoring (read: nurse-reviewed app, no AI), pharma-ads-and-chatbot study, PTSD prediction (model accuracy), market and opinion pieces, AEA surveys, protocols, reviews.
