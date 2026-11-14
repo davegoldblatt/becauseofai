@@ -1,0 +1,111 @@
+id: ai-micro-tese-nonobstructive-azoospermia
+section: because
+rank: 42
+headline: >-
+  Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of
+  men with non-obstructive azoospermia, against 47.6% with conventional
+  microdissection, and live birth per transfer was 38.5% against 26.8%.
+impact: "68.1% vs 47.6% sperm retrieval"
+impact_number: "68.1%"
+impact_label: "sperm retrieval with AI guidance, against 47.6% without"
+summary: >-
+  A retrospective two-centre cohort (Asian Journal of Andrology, November 2026)
+  compared micro-TESE with an AI augmented-reality microscope that marks
+  likely sperm-bearing tubules against conventional micro-TESE, and found
+  higher retrieval, fewer complications and more live births per transfer
+  with the AI.
+caveat: >-
+  Not randomized: patients were grouped by whether the AI microscope was
+  available, the study is retrospective, and the authors say causation needs
+  prospective randomized trials.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "AI-assisted micro-TESE (AI-SpermScope real-time guidance) vs conventional micro-TESE by the same three surgeons, retrospective consecutive cohort at two hospitals, 2020 to 2024, allocation by availability of the AI microscope, propensity-matched sensitivity analysis"
+effect:
+  relative: "Sperm retrieval odds ratio 3.182 (95% CI 2.374–4.265), multivariable"
+  absolute: "Sperm retrieval 68.1% vs 47.6% (20.5-point increase); live birth per transfer 38.5% vs 26.8% (11.5-point increase)"
+reach: "1286 men with non-obstructive azoospermia (542 AI-assisted, 744 conventional) at two reproductive medicine centres in Chengdu, China"
+dates:
+  achieved_start: 2020-01
+  achieved_end: 2024-12
+  published: 2026-11-06
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Asian Journal of Andrology: Artificial intelligence-assisted microdissection testicular sperm extraction improves sperm retrieval efficiency and clinical outcomes in men with non-obstructive azoospermia: a retrospective cohort study (Peng, Yu)"
+    url: https://doi.org/10.4103/aja202644
+    doi: 10.4103/aja202644
+    type: primary
+conflicts: >-
+  The authors declare no competing interests. The AI system used (AI-SpermScope)
+  is made by Wuhan Mutual Innovation Technology Co., Ltd.; the paper does not
+  say that the company funded or took part in the study.
+what_would_change: "A prospective randomized trial of AI-guided against conventional micro-TESE showing the same retrieval and live-birth gains."
+notes: >-
+  verify: the paper says allocation was determined by availability of the AI
+  microscope and not by patient characteristics; the groups' calendar overlap
+  is not stated.
+  verify: the paper's own limitations call it a single-centre study although it
+  names two hospitals.
+related: []
+history:
+  - date: 2026-11-14
+    note: "Added by the backfill run."
+rationale: The same three surgeons performed both procedures and groups were balanced at baseline, so the comparison isolates the AI guidance as far as a non-randomized cohort can, but allocation was by device availability, not randomization.
+receipts:
+  - field: headline
+    quote: 68.1% [369/542] vs 47.6% [354/744]
+    locator: Results, Primary outcome SRR
+    source: 0
+  - field: headline
+    quote: live birth rate (38.5% vs 26.8%; P < 0.001)
+    locator: Results, Secondary outcomes ICSI
+    source: 0
+  - field: impact
+    quote: 68.1% [369/542] vs 47.6% [354/744]
+    locator: Results, Primary outcome SRR
+    source: 0
+  - field: impact_number
+    quote: 68.1% [369/542] vs 47.6% [354/744]
+    locator: Results, Primary outcome SRR
+    source: 0
+  - field: effect.relative
+    quote: "odds ratio [OR] = 3.182, 95% confidence interval [CI]: 2.374–4.265"
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: 68.1% [369/542] vs 47.6% [354/744]
+    locator: Results, Primary outcome SRR
+    source: 0
+  - field: effect.absolute
+    quote: a 20.5% absolute increase in overall SRR
+    locator: Discussion
+    source: 0
+  - field: effect.absolute
+    quote: live birth rate (38.5% vs 26.8%; P < 0.001)
+    locator: Results, Secondary outcomes ICSI
+    source: 0
+  - field: effect.absolute
+    quote: an 11.5% absolute increase in live birth rate
+    locator: Discussion
+    source: 0
+  - field: reach
+    quote: 1286 patients were ultimately included in the study cohort, comprising 542 patients in the AI-micro-TESE group and 744 patients in the c-micro-TESE group
+    locator: Results, Patient and baseline characteristics
+    source: 0
+  - field: dates.achieved_start
+    quote: between January 2020 and December 2024
+    locator: Methods, Study design and study population
+    source: 0
+  - field: dates.achieved_end
+    quote: between January 2020 and December 2024
+    locator: Methods, Study design and study population
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14

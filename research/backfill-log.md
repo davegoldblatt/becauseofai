@@ -131,3 +131,21 @@ Rejected or not drafted:
 - The Star on WeatherNext, NASA TACLS, Project Noah: forecasts and plans, no number about people; Melissa already an entry.
 - Searches with no readable primary result: Corti cardiac-arrest detection (2014 to earlier studies, 2026 coverage on Seattle triage only), Seoul Severance ambulance AI (no figures yet), AI heat warnings (no measured AI outcome), UB trauma triage LLM (accuracy only), Bangladesh and Nepal flood AI (opinion, no figures), Google Flood Hub (already an entry).
 - Short of the floor: 11 searches and 8 pages read this run.
+
+## 2026-11-14, slice 3: inbox leads, part 4 of 5
+
+Drafted (1):
+- ai-micro-tese-nonobstructive-azoospermia: Asian J Androl retrospective two-centre cohort (full text read via Ovid), AI-guided micro-TESE 68.1% vs 47.6% sperm retrieval, live birth 38.5% vs 26.8%, 2020-01 to 2024-12; evidence B, window pre. The same lead was logged three times; one entry.
+
+Rejected or not drafted:
+- Nature Hum Behav upskilling RCT (consultants, N=487): abstract only, no outcome number, a task experiment.
+- J Health Care Poor Underserved AI patient navigation: abstract only; counts of referrals and applications, but what the AI did is not stated, no comparison; Project MUSE page unreadable.
+- Radiother Oncol deep-learning proton planning: abstract only, no outcome number (null on all outcomes).
+- Neurosurg Focus meningioma hyperspectral ML: classifier accuracy only.
+- MERIT (medRxiv): expert Likert ratings of generated summaries, no real use.
+- JMIR frontline workers with ChatGPT (Lagos): 36 workers answering 15 fixed questions, rated by panel, no patients reached.
+- AJOG MFM AI Doppler feedback RCT: standardized image vignettes, no real scanning, no patients.
+- AEARCTR-0019001: online vignette experiment, no results posted.
+- ALERT-PA (NCT05925569): rule-based Epic alert, not AI.
+- Protocols with no results: AEARCTR-0018826, 0020106, 0018280, 0020071, 0020058, 0018700.
+- Already entries: Rosie chatbot (rosie-chatbot-maternal-null), LATENT (latent-ai-ecg-af-null).
