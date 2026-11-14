@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "yan-ai-virtual-patient-colposcopy-residents-rct",
+  "date": "2026-11-14",
+  "as_of": "2026-11-14",
+  "entry_sha256": "7867e2cfe9ffd4a47411d1745731169008837dd591f4d6b72e005614ca010d45",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-14"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.jogoh.2026.103307",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-14T16:11:49.514Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jogoh.2026.103307%22&format=json&resultType=core",
+      "sha256": "6267f63d5d7a41d42e6be6160b820b4617f85060acdce8d5bf26561971572ca1",
+      "chars": 1791,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "78.57 ± 3.72 vs 71.03 ± 5.82, mean difference = 7.54",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "78.57 ± 3.72 vs 71.03 ± 5.82, mean difference = 7.54",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "60 obstetrics and gynecology residents (PGY-2/3) from two affiliated teaching hospitals were enrolled",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "(May 2023-September 2025)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "(May 2023-September 2025)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for headline."
+  }
+}

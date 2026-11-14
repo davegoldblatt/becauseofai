@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ksau-ai-caries-training-dental-students-null",
+  "date": "2026-11-14",
+  "as_of": "2026-11-14",
+  "entry_sha256": "f8ce52aa9c7226ce46dc5267a95af13aa4d0a89723ba5be5b522dc29246fc542",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-14"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12909-026-09982-2",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-14T16:11:28.142Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13682144/fullTextXML",
+      "sha256": "5d91f3675d87079dcf0b14d45d26494dc8213a1fc23f80a2569f44f87446113e",
+      "chars": 46223,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for headline."
+  }
+}

@@ -149,3 +149,25 @@ Rejected or not drafted:
 - ALERT-PA (NCT05925569): rule-based Epic alert, not AI.
 - Protocols with no results: AEARCTR-0018826, 0020106, 0018280, 0020071, 0020058, 0018700.
 - Already entries: Rosie chatbot (rosie-chatbot-maternal-null), LATENT (latent-ai-ecg-af-null).
+
+## 2026-11-14, slice 10: papers and trial results, 2026-10-19 to 2026-10-26
+
+Drafted (2):
+- yan-ai-virtual-patient-colposcopy-residents-rct: J Gynecol Obstet Hum Reprod RCT abstract only, 60 residents, case-analysis score 78.57 vs 71.03 at 1 month; evidence B (no registration stated), bundled, window pre (enrolment to 2025-09).
+- ksau-ai-caries-training-dental-students-null: BMC Med Educ RCT full text, 79 dental students, AI-assisted radiograph training gave no significant score gain; not-because, no dates in the text so window empty.
+
+Rejected or not drafted (13 read of 95 candidates):
+- Flourish NEJM AI RCT (486 students): already entry flourish-ai-coach-students-rct.
+- Annals AI scribe QI study: source already in ambient-scribes entry.
+- Pediatric fracture AI experience (Semin MSK Radiol): abstract only, no number about people.
+- AI tracheoesophageal fistula detection (J Pediatr Surg): video tasks with surgeons, two live cases, no outcome.
+- APOLLAI vs EMS (medRxiv): video recordings, diagnostic accuracy, not in real use.
+- Uganda AI sputum platform: retrospective archived images, accuracy only.
+- NEJM AI automation bias RCT: vignettes with physicians, no patients.
+- JoVE LLM companion for older adults: methods paper, no effect numbers stated.
+- NEJM AI physician edits to AI drafts: edits vs response time, no comparison without AI.
+- SWOG-8814 AI chemo benefit (medRxiv): retrospective prognostic validation.
+- Rotator cuff deep-learning visualization: secondary analysis, image scoring.
+- ANZUP 1301 BCG biomarker letter: page would not read.
+- Protocols (VITAL-MD, CURAte, imaging summaries), reviews and meta-analyses, and model-development or benchmark papers on medRxiv: not entries.
+- Short of the floor: 13 candidates read.
