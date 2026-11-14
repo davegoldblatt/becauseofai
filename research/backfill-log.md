@@ -171,3 +171,18 @@ Rejected or not drafted (13 read of 95 candidates):
 - ANZUP 1301 BCG biomarker letter: page would not read.
 - Protocols (VITAL-MD, CURAte, imaging summaries), reviews and meta-analyses, and model-development or benchmark papers on medRxiv: not entries.
 - Short of the floor: 13 candidates read.
+
+## 2026-11-14, slice 12: papers and trial results, 2026-10-12 to 2026-10-19
+
+Drafted (1):
+- ubc-ai-ot-initial-assessment-crossover-null: 30 adults preferred human-administered OT assessment over AI in a crossover RCT (abstract only, no dates).
+
+Looked at and rejected:
+- JMIR pathology chatbot crossover pilot (42873617): would not read (DOI, PubMed, Europe PMC all failed).
+- KeepCalm autism app (NCT05277194): posted outcomes are usability and acceptability scores only.
+- ESPRITO AI adherence app (NCT04046497): registry posts counts only (11 of 59 vs 15 of 63), no analysis, AI role unspecified.
+- Scenario planning RCT (NCT05780918): not an AI intervention as far as the record shows.
+- Surgical bleeding preclinical RCT, neurosurgical residency validation: simulation or training model, no patients.
+- Protocols (VITAL-MD, PM Heart, WeChat education, PCI education), reviews, surveys, cross-sectional burnout studies: not entries.
+- Remaining medRxiv and PubMed items: model development, benchmarks or retrospective validation, no people reached.
+- Short of the floor: 7 candidates read.

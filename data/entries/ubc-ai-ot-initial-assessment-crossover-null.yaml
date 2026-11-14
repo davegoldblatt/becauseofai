@@ -1,0 +1,78 @@
+id: ubc-ai-ot-initial-assessment-crossover-null
+section: not-because
+rank: 15
+headline: >-
+  In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial
+  assessment to a remote AI-administered one, and rated the human format as more compassionate.
+impact: "People preferred the human assessment (crossover RCT)"
+impact_number: "83%"
+impact_label: "of 30 adults preferred the human-administered assessment over the AI one"
+summary: >-
+  Thirty adults at the University of British Columbia completed both a purpose-built, self-administered AI
+  occupational therapy initial assessment and a human-administered one, in random order. The AI format was highly
+  usable and produced goals rated as clear and relevant at rates matching the human format, but perceived compassion,
+  satisfaction and preference favoured the human.
+caveat: >-
+  Abstract only: thirty adult volunteers in a research setting, one to two weeks between formats, outcomes are
+  self-rated experience rather than clinical results, and the authors frame the AI as a supplement, not a replacement.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Remote AI-administered OT initial assessment vs human-administered OT initial assessment, same participants, randomized order one to two weeks apart"
+effect:
+  relative: "Perceived compassion favoured the human format: median 9.90 vs 7.53, Hodges-Lehmann difference 2.39 (95% CI 1.56-3.11), p < 0.001"
+  absolute: "25 of 30 participants preferred the human format"
+reach: "30 adults, 28 of whom gave reflection interviews, University of British Columbia"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-11-11
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Developing and evaluating a remote, self-administered, AI-powered occupational therapy initial assessment: A crossover randomized controlled trial (Work), via Europe PMC abstract"
+    url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42867899?resultType=core&format=xml"
+    type: primary
+conflicts: "Funded by the Associated Medical Services Healthcare Small Grants in Compassion and Artificial Intelligence; the AI assessment was built by the study team. No other conflict could be confirmed from the abstract."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read; the source gives no calendar period for the sessions, so dates and the window grade are left empty.
+  verify: trial registration is not stated in the abstract, so evidence is B rather than A.
+  verify: participants were research volunteers, not clients in routine care; outcomes are self-reported experience.
+related: []
+history:
+  - date: 2026-11-14
+    note: Added by the backfill run.
+rationale: The same participants completed the AI-administered and the human-administered assessment in randomized order, so the formats differ only by who or what administered the assessment.
+receipts:
+  - field: headline
+    quote: Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: Overall, 83% (25/30) preferred the human format.
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Overall, 83% (25/30) preferred the human format.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: median 9.90 vs 7.53; Hodges-Lehmann difference 2.39, 95% CI 1.56-3.11; p < 0.001
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Overall, 83% (25/30) preferred the human format.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: 28 gave reflection interviews
+    locator: Abstract, Methods
+    source: 0
