@@ -109,3 +109,16 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-14
+  content: fc96fde01972f830082240c19c8f4d2d753d4746baea6ee56bad1baf7735c3b8
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-14
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-14
+    verdict: pass
+  record: ai-micro-tese-nonobstructive-azoospermia/2026-11-14.json
+  confidence: strict
