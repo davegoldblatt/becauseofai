@@ -1,0 +1,55 @@
+id: ksau-ai-caries-training-dental-students-null
+section: not-because
+rank: 14
+headline: >-
+  AI-assisted radiograph training did not significantly improve undergraduate dental students' diagnosis of
+  proximal caries compared with conventional training, in a randomized study of 79 students in Saudi Arabia.
+impact: "No gain in caries diagnosis (RCT)"
+impact_number: "79"
+impact_label: "dental students trained with or without AI: no significant difference in diagnostic score"
+summary: >-
+  Dental students at two Saudi colleges were randomly assigned to a one-hour bitewing radiograph training
+  session with or without an AI tool (Second Opinion) and then tested without it; scores did not differ, though the AI group finished the post-test faster.
+caveat: >-
+  A single one-hour session and one-day follow-up with a post-test of 20 radiographs; the study measures student test scores, not patient care, and the speed finding was exploratory.
+domain: education
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "One-hour radiograph training with AI-annotated bitewings (Second Opinion) vs the same session without AI, tested without AI one day later"
+effect:
+  relative: null
+  absolute: null
+reach: "79 undergraduate dental students at two dental colleges in Saudi Arabia"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-21
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Artificial intelligence-assisted training for proximal caries diagnosis by undergraduate dental students: a randomized experimental study (BMC Medical Education)"
+    url: https://doi.org/10.1186/s12909-026-09982-2
+    type: primary
+conflicts: "No competing interests could be confirmed from the text read; the AI software is a commercial product (Second Opinion, Pearl Inc.) and the authors used it for the training arm."
+what_would_change: null
+notes: >-
+  verify: the source gives no calendar period for the training and tests, so dates and the window grade are left empty.
+  verify: trial registration is not stated in the text read, so evidence is B rather than A.
+  verify: the study is a one-day educational test, not clinical use; no patient outcomes were measured.
+related: []
+history:
+  - date: 2026-11-14
+    note: Added by the backfill run.
+rationale: Students were randomly assigned to the same one-hour radiograph session with or without AI annotations and tested without AI, so the arms differ only by the AI support during training.
+receipts:
+  - field: impact_number
+    quote: Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.
+    locator: Abstract, Results
+    source: 0

@@ -1,0 +1,70 @@
+id: yan-ai-virtual-patient-colposcopy-residents-rct
+section: because
+rank: 43
+headline: >-
+  Because of AI, obstetrics and gynecology residents who trained with an AI virtual-patient platform scored
+  higher on colposcopy case analysis after one month than residents on traditional teaching alone, in a
+  randomized trial of 60 residents at two Chinese teaching hospitals.
+impact: "Higher case-analysis score (RCT)"
+impact_number: "78.57 vs 71.03"
+impact_label: "colposcopy case-analysis score at 1 month, AI platform vs traditional teaching only"
+summary: >-
+  Sixty residents were randomly assigned to traditional teaching plus an AI-driven virtual patient platform
+  from the start, or to traditional teaching first and the platform a month later (wait-list), and the
+  case-analysis score was compared at one month.
+caveat: >-
+  Only the abstract could be read; the outcomes are training scores and an OSCE, not patient outcomes, and the
+  AI platform was added on top of traditional teaching, so the arms differ by more than the model alone.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Immediate AI virtual-patient platform plus traditional teaching vs wait-list control (traditional teaching only during month 1)"
+effect:
+  relative: null
+  absolute: "Case Analysis score at 1 month 78.57 ± 3.72 vs 71.03 ± 5.82, mean difference 7.54"
+reach: "60 obstetrics and gynecology residents (PGY-2/3) at two affiliated teaching hospitals"
+dates:
+  achieved_start: 2023-05
+  achieved_end: 2025-09
+  published: 2026-10-24
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Artificial intelligence-enhanced colposcopy training improves diagnostic reasoning and communication competencies: A randomized controlled study (Journal of Gynecology Obstetrics and Human Reproduction), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.jogoh.2026.103307
+    type: primary
+conflicts: "No conflicts could be checked: only the abstract was read, and the authors evaluate a platform used in their own teaching programme."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read; the trial registration is not stated in it, so evidence is B rather than A.
+  verify: the abstract gives enrolment as May 2023-September 2025, which may be the enrolment window rather than the period each resident was trained; the window is graded pre because that end date is over twelve months before this entry.
+  verify: the outcomes are case-analysis scores, communication and an OSCE; no patient outcomes were measured.
+related: []
+history:
+  - date: 2026-11-14
+    note: Added by the backfill run.
+rationale: Residents were randomized to receive the AI virtual-patient platform on top of traditional teaching or traditional teaching only, so the comparison tests the platform as part of a teaching package and attribution is bundled.
+receipts:
+  - field: impact_number
+    quote: 78.57 ± 3.72 vs 71.03 ± 5.82, mean difference = 7.54
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 78.57 ± 3.72 vs 71.03 ± 5.82, mean difference = 7.54
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 60 obstetrics and gynecology residents (PGY-2/3) from two affiliated teaching hospitals were enrolled
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: (May 2023-September 2025)
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: (May 2023-September 2025)
+    locator: Abstract, Methods
+    source: 0
