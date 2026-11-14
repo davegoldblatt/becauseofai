@@ -115,3 +115,19 @@ Rejected:
 - Pharmacology tutorial AI (BMC Med Educ): student perceptions; edge-AI pose estimation (medRxiv): HTTP 429, feasibility only.
 - Protocols and reviews: ambient scribe head-to-head, ROMIAE-2, AI smoking-cessation and cardiology meta-analyses, other retrospective model studies, surveys.
 - Already entries: LATENT AF trial.
+
+## 2026-11-14, slice 9: announcements: emergency response and weather, 2026-08-12 to 2026-11-11
+
+Drafted (3, all speculative-level; news reports of the organisations' own figures):
+- aps-pano-ai-wildfire-cameras-before-911: Arizona Public Service meteorologist says Pano AI alerts come about 45 minutes faster on average than the first 911 call (AP via FireRescue1, no period).
+- alertcalifornia-ai-cameras-before-911: CAL FIRE data, about 3,600 incidents flagged in 12 months, more than half before any 911 call (Security Today, no dates).
+- jeffcom-911-ai-administrative-calls: sustained 33% fewer administrative calls with AI (NTIA paper as relayed by Spotlight on America, no baseline).
+
+Rejected or not drafted:
+- KUNC on Pano (725 wildfires in 2025, first notice in about half): same company claim as the AP entry, no period dates, left to that entry.
+- Fort Worth 911 AI call-taker (cpo.soar.com): fetch failed, not read.
+- AMR Stanislaus nurse line (EMS1): launch story, nurse triage, no AI and no result.
+- Anoka County AI call taker (JEMS): test not yet launched; its Dakota County 33% redirected figure has no article date, so not drafted.
+- The Star on WeatherNext, NASA TACLS, Project Noah: forecasts and plans, no number about people; Melissa already an entry.
+- Searches with no readable primary result: Corti cardiac-arrest detection (2014 to earlier studies, 2026 coverage on Seattle triage only), Seoul Severance ambulance AI (no figures yet), AI heat warnings (no measured AI outcome), UB trauma triage LLM (accuracy only), Bangladesh and Nepal flood AI (opinion, no figures), Google Flood Hub (already an entry).
+- Short of the floor: 11 searches and 8 pages read this run.

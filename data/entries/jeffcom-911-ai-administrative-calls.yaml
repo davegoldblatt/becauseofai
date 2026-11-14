@@ -1,0 +1,79 @@
+id: jeffcom-911-ai-administrative-calls
+section: because
+rank: 41
+headline: >-
+  Because of AI call handling, Jeffcom 911 says it saw a sustained 33% reduction
+  in administrative calls reaching its dispatchers.
+impact: "33% fewer administrative calls"
+impact_number: "33%"
+impact_label: "reduction in administrative calls at a 911 centre using AI"
+summary: >-
+  A news feature on 911 centres using AI reports that Jeffcom 911, cited in a
+  2025 NTIA white paper, said AI helped produce a sustained 33% reduction in
+  administrative calls and a rise of at least 5% in the share of 911 calls
+  answered within 15 seconds.
+caveat: >-
+  The agency's own claim, relayed through a news report of a federal white paper,
+  with no baseline, period or method given and no outcome for callers.
+domain: disaster
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Administrative call volume after the AI system against an unstated earlier level, as reported by the agency"
+effect:
+  relative: "A sustained 33% reduction in administrative calls"
+  absolute: null
+reach: "Callers to Jeffcom 911 dispatch centre"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-21
+  added: 2026-11-14
+  updated: 2026-11-14
+sources:
+  - title: "Spotlight on America (WJLA): As 911 centers turn to AI, agencies weigh gains against risks, 21 September 2026"
+    url: https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure is the agency's own statement about its own system, relayed by a
+  news report of an NTIA white paper; the AI vendor is not named. No independent
+  audit.
+what_would_change: "Jeffcom's call-volume data with a stated baseline and period, or the NTIA paper's underlying source."
+notes: >-
+  verify: the source gives no period or baseline for the 33% reduction, so dates
+  and the window grade are left empty.
+  verify: the NTIA white paper was not read; the figure is as reported.
+history:
+  - date: 2026-11-14
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the reduction is credited to AI as part of the centre's call-handling changes, and the source gives no baseline or comparison group.
+receipts:
+  - field: headline
+    quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
+    locator: Article body, NTIA white paper paragraph
+    source: 0
+  - field: impact
+    quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
+    locator: Article body, NTIA white paper paragraph
+    source: 0
+  - field: impact_number
+    quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
+    locator: Article body, NTIA white paper paragraph
+    source: 0
+  - field: effect.relative
+    quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
+    locator: Article body, NTIA white paper paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-14
+  content: 4edf55c628567d5816794957d81539a7b1342a09b8351e35ad039ca89c3cc36e
+held:
+  reason: ungrounded
+  since: 2026-11-14
+  detail: No receipt for reach.
+  record: jeffcom-911-ai-administrative-calls/2026-11-14.json
