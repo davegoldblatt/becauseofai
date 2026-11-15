@@ -3,7 +3,7 @@ section: not-because
 rank: 12
 headline: >-
   Not because of AI: prioritising abnormal chest X-rays with AI did not speed up
-  lung cancer diagnosis in five English hospitals, with median times of 44 days
+  lung cancer diagnosis across five NHS trusts in England, with median times of 44 days
   against 46 days.
 impact: "44 vs 46 days to diagnosis, no difference"
 impact_number: "44 vs 46 days"
@@ -34,7 +34,7 @@ dates:
   achieved_end: 2024-12-31
   published: 2026-03-24
   added: 2026-11-11
-  updated: 2026-11-11
+  updated: 2026-11-15
 sources:
   - title: "Woznitza et al., AI-based chest X-ray prioritization in the lung cancer diagnostic pathway: the LungIMPACT randomized controlled trial. Nature Medicine 2026"
     url: https://doi.org/10.1038/s41591-026-04253-5
@@ -42,7 +42,12 @@ sources:
   - title: "University Hospitals Birmingham: AI-driven technology does not speed up lung cancer diagnosis"
     url: https://www.uhb.nhs.uk/news-and-events/news/ai-driven-technology-does-not-speed-up-lung-cancer-diagnosis/
     type: secondary
-conflicts: "Funded through an SBRI Healthcare award; no conflict affecting a null result was identified in the text read."
+conflicts: >-
+  Funded through an SBRI Healthcare award; one author (R.W.L.) was a co-applicant
+  on SBRI funding with Qure.ai, the AI's maker, and the lead author (N.W.)
+  declares a Qure.ai travel grant to attend ECR 2023. The paper says Qure.ai
+  helped deploy qXR but had no influence on the design or analysis. A vendor
+  tie on a null result does not flatter the AI.
 what_would_change: "A trial in which an AI flag automatically triggers a same-day CT and referral, which the authors propose as the next test."
 notes: >-
   verify: dates are the period over which chest X-rays were performed;
@@ -50,6 +55,8 @@ notes: >-
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: stated the Qure.ai ties the paper discloses (a co-applicant on SBRI funding with Qure.ai, a Qure.ai travel grant), which held the entry; headline now says five NHS trusts, as the Methods do, with a receipt."
 rationale: The isolated grade rests on the trial randomising days so that AI prioritisation was either on or off, while the same AI was available to readers in both arms, which leaves prioritisation as the only difference between the arms.
 receipts:
   - field: headline
@@ -92,25 +99,28 @@ receipts:
     quote: Between 17 July 2023 and 31 December 2024, a total of 97,731 CXRs were performed
     locator: Results, Descriptive statistics and consort diagram (report body)
     source: 0
+  - field: headline
+    quote: A prospective, multicenter, randomized controlled trial was conducted between July 2023 and December 2024 across five NHS Trusts in England.
+    locator: Methods, Study design
+    source: 0
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-12
-  content: 2f9f61ae32f1edf8f0c84a240242cadfc67c4953bfc999fe503d8e83d596e216
-  via: claude-login
+  date: 2026-11-15
+  content: c9099b145dfe5e59489ee7857cb04fce144c727074c01c6cfa6cf62579d2737c
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-12
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-12
+    date: 2026-11-15
     verdict: fail
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-15.json
 held:
-  reason: fails-test
-  since: 2026-11-12
-  detail: "The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose."
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier ai-vs-ai."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-15.json

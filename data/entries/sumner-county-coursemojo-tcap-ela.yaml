@@ -53,6 +53,8 @@ related: [numi-ai-math-tutoring-hamilton-county, khanmigo-hamilton-county-remedi
 history:
   - date: 2026-11-15
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: added the missing reach receipt (six-school 2024-2025 pilot) that held the entry; no value changed."
 rationale: The comparison is between groups of students who chose or were given different amounts of the tool, with no schools that did not use it, so use level is confounded with other differences.
 receipts:
   - field: headline
@@ -79,13 +81,28 @@ receipts:
     quote: had an average increase of 8.7 percentage points in proficiency
     locator: Article body, paragraph 6
     source: 0
+  - field: reach
+    quote: Sumner County schools conducted a pilot test of CourseMojo for sixth graders in six schools during the 2024-2025 school year.
+    locator: Article body, pilot paragraph
+    source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
+  model: claude-opus-5-5
   date: 2026-11-15
-  content: e0aaadb06229576d8f7f15a53c051095d7255f7c2cb3af2c51005daf78d2120c
+  content: a17289c8a7bd3dc8d3f2a384829bae84268426ab7ef9b3a91ebdca94d3f7efcb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: sumner-county-coursemojo-tcap-ela/2026-11-15-2.json
 held:
-  reason: ungrounded
+  reason: grade-split
   since: 2026-11-15
-  detail: No receipt for reach.
-  record: sumner-county-coursemojo-tcap-ela/2026-11-15.json
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
+  record: sumner-county-coursemojo-tcap-ela/2026-11-15-2.json

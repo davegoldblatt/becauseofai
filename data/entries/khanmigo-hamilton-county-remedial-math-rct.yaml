@@ -26,15 +26,15 @@ ai_type: generative
 grades:
   evidence: A
   attribution: bundled
-  window: null
+  window: ongoing
 comparison: "Grades randomly assigned to Khan Academy with the Khanmigo AI tutor vs control grades in the same school continuing usual remedial math instruction (teacher-led practice and other math software)"
 effect:
   relative: "Assignment raises math achievement by 1.3 national percentile ranks per term, about 0.06 to 0.08 standard deviations over a school year"
   absolute: "The implied effect of a full year of active participation is 0.14 standard deviations"
 reach: "18 middle schools in Hamilton County, Tennessee; 6,902 student-term observations in the primary sample"
 dates:
-  achieved_start: null
-  achieved_end: null
+  achieved_start: 2024-11
+  achieved_end: 2026-05
   published: 2026-08
   added: 2026-11-15
   updated: 2026-11-15
@@ -49,12 +49,14 @@ conflicts: >-
   is at Charles River Associates. Registered as AEARCTR-0013519.
 what_would_change: "Evidence that an intervention which gets students to engage with the tutor produces gains larger than Khan Academy practice alone."
 notes: >-
-  verify: the paper gives school-year and term schedules (Table 1) but not a single start and end date for the benefit, so the dates and window are left empty.
+  Dates from Table 1: the first measured term's remedial sessions began on 4 November 2024 (Year 1, 2024-25) and the last testing period ended on 8 May 2026; Fall 2024 is excluded by design. Window ongoing, argued: three of the five measured terms ran before the window opened in November 2025, and the last two (Winter and Spring 2026) are inside it, so this is a programme that began earlier with new in-window data, not a benefit that occurred inside the window. The verifier read it as in.
   verify: control students used other math software without AI, and the authors say the gains resemble those from Khan Academy without AI assistance, so the AI-specific contribution is unclear.
 related: [numi-ai-math-tutoring-hamilton-county, maryland-ai-tutor-negative, sierra-leone-gemini-math]
 history:
   - date: 2026-11-15
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Updated: achieved dates set to November 2024 to May 2026 from Table 1 (pdftotext available this run); window graded ongoing, since three of five measured terms predate the window."
 rationale: Grades were randomized within schools to Khan Academy with the Khanmigo tutor versus usual remedial instruction, but the tutor arrives bundled with the practice platform and the authors report similar gains from the platform alone.
 receipts:
   - field: headline
@@ -85,24 +87,36 @@ receipts:
     quote: The primary sample comprises 6,902 student-term observations
     locator: Section 3, Sample
     source: 0
+  - field: dates.achieved_start
+    quote: Over the 2024–25 and 2025–26 school years, we conducted a cluster randomized trial across 18 middle schools
+    locator: Section 1, Introduction
+    source: 0
+  - field: dates.achieved_start
+    quote: Minimum RTI (Winter 2025) Nov 4 – Dec 4
+    locator: Table 1, Implementation Schedule, Year 1 (2024–25), term 1
+    source: 0
+  - field: dates.achieved_end
+    quote: Spring 2026 Testing Period Apr 13 – May 8
+    locator: Table 1, Implementation Schedule, Year 2 (2025–26), term 5
+    source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
+  model: claude-opus-5-5
   date: 2026-11-15
-  content: 0d5f4246fd0791e58b1cdc5d86d49273c4a16702b5fcf4b73d6c92f95f2ec483
+  content: 8e1cf8bc6ac74806e7b43f0c602f2b29eddafe9eadd6f5ae75a14707d0b4f697
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
+    model: claude-opus-5-5
     date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
     date: 2026-11-15
     verdict: fail
-  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15.json
+  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15-2.json
 held:
-  reason: grade-split
+  reason: ungrounded
   since: 2026-11-15
-  detail: "window: drafter no grade, verifier in."
-  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15.json
+  detail: "dates.achieved_start (receipt 8): unsupported, The school-year span does not establish November 2024 as the starting month.."
+  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15-2.json

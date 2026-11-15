@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tsm-al-llm-residents-clinical-reasoning-rct",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "611b0067872c679181af5a6887eca6c36e090793617ad9cd180e56d5440964ab",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12909-026-09650-5",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-15T19:38:22.125Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13726233/fullTextXML",
+      "sha256": "31b724d0b9d23017967449c42c2a7625cb089ebe880faf8d72e2651956271514",
+      "chars": 48081,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "7.32 ± 2.30 vs. 5.12 ± 1.66",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "7.32 ± 2.30 vs. 5.12 ± 1.66",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "fewer TSM-AL residents requiring complete supervision (11.76% vs. 29.41%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 68 orthopedic surgery residents enrolled in standardized",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "This prospective, randomized controlled educational intervention study was conducted at a single academic medical center between September 2024 and June 2025.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "This prospective, randomized controlled educational intervention study was conducted at a single academic medical center between September 2024 and June 2025.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The trial compared a structured, faculty-supervised teaching framework incorporating an LLM against traditional teaching, so the comparison tests the whole educational package.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods specify September 2024 through June 2025."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor-related conflict is shown; the source declares no competing interests but lists institutional funding despite its acknowledgement of no external funding."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports improved unassisted examination performance among 68 residents randomized to an LLM-integrated teaching package during September 2024–June 2025. No preregistered primary endpoint is established, so the study cannot receive A and fits none of the other defined evidence grades; patient outcomes and the LLM's separate contribution were not measured."
+    },
+    "error": null,
+    "tokens": {
+      "input": 22289,
+      "output": 664,
+      "total": 22953,
+      "cached": 0,
+      "reasoning": 163
+    },
+    "duration_ms": 16583
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

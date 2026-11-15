@@ -35,7 +35,7 @@ dates:
   achieved_end: null
   published: 2026-10-29
   added: 2026-11-11
-  updated: 2026-11-11
+  updated: 2026-11-15
 sources:
   - title: "Supportive Care in Cancer: AI-facilitated individualized nutritional guidance with ABC-structured prompts after gastrointestinal cancer surgery: a randomized controlled trial (open access, Europe PMC)"
     url: https://doi.org/10.1007/s00520-026-11401-7
@@ -58,6 +58,8 @@ related: [prea-chatbot-specialist-referral-rct]
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: removed the reach receipt for 187 screened patients, which the gate rightly said does not support the 90 randomized; the 90 rests on the Discussion quote. No value changed."
 rationale: The grade is bundled because the trial randomized a package (AI generation, individualization, quantified targets, written guidance and clinician review) against standard generic discharge advice, and the authors say it cannot isolate AI's own contribution.
 receipts:
   - field: headline
@@ -92,29 +94,24 @@ receipts:
     quote: In this randomized controlled trial of 90 patients undergoing laparoscopic gastric or colorectal cancer surgery
     locator: Discussion, Principal findings
     source: 0
-  - field: reach
-    quote: we screened 187 patients undergoing elective laparoscopic gastrointestinal cancer surgery at Tongji Hospital.
-    locator: Results, Study population
-    source: 0
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-12
-  content: c8b3617652a6c34c0cf4ebeb52baca2e9ce1763eb276046f7fb580a4c664271d
-  via: claude-login
+  date: 2026-11-15
+  content: 320089ac3dd3e664de42884806b3e4f760d6073937c573580961864ceead9c7b
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-12
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-12
+    date: 2026-11-15
     verdict: fail
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12-2.json
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-15.json
 held:
-  reason: ungrounded
-  since: 2026-11-11
-  detail: "reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients.."
-  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-12-2.json
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier A; window: drafter no grade, verifier in."
+  record: tongji-ai-nutrition-gi-surgery-rct/2026-11-15.json

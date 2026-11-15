@@ -31,7 +31,7 @@ dates:
   achieved_end: null
   published: 2026-09-21
   added: 2026-11-14
-  updated: 2026-11-14
+  updated: 2026-11-15
 sources:
   - title: "Spotlight on America (WJLA): As 911 centers turn to AI, agencies weigh gains against risks, 21 September 2026"
     url: https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine
@@ -49,6 +49,8 @@ notes: >-
 history:
   - date: 2026-11-14
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: added the missing reach receipt (the only digits in reach are the name Jeffcom 911) that held the entry; no value changed."
 rationale: The grade is bundled because the reduction is credited to AI as part of the centre's call-handling changes, and the source gives no baseline or comparison group.
 receipts:
   - field: headline
@@ -67,13 +69,28 @@ receipts:
     quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
     locator: Article body, NTIA white paper paragraph
     source: 0
+  - field: reach
+    quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
+    locator: Article body, NTIA white paper paragraph
+    source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-14
-  content: 4edf55c628567d5816794957d81539a7b1342a09b8351e35ad039ca89c3cc36e
+  model: claude-opus-5-5
+  date: 2026-11-15
+  content: 6559a7db3aedc9b357fb3a05e93e69eda26674bccf7a5ca01534d6b96f3a3b6c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: jeffcom-911-ai-administrative-calls/2026-11-15.json
 held:
-  reason: ungrounded
-  since: 2026-11-14
-  detail: No receipt for reach.
-  record: jeffcom-911-ai-administrative-calls/2026-11-14.json
+  reason: grade-split
+  since: 2026-11-15
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: jeffcom-911-ai-administrative-calls/2026-11-15.json

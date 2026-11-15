@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "sumner-county-coursemojo-tcap-ela",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "a17289c8a7bd3dc8d3f2a384829bae84268426ab7ef9b3a91ebdca94d3f7efcb",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.wsmv.com/2026/07/14/this-tennessee-school-system-credits-ai-with-improving-student-tcap-scores-heres-how/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T19:36:04.573Z",
+      "final_url": "https://www.wsmv.com/2026/07/14/this-tennessee-school-system-credits-ai-with-improving-student-tcap-scores-heres-how/",
+      "sha256": "a14427b748a9a6465ba73ff3804ce47b3083d40bdc016d8bbe2783a1ae57bef4",
+      "chars": 4668,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "groups with an average of 25 or more Coursemojo activities per student improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Groups with little or no use of the program saw -0.2 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Groups with little or no use of the program saw -0.2 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "had an average increase of 8.7 percentage points in proficiency",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Sumner County schools conducted a pilot test of CourseMojo for sixth graders in six schools during the 2024-2025 school year.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The district compared school-grade groups with different levels of Coursemojo implementation, including its integration with curriculum and teaching, rather than otherwise identical groups differing only in AI access.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "The body identifies the measured outcomes as 2026 TCAP results, establishing an in-window year but no exact achieved span; the entry leaves both achieved dates null."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The article quotes the vendor's co-founder and co-CEO promoting its district partnership, which the entry discloses; vendor funding or involvement in the analysis is not established."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The article supports the reported proficiency changes among actual students, compared by implementation level, using 2026 assessment data. It reports the district's preliminary analysis without an independent comparison or an isolated estimate of AI's contribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13209,
+      "output": 731,
+      "total": 13940,
+      "cached": 0,
+      "reasoning": 246
+    },
+    "duration_ms": 21487
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

@@ -34,7 +34,7 @@ dates:
   achieved_end: 2026-04-03
   published: 2026-08
   added: 2026-11-13
-  updated: 2026-11-13
+  updated: 2026-11-15
 sources:
   - title: "NBER Working Paper 35621: Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment"
     url: https://www.nber.org/system/files/working_papers/w35621/w35621.pdf
@@ -52,6 +52,8 @@ related: [maryland-ai-tutor-negative, sierra-leone-gemini-math]
 history:
   - date: 2026-11-13
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: added the missing headline receipt (the 3.1-point delayed-test difference, Section 5.5, the quote the gate already found for impact_number); no value changed."
 rationale: Students were randomized to the AI tutor or to computer-assisted practice alone with the same platform, so the delayed-test gap isolates the tutor, though it is imprecise.
 receipts:
   - field: impact_number
@@ -90,13 +92,28 @@ receipts:
     quote: March 30–April 3, teachers selected a class period to administer a short delayed assessment,
     locator: Section 3.1 Setting
     source: 0
+  - field: headline
+    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
+    locator: Section 5.5, Delayed learning among mastery students
+    source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-13
-  content: 1b06bb70779882e3df1ade1861c5b58769e74dea0fbb81bfc57cdc2b72211e05
+  model: claude-opus-5-5
+  date: 2026-11-15
+  content: a3e35f5b83a117758a63cf8428e1c9eba469618e505f6fc8786ae3454c7361cb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: numi-ai-math-tutoring-hamilton-county/2026-11-15.json
 held:
   reason: ungrounded
   since: 2026-11-13
-  detail: No receipt for headline.
-  record: numi-ai-math-tutoring-hamilton-county/2026-11-13.json
+  detail: "impact_number (receipt 1): contradicted, Although Section 5.5 says 3.1 percentage points, Table 9 and Appendix Tables A2 and A14 report 0.032, or 3.2 percentage points.; effect.absolute (receipt 4): contradicted, The claimed 3.1-percentage-point difference conflicts with the 3.2-percentage-point estimate in Table 9 and Appendix Tables A2 and A14.; effect.absolute (receipt 5): unsupported, The quoted phrase establishes no numeric value.; headline (receipt 10): contradicted, The headline's 3.1-point gain conflicts with the 3.2-percentage-point estimate reported in Table 9 and Appendix Tables A2 and A14.."
+  record: numi-ai-math-tutoring-hamilton-county/2026-11-15.json

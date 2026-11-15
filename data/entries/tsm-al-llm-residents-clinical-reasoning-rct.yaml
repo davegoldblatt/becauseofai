@@ -22,18 +22,18 @@ ai_type: generative
 grades:
   evidence: B
   attribution: bundled
-  window: null
+  window: pre
 comparison: "Residents randomly assigned to the Teacher-Student-Machine Interaction Autonomous Learning (LLM-integrated) framework vs residents taught by traditional teaching"
 effect:
   relative: "Fewer LLM-framework residents needed complete supervision (11.76% vs. 29.41%)"
   absolute: "Unassisted final examination clinical reasoning score 7.32 ± 2.30 vs. 5.12 ± 1.66"
 reach: "68 orthopedic surgery residents at Changzheng Hospital, Shanghai"
 dates:
-  achieved_start: null
-  achieved_end: null
+  achieved_start: 2024-09
+  achieved_end: 2025-06
   published: 2026-08-04
   added: 2026-11-13
-  updated: 2026-11-13
+  updated: 2026-11-15
 sources:
   - title: "Teacher-student-machine interaction autonomous learning: a structured LLM-integrated framework for developing independent clinical reasoning in residency training (BMC Medical Education)"
     url: https://doi.org/10.1186/s12909-026-09650-5
@@ -41,14 +41,16 @@ sources:
 conflicts: "No competing interests declared; no external funding. The authors designed and evaluated their own teaching framework."
 what_would_change: null
 notes: >-
-  verify: the source gives no calendar period for the 16-week training, so dates and the window grade are left empty.
-  verify: the trial registration is not stated in the text read, so evidence is B rather than A.
+  Dates: Methods say the study ran between September 2024 and June 2025; window pre.
+  Evidence B: randomized, but the paper says formal clinical trial registration was not required, so there is no prespecified registered endpoint.
   verify: the EPA and faculty-rating percentages in the results text do not all match the counts shown for n = 34 per group.
   verify: the outcomes are examinations and faculty ratings on standardized cases; no patient outcomes were measured.
 related: []
 history:
   - date: 2026-11-13
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Updated: achieved dates set to September 2024 to June 2025 from the Methods; window graded pre, as the verifier also read it; evidence B now argued from the paper's statement that registration was not required."
 rationale: Residents were randomized to the LLM-integrated framework or traditional teaching, but the arms differ in the whole teaching package, not only the model, so attribution is bundled.
 receipts:
   - field: impact_number
@@ -67,24 +69,32 @@ receipts:
     quote: A total of 68 orthopedic surgery residents enrolled in standardized
     locator: Results, Study population and baseline characteristics
     source: 0
+  - field: dates.achieved_start
+    quote: This prospective, randomized controlled educational intervention study was conducted at a single academic medical center between September 2024 and June 2025.
+    locator: Methods, Study design
+    source: 0
+  - field: dates.achieved_end
+    quote: This prospective, randomized controlled educational intervention study was conducted at a single academic medical center between September 2024 and June 2025.
+    locator: Methods, Study design
+    source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-13
-  content: 8c7443aded01703dde3cdcbb9e7c0e38045b8a13f2250e44b10efec21c243b20
+  model: claude-opus-5-5
+  date: 2026-11-15
+  content: 611b0067872c679181af5a6887eca6c36e090793617ad9cd180e56d5440964ab
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-13
+    model: claude-opus-5-5
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-13
+    date: 2026-11-15
     verdict: fail
-  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-15.json
 held:
   reason: grade-split
   since: 2026-11-13
-  detail: "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
-  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json
+  detail: "evidence: drafter B, verifier could not grade."
+  record: tsm-al-llm-residents-clinical-reasoning-rct/2026-11-15.json

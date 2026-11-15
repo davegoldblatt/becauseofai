@@ -33,7 +33,7 @@ dates:
   achieved_end: 2024-08-31
   published: 2026-09-23
   added: 2026-11-11
-  updated: 2026-11-11
+  updated: 2026-11-15
 sources:
   - title: "Cleland et al., Artificial intelligence-supported diabetic retinopathy screening in Tanzania: a randomised controlled trial. Lancet Global Health 2026"
     url: https://doi.org/10.1016/j.langlo.2026.104062
@@ -41,7 +41,14 @@ sources:
   - title: "ISRCTN18317152 trial registration"
     url: https://www.isrctn.com/ISRCTN18317152
     type: secondary
-conflicts: "Funded by the British Council for the Prevention of Blindness, Christian Blind Mission and the Sir Halley Stewart Trust; the Tanzanian Ministry of Health is a collaborator. Several authors are from the groups that run the programme."
+conflicts: >-
+  Funded by the British Council for the Prevention of Blindness, Christian Blind
+  Mission and the Sir Halley Stewart Trust; the Tanzanian Ministry of Health is a
+  collaborator, and several authors are from the groups that run the programme.
+  The SELENA+ software (EyRIS, Singapore) was provided free for academic use in
+  the trial. Three authors declare commercial fees from ophthalmology companies,
+  and one (PAK) declares equity in Big Picture Medical and advisory work for
+  RetinAI; none of these is the maker of SELENA+.
 what_would_change: "Evidence that earlier attendance means retinopathy treated in time and less sight loss, or a rollout evaluation outside the trial."
 notes: >-
   verify: the publication date is taken from the press coverage of the paper
@@ -51,6 +58,8 @@ notes: >-
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: stated the disclosures the gate found in the paper (SELENA+ supplied free for academic use; authors' commercial fees and one author's equity), which held the entry; no value changed."
 rationale: The trial randomised patients to AI-supported same-visit results and counselling versus deferred grading and phone counselling, so the difference is credited to the AI pathway as a whole, and the AI result and counselling cannot be separated (bundled).
 receipts:
   - field: headline
@@ -95,22 +104,18 @@ receipts:
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-11
-  content: 152504c2bd54e227aff758e037a2e54c6da4230bac86ada2b1f208bbcbf98353
+  model: claude-opus-5-5
+  date: 2026-11-15
+  content: faa20e7a36a256d8c8dea918f75b80e9903a5fefa1e1e355a19d6794e5ae3972
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-11
+    model: claude-opus-5-5
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-11
-    verdict: fail
-  record: tanzania-ai-dr-screening-rct/2026-11-11.json
-held:
-  reason: fails-test
-  since: 2026-11-11
-  detail: "The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
-  record: tanzania-ai-dr-screening-rct/2026-11-11.json
+    date: 2026-11-15
+    verdict: pass
+  record: tanzania-ai-dr-screening-rct/2026-11-15.json
+  confidence: strict

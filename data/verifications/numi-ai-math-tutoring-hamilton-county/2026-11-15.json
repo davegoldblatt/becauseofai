@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "numi-ai-math-tutoring-hamilton-county",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "a3e35f5b83a117758a63cf8428e1c9eba469618e505f6fc8786ae3454c7361cb",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-15T19:35:19.496Z",
+      "final_url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "sha256": "6924720c044a0ffd8f0875afc6fdffecede7cce5a4b8c7b9d934c07c63993d63",
+      "chars": 178614,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Among mastery students, CAL-only students answered 37.0 percent of the practiced",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Students assigned to AI answered 40.2 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "interpreted as suggestive.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "AI increased the probability that the next attempt was correct by 8.5 percentage points.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The study included students in grades 6 through 8 across 20 schools and just under",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "March 23–27, 2026, teachers selected one regular math",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "March 30–April 3, teachers selected a class period to administer a short delayed assessment,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "contradicted",
+          "note": "Although Section 5.5 says 3.1 percentage points, Table 9 and Appendix Tables A2 and A14 report 0.032, or 3.2 percentage points."
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "contradicted",
+          "note": "The claimed 3.1-percentage-point difference conflicts with the 3.2-percentage-point estimate in Table 9 and Appendix Tables A2 and A14."
+        },
+        {
+          "field": "effect.absolute",
+          "status": "unsupported",
+          "note": "The quoted phrase establishes no numeric value."
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "contradicted",
+          "note": "The headline's 3.1-point gain conflicts with the 3.2-percentage-point estimate reported in Table 9 and Appendix Tables A2 and A14."
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "Within the mastery condition, randomized students received the same CAL platform and progression rules, differing only in access to the AI tutor.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Section 3.1 gives practice dates of March 23–27, 2026 and delayed assessment dates of March 30–April 3."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses research funding and platform development, but the source establishes no vendor funding, commercial ownership, equity, patent, or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The trial was randomized and registered, but the text does not establish a preregistered primary endpoint, so evidence grade A cannot be confirmed."
+      },
+      "summary": "The source supports a randomized classroom comparison showing suggestive delayed learning gains and improved post-mistake recovery with AI. Its prose reports a 3.1-percentage-point delayed gain while its tables report 3.2, and it does not establish a preregistered primary endpoint."
+    },
+    "error": null,
+    "tokens": {
+      "input": 51003,
+      "output": 897,
+      "total": 51900,
+      "cached": 0,
+      "reasoning": 143
+    },
+    "duration_ms": 21491
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "impact_number (receipt 1): contradicted, Although Section 5.5 says 3.1 percentage points, Table 9 and Appendix Tables A2 and A14 report 0.032, or 3.2 percentage points.; effect.absolute (receipt 4): contradicted, The claimed 3.1-percentage-point difference conflicts with the 3.2-percentage-point estimate in Table 9 and Appendix Tables A2 and A14.; effect.absolute (receipt 5): unsupported, The quoted phrase establishes no numeric value.; headline (receipt 10): contradicted, The headline's 3.1-point gain conflicts with the 3.2-percentage-point estimate reported in Table 9 and Appendix Tables A2 and A14.."
+  }
+}
