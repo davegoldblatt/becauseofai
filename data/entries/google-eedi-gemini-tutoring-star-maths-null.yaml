@@ -1,0 +1,82 @@
+id: google-eedi-gemini-tutoring-star-maths-null
+section: not-because
+rank: 18
+headline: >-
+  In a pre-registered trial of 1,179 students in 10 UK secondary schools, Gemini
+  tutoring inside the Eedi maths platform matched expert human tutors on in-platform
+  measures but moved standardised Star Maths scores by only +0.02 standard
+  deviations against standard remediation.
+impact: "No detectable gain on a standardised maths test after AI tutoring (RCT)"
+impact_number: "+0.02 SD"
+impact_label: "on Star Maths for AI tutoring with personalised context vs standard remediation, interval -0.12 to +0.16"
+summary: >-
+  Google's LearnLM team and Eedi report a randomised trial in which students in
+  state secondary schools received standard Eedi remediation, expert human tutoring,
+  or Gemini-drafted tutoring, with expert tutors reviewing each AI message before
+  delivery. AI tutoring did better than standard remediation on in-platform and
+  midtrial measures, but not on an externally scored standardised maths test.
+caveat: >-
+  Report written by the developer of the AI system and the platform company, not
+  peer-reviewed; a human tutor reviewed every AI message before a student saw it, so
+  this is human-in-the-loop AI; the authors call explanations for the gap tentative
+  and exploratory.
+domain: education
+ai_type: generative
+grades:
+  evidence: A
+  attribution: bundled
+  window: null
+comparison: "Gemini tutoring (two variants) vs standard Eedi remediation (curated videos and hints) vs expert human tutoring, students randomised to condition, Star Maths measured at baseline and endline"
+effect:
+  relative: "AI tutoring with question context differed from standard remediation by only -0.01 standard deviations on Star Maths; with personalised context +0.02 SD"
+  absolute: "Not stated in the text as a raw score difference"
+reach: "1,179 students in 10 state-funded secondary schools across England, Northern Ireland, Wales and Scotland"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-29
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Measuring the impact of AI tutoring, from near transfer to standardised tests: An expanded RCT in UK mathematics classrooms (LearnLM Team, Google and Eedi)"
+    url: https://services.google.com/fh/files/misc/learnlm_oct26.pdf
+    type: primary
+    announcement: true
+conflicts: >-
+  The report is written by Google's LearnLM team with Eedi, the maker of the Gemini
+  model and the maths platform it was tested in; the ethics review was by Google
+  DeepMind's committee. It is the organisations' own report on their own product.
+what_would_change: "A longer trial in which AI tutoring improves an externally scored standardised assessment."
+notes: >-
+  verify: the report says the trial ran over 10 weeks earlier in 2026 but the text read gives no calendar dates, so dates and window are left empty.
+  verify: expert tutors reviewed every Gemini message; the report says 94.7% were approved unchanged.
+related: [numi-ai-math-tutoring-hamilton-county, khanmigo-hamilton-county-remedial-math-rct]
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: Students were randomised to AI tutoring or standard remediation on the same platform, but the AI was reviewed by human tutors, so the comparison reaches the bundle of AI plus tutor oversight.
+receipts:
+  - field: headline
+    quote: 𝑵 = 1179 students
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: +0.02 SD relative to standard remediation [–0.12, +0.16]
+    locator: Section 3.3
+    source: 0
+  - field: impact_number
+    quote: +0.02 SD relative to standard remediation [–0.12, +0.16]
+    locator: Section 3.3
+    source: 0
+  - field: effect.relative
+    quote: differing by only –0.01 standard deviations [–0.15, +0.14]
+    locator: Section 3.3
+    source: 0
+  - field: effect.relative
+    quote: +0.02 SD relative to standard remediation [–0.12, +0.16]
+    locator: Section 3.3
+    source: 0
+  - field: reach
+    quote: 𝑁 = 1179 students from 10 state-funded secondary schools
+    locator: Section 5, Participants
+    source: 0

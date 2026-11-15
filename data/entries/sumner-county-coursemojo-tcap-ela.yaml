@@ -1,0 +1,81 @@
+id: sumner-county-coursemojo-tcap-ela
+section: because
+rank: 49
+headline: >-
+  Sumner County Schools in Tennessee says middle-school groups averaging 25 or more
+  Coursemojo AI activities per student improved TCAP English proficiency by 3.7
+  percentage points, against -0.2 for groups with little or no use.
+impact: "Higher ELA proficiency gain where the AI teaching assistant was used more (district preliminary analysis)"
+impact_number: "+3.7 pts"
+impact_label: "ELA proficiency in middle-school groups with 25 or more Coursemojo activities per student, vs -0.2 with little or no use"
+summary: >-
+  A WSMV report on a Sumner County Schools press release says the district's
+  preliminary analysis of 2026 TCAP English Language Arts data found larger
+  proficiency gains in school-grade groups that used the Coursemojo AI teaching
+  assistant more. The district says the comparison is among groups with different
+  levels of use, not against schools that did not use the platform.
+caveat: >-
+  A news report of the district's own preliminary analysis; the comparison is among
+  groups by level of use, so schools that used it more may differ in other ways;
+  the district was not top in the state for proficiency increase; the report says
+  it is unclear how much influence Coursemojo had.
+domain: education
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "School-grade groups averaging 25 or more Coursemojo activities per student vs groups with little or no use, change in TCAP ELA proficiency"
+effect:
+  relative: "Groups with an average of 25 or more activities improved ELA proficiency by an average of 3.7 percentage points; groups with little or no use saw -0.2 percentage points"
+  absolute: "Eighth-graders with 25 or more activities improved by an average of 8.7 percentage points in proficiency"
+reach: "Coursemojo expanded from a six-school sixth-grade pilot in 2024-2025 to all middle school grades in Sumner County"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-14
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "WSMV: This Tennessee school system credits AI with improving student TCAP scores. Here's how"
+    url: https://www.wsmv.com/2026/07/14/this-tennessee-school-system-credits-ai-with-improving-student-tcap-scores-heres-how/
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures come from the district's own press release about a product it
+  bought, as reported by a TV station; the vendor is Coursemojo, whose co-founder
+  is quoted in the story. No independent analysis.
+what_would_change: "The district's final TCAP analysis, or an evaluation against schools that did not use the platform."
+notes: >-
+  verify: the report gives the 2026 TCAP data and the 2024-2025 pilot year but no calendar dates for the period of use, so dates and window are left empty.
+  verify: the earlier pilot figure (an average 8 percentage point increase for sixth graders) is a separate claim and is not used here.
+related: [numi-ai-math-tutoring-hamilton-county, khanmigo-hamilton-county-remedial-math-rct]
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: The comparison is between groups of students who chose or were given different amounts of the tool, with no schools that did not use it, so use level is confounded with other differences.
+receipts:
+  - field: headline
+    quote: groups with an average of 25 or more Coursemojo activities per student improved ELA proficiency by an average of 3.7 percentage points
+    locator: Article body, paragraph 5
+    source: 0
+  - field: headline
+    quote: Groups with little or no use of the program saw -0.2 percentage points
+    locator: Article body, paragraph 5
+    source: 0
+  - field: impact_number
+    quote: improved ELA proficiency by an average of 3.7 percentage points
+    locator: Article body, paragraph 5
+    source: 0
+  - field: effect.relative
+    quote: improved ELA proficiency by an average of 3.7 percentage points
+    locator: Article body, paragraph 5
+    source: 0
+  - field: effect.relative
+    quote: Groups with little or no use of the program saw -0.2 percentage points
+    locator: Article body, paragraph 5
+    source: 0
+  - field: effect.absolute
+    quote: had an average increase of 8.7 percentage points in proficiency
+    locator: Article body, paragraph 6
+    source: 0
