@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "google-eedi-gemini-tutoring-star-maths-null",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "5c2a09af4237bbcc03508655951604008e27e52392b7ce2aa07a725ad3ae5809",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://services.google.com/fh/files/misc/learnlm_oct26.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-15T16:38:57.767Z",
+      "final_url": "https://services.google.com/fh/files/misc/learnlm_oct26.pdf",
+      "sha256": "39a31480d3a34ae7369dfb6be767964528592182477e3c7182c0c915ab4550b0",
+      "chars": 79714,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "𝑵 = 1179 students",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "+0.02 SD relative to standard remediation [–0.12, +0.16]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "+0.02 SD relative to standard remediation [–0.12, +0.16]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "differing by only –0.01 standard deviations [–0.15, +0.14]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "+0.02 SD relative to standard remediation [–0.12, +0.16]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "𝑁 = 1179 students from 10 state-funded secondary schools",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The comparison with standard remediation tests Gemini tutoring bundled with mandatory expert review of every message.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Although the entry leaves achieved dates null, Methods gives trial dates of 13 April–7 July, identified as 2026 by the report's date and 'earlier this year' wording."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Google and Eedi report research on their own model and platform, with ethics review by Google DeepMind's committee."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preregistered randomized trial supports the reported sample and Star Maths effects, including +0.02 SD with a 95% credible interval of −0.12 to +0.16 for personalised AI tutoring versus standard remediation. It establishes no detectable overall standardized-test gain for supervised AI tutoring, rather than proof of zero effect or evidence about unsupervised AI tutoring."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27920,
+      "output": 610,
+      "total": 28530,
+      "cached": 0,
+      "reasoning": 135
+    },
+    "duration_ms": 16544
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

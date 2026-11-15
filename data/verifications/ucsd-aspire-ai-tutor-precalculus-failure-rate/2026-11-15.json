@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ucsd-aspire-ai-tutor-precalculus-failure-rate",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "814008287587612d1541018725c3a1dbc44dfc9a17775c5f24685f9ddc586717",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://today.ucsd.edu/story/faculty-symposium-highlights-ais-strengths-in-higher-ed-teaching",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T16:39:44.124Z",
+      "final_url": "https://today.ucsd.edu/story/faculty-symposium-highlights-ais-strengths-in-higher-ed-teaching",
+      "sha256": "a6120b073504d1d063fb8b2a93b2da95c5b67537a9b9e7ef0fedd14c541b2729",
+      "chars": 13480,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The failure rate in Foundations of Precalculus dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "With testing across 12 courses including more than 2,200 students",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison is Fall 2024 instruction before ASPIRE versus Fall 2025 after a comprehensive instructional redesign that included ASPIRE.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the article body identifies Fall 2025 outcomes, but gives insufficient precision to resolve their position relative to the November 15 window boundary."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The university reports outcomes for a tool developed and tested by its own staff, as the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The university news article supports the preliminary decline from 35.3% to 11.4% following a course redesign that included ASPIRE, and testing across 12 courses involving more than 2,200 students. It does not isolate the tutor's contribution, provide the precalculus sample size, or establish precise outcome dates."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14676,
+      "output": 614,
+      "total": 15290,
+      "cached": 8448,
+      "reasoning": 154
+    },
+    "duration_ms": 15096
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The university news article supports the preliminary decline from 35.3% to 11.4% following a course redesign that included ASPIRE, and testing across 12 courses involving more than 2,200 students. It does not isolate the tutor's contribution, provide the precalculus sample size, or establish precise outcome dates.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
+    ],
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      }
+    ]
+  }
+}

@@ -207,3 +207,20 @@ Rejected (15 read of 105 candidates):
 - PrEP decision aid (NCT05614492) and APPT reminders (NCT05016856): no AI intervention in the record.
 - Annals AI scribe QI study: source already in ambient-scribes entry. PharmaAgent: silent deployment, no patients reached.
 - Reviews, protocols, surveys, benchmarks and retrospective model studies on medRxiv and PubMed: not entries.
+
+## 2026-11-15, slice 13: announcements: schools and tutoring, 2026-08-12 to 2026-11-11
+
+Drafted (4):
+- khanmigo-hamilton-county-remedial-math-rct: EdWorkingPaper cluster RCT, 18 Tennessee middle schools, Khanmigo +1.3 national percentile ranks per term, similar to Khan Academy without AI (PDF read; dates left empty).
+- google-eedi-gemini-tutoring-star-maths-null: Google and Eedi RCT, 1,179 UK students, Gemini tutoring +0.02 SD on Star Maths vs standard remediation (not-because; developer's own report, every AI message human-reviewed).
+- ucsd-aspire-ai-tutor-precalculus-failure-rate: UC San Diego news story, precalculus failure rate 35.3% to 11.4% after a redesign including the ASPIRE tutor (speculative; confounded).
+- sumner-county-coursemojo-tcap-ela: WSMV on district release, groups with heavy Coursemojo use +3.7 points ELA proficiency vs -0.2 (speculative; no non-user schools).
+
+Rejected:
+- Stanford EdWorkingPaper 26-1451: the tested variable is human engagement support, AI platform in both arms; null on reading.
+- Israel Project 720 (JNS, ministry evaluation): academic achievement not measured, no outcome numbers.
+- MagicSchool Aurora case study: vendor page, one classroom, undated, no baseline.
+- Alpha School claims, Upland/Panorama "correlated" claim, Warren County, Curipod, Aldine ISD vendor release: vendor or unverified, not read.
+- Estonia AI Leap, Ghana, England DfE tutoring: reach and plans only, no outcome numbers.
+- Maryland AI tutor: already an entry. NUMI Hamilton County: already an entry.
+- Short of the floor: 8 searches and 5 pages read this run.

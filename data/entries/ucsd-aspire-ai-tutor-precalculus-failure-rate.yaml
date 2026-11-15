@@ -1,0 +1,91 @@
+id: ucsd-aspire-ai-tutor-precalculus-failure-rate
+section: because
+rank: 48
+headline: >-
+  UC San Diego reports the failure rate in Foundations of Precalculus fell from
+  35.3% in Fall 2024 to 11.4% in Fall 2025 after a redesign that built in the
+  ASPIRE AI tutor, a preliminary before-and-after figure.
+impact: "Course failure rate fell after a redesign that included an AI tutor (university report)"
+impact_number: "35.3% to 11.4%"
+impact_label: "failure rate in Foundations of Precalculus, Fall 2024 to Fall 2025, after a redesign that included the ASPIRE AI tutor"
+summary: >-
+  A UC San Diego news story on its faculty AI symposium says a team built ASPIRE,
+  an AI tutor embedded in homework, practice and test-preparation assignments, and
+  that the failure rate in Foundations of Precalculus dropped after a
+  comprehensive instructional redesign that included the tutor.
+caveat: >-
+  The university's own news story; the speaker calls the results preliminary;
+  the change is a before-and-after comparison of two terms and follows a whole
+  course redesign, so the AI tutor's share is not separated; no sample size for the
+  course is given.
+domain: education
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Foundations of Precalculus failure rate in Fall 2024, before ASPIRE was integrated, vs Fall 2025, after a comprehensive redesign that included the AI tutor"
+effect:
+  relative: "Failure rate dropped from 35.3% in Fall 2024 to 11.4% in Fall 2025"
+  absolute: "Not stated in the source as a count of students"
+reach: "Testing across 12 courses including more than 2,200 students (all ASPIRE courses); the precalculus figures are for one course"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-09
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "UC San Diego Today: Faculty Symposium Highlights AI's Strengths in Higher Ed Teaching"
+    url: https://today.ucsd.edu/story/faculty-symposium-highlights-ais-strengths-in-higher-ed-teaching
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the university's own news story about a tool built by its own
+  faculty and research staff; no independent evaluation is cited.
+what_would_change: "A controlled comparison separating the AI tutor from the rest of the course redesign."
+notes: >-
+  verify: the source gives terms (Fall 2024, Fall 2025) but no calendar dates, so dates and window are left empty.
+  verify: the 2,200 students figure covers 12 courses, not the precalculus course alone.
+related: [maryland-ai-tutor-negative]
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: The only comparison is the same course before and after a redesign that included the AI tutor, so the change cannot be attributed to the tutor alone.
+receipts:
+  - field: headline
+    quote: The failure rate in Foundations of Precalculus dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025
+    locator: Article body, AI tutors paragraph
+    source: 0
+  - field: impact_number
+    quote: dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025
+    locator: Article body, AI tutors paragraph
+    source: 0
+  - field: effect.relative
+    quote: dropped from 35.3% in Fall 2024 before ASPIRE was integrated into the instruction to 11.4% in Fall 2025
+    locator: Article body, AI tutors paragraph
+    source: 0
+  - field: reach
+    quote: With testing across 12 courses including more than 2,200 students
+    locator: Article body, AI tutors paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 814008287587612d1541018725c3a1dbc44dfc9a17775c5f24685f9ddc586717
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: ucsd-aspire-ai-tutor-precalculus-failure-rate/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
