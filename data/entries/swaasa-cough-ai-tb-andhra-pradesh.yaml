@@ -1,0 +1,98 @@
+id: swaasa-cough-ai-tb-andhra-pradesh
+section: because
+rank: 50
+headline: >-
+  Because of AI, community health workers in Andhra Pradesh, India, screened
+  7,879 people by cough sound and found 11 TB cases, 4 of them in people with no
+  symptoms.
+impact: "11 TB cases in 7,879 screened"
+impact_number: "11"
+impact_label: "TB cases found among 7,879 screened by cough sound"
+summary: >-
+  In a 6-week field deployment, frontline health workers recorded coughs on
+  smartphones and the Swaasa AI app flagged 780 people for confirmatory NAAT
+  testing; 11 had TB, about 36% of them asymptomatic. The TB yield among those
+  tested (1.41%) was about the same as a historical active case-finding yield
+  (1.34%).
+caveat: >-
+  Descriptive feasibility study with no control group; the yield is statistically
+  indistinguishable from the historical comparison, which came from a different
+  cohort and pathway. Authors include employees of the maker.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: only-path
+  window: in
+comparison: "Swaasa-referred NAAT yield vs historical active case-finding yield in the same two health-centre areas (different cohort and period)"
+effect:
+  relative: "1.41% TB yield among those referred vs 1.34% historical ACF yield (descriptive; no hypothesis test)"
+  absolute: "11 TB cases confirmed of 780 referred; 7,879 screened"
+reach: "7,879 people screened, East Godavari district, Andhra Pradesh"
+dates:
+  achieved_start: 2026-02-18
+  achieved_end: 2026-04-07
+  published: 2026-10-29
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Prospective field deployment of Swaasa AI for community-based screening of tuberculosis and other respiratory diseases in Andhra Pradesh: a feasibility and implementation study (Frontiers in Public Health)"
+    url: https://doi.org/10.3389/fpubh.2026.1951831
+    type: primary
+conflicts: >-
+  Authors include employees of Salcit Technologies, which makes Swaasa; the
+  deployment was a pilot under the Andhra Pradesh MedTech Innovation Challenge 2025.
+what_would_change: null
+notes: >-
+  The authors say the comparison with historical ACF data is descriptive only and
+  that they did not estimate sensitivity or specificity.
+  verify: the paper gives site-level TB yields in Table 2 (7 and 4 cases) that sum to
+  the pooled 11; the 36% asymptomatic figure is 4 of 11.
+  verify: spirometry was done on a selected subset only, so the COPD figures are not
+  used here.
+related: [india-tribal-tb-ai-cxr]
+history:
+  - date: 2026-11-15
+    note: "Added by the daily scout."
+rationale: The comparison is the TB yield among Swaasa-referred people (1.41%) against a historical active case-finding yield (1.34%), which shows no difference; the only-path reading rests on 4 of the 11 cases having no symptoms and so falling outside a symptom-first pathway.
+receipts:
+  - field: headline
+    quote: Between 18 February and 7 April 2026, 7,879 individuals were screened across the two PHCs.
+    locator: Results, 3.1 Study enrolment and participant characteristics
+    source: 0
+  - field: headline
+    quote: Of these, 11 were confirmed to have TB, of whom ~36% (4 cases) were asymptomatic.
+    locator: Results, 3.3 Summary
+    source: 0
+  - field: impact
+    quote: Of these, 11 were confirmed to have TB, of whom ~36% (4 cases) were asymptomatic.
+    locator: Results, 3.3 Summary
+    source: 0
+  - field: impact_number
+    quote: Of these, 11 were confirmed to have TB, of whom ~36% (4 cases) were asymptomatic.
+    locator: Results, 3.3 Summary
+    source: 0
+  - field: effect.relative
+    quote: the pooled TB positivity was 1.34% (24/1,791), compared to 1.41% (11/780)
+    locator: Results, 3.8 Key impact
+    source: 0
+  - field: effect.absolute
+    quote: This corresponded to a diagnostic yield of 11/780, 1.41%.
+    locator: Results, 3.2 Performance analysis
+    source: 0
+  - field: reach
+    quote: Between 18 February and 7 April 2026, 7,879 individuals were screened across the two PHCs.
+    locator: Results, 3.1 Study enrolment and participant characteristics
+    source: 0
+  - field: dates.achieved_start
+    quote: A prospective field deployment was conducted over a 6-week period from 18 February 2026 to 7 April 2026.
+    locator: Methods, 2.1 Study design
+    source: 0
+  - field: dates.achieved_end
+    quote: A prospective field deployment was conducted over a 6-week period from 18 February 2026 to 7 April 2026.
+    locator: Methods, 2.1 Study design
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
