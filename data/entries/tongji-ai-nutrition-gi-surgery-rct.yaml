@@ -35,7 +35,7 @@ dates:
   achieved_end: null
   published: 2026-10-29
   added: 2026-11-11
-  updated: 2026-11-11
+  updated: 2026-11-15
 sources:
   - title: "Supportive Care in Cancer: AI-facilitated individualized nutritional guidance with ABC-structured prompts after gastrointestinal cancer surgery: a randomized controlled trial (open access, Europe PMC)"
     url: https://doi.org/10.1007/s00520-026-11401-7
@@ -58,6 +58,8 @@ related: [prea-chatbot-specialist-referral-rct]
 history:
   - date: 2026-11-11
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: removed the reach receipt for 187 screened patients, which the gate rightly said does not support the 90 randomized; the 90 rests on the Discussion quote. No value changed."
 rationale: The grade is bundled because the trial randomized a package (AI generation, individualization, quantified targets, written guidance and clinician review) against standard generic discharge advice, and the authors say it cannot isolate AI's own contribution.
 receipts:
   - field: headline
@@ -91,10 +93,6 @@ receipts:
   - field: reach
     quote: In this randomized controlled trial of 90 patients undergoing laparoscopic gastric or colorectal cancer surgery
     locator: Discussion, Principal findings
-    source: 0
-  - field: reach
-    quote: we screened 187 patients undergoing elective laparoscopic gastrointestinal cancer surgery at Tongji Hospital.
-    locator: Results, Study population
     source: 0
 drafted:
   vendor: anthropic

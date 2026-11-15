@@ -355,3 +355,8 @@ Candidates: 137 over 2026-11-13 to 2026-11-15, 7 flagged randomized, 13 announce
 - CT-based AI risk support for cystic renal masses, with a randomized component. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Already logged earlier and unreadable; still open.
 - Reducing benign breast biopsies in women 35 and under with a clinician-AI triage strategy. [Diagnostics](https://doi.org/10.3390/diagnostics16213491). Not read; likely retrospective. Check whether any patients were actually triaged.
 - Skipped: AEA registrations in development, reviews, benchmarks, model-accuracy papers, pharma-ads chatbot study, news and market pieces.
+
+## 2026-11-15 (weekly run)
+
+- KITE-CRM, CT AI for cystic renal masses, randomized implementation of 5,869 adults at Changhai Hospital, Nov 2025–Feb 2026 (ChiCTR2500112290). [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Benign treatment 28/2934 vs 104/2935 overall, but the AI-evaluable cystic subgroup was not significant (5/29 vs 19/56). Missing: full text, why treated counts differ (171 vs 258), and whether the overall gain came from lesions the AI never read.
+- AI vs teacher feedback on undergraduate essays, three-arm RCT, 312 students, Guangzhou, Sept 2025. [Frontiers in Psychology](https://doi.org/10.3389/fpsyg.2026.1918748). Equal essay gains (d 0.60 vs 0.59 over no feedback), lower motivation with AI. Weak: not preregistered, one cycle, pre-window.

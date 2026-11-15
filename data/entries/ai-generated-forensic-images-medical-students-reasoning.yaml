@@ -21,18 +21,18 @@ ai_type: generative
 grades:
   evidence: B
   attribution: isolated
-  window: null
+  window: pre
 comparison: "Students taught with expert-validated GPT-Image-1 forensic images vs students taught with conventional forensic images, same cases, facilitators and questions, adjusted for baseline reasoning"
 effect:
   relative: "Adjusted mean difference of 2.4 points (95% CI, 1.4-3.4"
   absolute: null
 reach: "249 Phase II and Phase III MBBS students at Indian medical colleges"
 dates:
-  achieved_start: null
-  achieved_end: null
+  achieved_start: 2025-01
+  achieved_end: 2025-07
   published: 2026-10-05
   added: 2026-11-13
-  updated: 2026-11-13
+  updated: 2026-11-15
 sources:
   - title: "Use of Expert-Validated AI-Generated Forensic Images in Case-Based Learning and Clinical Reasoning Among Undergraduate Medical Students: A Two-Arm Educational Intervention Study (Cureus)"
     url: https://doi.org/10.7759/cureus.117464
@@ -40,13 +40,15 @@ sources:
 conflicts: "Authors declare no financial support and no financial or other relationships. The authors ran and evaluated their own teaching intervention."
 what_would_change: null
 notes: >-
-  verify: the source gives no calendar period for the sessions, so dates and the window grade are left empty.
+  Dates: Methods give January to July 2025 as the study period (the sentence says the study "was planned" for it); window pre.
   verify: allocation was non-randomized; the arms were taught in separate sessions and clustering by session was not modelled.
   verify: the unit of the reasoning score is the study's own scale (means about 25 vs 23), not a standard scale.
 related: []
 history:
   - date: 2026-11-13
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Updated: achieved dates set to January to July 2025 from the Methods; window graded pre, as the verifier also read it."
 rationale: The two groups had identical learning objectives, cases, facilitators and questions and differed in the source of the images, but allocation was not random, so attribution rests on a controlled non-randomized comparison.
 receipts:
   - field: impact_number
@@ -60,6 +62,14 @@ receipts:
   - field: reach
     quote: enrolled and allocated 249 Phase II and Phase III MBBS students
     locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: "Tantia Medical College, Sri Ganganagar, India, from January to July 2025."
+    locator: "Materials and methods, Study design, setting, and participants"
+    source: 0
+  - field: dates.achieved_end
+    quote: "Tantia Medical College, Sri Ganganagar, India, from January to July 2025."
+    locator: "Materials and methods, Study design, setting, and participants"
     source: 0
 drafted:
   vendor: anthropic

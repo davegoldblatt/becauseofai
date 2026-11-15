@@ -28,7 +28,7 @@ dates:
   achieved_end: null
   published: 2026-10-21
   added: 2026-11-14
-  updated: 2026-11-14
+  updated: 2026-11-15
 sources:
   - title: "Artificial intelligence-assisted training for proximal caries diagnosis by undergraduate dental students: a randomized experimental study (BMC Medical Education)"
     url: https://doi.org/10.1186/s12909-026-09982-2
@@ -43,6 +43,8 @@ related: []
 history:
   - date: 2026-11-14
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: added the missing headline receipt (79 students, Results) that held the entry; no value changed."
 rationale: Students were randomly assigned to the same one-hour radiograph session with or without AI annotations and tested without AI, so the arms differ only by the AI support during training.
 receipts:
   - field: impact_number
@@ -52,6 +54,10 @@ receipts:
   - field: reach
     quote: Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.
     locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: "Of the 82 students eligible for enrollment in this study, 79 completed both pre- and post-test assessments"
+    locator: "Results, first paragraph"
     source: 0
 drafted:
   vendor: anthropic

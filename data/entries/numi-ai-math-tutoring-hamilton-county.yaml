@@ -34,7 +34,7 @@ dates:
   achieved_end: 2026-04-03
   published: 2026-08
   added: 2026-11-13
-  updated: 2026-11-13
+  updated: 2026-11-15
 sources:
   - title: "NBER Working Paper 35621: Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment"
     url: https://www.nber.org/system/files/working_papers/w35621/w35621.pdf
@@ -52,6 +52,8 @@ related: [maryland-ai-tutor-negative, sierra-leone-gemini-math]
 history:
   - date: 2026-11-13
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: added the missing headline receipt (the 3.1-point delayed-test difference, Section 5.5, the quote the gate already found for impact_number); no value changed."
 rationale: Students were randomized to the AI tutor or to computer-assisted practice alone with the same platform, so the delayed-test gap isolates the tutor, though it is imprecise.
 receipts:
   - field: impact_number
@@ -89,6 +91,10 @@ receipts:
   - field: dates.achieved_end
     quote: March 30–April 3, teachers selected a class period to administer a short delayed assessment,
     locator: Section 3.1 Setting
+    source: 0
+  - field: headline
+    quote: "correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed"
+    locator: "Section 5.5, Delayed learning among mastery students"
     source: 0
 drafted:
   vendor: anthropic

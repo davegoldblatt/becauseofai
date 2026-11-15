@@ -25,15 +25,15 @@ ai_type: generative
 grades:
   evidence: A
   attribution: bundled
-  window: null
+  window: in
 comparison: "Gemini tutoring (two variants) vs standard Eedi remediation (curated videos and hints) vs expert human tutoring, students randomised to condition, Star Maths measured at baseline and endline"
 effect:
   relative: "AI tutoring with question context differed from standard remediation by only -0.01 standard deviations on Star Maths; with personalised context +0.02 SD"
   absolute: "Not stated in the text as a raw score difference"
 reach: "1,179 students in 10 state-funded secondary schools across England, Northern Ireland, Wales and Scotland"
 dates:
-  achieved_start: null
-  achieved_end: null
+  achieved_start: 2026-04-13
+  achieved_end: 2026-07-07
   published: 2026-10-29
   added: 2026-11-15
   updated: 2026-11-15
@@ -42,18 +42,23 @@ sources:
     url: https://services.google.com/fh/files/misc/learnlm_oct26.pdf
     type: primary
     announcement: true
+  - title: "AEA RCT Registry AEARCTR-0018079: Testing the efficacy of AI tutoring in secondary mathematics: A scaled RCT in UK classrooms"
+    url: https://www.socialscienceregistry.org/trials/18079
+    type: primary
 conflicts: >-
   The report is written by Google's LearnLM team with Eedi, the maker of the Gemini
   model and the maths platform it was tested in; the ethics review was by Google
   DeepMind's committee. It is the organisations' own report on their own product.
 what_would_change: "A longer trial in which AI tutoring improves an externally scored standardised assessment."
 notes: >-
-  verify: the report says the trial ran over 10 weeks earlier in 2026 but the text read gives no calendar dates, so dates and window are left empty.
+  Dates: the report's Procedure section says the trial launched on 13 April and ended on 7 July, "earlier this year" in a report dated 29 October 2026; the AEA registry gives an intervention start of 2026-04-13. Window in.
   verify: expert tutors reviewed every Gemini message; the report says 94.7% were approved unchanged.
 related: [numi-ai-math-tutoring-hamilton-county, khanmigo-hamilton-county-remedial-math-rct]
 history:
   - date: 2026-11-15
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Updated: achieved dates set to 13 April to 7 July 2026 from the report's Procedure section (pdftotext available this run) and the AEA registry, now a source; window graded in, as the verifier also read it."
 rationale: Students were randomised to AI tutoring or standard remediation on the same platform, but the AI was reviewed by human tutors, so the comparison reaches the bundle of AI plus tutor oversight.
 receipts:
   - field: headline
@@ -79,6 +84,18 @@ receipts:
   - field: reach
     quote: 𝑁 = 1179 students from 10 state-funded secondary schools
     locator: Section 5, Participants
+    source: 0
+  - field: dates.achieved_start
+    quote: "We then launched the trial on 13 April."
+    locator: "Section 3, Procedure"
+    source: 0
+  - field: dates.achieved_start
+    quote: "Intervention Start Date 2026-04-13"
+    locator: "Registry record, Intervention Start Date"
+    source: 1
+  - field: dates.achieved_end
+    quote: "the trial covered 10 weeks of classroom instruction, ending on 7 July."
+    locator: "Section 3, Procedure"
     source: 0
 drafted:
   vendor: anthropic

@@ -31,7 +31,7 @@ dates:
   achieved_end: null
   published: 2026-09-21
   added: 2026-11-14
-  updated: 2026-11-14
+  updated: 2026-11-15
 sources:
   - title: "Spotlight on America (WJLA): As 911 centers turn to AI, agencies weigh gains against risks, 21 September 2026"
     url: https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine
@@ -49,6 +49,8 @@ notes: >-
 history:
   - date: 2026-11-14
     note: "Added by the backfill run."
+  - date: 2026-11-15
+    note: "Corrected: added the missing reach receipt (the only digits in reach are the name Jeffcom 911) that held the entry; no value changed."
 rationale: The grade is bundled because the reduction is credited to AI as part of the centre's call-handling changes, and the source gives no baseline or comparison group.
 receipts:
   - field: headline
@@ -66,6 +68,10 @@ receipts:
   - field: effect.relative
     quote: At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls
     locator: Article body, NTIA white paper paragraph
+    source: 0
+  - field: reach
+    quote: "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls"
+    locator: "Article body, NTIA white paper paragraph"
     source: 0
 drafted:
   vendor: anthropic

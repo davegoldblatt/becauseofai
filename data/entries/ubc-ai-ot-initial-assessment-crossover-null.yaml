@@ -31,7 +31,7 @@ dates:
   achieved_end: null
   published: 2026-11-11
   added: 2026-11-14
-  updated: 2026-11-14
+  updated: 2026-11-15
 sources:
   - title: "Developing and evaluating a remote, self-administered, AI-powered occupational therapy initial assessment: A crossover randomized controlled trial (Work), via Europe PMC abstract"
     url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42867899?resultType=core&format=xml"
@@ -46,16 +46,10 @@ related: []
 history:
   - date: 2026-11-14
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: replaced the headline and reach receipts the gate could not find (the reader runs 'Methods' into 'Thirty' with no space); the 30 now rests on the '25/30' quote. No value changed."
 rationale: The same participants completed the AI-administered and the human-administered assessment in randomized order, so the formats differ only by who or what administered the assessment.
 receipts:
-  - field: headline
-    quote: Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart
-    locator: Abstract, Methods
-    source: 0
-  - field: headline
-    quote: Overall, 83% (25/30) preferred the human format.
-    locator: Abstract, Results
-    source: 0
   - field: impact_number
     quote: Overall, 83% (25/30) preferred the human format.
     locator: Abstract, Results
@@ -68,13 +62,17 @@ receipts:
     quote: Overall, 83% (25/30) preferred the human format.
     locator: Abstract, Results
     source: 0
-  - field: reach
-    quote: Thirty adults completed an AI-administered and a human-administered OT initial assessment in randomized order one to two weeks apart
-    locator: Abstract, Methods
+  - field: headline
+    quote: "Overall, 83% (25/30) preferred the human format."
+    locator: "Abstract, Results"
     source: 0
   - field: reach
-    quote: 28 gave reflection interviews
-    locator: Abstract, Methods
+    quote: "Overall, 83% (25/30) preferred the human format."
+    locator: "Abstract, Results"
+    source: 0
+  - field: reach
+    quote: "28 gave reflection interviews"
+    locator: "Abstract, Methods"
     source: 0
 drafted:
   vendor: anthropic

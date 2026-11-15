@@ -31,7 +31,7 @@ dates:
   achieved_end: 2025-09
   published: 2026-10-24
   added: 2026-11-14
-  updated: 2026-11-14
+  updated: 2026-11-15
 sources:
   - title: "Artificial intelligence-enhanced colposcopy training improves diagnostic reasoning and communication competencies: A randomized controlled study (Journal of Gynecology Obstetrics and Human Reproduction), abstract via Europe PMC"
     url: https://doi.org/10.1016/j.jogoh.2026.103307
@@ -46,6 +46,8 @@ related: []
 history:
   - date: 2026-11-14
     note: Added by the backfill run.
+  - date: 2026-11-15
+    note: "Corrected: added the missing headline receipt (60 residents, abstract Methods) that held the entry; no value changed."
 rationale: Residents were randomized to receive the AI virtual-patient platform on top of traditional teaching or traditional teaching only, so the comparison tests the platform as part of a teaching package and attribution is bundled.
 receipts:
   - field: impact_number
@@ -67,6 +69,10 @@ receipts:
   - field: dates.achieved_end
     quote: (May 2023-September 2025)
     locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: "60 obstetrics and gynecology residents (PGY-2/3) from two affiliated teaching hospitals were enrolled"
+    locator: "Abstract, Methods"
     source: 0
 drafted:
   vendor: anthropic
