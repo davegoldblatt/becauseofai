@@ -1,0 +1,70 @@
+id: korea-claude-chatbot-infertility-stress
+section: because
+rank: 45
+headline: >-
+  Because of AI, women in infertility treatment at one Korean clinic who used a Claude-based chatbot self-management
+  program showed a larger fall in perceived stress than women on usual clinic care, in a small non-randomized
+  feasibility study.
+impact: "Lower perceived stress (non-randomized)"
+impact_number: "−5.91"
+impact_label: "points on perceived stress, difference in change vs usual clinic care"
+summary: >-
+  A purpose-built chatbot on Claude Sonnet 4 delivered a short psychosocial program, and change in perceived stress,
+  anxiety and alexithymia was compared with a first-recruited group on usual care.
+caveat: >-
+  Feasibility was the primary aim; allocation was by recruitment period, not randomized, the sample is very small,
+  and the authors say the results do not establish effectiveness.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "Women recruited later who received the chatbot program vs women recruited earlier on usual clinic care with no study activity, same infertility centre, pretest-posttest"
+effect:
+  relative: null
+  absolute: "Between-group difference in change in perceived stress −5.91 points (95% CI −9.07 to −2.74); depressive symptoms did not differ significantly"
+reach: "37 women in infertility treatment at one centre in the Republic of Korea"
+dates:
+  achieved_start: 2025-07
+  achieved_end: 2025-08
+  published: 2026-10-21
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Development and Preliminary Evaluation of an AI Chatbot-Based Psychosocial Self-Management Program for Women with Infertility: A Non-Randomized Feasibility Study (Behavioral Sciences, open access via Europe PMC)"
+    url: https://doi.org/10.3390/bs16101956
+    doi: 10.3390/bs16101956
+    type: primary
+conflicts: "Funded by a Korean Ministry of Education and National Research Foundation project; the authors built the chatbot they evaluated; the program ran on Anthropic's Claude model, and the authors declare no conflict of interest."
+what_would_change: null
+notes: >-
+  verify: groups were recruited in sequence (comparison group first), so calendar time is confounded with the intervention; the authors say the findings are exploratory.
+  verify: the two groups differed at baseline in age.
+  verify: dates are the intervention group's recruitment window; the comparison group was recruited in June to July 2025.
+related: []
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: The chatbot group and the usual-care group differed in contact, attention and recruitment period as well as in the chatbot, so the comparison tests the whole program and attribution is bundled.
+receipts:
+  - field: impact_number
+    quote: the between-group differences in change were −5.91 points for perceived stress (95% CI, −9.07 to −2.74; d = −1.25)
+    locator: Results, 3.4 Descriptive Change
+    source: 0
+  - field: effect.absolute
+    quote: the between-group differences in change were −5.91 points for perceived stress (95% CI, −9.07 to −2.74; d = −1.25)
+    locator: Results, 3.4 Descriptive Change
+    source: 0
+  - field: reach
+    quote: 37 women recruited sequentially from a single infertility centre in the Republic of Korea
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: then recruited (July to August 2025)
+    locator: Methods, 2.5 Data Collection
+    source: 0
+  - field: dates.achieved_end
+    quote: then recruited (July to August 2025)
+    locator: Methods, 2.5 Data Collection
+    source: 0

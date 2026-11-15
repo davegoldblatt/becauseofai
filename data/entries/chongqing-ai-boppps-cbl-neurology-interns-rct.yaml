@@ -1,0 +1,74 @@
+id: chongqing-ai-boppps-cbl-neurology-interns-rct
+section: because
+rank: 44
+headline: >-
+  Because of AI, junior-college medical interns on a neurology rotation in Chongqing who got DeepSeek-supported
+  case-based teaching scored higher on a simulated neurological-emergency assessment than interns on conventional
+  teaching, in a randomized study of 118 interns.
+impact: "Higher simulated-emergency score (RCT)"
+impact_number: "82.07 vs 76.43"
+impact_label: "mean score on a simulated neurological-emergency assessment, AI-supported vs conventional teaching"
+summary: >-
+  Interns were randomized within each monthly rotation batch to AI-supported or conventional BOPPPS case-based
+  learning, and their scores on a four-station simulated neurological-emergency assessment were compared.
+caveat: >-
+  The outcome is a locally developed simulated assessment, not patient care; the study was not prospectively
+  registered, and the AI arm also had faculty supervision and structured prompts, so the package is what was tested.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: in
+comparison: "AI-supported BOPPPS-CBL (standardized DeepSeek prompts under faculty supervision) vs conventional BOPPPS-CBL, individually randomized within monthly rotation batches"
+effect:
+  relative: null
+  absolute: "Adjusted between-group difference 5.67 points (95% CI 2.86-8.49) on a 0-100 simulated-emergency score"
+reach: "118 junior-college medical interns on a one-month neurology rotation at one district hospital, Chongqing"
+dates:
+  achieved_start: 2025-07
+  achieved_end: 2026-06
+  published: 2026-10-14
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Faculty-supervised AI-supported BOPPPS-CBL and performance on a simulated neurological-emergency assessment among junior-college medical interns: a batch-stratified randomized educational study (Frontiers in Medicine, open access via Europe PMC)"
+    url: https://doi.org/10.3389/fmed.2026.1945397
+    doi: 10.3389/fmed.2026.1945397
+    type: primary
+conflicts: "Funded by two teaching-reform grants (Chongqing Municipal Education Commission and the People's Hospital of Chongqing Yubei District); the authors teach in the programme they evaluated; no commercial conflicts declared."
+what_would_change: null
+notes: >-
+  verify: the study was not prospectively registered and no dated protocol exists, so evidence is B rather than A.
+  verify: the assessment cases were partly reused across stations; the authors say cueing or carry-over cannot be excluded.
+  verify: the window is graded in because enrolment ran July 2025 to June 2026; most of that span is inside twelve months of the added date.
+related: [yan-ai-virtual-patient-colposcopy-residents-rct, tsm-al-llm-residents-clinical-reasoning-rct]
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: Interns were randomized to the same BOPPPS-CBL teaching with or without faculty-supervised DeepSeek scaffolding, so the comparison tests the AI-supported teaching package and attribution is bundled.
+receipts:
+  - field: headline
+    quote: 118 interns from 12 monthly rotation batches were assigned
+    locator: Abstract, Methods
+    source: 0
+  - field: impact_number
+    quote: Mean total scores were 82.07 in the AI-supported group and 76.43 in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: adjusted between-group difference of 5.67 points (95% CI, 2.86–8.49
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 118 interns from 12 monthly rotation batches were assigned
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: from July 2025 to June 2026
+    locator: Methods, 2.2 Setting and participants
+    source: 0
+  - field: dates.achieved_end
+    quote: from July 2025 to June 2026
+    locator: Methods, 2.2 Setting and participants
+    source: 0

@@ -1,0 +1,64 @@
+id: ai-feedback-icbt-social-anxiety-rct-null
+section: not-because
+rank: 16
+headline: >-
+  Psychologist-reviewed AI-generated feedback in internet-delivered CBT for social anxiety was not shown to match
+  therapist feedback in a randomized trial of 263 adults: the difference was small and inconclusive.
+impact: "No clear difference, non-inferiority not shown"
+impact_number: "1.15"
+impact_label: "SPIN points higher with AI feedback than human feedback at post-treatment, not significant"
+summary: >-
+  Adults with social anxiety disorder got the same internet CBT course with feedback written by AI or by a human
+  therapist (each reviewed by a psychologist), and symptom change on the Social Phobia Inventory was compared.
+caveat: >-
+  Non-inferiority was not established and many participants lacked post-treatment data; guided CBT also did not
+  clearly beat unguided self-help here, so the trial cannot show that the feedback itself did the work.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "AI-generated feedback (psychologist-reviewed) vs human therapist feedback in guided internet CBT for social anxiety disorder, six-arm randomized trial also including unguided self-help and a waitlist"
+effect:
+  relative: null
+  absolute: "AI minus human difference at post-treatment 1.15 SPIN points (95% CI −3.62 to 5.91), against a non-inferiority margin of 3.32"
+reach: "263 adults with social anxiety disorder recruited online"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-16
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "AI-generated vs. human therapist feedback in internet-based CBT for social anxiety disorder: A six-arm randomized controlled trial with deception design (Internet Interventions, open access via Europe PMC)"
+    url: https://doi.org/10.1016/j.invent.2026.101012
+    doi: 10.1016/j.invent.2026.101012
+    type: primary
+conflicts: "No specific funding. One author (Per Carlbring) has received honoraria from OpenAI within the past three years; two authors are editors of the journal but were not involved in its review."
+what_would_change: "A larger trial with enough post-treatment data to show AI feedback within the non-inferiority margin of therapist feedback, and a clear gain of guided over unguided CBT."
+notes: >-
+  verify: the source gives no calendar period for the trial in the text read, so the achieved dates and the window grade are left empty.
+  verify: registered as ISRCTN11343758; 153 participants were analyzed across six arms and about half of the allocated participants in the AI and human arms had post-treatment scores.
+related: []
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: Participants were randomized to AI-generated or human feedback inside the same registered internet CBT course, so the two feedback arms differ only in who wrote the feedback.
+receipts:
+  - field: headline
+    quote: 263 adults with SAD received psychologist-reviewed AI-generated or human feedback
+    locator: Abstract, Method
+    source: 0
+  - field: impact_number
+    quote: the adjusted between-source difference at post-treatment was 1.15 SPIN points (95% CI [−3.62, 5.91])
+    locator: Results 3.1, Fig. 2 caption
+    source: 0
+  - field: effect.absolute
+    quote: the adjusted between-source difference at post-treatment was 1.15 SPIN points (95% CI [−3.62, 5.91])
+    locator: Results 3.1, Fig. 2 caption
+    source: 0
+  - field: reach
+    quote: 263 adults with SAD received psychologist-reviewed AI-generated or human feedback
+    locator: Abstract, Method
+    source: 0
