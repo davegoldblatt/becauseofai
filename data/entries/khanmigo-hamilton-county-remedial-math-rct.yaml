@@ -85,3 +85,24 @@ receipts:
     quote: The primary sample comprises 6,902 student-term observations
     locator: Section 3, Sample
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 0d5f4246fd0791e58b1cdc5d86d49273c4a16702b5fcf4b73d6c92f95f2ec483
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "window: drafter no grade, verifier in."
+  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15.json

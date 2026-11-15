@@ -69,3 +69,23 @@ receipts:
     quote: With testing across 12 courses including more than 2,200 students
     locator: Article body, AI tutors paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 814008287587612d1541018725c3a1dbc44dfc9a17775c5f24685f9ddc586717
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: ucsd-aspire-ai-tutor-precalculus-failure-rate/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."

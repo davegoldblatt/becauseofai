@@ -79,3 +79,13 @@ receipts:
     quote: had an average increase of 8.7 percentage points in proficiency
     locator: Article body, paragraph 6
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: e0aaadb06229576d8f7f15a53c051095d7255f7c2cb3af2c51005daf78d2120c
+held:
+  reason: ungrounded
+  since: 2026-11-15
+  detail: No receipt for reach.
+  record: sumner-county-coursemojo-tcap-ela/2026-11-15.json

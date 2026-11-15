@@ -80,3 +80,24 @@ receipts:
     quote: 𝑁 = 1179 students from 10 state-funded secondary schools
     locator: Section 5, Participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 5c2a09af4237bbcc03508655951604008e27e52392b7ce2aa07a725ad3ae5809
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: google-eedi-gemini-tutoring-star-maths-null/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "window: drafter no grade, verifier in."
+  record: google-eedi-gemini-tutoring-star-maths-null/2026-11-15.json

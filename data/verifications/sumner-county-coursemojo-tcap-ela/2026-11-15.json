@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "sumner-county-coursemojo-tcap-ela",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "e0aaadb06229576d8f7f15a53c051095d7255f7c2cb3af2c51005daf78d2120c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.wsmv.com/2026/07/14/this-tennessee-school-system-credits-ai-with-improving-student-tcap-scores-heres-how/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T16:39:43.784Z",
+      "final_url": "https://www.wsmv.com/2026/07/14/this-tennessee-school-system-credits-ai-with-improving-student-tcap-scores-heres-how/",
+      "sha256": "6dbf66bc1e785da0eefae0a8536a48fdecea648cd801b3d444d94ff6bcddd24b",
+      "chars": 4642,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "groups with an average of 25 or more Coursemojo activities per student improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Groups with little or no use of the program saw -0.2 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "improved ELA proficiency by an average of 3.7 percentage points",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Groups with little or no use of the program saw -0.2 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "had an average increase of 8.7 percentage points in proficiency",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for reach."
+  }
+}
