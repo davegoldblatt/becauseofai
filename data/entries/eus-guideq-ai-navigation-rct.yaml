@@ -1,0 +1,93 @@
+id: eus-guideq-ai-navigation-rct
+section: because
+rank: 46
+headline: >-
+  Because of AI, endoscopists using real-time voice-guided navigation covered more of the guideline-recommended
+  biliopancreatic scanning stations in a randomized trial of 266 patients, though procedures took longer.
+impact: "More complete endosonography scans (RCT)"
+impact_number: "1.00 vs 0.81"
+impact_label: "median station completeness, AI-assisted vs standard endoscopic ultrasound"
+summary: >-
+  Patients were randomized to endoscopic ultrasound with or without the EUS-GUIDEQ navigation system, and blinded
+  reviewers scored the completeness of standardized scanning stations from recorded videos.
+caveat: >-
+  Only the abstract could be read; the outcome is a process-quality measure of the examination, not a diagnosis or
+  patient outcome, and the device increased procedure time.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "AI-assisted (EUS-GUIDEQ) vs standard endoscopic ultrasound, 1:1 randomized, single centre; blinded expert review of recorded videos"
+effect:
+  relative: null
+  absolute: "Median station completeness 1.00 [IQR 0.94-1.00] vs 0.81 [0.75-0.88]"
+reach: "266 patients analyzed (132 AI-assisted, 134 control) at one centre"
+dates:
+  achieved_start: 2023-12-12
+  achieved_end: 2025-05-16
+  published: 2026-10-28
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Real-time Voice-Guided Artificial Intelligence Improves Biliopancreatic Endosonography Quality: A Randomized Trial (Clinical Gastroenterology and Hepatology), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.cgh.2026.10.008
+    doi: 10.1016/j.cgh.2026.10.008
+    type: primary
+conflicts: "Only the abstract was read, so funding and disclosures could not be checked; the authors developed the device they tested."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read (the P value text is cut off in the abstract as printed); registration is not stated in it, so evidence is B rather than A.
+  verify: the outcome is examination completeness, not a patient outcome; procedure duration was longer with the AI.
+related: []
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: Patients were randomized to endoscopic ultrasound with or without the AI navigation system and outcomes were adjudicated blind, so the arms differ only by the AI.
+receipts:
+  - field: headline
+    quote: 266 patients were analyzed (AI-assisted n=132; control n=134)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Overall station completeness was higher with EUS-GUIDEQ assistance (median [IQR] 1.00 [0.94-1.00] vs 0.81 [0.75-0.88]
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: median [IQR] 1.00 [0.94-1.00] vs 0.81 [0.75-0.88]
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 266 patients were analyzed (AI-assisted n=132; control n=134)
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: Between December 12, 2023, and May 16, 2025
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_end
+    quote: Between December 12, 2023, and May 16, 2025
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 4f9b3509466508c37b71f4c6f05357047f17e672f834fcce31447970404fe875
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: eus-guideq-ai-navigation-rct/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: eus-guideq-ai-navigation-rct/2026-11-15.json

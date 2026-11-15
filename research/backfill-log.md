@@ -186,3 +186,24 @@ Looked at and rejected:
 - Protocols (VITAL-MD, PM Heart, WeChat education, PCI education), reviews, surveys, cross-sectional burnout studies: not entries.
 - Remaining medRxiv and PubMed items: model development, benchmarks or retrospective validation, no people reached.
 - Short of the floor: 7 candidates read.
+
+## 2026-11-15, slice 8: papers and trial results, 2026-10-26 to 2026-11-02
+
+Drafted (5):
+- chongqing-ai-boppps-cbl-neurology-interns-rct: 118 interns randomized, DeepSeek-supported teaching, simulated-emergency score 82.07 vs 76.43 (Frontiers in Medicine, full text; unregistered, evidence B, bundled).
+- korea-claude-chatbot-infertility-stress: non-randomized, 37 women, Claude-based chatbot program, perceived stress −5.91 points vs usual care (full text; exploratory, evidence C).
+- eus-guideq-ai-navigation-rct: RCT of 266 patients, AI navigation in endoscopic ultrasound, median station completeness 1.00 vs 0.81 (abstract only; process measure, slower procedures).
+- ai-feedback-icbt-social-anxiety-rct-null: registered RCT, 263 adults, AI vs therapist feedback in internet CBT, difference 1.15 SPIN points, non-inferiority not shown (not-because; no dates in text, window empty).
+- brown-ai-lecture-summaries-neurology-clerkship-rct-null: preprint RCT, AI summaries before quizzes, +0.28 of 10 points between students, P = 0.28 (not-because; abstract only, no dates).
+
+Rejected (15 read of 105 candidates):
+- DEEP-AF (Heart Rhythm O2): design paper, no results.
+- Alcohol chatbot Hong Kong (Drug Alcohol Depend): abstract only; null result but the chatbot is not shown to use AI.
+- AI TEF detection (J Pediatr Surg): surgeons on videos, two live cases, no outcome.
+- AI fracture detection pediatric hospital (Semin MSK Radiol): experience report, no number about people.
+- Agentic irAE system (Nature Cancer): staff validation study, no patients reached.
+- LLM-MBCT for college anxiety (Frontiers Psychol): 120 students, but references and methods do not describe a checkable trial; not drafted.
+- Coach-BP (medRxiv): accuracy of video classifier; the coaching that cut errors was by staff, not AI.
+- PrEP decision aid (NCT05614492) and APPT reminders (NCT05016856): no AI intervention in the record.
+- Annals AI scribe QI study: source already in ambient-scribes entry. PharmaAgent: silent deployment, no patients reached.
+- Reviews, protocols, surveys, benchmarks and retrospective model studies on medRxiv and PubMed: not entries.

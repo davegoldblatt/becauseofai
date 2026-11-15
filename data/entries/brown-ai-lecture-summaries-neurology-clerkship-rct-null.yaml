@@ -1,0 +1,94 @@
+id: brown-ai-lecture-summaries-neurology-clerkship-rct-null
+section: not-because
+rank: 17
+headline: >-
+  Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11
+  clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.
+impact: "Small, non-significant quiz gain (RCT)"
+impact_number: "+0.28"
+impact_label: "points of 10 on quizzes, between-student difference with AI summary, P = 0.28"
+summary: >-
+  Neurology Grand Rounds recordings were turned into summaries by a prompted large language model, and students in each
+  clerkship cohort were randomized to receive a summary before a quiz or not.
+caveat: >-
+  Preprint, abstract only; the cohort-level signal is statistically significant but the student-level difference is
+  small and not, and no calendar dates were given beyond a year-long study.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Students randomized within each clerkship cohort to receive an AI-generated summary before a quiz vs no summary"
+effect:
+  relative: null
+  absolute: "Between-student difference +0.28 of 10 points (P = 0.28); higher scores in 9 of 11 cohorts (p = 0.026)"
+reach: "Students in 11 clerkship cohorts over one year"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-30
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Calibrated large language models demonstrate a consistent advantage in a randomized longitudinal medical education intervention (medRxiv preprint)"
+    url: https://www.medrxiv.org/content/10.64898/2026.10.30.26366878v1
+    doi: 10.64898/2026.10.30.26366878
+    type: primary
+conflicts: "Two authors (J.K. and H.A.Z.) are founders of Dendro Education, LLC, a medical education company; the authors state it did not fund or take part in the study."
+what_would_change: "A peer-reviewed full report showing a student-level difference with a confidence interval excluding zero."
+notes: >-
+  verify: preprint, not peer reviewed; only the abstract page was read, so registration and the study period are not known.
+  verify: the source gives no period beyond a year-long study, so achieved dates and the window grade are left empty.
+  verify: the headline cohort result (9 of 11, p = 0.026) and the student-level result (P = 0.28) are both in the abstract and point different ways.
+related: []
+history:
+  - date: 2026-11-15
+    note: Added by the backfill run.
+rationale: Students were randomized within cohort to receive the AI summary or nothing before each quiz, so the arms differ only by the AI-generated summary.
+receipts:
+  - field: headline
+    quote: scored higher in 9 of 11 cohorts (p = 0.026)
+    locator: Abstract, Phase 2
+    source: 0
+  - field: headline
+    quote: although the between-student difference was small (+0.28 of 10 points; P = 0.28)
+    locator: Abstract, Phase 2
+    source: 0
+  - field: impact_number
+    quote: although the between-student difference was small (+0.28 of 10 points; P = 0.28)
+    locator: Abstract, Phase 2
+    source: 0
+  - field: effect.absolute
+    quote: although the between-student difference was small (+0.28 of 10 points; P = 0.28)
+    locator: Abstract, Phase 2
+    source: 0
+  - field: effect.absolute
+    quote: scored higher in 9 of 11 cohorts (p = 0.026)
+    locator: Abstract, Phase 2
+    source: 0
+  - field: reach
+    quote: students in 11 clerkship cohorts over a year were randomized within cohort to receive a summary before each quiz
+    locator: Abstract, Phase 2
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 3c8d3d28561952b340705e20a51c1a0d5d3573a6972389d00db28d353604f7ad
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: brown-ai-lecture-summaries-neurology-clerkship-rct-null/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: brown-ai-lecture-summaries-neurology-clerkship-rct-null/2026-11-15.json

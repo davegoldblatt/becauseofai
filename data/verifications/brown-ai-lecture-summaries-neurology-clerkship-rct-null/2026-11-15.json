@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "3c8d3d28561952b340705e20a51c1a0d5d3573a6972389d00db28d353604f7ad",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.30.26366878v1",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T08:34:07.208Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.10.30.26366878v1",
+      "sha256": "2bb087de5773e231a8959f4310f4cdc698651d415eec916677e45410c94f9870",
+      "chars": 9038,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "scored higher in 9 of 11 cohorts (p = 0.026)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "although the between-student difference was small (+0.28 of 10 points; P = 0.28)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "although the between-student difference was small (+0.28 of 10 points; P = 0.28)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "although the between-student difference was small (+0.28 of 10 points; P = 0.28)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "scored higher in 9 of 11 cohorts (p = 0.026)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "students in 11 clerkship cohorts over a year were randomized within cohort to receive a summary before each quiz",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "Students were randomized within cohorts to receive an AI-generated summary before each quiz or no summary.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract describes a year-long study without calendar dates, and the ethics determination date does not establish study dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Two authors founded Dendro Education, LLC; both the source and entry disclose this and state that the company neither funded nor participated in the study."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because no calendar dates for the intervention or outcomes are given."
+      },
+      "summary": "The abstract supports all cited numbers and a randomized comparison with a small, statistically nonsignificant student-level quiz difference. It does not establish calendar study dates or a preregistered primary endpoint, so neither a window grade nor evidence grade A is established, and B does not describe this randomized study."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14110,
+      "output": 605,
+      "total": 14715,
+      "cached": 0,
+      "reasoning": 129
+    },
+    "duration_ms": 15487
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}
