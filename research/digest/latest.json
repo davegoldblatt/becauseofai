@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T14:11:20.143Z",
-  "since": "2026-11-13T14:11:20Z",
+  "generated_at": "2026-11-15T14:11:31.894Z",
+  "since": "2026-11-14T14:11:31Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 43,
-    "held": 17,
+    "held": 25,
     "counts": {
       "because": 20,
       "not-because": 7,
@@ -16,56 +16,70 @@
     },
     "changed": [
       {
-        "id": "ai-micro-tese-nonobstructive-azoospermia",
-        "headline": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5% against 26.8%.",
+        "id": "ai-feedback-icbt-social-anxiety-rct-null",
+        "headline": "Psychologist-reviewed AI-generated feedback in internet-delivered CBT for social anxiety was not shown to match therapist feedback in a randomized trial of 263 adults: the difference was small and inconclusive.",
         "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/ai-micro-tese-nonobstructive-azoospermia"
+        "state": "held (grade-split)",
+        "url": null
       },
       {
-        "id": "alertcalifornia-ai-cameras-before-911",
-        "headline": "Because of AI-watched cameras, more than half of the wildfires flagged by California's ALERTCalifornia network were detected before any 911 call.",
+        "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
+        "headline": "Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11 clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.",
         "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/alertcalifornia-ai-cameras-before-911"
+        "state": "held (grade-split)",
+        "url": null
       },
       {
-        "id": "aps-pano-ai-wildfire-cameras-before-911",
-        "headline": "Because of AI smoke-detection cameras, Arizona Public Service says it is notified of wildfires about 45 minutes faster on average than the first 911 call.",
+        "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
+        "headline": "Because of AI, junior-college medical interns on a neurology rotation in Chongqing who got DeepSeek-supported case-based teaching scored higher on a simulated neurological-emergency assessment than interns on conventional teaching, in a randomized study of 118 interns.",
         "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/aps-pano-ai-wildfire-cameras-before-911"
+        "state": "held (grade-split)",
+        "url": null
       },
       {
-        "id": "jeffcom-911-ai-administrative-calls",
-        "headline": "Because of AI call handling, Jeffcom 911 says it saw a sustained 33% reduction in administrative calls reaching its dispatchers.",
+        "id": "eus-guideq-ai-navigation-rct",
+        "headline": "Because of AI, endoscopists using real-time voice-guided navigation covered more of the guideline-recommended biliopancreatic scanning stations in a randomized trial of 266 patients, though procedures took longer.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "korea-claude-chatbot-infertility-stress",
+        "headline": "Because of AI, women in infertility treatment at one Korean clinic who used a Claude-based chatbot self-management program showed a larger fall in perceived stress than women on usual clinic care, in a small non-randomized feasibility study.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "ubc-ai-ot-initial-assessment-crossover-null",
+        "headline": "In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial assessment to a remote AI-administered one, and rated the human format as more compassionate.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "ai-generated-forensic-images-medical-students-reasoning",
-        "headline": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic photographs, in a non-randomized comparison.",
+        "id": "ksau-ai-caries-training-dental-students-null",
+        "headline": "AI-assisted radiograph training did not significantly improve undergraduate dental students' diagnosis of proximal caries compared with conventional training, in a randomized study of 79 students in Saudi Arabia.",
         "change": "added",
-        "state": "held (grade-split)",
+        "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "tsm-al-llm-residents-clinical-reasoning-rct",
-        "headline": "Because of AI, orthopedic surgery residents trained with a structured, faculty-supervised large-language-model framework scored higher on clinical reasoning in an unassisted final examination than residents taught the traditional way, in a randomized trial in Shanghai.",
+        "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
+        "headline": "Because of AI, obstetrics and gynecology residents who trained with an AI virtual-patient platform scored higher on colposcopy case analysis after one month than residents on traditional teaching alone, in a randomized trial of 60 residents at two Chinese teaching hospitals.",
         "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "xaia-vr-cbt-ibd-pilot",
-        "headline": "Because of an AI conversational avatar in virtual reality, adults with inflammatory bowel disease reported lower pain and anxiety right after a single cognitive-behavioral-therapy session, in a small two-centre pilot with no control group.",
-        "change": "added",
-        "state": "held (grade-split)",
+        "state": "held (ungrounded)",
         "url": null
       }
     ],
     "held_list": [
+      {
+        "id": "ai-feedback-icbt-social-anxiety-rct-null",
+        "headline": "Psychologist-reviewed AI-generated feedback in internet-delivered CBT for social anxiety was not shown to match therapist feedback in a randomized trial of 263 adults: the difference was small and inconclusive.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter A, verifier could not grade."
+      },
       {
         "id": "ai-generated-forensic-images-medical-students-reasoning",
         "headline": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic photographs, in a non-randomized comparison.",
@@ -74,11 +88,32 @@
         "detail": "window: drafter no grade, verifier pre."
       },
       {
+        "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
+        "headline": "Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11 clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
+        "headline": "Because of AI, junior-college medical interns on a neurology rotation in Chongqing who got DeepSeek-supported case-based teaching scored higher on a simulated neurological-emergency assessment than interns on conventional teaching, in a randomized study of 118 interns.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
         "id": "csun-ai-chatbot-student-support-rct",
         "headline": "An AI text-messaging chatbot at a large public university, tested in a randomized trial of two entering cohorts, sped up enrollment steps but left GPA, persistence and graduation unchanged over four years.",
         "reason": "grade-split",
         "since": "2026-11-13",
         "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled."
+      },
+      {
+        "id": "eus-guideq-ai-navigation-rct",
+        "headline": "Because of AI, endoscopists using real-time voice-guided navigation covered more of the guideline-recommended biliopancreatic scanning stations in a randomized trial of 266 patients, though procedures took longer.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
       },
       {
         "id": "geisinger-ml-colorectal-outreach",
@@ -100,6 +135,20 @@
         "reason": "ungrounded",
         "since": "2026-11-14",
         "detail": "No receipt for reach."
+      },
+      {
+        "id": "korea-claude-chatbot-infertility-stress",
+        "headline": "Because of AI, women in infertility treatment at one Korean clinic who used a Claude-based chatbot self-management program showed a larger fall in perceived stress than women on usual clinic care, in a small non-randomized feasibility study.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter C, verifier could not grade."
+      },
+      {
+        "id": "ksau-ai-caries-training-dental-students-null",
+        "headline": "AI-assisted radiograph training did not significantly improve undergraduate dental students' diagnosis of proximal caries compared with conventional training, in a randomized study of 79 students in Saudi Arabia.",
+        "reason": "ungrounded",
+        "since": "2026-11-14",
+        "detail": "No receipt for headline."
       },
       {
         "id": "latent-ai-ecg-af-null",
@@ -172,6 +221,13 @@
         "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
       },
       {
+        "id": "ubc-ai-ot-initial-assessment-crossover-null",
+        "headline": "In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial assessment to a remote AI-administered one, and rated the human format as more compassionate.",
+        "reason": "ungrounded",
+        "since": "2026-11-14",
+        "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text)."
+      },
+      {
         "id": "vastra-gotaland-brainomix-thrombectomy-times",
         "headline": "Because of AI imaging support, stroke patients in western Sweden got to thrombectomy faster: the adjusted median from CT to groin puncture fell from 47 to 35 minutes, though outcomes did not differ.",
         "reason": "grade-split",
@@ -184,17 +240,24 @@
         "reason": "grade-split",
         "since": "2026-11-13",
         "detail": "evidence: drafter D, verifier could not grade."
+      },
+      {
+        "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
+        "headline": "Because of AI, obstetrics and gynecology residents who trained with an AI virtual-patient platform scored higher on colposcopy case analysis after one month than residents on traditional teaching alone, in a randomized trial of 60 residents at two Chinese teaching hospitals.",
+        "reason": "ungrounded",
+        "since": "2026-11-14",
+        "detail": "No receipt for headline."
       }
     ]
   },
   "verifications": [
     {
-      "id": "ai-generated-forensic-images-medical-students-reasoning",
-      "date": "2026-11-13",
+      "id": "ai-feedback-icbt-social-anxiety-rct-null",
+      "date": "2026-11-15",
       "result": "held",
       "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier pre.",
-      "record": "ai-generated-forensic-images-medical-students-reasoning/2026-11-13.json"
+      "detail": "evidence: drafter A, verifier could not grade.",
+      "record": "ai-feedback-icbt-social-anxiety-rct-null/2026-11-15.json"
     },
     {
       "id": "ai-micro-tese-nonobstructive-azoospermia",
@@ -221,20 +284,28 @@
       "record": "aps-pano-ai-wildfire-cameras-before-911/2026-11-14.json"
     },
     {
-      "id": "csun-ai-chatbot-student-support-rct",
-      "date": "2026-11-13",
+      "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
+      "date": "2026-11-15",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled.",
-      "record": "csun-ai-chatbot-student-support-rct/2026-11-13.json"
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "brown-ai-lecture-summaries-neurology-clerkship-rct-null/2026-11-15.json"
     },
     {
-      "id": "gleamer-boneview-paediatric-ed-fracture-exclusion",
-      "date": "2026-11-13",
+      "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
+      "date": "2026-11-15",
       "result": "held",
       "reason": "grade-split",
-      "detail": "window: drafter pre, verifier could not grade.",
-      "record": "gleamer-boneview-paediatric-ed-fracture-exclusion/2026-11-13.json"
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "chongqing-ai-boppps-cbl-neurology-interns-rct/2026-11-15.json"
+    },
+    {
+      "id": "eus-guideq-ai-navigation-rct",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "eus-guideq-ai-navigation-rct/2026-11-15.json"
     },
     {
       "id": "jeffcom-911-ai-administrative-calls",
@@ -245,63 +316,73 @@
       "record": "jeffcom-911-ai-administrative-calls/2026-11-14.json"
     },
     {
-      "id": "mgb-neurology-portal-message-routing",
-      "date": "2026-11-13",
-      "result": "published",
-      "reason": null,
-      "detail": "The preprint supports faster initial action on real patient messages against concurrent matched controls, including all quoted numerical results. Message closure did not significantly improve, and the stated follow-up durations conflict with the explicit calendar dates.",
-      "record": "mgb-neurology-portal-message-routing/2026-11-13.json"
+      "id": "korea-claude-chatbot-infertility-stress",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter C, verifier could not grade.",
+      "record": "korea-claude-chatbot-infertility-stress/2026-11-15.json"
     },
     {
-      "id": "numi-ai-math-tutoring-hamilton-county",
-      "date": "2026-11-13",
+      "id": "ksau-ai-caries-training-dental-students-null",
+      "date": "2026-11-14",
       "result": "held",
       "reason": "ungrounded",
       "detail": "No receipt for headline.",
-      "record": "numi-ai-math-tutoring-hamilton-county/2026-11-13.json"
+      "record": "ksau-ai-caries-training-dental-students-null/2026-11-14.json"
     },
     {
-      "id": "tsm-al-llm-residents-clinical-reasoning-rct",
-      "date": "2026-11-13",
+      "id": "ubc-ai-ot-initial-assessment-crossover-null",
+      "date": "2026-11-14",
       "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "tsm-al-llm-residents-clinical-reasoning-rct/2026-11-13.json"
+      "reason": "ungrounded",
+      "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text).",
+      "record": "ubc-ai-ot-initial-assessment-crossover-null/2026-11-14.json"
     },
     {
-      "id": "xaia-vr-cbt-ibd-pilot",
-      "date": "2026-11-13",
+      "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
+      "date": "2026-11-14",
       "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier could not grade.",
-      "record": "xaia-vr-cbt-ibd-pilot/2026-11-13.json"
+      "reason": "ungrounded",
+      "detail": "No receipt for headline.",
+      "record": "yan-ai-virtual-patient-colposcopy-residents-rct/2026-11-14.json"
     }
   ],
   "announced": [
     {
-      "id": "spot-tb-ai-camp-targeting-null",
-      "date": "2026-11-12",
-      "url": "https://becauseofai.org/entry/spot-tb-ai-camp-targeting-null"
-    },
-    {
       "id": "mgb-neurology-portal-message-routing",
       "date": "2026-11-13",
       "url": "https://becauseofai.org/entry/mgb-neurology-portal-message-routing"
+    },
+    {
+      "id": "ai-micro-tese-nonobstructive-azoospermia",
+      "date": "2026-11-14",
+      "url": "https://becauseofai.org/entry/ai-micro-tese-nonobstructive-azoospermia"
     }
   ],
   "leads_added": [
-    "SPOT-TB published in Lancet Global Health. [doi](https://doi.org/10.1016/j.langlo.2026.104090) (2026-11-12). Same trial as the existing entry `spot-tb-ai-camp-targeting-null`; abstract matches (ITT RR 1.07, 0.94–1.22; per-protocol 1.32; 3,936 camps, 269,254 screened). Missing for a strict upgrade: full text, which the reader could not get.",
-    "Geospatial AI (AI-NETRA) targeting of TB case finding in Pune, quasi-experimental, four TB Units. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.11.26367599v1). Reader returned a stub. Missing: full text, dates, absolute yields, comparison design.",
-    "Generative AI vs primary care physicians for chronic disease management. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.10.26367736v1). Reader returned a stub. Missing: design, whether real patients, outcomes.",
-    "CT-based AI risk support for cystic renal masses, randomized implementation study. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Reader returned a stub. Missing: full text, whether the randomized part involved patients.",
-    "PARTNER pregnancy decision support, ended with no results posted. [ISRCTN15732844](https://www.isrctn.com/ISRCTN15732844). Still a stub; logged 2026-11-11.",
-    "Skipped: AEA registrations in development, simulation and reader studies, benchmarks, reviews, news and market pieces.",
-    "`spot-tb-ai-camp-targeting-null`: the peer-reviewed Lancet Global Health version is out (doi above); its abstract matches the entry's numbers. Check whether to add it as a source and drop \"Not yet peer reviewed\" in the caveat."
+    "Adaptive math practice and teacher data use, 440 schools in Tashkent, Uzbekistan, randomized. [AEA 19200](https://www.socialscienceregistry.org/trials/19200). In development (ends 2026-12-31). Missing: results, dates, effects. Watch.",
+    "AI decision support for public grant evaluators in Romania. [AEA 19908](https://www.socialscienceregistry.org/trials/19908). In development to 2029; protocol to watch.",
+    "Echo chambers / echo machines, LLM conversation and belief certainty. [PsyArXiv](https://osf.io/preprints/psyarxiv/7et5g_v3/). Preprint; not read; likely lab experiment on belief, not a benefit to people. Missing: whether any real-world benefit is measured.",
+    "Still open: SPOT-TB Lancet Global Health version, PARTNER (ISRCTN15732844), AI-NETRA Pune, CT cystic renal masses (EClinicalMedicine), all logged earlier and unreadable.",
+    "Skipped: HerzMobil heart failure telemonitoring (read: nurse-reviewed app, no AI), pharma-ads-and-chatbot study, PTSD prediction (model accuracy), market and opinion pieces, AEA surveys, protocols, reviews."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
+      {
+        "id": "2121703047189422405",
+        "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
+        "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
+        "created_at": "2026-11-14T20:33:20.000Z",
+        "impressions": 19,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2121360755383738749",
         "url": "https://x.com/bcuz_of_ai/status/2121360755383738749",
@@ -354,41 +435,41 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-13",
-    "pageviews": 186,
-    "visits": 94,
+    "day": "2026-11-14",
+    "pageviews": 64,
+    "visits": 37,
     "top_paths": [
       {
         "path": "/",
-        "views": 108
+        "views": 44
       },
       {
         "path": "/not-because-of-ai",
-        "views": 20
-      },
-      {
-        "path": "/entry/columbia-star-birth",
-        "views": 16
-      },
-      {
-        "path": "/not-yet",
-        "views": 11
-      },
-      {
-        "path": "/changelog",
-        "views": 8
-      },
-      {
-        "path": "/method",
-        "views": 8
-      },
-      {
-        "path": "/entry/waymo-injury-crashes",
         "views": 4
       },
       {
-        "path": "/search",
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 4
+      },
+      {
+        "path": "/not-yet",
         "views": 3
+      },
+      {
+        "path": "/entry/waymo-injury-crashes",
+        "views": 2
+      },
+      {
+        "path": "/entry/ucd-als-speech-bci",
+        "views": 2
+      },
+      {
+        "path": "/changelog",
+        "views": 1
+      },
+      {
+        "path": "/about",
+        "views": 1
       }
     ]
   },
