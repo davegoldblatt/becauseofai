@@ -1,0 +1,69 @@
+id: thames-water-origin-orbit-satellite-leaks
+section: because
+rank: 51
+headline: >-
+  Because of AI satellite leak detection, Thames Water says a 19-week trial
+  helped find more than 800 leaks, saving an estimated 8.7 million litres of
+  water a day.
+impact: "~8.7M litres/day saved (est.)"
+impact_number: "8.7M"
+impact_label: "litres of water a day saved, estimated, in a 19-week leak-detection trial"
+summary: >-
+  Thames Water's newsroom reports that Origin Orbit, an AI tool that reads
+  satellite data to flag likely underground leaks, helped its crews identify more
+  than 800 leaks in an initial 19-week trial, which it estimates saved 8.7 million
+  litres of water a day.
+caveat: >-
+  The utility's own press release about its own contractor's product. The saving
+  is an estimate, no control area is shown, and finding a leak is only part of
+  the detect-and-repair chain.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: null
+  absolute: "Estimated savings of 8.7 million litres of water per day"
+reach: "Thames Water's water network, London and the Thames Valley"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-24
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "Thames Water newsroom: Thames Water uses satellites, AI and thousands of acoustic sensors to hunt down leaks as South-East drought pressure intensifies (24 August 2026)"
+    url: https://www.thameswater.co.uk/news/2026/aug/thames-water-uses-satellites-ai-and-thousands-of-acoustic-sensors-to-hunt-down-leaks-as-south-east-drought-pressure-intensifies
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Thames Water's own press release about its own programme and its
+  contractor's product; no independent audit of the estimate.
+what_would_change: "Measured leakage in trial areas against matched areas using conventional detection over the same weeks."
+notes: >-
+  verify: the release gives no calendar dates for the 19-week trial, so achieved
+  dates and the window grade are left empty.
+history:
+  - date: 2026-11-15
+    note: "Added by the backfill run."
+rationale: "Bundled because the saving is an estimate for the whole detect-and-repair process (AI flags a location, crews then find and fix the leak) with no comparison group."
+receipts:
+  - field: headline
+    quote: During the initial 19-week trial, Origin Orbit helped Thames Water identify over 800 leaks, saving an estimated 8.7 million litres of water per day
+    locator: Body, paragraph beginning "Thames Water also uses an AI-driven leak detection solution"
+    source: 0
+  - field: impact
+    quote: saving an estimated 8.7 million litres of water per day
+    locator: Body, paragraph beginning "Thames Water also uses an AI-driven leak detection solution"
+    source: 0
+  - field: impact_number
+    quote: saving an estimated 8.7 million litres of water per day
+    locator: Body, paragraph beginning "Thames Water also uses an AI-driven leak detection solution"
+    source: 0
+  - field: effect.absolute
+    quote: saving an estimated 8.7 million litres of water per day
+    locator: Body, paragraph beginning "Thames Water also uses an AI-driven leak detection solution"
+    source: 0

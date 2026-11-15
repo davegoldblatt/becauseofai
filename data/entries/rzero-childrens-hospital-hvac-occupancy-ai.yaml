@@ -1,0 +1,81 @@
+id: rzero-childrens-hospital-hvac-occupancy-ai
+section: because
+rank: 52
+headline: >-
+  Because of AI occupancy-based ventilation control, a US children's hospital
+  system cut HVAC energy use by 30 percent, according to the vendor R-Zero.
+impact: "30% less HVAC energy"
+impact_number: "30%"
+impact_label: "less HVAC energy used in a 521,000-square-foot children's hospital facility"
+summary: >-
+  R-Zero's June 2026 press release says its platform, which senses live
+  occupancy and dials ventilation down in empty zones through the existing
+  building controls, cut HVAC energy use by 30 percent at a nationally ranked
+  children's hospital, measured against a pre-project baseline with IPMVP
+  methodology.
+caveat: >-
+  A vendor's press release about its own product; the hospital is unnamed and
+  the period is not given. Energy savings, not a health outcome, and the
+  occupant comfort figure is the vendor's.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: isolated
+  window: null
+comparison: "The hospital's own pre-project baseline, using IPMVP methodology, as stated by the vendor"
+effect:
+  relative: "30 percent reduction in HVAC energy use"
+  absolute: "23,000 kWh saved"
+reach: "One 521,000-square-foot facility of a children's hospital system, United States"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-23
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "R-Zero: As AI Strains the Grid, R-Zero Cuts Building HVAC Energy 20 to 40 Percent (press release, 23 June 2026)"
+    url: https://rzero.com/press-release/as-ai-strains-the-grid-r-zero-cuts-building-hvac-energy-20-to-40-percent/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the vendor R-Zero's own press release about its own product, and
+  the company sells it on a shared-savings basis; the hospital is not named and
+  there is no independent audit.
+what_would_change: "A named customer or independent measurement and verification report giving the baseline and measurement periods."
+notes: >-
+  verify: the press release gives no period for the measurement, so achieved
+  dates and the window grade are left empty.
+  verify: attribution is set isolated because the platform alone changes
+  ventilation against a baseline; the release does not say whether other
+  measures were applied at the same time.
+history:
+  - date: 2026-11-15
+    note: "Added by the backfill run."
+rationale: "Isolated because the claim is a measured before/after change against the building's own pre-project baseline for a system that only alters ventilation, though the release does not rule out other concurrent changes."
+receipts:
+  - field: headline
+    quote: 30 percent reduction in HVAC energy use
+    locator: Press release, "Verified Results"
+    source: 0
+  - field: impact
+    quote: 30 percent reduction in HVAC energy use
+    locator: Press release, "Verified Results"
+    source: 0
+  - field: impact_number
+    quote: 30 percent reduction in HVAC energy use
+    locator: Press release, "Verified Results"
+    source: 0
+  - field: effect.relative
+    quote: 30 percent reduction in HVAC energy use
+    locator: Press release, "Verified Results"
+    source: 0
+  - field: effect.absolute
+    quote: 23,000 kWh saved
+    locator: Press release, "Verified Results"
+    source: 0
+  - field: reach
+    quote: deployed its platform across a 521,000-square-foot facility
+    locator: Press release, "Verified Results"
+    source: 0

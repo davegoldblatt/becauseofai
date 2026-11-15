@@ -224,3 +224,18 @@ Rejected:
 - Estonia AI Leap, Ghana, England DfE tutoring: reach and plans only, no outcome numbers.
 - Maryland AI tutor: already an entry. NUMI Hamilton County: already an entry.
 - Short of the floor: 8 searches and 5 pages read this run.
+
+## 2026-11-15, slice 15: announcements: water, power, and buildings, 2026-08-12 to 2026-11-11
+
+Drafted (3):
+- thames-water-origin-orbit-satellite-leaks: Thames Water newsroom, 19-week satellite-AI leak trial, 800+ leaks, est. 8.7 ML/day.
+- rzero-childrens-hospital-hvac-occupancy-ai: R-Zero release, 30% HVAC energy cut at a children's hospital vs baseline.
+- pge-continuous-monitoring-center-outage-minutes: PG&E article, ML grid monitoring, 12M outage minutes avoided.
+
+Rejected or not drafted:
+- Openreach/Affinity Water fibre leak pilot (2 ML/day): read; the sensing is fibre acoustics, machine learning only filters noise, so what the AI did is unclear.
+- BrainBox AI Cammeby's case study: read; 2023 data, undated publication, vendor PDF, not drafted.
+- New Rochelle schools demand-response check: read; revenue from demand response, no AI-attributed outcome.
+- SmartTerra Pune (YourStory) and CIM case studies: NOT READ (403 or stub).
+- Google DeepMind data-centre cooling, Xylem/Esri, CivilSense, Gridware/PG&E CAIDI, Schneider study, Southern Water: old, undated, vendor-only or accuracy-only; not read.
+- Short of the floor: 12 searches and 9 pages read this run; 3 entries.
