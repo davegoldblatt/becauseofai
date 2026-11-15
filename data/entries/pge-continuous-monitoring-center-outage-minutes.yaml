@@ -1,0 +1,94 @@
+id: pge-continuous-monitoring-center-outage-minutes
+section: because
+rank: 53
+headline: >-
+  Because of machine-learning grid monitoring, PG&E says it avoided 12 million
+  minutes of unplanned customer outages and intercepted 17 potential ignitions
+  in 2025.
+impact: "12M minutes of outages avoided"
+impact_number: "12M"
+impact_label: "minutes of unplanned customer outages avoided, per PG&E's grid monitoring"
+summary: >-
+  PG&E's May 2026 article on its Continuous Monitoring Center says machine-learning
+  models scanning data from more than 5.5 million sensors, reviewed by a trained
+  team before a crew is sent, helped avoid 12 million minutes of unplanned customer
+  outages and intercept 17 potential ignitions in high fire-risk areas in 2025.
+caveat: >-
+  The utility's own article about its own programme. The figures are for a
+  bundle of sensors, analytics and human review; the counterfactual (outages
+  that would have happened) is not shown and no period is given for the
+  outage-minutes figure.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "None shown; avoided outage minutes are the utility's own estimate"
+effect:
+  relative: null
+  absolute: "12 million minutes of unplanned customer outages avoided"
+reach: "PG&E electric customers, Northern and Central California"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-05-04
+  added: 2026-11-15
+  updated: 2026-11-15
+sources:
+  - title: "PG&E Currents: How PG&E Is Catching Wildfire Risks Before They Start (4 May 2026)"
+    url: https://www.pge.com/en/newsroom/currents/safety/how-pg-e-is-catching-wildfire-risks-before-they-start-.html
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is PG&E's own article about its own programme, funded by customers;
+  there is no independent audit and the method for "avoided" is not shown.
+what_would_change: "A regulator filing or independent evaluation showing how avoided outage minutes were counted, against a baseline."
+notes: >-
+  verify: the article dates only the ignitions figure (2025); the outage-minutes
+  figure has no stated period, so achieved dates and the window grade are left
+  empty.
+  verify: the article describes machine-learning models inside a larger set of
+  sensors; the share of the result due to the machine learning is not given.
+history:
+  - date: 2026-11-15
+    note: "Added by the backfill run."
+rationale: Bundled because the avoided-outage figure comes from a combined system of sensors, machine-learning models and human review with crews, and no comparison without the machine learning is shown.
+receipts:
+  - field: headline
+    quote: 12 million minutes of unplanned customer outages avoided
+    locator: Section "The numbers tell the story"
+    source: 0
+  - field: impact
+    quote: 12 million minutes of unplanned customer outages avoided
+    locator: Section "The numbers tell the story"
+    source: 0
+  - field: impact_number
+    quote: 12 million minutes of unplanned customer outages avoided
+    locator: Section "The numbers tell the story"
+    source: 0
+  - field: effect.absolute
+    quote: 12 million minutes of unplanned customer outages avoided
+    locator: Section "The numbers tell the story"
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: a291db412f2890b2ace352f2fc8e55e775107828f21fd90d89d3ab24af477ce0
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: pge-continuous-monitoring-center-outage-minutes/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (No measured comparator or calculation of avoided outages is shown, and the period for the 12 million avoided outage minutes cannot be established.).
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."

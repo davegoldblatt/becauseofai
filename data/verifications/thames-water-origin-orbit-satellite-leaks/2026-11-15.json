@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "thames-water-origin-orbit-satellite-leaks",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "a546be8cc210ee9ca72ec2de6a08fb4b58eb9ba2c8252a170d5f935c81d2d272",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.thameswater.co.uk/news/2026/aug/thames-water-uses-satellites-ai-and-thousands-of-acoustic-sensors-to-hunt-down-leaks-as-south-east-drought-pressure-intensifies",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T23:35:00.293Z",
+      "final_url": "https://www.thameswater.co.uk/news/2026/aug/thames-water-uses-satellites-ai-and-thousands-of-acoustic-sensors-to-hunt-down-leaks-as-south-east-drought-pressure-intensifies",
+      "sha256": "1888ff60f3850527d1d0c169cd0db7f32e72f35f8c400369614e662314796bc4",
+      "chars": 4449,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "During the initial 19-week trial, Origin Orbit helped Thames Water identify over 800 leaks, saving an estimated 8.7 million litres of water per day",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "saving an estimated 8.7 million litres of water per day",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "saving an estimated 8.7 million litres of water per day",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "saving an estimated 8.7 million litres of water per day",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "No comparison isolates AI's contribution; the reported savings arise from AI satellite detection combined with crews finding and repairing leaks.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source gives a 19-week trial duration without calendar dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Thames Water reports results from its own programme and identifies its partnership with Origin Orbit."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "No benchmark is provided for the satellite trial's savings, and its calendar dates cannot be established from the publication date or trial duration."
+      },
+      "summary": "The source reports over 800 leaks identified during a 19-week trial and estimated savings of 8.7 million litres per day. It provides neither a comparison for that trial nor dates establishing when its benefits occurred."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12867,
+      "output": 547,
+      "total": 13414,
+      "cached": 0,
+      "reasoning": 105
+    },
+    "duration_ms": 14599
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The source reports over 800 leaks identified during a 19-week trial and estimated savings of 8.7 million litres per day. It provides neither a comparison for that trial nor dates establishing when its benefits occurred.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "Not measured against something or dated yet (No benchmark is provided for the satellite trial's savings, and its calendar dates cannot be established from the publication date or trial duration.)."
+    ]
+  }
+}
