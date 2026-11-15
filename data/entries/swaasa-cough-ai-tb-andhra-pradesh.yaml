@@ -96,3 +96,18 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-15
+  content: c313846706750a3069ad78b57d6c3712ec9d9886e0f64443c4b1ffcba133bffa
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: swaasa-cough-ai-tb-andhra-pradesh/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - "The two checkers disagreed on attribution: the drafter said only-path and the verifier said bundled. The entry shows the drafter's grade, only-path; treat that grade as unsettled."
