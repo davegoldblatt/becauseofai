@@ -72,3 +72,24 @@ receipts:
     quote: from July 2025 to June 2026
     locator: Methods, 2.2 Setting and participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 1d20ec5884ddd3f0edf273ff08e2d79dc9e793d7cceeeed0e2b1ba16e139ab69
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: chongqing-ai-boppps-cbl-neurology-interns-rct/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: chongqing-ai-boppps-cbl-neurology-interns-rct/2026-11-15.json

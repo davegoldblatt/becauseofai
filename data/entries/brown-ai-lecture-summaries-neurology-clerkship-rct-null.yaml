@@ -71,3 +71,24 @@ receipts:
     quote: students in 11 clerkship cohorts over a year were randomized within cohort to receive a summary before each quiz
     locator: Abstract, Phase 2
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 3c8d3d28561952b340705e20a51c1a0d5d3573a6972389d00db28d353604f7ad
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: brown-ai-lecture-summaries-neurology-clerkship-rct-null/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: brown-ai-lecture-summaries-neurology-clerkship-rct-null/2026-11-15.json

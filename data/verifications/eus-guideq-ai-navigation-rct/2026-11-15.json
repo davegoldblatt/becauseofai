@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "eus-guideq-ai-navigation-rct",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "4f9b3509466508c37b71f4c6f05357047f17e672f834fcce31447970404fe875",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.cgh.2026.10.008",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-15T08:35:10.554Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cgh.2026.10.008%22&format=json&resultType=core",
+      "sha256": "442067370922f545db90814cced8d60f80b62a624618e7b8fca3765b266f2239",
+      "chars": 2088,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "266 patients were analyzed (AI-assisted n=132; control n=134)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Overall station completeness was higher with EUS-GUIDEQ assistance (median [IQR] 1.00 [0.94-1.00] vs 0.81 [0.75-0.88]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "median [IQR] 1.00 [0.94-1.00] vs 0.81 [0.75-0.88]",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "266 patients were analyzed (AI-assisted n=132; control n=134)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between December 12, 2023, and May 16, 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between December 12, 2023, and May 16, 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized comparison was EUS-GUIDEQ-assisted versus standard EUS, isolating the addition of AI navigation.",
+      "achieved_dates": {
+        "from": "abstract",
+        "conflicting": false,
+        "note": "The abstract reports December 12, 2023, through May 16, 2025."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses that the authors developed the device; the abstract confirms development but establishes no vendor funding, employment, equity, patent, or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The abstract supports improved scanning-station completeness in 266 randomized patients, the reported numerical results and dates, and increased procedure time. Preregistration is not established, so evidence grade A cannot be confirmed; grade B's observational definition does not fit, and patient health benefits were not demonstrated."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12520,
+      "output": 555,
+      "total": 13075,
+      "cached": 0,
+      "reasoning": 96
+    },
+    "duration_ms": 14252
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

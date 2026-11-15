@@ -70,3 +70,24 @@ receipts:
     quote: Between December 12, 2023, and May 16, 2025
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 4f9b3509466508c37b71f4c6f05357047f17e672f834fcce31447970404fe875
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: eus-guideq-ai-navigation-rct/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: eus-guideq-ai-navigation-rct/2026-11-15.json

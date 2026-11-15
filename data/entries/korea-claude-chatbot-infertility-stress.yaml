@@ -68,3 +68,24 @@ receipts:
     quote: then recruited (July to August 2025)
     locator: Methods, 2.5 Data Collection
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 1cb76f8c8185f55e5995b15348162c3e1568c9892efe8968add0b8f6b29dfd5c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: korea-claude-chatbot-infertility-stress/2026-11-15.json
+held:
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter C, verifier could not grade."
+  record: korea-claude-chatbot-infertility-stress/2026-11-15.json

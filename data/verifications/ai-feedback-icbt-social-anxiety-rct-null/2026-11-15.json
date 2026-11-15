@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-feedback-icbt-social-anxiety-rct-null",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "7ad0e25557d4499c093e1e639148270c7038fdf97431cddd714fe2364f9dd43e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.invent.2026.101012",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-15T08:33:46.372Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13698080/fullTextXML",
+      "sha256": "3c1a0b1759e166bfdcfba693f8a4077d104f49aba0d9deb421042403d0e403be",
+      "chars": 60240,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "263 adults with SAD received psychologist-reviewed AI-generated or human feedback",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the adjusted between-source difference at post-treatment was 1.15 SPIN points (95% CI [−3.62, 5.91])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the adjusted between-source difference at post-treatment was 1.15 SPIN points (95% CI [−3.62, 5.91])",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "263 adults with SAD received psychologist-reviewed AI-generated or human feedback",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The randomized source comparison used the same CBT course and crossed expectancy conditions, comparing psychologist-reviewed AI feedback with human-written feedback.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; results date screening to August 2025–April 2026 but give no calendar dates for treatment or outcome collection."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The source and entry disclose Carlbring’s OpenAI honoraria and two authors’ journal editorships."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates for treatment outcomes are not established by the screening dates; evidence A is also unverified because registration was retrospective, and the other evidence categories do not fit this randomized trial."
+      },
+      "summary": "The source supports 263 randomized adults and an inconclusive AI-minus-human difference of 1.15 SPIN points, with non-inferiority unestablished. It does not establish prospective endpoint registration or calendar dates for the measured outcomes."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27139,
+      "output": 658,
+      "total": 27797,
+      "cached": 0,
+      "reasoning": 188
+    },
+    "duration_ms": 19950
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}
