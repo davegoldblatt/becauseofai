@@ -86,35 +86,33 @@ receipts:
     locator: Section 5, Participants
     source: 0
   - field: dates.achieved_start
-    quote: "We then launched the trial on 13 April."
-    locator: "Section 3, Procedure"
+    quote: We then launched the trial on 13 April.
+    locator: Section 3, Procedure
     source: 0
   - field: dates.achieved_start
-    quote: "Intervention Start Date 2026-04-13"
-    locator: "Registry record, Intervention Start Date"
+    quote: Intervention Start Date 2026-04-13
+    locator: Registry record, Intervention Start Date
     source: 1
   - field: dates.achieved_end
-    quote: "the trial covered 10 weeks of classroom instruction, ending on 7 July."
-    locator: "Section 3, Procedure"
+    quote: the trial covered 10 weeks of classroom instruction, ending on 7 July.
+    locator: Section 3, Procedure
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
+  model: claude-opus-5-5
   date: 2026-11-15
-  content: 5c2a09af4237bbcc03508655951604008e27e52392b7ce2aa07a725ad3ae5809
+  content: c9e0dce6609d1e929997155899170df9a7f4be19db397d80dba0cb9ceadfb6e7
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
+    model: claude-opus-5-5
     date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
     date: 2026-11-15
-    verdict: fail
-  record: google-eedi-gemini-tutoring-star-maths-null/2026-11-15.json
-held:
-  reason: grade-split
-  since: 2026-11-15
-  detail: "window: drafter no grade, verifier in."
-  record: google-eedi-gemini-tutoring-star-maths-null/2026-11-15.json
+    verdict: pass
+  record: google-eedi-gemini-tutoring-star-maths-null/2026-11-15-2.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.

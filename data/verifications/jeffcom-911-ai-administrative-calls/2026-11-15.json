@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "jeffcom-911-ai-administrative-calls",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "6559a7db3aedc9b357fb3a05e93e69eda26674bccf7a5ca01534d6b96f3a3b6c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-15T19:33:37.986Z",
+      "final_url": "https://wjla.com/news/spotlight-on-america/as-911-centers-turn-to-ai-agencies-weigh-gains-against-risks-artificial-intelligence-penobscot-county-maine",
+      "sha256": "260b413fdac7d092da074d953c20482aea85eac4092f1944638e62082411bca4",
+      "chars": 7306,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "At Jeffcom 911, the agency said AI helped produce a sustained 33% reduction in administrative calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "D",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "The reported reduction implies an earlier call-volume comparison, but the text does not describe the intervention or comparator sufficiently to distinguish isolated AI from a bundled package.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives no measurement period; 2025 dates the cited white paper."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses agency self-reporting, but the source establishes no vendor funding, employment, equity, patent or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The date test fails because no benefit measurement period is given."
+      },
+      "summary": "The article supports an agency-reported 33% reduction in administrative calls in actual operation, with an implied earlier baseline. It supplies no measurement dates, methods or comparison details sufficient to establish a clean attribution grade."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13553,
+      "output": 695,
+      "total": 14248,
+      "cached": 8448,
+      "reasoning": 228
+    },
+    "duration_ms": 20720
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}

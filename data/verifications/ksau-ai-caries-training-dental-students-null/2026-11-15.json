@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ksau-ai-caries-training-dental-students-null",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "ab34f9354301485ccbc8b18b206ece8d03eb14f46bd335b50c49600ec7f77301",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12909-026-09982-2",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-15T19:34:31.564Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13682144/fullTextXML",
+      "sha256": "5d91f3675d87079dcf0b14d45d26494dc8213a1fc23f80a2569f44f87446113e",
+      "chars": 46223,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Seventy-nine students completed both tests, with 41 trained using AI assistance and 38 trained using conventional radiography.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Of the 82 students eligible for enrollment in this study, 79 completed both pre- and post-test assessments",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The randomized groups received the same radiographs, instructor, and training duration, with AI annotations added only to the intervention group's training.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the paper gives relative assessment intervals but no calendar dates for the study."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The authors declare no competing interests and no funding; commercial software use alone does not establish a vendor conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates for training and assessment are absent; publication dates cannot establish when the outcome occurred."
+      },
+      "summary": "The paper supports 79 participating students and no significant diagnostic-score improvement after AI-assisted training. Study dates and primary-endpoint preregistration are not reported, so the window and evidence grade cannot be established under the supplied definitions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20799,
+      "output": 551,
+      "total": 21350,
+      "cached": 0,
+      "reasoning": 134
+    },
+    "duration_ms": 14487
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

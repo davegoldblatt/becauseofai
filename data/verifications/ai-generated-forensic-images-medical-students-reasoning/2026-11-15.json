@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-generated-forensic-images-medical-students-reasoning",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "59de8e1d969938b6e4e9574df6473a7612756fe938950f16adde574763b27928",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.7759/cureus.117464",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-15T19:32:56.220Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13732507/fullTextXML",
+      "sha256": "e4e9b4945ee92ed0654cccaed555617fe91c95b2b9dbefeb712e55c62a218a30",
+      "chars": 57560,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "with an adjusted mean difference of 2.4 points (95% CI, 1.4-3.4",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "enrolled and allocated 249 Phase II and Phase III MBBS students",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Tantia Medical College, Sri Ganganagar, India, from January to July 2025.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Tantia Medical College, Sri Ganganagar, India, from January to July 2025.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison varied AI-generated versus conventional images while standardizing cases, faculty, teaching duration, questioning, and debriefing, although nonrandomized allocation and unmatched image characteristics limit causal inference.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods give January–July 2025 as the study period, without separate calendar dates for teaching and assessments."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The authors declare no funding or relevant relationships; evaluating their own educational intervention does not establish a vendor or financial conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The paper supports a 2.4-point adjusted clinical reasoning advantage in a nonrandomized comparison involving 249 allocated students, with 227 in the primary analysis. It establishes an educational association during January–July 2025, without establishing causation or transfer to clinical practice."
+    },
+    "error": null,
+    "tokens": {
+      "input": 23190,
+      "output": 579,
+      "total": 23769,
+      "cached": 0,
+      "reasoning": 99
+    },
+    "duration_ms": 14866
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The paper supports a 2.4-point adjusted clinical reasoning advantage in a nonrandomized comparison involving 249 allocated students, with 227 in the primary analysis. It establishes an educational association during January–July 2025, without establishing causation or transfer to clinical practice.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

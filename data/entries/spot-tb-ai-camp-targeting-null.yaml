@@ -128,17 +128,17 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-09
-  content: 446ca31d8da10144db4793b9e61f47dd9d431aa3e5e2b0a0cf31b8400b5973d2
+  date: 2026-11-15
+  content: 4acfb0d602eed49e321ede07b371e2ab982c8b5bb1f429a84871bf83e9ccce87
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-09
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-09
+    date: 2026-11-15
     verdict: pass
-  record: spot-tb-ai-camp-targeting-null/2026-11-09.json
+  record: spot-tb-ai-camp-targeting-null/2026-11-15.json
   confidence: strict

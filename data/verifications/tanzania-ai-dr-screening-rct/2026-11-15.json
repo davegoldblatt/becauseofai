@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "tanzania-ai-dr-screening-rct",
+  "date": "2026-11-15",
+  "as_of": "2026-11-15",
+  "entry_sha256": "faa20e7a36a256d8c8dea918f75b80e9903a5fefa1e1e355a19d6794e5ae3972",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.langlo.2026.104062",
+      "ok": true,
+      "method": "unpaywall:pdf",
+      "fetched_at": "2026-11-15T19:37:08.639Z",
+      "final_url": "https://researchonline.lshtm.ac.uk/id/eprint/4683712/1/Cleland-etal-2026-Artificial-intelligence-supported.pdf",
+      "sha256": "ecb915bb8f4be68d3e0ed5694d86993268077ff1519cf8f40d77ef7b2a4902cb",
+      "chars": 85156,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "85/467 (18⋅2%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "85/467 (18⋅2%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "157/437 (35⋅9%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "between the groups and a 97%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "These values give an absolute difference of 17⋅7 percentage",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "leaving 2378 unique participants:",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between March 8, 2023, and Aug 31, 2024, 2439 individuals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between March 8, 2023, and Aug 31, 2024, 2439 individuals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-15",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The trial compared AI screening with immediate results and face-to-face counselling against deferred human grading and telephone counselling, so it tested the combined pathway.",
+      "achieved_dates": {
+        "from": "results",
+        "conflicting": false,
+        "note": "March 8, 2023, to August 31, 2024, describes eligibility assessment and recruitment; attendance was measured within 8 weeks of screening."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses the free SELENA+ software and authors' commercial fees, advisory roles, and equity."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized trial supports increased clinic attendance with the bundled AI screening pathway: 35.9% versus 18.2% within 8 weeks. It does not isolate AI's independent contribution or establish reduced sight loss."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27168,
+      "output": 654,
+      "total": 27822,
+      "cached": 0,
+      "reasoning": 129
+    },
+    "duration_ms": 18474
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The randomized trial supports increased clinic attendance with the bundled AI screening pathway: 35.9% versus 18.2% within 8 weeks. It does not isolate AI's independent contribution or establish reduced sight loss.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

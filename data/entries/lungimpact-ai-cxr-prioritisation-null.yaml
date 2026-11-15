@@ -100,28 +100,27 @@ receipts:
     locator: Results, Descriptive statistics and consort diagram (report body)
     source: 0
   - field: headline
-    quote: "A prospective, multicenter, randomized controlled trial was conducted between July 2023 and December 2024 across five NHS Trusts in England."
-    locator: "Methods, Study design"
+    quote: A prospective, multicenter, randomized controlled trial was conducted between July 2023 and December 2024 across five NHS Trusts in England.
+    locator: Methods, Study design
     source: 0
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-12
-  content: 2f9f61ae32f1edf8f0c84a240242cadfc67c4953bfc999fe503d8e83d596e216
-  via: claude-login
+  date: 2026-11-15
+  content: c9099b145dfe5e59489ee7857cb04fce144c727074c01c6cfa6cf62579d2737c
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-12
+    date: 2026-11-15
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-12
+    date: 2026-11-15
     verdict: fail
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-15.json
 held:
-  reason: fails-test
-  since: 2026-11-12
-  detail: "The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose."
-  record: lungimpact-ai-cxr-prioritisation-null/2026-11-12-2.json
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier ai-vs-ai."
+  record: lungimpact-ai-cxr-prioritisation-null/2026-11-15.json

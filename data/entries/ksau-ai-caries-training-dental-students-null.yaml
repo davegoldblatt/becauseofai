@@ -56,16 +56,27 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: headline
-    quote: "Of the 82 students eligible for enrollment in this study, 79 completed both pre- and post-test assessments"
-    locator: "Results, first paragraph"
+    quote: Of the 82 students eligible for enrollment in this study, 79 completed both pre- and post-test assessments
+    locator: Results, first paragraph
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-14
-  content: f8ce52aa9c7226ce46dc5267a95af13aa4d0a89723ba5be5b522dc29246fc542
+  model: claude-opus-5-5
+  date: 2026-11-15
+  content: ab34f9354301485ccbc8b18b206ece8d03eb14f46bd335b50c49600ec7f77301
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-opus-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: fail
+  record: ksau-ai-caries-training-dental-students-null/2026-11-15.json
 held:
-  reason: ungrounded
-  since: 2026-11-14
-  detail: No receipt for headline.
-  record: ksau-ai-caries-training-dental-students-null/2026-11-14.json
+  reason: grade-split
+  since: 2026-11-15
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ksau-ai-caries-training-dental-students-null/2026-11-15.json
