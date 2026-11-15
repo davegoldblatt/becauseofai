@@ -53,7 +53,7 @@ notes: >-
 history:
   - date: 2026-11-15
     note: "Added by the backfill run."
-rationale: "Isolated because the claim is a measured before/after change against the building's own pre-project baseline for a system that only alters ventilation, though the release does not rule out other concurrent changes."
+rationale: Isolated because the claim is a measured before/after change against the building's own pre-project baseline for a system that only alters ventilation, though the release does not rule out other concurrent changes.
 receipts:
   - field: headline
     quote: 30 percent reduction in HVAC energy use
@@ -79,3 +79,23 @@ receipts:
     quote: deployed its platform across a 521,000-square-foot facility
     locator: Press release, "Verified Results"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: 24bc7e5c083090d7110df4120faf38fc60a185356479c84b90a2317c829df892
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: rzero-childrens-hospital-hvac-occupancy-ai/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the source gives only the announcement date, not when the hospital savings occurred.).

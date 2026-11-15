@@ -53,7 +53,7 @@ notes: >-
 history:
   - date: 2026-11-15
     note: "Added by the backfill run."
-rationale: "Bundled because the avoided-outage figure comes from a combined system of sensors, machine-learning models and human review with crews, and no comparison without the machine learning is shown."
+rationale: Bundled because the avoided-outage figure comes from a combined system of sensors, machine-learning models and human review with crews, and no comparison without the machine learning is shown.
 receipts:
   - field: headline
     quote: 12 million minutes of unplanned customer outages avoided
@@ -71,3 +71,24 @@ receipts:
     quote: 12 million minutes of unplanned customer outages avoided
     locator: Section "The numbers tell the story"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-15
+  content: a291db412f2890b2ace352f2fc8e55e775107828f21fd90d89d3ab24af477ce0
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-15
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-15
+    verdict: pass
+  record: pge-continuous-monitoring-center-outage-minutes/2026-11-15.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (No measured comparator or calculation of avoided outages is shown, and the period for the 12 million avoided outage minutes cannot be established.).
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
