@@ -346,3 +346,12 @@ Candidates: 166 over 2026-11-12 to 2026-11-14, 15 flagged randomized, 10 announc
 - Echo chambers / echo machines, LLM conversation and belief certainty. [PsyArXiv](https://osf.io/preprints/psyarxiv/7et5g_v3/). Preprint; not read; likely lab experiment on belief, not a benefit to people. Missing: whether any real-world benefit is measured.
 - Still open: SPOT-TB Lancet Global Health version, PARTNER (ISRCTN15732844), AI-NETRA Pune, CT cystic renal masses (EClinicalMedicine), all logged earlier and unreadable.
 - Skipped: HerzMobil heart failure telemonitoring (read: nurse-reviewed app, no AI), pharma-ads-and-chatbot study, PTSD prediction (model accuracy), market and opinion pieces, AEA surveys, protocols, reviews.
+
+## 2026-11-15 (daily scout)
+
+Candidates: 137 over 2026-11-13 to 2026-11-15, 7 flagged randomized, 13 announcements, 0 alerts, 5 source errors (Crossref 404s). One entry drafted: `swaasa-cough-ai-tb-andhra-pradesh`.
+
+- Suspected skin cancer referral rates after a pre-referral AI tool, real-world. [BJD](https://doi.org/10.1093/bjd/ljag496). Reader got HTTP 403, not read; may relate to `nhs-derm-skin-cancer`. Needs the full text, achieved dates, and comparison.
+- CT-based AI risk support for cystic renal masses, with a randomized component. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Already logged earlier and unreadable; still open.
+- Reducing benign breast biopsies in women 35 and under with a clinician-AI triage strategy. [Diagnostics](https://doi.org/10.3390/diagnostics16213491). Not read; likely retrospective. Check whether any patients were actually triaged.
+- Skipped: AEA registrations in development, reviews, benchmarks, model-accuracy papers, pharma-ads chatbot study, news and market pieces.
