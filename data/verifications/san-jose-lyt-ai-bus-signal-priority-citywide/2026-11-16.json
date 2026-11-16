@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "san-jose-lyt-ai-bus-signal-priority-citywide",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "9f8aeb6b5bcce71b88e7682937aa8b1e268002ddfb7b9924578627cb45508ea1",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.sjmayormatt.com/news-room/sj26-sponsors-3gzt8-7gw2z-9xlyk",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T08:40:57.889Z",
+      "final_url": "https://www.sjmayormatt.com/news-room/sj26-sponsors-3gzt8-7gw2z-9xlyk",
+      "sha256": "d281c5da7786f4c657f585d7170725e66a1e9e2fc944b9a2897c211512399d97",
+      "chars": 4171,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the City has increased bus speeds by 20 percent by expanding an AI-powered transit technology to all bus routes citywide",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the City has increased bus speeds by 20 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the City has increased bus speeds by 20 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the City has increased bus speeds by 20 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "No comparison is described that would establish whether the AI contribution was isolated or tested within a broader package.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the release dates the announcement and pilot launch, but gives no measurement period for the citywide benefit."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The city reports its own programme's results and quotes its vendor's CEO; the entry discloses both."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "No baseline or comparator is described, and no dates establish when the measured citywide benefit occurred."
+      },
+      "summary": "The complete press release reports a 20% increase in bus speeds following citywide deployment of AI-enabled signal priority. It supplies neither a defined comparison nor a measurement period, so the entry does not pass all four tests."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12678,
+      "output": 581,
+      "total": 13259,
+      "cached": 0,
+      "reasoning": 138
+    },
+    "duration_ms": 20841
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}

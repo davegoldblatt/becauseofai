@@ -64,3 +64,24 @@ receipts:
     quote: the City has increased bus speeds by 20 percent
     locator: Body, first paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 9f8aeb6b5bcce71b88e7682937aa8b1e268002ddfb7b9924578627cb45508ea1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: san-jose-lyt-ai-bus-signal-priority-citywide/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: san-jose-lyt-ai-bus-signal-priority-citywide/2026-11-16.json

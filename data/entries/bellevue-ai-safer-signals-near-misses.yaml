@@ -68,3 +68,23 @@ receipts:
     quote: VRU-involved near misses dropped by more than 45%.
     locator: Section "Responding to Risk in Real Time", Bellevue, WA
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 3b46921d080ba3e1469d55bd5a6b3378605baa5f2d9debcec7277fdc039cf344
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: pass
+  record: bellevue-ai-safer-signals-near-misses/2026-11-16.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The reported drop implies a prior comparison, although its details are absent; the dated test fails because no Bellevue benefit period is given.).

@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "bellevue-ai-safer-signals-near-misses",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "3b46921d080ba3e1469d55bd5a6b3378605baa5f2d9debcec7277fdc039cf344",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.fehrandpeers.com/blog/understanding-ais-role-in-transportation-safety/page/2/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T08:39:03.232Z",
+      "final_url": "https://www.fehrandpeers.com/blog/understanding-ais-role-in-transportation-safety/page/2/",
+      "sha256": "ffda06d6d4cdcbb362139387f6cca2ca391a378ce72fb5c294a1b54e43779ca0",
+      "chars": 11579,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "VRU-involved near misses dropped by more than 45%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "VRU-involved near misses dropped by more than 45%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "VRU-involved near misses dropped by more than 45%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "VRU-involved near misses dropped by more than 45%.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "other",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "other",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported reduction compares near misses before and with a package of AI-supported sensing, signal interventions, and engineering decisions, without isolating AI's contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives no Bellevue deployment or measurement period."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses city staff contributions and institutional self-reporting, but the source establishes no vendor employment, funding, equity, patent, or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The reported drop implies a prior comparison, although its details are absent; the dated test fails because no Bellevue benefit period is given."
+      },
+      "summary": "The complete consultancy blog reports more than 45% fewer near misses involving vulnerable road users following the bundled intervention. It supplies neither baseline counts nor achieved dates, so the benefit's timing and window cannot be established."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14193,
+      "output": 850,
+      "total": 15043,
+      "cached": 0,
+      "reasoning": 391
+    },
+    "duration_ms": 36688
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete consultancy blog reports more than 45% fewer near misses involving vulnerable road users following the bundled intervention. It supplies neither baseline counts nor achieved dates, so the benefit's timing and window cannot be established.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.",
+      "Not dated yet (The reported drop implies a prior comparison, although its details are absent; the dated test fails because no Bellevue benefit period is given.)."
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "faa-smart-ai-airspace-rerouted-flights",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "3f82fd0c35e3bf2825a2c6c02e3f29c3d20cd4a140e05f06cea2ab5776bd019d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.govtech.com/transportation/feds-say-ai-software-reducing-dallas-flight-delays",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T08:40:01.954Z",
+      "final_url": "https://www.govtech.com/transportation/feds-say-ai-software-reducing-dallas-flight-delays",
+      "sha256": "45102ad06cf05604b0d2e522ad0a7b0896597f5588e93e92217a84e14d26645b",
+      "chars": 4207,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "helped reroute nearly 180 flights across the U.S., improving flight times by more than 10 minutes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "improving flight times by more than 10 minutes and saving nearly 80 gallons of fuel on average",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "improving flight times by more than 10 minutes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "improving flight times by more than 10 minutes and saving nearly 80 gallons of fuel on average",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "helped reroute nearly 180 flights across the U.S.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": "in"
+      },
+      "attribution_rationale": "No evaluated comparison is described, so the source cannot establish how cleanly SMART's contribution is separated from controller decisions.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the article places the cumulative benefits since September deployment and before its November 9, 2026 publication, without individual flight dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "DOT reports results for its own FAA programme, and the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "No control, prior period, or explicit benchmark underlying the reported time and fuel savings is described; the cumulative benefit period is bounded by September deployment and November publication."
+      },
+      "summary": "The complete news article supports DOT's reported flight count and average time and fuel savings since September deployment. It supplies no explicit comparison or independent evaluation establishing those savings."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12818,
+      "output": 674,
+      "total": 13492,
+      "cached": 8448,
+      "reasoning": 204
+    },
+    "duration_ms": 28917
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

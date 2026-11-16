@@ -79,3 +79,23 @@ receipts:
     quote: the NoTraffic AI Mobility Platform across twelve signalized intersections
     locator: Body, "A Data-Driven Solution" section, first paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 79da8fef92168d497a09d675b77b32f2213215b883b7c2acb71812962a07d1b9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: pass
+  record: west-allis-notraffic-ai-signals-greenfield-delay/2026-11-16.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because publication timing does not establish when the measured benefit occurred.).

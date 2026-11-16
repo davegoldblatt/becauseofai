@@ -78,3 +78,24 @@ receipts:
     quote: more than 3,800km of roads across City of Moreton Bay
     locator: Body, Mayor Flannery quotation
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: cd82a93058e4828bd1c9b2eb5cf9d6bacc7417fdbc8a38fb3a493af1e21619ba
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: moreton-bay-ai-pothole-detection-repairs/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing."
+  record: moreton-bay-ai-pothole-detection-repairs/2026-11-16.json

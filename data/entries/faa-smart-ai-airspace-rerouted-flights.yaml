@@ -72,3 +72,24 @@ receipts:
     quote: helped reroute nearly 180 flights across the U.S.
     locator: Body, final sentence of the paragraph on data streams
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 3f82fd0c35e3bf2825a2c6c02e3f29c3d20cd4a140e05f06cea2ab5776bd019d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: faa-smart-ai-airspace-rerouted-flights/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+  record: faa-smart-ai-airspace-rerouted-flights/2026-11-16.json

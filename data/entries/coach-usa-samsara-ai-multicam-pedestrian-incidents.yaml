@@ -69,3 +69,23 @@ receipts:
     quote: a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists
     locator: Body, paragraph beginning "By deploying Samsara's AI Multicam"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 383acad34e1c0c43de0a7441275877df92fc753f91ea40401e9e46fdcdd518eb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: pass
+  record: coach-usa-samsara-ai-multicam-pedestrian-incidents/2026-11-16.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The reduction implies a comparison with incidents before implementation, but no calendar dates establish when the benefit occurred.).

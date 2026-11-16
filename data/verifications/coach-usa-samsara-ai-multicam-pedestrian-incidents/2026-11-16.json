@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "coach-usa-samsara-ai-multicam-pedestrian-incidents",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "383acad34e1c0c43de0a7441275877df92fc753f91ea40401e9e46fdcdd518eb",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.metro-magazine.com/articles/how-coach-usa-is-using-ai-to-prevent-bus-accidents",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T08:39:40.857Z",
+      "final_url": "https://www.metro-magazine.com/articles/how-coach-usa-is-using-ai-to-prevent-bus-accidents",
+      "sha256": "f2e53296a6fc32a56b28552d702691d594e81b617ed98956611f26ed3dcc47e7",
+      "chars": 16879,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the company reports a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported comparison before and after implementation covers AI cameras, real-time alerts, driver coaching, and safety-program changes together.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives no calendar period for the reported incident reduction."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The figures are Coach USA's own operational claims, presented alongside comments from the camera vendor; the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The reduction implies a comparison with incidents before implementation, but no calendar dates establish when the benefit occurred."
+      },
+      "summary": "The complete news article supports the operator-reported 92% incident reduction from a package of AI cameras, alerts, coaching, and safety changes. It provides neither independent verification nor dates establishing the benefit's window."
+    },
+    "error": null,
+    "tokens": {
+      "input": 15100,
+      "output": 555,
+      "total": 15655,
+      "cached": 0,
+      "reasoning": 113
+    },
+    "duration_ms": 20627
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete news article supports the operator-reported 92% incident reduction from a package of AI cameras, alerts, coaching, and safety changes. It provides neither independent verification nor dates establishing the benefit's window.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "Not dated yet (The reduction implies a comparison with incidents before implementation, but no calendar dates establish when the benefit occurred.)."
+    ]
+  }
+}
