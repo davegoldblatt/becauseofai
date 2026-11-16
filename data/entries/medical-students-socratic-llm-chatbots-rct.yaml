@@ -1,0 +1,72 @@
+id: medical-students-socratic-llm-chatbots-rct
+section: because
+rank: 65
+headline: >-
+  Because of AI, third-year medical students who spent 10 minutes with two Socratic-prompted GPT-3.5 chatbots gained 8.9 points on a
+  15-question test, against 3.7 points for students who read the textbook for the same time, in a randomised trial.
+impact: "Larger test gain after 10 minutes with Socratic chatbots (RCT)"
+impact_number: "+8.9 vs +3.7"
+impact_label: "points gained on a 15-question test, chatbot group vs textbook-reading group"
+summary: >-
+  Forty third-year medical students were randomised to use two chatbots built on a medical-school textbook corpus and prompted to
+  teach by Socratic questioning, or to read the textbook, for 10 minutes, and took the same test before and after.
+caveat: >-
+  Only the abstract was readable. A single 10-minute session, 40 students, a short test and GPT-3.5; the outcome is a test score, not
+  later learning or patient care, and the authors say more studies are needed.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Students using two Socratic-method LLM chatbots for 10 minutes vs students reading the medical textbook for 10 minutes, same pre and post test"
+effect:
+  relative: "Gain of 8.9 points with the chatbots vs 3.7 points with the textbook"
+  absolute: "Mean score 3.9 to 12.8 with the chatbots (n = 20) vs 3.9 to 7.6 with the textbook (n = 20)"
+reach: "Forty third-year medical students, 20 per group"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-29
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "A Randomised Controlled Trial to Study the Use of Large Language Models Prompt Engineered with Socratic Methods on the Impact of Medical Students' Learning (Medical Science Educator, abstract)"
+    url: https://doi.org/10.1007/s40670-026-02832-2
+    type: primary
+conflicts: "none found in the abstract; funding and author ties were not visible in the text read (full text is behind a paywall)."
+what_would_change: "Full-text confirmation, the study dates and registration, a larger trial, and a later retention test."
+notes: >-
+  verify: the abstract gives no study period, so the achieved dates and window grade are left empty.
+  verify: the arms differ in method and interactivity as well as in AI (chatbot dialogue vs passive reading), hence bundled.
+  verify: the abstract does not say the trial was registered.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the daily scout.
+rationale: Students were randomised to chatbot dialogue or passive textbook reading for equal time, so the gain reflects an interactive Socratic format delivered by the model, not the model alone.
+receipts:
+  - field: headline
+    quote: The respective increase in results was 3.7 and 8.9.
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: The respective increase in results was 3.7 and 8.9.
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: The respective increase in results was 3.7 and 8.9.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: The respective increase in results was 3.7 and 8.9.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: The average of the group before and after using the bot ( n  = 20) are 3.9 +/- 0.9 and 12.8 +/- 1.6 respectively
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Forty students participated in the study.
+    locator: Abstract, Results
+    source: 0

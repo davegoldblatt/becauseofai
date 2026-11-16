@@ -360,3 +360,12 @@ Candidates: 137 over 2026-11-13 to 2026-11-15, 7 flagged randomized, 13 announce
 
 - KITE-CRM, CT AI for cystic renal masses, randomized implementation of 5,869 adults at Changhai Hospital, Nov 2025–Feb 2026 (ChiCTR2500112290). [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Benign treatment 28/2934 vs 104/2935 overall, but the AI-evaluable cystic subgroup was not significant (5/29 vs 19/56). Missing: full text, why treated counts differ (171 vs 258), and whether the overall gain came from lesions the AI never read.
 - AI vs teacher feedback on undergraduate essays, three-arm RCT, 312 students, Guangzhou, Sept 2025. [Frontiers in Psychology](https://doi.org/10.3389/fpsyg.2026.1918748). Equal essay gains (d 0.60 vs 0.59 over no feedback), lower motivation with AI. Weak: not preregistered, one cycle, pre-window.
+
+## 2026-11-16 (daily scout)
+
+Candidates: 137 over 2026-11-14 to 2026-11-16, 9 flagged randomized, 19 announcements, 0 alerts, 6 source errors (Crossref 404s). One entry drafted: `medical-students-socratic-llm-chatbots-rct`.
+
+- AI-guided handheld echocardiography for rheumatic heart disease screening by nurse practitioners, rural Nepal, November 2025 camps, 76 analysed. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Preprint, diagnostic accuracy against cardiologist overread; screening reached people. Missing: whether the AI enabled screening that would not otherwise have happened (no usual-care comparison), outcomes beyond accuracy.
+- Dublin AI flood warning system rollout. [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/). Launch with no result yet. Missing: council's own page, any measured warning time or events.
+- Bocconi causal-reasoning game with ChatGPT, 2x2 cluster RCT. [AEA 20213](https://www.socialscienceregistry.org/trials/20213). Registered as completed 2026-11-11 to 2026-11-16; pre-analysis plan only. Watch for results.
+- Skipped: AEA registrations in development, reviews, model-accuracy papers, pharma-ads chatbot study, funding, earnings and market pieces.
