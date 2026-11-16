@@ -1,0 +1,105 @@
+id: molemap-ai-nurse-teledermoscopy-malignancy-detection
+section: because
+rank: 61
+headline: >-
+  Because of AI decision support, nurse-led teledermoscopy clinics in New Zealand and Australia forwarded lesions that were
+  malignant at 25.5 per 1,000 against 15.7 per 1,000 at clinics without it, across 1,102,382 lesions.
+impact: "25.5 vs 15.7 malignancies per 1,000"
+impact_number: "25.5"
+impact_label: "malignancies per 1,000 lesions with AI-assisted screening, against 15.7 at standard clinics"
+summary: >-
+  In routine nurse-led skin cancer screening at MoleMap clinics, clinics using AI decision support were compared with
+  standard clinics on how many of the lesions nurses forwarded were confirmed malignant by teledermatologists.
+caveat: >-
+  Clinics were not randomized and the reference was the teledermatologist's diagnosis of forwarded lesions only, so the result
+  shows a higher yield per forwarded lesion, not fewer missed cancers or better patient outcomes; the authors call it associational.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Clinics using AI decision support vs standard clinics within the MoleMap nurse-led teledermoscopy network, adjusted for nurse experience"
+effect:
+  relative: "Odds ratio adjusted for nurse experience 1.73 (95% CI 1.68–1.77) for a malignancy"
+  absolute: "25.5 vs 15.7 malignancies per 1,000 lesions"
+reach: "1,102,382 lesions from 98,422 patients across 577 sites in New Zealand and Australia"
+dates:
+  achieved_start: 2024-01
+  achieved_end: 2025-07
+  published: 2026-10-02
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "AI-assisted nurse-led skin cancer screening in a teledermoscopy framework: a multi-site evaluation with one million lesions (medRxiv preprint)"
+    url: https://www.medrxiv.org/content/10.64898/2026.10.01.26364543v1
+    doi: 10.64898/2026.10.01.26364543
+    type: primary
+conflicts: "Preprint, not peer reviewed. Three authors are employees of MoleMap New Zealand, the provider of the clinical network, images and AI software evaluated; one author receives consultancy fees from MoleMap; one author founded DeepDerm Pty Ltd. Funded by MoleMap Australia Pty Ltd and DeepDerm Pty Ltd."
+what_would_change: "A prospective study that follows patients, counts missed cancers, and randomizes or otherwise balances which clinics use the AI."
+notes: >-
+  verify: only the abstract page of the preprint was read; the sections beyond the abstract were not printed by the reader.
+  verify: the abstract does not say how clinics came to use the AI, so confounding by clinic cannot be ruled out.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the backfill run.
+rationale: Clinics with AI decision support were compared with standard clinics in the same network and adjusted for nurse experience, but allocation was not randomized and the AI came as part of the clinic's screening workflow.
+receipts:
+  - field: headline
+    quote: 25.5 vs 15.7 malignancies per 1,000 lesions
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: The analytic cohort comprised 1,102,382 lesions from 98,422 patients across 577 sites
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: 25.5 vs 15.7 malignancies per 1,000 lesions
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: 25.5 vs 15.7 malignancies per 1,000 lesions
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: odds ratio adjusted for nurse experience 1.73, 95% CI 1.68–1.77
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: 25.5 vs 15.7 malignancies per 1,000 lesions
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: The analytic cohort comprised 1,102,382 lesions from 98,422 patients across 577 sites
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_start
+    quote: across MoleMap clinics in New Zealand and Australia (January 2024–July 2025)
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_end
+    quote: across MoleMap clinics in New Zealand and Australia (January 2024–July 2025)
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 2886f23837977ba1a768c9ec3e1bc62fe98a9d90b8bdbdb841a96e7716065c32
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: pass
+  record: molemap-ai-nurse-teledermoscopy-malignancy-detection/2026-11-16.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - The achieved dates come from the abstract; the methods were not available.
+    - "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."

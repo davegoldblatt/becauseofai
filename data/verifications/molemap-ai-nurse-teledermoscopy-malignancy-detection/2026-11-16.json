@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "molemap-ai-nurse-teledermoscopy-malignancy-detection",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "2886f23837977ba1a768c9ec3e1bc62fe98a9d90b8bdbdb841a96e7716065c32",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.01.26364543v1",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T19:58:42.514Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.10.01.26364543v1",
+      "sha256": "3b498bb935c7f20fdfc7f2a986da32ee260f2679ec4c2c012eeb11b4a6eaae4c",
+      "chars": 9873,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "25.5 vs 15.7 malignancies per 1,000 lesions",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The analytic cohort comprised 1,102,382 lesions from 98,422 patients across 577 sites",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "25.5 vs 15.7 malignancies per 1,000 lesions",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "25.5 vs 15.7 malignancies per 1,000 lesions",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "odds ratio adjusted for nurse experience 1.73, 95% CI 1.68–1.77",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "25.5 vs 15.7 malignancies per 1,000 lesions",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The analytic cohort comprised 1,102,382 lesions from 98,422 patients across 577 sites",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "across MoleMap clinics in New Zealand and Australia (January 2024–July 2025)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "across MoleMap clinics in New Zealand and Australia (January 2024–July 2025)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The stated comparison is AI decision support versus standard screening within the same nurse-led teledermoscopy workflow, with no additional intervention package described, although allocation was not randomized.",
+      "achieved_dates": {
+        "from": "abstract",
+        "conflicting": false,
+        "note": "The abstract gives January 2024–July 2025, entirely before the twelve-month window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses the reported MoleMap employment, consultancy, DeepDerm founding role, and company funding."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The supplied abstract supports all quoted numbers and dates and reports higher malignancy detection associated with AI-assisted screening in actual patients. It does not establish causality, fewer missed cancers, or improved patient outcomes; methods and full results were not supplied."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14539,
+      "output": 680,
+      "total": 15219,
+      "cached": 8448,
+      "reasoning": 120
+    },
+    "duration_ms": 16312
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The supplied abstract supports all quoted numbers and dates and reports higher malignancy detection associated with AI-assisted screening in actual patients. It does not establish causality, fewer missed cancers, or improved patient outcomes; methods and full results were not supplied.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "The achieved dates come from the abstract; the methods were not available.",
+      "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-sleep-feedback-high-school-soccer-pilot-rct",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "d9f950e9e50f3860ffbf344350d61e5598164548c9f12d934a0f977a78cb1281",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.2196/101615",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-16T19:58:01.650Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13673175/fullTextXML",
+      "sha256": "3747142f7664ab4c359a10aec85cfe54508d55538ef46cab1709815293c9d184",
+      "chars": 71930,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "pilot randomized controlled trial among 25 high school female soccer players from a single team",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "pilot randomized controlled trial among 25 high school female soccer players from a single team",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "ai-vs-ai",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tested personalized GPT-4o feedback against fixed generic messages also generated using GPT-4o.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods gives baseline observation beginning September 1, 2025 and final assessment on November 3, 2025; all trial outcomes precede the window, although the entry omits achieved dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Authors disclose developing the research prototype but deny commercial interests and vendor support; funding came from a university grant."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports a preliminary 2-percentage-point between-group difference in sleep-efficiency change among 25 randomized players, with both arms using AI-generated content. No evidence grade fits the supplied vocabulary: this small, retrospectively registered randomized trial lacks a preregistered primary endpoint and is not large observational evidence."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27084,
+      "output": 682,
+      "total": 27766,
+      "cached": 0,
+      "reasoning": 180
+    },
+    "duration_ms": 19577
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier ai-vs-ai; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "ai-vs-ai"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

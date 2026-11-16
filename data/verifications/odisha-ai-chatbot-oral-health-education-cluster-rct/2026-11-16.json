@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "odisha-ai-chatbot-oral-health-education-cluster-rct",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "e9387a9a094fa55049cd060a3ca02d3e128814740f5f93885cf526d6a23d17ec",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.4103/jehp.jehp_1971_25",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-16T19:58:59.793Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13633820/fullTextXML",
+      "sha256": "a383d40919e61b4c9a8bb06e490db08a1064012173f182981470ad7b2eae4ec2",
+      "chars": 18459,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A cluster-randomized controlled trial with 1000 participants from 20 villages (10 interventions, 10 controls) was conducted.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "This cluster-randomized controlled trial was conducted from January 2025 to June 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "This cluster-randomized controlled trial was conducted from January 2025 to June 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "Four weeks of chatbot education with reminders and quizzes were compared with a one-time health talk and leaflet, testing the educational package rather than isolating AI.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods give January–June 2025, entirely before the window."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The source declares no conflicts and no funding; the entry repeats those declarations."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The paper supports the reported brushing percentages in actual participants receiving a chatbot education package versus conventional education during January–June 2025. Evidence grading is unresolved under the supplied vocabulary: the trial reports cluster randomization but no preregistered primary endpoint, and it is not an observational study."
+    },
+    "error": null,
+    "tokens": {
+      "input": 16104,
+      "output": 794,
+      "total": 16898,
+      "cached": 0,
+      "reasoning": 291
+    },
+    "duration_ms": 21543
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

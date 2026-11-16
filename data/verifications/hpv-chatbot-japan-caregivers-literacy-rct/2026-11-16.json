@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "hpv-chatbot-japan-caregivers-literacy-rct",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "b8ac6e304f89c2515d10db663f208e38ada1e390d8e08cc2c885b0fd20b3532e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1001/jamanetworkopen.2026.34696",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-16T19:58:22.987Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13595185/fullTextXML",
+      "sha256": "36f3fdbba8376bdc39fcdeac57256a2902bf3c1c588d4908c17734fe06a4c5d5",
+      "chars": 34361,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "In this randomized clinical trial of 848 caregivers of daughters aged 12 to 18 years in Japan",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "In this randomized clinical trial of 848 caregivers of daughters aged 12 to 18 years in Japan",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "We conducted a parallel-group RCT in Japan between November 30 and December 27, 2024.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "We conducted a parallel-group RCT in Japan between November 30 and December 27, 2024.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Participants were randomized to the GPT-4o chatbot or the government leaflet, with the same minimum exposure time and no additional intervention.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods explicitly gives November 30 through December 27, 2024, consistent with the abstract and results."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor relationship or other specified conflict is shown; the entry accurately discloses AIR@InnoHK funding and the authors' declaration of no conflicts."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized trial supports a 0.30-point adjusted literacy advantage over the leaflet, without a significant vaccination-decision difference or verified uptake measurement. Evidence grade A cannot be confirmed because the supplied text identifies registration and prespecified outcomes but does not establish that the primary endpoint was preregistered."
+    },
+    "error": null,
+    "tokens": {
+      "input": 19888,
+      "output": 775,
+      "total": 20663,
+      "cached": 0,
+      "reasoning": 276
+    },
+    "duration_ms": 19031
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

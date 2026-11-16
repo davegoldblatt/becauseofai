@@ -1,0 +1,101 @@
+id: hpv-chatbot-japan-caregivers-literacy-rct
+section: because
+rank: 60
+headline: >-
+  Because of AI, caregivers in Japan answered 0.30 more of 7 HPV vaccine questions correctly after using a GPT-4o chatbot
+  than after reading the government leaflet, in a randomized trial of 848 caregivers; their vaccination decisions did not differ.
+impact: "+0.30 on a 7-point literacy test"
+impact_number: "+0.30"
+impact_label: "points higher HPV vaccine literacy (0 to 7 scale) than with the government leaflet"
+summary: >-
+  Female caregivers of unvaccinated daughters in Japan were randomized to an AI chatbot or the health ministry's HPV
+  vaccine leaflet, and factual HPV vaccine literacy was scored immediately and again two weeks later.
+caveat: >-
+  Literacy improved by a small margin and the effect did not carry into vaccination decisions at two weeks (self-reported,
+  not verified uptake); a large share of participants were lost by the two-week follow-up and the sample was well educated.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "GPT-4o HPV vaccine chatbot with a Japan-specific reference library vs the Ministry of Health, Labour and Welfare's HPV vaccine leaflet, randomized 1:1 among online-panel caregivers in Japan"
+effect:
+  relative: null
+  absolute: "Adjusted mean difference 0.30 points on the 0 to 7 literacy scale (95% CI 0.18-0.43) immediately after the intervention"
+reach: "848 female caregivers of unvaccinated daughters aged 12 to 18 years in Japan, recruited through an online research panel"
+dates:
+  achieved_start: 2024-11-30
+  achieved_end: 2024-12-27
+  published: 2026-09-21
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "AI Chatbot Use for Human Papillomavirus Vaccine Literacy in Japan: A Randomized Clinical Trial (JAMA Network Open, open access via Europe PMC)"
+    url: https://doi.org/10.1001/jamanetworkopen.2026.34696
+    doi: 10.1001/jamanetworkopen.2026.34696
+    type: primary
+conflicts: "Funded by AIR@InnoHK (Innovation and Technology Commission); the funder had no role in the study. The authors report no conflicts of interest. The participants were an online panel, not patients in routine care."
+what_would_change: "A pragmatic trial that adds the chatbot to clinician or municipal recommendations and measures verified HPV vaccine uptake."
+notes: >-
+  verify: the trial ran online with a survey panel, so the chatbot reached caregivers in a study setting rather than in a public rollout.
+  verify: ClinicalTrials.gov NCT06702423; the two-week analysis included 477 of 841 Japan-resident randomized participants.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the backfill run.
+rationale: Caregivers were randomized 1:1 to the chatbot or the official leaflet and scored on the same seven-question literacy test, so the arms differ in the information source, which was the AI chatbot.
+receipts:
+  - field: headline
+    quote: adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43
+    locator: Results, Primary Outcome
+    source: 0
+  - field: headline
+    quote: In this randomized clinical trial of 848 caregivers of daughters aged 12 to 18 years in Japan
+    locator: Key Points, Findings
+    source: 0
+  - field: impact
+    quote: adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43
+    locator: Results, Primary Outcome
+    source: 0
+  - field: impact_number
+    quote: adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43
+    locator: Results, Primary Outcome
+    source: 0
+  - field: effect.absolute
+    quote: adjusted mean difference, 0.30 points on the 0 to 7 scale; 95% CI, 0.18-0.43
+    locator: Results, Primary Outcome
+    source: 0
+  - field: reach
+    quote: In this randomized clinical trial of 848 caregivers of daughters aged 12 to 18 years in Japan
+    locator: Key Points, Findings
+    source: 0
+  - field: dates.achieved_start
+    quote: We conducted a parallel-group RCT in Japan between November 30 and December 27, 2024.
+    locator: Methods, Study Design and Participants
+    source: 0
+  - field: dates.achieved_end
+    quote: We conducted a parallel-group RCT in Japan between November 30 and December 27, 2024.
+    locator: Methods, Study Design and Participants
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: b8ac6e304f89c2515d10db663f208e38ada1e390d8e08cc2c885b0fd20b3532e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: hpv-chatbot-japan-caregivers-literacy-rct/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "evidence: drafter A, verifier could not grade."
+  record: hpv-chatbot-japan-caregivers-literacy-rct/2026-11-16.json
