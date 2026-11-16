@@ -70,3 +70,24 @@ receipts:
     quote: Forty students participated in the study.
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 6889170281a23e81fd635799687dc7f8b8ac8cd48fb3197e00c246ea8068eeef
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: medical-students-socratic-llm-chatbots-rct/2026-11-16.json
+held:
+  reason: ungrounded
+  since: 2026-11-16
+  detail: "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration.."
+  record: medical-students-socratic-llm-chatbots-rct/2026-11-16.json

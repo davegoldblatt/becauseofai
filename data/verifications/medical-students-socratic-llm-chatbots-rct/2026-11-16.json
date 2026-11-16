@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "medical-students-socratic-llm-chatbots-rct",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "6889170281a23e81fd635799687dc7f8b8ac8cd48fb3197e00c246ea8068eeef",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s40670-026-02832-2",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T21:59:26.390Z",
+      "final_url": "https://link.springer.com/article/10.1007/s40670-026-02832-2",
+      "sha256": "25bbc3cc925b9dbf552a34f685c0122b99bd9d6ee58685d5475b6dead3bfa18a",
+      "chars": 12026,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The average of the group before and after using the bot ( n  = 20) are 3.9 +/- 0.9 and 12.8 +/- 1.6 respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Forty students participated in the study.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "unsupported",
+          "note": "The quote gives score gains but does not establish the impact field's 10-minute duration."
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The trial compared Socratic chatbot instruction with textbook reading, testing AI together with a different instructional method.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the supplied text gives no study dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Visible declarations report no funding or relevant interests; the entry incorrectly says these declarations were not visible."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Study dates are absent; publication and ethics-reference dates do not establish when the benefit occurred."
+      },
+      "summary": "The abstract supports larger immediate test gains among 40 randomized students receiving Socratic chatbot instruction. Study dates and preregistration are unavailable, so the window and evidence grade cannot be established under the supplied definitions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14822,
+      "output": 640,
+      "total": 15462,
+      "cached": 0,
+      "reasoning": 149
+    },
+    "duration_ms": 15992
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration.."
+  }
+}
