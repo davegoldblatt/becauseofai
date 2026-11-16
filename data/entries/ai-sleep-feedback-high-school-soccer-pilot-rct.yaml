@@ -1,0 +1,72 @@
+id: ai-sleep-feedback-high-school-soccer-pilot-rct
+section: because
+rank: 62
+headline: >-
+  Because of AI, high school female soccer players who got GPT-4o personalized sleep feedback had 2% higher sleep efficiency
+  than players given generic sleep information, in a pilot randomized trial of 25 players.
+impact: "+2% sleep efficiency (pilot)"
+impact_number: "+2%"
+impact_label: "sleep efficiency with AI personalized feedback vs generic sleep information, pilot of 25 players"
+summary: >-
+  A single high school soccer team was randomized to daily GPT-4o feedback built from Fitbit sleep data or to
+  non-personalized sleep information, and change in sleep efficiency was compared over four weeks.
+caveat: >-
+  A pilot of one team that was registered after it ended; the sleep efficiency difference was borderline, most other sleep
+  outcomes did not differ, and the authors say it is not evidence of established effectiveness.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "GPT-4o personalized sleep feedback via LINE using Fitbit data vs daily non-personalized sleep information, randomized 1:1 within one high school female soccer team"
+effect:
+  relative: null
+  absolute: "Hodges-Lehmann between-group difference in sleep efficiency change 2%, 95% CI 0.50%-4%"
+reach: "25 high school female soccer players from a single team"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-01
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Feasibility and Preliminary Effects of AI-Generated Personalized Sleep Feedback in High School Female Soccer Players: Pilot Randomized Controlled Trial (JMIR Formative Research, open access via Europe PMC)"
+    url: https://doi.org/10.2196/101615
+    doi: 10.2196/101615
+    type: primary
+conflicts: "none found in the text read; the registration (UMIN000061189) was made after the trial ended."
+what_would_change: "A sufficiently powered, prospectively registered trial across several teams that confirms the sleep efficiency gain."
+notes: >-
+  verify: the text gives briefing and setup from 18 August 2025 and a four-week intervention in weeks 6 to 9, but no calendar dates for the intervention period, so the achieved dates and window grade are left empty.
+  verify: retrospectively registered, so evidence is graded B rather than A.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the backfill run.
+rationale: Players on the same team were randomized to personalized AI feedback or generic sleep information, but the intervention also bundled Fitbit tracking and messaging, so the arms differ in more than the AI.
+receipts:
+  - field: headline
+    quote: pilot randomized controlled trial among 25 high school female soccer players from a single team
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Hodges-Lehmann between-group difference 2%, 95% CI 0.50%-4%
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: pilot randomized controlled trial among 25 high school female soccer players from a single team
+    locator: Abstract, Methods
+    source: 0

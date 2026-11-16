@@ -1,0 +1,77 @@
+id: odisha-ai-chatbot-oral-health-education-cluster-rct
+section: because
+rank: 63
+headline: >-
+  Because of AI, adults in rural Odisha villages who got four weeks of chatbot-guided oral health education over WhatsApp
+  went from 28% to 64% brushing twice daily, against 30% to 37% in control villages given a health talk and leaflet.
+impact: "Twice-daily brushing 28% to 64%"
+impact_number: "28% → 64%"
+impact_label: "of adults brushing twice daily after chatbot oral health education, against 30% → 37% in control villages"
+summary: >-
+  Ten villages received a four-week AI chatbot oral health course on WhatsApp and ten received a one-time health talk and a
+  printed leaflet, and knowledge, brushing habits and an oral hygiene index were compared before and after.
+caveat: >-
+  Four-week, short-term outcomes only; the paper gives inconsistent participant counts (1,000, 1,500 and 500 per group in
+  different places), reports no cluster adjustment or trial registration, and the chatbot's design is not described.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Four weeks of AI chatbot-delivered oral health education via WhatsApp/IVR in 10 villages vs a one-time health talk and printed leaflet in 10 control villages"
+effect:
+  relative: null
+  absolute: "Twice-daily brushing rose from 28% to 64% with the chatbot vs from 30% to 37% in controls"
+reach: "1000 adult participants from 20 villages in rural Odisha, India (10 intervention, 10 control)"
+dates:
+  achieved_start: 2025-01
+  achieved_end: 2025-06
+  published: 2026-08-31
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Artificial intelligence and its impact on oral health care education. A randomized study (Journal of Education and Health Promotion, open access via Europe PMC)"
+    url: https://doi.org/10.4103/jehp.jehp_1971_25
+    doi: 10.4103/jehp.jehp_1971_25
+    type: primary
+conflicts: "The authors declare no conflicts of interest and no funding. The article states no AI tools were used in writing or analysis."
+what_would_change: "A registered, cluster-adjusted trial with follow-up beyond four weeks that confirms the brushing and oral hygiene gains."
+notes: >-
+  verify: the abstract says 1000 participants, the Methods say 1500 screened with 500 excluded and then 500 per group; these are not reconciled.
+  verify: the abstract reports the knowledge score rising from 9.8 to 15.2 while Table 3 reports a +5.4 change; no trial registration is mentioned, so evidence is graded B.
+  verify: the chatbot is called AI-based but its model and design are not described in the text read.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the backfill run.
+rationale: Villages were randomized to the chatbot course or to a one-time talk and leaflet, so the arms differ in the education delivered, but the chatbot arm also bundled reminders, quizzes and a clinic locator.
+receipts:
+  - field: headline
+    quote: Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Twice-daily brushing improved from 28% to 64% (vs. 30% to 37% in controls)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A cluster-randomized controlled trial with 1000 participants from 20 villages (10 interventions, 10 controls) was conducted.
+    locator: Abstract, Materials and Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: This cluster-randomized controlled trial was conducted from January 2025 to June 2025
+    locator: Materials and Methods, Study design and settings
+    source: 0
+  - field: dates.achieved_end
+    quote: This cluster-randomized controlled trial was conducted from January 2025 to June 2025
+    locator: Materials and Methods, Study design and settings
+    source: 0

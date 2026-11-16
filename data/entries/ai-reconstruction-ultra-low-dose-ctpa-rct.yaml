@@ -1,0 +1,68 @@
+id: ai-reconstruction-ultra-low-dose-ctpa-rct
+section: because
+rank: 64
+headline: >-
+  Because of AI, a deep learning CT reconstruction algorithm let a pulmonary CT angiography protocol cut effective radiation dose
+  by 84.93% in a randomized trial of low-BMI patients while keeping diagnostic image quality.
+impact: "84.93% lower CT radiation dose"
+impact_number: "84.93%"
+impact_label: "lower effective radiation dose in pulmonary CT angiography with the ultra triple-low protocol"
+summary: >-
+  Patients were randomized to a standard CTPA protocol or to a 60 kVp, 10 ml contrast protocol read with a deep learning
+  reconstruction algorithm, and radiation dose and image quality were compared.
+caveat: >-
+  Only the abstract was readable; the dose cut comes from the lower-dose protocol as a whole, with the AI reconstruction
+  making it diagnostic, and the authors call it a feasibility study that warrants further validation.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Ultra triple-low protocol (60 kVp, 10 ml iodine contrast, 2.5 ml/s) reconstructed with a deep learning algorithm vs a standard protocol (100 kVp, 30 ml, 4 ml/s) in randomized CTPA patients"
+effect:
+  relative: "Effective dose reduced by 84.93%"
+  absolute: "Effective dose 0.71 ± 0.09 mSv vs 4.71 ± 1.13 mSv"
+reach: "Seventy patients with low body mass index undergoing pulmonary CT angiography, randomised to two protocols"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-29
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Feasibility of deep learning reconstruction algorithm combined with the \"ultra triple-low\" protocol at 60 kVp in CTPA: An image quality and radiation dose assessment (European Journal of Radiology, abstract via Europe PMC)"
+    url: https://doi.org/10.1016/j.ejrad.2026.113275
+    doi: 10.1016/j.ejrad.2026.113275
+    type: primary
+conflicts: "none found in the abstract; the algorithm (Clear Infinity) is a commercial CT vendor product and funding and author ties were not visible in the text read."
+what_would_change: "Full-text confirmation of the dose and image-quality results, a larger trial with clinical diagnostic outcomes, and disclosure of funding and vendor ties."
+notes: >-
+  verify: the abstract gives no study period, so the achieved dates and window grade are left empty.
+  verify: the abstract text is garbled where the BMI cut-off should be, and the dose cut is attributed to the protocol with the AI reconstruction maintaining quality; the AI-specific comparison is among the reconstruction subgroups in the full text.
+related: []
+history:
+  - date: 2026-11-16
+    note: Added by the backfill run.
+rationale: Patients were randomized to a standard or an ultra-low-dose protocol, so the dose cut is the protocol's, with the deep learning reconstruction bundled in as what made the low-dose images usable.
+receipts:
+  - field: headline
+    quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
+    locator: Abstract, Results
+    source: 0

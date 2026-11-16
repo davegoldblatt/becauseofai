@@ -259,3 +259,23 @@ Rejected or not drafted:
 - Victoria RoughSense: detection counts only. Sussex AI cameras: 403, offences not outcomes. Network Rail, DB, SNCF, MTA, WMATA, Delhi Metro: forecasts or no figure.
 - San Bernardino Red Protect (same blog): radar and camera detection, AI role not clear.
 - Short of the floor on entries only: 20 searches and 20 pages read; 6 entries.
+
+## 2026-11-16, slice 16: papers and trial results, 2026-09-28 to 2026-10-05
+
+Drafted (5):
+- hpv-chatbot-japan-caregivers-literacy-rct: JAMA Netw Open RCT, GPT-4o chatbot vs leaflet, literacy +0.30 on 0 to 7; no effect on vaccination decision.
+- molemap-ai-nurse-teledermoscopy-malignancy-detection: medRxiv preprint, AI-assisted clinics 25.5 vs 15.7 malignancies per 1,000 lesions; non-randomized, vendor authors.
+- ai-sleep-feedback-high-school-soccer-pilot-rct: JMIR Form Res pilot RCT of 25 players, sleep efficiency +2%; retrospectively registered, no dates (window empty).
+- odisha-ai-chatbot-oral-health-education-cluster-rct: cluster RCT in 20 Indian villages, twice-daily brushing 28% to 64% vs 30% to 37%; inconsistent counts noted.
+- ai-reconstruction-ultra-low-dose-ctpa-rct: abstract only, randomized CTPA protocol with deep learning reconstruction, dose cut 84.93%; no dates.
+
+Rejected or not drafted:
+- NCT06767371 pulpotomy: AI only measured agreement with examiners, no patient benefit from AI.
+- Radiology EHR dashboard stepped-wedge RCT (NCT06785246): the intervention is a dashboard, not AI; LLM only graded reports; null.
+- Coronary CTA resident training pilot: feasibility only, no outcome numbers in the abstract.
+- Nursing students substance-abuse chatbot (F1000): quasi-experimental, only p-values, no usable number.
+- Simulated nursing leadership RCT (Cureus): simulation, not real use.
+- NCT03768986 HIV testing: not an AI intervention.
+- AI-Standardized Clinical Examination (medRxiv): validation correlation, no benefit to people.
+- mmGait stroke gait sensor, wearable ECG hypocalcemia model: accuracy only. BJA letter: NOT READ (stub).
+- Remaining medRxiv/PubMed hits: retrospective models, reviews, surveys, protocols; not read.
