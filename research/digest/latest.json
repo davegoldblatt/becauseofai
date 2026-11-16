@@ -1,58 +1,107 @@
 {
-  "generated_at": "2026-11-15T14:11:31.894Z",
-  "since": "2026-11-14T14:11:31Z",
+  "generated_at": "2026-11-16T14:11:45.667Z",
+  "since": "2026-11-15T14:11:45Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 43,
-    "held": 25,
+    "published": 54,
+    "held": 28,
     "counts": {
-      "because": 20,
+      "because": 22,
       "not-because": 7,
       "not-yet": 5
     },
     "lower_levels": {
       "reasonable": 5,
-      "speculative": 6
+      "speculative": 15
     },
     "changed": [
       {
-        "id": "ai-feedback-icbt-social-anxiety-rct-null",
-        "headline": "Psychologist-reviewed AI-generated feedback in internet-delivered CBT for social anxiety was not shown to match therapist feedback in a randomized trial of 263 adults: the difference was small and inconclusive.",
+        "id": "bellevue-ai-safer-signals-near-misses",
+        "headline": "Because of AI-supported intersection sensing, Bellevue, Washington's Safer Signals pilot cut near misses involving vulnerable road users by more than 45%.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/bellevue-ai-safer-signals-near-misses"
+      },
+      {
+        "id": "coach-usa-samsara-ai-multicam-pedestrian-incidents",
+        "headline": "Because of AI blind-spot cameras and coaching, Coach USA reports a 92% reduction in preventable incidents involving pedestrians, bicyclists and motorcyclists.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/coach-usa-samsara-ai-multicam-pedestrian-incidents"
+      },
+      {
+        "id": "faa-smart-ai-airspace-rerouted-flights",
+        "headline": "Because of AI airspace routing, the US Department of Transportation says the FAA's SMART tool helped reroute nearly 180 flights, improving flight times by more than 10 minutes each.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
-        "headline": "Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11 clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.",
+        "id": "moreton-bay-ai-pothole-detection-repairs",
+        "headline": "Because of AI road-defect detection on recycling trucks, City of Moreton Bay says 4,547 of the 12,896 potholes it repaired in six months were identified by AI.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
-        "headline": "Because of AI, junior-college medical interns on a neurology rotation in Chongqing who got DeepSeek-supported case-based teaching scored higher on a simulated neurological-emergency assessment than interns on conventional teaching, in a randomized study of 118 interns.",
+        "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
+        "headline": "Because of AI transit signal priority, San José says it increased bus speeds by 20 percent after expanding the system to all bus routes citywide.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "eus-guideq-ai-navigation-rct",
-        "headline": "Because of AI, endoscopists using real-time voice-guided navigation covered more of the guideline-recommended biliopancreatic scanning stations in a randomized trial of 266 patients, though procedures took longer.",
+        "id": "west-allis-notraffic-ai-signals-greenfield-delay",
+        "headline": "Because of AI signal timing, West Allis, Wisconsin says all-day vehicle delay on W. Greenfield Avenue fell 25.2%, from 23.6 to 17.6 seconds per vehicle.",
         "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/west-allis-notraffic-ai-signals-greenfield-delay"
+      },
+      {
+        "id": "pge-continuous-monitoring-center-outage-minutes",
+        "headline": "Because of machine-learning grid monitoring, PG&E says it avoided 12 million minutes of unplanned customer outages and intercepted 17 potential ignitions in 2025.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/pge-continuous-monitoring-center-outage-minutes"
+      },
+      {
+        "id": "rzero-childrens-hospital-hvac-occupancy-ai",
+        "headline": "Because of AI occupancy-based ventilation control, a US children's hospital system cut HVAC energy use by 30 percent, according to the vendor R-Zero.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/rzero-childrens-hospital-hvac-occupancy-ai"
+      },
+      {
+        "id": "thames-water-origin-orbit-satellite-leaks",
+        "headline": "Because of AI satellite leak detection, Thames Water says a 19-week trial helped find more than 800 leaks, saving an estimated 8.7 million litres of water a day.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/thames-water-origin-orbit-satellite-leaks"
+      },
+      {
+        "id": "ai-generated-forensic-images-medical-students-reasoning",
+        "headline": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic photographs, in a non-randomized comparison.",
+        "change": "changed",
+        "state": "published",
+        "url": "https://becauseofai.org/entry/ai-generated-forensic-images-medical-students-reasoning"
+      },
+      {
+        "id": "google-eedi-gemini-tutoring-star-maths-null",
+        "headline": "In a pre-registered trial of 1,179 students in 10 UK secondary schools, Gemini tutoring inside the Eedi maths platform matched expert human tutors on in-platform measures but moved standardised Star Maths scores by only +0.02 standard deviations against standard remediation.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/google-eedi-gemini-tutoring-star-maths-null"
+      },
+      {
+        "id": "jeffcom-911-ai-administrative-calls",
+        "headline": "Because of AI call handling, Jeffcom 911 says it saw a sustained 33% reduction in administrative calls reaching its dispatchers.",
+        "change": "changed",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "korea-claude-chatbot-infertility-stress",
-        "headline": "Because of AI, women in infertility treatment at one Korean clinic who used a Claude-based chatbot self-management program showed a larger fall in perceived stress than women on usual clinic care, in a small non-randomized feasibility study.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "ubc-ai-ot-initial-assessment-crossover-null",
-        "headline": "In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial assessment to a remote AI-administered one, and rated the human format as more compassionate.",
+        "id": "khanmigo-hamilton-county-remedial-math-rct",
+        "headline": "A two-year cluster randomized trial in 18 Tennessee middle schools found that remedial-math students given Khan Academy with the Khanmigo AI tutor gained 1.3 national percentile ranks per term more than control grades, a small gain the authors say resembles Khan Academy practice without AI.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
@@ -60,16 +109,86 @@
       {
         "id": "ksau-ai-caries-training-dental-students-null",
         "headline": "AI-assisted radiograph training did not significantly improve undergraduate dental students' diagnosis of proximal caries compared with conventional training, in a randomized study of 79 students in Saudi Arabia.",
-        "change": "added",
+        "change": "changed",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "lungimpact-ai-cxr-prioritisation-null",
+        "headline": "Not because of AI: prioritising abnormal chest X-rays with AI did not speed up lung cancer diagnosis across five NHS trusts in England, with median times of 44 days against 46 days.",
+        "change": "changed",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "numi-ai-math-tutoring-hamilton-county",
+        "headline": "An LLM math tutor given to middle-school students in Hamilton County, Tennessee helped them recover from mistakes and, inside a mastery workflow, scored 3.1 points higher on a delayed test of practiced material, a suggestive result.",
+        "change": "changed",
         "state": "held (ungrounded)",
+        "url": null
+      },
+      {
+        "id": "spot-tb-ai-camp-targeting-null",
+        "headline": "Sending Pakistan's mobile TB X-ray camps to sites picked by AI did not find significantly more tuberculosis per camp than sites picked by field staff, across 3,936 camps and 269,254 people screened, in the trial's primary analysis.",
+        "change": "changed",
+        "state": "published",
+        "url": "https://becauseofai.org/entry/spot-tb-ai-camp-targeting-null"
+      },
+      {
+        "id": "sumner-county-coursemojo-tcap-ela",
+        "headline": "Sumner County Schools in Tennessee says middle-school groups averaging 25 or more Coursemojo AI activities per student improved TCAP English proficiency by 3.7 percentage points, against -0.2 for groups with little or no use.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "tanzania-ai-dr-screening-rct",
+        "headline": "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.",
+        "change": "changed",
+        "state": "published",
+        "url": "https://becauseofai.org/entry/tanzania-ai-dr-screening-rct"
+      },
+      {
+        "id": "tongji-ai-nutrition-gi-surgery-rct",
+        "headline": "Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30 days after discharge, against 40.0% given standard advice.",
+        "change": "changed",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "tsm-al-llm-residents-clinical-reasoning-rct",
+        "headline": "Because of AI, orthopedic surgery residents trained with a structured, faculty-supervised large-language-model framework scored higher on clinical reasoning in an unassisted final examination than residents taught the traditional way, in a randomized trial in Shanghai.",
+        "change": "changed",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "ubc-ai-ot-initial-assessment-crossover-null",
+        "headline": "In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial assessment to a remote AI-administered one, and rated the human format as more compassionate.",
+        "change": "changed",
+        "state": "held (grade-split)",
         "url": null
       },
       {
         "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
         "headline": "Because of AI, obstetrics and gynecology residents who trained with an AI virtual-patient platform scored higher on colposcopy case analysis after one month than residents on traditional teaching alone, in a randomized trial of 60 residents at two Chinese teaching hospitals.",
-        "change": "added",
-        "state": "held (ungrounded)",
+        "change": "changed",
+        "state": "held (grade-split)",
         "url": null
+      },
+      {
+        "id": "swaasa-cough-ai-tb-andhra-pradesh",
+        "headline": "Because of AI, community health workers in Andhra Pradesh, India, screened 7,879 people by cough sound and found 11 TB cases, 4 of them in people with no symptoms.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/swaasa-cough-ai-tb-andhra-pradesh"
+      },
+      {
+        "id": "ucsd-aspire-ai-tutor-precalculus-failure-rate",
+        "headline": "UC San Diego reports the failure rate in Foundations of Precalculus fell from 35.3% in Fall 2024 to 11.4% in Fall 2025 after a redesign that built in the ASPIRE AI tutor, a preliminary before-and-after figure.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/ucsd-aspire-ai-tutor-precalculus-failure-rate"
       }
     ],
     "held_list": [
@@ -79,13 +198,6 @@
         "reason": "grade-split",
         "since": "2026-11-15",
         "detail": "evidence: drafter A, verifier could not grade."
-      },
-      {
-        "id": "ai-generated-forensic-images-medical-students-reasoning",
-        "headline": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic photographs, in a non-randomized comparison.",
-        "reason": "grade-split",
-        "since": "2026-11-13",
-        "detail": "window: drafter no grade, verifier pre."
       },
       {
         "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
@@ -116,6 +228,13 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "faa-smart-ai-airspace-rerouted-flights",
+        "headline": "Because of AI airspace routing, the US Department of Transportation says the FAA's SMART tool helped reroute nearly 180 flights, improving flight times by more than 10 minutes each.",
+        "reason": "grade-split",
+        "since": "2026-11-16",
+        "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+      },
+      {
         "id": "geisinger-ml-colorectal-outreach",
         "headline": "Because of a machine-learning model that found people overdue for bowel cancer screening, Geisinger patients who got nurse outreach were 6% more likely to have a colonoscopy within three months, and two-year mortality was 6.2% lower.",
         "reason": "grade-split",
@@ -132,9 +251,16 @@
       {
         "id": "jeffcom-911-ai-administrative-calls",
         "headline": "Because of AI call handling, Jeffcom 911 says it saw a sustained 33% reduction in administrative calls reaching its dispatchers.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "attribution: drafter bundled, verifier could not grade."
+      },
+      {
+        "id": "khanmigo-hamilton-county-remedial-math-rct",
+        "headline": "A two-year cluster randomized trial in 18 Tennessee middle schools found that remedial-math students given Khan Academy with the Khanmigo AI tutor gained 1.3 national percentile ranks per term more than control grades, a small gain the authors say resembles Khan Academy practice without AI.",
         "reason": "ungrounded",
-        "since": "2026-11-14",
-        "detail": "No receipt for reach."
+        "since": "2026-11-15",
+        "detail": "dates.achieved_start (receipt 8): unsupported, The school-year span does not establish November 2024 as the starting month.."
       },
       {
         "id": "korea-claude-chatbot-infertility-stress",
@@ -146,9 +272,9 @@
       {
         "id": "ksau-ai-caries-training-dental-students-null",
         "headline": "AI-assisted radiograph training did not significantly improve undergraduate dental students' diagnosis of proximal caries compared with conventional training, in a randomized study of 79 students in Saudi Arabia.",
-        "reason": "ungrounded",
-        "since": "2026-11-14",
-        "detail": "No receipt for headline."
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
       },
       {
         "id": "latent-ai-ecg-af-null",
@@ -159,10 +285,10 @@
       },
       {
         "id": "lungimpact-ai-cxr-prioritisation-null",
-        "headline": "Not because of AI: prioritising abnormal chest X-rays with AI did not speed up lung cancer diagnosis in five English hospitals, with median times of 44 days against 46 days.",
-        "reason": "fails-test",
-        "since": "2026-11-12",
-        "detail": "The source shows a conflict of interest the entry does not state: The paper discloses a Qure.ai travel grant and SBRI funding received in collaboration with Qure.ai, which the entry does not disclose."
+        "headline": "Not because of AI: prioritising abnormal chest X-rays with AI did not speed up lung cancer diagnosis across five NHS trusts in England, with median times of 44 days against 46 days.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier ai-vs-ai."
       },
       {
         "id": "montpellier-ai-discharge-docs-null",
@@ -172,11 +298,18 @@
         "detail": "evidence: drafter B, verifier could not grade; window: drafter pre, verifier could not grade."
       },
       {
+        "id": "moreton-bay-ai-pothole-detection-repairs",
+        "headline": "Because of AI road-defect detection on recycling trucks, City of Moreton Bay says 4,547 of the 12,896 potholes it repaired in six months were identified by AI.",
+        "reason": "grade-split",
+        "since": "2026-11-16",
+        "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing."
+      },
+      {
         "id": "numi-ai-math-tutoring-hamilton-county",
         "headline": "An LLM math tutor given to middle-school students in Hamilton County, Tennessee helped them recover from mistakes and, inside a mastery workflow, scored 3.1 points higher on a delayed test of practiced material, a suggestive result.",
         "reason": "ungrounded",
         "since": "2026-11-13",
-        "detail": "No receipt for headline."
+        "detail": "impact_number (receipt 1): contradicted, Although Section 5.5 says 3.1 percentage points, Table 9 and Appendix Tables A2 and A14 report 0.032, or 3.2 percentage points.; effect.absolute (receipt 4): contradicted, The claimed 3.1-percentage-point difference conflicts with the 3.2-percentage-point estimate in Table 9 and Appendix Tables A2 and A14.; effect.absolute (receipt 5): unsupported, The quoted phrase establishes no numeric value.; headline (receipt 10): contradicted, The headline's 3.1-point gain conflicts with the 3.2-percentage-point estimate reported in Table 9 and Appendix Tables A2 and A14.."
       },
       {
         "id": "nz-wairarapa-ai-treatment-injury",
@@ -200,32 +333,39 @@
         "detail": "source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked."
       },
       {
-        "id": "tanzania-ai-dr-screening-rct",
-        "headline": "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.",
-        "reason": "fails-test",
-        "since": "2026-11-11",
-        "detail": "The source shows a conflict of interest the entry does not state: The software was supplied free for academic use, and authors disclose commercial fees and equity; the entry omits these disclosures."
+        "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
+        "headline": "Because of AI transit signal priority, San José says it increased bus speeds by 20 percent after expanding the system to all bus routes citywide.",
+        "reason": "grade-split",
+        "since": "2026-11-16",
+        "detail": "attribution: drafter bundled, verifier could not grade."
+      },
+      {
+        "id": "sumner-county-coursemojo-tcap-ela",
+        "headline": "Sumner County Schools in Tennessee says middle-school groups averaging 25 or more Coursemojo AI activities per student improved TCAP English proficiency by 3.7 percentage points, against -0.2 for groups with little or no use.",
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
       },
       {
         "id": "tongji-ai-nutrition-gi-surgery-rct",
         "headline": "Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30 days after discharge, against 40.0% given standard advice.",
-        "reason": "ungrounded",
-        "since": "2026-11-11",
-        "detail": "reach (receipt 9): unsupported, The quote establishes 187 screened patients, not the field's 90 randomized patients.."
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier A; window: drafter no grade, verifier in."
       },
       {
         "id": "tsm-al-llm-residents-clinical-reasoning-rct",
         "headline": "Because of AI, orthopedic surgery residents trained with a structured, faculty-supervised large-language-model framework scored higher on clinical reasoning in an unassisted final examination than residents taught the traditional way, in a randomized trial in Shanghai.",
         "reason": "grade-split",
         "since": "2026-11-13",
-        "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
+        "detail": "evidence: drafter B, verifier could not grade."
       },
       {
         "id": "ubc-ai-ot-initial-assessment-crossover-null",
         "headline": "In a randomized crossover trial, 83% of 30 adults preferred a human-administered occupational therapy initial assessment to a remote AI-administered one, and rated the human format as more compassionate.",
-        "reason": "ungrounded",
-        "since": "2026-11-14",
-        "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text)."
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
       },
       {
         "id": "vastra-gotaland-brainomix-thrombectomy-times",
@@ -244,9 +384,9 @@
       {
         "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
         "headline": "Because of AI, obstetrics and gynecology residents who trained with an AI virtual-patient platform scored higher on colposcopy case analysis after one month than residents on traditional teaching alone, in a randomized trial of 60 residents at two Chinese teaching hospitals.",
-        "reason": "ungrounded",
-        "since": "2026-11-14",
-        "detail": "No receipt for headline."
+        "reason": "grade-split",
+        "since": "2026-11-15",
+        "detail": "evidence: drafter B, verifier could not grade."
       }
     ]
   },
@@ -260,28 +400,20 @@
       "record": "ai-feedback-icbt-social-anxiety-rct-null/2026-11-15.json"
     },
     {
-      "id": "ai-micro-tese-nonobstructive-azoospermia",
-      "date": "2026-11-14",
+      "id": "ai-generated-forensic-images-medical-students-reasoning",
+      "date": "2026-11-15",
       "result": "published",
       "reason": null,
-      "detail": "The source supports higher retrieval and live birth rates associated with AI assistance in a retrospective cohort, without establishing causation. All quoted numbers appear, although its stated 11.5-point live birth increase is inconsistent with 38.5% minus 26.8%, which equals 11.7 points.",
-      "record": "ai-micro-tese-nonobstructive-azoospermia/2026-11-14.json"
+      "detail": "The paper supports a 2.4-point adjusted clinical reasoning advantage in a nonrandomized comparison involving 249 allocated students, with 227 in the primary analysis. It establishes an educational association during January–July 2025, without establishing causation or transfer to clinical practice.",
+      "record": "ai-generated-forensic-images-medical-students-reasoning/2026-11-15.json"
     },
     {
-      "id": "alertcalifornia-ai-cameras-before-911",
-      "date": "2026-11-14",
+      "id": "bellevue-ai-safer-signals-near-misses",
+      "date": "2026-11-16",
       "result": "published",
       "reason": null,
-      "detail": "The article reports approximately 3,600 wildfire incidents flagged by an operational AI-enabled camera network, with more than half detected before public 911 calls. It supplies no dated observation period, isolated AI effect, or measured reduction in wildfire harm.",
-      "record": "alertcalifornia-ai-cameras-before-911/2026-11-14.json"
-    },
-    {
-      "id": "aps-pano-ai-wildfire-cameras-before-911",
-      "date": "2026-11-14",
-      "result": "published",
-      "reason": null,
-      "detail": "The article supports a utility meteorologist's statement that its AI-assisted camera system alerts it about 45 minutes before the first 911 call on average. It provides neither underlying comparative data nor dates for that average.",
-      "record": "aps-pano-ai-wildfire-cameras-before-911/2026-11-14.json"
+      "detail": "The complete consultancy blog reports more than 45% fewer near misses involving vulnerable road users following the bundled intervention. It supplies neither baseline counts nor achieved dates, so the benefit's timing and window cannot be established.",
+      "record": "bellevue-ai-safer-signals-near-misses/2026-11-16.json"
     },
     {
       "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
@@ -300,6 +432,14 @@
       "record": "chongqing-ai-boppps-cbl-neurology-interns-rct/2026-11-15.json"
     },
     {
+      "id": "coach-usa-samsara-ai-multicam-pedestrian-incidents",
+      "date": "2026-11-16",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete news article supports the operator-reported 92% incident reduction from a package of AI cameras, alerts, coaching, and safety changes. It provides neither independent verification nor dates establishing the benefit's window.",
+      "record": "coach-usa-samsara-ai-multicam-pedestrian-incidents/2026-11-16.json"
+    },
+    {
       "id": "eus-guideq-ai-navigation-rct",
       "date": "2026-11-15",
       "result": "held",
@@ -308,12 +448,36 @@
       "record": "eus-guideq-ai-navigation-rct/2026-11-15.json"
     },
     {
+      "id": "faa-smart-ai-airspace-rerouted-flights",
+      "date": "2026-11-16",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
+      "record": "faa-smart-ai-airspace-rerouted-flights/2026-11-16.json"
+    },
+    {
+      "id": "google-eedi-gemini-tutoring-star-maths-null",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The sources support a preregistered randomized classroom trial finding no clear Star Maths advantage for supervised AI tutoring, including the reported +0.02 SD estimate. They do not establish equivalence or an absence of longer-term benefit, and the registry and report give different intervention e",
+      "record": "google-eedi-gemini-tutoring-star-maths-null/2026-11-15-2.json"
+    },
+    {
       "id": "jeffcom-911-ai-administrative-calls",
-      "date": "2026-11-14",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter bundled, verifier could not grade.",
+      "record": "jeffcom-911-ai-administrative-calls/2026-11-15.json"
+    },
+    {
+      "id": "khanmigo-hamilton-county-remedial-math-rct",
+      "date": "2026-11-15",
       "result": "held",
       "reason": "ungrounded",
-      "detail": "No receipt for reach.",
-      "record": "jeffcom-911-ai-administrative-calls/2026-11-14.json"
+      "detail": "dates.achieved_start (receipt 8): unsupported, The school-year span does not establish November 2024 as the starting month..",
+      "record": "khanmigo-hamilton-county-remedial-math-rct/2026-11-15-2.json"
     },
     {
       "id": "korea-claude-chatbot-infertility-stress",
@@ -325,58 +489,208 @@
     },
     {
       "id": "ksau-ai-caries-training-dental-students-null",
-      "date": "2026-11-14",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "ksau-ai-caries-training-dental-students-null/2026-11-15.json"
+    },
+    {
+      "id": "lungimpact-ai-cxr-prioritisation-null",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier ai-vs-ai.",
+      "record": "lungimpact-ai-cxr-prioritisation-null/2026-11-15.json"
+    },
+    {
+      "id": "moreton-bay-ai-pothole-detection-repairs",
+      "date": "2026-11-16",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing.",
+      "record": "moreton-bay-ai-pothole-detection-repairs/2026-11-16.json"
+    },
+    {
+      "id": "numi-ai-math-tutoring-hamilton-county",
+      "date": "2026-11-15",
       "result": "held",
       "reason": "ungrounded",
-      "detail": "No receipt for headline.",
-      "record": "ksau-ai-caries-training-dental-students-null/2026-11-14.json"
+      "detail": "impact_number (receipt 1): contradicted, Although Section 5.5 says 3.1 percentage points, Table 9 and Appendix Tables A2 and A14 report 0.032, or 3.2 percentage points.; effect.absolute (receipt 4): contradicted, The claimed 3.1-percentage-point difference conflicts with the 3.2-percentage-point est",
+      "record": "numi-ai-math-tutoring-hamilton-county/2026-11-15.json"
+    },
+    {
+      "id": "pge-continuous-monitoring-center-outage-minutes",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The source reports 12 million avoided customer outage minutes from a programme incorporating machine learning and 17 potential ignitions intercepted in 2025. It provides neither a measured comparator nor dates for the outage-minutes benefit.",
+      "record": "pge-continuous-monitoring-center-outage-minutes/2026-11-15.json"
+    },
+    {
+      "id": "rzero-childrens-hospital-hvac-occupancy-ai",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The vendor's release supports the reported 30% HVAC energy reduction, 23,000 kWh saved, and deployment across one 521,000-square-foot hospital facility against a pre-project baseline. It provides no dates for the measured savings, so the entry does not pass all four tests.",
+      "record": "rzero-childrens-hospital-hvac-occupancy-ai/2026-11-15.json"
+    },
+    {
+      "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
+      "date": "2026-11-16",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter bundled, verifier could not grade.",
+      "record": "san-jose-lyt-ai-bus-signal-priority-citywide/2026-11-16.json"
+    },
+    {
+      "id": "spot-tb-ai-camp-targeting-null",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The sources support the reported screening totals and a nonsignificant 7% increase in the randomized intention-to-treat analysis. The 32% increase concerns selected adherent camps and does not establish an intention-to-treat benefit.",
+      "record": "spot-tb-ai-camp-targeting-null/2026-11-15.json"
+    },
+    {
+      "id": "sumner-county-coursemojo-tcap-ela",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
+      "record": "sumner-county-coursemojo-tcap-ela/2026-11-15-2.json"
+    },
+    {
+      "id": "swaasa-cough-ai-tb-andhra-pradesh",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The source supports 7,879 people screened and 11 confirmed TB cases, including four asymptomatic cases, during the stated deployment. Its descriptive historical comparison does not establish incremental benefit from AI or statistical equivalence of yields.",
+      "record": "swaasa-cough-ai-tb-andhra-pradesh/2026-11-15.json"
+    },
+    {
+      "id": "tanzania-ai-dr-screening-rct",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The randomized trial supports increased clinic attendance with the bundled AI screening pathway: 35.9% versus 18.2% within 8 weeks. It does not isolate AI's independent contribution or establish reduced sight loss.",
+      "record": "tanzania-ai-dr-screening-rct/2026-11-15.json"
+    },
+    {
+      "id": "thames-water-origin-orbit-satellite-leaks",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The source reports over 800 leaks identified during a 19-week trial and estimated savings of 8.7 million litres per day. It provides neither a comparison for that trial nor dates establishing when its benefits occurred.",
+      "record": "thames-water-origin-orbit-satellite-leaks/2026-11-15.json"
+    },
+    {
+      "id": "tongji-ai-nutrition-gi-surgery-rct",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier A; window: drafter no grade, verifier in.",
+      "record": "tongji-ai-nutrition-gi-surgery-rct/2026-11-15.json"
+    },
+    {
+      "id": "tsm-al-llm-residents-clinical-reasoning-rct",
+      "date": "2026-11-15",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "tsm-al-llm-residents-clinical-reasoning-rct/2026-11-15.json"
     },
     {
       "id": "ubc-ai-ot-initial-assessment-crossover-null",
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "result": "held",
-      "reason": "ungrounded",
-      "detail": "headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text).",
-      "record": "ubc-ai-ot-initial-assessment-crossover-null/2026-11-14.json"
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "ubc-ai-ot-initial-assessment-crossover-null/2026-11-15.json"
+    },
+    {
+      "id": "ucsd-aspire-ai-tutor-precalculus-failure-rate",
+      "date": "2026-11-15",
+      "result": "published",
+      "reason": null,
+      "detail": "The university news article supports the preliminary decline from 35.3% to 11.4% following a course redesign that included ASPIRE, and testing across 12 courses involving more than 2,200 students. It does not isolate the tutor's contribution, provide the precalculus sample size, or establish precise",
+      "record": "ucsd-aspire-ai-tutor-precalculus-failure-rate/2026-11-15.json"
+    },
+    {
+      "id": "west-allis-notraffic-ai-signals-greenfield-delay",
+      "date": "2026-11-16",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete city press release supports the reported delay figures and deployment across twelve intersections through an uncontrolled before-and-after comparison. It does not establish measurement dates, independent verification, or the AI's contribution separately from the deployment package.",
+      "record": "west-allis-notraffic-ai-signals-greenfield-delay/2026-11-16.json"
     },
     {
       "id": "yan-ai-virtual-patient-colposcopy-residents-rct",
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for headline.",
-      "record": "yan-ai-virtual-patient-colposcopy-residents-rct/2026-11-14.json"
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "yan-ai-virtual-patient-colposcopy-residents-rct/2026-11-15.json"
     }
   ],
   "announced": [
     {
-      "id": "mgb-neurology-portal-message-routing",
-      "date": "2026-11-13",
-      "url": "https://becauseofai.org/entry/mgb-neurology-portal-message-routing"
-    },
-    {
       "id": "ai-micro-tese-nonobstructive-azoospermia",
       "date": "2026-11-14",
       "url": "https://becauseofai.org/entry/ai-micro-tese-nonobstructive-azoospermia"
+    },
+    {
+      "id": "ai-generated-forensic-images-medical-students-reasoning",
+      "date": "2026-11-15",
+      "url": "https://becauseofai.org/entry/ai-generated-forensic-images-medical-students-reasoning"
+    },
+    {
+      "id": "tanzania-ai-dr-screening-rct",
+      "date": "2026-11-15",
+      "url": "https://becauseofai.org/entry/tanzania-ai-dr-screening-rct"
     }
   ],
   "leads_added": [
-    "Adaptive math practice and teacher data use, 440 schools in Tashkent, Uzbekistan, randomized. [AEA 19200](https://www.socialscienceregistry.org/trials/19200). In development (ends 2026-12-31). Missing: results, dates, effects. Watch.",
-    "AI decision support for public grant evaluators in Romania. [AEA 19908](https://www.socialscienceregistry.org/trials/19908). In development to 2029; protocol to watch.",
-    "Echo chambers / echo machines, LLM conversation and belief certainty. [PsyArXiv](https://osf.io/preprints/psyarxiv/7et5g_v3/). Preprint; not read; likely lab experiment on belief, not a benefit to people. Missing: whether any real-world benefit is measured.",
-    "Still open: SPOT-TB Lancet Global Health version, PARTNER (ISRCTN15732844), AI-NETRA Pune, CT cystic renal masses (EClinicalMedicine), all logged earlier and unreadable.",
-    "Skipped: HerzMobil heart failure telemonitoring (read: nurse-reviewed app, no AI), pharma-ads-and-chatbot study, PTSD prediction (model accuracy), market and opinion pieces, AEA surveys, protocols, reviews."
+    "KITE-CRM, CT AI for cystic renal masses, randomized implementation of 5,869 adults at Changhai Hospital, Nov 2025–Feb 2026 (ChiCTR2500112290). [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Benign treatment 28/2934 vs 104/2935 overall, but the AI-evaluable cystic subgroup was not significant (5/29 vs 19/56). Missing: full text, why treated counts differ (171 vs 258), and whether the overall gain came from lesions the AI never read.",
+    "AI vs teacher feedback on undergraduate essays, three-arm RCT, 312 students, Guangzhou, Sept 2025. [Frontiers in Psychology](https://doi.org/10.3389/fpsyg.2026.1918748). Equal essay gains (d 0.60 vs 0.59 over no feedback), lower motivation with AI. Weak: not preregistered, one cycle, pre-window.",
+    "Suspected skin cancer referral rates after a pre-referral AI tool, real-world. [BJD](https://doi.org/10.1093/bjd/ljag496). Reader got HTTP 403, not read; may relate to `nhs-derm-skin-cancer`. Needs the full text, achieved dates, and comparison.",
+    "CT-based AI risk support for cystic renal masses, with a randomized component. [EClinicalMedicine](https://doi.org/10.1016/j.eclinm.2026.104279). Already logged earlier and unreadable; still open.",
+    "Reducing benign breast biopsies in women 35 and under with a clinician-AI triage strategy. [Diagnostics](https://doi.org/10.3390/diagnostics16213491). Not read; likely retrospective. Check whether any patients were actually triaged.",
+    "Skipped: AEA registrations in development, reviews, benchmarks, model-accuracy papers, pharma-ads chatbot study, news and market pieces."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 5,
     "posts": [
       {
+        "id": "2122071653521764651",
+        "url": "https://x.com/bcuz_of_ai/status/2122071653521764651",
+        "text": "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.\n\nhttps://t.co/0wVbloJUpU https://t.co/IaZEQUVm3Y",
+        "created_at": "2026-11-15T20:58:03.000Z",
+        "impressions": 14,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2122071476388217098",
+        "url": "https://x.com/bcuz_of_ai/status/2122071476388217098",
+        "text": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic…\n\nhttps://t.co/PEQ02br6n1 https://t.co/Awim0i4JTs",
+        "created_at": "2026-11-15T20:57:20.000Z",
+        "impressions": 36,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
         "id": "2121703047189422405",
         "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
         "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
         "created_at": "2026-11-14T20:33:20.000Z",
-        "impressions": 19,
+        "impressions": 24,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
@@ -418,57 +732,45 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2119525681491005525",
-        "url": "https://x.com/bcuz_of_ai/status/2119525681491005525",
-        "text": "Because of AI, specialist consultations at two hospitals in western China took 3.14 minutes instead of 4.41 when patients first gave their history to a chatbot, and patients rated communication easier.\n\nhttps://t.co/lGILQVBv9r https://t.co/gCIAIN55fp",
-        "created_at": "2026-11-08T20:21:16.000Z",
-        "impressions": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-14",
-    "pageviews": 64,
-    "visits": 37,
+    "day": "2026-11-15",
+    "pageviews": 41,
+    "visits": 27,
     "top_paths": [
       {
         "path": "/",
-        "views": 44
-      },
-      {
-        "path": "/not-because-of-ai",
-        "views": 4
-      },
-      {
-        "path": "/entry/hurricane-melissa-2025",
-        "views": 4
-      },
-      {
-        "path": "/not-yet",
-        "views": 3
-      },
-      {
-        "path": "/entry/waymo-injury-crashes",
-        "views": 2
-      },
-      {
-        "path": "/entry/ucd-als-speech-bci",
-        "views": 2
+        "views": 29
       },
       {
         "path": "/changelog",
+        "views": 2
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 2
+      },
+      {
+        "path": "/method",
+        "views": 2
+      },
+      {
+        "path": "/entry/ai-infocare-lay-summaries-rct",
         "views": 1
       },
       {
-        "path": "/about",
+        "path": "/entry/ethiopia-tb-ai-cxr",
+        "views": 1
+      },
+      {
+        "path": "/not-because-of-ai",
+        "views": 1
+      },
+      {
+        "path": "/entry/fortell-ai-hearing-aids",
         "views": 1
       }
     ]
