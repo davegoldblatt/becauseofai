@@ -75,3 +75,24 @@ receipts:
     quote: This cluster-randomized controlled trial was conducted from January 2025 to June 2025
     locator: Materials and Methods, Study design and settings
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: e9387a9a094fa55049cd060a3ca02d3e128814740f5f93885cf526d6a23d17ec
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: odisha-ai-chatbot-oral-health-education-cluster-rct/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "evidence: drafter B, verifier could not grade."
+  record: odisha-ai-chatbot-oral-health-education-cluster-rct/2026-11-16.json

@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-reconstruction-ultra-low-dose-ctpa-rct",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "da96ad23be68d3fde1aa7704384ab86a6f0f851423749c4ca0e0299b4e882ce6",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.ejrad.2026.113275",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-16T19:57:39.389Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.ejrad.2026.113275%22&format=json&resultType=core",
+      "sha256": "77240c73d957e6ad8fcd1ff0521e5dc77ece93050d95874ced1850fce148a708",
+      "chars": 1452,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The randomized comparison tests a lower-voltage, lower-contrast protocol incorporating AI reconstruction against a standard protocol, so the dose reduction belongs to the package.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract provides no study dates, and publication does not establish when benefits occurred."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract names Clear Infinity but discloses no vendor funding, author ties, or other conflict; the entry acknowledges that disclosures were unavailable."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The benefit dates cannot be established from the abstract."
+      },
+      "summary": "The abstract supports the reported dose reduction in 70 randomized patients receiving a protocol incorporating AI reconstruction. It provides no study dates or evidence of a preregistered primary endpoint, preventing a window grade or evidence grade A; the other evidence categories do not fit this randomized study."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12506,
+      "output": 609,
+      "total": 13115,
+      "cached": 0,
+      "reasoning": 129
+    },
+    "duration_ms": 15920
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

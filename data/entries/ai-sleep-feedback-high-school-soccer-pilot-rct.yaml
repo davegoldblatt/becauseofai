@@ -70,3 +70,24 @@ receipts:
     quote: pilot randomized controlled trial among 25 high school female soccer players from a single team
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: d9f950e9e50f3860ffbf344350d61e5598164548c9f12d934a0f977a78cb1281
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: ai-sleep-feedback-high-school-soccer-pilot-rct/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier ai-vs-ai; window: drafter no grade, verifier pre."
+  record: ai-sleep-feedback-high-school-soccer-pilot-rct/2026-11-16.json

@@ -78,3 +78,24 @@ receipts:
     quote: We conducted a parallel-group RCT in Japan between November 30 and December 27, 2024.
     locator: Methods, Study Design and Participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: b8ac6e304f89c2515d10db663f208e38ada1e390d8e08cc2c885b0fd20b3532e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: hpv-chatbot-japan-caregivers-literacy-rct/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "evidence: drafter A, verifier could not grade."
+  record: hpv-chatbot-japan-caregivers-literacy-rct/2026-11-16.json

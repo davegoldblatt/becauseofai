@@ -66,3 +66,24 @@ receipts:
     quote: Group B reduced effective dose by 84.93 % (0.71 ± 0.09 vs. 4.71 ± 1.13 mSv
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: da96ad23be68d3fde1aa7704384ab86a6f0f851423749c4ca0e0299b4e882ce6
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: ai-reconstruction-ultra-low-dose-ctpa-rct/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ai-reconstruction-ultra-low-dose-ctpa-rct/2026-11-16.json
