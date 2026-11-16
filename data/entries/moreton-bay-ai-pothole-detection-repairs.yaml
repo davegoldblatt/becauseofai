@@ -1,0 +1,101 @@
+id: moreton-bay-ai-pothole-detection-repairs
+section: because
+rank: 56
+headline: >-
+  Because of AI road-defect detection on recycling trucks, City of Moreton Bay says
+  4,547 of the 12,896 potholes it repaired in six months were identified by AI.
+impact: "4,547 potholes found by AI, repaired"
+impact_number: "4,547"
+impact_label: "potholes found by AI and repaired in six months, council says"
+summary: >-
+  The City of Moreton Bay in Queensland reports that AI analysing dashcam video from its
+  recycling trucks identified 4,547 of the 12,896 potholes it filled in the past six
+  months, and 48,282 since 2020, with jobs ranked by severity.
+caveat: >-
+  The council's own media release. It counts potholes found by AI, not how many would
+  have been missed otherwise or how much faster repairs happened, and the six-month
+  period is stated relative to the release date.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: null
+  absolute: "4,547 of 12,896 potholes repaired in six months were identified by AI; 48,282 detected since 2020"
+reach: "City of Moreton Bay, Queensland: more than 3,800 km of council roads"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-17
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "City of Moreton Bay media release: Extensive pothole repairs underway with a little help from AI (17 February 2026)"
+    url: https://www.moretonbay.qld.gov.au/News/Media/pothole-works-in-City-of-Moreton-Bay
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the City of Moreton Bay's own media release about its own programme; no
+  independent audit of the counts.
+what_would_change: "A comparison of time from defect to repair, or defects missed, between AI-found and resident-reported potholes."
+notes: >-
+  verify: the release says "within the last six months" without calendar dates, so achieved
+  dates and the window grade are left empty. The announcement is from February 2026,
+  outside the slice window.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because AI flags the defects but council crews do the repairs, and the release shows no comparison with what inspection would have found without AI.
+receipts:
+  - field: headline
+    quote: From this total, 4,547 potholes were identified via artificial intelligence (AI) technology
+    locator: Body, third paragraph
+    source: 0
+  - field: headline
+    quote: 12,896 potholes filled and repaired within the last six months
+    locator: Body, third paragraph
+    source: 0
+  - field: impact
+    quote: From this total, 4,547 potholes were identified via artificial intelligence (AI) technology
+    locator: Body, third paragraph
+    source: 0
+  - field: impact_number
+    quote: From this total, 4,547 potholes were identified via artificial intelligence (AI) technology
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.absolute
+    quote: From this total, 4,547 potholes were identified via artificial intelligence (AI) technology, which has helped to detect 48,282 potholes since 2020.
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.absolute
+    quote: 12,896 potholes filled and repaired within the last six months
+    locator: Body, third paragraph
+    source: 0
+  - field: reach
+    quote: more than 3,800km of roads across City of Moreton Bay
+    locator: Body, Mayor Flannery quotation
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: cd82a93058e4828bd1c9b2eb5cf9d6bacc7417fdbc8a38fb3a493af1e21619ba
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: moreton-bay-ai-pothole-detection-repairs/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing."
+  record: moreton-bay-ai-pothole-detection-repairs/2026-11-16.json

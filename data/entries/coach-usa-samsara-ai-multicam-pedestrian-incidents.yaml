@@ -1,0 +1,91 @@
+id: coach-usa-samsara-ai-multicam-pedestrian-incidents
+section: because
+rank: 58
+headline: >-
+  Because of AI blind-spot cameras and coaching, Coach USA reports a 92% reduction in
+  preventable incidents involving pedestrians, bicyclists and motorcyclists.
+impact: "92% fewer preventable incidents"
+impact_number: "92%"
+impact_label: "fewer preventable pedestrian, bicyclist and motorcyclist incidents, operator says"
+summary: >-
+  Coach USA, a North American motorcoach operator, told Metro Magazine that since it
+  fitted Samsara AI dash cams and a multi-camera system that alerts drivers to people in
+  blind spots, preventable incidents involving pedestrians, bicyclists and motorcyclists
+  fell 92% and claim costs fell 75%.
+caveat: >-
+  The operator's own figures, relayed in a trade-magazine feature that quotes the vendor.
+  No baseline counts, period, or comparison fleet are given, and the gain is credited to
+  the cameras together with video coaching and a changed safety programme.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: "92% reduction in preventable incidents involving pedestrians, bicyclists and motorcyclists"
+  absolute: null
+reach: "Coach USA's motorcoach fleet"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-03-30
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Metro Magazine: How Coach USA Is Using AI to Prevent Bus Accidents (30 March 2026)"
+    url: https://www.metro-magazine.com/articles/how-coach-usa-is-using-ai-to-prevent-bus-accidents
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Coach USA's own report about its own fleet, in a feature that quotes
+  Coach USA executives and a Samsara vice president; Samsara sells the cameras. No
+  independent audit.
+what_would_change: "Incident counts for the same fleet before and after, over dated periods, from insurer or regulator records."
+notes: >-
+  verify: the article gives no dates or baseline counts for the 92% figure, so achieved
+  dates and the window grade are left empty. The article says the technology alone does
+  not create the improvement; coaching and culture change are credited too. The article is
+  from March 2026, outside the slice window.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because the operator credits the AI cameras together with driver coaching and a shift to leading-indicator safety management, with no comparison fleet.
+receipts:
+  - field: headline
+    quote: the company reports a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists
+    locator: Body, paragraph beginning "By deploying Samsara's AI Multicam"
+    source: 0
+  - field: impact
+    quote: a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists
+    locator: Body, paragraph beginning "By deploying Samsara's AI Multicam"
+    source: 0
+  - field: impact_number
+    quote: a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists
+    locator: Body, paragraph beginning "By deploying Samsara's AI Multicam"
+    source: 0
+  - field: effect.relative
+    quote: a 92% reduction in preventable incidents involving pedestrians, bicyclists, and motorcyclists
+    locator: Body, paragraph beginning "By deploying Samsara's AI Multicam"
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 383acad34e1c0c43de0a7441275877df92fc753f91ea40401e9e46fdcdd518eb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: pass
+  record: coach-usa-samsara-ai-multicam-pedestrian-incidents/2026-11-16.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The reduction implies a comparison with incidents before implementation, but no calendar dates establish when the benefit occurred.).

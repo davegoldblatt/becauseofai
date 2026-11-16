@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "west-allis-notraffic-ai-signals-greenfield-delay",
+  "date": "2026-11-16",
+  "as_of": "2026-11-16",
+  "entry_sha256": "79da8fef92168d497a09d675b77b32f2213215b883b7c2acb71812962a07d1b9",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-16"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://urbanmilwaukee.com/pressrelease/city-of-west-allis-implements-ai-based-traffic-optimization-to-manage-i%e2%80%9194-east%e2%80%91west-reconstruction-impacts/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-16T08:41:19.613Z",
+      "final_url": "https://urbanmilwaukee.com/pressrelease/city-of-west-allis-implements-ai-based-traffic-optimization-to-manage-i%e2%80%9194-east%e2%80%91west-reconstruction-impacts/",
+      "sha256": "42ef739064f11541c5442ee056c2851d9354822d5e794254f0bc57e2e4f7e1b8",
+      "chars": 9534,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A 25.2% reduction in all",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "decreasing from 23.6 seconds to 17.6 seconds per vehicle",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "A 25.2% reduction in all",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "A 25.2% reduction in all",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "A 25.2% reduction in all",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "decreasing from 23.6 seconds to 17.6 seconds per vehicle",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "the NoTraffic AI Mobility Platform across twelve signalized intersections",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-16",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The city compares corridor delay before and after deploying a package combining video and radar detection with AI signal optimization.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the release gives no dates for implementation or the before-and-after measurement periods."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The city reports on its own project with named commercial vendor partners; the entry discloses these interests and the lack of an independent audit."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because publication timing does not establish when the measured benefit occurred."
+      },
+      "summary": "The complete city press release supports the reported delay figures and deployment across twelve intersections through an uncontrolled before-and-after comparison. It does not establish measurement dates, independent verification, or the AI's contribution separately from the deployment package."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14273,
+      "output": 597,
+      "total": 14870,
+      "cached": 0,
+      "reasoning": 83
+    },
+    "duration_ms": 17756
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete city press release supports the reported delay figures and deployment across twelve intersections through an uncontrolled before-and-after comparison. It does not establish measurement dates, independent verification, or the AI's contribution separately from the deployment package.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "Not dated yet (The dated test fails because publication timing does not establish when the measured benefit occurred.)."
+    ]
+  }
+}

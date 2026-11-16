@@ -1,0 +1,95 @@
+id: faa-smart-ai-airspace-rerouted-flights
+section: because
+rank: 57
+headline: >-
+  Because of AI airspace routing, the US Department of Transportation says the FAA's
+  SMART tool helped reroute nearly 180 flights, improving flight times by more than
+  10 minutes each.
+impact: "10+ min saved per rerouted flight"
+impact_number: "10+ min"
+impact_label: "better flight time per rerouted flight, nearly 180 flights, DOT says"
+summary: >-
+  The Department of Transportation says the FAA's SMART platform, which pools about 200
+  data streams to recommend routes that controllers can accept, helped reroute nearly 180
+  flights, improving flight times by more than 10 minutes and saving nearly 80 gallons of
+  fuel on average.
+caveat: >-
+  The department's own statement, relayed by a newspaper. It reports an average over the
+  flights SMART helped, not a measured reduction in delays across the system; the
+  department gave no dates for the figures or the flights.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: null
+  absolute: "Flight times improved by more than 10 minutes and nearly 80 gallons of fuel saved per rerouted flight, on average"
+reach: "Nearly 180 rerouted flights across the US since the September 2026 rollout"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-11-09
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "GovTech / Dallas Morning News: Feds Say AI Software Reducing Dallas Flight Delays (9 November 2026)"
+    url: https://www.govtech.com/transportation/feds-say-ai-software-reducing-dallas-flight-delays
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are the US Department of Transportation's and FAA's own statements about
+  their own programme, relayed by a newspaper; no independent audit. Controllers accept
+  or decline each recommendation.
+what_would_change: "An FAA or independent evaluation of system-wide delay and fuel with and without SMART over dated periods."
+notes: >-
+  verify: the article says SMART was first deployed in September and gives no period for
+  the 180-flight figure, so achieved dates and the window grade are left empty.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because the figure is the department's average for flights it chose to describe, controllers decide whether to accept each recommendation, and no comparison group is shown.
+receipts:
+  - field: headline
+    quote: helped reroute nearly 180 flights across the U.S., improving flight times by more than 10 minutes
+    locator: Body, paragraph beginning "SMART works by centralizing 200 data streams" (final sentence)
+    source: 0
+  - field: impact
+    quote: improving flight times by more than 10 minutes and saving nearly 80 gallons of fuel on average
+    locator: Body, final sentence of the paragraph on data streams
+    source: 0
+  - field: impact_number
+    quote: improving flight times by more than 10 minutes
+    locator: Body, final sentence of the paragraph on data streams
+    source: 0
+  - field: effect.absolute
+    quote: improving flight times by more than 10 minutes and saving nearly 80 gallons of fuel on average
+    locator: Body, final sentence of the paragraph on data streams
+    source: 0
+  - field: reach
+    quote: helped reroute nearly 180 flights across the U.S.
+    locator: Body, final sentence of the paragraph on data streams
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-16
+  content: 3f82fd0c35e3bf2825a2c6c02e3f29c3d20cd4a140e05f06cea2ab5776bd019d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-16
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-16
+    verdict: fail
+  record: faa-smart-ai-airspace-rerouted-flights/2026-11-16.json
+held:
+  reason: grade-split
+  since: 2026-11-16
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+  record: faa-smart-ai-airspace-rerouted-flights/2026-11-16.json
