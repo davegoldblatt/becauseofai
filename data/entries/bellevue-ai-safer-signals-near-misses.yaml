@@ -1,0 +1,70 @@
+id: bellevue-ai-safer-signals-near-misses
+section: because
+rank: 59
+headline: >-
+  Because of AI-supported intersection sensing, Bellevue, Washington's Safer Signals
+  pilot cut near misses involving vulnerable road users by more than 45%.
+impact: "45%+ fewer near misses"
+impact_number: "45%+"
+impact_label: "fewer near misses involving pedestrians and cyclists in Bellevue's pilot"
+summary: >-
+  A Fehr & Peers account of Bellevue's Safer Signals pilot says LiDAR and video sensors
+  with edge computing in signal cabinets track pedestrians, cyclists and vehicles, and
+  extend the walk phase or switch on a No Turn on Red sign when a conflict is imminent;
+  near misses involving vulnerable road users dropped by more than 45%.
+caveat: >-
+  A consultancy's blog post describing a city pilot, not the city's own report. It gives
+  no baseline counts, number of intersections or dates, and says the sensors sometimes
+  mistook shadows, glare or tyres for pedestrians.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Near misses involving vulnerable road users with the pilot interventions versus without them (baseline not stated in the source)"
+effect:
+  relative: "Near misses involving vulnerable road users dropped by more than 45%"
+  absolute: null
+reach: "Signalized intersections in Bellevue, Washington, where the Safer Signals pilot runs"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-20
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Fehr & Peers: Understanding AI's Role in Transportation Safety (20 August 2026)"
+    url: https://www.fehrandpeers.com/blog/understanding-ais-role-in-transportation-safety/page/2/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a consulting firm's blog post whose named contributors include City of
+  Bellevue staff, describing the city's own pilot; no independent evaluation of the
+  near-miss counts is cited.
+what_would_change: "The City's published before-and-after near-miss counts, with periods and intersections, or an independent evaluation."
+notes: >-
+  verify: the post gives no measurement dates, baseline counts or number of intersections,
+  so achieved dates and the window grade are left empty. The city's page
+  bellevuewa.gov/safer-signals is cited but was not read.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because the near-miss drop comes from sensing plus signal interventions in a pilot with no stated comparison sites or periods, so the AI's part cannot be separated.
+receipts:
+  - field: headline
+    quote: VRU-involved near misses dropped by more than 45%.
+    locator: Section "Responding to Risk in Real Time", Bellevue, WA, paragraph after the video caption
+    source: 0
+  - field: impact
+    quote: VRU-involved near misses dropped by more than 45%.
+    locator: Section "Responding to Risk in Real Time", Bellevue, WA
+    source: 0
+  - field: impact_number
+    quote: VRU-involved near misses dropped by more than 45%.
+    locator: Section "Responding to Risk in Real Time", Bellevue, WA
+    source: 0
+  - field: effect.relative
+    quote: VRU-involved near misses dropped by more than 45%.
+    locator: Section "Responding to Risk in Real Time", Bellevue, WA
+    source: 0

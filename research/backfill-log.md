@@ -239,3 +239,23 @@ Rejected or not drafted:
 - SmartTerra Pune (YourStory) and CIM case studies: NOT READ (403 or stub).
 - Google DeepMind data-centre cooling, Xylem/Esri, CivilSense, Gridware/PG&E CAIDI, Schneider study, Southern Water: old, undated, vendor-only or accuracy-only; not read.
 - Short of the floor: 12 searches and 9 pages read this run; 3 entries.
+
+## 2026-11-16, slice 11: announcements: roads, vehicles, rail, and aviation, 2026-08-12 to 2026-11-11
+
+Drafted (6, all speculative-level; organisations' own figures):
+- west-allis-notraffic-ai-signals-greenfield-delay: city release, AI signals on 12 intersections, all-day delay 23.6 to 17.6 s (-25.2%); no dates.
+- san-jose-lyt-ai-bus-signal-priority-citywide: mayor's release (Feb 2026), bus speeds up 20% citywide; no baseline.
+- moreton-bay-ai-pothole-detection-repairs: council release (Feb 2026), 4,547 of 12,896 repaired potholes found by AI.
+- faa-smart-ai-airspace-rerouted-flights: DOT figures via Dallas Morning News, about 180 flights, more than 10 minutes each.
+- coach-usa-samsara-ai-multicam-pedestrian-incidents: Metro Magazine (Mar 2026), 92% fewer preventable pedestrian/cyclist incidents; bundled with coaching.
+- bellevue-ai-safer-signals-near-misses: Fehr & Peers blog, near misses involving vulnerable road users down more than 45%.
+
+Rejected or not drafted:
+- Waymo (already an entry waymo-injury-crashes; IIHS 68% study is 2021 to 2024 and not read); Tesla robotaxi (no independent benefit); Zoox, Baidu, Pony (no safety figures).
+- Dubai RTA signals (Gulf News, Sept 2025) and Dubai Metro ARIIS (June 2025): outside the window by a year; ARIIS figures are inspection effort, not people.
+- Geotab/Giant Tiger 74% (safety programme, AI not isolated); Samsara 73% report and Motive, Nauto, Lytx: vendor aggregates, undated or not read.
+- Assaia (NST Aug 2026, report Nov 2025): vendor-reported turnaround figures, JFK five minutes; not drafted. MWAA Queue Hub: June 2025.
+- Tucson NoTraffic (KGUN): vendor estimates "up to 46%", no dates; Missouri City, ITS KRS, NoTraffic page: 404 or 403.
+- Victoria RoughSense: detection counts only. Sussex AI cameras: 403, offences not outcomes. Network Rail, DB, SNCF, MTA, WMATA, Delhi Metro: forecasts or no figure.
+- San Bernardino Red Protect (same blog): radar and camera detection, AI role not clear.
+- Short of the floor on entries only: 20 searches and 20 pages read; 6 entries.

@@ -1,0 +1,66 @@
+id: san-jose-lyt-ai-bus-signal-priority-citywide
+section: because
+rank: 55
+headline: >-
+  Because of AI transit signal priority, San José says it increased bus speeds by
+  20 percent after expanding the system to all bus routes citywide.
+impact: "20% faster buses"
+impact_number: "20%"
+impact_label: "faster bus speeds citywide after AI signal priority, city says"
+summary: >-
+  San José's mayor's office announced that an AI-enabled transit signal prioritization
+  system from LYT, which uses real-time traffic data to give buses green lights, raised
+  bus speeds by 20 percent once it covered every bus route in the city.
+caveat: >-
+  The mayor's own press release about a vendor's product. It gives no baseline, no
+  measurement period, and no comparison, so the 20 percent figure cannot be checked.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: "Bus speeds up 20 percent"
+  absolute: null
+reach: "All San José bus routes, run with the Valley Transportation Authority"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-06
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "Office of Mayor Matt Mahan: City of San José Announces 20% Faster Bus Trips Citywide Using AI (press release, 6 February 2026)"
+    url: https://www.sjmayormatt.com/news-room/sj26-sponsors-3gzt8-7gw2z-9xlyk
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the City of San José's own press release about its own programme and its
+  vendor LYT's product, which quotes LYT's CEO; no independent evaluation.
+what_would_change: "Published before-and-after bus speeds on the same routes over dated periods, ideally from the transit agency's own data."
+notes: >-
+  verify: the release gives no measurement period, so achieved dates and the window grade
+  are left empty. The announcement is from February 2026, outside the slice window.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because the speed gain is a citywide figure with no stated baseline or comparison, so the AI signal system cannot be separated from other changes to bus service.
+receipts:
+  - field: headline
+    quote: the City has increased bus speeds by 20 percent by expanding an AI-powered transit technology to all bus routes citywide
+    locator: Body, first paragraph
+    source: 0
+  - field: impact
+    quote: the City has increased bus speeds by 20 percent
+    locator: Body, first paragraph
+    source: 0
+  - field: impact_number
+    quote: the City has increased bus speeds by 20 percent
+    locator: Body, first paragraph
+    source: 0
+  - field: effect.relative
+    quote: the City has increased bus speeds by 20 percent
+    locator: Body, first paragraph
+    source: 0

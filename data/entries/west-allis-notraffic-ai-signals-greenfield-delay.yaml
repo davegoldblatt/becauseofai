@@ -1,0 +1,81 @@
+id: west-allis-notraffic-ai-signals-greenfield-delay
+section: because
+rank: 54
+headline: >-
+  Because of AI signal timing, West Allis, Wisconsin says all-day vehicle delay on
+  W. Greenfield Avenue fell 25.2%, from 23.6 to 17.6 seconds per vehicle.
+impact: "25.2% less vehicle delay"
+impact_number: "25.2%"
+impact_label: "less all-day vehicle delay on a twelve-signal corridor, city says"
+summary: >-
+  The City of West Allis reports that an AI traffic-detection and signal-optimization
+  platform on twelve signalized intersections along W. Greenfield Avenue, installed to
+  absorb traffic diverted by the I-94 reconstruction, cut average all-day delay per
+  vehicle from 23.6 to 17.6 seconds.
+caveat: >-
+  The city's own press release about a vendor's product. It is a before-and-after
+  comparison with no control corridor, during a freeway reconstruction that changed
+  traffic, and the release gives no dates for the before and after periods.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Average delay per vehicle on the corridor before and after the AI signal platform was implemented"
+effect:
+  relative: "25.2% reduction in all-day vehicle delay"
+  absolute: "Average delay fell from 23.6 seconds to 17.6 seconds per vehicle"
+reach: "Twelve signalized intersections on W. Greenfield Avenue (WIS 59), West Allis, Wisconsin"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-18
+  added: 2026-11-16
+  updated: 2026-11-16
+sources:
+  - title: "City of West Allis press release: City of West Allis Implements AI-Based Traffic Optimization to Manage I-94 East-West Reconstruction Impacts (Urban Milwaukee, 18 September 2026)"
+    url: https://urbanmilwaukee.com/pressrelease/city-of-west-allis-implements-ai-based-traffic-optimization-to-manage-i%e2%80%9194-east%e2%80%91west-reconstruction-impacts/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the City of West Allis's own press release about its own project and
+  its vendor NoTraffic's product (with TAPCO and WisDOT funding); no independent audit
+  of the before-and-after figures.
+what_would_change: "An independent before-and-after study with dated periods and a comparison corridor without the AI platform."
+notes: >-
+  verify: the release gives no calendar dates for the before or after periods ("Following
+  implementation"), so achieved dates and the window grade are left empty.
+history:
+  - date: 2026-11-16
+    note: "Added by the backfill run."
+rationale: Bundled because the delay figure is a before-and-after on one corridor during a freeway reconstruction with no comparison corridor, so the AI's share cannot be separated from changed traffic.
+receipts:
+  - field: headline
+    quote: A 25.2% reduction in all
+    locator: Body, "Proven Results in Safety, Efficiency, and Economic Value" bullet list, first bullet
+    source: 0
+  - field: headline
+    quote: decreasing from 23.6 seconds to 17.6 seconds per vehicle
+    locator: Body, "Proven Results" bullet list, first bullet
+    source: 0
+  - field: impact
+    quote: A 25.2% reduction in all
+    locator: Body, "Proven Results" bullet list, first bullet
+    source: 0
+  - field: impact_number
+    quote: A 25.2% reduction in all
+    locator: Body, "Proven Results" bullet list, first bullet
+    source: 0
+  - field: effect.relative
+    quote: A 25.2% reduction in all
+    locator: Body, "Proven Results" bullet list, first bullet
+    source: 0
+  - field: effect.absolute
+    quote: decreasing from 23.6 seconds to 17.6 seconds per vehicle
+    locator: Body, "Proven Results" bullet list, first bullet
+    source: 0
+  - field: reach
+    quote: the NoTraffic AI Mobility Platform across twelve signalized intersections
+    locator: Body, "A Data-Driven Solution" section, first paragraph
+    source: 0
