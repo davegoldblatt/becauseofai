@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "thinksono-ai-guided-dvt-ultrasound-non-expert-triage",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "99a858a0a0149f60cdaa274f8c9761b71b42e4fb3208ac1155f8387205415701",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.07.16.26356882v2",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-17T04:56:10.218Z",
+      "final_url": "https://www.medrxiv.org/content/10.64898/2026.07.16.26356882v2",
+      "sha256": "cf0967d0c1e3d9cab875908f3d72b34fcca85218715e0a550d9ff2f05f01fd82",
+      "chars": 11925,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "triage sensitivity was 92.86%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "triage sensitivity was 92.86%, triage specificity 39.12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Of 634 recruited subjects, 594 subjects (700 scans) with 67 DVTs were analyzed.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison tests AI-guided acquisition by non-trained operators plus remote clinician interpretation against specialist ultrasound, without separating AI from the other workflow changes.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the supplied abstract gives no study dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "ThinkSono funding and author employment, equity, consultancy and option holdings are disclosed in both."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Actual patients underwent comparative scans, but study dates cannot be established; specialist scans avoided were estimated rather than observed."
+      },
+      "summary": "The abstract supports the reported diagnostic performance and estimated 35.32% potential reduction in specialist scans among actual patients. It does not establish realized scan avoidance, isolate AI's contribution, or date the study."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14774,
+      "output": 647,
+      "total": 15421,
+      "cached": 0,
+      "reasoning": 139
+    },
+    "duration_ms": 16524
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The abstract supports the reported diagnostic performance and estimated 35.32% potential reduction in specialist scans among actual patients. It does not establish realized scan avoidance, isolate AI's contribution, or date the study.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "Not dated yet (Actual patients underwent comparative scans, but study dates cannot be established; specialist scans avoided were estimated rather than observed.).",
+      "The two checkers disagreed on attribution: the drafter said only-path and the verifier said bundled. The entry shows the drafter's grade, only-path; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "only-path",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}

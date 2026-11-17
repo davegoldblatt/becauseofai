@@ -106,3 +106,22 @@ receipts:
     quote: '"date": "2025-04-15",'
     locator: Status module, completionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 66cec198c9e24e15c045bb00efc4ef740bb0a69aaf486aa4e04280d313fb02d3
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: pass
+  record: speac-lumen-voice-ai-coach-depression-anxiety-rct/2026-11-17.json
+  confidence: reasonable
+  relaxed:
+    - "The two checkers disagreed on evidence: the drafter said B and the verifier said A. The entry shows the more cautious of the two, B."

@@ -78,3 +78,24 @@ receipts:
     quote: from October 2025 to February 2026
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 26ee7a87dce7a1e8b116f999cc6f0de515b9de3803013497fe7adb0553de2a70
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json

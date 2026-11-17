@@ -82,3 +82,24 @@ receipts:
     quote: from January 2026 to June 2026
     locator: Materials and methods, Study design, setting, and reporting framework
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 718aa6d4257848bd388cb77ba2109f6ddf4bd8e9307bd0622b03bd801206d12b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json

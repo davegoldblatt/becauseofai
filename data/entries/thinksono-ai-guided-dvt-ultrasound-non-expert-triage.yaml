@@ -77,3 +77,24 @@ receipts:
     quote: Of 634 recruited subjects, 594 subjects (700 scans) with 67 DVTs were analyzed.
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 99a858a0a0149f60cdaa274f8c9761b71b42e4fb3208ac1155f8387205415701
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: pass
+  record: thinksono-ai-guided-dvt-ultrasound-non-expert-triage/2026-11-17.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - Not dated yet (Actual patients underwent comparative scans, but study dates cannot be established; specialist scans avoided were estimated rather than observed.).
+    - "The two checkers disagreed on attribution: the drafter said only-path and the verifier said bundled. The entry shows the drafter's grade, only-path; treat that grade as unsettled."
