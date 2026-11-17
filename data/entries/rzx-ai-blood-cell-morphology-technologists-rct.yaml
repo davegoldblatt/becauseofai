@@ -64,3 +64,24 @@ receipts:
     quote: Fifty-two medical laboratory technologists were randomised to RZX ( n  = 26)
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 02019f91324a53f8b988b2aecb73559f3f269d4ffdcff84d7508eaf338f622e9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json
