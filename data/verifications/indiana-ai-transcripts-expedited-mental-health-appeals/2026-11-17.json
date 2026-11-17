@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "indiana-ai-transcripts-expedited-mental-health-appeals",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "2b53a537e7aa5b28fb25425ca0c755bb63bc5752bd96f198d41350ef5de3eabc",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://times.courts.in.gov/2025/05/05/involuntary-commitments-artificial-intelligence-expedited-appeals/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-17T23:13:50.619Z",
+      "final_url": "https://times.courts.in.gov/2025/05/05/involuntary-commitments-artificial-intelligence-expedited-appeals/",
+      "sha256": "21374a99be58f3d1201b22543be57aa33f00343922bf80a9dc3f8fb0198f635a",
+      "chars": 5876,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "2023 mental health appeals from Marion County averaged 143.3 days from Notice of Appeal to opinion or dismissal",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "2023 mental health appeals from Marion County averaged 143.3 days from Notice of Appeal to opinion or dismissal",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "In the first six months of the pilot, seven expedited cases were initiated.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "The pilot went live September 1, 2024.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "operational-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The historical comparison evaluates AI-assisted transcripts together with shorter briefs, shorter briefing periods, and dedicated judicial panels.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "The pilot began September 1, 2024, and results cover its first six months; no in-window results are supplied."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The appellate courts' clerk reports on the courts' own pilot, an institutional interest disclosed by the entry; no vendor funding or financial ties are stated."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The report supports seven appeals averaging 30.85 days versus 143.3 days historically, with the reported benefit predating the window. It does not isolate AI's contribution from procedural changes, and the historical endpoint also includes dismissals."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13731,
+      "output": 827,
+      "total": 14558,
+      "cached": 0,
+      "reasoning": 338
+    },
+    "duration_ms": 20372
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

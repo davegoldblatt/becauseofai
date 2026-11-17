@@ -312,3 +312,23 @@ Looked at and rejected:
 - AI wushu quasi-experimental study: not read in full; non-randomized student training, left out.
 - Meta-analyses, reviews, protocols, and the many medRxiv model-validation, benchmark and retrospective papers: fail the reached-people test; titles only.
 - Of 19 randomized-flagged candidates, 8 were read or checked; the rest were protocols, reviews or model studies.
+
+## 2026-11-17, slice 19: announcements: government and public services, 2026-08-12 to 2026-11-11
+
+Drafted (4, all speculative at best, each from the organisation's own page):
+- indiana-ai-transcripts-expedited-mental-health-appeals: Indiana courts, AI-assisted transcripts in expedited commitment appeals; 30.85 days to opinion vs 143.3 in 2023 (seven cases).
+- mhclg-planassist-householder-planning-tasks: England's housing ministry, PlanAssist cut planners' time on key tasks 58% in early testing.
+- westminster-council-copilot-studio-chatbot-contact-centre: 33,400 chatbot queries, 89.5% resolved without an agent (Microsoft UK feature).
+- dvla-webchat-chatbot-handling-time: DVLA webchat chatbot, handling time 8 min to 2 min 30 s (GOV.UK case study, 2020).
+
+Looked at and rejected:
+- Milton Keynes/Valon planning validation (15.8 to 7.6 days): LGA page and trade article both NOT READ (403, 404); the council's own page not found.
+- DVLA voice IVR (90 seconds saved): only trade-press copies read; no primary page found.
+- Arizona DES translation pilot (USDR case study, translation time down over 50%): page read but undated, so no published date to record.
+- GCtranslate (300 million words): usage count only, no comparison or benefit.
+- GOV.UK Chat pilots: opinion survey and accuracy benchmark, no outcome.
+- NY AI Pro pilot (75% saved time) and Pennsylvania ChatGPT pilot (95 min a day): self-reported staff surveys; Pennsylvania also from March 2025.
+- Nebraska DMV assistant (3,400 referrals, up to 20% fewer calls): Tyler release 403; only a rewrite read.
+- SSA backlog cuts, VA claims and CHAMPVA: credited to staffing and automation generally, no AI-specific number; SSA release 403.
+- HMCTS court transcription: a study announced, no results. Cincinnati 311 chat: launch with no result. Prince William 311: partial vendor summary, completion rate only.
+- Richmond 311 (Axios 403), HMRC and CRA call waits (attributed to staffing and digital work), immigration and tax-fraud AI: plans or no AI-specific result.

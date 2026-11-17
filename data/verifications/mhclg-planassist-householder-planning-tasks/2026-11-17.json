@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mhclg-planassist-householder-planning-tasks",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "ce5bc1ef7a879c5c8d47ea38f83e736cf50228b415636c979496f96d006d7a0b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.gov.uk/government/news/faster-planning-decisions-as-new-rules-and-ai-tackle-delays",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-17T23:14:11.899Z",
+      "final_url": "https://www.gov.uk/government/news/faster-planning-decisions-as-new-rules-and-ai-tackle-delays",
+      "sha256": "dd4394d4b4610ce30337d61094fd74a2cc27b8c7843bf8210278f13af21d77a9",
+      "chars": 9586,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Early testing cut time spent on key planning tasks by 58%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Early testing cut time spent on key planning tasks by 58%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Early testing cut time spent on key planning tasks by 58%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Early testing cut time spent on key planning tasks by 58%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "the tool will now expand to 15 councils for 12 months",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported reduction concerns testing the complete PlanAssist workflow, with no comparison separating AI from its information consolidation and other features.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the release does not date the early testing; publication and prototype announcement dates do not establish when the benefit occurred."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The government reports on its own programme and quotes representatives of the companies that developed PlanAssist; the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The release reports testing with council planning officers but identifies neither the comparator behind the 58% reduction nor the dates of that testing."
+      },
+      "summary": "The complete government press release supports the reported 58% task-time reduction and expansion to 15 councils. It supplies neither an identifiable measurement comparison nor achieved dates, so the study does not pass all four tests."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13766,
+      "output": 655,
+      "total": 14421,
+      "cached": 0,
+      "reasoning": 172
+    },
+    "duration_ms": 16125
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete government press release supports the reported 58% task-time reduction and expansion to 15 councils. It supplies neither an identifiable measurement comparison nor achieved dates, so the study does not pass all four tests.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "Not measured against something or dated yet (The release reports testing with council planning officers but identifies neither the comparator behind the 58% reduction nor the dates of that testing.).",
+      "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
+    ],
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      }
+    ]
+  }
+}
