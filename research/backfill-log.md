@@ -296,3 +296,19 @@ Rejected or not drafted:
 - Digital SSI depression matching (828 adults): the intervention is not AI and the algorithm failed; not an entry.
 - BariBot bariatric education feasibility: 16 patients, usability score only, no benefit. KPSC pancreatic cancer pilot: enrolment and test completion only.
 - BJA mortality-model letter: NOT READ (stub). Remaining hits: retrospective models, reviews, protocols, accuracy only; not read.
+
+## 2026-11-17, slice 14: papers and trial results, 2026-10-05 to 2026-10-12
+
+Drafted (3, all not-because, all reasonable at best):
+- link-hf2-ai-wearable-hf-rehospitalization-null: LINK-HF2 RCT, AI wearable alerts after HF discharge, VA; HF rehospitalization 16.3% vs 18.7%, not significant. Dates from the registry.
+- mount-sinai-ai-cds-postoperative-delirium-rct-null: pragmatic RCT, 7,294 surgical patients; delirium 35.1% vs 32.7%, no difference.
+- genial-co-cade-surveillance-colonoscopy-italy-null: CADe in surveillance colonoscopy RCT; ADR 66.6% vs 61.0%, not significant. Abstract gives no dates, window left empty.
+
+Looked at and rejected:
+- Pulpotomy RCT (NCT06767371): AI only detected apical periodontitis; the outcome is not an AI effect.
+- Gastric neoplasm biopsy secondary analysis (Digestive Endoscopy): biopsy behaviour only, no patient outcome.
+- Music therapy with LLM verbal suggestions (PLOS One): one-session student pilot, mostly null, no clear real-world benefit.
+- Pharmacy students MI simulation: self-reported confidence only, no dates.
+- AI wushu quasi-experimental study: not read in full; non-randomized student training, left out.
+- Meta-analyses, reviews, protocols, and the many medRxiv model-validation, benchmark and retrospective papers: fail the reached-people test; titles only.
+- Of 19 randomized-flagged candidates, 8 were read or checked; the rest were protocols, reviews or model studies.

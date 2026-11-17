@@ -1,0 +1,103 @@
+id: genial-co-cade-surveillance-colonoscopy-italy-null
+section: not-because
+rank: 22
+headline: >-
+  AI-assisted colonoscopy did not significantly raise the adenoma detection
+  rate (66.6% vs 61.0%) among 914 Italian screening-programme patients
+  undergoing surveillance colonoscopy, and lengthened withdrawal time.
+impact: "No significant gain in adenoma detection (RCT)"
+impact_number: "66.6% vs 61.0%"
+impact_label: "adenoma detection rate, AI-assisted vs standard surveillance colonoscopy, not significant"
+summary: >-
+  In the GENIAL-CO follow-up randomized trial, patients aged 50 to 74 scheduled
+  for post-polypectomy surveillance colonoscopy in an organized screening
+  programme were randomized to computer-aided detection or standard
+  colonoscopy. Adenoma detection and advanced adenoma detection did not differ
+  significantly, though adenomas per colonoscopy were higher with the aid.
+caveat: >-
+  Adenomas per colonoscopy were significantly higher with the AI aid, so this is
+  a null on the primary endpoint rather than on every detection measure; only the
+  abstract could be read and it gives no study dates.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Computer-aided detection-assisted colonoscopy vs standard colonoscopy, 1:1 randomized, multicentre, Italy"
+effect:
+  relative: "ADR and advanced ADR did not differ significantly (p = 0.160 and p = 0.263)"
+  absolute: "Adenoma detection rate 66.6% with CADe vs 61.0% standard; advanced adenoma detection rate 7.3% vs 6.3%"
+reach: "914 patients analysed (455 CADe, 459 standard) from 973 enrolled in an organized colorectal cancer screening programme in Italy"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-06
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Digestive and Liver Disease: Efficacy of artificial intelligence in detecting precancerous lesions among a colorectal cancer screening population undergoing surveillance colonoscopies in Italy: a randomized control trial (GENIAL-CO Follow-Up study) (Spada et al.), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.dld.2026.08.031
+    doi: 10.1016/j.dld.2026.08.031
+    type: primary
+conflicts: >-
+  The abstract carries no funding or disclosure statement; the full text, which
+  may name the CADe vendor and any author ties, could not be read.
+what_would_change: "A trial in surveillance patients that shows higher advanced-adenoma detection, or fewer interval cancers, with the aid."
+notes: >-
+  Filed under not-because: the primary endpoint (adenoma detection rate) did not
+  differ. Adenomas per colonoscopy were significantly higher with CADe
+  (1.80 vs 1.32), which the headline does not claim as a benefit.
+  verify: the source gives no study period, so the achieved dates and window are
+  left empty; the CADe vendor and trial registration, from the full text.
+related: [eagle-cadde-colonoscopy-rct]
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Patients in both arms had the same colonoscopy and differed only in whether computer-aided detection was switched on, so the comparison isolates the AI aid (isolated).
+receipts:
+  - field: headline
+    quote: ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: "Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation (CADe: 455 vs SC: 459)"
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 29f2baedaf7d56e6da3445a8b037e9137008f49578b5eaeba04b518ea787e12d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json

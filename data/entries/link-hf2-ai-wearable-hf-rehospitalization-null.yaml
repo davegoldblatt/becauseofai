@@ -1,0 +1,125 @@
+id: link-hf2-ai-wearable-hf-rehospitalization-null
+section: not-because
+rank: 20
+headline: >-
+  AI-guided wearable monitoring after heart-failure discharge at five Veterans
+  Affairs hospitals did not significantly cut heart-failure rehospitalization
+  (16.3% vs 18.7%) compared with standard care.
+impact: "No fewer HF rehospitalizations (RCT)"
+impact_number: "16.3% vs 18.7%"
+impact_label: "HF rehospitalization, AI-guided monitoring vs standard care, not significant"
+summary: >-
+  In the randomized LINK-HF2 study, 171 analysed veterans discharged after acute
+  heart failure wore a continuous sensor patch; for half, a personalized AI
+  model sent notifications to clinicians who followed a structured response
+  algorithm. The AI-detected instability rate fell, but rehospitalization and
+  the composite of unplanned rehospitalization, emergency visits and death did
+  not differ from standard care.
+caveat: >-
+  A feasibility study with exploratory clinical endpoints, 171 analysed patients
+  and wide confidence intervals; it cannot rule out a benefit. Only the abstract
+  could be read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "AI-generated notifications plus a structured clinician response algorithm vs standard care, both arms wearing the sensor patch, randomized open-label with blinded endpoints, five VA medical centers"
+effect:
+  relative: "HF rehospitalization HR 0.90 (95% CI 0.43-1.84; P = 0.76); composite HR 1.03 (95% CI 0.63-1.70; P = 0.89)"
+  absolute: "HF rehospitalization 13 (16.3%) of 80 in the intervention group vs 17 (18.7%) of 91 in control"
+reach: "171 analysed adults discharged after hospitalization for acute heart failure at 5 Veterans Affairs medical centers"
+dates:
+  achieved_start: 2021-04-19
+  achieved_end: 2024-08-31
+  published: 2026-10-09
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "JACC Heart Failure: Artificial Intelligence-Enabled Detection and Management of Physiological Instability in Heart Failure: Results of the Randomized LINK-HF2 Trial (Sideris et al.), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.jchf.2026.103422
+    doi: 10.1016/j.jchf.2026.103422
+    type: primary
+  - title: "ClinicalTrials.gov NCT04502563: LINK-HF2 (VA Office of Research and Development)"
+    url: https://clinicaltrials.gov/study/NCT04502563
+    type: primary
+conflicts: >-
+  Sponsored by the VA Office of Research and Development. The author list
+  includes people from the company behind the similarity-based monitoring model
+  (the abstract does not name it or give a disclosure statement); the full
+  disclosures were not read.
+what_would_change: "A larger trial with a response protocol aimed at the signals the AI detects, powered for rehospitalization, showing fewer events."
+notes: >-
+  Filed under not-because: the clinical endpoints did not differ; the AI-detected
+  instability rate was lower in the intervention group (HR 0.76), which is a
+  process measure and is not claimed as a benefit.
+  Window pre: the registry gives an actual start of 19 April 2021 and a primary
+  completion of 31 August 2024, both before the window; only the publication is new.
+  Evidence B rather than A: the primary aim was feasibility and the clinical
+  endpoints are described as exploratory.
+  verify: the vendor of the monitoring model and any author ties, from the full
+  text's disclosures.
+related: [uva-comet-deterioration-null, latent-ai-ecg-af-null]
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Both arms wore the same patch and differed in whether AI notifications and a clinician response algorithm were used, so the comparison tests the package of AI alert plus response (bundled).
+receipts:
+  - field: headline
+    quote: HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: "(HR: 0.90, 95% CI: 0.43-1.84; P = 0.76)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: "The composite clinical endpoint also did not differ between groups (HR 1.03; 95% CI: 0.63-1.70; P = 0.89)."
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Among 171 analyzed participants, 80 (46.8%) were assigned to intervention and 91 (53.2%) to control.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: conducted at 5 Veterans Affairs medical centers
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: '"startDateStruct": { "date": "2021-04-19", "type": "ACTUAL"'
+    locator: statusModule, startDateStruct
+    source: 1
+  - field: dates.achieved_end
+    quote: '"primaryCompletionDateStruct": { "date": "2024-08-31", "type": "ACTUAL"'
+    locator: statusModule, primaryCompletionDateStruct
+    source: 1
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 7bf3c3af3a4f865b6af8bb3edd4c71eae1e5ff228745d616f2b00057ab38d28a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json
+held:
+  reason: ungrounded
+  since: 2026-11-17
+  detail: "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations.."
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json

@@ -1,0 +1,119 @@
+id: mount-sinai-ai-cds-postoperative-delirium-rct-null
+section: not-because
+rank: 21
+headline: >-
+  An AI-driven decision-support prompt for anesthesia teams caring for 7,294
+  surgical patients with cognitive impairment at Mount Sinai did not
+  significantly change postoperative delirium (35.1% vs 32.7%) or adherence to
+  best practices.
+impact: "No fewer delirium cases (pragmatic RCT)"
+impact_number: "35.1% vs 32.7%"
+impact_label: "postoperative delirium among assessed patients, AI decision support vs routine care, not significant"
+summary: >-
+  A pragmatic randomized trial embedded in routine care at The Mount Sinai
+  Hospital used a natural-language-processing algorithm to identify surgical
+  patients with cognitive impairment and showed anesthesia teams a
+  non-interruptive best-practice prompt in the health record. Delirium and
+  adherence to 12 perioperative best practices did not differ from routine care.
+caveat: >-
+  Only 17.2% of patients had a documented delirium assessment, so the authors say
+  the result cannot show the tool was ineffective; only the abstract could be
+  read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "AI-driven non-interruptive clinical decision support in the electronic health record vs routine perioperative care, randomized, pragmatic, single hospital"
+effect:
+  relative: "No statistically significant difference in postoperative delirium (P = .37) or best-practice adherence (all P > .05)"
+  absolute: "Postoperative delirium 225/641 (35.1%) with the intervention vs 201/614 (32.7%) with routine care, among patients with a documented assessment"
+reach: "7,294 surgical patients with preoperative cognitive impairment randomized at The Mount Sinai Hospital, New York; 1,255 had a delirium assessment"
+dates:
+  achieved_start: 2023-06-20
+  achieved_end: 2024-08-31
+  published: 2026-10-09
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Anesthesia & Analgesia: Artificial Intelligence-Driven Clinical Decision Support for Postoperative Delirium Prevention: A Pragmatic Randomized Controlled Trial (Scharp et al.), abstract"
+    url: https://doi.org/10.1213/ANE.0000000000008318
+    doi: 10.1213/ANE.0000000000008318
+    type: primary
+conflicts: >-
+  Investigator-led at Mount Sinai Health System; the abstract carries no funding
+  or disclosure statement, and the decision-support tool was built by the
+  trial's own institution.
+what_would_change: "A trial with complete, protocolized delirium screening in both arms, or a decision-support design that changes anesthesia practice, showing fewer delirium cases."
+notes: >-
+  Filed under not-because: the trial found no difference, though the authors
+  state it is inconclusive because under 20% of patients were assessed.
+  Window pre: the abstract dates the trial 20 June 2023 to 31 August 2024, before
+  the window opened.
+  Evidence B rather than A: the registration was not seen in the abstract.
+  verify: trial registration and whether the primary outcome was prespecified,
+  from the full text.
+related: [columbia-epic-ai-draft-replies-null]
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Both arms received routine perioperative care and differed only in whether the AI-identified patients triggered the decision-support prompt, so the comparison isolates the AI-driven intervention (isolated).
+receipts:
+  - field: headline
+    quote: Overall, 7294 patients were identified as having cognitive impairment immediately before surgery
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: (225/641, 35.1% vs 201/614, 32.7%, P = .37)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: (225/641, 35.1% vs 201/614, 32.7%, P = .37)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: no statistically significant differences in POD incidence (225/641, 35.1% vs 201/614, 32.7%, P = .37) or best practice adherence (all P > .05)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: (225/641, 35.1% vs 201/614, 32.7%, P = .37)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Overall, 7294 patients were identified as having cognitive impairment immediately before surgery and were randomized
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: In total, 1255/7294 (17.2%) patients had documented postoperative delirium assessments
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: from June 20, 2023, to August 31, 2024
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: from June 20, 2023, to August 31, 2024
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 683811840186fbbf1807b43fb98e8fb529f04016bb6f90efea15fd5cbc3bdede
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: mount-sinai-ai-cds-postoperative-delirium-rct-null/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: mount-sinai-ai-cds-postoperative-delirium-rct-null/2026-11-17.json

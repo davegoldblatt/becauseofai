@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "link-hf2-ai-wearable-hf-rehospitalization-null",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "7bf3c3af3a4f865b6af8bb3edd4c71eae1e5ff228745d616f2b00057ab38d28a",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.jchf.2026.103422",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-17T14:59:04.204Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jchf.2026.103422%22&format=json&resultType=core",
+      "sha256": "9d70434b6d67fa32dc916a46b0d02b113bad8e42da855a7fe0e1557c0af4fadb",
+      "chars": 3435,
+      "truncated": false,
+      "partial": true
+    },
+    {
+      "index": 1,
+      "url": "https://clinicaltrials.gov/study/NCT04502563",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-17T14:59:04.373Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT04502563?format=json",
+      "sha256": "2d63a17887ed7e968b85042818d6b44ccbac8949f16d7aa2788e2451a4321467",
+      "chars": 40201,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "(HR: 0.90, 95% CI: 0.43-1.84; P = 0.76)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "The composite clinical endpoint also did not differ between groups (HR 1.03; 95% CI: 0.63-1.70; P = 0.89).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "HF rehospitalization occurred in 13 (16.3%) patients in the intervention group and 17 (18.7%) in the control group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Among 171 analyzed participants, 80 (46.8%) were assigned to intervention and 91 (53.2%) to control.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "conducted at 5 Veterans Affairs medical centers",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 1,
+      "quote": "\"startDateStruct\": { \"date\": \"2021-04-19\", \"type\": \"ACTUAL\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 1,
+      "quote": "\"primaryCompletionDateStruct\": { \"date\": \"2024-08-31\", \"type\": \"ACTUAL\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        },
+        {
+          "source": 1,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "contradicted",
+          "note": "The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage."
+        },
+        {
+          "field": "impact_number",
+          "status": "contradicted",
+          "note": "The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage."
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "contradicted",
+          "note": "The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations."
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomization compared AI notifications plus a structured clinician response algorithm with care without notifications, while both groups wore sensors.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "Actual start and primary completion dates match the entry; overall study completion on 2024-10-30 is a separate milestone."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry alleges vendor-affiliated authors, but the supplied texts contain no vendor affiliations, funding, or disclosures establishing that conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized trial and preregistered HF hospitalization endpoint support a measured clinical null for an AI notification and clinician response package delivered before the window. The abstract and registry disagree on the control hospitalization count, and the supplied text does not establish the alleged vendor conflict."
+    },
+    "error": null,
+    "tokens": {
+      "input": 23759,
+      "output": 788,
+      "total": 24547,
+      "cached": 0,
+      "reasoning": 164
+    },
+    "duration_ms": 18917
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations.."
+  }
+}

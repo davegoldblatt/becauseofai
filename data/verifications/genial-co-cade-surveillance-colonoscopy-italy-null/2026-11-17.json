@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "genial-co-cade-surveillance-colonoscopy-italy-null",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "29f2baedaf7d56e6da3445a8b037e9137008f49578b5eaeba04b518ea787e12d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.dld.2026.08.031",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-17T14:58:04.914Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.dld.2026.08.031%22&format=json&resultType=core",
+      "sha256": "7fadd3b86d88518c15fc0533cafb798ca3c06a77811fd9cd56b7ed649f8e4ee3",
+      "chars": 1912,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "ADR and AADR did not differ significantly between groups (66.6%vs 61.0%, p = 0.160; 7.3% vs 6.3%, p = 0.263)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation (CADe: 455 vs SC: 459)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "Patients were randomized to CADe-assisted versus standard colonoscopy, isolating the addition of AI assistance.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract supplies no study dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No funding or conflict disclosure is provided; the entry acknowledges this uncertainty."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Study dates cannot be established; the publication date does not establish when colonoscopies occurred."
+      },
+      "summary": "The abstract supports the reported patient counts, detection rates, and nonsignificant primary endpoint comparison. It supplies neither achieved dates nor evidence of primary-endpoint preregistration, so the window and evidence grades cannot be assigned."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12725,
+      "output": 596,
+      "total": 13321,
+      "cached": 0,
+      "reasoning": 128
+    },
+    "duration_ms": 15614
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}
