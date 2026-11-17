@@ -1,0 +1,127 @@
+id: speac-lumen-voice-ai-coach-depression-anxiety-rct
+section: because
+rank: 66
+headline: >-
+  Because of AI, adults with untreated depression or anxiety who did eight problem-solving sessions with Lumen, a voice-based
+  AI coach, had their HADS distress score fall 5.85 points over 18 weeks, against 2.76 points on a waitlist.
+impact: "HADS distress −5.85 vs −2.76 waitlist"
+impact_number: "5.85 points"
+impact_label: "fall in HADS psychological distress after 18 weeks with a voice AI coach, against 2.76 on a waitlist"
+summary: >-
+  The SPEAC randomized trial at the University of Illinois Chicago assigned adults with mild-to-moderate untreated depression
+  or anxiety to Lumen-coached problem-solving treatment, human-coached treatment, or a waitlist, and the posted results give
+  the change in Hospital Anxiety and Depression Scale scores at 18 weeks.
+caveat: >-
+  The registry's primary outcome was a brain-imaging measure, not the distress scale reported here (a secondary outcome), no
+  between-group test was posted, and the results are a ClinicalTrials.gov posting rather than a peer-reviewed paper.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Eight sessions of problem-solving treatment with the Lumen voice-based AI coach on a study iPad vs a delayed-treatment waitlist (and vs a human-coached arm), adults randomized to three groups"
+effect:
+  relative: null
+  absolute: "Mean change in HADS psychological distress at 18 weeks: −5.85 with the Lumen AI coach, −2.76 on the waitlist, −7.33 with human coaches"
+reach: "200 adults with mild-to-moderate untreated depression and/or anxiety enrolled (registry count); 97, 48 and 49 analysed per arm for this outcome"
+dates:
+  achieved_start: 2023-01-23
+  achieved_end: 2025-04-15
+  published: 2026-09-23
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "ClinicalTrials.gov NCT05603923 record with posted results (SPEAC, University of Illinois Chicago)"
+    url: https://clinicaltrials.gov/study/NCT05603923
+    type: primary
+conflicts: >-
+  Funded by the National Institute of Mental Health (R33MH119237); run by the University of Illinois Chicago team that
+  developed Lumen. The record reports no commercial funder.
+what_would_change: "A peer-reviewed analysis of the SPEAC trial with a between-group test on depression and anxiety scores, or a larger trial of Lumen against the waitlist."
+notes: >-
+  verify: the distress scale (HADS) is a secondary outcome; the primary outcome is change in fMRI activation, which this entry does not use.
+  verify: the posted record gives group means and standard deviations but no between-group statistical test was found in the text read.
+  verify: the human-coached arm (−7.33) improved more than the Lumen arm (−5.85); the AI coach was not better than a human coach on this measure.
+  verify: the registry labels the waitlist arm PLACEBO_COMPARATOR but describes it as assessments only, with Lumen offered after 18 weeks.
+related: [flourish-ai-coach-students-rct]
+history:
+  - date: 2026-11-17
+    note: Added by the backfill run.
+rationale: Adults were randomized to the voice AI coach, a human coach, or a waitlist, but the Lumen arm also bundled a study iPad, a workbook and scheduled sessions, so the attribution is bundled.
+receipts:
+  - field: headline
+    quote: '"value": "-5.85",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 1 Lumen
+    source: 0
+  - field: headline
+    quote: '"value": "-2.76",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 3 waitlist
+    source: 0
+  - field: impact
+    quote: '"value": "-5.85",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 1 Lumen
+    source: 0
+  - field: impact
+    quote: '"value": "-2.76",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 3 waitlist
+    source: 0
+  - field: impact_number
+    quote: '"value": "-5.85",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 1 Lumen
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-5.85",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 1 Lumen
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-2.76",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 3 waitlist
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-7.33",'
+    locator: Results, secondary outcome HADS at 18 weeks, Psychological distress, Group 2 human coached
+    source: 0
+  - field: reach
+    quote: '"count": 200,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: reach
+    quote: '"value": "97"'
+    locator: Results, HADS at 18 weeks, participants analysed, Group 1
+    source: 0
+  - field: reach
+    quote: '"value": "48"'
+    locator: Results, HADS at 18 weeks, participants analysed, Group 2
+    source: 0
+  - field: reach
+    quote: '"value": "49"'
+    locator: Results, HADS at 18 weeks, participants analysed, Group 3
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2023-01-23",'
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2025-04-15",'
+    locator: Status module, completionDateStruct
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 66cec198c9e24e15c045bb00efc4ef740bb0a69aaf486aa4e04280d313fb02d3
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: pass
+  record: speac-lumen-voice-ai-coach-depression-anxiety-rct/2026-11-17.json
+  confidence: reasonable
+  relaxed:
+    - "The two checkers disagreed on evidence: the drafter said B and the verifier said A. The entry shows the more cautious of the two, B."

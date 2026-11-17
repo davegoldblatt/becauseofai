@@ -1,0 +1,105 @@
+id: wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct
+section: because
+rank: 68
+headline: >-
+  Because of AI, anesthesiology trainees in Wuhan who practiced with AI virtual standardized patients scored 88.2 on a
+  100-point simulated-performance rubric, against 80.4 with simulation and debriefing and 78.0 with conventional teaching.
+impact: "Simulated performance 88.2 vs 78.0"
+impact_number: "88.2"
+impact_label: "mean simulated clinical performance score with AI virtual patients, against 80.4 for simulation alone and 78.0 for conventional teaching"
+summary: >-
+  Sixty master's students in anesthesiology were randomized to conventional teaching, simulation with debriefing, or the same
+  simulation with four hours of AI virtual-standardized-patient sessions, and rated by blinded anesthesiologists after 16
+  hours of teaching.
+caveat: >-
+  A pilot of 60 trainees at one hospital, not prospectively registered, scored with a locally developed rubric on simulated
+  rather than real patients, and the AI sessions replaced four hours of case discussion rather than adding to it.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: in
+comparison: "Simulation with structured debriefing plus four 1-hour AI virtual-standardized-patient sessions vs simulation with debriefing alone vs conventional teaching, 20 trainees per group, 16 hours of teaching each"
+effect:
+  relative: null
+  absolute: "Total simulated clinical performance 88.2 ± 4.8 with AI virtual patients vs 78.0 ± 7.7 conventional teaching and 80.4 ± 6.5 simulation with debriefing"
+reach: "60 master's students in anesthesiology at Zhongnan Hospital of Wuhan University"
+dates:
+  achieved_start: 2026-01
+  achieved_end: 2026-06
+  published: 2026-09-23
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "AI-driven virtual standardized patients combined with scenario-based simulation in anesthesiology training: a randomized pilot study (Frontiers in Medicine, open access via Europe PMC)"
+    url: https://doi.org/10.3389/fmed.2026.1927674
+    doi: 10.3389/fmed.2026.1927674
+    type: primary
+conflicts: >-
+  The authors declare no commercial or financial relationships and no funding. The study was run by the department that
+  designed the teaching programme.
+what_would_change: "A registered, multi-site trial with blinded real-world performance outcomes that reproduces the gain over simulation with debriefing."
+notes: >-
+  verify: the paper states the study was not prospectively registered, so the evidence grade is B rather than A.
+  verify: the outcome is performance in simulated scenarios scored by two anesthesiologists blinded to group, not care of real patients.
+  verify: the AI sessions replaced four hours of conventional case discussion, so the arms differ in more than the AI.
+related: [yan-ai-virtual-patient-colposcopy-residents-rct]
+history:
+  - date: 2026-11-17
+    note: Added by the backfill run.
+rationale: Trainees were randomized to three arms, and the only difference between the two simulation arms was four hours of AI virtual-patient sessions that replaced case discussion, so the comparison is bundled rather than isolated.
+receipts:
+  - field: headline
+    quote: 88.2 ± 4.8 vs. 78.0 ± 7.7 and 80.4 ± 6.5
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: locally developed 100-point competency rubric
+    locator: Abstract, Methods
+    source: 0
+  - field: impact
+    quote: 88.2 ± 4.8 vs. 78.0 ± 7.7 and 80.4 ± 6.5
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: 88.2 ± 4.8 vs. 78.0 ± 7.7 and 80.4 ± 6.5
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 88.2 ± 4.8 vs. 78.0 ± 7.7 and 80.4 ± 6.5
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: among 60 students enrolled in a professional master's degree program in anesthesiology
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: from January 2026 to June 2026
+    locator: Materials and methods, Study design, setting, and reporting framework
+    source: 0
+  - field: dates.achieved_end
+    quote: from January 2026 to June 2026
+    locator: Materials and methods, Study design, setting, and reporting framework
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 718aa6d4257848bd388cb77ba2109f6ddf4bd8e9307bd0622b03bd801206d12b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json

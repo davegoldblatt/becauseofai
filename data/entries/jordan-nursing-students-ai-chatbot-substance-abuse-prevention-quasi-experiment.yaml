@@ -1,0 +1,101 @@
+id: jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment
+section: because
+rank: 69
+headline: >-
+  Because of AI, nursing students in Jordan who used a mobile app with an AI chatbot on substance abuse prevention gained
+  substantially in knowledge (within-group effect size 1.35) while a control group's scores did not change.
+impact: "Knowledge effect size 1.35"
+impact_number: "dz 1.35"
+impact_label: "within-group knowledge gain for nursing students using an AI substance-abuse chatbot app; controls did not change"
+summary: >-
+  A quasi-experimental study at Jordan's largest nursing faculty gave 85 nursing students a mobile app with an AI chatbot
+  and compared knowledge, attitude, practice and risk-profile scores before and after with 85 control students on the usual
+  curriculum.
+caveat: >-
+  A nonequivalent-group design without randomization, with very large effect sizes and a chatbot that the text read does not
+  describe in detail; outcomes are self-reported questionnaire scores, not substance use.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: in
+comparison: "Mobile app with an AI chatbot on substance abuse prevention vs the usual nursing curriculum, 85 students per group, pre- and post-test"
+effect:
+  relative: "Within the intervention group, knowledge gained dz = 1.35, attitude improved dz = 1.96, and practice gained dz = 2.48; the control group showed no significant change"
+  absolute: null
+reach: "170 nursing students at Al-Zaytoonah University of Jordan, 85 in each group"
+dates:
+  achieved_start: 2025-10
+  achieved_end: 2026-02
+  published: 2026-09-17
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Effectiveness of a Mobile Application with an AI-Powered Chatbot to Enhance Nursing Students' Awareness of Substance Abuse Prevention: An Interventional Study (F1000Research)"
+    url: https://doi.org/10.12688/f1000research.183558.2
+    doi: 10.12688/f1000research.183558.2
+    type: primary
+conflicts: >-
+  The authors declare no competing interests and no grants. The authors ran the programme they evaluated, and the chatbot's
+  developer is not named in the text read.
+what_would_change: "A randomized, multi-site trial with a named chatbot and a behavioural outcome such as measured substance use."
+notes: >-
+  verify: the effect sizes quoted are within-group paired effect sizes (dz); the paper's between-group comparison for knowledge is d = 1.58 in Table 2, which was not used because the table text could not be quoted exactly.
+  verify: the text says changes were measured over three months while the study period runs October 2025 to February 2026.
+  verify: effects of this size are unusual for an educational app; the app also bundles non-chatbot content, so the chatbot alone is not isolated.
+related: [odisha-ai-chatbot-oral-health-education-cluster-rct]
+history:
+  - date: 2026-11-17
+    note: Added by the backfill run.
+rationale: Students were allocated to the app with the AI chatbot or to the usual curriculum without randomization, and the app bundled educational content with the chatbot, so the attribution is bundled.
+receipts:
+  - field: headline
+    quote: knowledge gained dz = 1.35
+    locator: Results, text above Table 2
+    source: 0
+  - field: impact
+    quote: knowledge gained dz = 1.35
+    locator: Results, text above Table 2
+    source: 0
+  - field: impact_number
+    quote: knowledge gained dz = 1.35
+    locator: Results, text above Table 2
+    source: 0
+  - field: effect.relative
+    quote: knowledge gained dz = 1.35, attitude improved dz = 1.96, and practice gained dz = 2.48
+    locator: Results, text above Table 2
+    source: 0
+  - field: reach
+    quote: A total of 170 nursing students participated in the study; 85 students were allocated to the control group
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: from October 2025 to February 2026
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: from October 2025 to February 2026
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 26ee7a87dce7a1e8b116f999cc6f0de515b9de3803013497fe7adb0553de2a70
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json

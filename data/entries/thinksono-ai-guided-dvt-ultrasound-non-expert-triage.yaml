@@ -1,0 +1,100 @@
+id: thinksono-ai-guided-dvt-ultrasound-non-expert-triage
+section: because
+rank: 67
+headline: >-
+  Because of AI guidance, operators with no ultrasound training could scan for deep vein thrombosis, and a specialist
+  ultrasound could be avoided in 35.32% of patients, with triage sensitivity of 92.86%.
+impact: "Specialist scan avoidable in 35.32%"
+impact_number: "35.32%"
+impact_label: "of patients could skip a specialist-performed ultrasound after an AI-guided scan by a non-expert"
+summary: >-
+  A multicenter prospective study of 594 patients compared AI-guided leg compression ultrasounds acquired by non-trained
+  operators and read remotely against imaging-specialist ultrasounds, and reports triage sensitivity, specificity and the
+  share of specialist scans that could be avoided.
+caveat: >-
+  Nonrandomized, vendor-funded, with vendor employees among the authors; only the abstract could be read; triage specificity
+  was 39.12%, and the 35.32% is an estimate of scans that could be avoided rather than scans actually avoided.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: only-path
+  window: null
+comparison: "AI-guided proximal leg compression ultrasound by non-ultrasound-trained operators with remote clinician interpretation vs imaging-specialist-performed ultrasound in the same patients"
+effect:
+  relative: null
+  absolute: "Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients; triage sensitivity 92.86%, triage specificity 39.12%"
+reach: "594 patients (700 scans, 67 deep vein thromboses) analysed from 634 recruited, at multiple US centers"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-27
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Validating Artificial Intelligence Guidance for Ultrasound Acquisition and Remote Interpretation (medRxiv preprint, version 2)"
+    url: https://www.medrxiv.org/content/10.64898/2026.07.16.26356882v2
+    type: primary
+conflicts: >-
+  Funded by ThinkSono, Ltd., which makes the ThinkSono Guidance system studied. Several authors are ThinkSono employees,
+  shareholders, consultants or option holders. Data requests are approved by ThinkSono at its sole discretion.
+what_would_change: "An independently funded, peer-reviewed study showing that the avoided specialist scans were avoided in practice without missed clots."
+notes: >-
+  verify: the source gives no study period in the text read (abstract only), so achieved dates and the window grade are left empty.
+  verify: the abstract calls the study multicenter, double-blinded, prospective and nonrandomized and registered as NCT06652568; the registry record was not read.
+  verify: "could be avoided" is the authors' estimate from the paired design, not a measured change in how many specialist scans were done.
+related: []
+history:
+  - date: 2026-11-17
+    note: Added by the backfill run.
+rationale: Non-expert operators could only acquire these scans with the AI guidance and each patient also had a specialist scan as the reference, so the AI is the only route for the non-expert scan, but no arm lacked the AI guidance.
+receipts:
+  - field: headline
+    quote: Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: triage sensitivity was 92.86%
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: Imaging specialist-performed ultrasounds could be avoided in 35.32% of patients.
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: triage sensitivity was 92.86%, triage specificity 39.12%
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: Of 634 recruited subjects, 594 subjects (700 scans) with 67 DVTs were analyzed.
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 99a858a0a0149f60cdaa274f8c9761b71b42e4fb3208ac1155f8387205415701
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: pass
+  record: thinksono-ai-guided-dvt-ultrasound-non-expert-triage/2026-11-17.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - Not dated yet (Actual patients underwent comparative scans, but study dates cannot be established; specialist scans avoided were estimated rather than observed.).
+    - "The two checkers disagreed on attribution: the drafter said only-path and the verifier said bundled. The entry shows the drafter's grade, only-path; treat that grade as unsettled."

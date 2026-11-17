@@ -279,3 +279,20 @@ Rejected or not drafted:
 - AI-Standardized Clinical Examination (medRxiv): validation correlation, no benefit to people.
 - mmGait stroke gait sensor, wearable ECG hypocalcemia model: accuracy only. BJA letter: NOT READ (stub).
 - Remaining medRxiv/PubMed hits: retrospective models, reviews, surveys, protocols; not read.
+
+## 2026-11-17, slice 18: papers and trial results, 2026-09-21 to 2026-09-28
+
+Drafted (5):
+- speac-lumen-voice-ai-coach-depression-anxiety-rct: ClinicalTrials.gov results, Lumen voice AI coach vs waitlist, HADS distress -5.85 vs -2.76 at 18 weeks (secondary outcome; no between-group test).
+- thinksono-ai-guided-dvt-ultrasound-non-expert-triage: medRxiv abstract, AI-guided scans by non-experts, specialist scan avoidable in 35.32% of 594 patients; vendor-funded, no dates (window empty).
+- wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct: Frontiers pilot RCT of 60 trainees, simulated performance 88.2 vs 78.0 and 80.4; unregistered.
+- jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment: F1000 quasi-experiment, 170 nursing students, knowledge dz 1.35; the earlier rejection (p-values only) missed the effect sizes in the text.
+- ai4u-ml-assigned-micro-interventions-youth-mrt-null (not-because): Transl Psychiatry micro-randomized trial, ML vs random assignment, resilience B 0.147 borderline, no affect effect.
+
+Rejected or not drafted:
+- Latin America physicians vignette RCT (medRxiv): simulated cases, no patients; Heidi multilingual scribe: synthetic corpus.
+- Pharmacist order-verification and JMIR diagnostic copilot RCTs: simulated scenarios, not real use.
+- Cardiologist aortic stenosis crossover (iScience): reader study. AI facilitator interprofessional RCT: abstract has no number, full text not read.
+- Digital SSI depression matching (828 adults): the intervention is not AI and the algorithm failed; not an entry.
+- BariBot bariatric education feasibility: 16 patients, usability score only, no benefit. KPSC pancreatic cancer pilot: enrolment and test completion only.
+- BJA mortality-model letter: NOT READ (stub). Remaining hits: retrospective models, reviews, protocols, accuracy only; not read.

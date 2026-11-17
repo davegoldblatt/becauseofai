@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "aeeab91e51a3409348be756506e4402d159270d031bf29ce576baaec8975ab28",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41398-026-04475-8",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-17T04:54:54.382Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13615972/fullTextXML",
+      "sha256": "5f8d4891042e8ae9272532b5ec7ca8907378f62bc262d8196f8845e965709278",
+      "chars": 52717,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A total of 49 youths (mean age 20.6; 78% female) were included.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "whereas there was no evidence of beneficial effects on positive or negative affect",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "B  = 0.147",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "B  = 0.147",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "B  = 0.147, 95% confidence interval (CI), 0.004 – 0.290, p  = 0.044",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 49 youths (mean age 20.6; 78% female) were included.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Proximal outcome data were available for 42 participants (86%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "from July 2022 to February 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "from July 2022 to February 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "unsupported",
+          "note": "The quote establishes no numeric value in the headline."
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Decision-point randomization compared ML-based selection with random selection of the same intervention components.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Study design dates the trial from July 2022 to February 2023."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Government funding and academic development are disclosed; no vendor involvement, commercial interest, patent or licence is shown."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports the participant counts, dates, null affect findings and preliminary resilience effect. Evidence grade B does not fit this small randomized trial, and grade A cannot be established because preregistration of a primary endpoint is not documented."
+    },
+    "error": null,
+    "tokens": {
+      "input": 22969,
+      "output": 642,
+      "total": 23611,
+      "cached": 0,
+      "reasoning": 100
+    },
+    "duration_ms": 16486
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline.."
+  }
+}
