@@ -1,0 +1,74 @@
+id: mhclg-planassist-householder-planning-tasks
+section: because
+rank: 72
+headline: >-
+  Because of PlanAssist, an AI tool for planning officers, England's housing ministry says
+  early testing in three councils cut time spent on key planning tasks by 58%.
+impact: "58% less time on key planning tasks"
+impact_number: "58%"
+impact_label: "less time on key planning tasks in early testing, government says"
+summary: >-
+  The Ministry of Housing, Communities and Local Government reports that PlanAssist, built with
+  Google DeepMind, Google Cloud and Faculty, brings applications, policies and site constraints
+  into one place for planning officers; early testing in Camden, Barnet and Dorset cut time on
+  key tasks by 58%, and the trial is expanding to 15 councils.
+caveat: >-
+  A government press release. It does not say how the 58% was measured, over what period or
+  how many applications. The claim that processing times for routine householder applications
+  halve from eight weeks to four is stated as the aim, not a measured outcome.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "None shown; the release gives no baseline beyond the 58% reduction in time on key tasks"
+effect:
+  relative: "58% reduction in time spent on key planning tasks in early testing"
+  absolute: null
+reach: "Planning officers at Camden, Barnet and Dorset councils; expanding to 15 councils"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-30
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "GOV.UK press release: Faster planning decisions as new rules and AI tackle delays (30 October 2026)"
+    url: https://www.gov.uk/government/news/faster-planning-decisions-as-new-rules-and-ai-tackle-delays
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the government's own press release about a programme it is running, with
+  quotes from Google DeepMind, Google Cloud and Faculty, the companies that developed the tool.
+  No independent evaluation.
+what_would_change: "A published evaluation giving the number of applications, the tasks timed, and decision times for applications handled with and without PlanAssist."
+notes: >-
+  verify: the release gives no dates for the early testing, so achieved dates and the window
+  grade are left empty. Planners' time is the measured outcome; applicant waiting time is not
+  yet measured.
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Bundled because officers use PlanAssist alongside their normal process and the release gives no comparison group, so the 58% cannot be attributed to the tool alone.
+receipts:
+  - field: headline
+    quote: Early testing cut time spent on key planning tasks by 58%
+    locator: Body, PlanAssist paragraph
+    source: 0
+  - field: impact
+    quote: Early testing cut time spent on key planning tasks by 58%
+    locator: Body, PlanAssist paragraph
+    source: 0
+  - field: impact_number
+    quote: Early testing cut time spent on key planning tasks by 58%
+    locator: Body, PlanAssist paragraph
+    source: 0
+  - field: effect.relative
+    quote: Early testing cut time spent on key planning tasks by 58%
+    locator: Body, PlanAssist paragraph
+    source: 0
+  - field: reach
+    quote: the tool will now expand to 15 councils for 12 months
+    locator: Body, PlanAssist paragraph
+    source: 0

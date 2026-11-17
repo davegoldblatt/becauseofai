@@ -1,0 +1,77 @@
+id: dvla-webchat-chatbot-handling-time
+section: because
+rank: 74
+headline: >-
+  Because of an AI chatbot on its webchat, the DVLA says average handling time fell from 8
+  minutes to 2 minutes 30 seconds and 25% to 30% of queries needed no adviser.
+impact: "Handling time 8 min to 2 min 30 s"
+impact_number: "25–30%"
+impact_label: "of customer queries answered by the DVLA chatbot without an adviser"
+summary: >-
+  The UK Driver and Vehicle Licensing Agency added a Salesforce Einstein chatbot to its webchat
+  service from 2018. A Government Digital Service case study reports a lower average handling
+  time and that the chatbot answers a quarter to a third of queries without an adviser.
+caveat: >-
+  A government case study of the agency's own pilot, published in 2020. It gives no comparison
+  group or measurement period, and the effect is reported for the chatbot and webchat
+  together. The chatbot is an earlier-generation NLP system, not generative AI.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "DVLA webchat handling before the chatbot (no period given)"
+effect:
+  relative: "25% to 30% of customer queries answered without going to an adviser"
+  absolute: "Average handling time reduced from 8 minutes to 2 minutes 30 seconds"
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2020-04-03
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "GOV.UK case study (Government Digital Service): How the DVLA deployed a chatbot and improved customer engagement (3 April 2020)"
+    url: https://www.gov.uk/government/case-studies/how-the-dvla-deployed-a-chatbot-and-improved-customer-engagement
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a government case study of the DVLA's own project. The tool is Salesforce's
+  Einstein Chatbot, and the DVLA received 30,000 free chatbot conversations a month from the
+  supplier as part of its pilot. No independent audit.
+what_would_change: "Published before-and-after handling times for the same webchat queues, with the period measured, separating the chatbot from the webchat rollout."
+notes: >-
+  verify: the case study gives project dates (April 2018 to June 2019) but not when the figures
+  were measured, so achieved dates and window are left empty. The case study is from 2020,
+  outside the slice window; it was found while searching for the agency's later voice-AI work.
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Bundled because the case study credits the combination of the chatbot and webchat for the effect and gives no comparison group.
+receipts:
+  - field: headline
+    quote: reduces the average handling time from 8 minutes to 2 minutes 30 seconds
+    locator: Body, "Impact of the chatbot" list
+    source: 0
+  - field: headline
+    quote: answers 25% to 30% of customer queries without going to an adviser
+    locator: Body, "Impact of the chatbot" list
+    source: 0
+  - field: impact
+    quote: reduces the average handling time from 8 minutes to 2 minutes 30 seconds
+    locator: Body, "Impact of the chatbot" list
+    source: 0
+  - field: impact_number
+    quote: answers 25% to 30% of customer queries without going to an adviser
+    locator: Body, "Impact of the chatbot" list
+    source: 0
+  - field: effect.relative
+    quote: answers 25% to 30% of customer queries without going to an adviser
+    locator: Body, "Impact of the chatbot" list
+    source: 0
+  - field: effect.absolute
+    quote: reduces the average handling time from 8 minutes to 2 minutes 30 seconds
+    locator: Body, "Impact of the chatbot" list
+    source: 0

@@ -1,0 +1,81 @@
+id: westminster-council-copilot-studio-chatbot-contact-centre
+section: because
+rank: 73
+headline: >-
+  Because of a Copilot Studio chatbot, Westminster City Council says its chatbot handled
+  33,400 resident queries since September 2025, resolving 89.5% without a human agent.
+impact: "89.5% of 33,400 chatbot queries resolved without an agent"
+impact_number: "89.5%"
+impact_label: "of 33,400 chatbot queries resolved without a human agent, council says"
+summary: >-
+  Westminster City Council in London reports, in a Microsoft UK feature, that a chatbot built
+  in Microsoft Copilot Studio handled 33,400 queries after launch in September 2025 and that
+  call wrap-up time fell from three minutes to two.
+caveat: >-
+  A Microsoft-published account quoting the council's head of customer service. "Resolved
+  without referral" is the council's measure; satisfaction and repeat contacts are not
+  reported, and the earlier chatbot's volume (about 300 queries a month) is the only baseline.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "The council's earlier chatbot, which handled around 300 queries a month; wrap-up time before the new system"
+effect:
+  relative: null
+  absolute: "33,400 queries handled with 89.5% resolved without referral to human agents; call wrap-up time cut from three minutes to two"
+reach: "Westminster City Council contact centre: around 500,000 resident questions, problems and requests a year"
+dates:
+  achieved_start: 2025-09
+  achieved_end: null
+  published: 2026-06-18
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Microsoft UK Stories: How AI is helping Westminster City Council offer a better service to residents (18 June 2026)"
+    url: https://ukstories.microsoft.com/features/how-ai-is-helping-westminster-city-council-offer-better-service-to-residents/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a Microsoft UK feature about Microsoft products (Copilot Studio and Dynamics
+  365 Contact Centre) with a quote from a Microsoft executive, reporting figures given by the
+  council's own head of customer service. No independent audit.
+what_would_change: "Council-published data on query outcomes, repeat contacts and resident satisfaction, with the period each figure covers."
+notes: >-
+  verify: the article gives the launch month but no end of the measurement period, so
+  achieved_end and the window grade are left empty. The wrap-up saving is the council's own
+  rounding ("500,000 minutes saved a year").
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Bundled because the chatbot launched together with a new contact-centre platform and call summaries, and the article compares only to an earlier chatbot's volume, not to a control group.
+receipts:
+  - field: headline
+    quote: it has handled 33,400 queries, resolving 89.5% of them without the need for referral to human agents
+    locator: Body, "Right first time" section
+    source: 0
+  - field: impact
+    quote: it has handled 33,400 queries, resolving 89.5% of them without the need for referral to human agents
+    locator: Body, "Right first time" section
+    source: 0
+  - field: impact_number
+    quote: it has handled 33,400 queries, resolving 89.5% of them without the need for referral to human agents
+    locator: Body, "Right first time" section
+    source: 0
+  - field: effect.absolute
+    quote: it has handled 33,400 queries, resolving 89.5% of them without the need for referral to human agents
+    locator: Body, "Right first time" section
+    source: 0
+  - field: effect.absolute
+    quote: from three minutes to two
+    locator: Body, "Small savings, big impact" section
+    source: 0
+  - field: reach
+    quote: around 500,000 a year in fact, most of them by phone
+    locator: Body, opening paragraphs
+    source: 0
+  - field: dates.achieved_start
+    quote: Since launching the new system in September 2025
+    locator: Body, "Right first time" section
+    source: 0

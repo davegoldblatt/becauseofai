@@ -1,0 +1,88 @@
+id: indiana-ai-transcripts-expedited-mental-health-appeals
+section: because
+rank: 71
+headline: >-
+  Because AI-assisted transcripts could be produced within minutes, Indiana's Marion County
+  expedited mental-health appeals pilot reached a Court of Appeals opinion in an average of
+  30.85 days, against 143.3 days in 2023.
+impact: "30.85 days to appeal opinion, down from 143.3"
+impact_number: "30.85 days"
+impact_label: "from notice of appeal to opinion in seven expedited commitment appeals, vs 143.3 days in 2023"
+summary: >-
+  Indiana's courts built a pilot for appeals of involuntary mental-health commitments in
+  which hearing audio is turned into a transcript within minutes by voice-to-text plus an AI
+  language system. In the first six months, seven expedited appeals took an average of 30.85
+  calendar days from notice of appeal to opinion.
+caveat: >-
+  Written by the Indiana clerk of the appellate courts about the court's own pilot. Seven
+  cases, no concurrent control group, and the pilot also shortened briefs and briefing
+  periods, so the speed-up is not the transcripts alone.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "2023 Marion County mental health appeals, averaging 143.3 days from notice of appeal to opinion or dismissal"
+effect:
+  relative: null
+  absolute: "30.85 calendar days from Notice of Appeal to Court of Appeals opinion (seven cases), versus 143.3 days for 2023 Marion County mental health appeals"
+reach: "Seven expedited mental-health commitment appeals in the pilot's first six months"
+dates:
+  achieved_start: 2024-09-01
+  achieved_end: null
+  published: 2025-05-05
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "Indiana Court Times: Involuntary Commitments, Artificial Intelligence & Expedited Appeals (Greg Pachmayr, Clerk of the Appellate Courts, 5 May 2025)"
+    url: https://times.courts.in.gov/2025/05/05/involuntary-commitments-artificial-intelligence-expedited-appeals/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the Indiana Office of Judicial Administration's own publication, written by the
+  clerk of the appellate courts about the court's pilot; no independent evaluation. The AI
+  augmentation is described as powered by Anthropic, and the voice-to-text base is the court
+  vendor The Record Exchange (TRX).
+what_would_change: "Results for a larger set of cases over the full two-year pilot, separating the effect of AI transcripts from the shortened briefing schedule."
+notes: >-
+  verify: the article gives the pilot start (1 September 2024) and says "first six months" but
+  no explicit end date for the measured cases, so the window grade is left empty and
+  achieved_end is null. The announcement is from May 2025, outside the slice window.
+history:
+  - date: 2026-11-17
+    note: "Added by the backfill run."
+rationale: Bundled because the pilot also cut brief length and briefing periods, and the comparison is to the previous year's appeals, not to concurrent appeals without AI transcripts.
+receipts:
+  - field: headline
+    quote: the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: headline
+    quote: 2023 mental health appeals from Marion County averaged 143.3 days from Notice of Appeal to opinion or dismissal
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: impact
+    quote: the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: impact_number
+    quote: the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: effect.absolute
+    quote: the average time from the Notice of Appeal to the Court of Appeals opinion was 30.85 calendar days
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: effect.absolute
+    quote: 2023 mental health appeals from Marion County averaged 143.3 days from Notice of Appeal to opinion or dismissal
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: reach
+    quote: In the first six months of the pilot, seven expedited cases were initiated.
+    locator: Body, paragraph on pilot results
+    source: 0
+  - field: dates.achieved_start
+    quote: The pilot went live September 1, 2024.
+    locator: Body, paragraph on pilot results
+    source: 0
