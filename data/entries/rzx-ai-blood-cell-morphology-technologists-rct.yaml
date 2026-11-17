@@ -1,0 +1,87 @@
+id: rzx-ai-blood-cell-morphology-technologists-rct
+section: because
+rank: 70
+headline: >-
+  Because of AI, medical laboratory technologists at a Chinese teaching hospital who trained for two weeks on an AI platform
+  with real-time probability feedback scored higher on a blood cell morphology test than colleagues who used textbooks
+  and atlases, in a randomised study of 52 technologists.
+impact: "Higher blood cell morphology posttest score (RCT)"
+impact_number: "86.62 vs 64.77"
+impact_label: "mean posttest score, AI platform vs textbook and atlas self-study"
+summary: >-
+  Fifty-two technologists in one hospital laboratory were randomised to the RZX AI platform or conventional
+  self-directed learning for two weeks, and their scores on a 50-question image test were compared.
+caveat: >-
+  Small single-department study, described by its authors as preliminary; the outcome is a test score, not laboratory
+  accuracy at work; the study period is not stated; and engagement time was measured differently in the two arms.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "RZX AI platform (intelligent distractors, real-time AI probability feedback) vs conventional textbook- and atlas-based self-directed learning, two weeks, same mentor access"
+effect:
+  relative: null
+  absolute: "Mean posttest score 86.62 vs 64.77 (p < 0.001), Cohen's d = 2.16, on a 50-item image-based test"
+reach: "52 medical laboratory technologists in the clinical laboratory department of the First Affiliated Hospital of Sun Yat-sen University, China"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-20
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "An AI-based online learning platform improves blood cell morphology skills in medical laboratory technologists: a sequential explanatory study (BMC Medical Education)"
+    url: https://doi.org/10.1186/s12909-026-10188-9
+    doi: 10.1186/s12909-026-10188-9
+    type: primary
+conflicts: "The RZX platform is a commercial system developed by Mindray; the paper says Mindray had no role in recruitment, design, analysis, interpretation or publication decisions, and notes perceived platform-related bias cannot be fully excluded."
+what_would_change: null
+notes: >-
+  verify: the source gives no period for the two-week intervention, so the achieved dates and window are left empty.
+  verify: single department, 26 per group, not powered for small or moderate effects; the authors call it preliminary.
+  verify: the platform's AI package (distractors plus feedback) is tested as a whole, so attribution is bundled.
+related: [chongqing-ai-boppps-cbl-neurology-interns-rct]
+history:
+  - date: 2026-11-17
+    note: Added by the daily scout.
+rationale: Technologists were randomised to the AI platform or textbook and atlas self-study with the same mentor access, so the comparison tests the AI-supported training package and attribution is bundled.
+receipts:
+  - field: headline
+    quote: Fifty-two medical laboratory technologists were randomised to RZX ( n  = 26) or conventional textbook- and atlas-based self-directed learning
+    locator: Abstract, Methods
+    source: 0
+  - field: impact_number
+    quote: the RZX group achieved a significantly higher mean posttest score than the conventional self-directed learning group (86.62 vs. 64.77, p  < 0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: the RZX group achieved a significantly higher mean posttest score than the conventional self-directed learning group (86.62 vs. 64.77, p  < 0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Fifty-two medical laboratory technologists were randomised to RZX ( n  = 26)
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 02019f91324a53f8b988b2aecb73559f3f269d4ffdcff84d7508eaf338f622e9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json
