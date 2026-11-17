@@ -369,3 +369,12 @@ Candidates: 137 over 2026-11-14 to 2026-11-16, 9 flagged randomized, 19 announce
 - Dublin AI flood warning system rollout. [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/). Launch with no result yet. Missing: council's own page, any measured warning time or events.
 - Bocconi causal-reasoning game with ChatGPT, 2x2 cluster RCT. [AEA 20213](https://www.socialscienceregistry.org/trials/20213). Registered as completed 2026-11-11 to 2026-11-16; pre-analysis plan only. Watch for results.
 - Skipped: AEA registrations in development, reviews, model-accuracy papers, pharma-ads chatbot study, funding, earnings and market pieces.
+
+## 2026-11-17 (daily scout)
+
+Candidates: 138 over 2026-11-15 to 2026-11-17, 15 flagged randomized, 16 announcements, 0 alerts, 44 source errors (Crossref 404s and 429s). One entry drafted: `rzx-ai-blood-cell-morphology-technologists-rct`.
+
+- TEARS ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway from community optometry, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Not read; needs the results record or paper, achieved dates, absolute numbers.
+- AI-guided handheld echo for rheumatic heart disease screening, rural Nepal. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Already logged 2026-11-16.
+- Dublin AI flood warning rollout. Already logged 2026-11-16; no result reported yet.
+- Skipped: CADe trainee colonoscopy meta-analysis (review; the underlying RCTs are the leads), AEA registrations in development, model-accuracy and prediction papers, surveys, market and opinion pieces.
