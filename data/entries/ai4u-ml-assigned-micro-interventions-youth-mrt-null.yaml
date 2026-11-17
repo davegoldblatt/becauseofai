@@ -1,0 +1,87 @@
+id: ai4u-ml-assigned-micro-interventions-youth-mrt-null
+section: not-because
+rank: 19
+headline: >-
+  A machine-learning model that chose which mental-health micro-intervention to send 49 young people showed no benefit on
+  positive or negative affect, and only a borderline gain in momentary resilience over random assignment.
+impact: "No affect gain; resilience B 0.147"
+impact_number: "B 0.147"
+impact_label: "borderline gain in momentary resilience from ML-chosen over random micro-interventions (95% CI 0.004–0.290); no effect on affect"
+summary: >-
+  In a micro-randomized trial in Germany, 49 youths aged 14 to 25 were randomized up to seven times a day between a
+  recurrent-neural-network assignment of intervention components and random assignment, and the next-moment mood outcomes were compared.
+caveat: >-
+  Small and underpowered (42 analysed against 60 planned), one of three outcomes reached p = 0.044 with a confidence
+  interval that nearly touches zero, and distal before-after changes had no control group.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Recurrent-neural-network-based assignment of brief mental-health intervention components vs random assignment of the same components, randomized within each participant at up to 210 decision points over 30 days"
+effect:
+  relative: "Momentary resilience B = 0.147 (95% CI 0.004 to 0.290, p = 0.044); no evidence of beneficial effects on positive or negative affect"
+  absolute: null
+reach: "49 young people (mean age 20.6) entered decision-point randomization in Germany; 42 were included in the analysis"
+dates:
+  achieved_start: 2022-07
+  achieved_end: 2023-02
+  published: 2026-09-26
+  added: 2026-11-17
+  updated: 2026-11-17
+sources:
+  - title: "A machine learning-based ecological momentary intervention for mental health promotion in youth: a micro-randomized trial (Translational Psychiatry, open access via Europe PMC)"
+    url: https://doi.org/10.1038/s41398-026-04475-8
+    doi: 10.1038/s41398-026-04475-8
+    type: primary
+conflicts: >-
+  Funded by the Ministry of Science, Research and Arts Baden-Württemberg; the authors, who built the AI4U system, declare no
+  competing interests. The funder had no role in design, analysis or writing.
+what_would_change: "A larger, adequately powered micro-randomized trial in which ML-based assignment improves positive affect or resilience with a confidence interval clear of zero."
+notes: >-
+  verify: no trial registration was found in the text read, so the evidence grade is B.
+  verify: the paper itself reports the confidence interval as 0.004 to 0.290 in the abstract and 0.01 to 0.29 in the results text; the entry uses the abstract.
+  verify: the reported pre-post changes in distress (d = −0.23) and resilience (d = 0.55) are uncontrolled and not used here.
+related: []
+history:
+  - date: 2026-11-17
+    note: Added by the backfill run.
+rationale: Each participant's decision points were randomized between ML-based and random assignment of the same intervention components, so the arms differ only in whether the machine-learning model chose the component.
+receipts:
+  - field: headline
+    quote: A total of 49 youths (mean age 20.6; 78% female) were included.
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: whereas there was no evidence of beneficial effects on positive or negative affect
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: 'B  = 0.147'
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: 'B  = 0.147'
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: 'B  = 0.147, 95% confidence interval (CI), 0.004 – 0.290, p  = 0.044'
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 49 youths (mean age 20.6; 78% female) were included.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Proximal outcome data were available for 42 participants (86%)
+    locator: Results, Sociodemographic and clinical characteristics
+    source: 0
+  - field: dates.achieved_start
+    quote: from July 2022 to February 2023
+    locator: Methods, Study design
+    source: 0
+  - field: dates.achieved_end
+    quote: from July 2022 to February 2023
+    locator: Methods, Study design
+    source: 0
