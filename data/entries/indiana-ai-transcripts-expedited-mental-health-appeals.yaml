@@ -86,3 +86,24 @@ receipts:
     quote: The pilot went live September 1, 2024.
     locator: Body, paragraph on pilot results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 2b53a537e7aa5b28fb25425ca0c755bb63bc5752bd96f198d41350ef5de3eabc
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: indiana-ai-transcripts-expedited-mental-health-appeals/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "window: drafter no grade, verifier pre."
+  record: indiana-ai-transcripts-expedited-mental-health-appeals/2026-11-17.json

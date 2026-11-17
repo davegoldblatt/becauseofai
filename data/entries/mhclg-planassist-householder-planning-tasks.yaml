@@ -72,3 +72,24 @@ receipts:
     quote: the tool will now expand to 15 councils for 12 months
     locator: Body, PlanAssist paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: ce5bc1ef7a879c5c8d47ea38f83e736cf50228b415636c979496f96d006d7a0b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: pass
+  record: mhclg-planassist-householder-planning-tasks/2026-11-17.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (The release reports testing with council planning officers but identifies neither the comparator behind the 58% reduction nor the dates of that testing.).
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."

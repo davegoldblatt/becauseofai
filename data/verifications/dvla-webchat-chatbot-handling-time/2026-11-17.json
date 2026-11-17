@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "dvla-webchat-chatbot-handling-time",
+  "date": "2026-11-17",
+  "as_of": "2026-11-17",
+  "entry_sha256": "f5d7f638a5250239bd432ad278d601007a88424f7192fd31ba1eb839edf95e29",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-17"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.gov.uk/government/case-studies/how-the-dvla-deployed-a-chatbot-and-improved-customer-engagement",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-17T23:13:27.648Z",
+      "final_url": "https://www.gov.uk/government/case-studies/how-the-dvla-deployed-a-chatbot-and-improved-customer-engagement",
+      "sha256": "f7ef329a47c943b49b6466cbdbfc6e8ff4d6fb200df6a0f10a5d8cf240ccc9fb",
+      "chars": 11726,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "reduces the average handling time from 8 minutes to 2 minutes 30 seconds",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "answers 25% to 30% of customer queries without going to an adviser",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "reduces the average handling time from 8 minutes to 2 minutes 30 seconds",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "answers 25% to 30% of customer queries without going to an adviser",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "answers 25% to 30% of customer queries without going to an adviser",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "reduces the average handling time from 8 minutes to 2 minutes 30 seconds",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-17",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "operational-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The reported handling-time comparison evaluates the chatbot within a webchat service with accompanying operational changes, without isolating the AI contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the report dates the project to April 2018–June 2019 but also describes adding NLP bots by August 2019, without specifying the outcome measurement period."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The government reports its own project, with free pilot conversations and direct support supplied by Salesforce; the entry discloses these interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The report supports the stated handling-time reduction and adviser-free query percentage for actual customers within a bundled chatbot and webchat project. Project chronology establishes a benefit predating the window, but no precise measurement period or independent comparison is provided."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14334,
+      "output": 685,
+      "total": 15019,
+      "cached": 0,
+      "reasoning": 329
+    },
+    "duration_ms": 22555
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

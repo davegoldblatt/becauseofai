@@ -75,3 +75,24 @@ receipts:
     quote: reduces the average handling time from 8 minutes to 2 minutes 30 seconds
     locator: Body, "Impact of the chatbot" list
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: f5d7f638a5250239bd432ad278d601007a88424f7192fd31ba1eb839edf95e29
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: dvla-webchat-chatbot-handling-time/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "window: drafter no grade, verifier pre."
+  record: dvla-webchat-chatbot-handling-time/2026-11-17.json

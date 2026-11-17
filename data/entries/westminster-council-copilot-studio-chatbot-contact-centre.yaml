@@ -79,3 +79,24 @@ receipts:
     quote: Since launching the new system in September 2025
     locator: Body, "Right first time" section
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 5fc0bae0fbd16968032ef7550114cce13c0bbc88a8956bbf4d1f04ba11c529e9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: westminster-council-copilot-studio-chatbot-contact-centre/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "window: drafter no grade, verifier ongoing."
+  record: westminster-council-copilot-studio-chatbot-contact-centre/2026-11-17.json
