@@ -77,6 +77,27 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: reach
-    quote: 'Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation (CADe: 455 vs SC: 459)'
+    quote: "Of 973 enrolled patients, 914 were included after excluding 59 with inadequate bowel preparation (CADe: 455 vs SC: 459)"
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 29f2baedaf7d56e6da3445a8b037e9137008f49578b5eaeba04b518ea787e12d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json
+held:
+  reason: grade-split
+  since: 2026-11-17
+  detail: "evidence: drafter B, verifier could not grade."
+  record: genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json

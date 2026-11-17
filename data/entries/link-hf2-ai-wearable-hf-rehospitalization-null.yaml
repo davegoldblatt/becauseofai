@@ -75,11 +75,11 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: '(HR: 0.90, 95% CI: 0.43-1.84; P = 0.76)'
+    quote: "(HR: 0.90, 95% CI: 0.43-1.84; P = 0.76)"
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: 'The composite clinical endpoint also did not differ between groups (HR 1.03; 95% CI: 0.63-1.70; P = 0.89).'
+    quote: "The composite clinical endpoint also did not differ between groups (HR 1.03; 95% CI: 0.63-1.70; P = 0.89)."
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -102,3 +102,24 @@ receipts:
     quote: '"primaryCompletionDateStruct": { "date": "2024-08-31", "type": "ACTUAL"'
     locator: statusModule, primaryCompletionDateStruct
     source: 1
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-17
+  content: 7bf3c3af3a4f865b6af8bb3edd4c71eae1e5ff228745d616f2b00057ab38d28a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-17
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-17
+    verdict: fail
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json
+held:
+  reason: ungrounded
+  since: 2026-11-17
+  detail: "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations.."
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json
