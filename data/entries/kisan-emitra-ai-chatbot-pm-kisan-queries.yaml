@@ -80,3 +80,24 @@ receipts:
     quote: The scheme disburses ₹6,000 annually to over 90 million farmers
     locator: Body, opening paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 789754276f5db90781291fc728f99fc175f2db3b163bf3a4c9b206f676f6608a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: kisan-emitra-ai-chatbot-pm-kisan-queries/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "window: drafter no grade, verifier pre."
+  record: kisan-emitra-ai-chatbot-pm-kisan-queries/2026-11-18.json

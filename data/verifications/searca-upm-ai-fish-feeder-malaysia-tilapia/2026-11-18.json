@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "searca-upm-ai-fish-feeder-malaysia-tilapia",
+  "date": "2026-11-18",
+  "as_of": "2026-11-18",
+  "entry_sha256": "5ceecf94409d6d1fbcb077f0d96e8e5768dcf7e2dedaed8f93fda88810a078f2",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-18"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.searca.org/news/ai-meets-aquaculture-smart-fish-feeder-cuts-labor-waste",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-18T09:13:41.887Z",
+      "final_url": "https://www.searca.org/news/ai-meets-aquaculture-smart-fish-feeder-cuts-labor-waste",
+      "sha256": "802d42c4fb2b29e2c717d9cb448abd65148d6e04d0fe07c87c6de393a27c7ec9",
+      "chars": 4434,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "reduced time spent on manual feeding by 70% and cut feed waste by 20%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "reduced time spent on manual feeding by 70% and cut feed waste by 20%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "reduced time spent on manual feeding by 70% and cut feed waste by 20%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "reduced time spent on manual feeding by 70% and cut feed waste by 20%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "saving at least six hours of labor each week",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-18",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The reported comparison is manual feeding before installation versus a package combining AI biomass estimation, automated dispensing, and IoT sensors.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source provides no measurement period; the already reported benefits precede its June 2025 publication and therefore the window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "SEARCA reports on a pilot it funded through GRAINS, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The source gives no deployment or measurement dates; publication establishes only that the benefits occurred before the window."
+      },
+      "summary": "The funder's release supports the reported 70% reduction in manual feeding time, 20% reduction in feed waste, and at least six weekly labor hours saved among participating farmers. It provides no measurement methods or achieved dates."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12904,
+      "output": 619,
+      "total": 13523,
+      "cached": 8448,
+      "reasoning": 170
+    },
+    "duration_ms": 17544
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

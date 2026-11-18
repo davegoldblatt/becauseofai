@@ -80,3 +80,24 @@ receipts:
     quote: supporting an estimated 94,133 people across 787 charities and community organisations
     locator: Body, second paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 972a06b088a7f34adde2f55d44fc44d14c20dbc5944a3610717218a727372ccd
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json
+held:
+  reason: ungrounded
+  since: 2026-11-18
+  detail: "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals.."
+  record: nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json

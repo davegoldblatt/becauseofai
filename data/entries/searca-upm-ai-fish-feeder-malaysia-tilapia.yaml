@@ -70,3 +70,24 @@ receipts:
     quote: saving at least six hours of labor each week
     locator: Body, first paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 5ceecf94409d6d1fbcb077f0d96e8e5768dcf7e2dedaed8f93fda88810a078f2
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier pre."
+  record: searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json

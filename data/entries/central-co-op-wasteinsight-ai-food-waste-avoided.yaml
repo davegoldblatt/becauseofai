@@ -83,3 +83,24 @@ receipts:
     quote: Through more than 500 trading premises across 23 counties
     locator: Body, second paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 51b78e5b524e608ffaa90dffa83febdcf451a6ace6c6d4cc40327c0c3137115c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "window: drafter no grade, verifier pre."
+  record: central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json
