@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T14:12:41.098Z",
-  "since": "2026-11-16T14:12:41Z",
+  "generated_at": "2026-11-18T14:11:43.145Z",
+  "since": "2026-11-17T14:11:43Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 57,
-    "held": 36,
+    "published": 58,
+    "held": 48,
     "counts": {
       "because": 22,
       "not-because": 7,
@@ -12,82 +12,96 @@
     },
     "lower_levels": {
       "reasonable": 6,
-      "speculative": 17
+      "speculative": 18
     },
     "changed": [
       {
-        "id": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
-        "headline": "A machine-learning model that chose which mental-health micro-intervention to send 49 young people showed no benefit on positive or negative affect, and only a borderline gain in momentary resilience over random assignment.",
+        "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
+        "headline": "Because of AutoWeed AI spot spraying, sugarcane field trials in reef catchments used 35% less herbicide than broadcast spraying at 97% weed efficacy.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "central-co-op-wasteinsight-ai-food-waste-avoided",
+        "headline": "Because of Retail Insight's AI markdown system, Central Co-op says it avoided 8,796 tonnes of food waste and sold 32,449,817 reduced-to-clear items across its stores.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
+        "headline": "Because of Kisan-eMitra's AI upgrade, India's PM-KISAN chatbot answered 2.69 million farmer queries in 186 days, a 668% increase over manual grievance handling, Wadhwani AI says.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "nestle-zest-ai-surplus-redistribution-fareshare",
+        "headline": "Because of Zest's AI surplus-matching, a UK consortium redistributed 201.9 tonnes of Nestlé factory surplus to charities, supporting an estimated 94,133 people.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment",
-        "headline": "Because of AI, nursing students in Jordan who used a mobile app with an AI chatbot on substance abuse prevention gained substantially in knowledge (within-group effect size 1.35) while a control group's scores did not change.",
+        "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
+        "headline": "Because of an AI-based smart fish feeder, small-scale tilapia farmers in Negeri Sembilan, Malaysia cut manual feeding time by 70% and feed waste by 20%, SEARCA reports.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "speac-lumen-voice-ai-coach-depression-anxiety-rct",
-        "headline": "Because of AI, adults with untreated depression or anxiety who did eight problem-solving sessions with Lumen, a voice-based AI coach, had their HADS distress score fall 5.85 points over 18 weeks, against 2.76 points on a waitlist.",
+        "id": "dvla-webchat-chatbot-handling-time",
+        "headline": "Because of an AI chatbot on its webchat, the DVLA says average handling time fell from 8 minutes to 2 minutes 30 seconds and 25% to 30% of queries needed no adviser.",
         "change": "added",
-        "state": "published as reasonable",
-        "url": "https://becauseofai.org/entry/speac-lumen-voice-ai-coach-depression-anxiety-rct"
+        "state": "held (grade-split)",
+        "url": null
       },
       {
-        "id": "thinksono-ai-guided-dvt-ultrasound-non-expert-triage",
-        "headline": "Because of AI guidance, operators with no ultrasound training could scan for deep vein thrombosis, and a specialist ultrasound could be avoided in 35.32% of patients, with triage sensitivity of 92.86%.",
+        "id": "indiana-ai-transcripts-expedited-mental-health-appeals",
+        "headline": "Because AI-assisted transcripts could be produced within minutes, Indiana's Marion County expedited mental-health appeals pilot reached a Court of Appeals opinion in an average of 30.85 days, against 143.3 days in 2023.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "mhclg-planassist-householder-planning-tasks",
+        "headline": "Because of PlanAssist, an AI tool for planning officers, England's housing ministry says early testing in three councils cut time spent on key planning tasks by 58%.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/thinksono-ai-guided-dvt-ultrasound-non-expert-triage"
+        "url": "https://becauseofai.org/entry/mhclg-planassist-householder-planning-tasks"
       },
       {
-        "id": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct",
-        "headline": "Because of AI, anesthesiology trainees in Wuhan who practiced with AI virtual standardized patients scored 88.2 on a 100-point simulated-performance rubric, against 80.4 with simulation and debriefing and 78.0 with conventional teaching.",
+        "id": "westminster-council-copilot-studio-chatbot-contact-centre",
+        "headline": "Because of a Copilot Studio chatbot, Westminster City Council says its chatbot handled 33,400 resident queries since September 2025, resolving 89.5% without a human agent.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "medical-students-socratic-llm-chatbots-rct",
-        "headline": "Because of AI, third-year medical students who spent 10 minutes with two Socratic-prompted GPT-3.5 chatbots gained 8.9 points on a 15-question test, against 3.7 points for students who read the textbook for the same time, in a randomised trial.",
+        "id": "rzx-ai-blood-cell-morphology-technologists-rct",
+        "headline": "Because of AI, medical laboratory technologists at a Chinese teaching hospital who trained for two weeks on an AI platform with real-time probability feedback scored higher on a blood cell morphology test than colleagues who used textbooks and atlases, in a randomised study of 52 technologists.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "genial-co-cade-surveillance-colonoscopy-italy-null",
+        "headline": "AI-assisted colonoscopy did not significantly raise the adenoma detection rate (66.6% vs 61.0%) among 914 Italian screening-programme patients undergoing surveillance colonoscopy, and lengthened withdrawal time.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
+        "headline": "AI-guided wearable monitoring after heart-failure discharge at five Veterans Affairs hospitals did not significantly cut heart-failure rehospitalization (16.3% vs 18.7%) compared with standard care.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "ai-reconstruction-ultra-low-dose-ctpa-rct",
-        "headline": "Because of AI, a deep learning CT reconstruction algorithm let a pulmonary CT angiography protocol cut effective radiation dose by 84.93% in a randomized trial of low-BMI patients while keeping diagnostic image quality.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "ai-sleep-feedback-high-school-soccer-pilot-rct",
-        "headline": "Because of AI, high school female soccer players who got GPT-4o personalized sleep feedback had 2% higher sleep efficiency than players given generic sleep information, in a pilot randomized trial of 25 players.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "hpv-chatbot-japan-caregivers-literacy-rct",
-        "headline": "Because of AI, caregivers in Japan answered 0.30 more of 7 HPV vaccine questions correctly after using a GPT-4o chatbot than after reading the government leaflet, in a randomized trial of 848 caregivers; their vaccination decisions did not differ.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "molemap-ai-nurse-teledermoscopy-malignancy-detection",
-        "headline": "Because of AI decision support, nurse-led teledermoscopy clinics in New Zealand and Australia forwarded lesions that were malignant at 25.5 per 1,000 against 15.7 per 1,000 at clinics without it, across 1,102,382 lesions.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/molemap-ai-nurse-teledermoscopy-malignancy-detection"
-      },
-      {
-        "id": "odisha-ai-chatbot-oral-health-education-cluster-rct",
-        "headline": "Because of AI, adults in rural Odisha villages who got four weeks of chatbot-guided oral health education over WhatsApp went from 28% to 64% brushing twice daily, against 30% to 37% in control villages given a health talk and leaflet.",
+        "id": "mount-sinai-ai-cds-postoperative-delirium-rct-null",
+        "headline": "An AI-driven decision-support prompt for anesthesia teams caring for 7,294 surgical patients with cognitive impairment at Mount Sinai did not significantly change postoperative delirium (35.1% vs 32.7%) or adherence to best practices.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
@@ -123,11 +137,25 @@
         "detail": "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline.."
       },
       {
+        "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
+        "headline": "Because of AutoWeed AI spot spraying, sugarcane field trials in reef catchments used 35% less herbicide than broadcast spraying at 97% weed efficacy.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "evidence: drafter C, verifier could not grade."
+      },
+      {
         "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
         "headline": "Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11 clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.",
         "reason": "grade-split",
         "since": "2026-11-15",
         "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "central-co-op-wasteinsight-ai-food-waste-avoided",
+        "headline": "Because of Retail Insight's AI markdown system, Central Co-op says it avoided 8,796 tonnes of food waste and sold 32,449,817 reduced-to-clear items across its stores.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "window: drafter no grade, verifier pre."
       },
       {
         "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
@@ -142,6 +170,13 @@
         "reason": "grade-split",
         "since": "2026-11-13",
         "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled."
+      },
+      {
+        "id": "dvla-webchat-chatbot-handling-time",
+        "headline": "Because of an AI chatbot on its webchat, the DVLA says average handling time fell from 8 minutes to 2 minutes 30 seconds and 25% to 30% of queries needed no adviser.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "window: drafter no grade, verifier pre."
       },
       {
         "id": "eus-guideq-ai-navigation-rct",
@@ -165,6 +200,13 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "genial-co-cade-surveillance-colonoscopy-italy-null",
+        "headline": "AI-assisted colonoscopy did not significantly raise the adenoma detection rate (66.6% vs 61.0%) among 914 Italian screening-programme patients undergoing surveillance colonoscopy, and lengthened withdrawal time.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
         "id": "gleamer-boneview-paediatric-ed-fracture-exclusion",
         "headline": "Because of an AI fracture-detection second read, children sent home from a paediatric emergency department without an orthopaedic consultation stayed 1.78 hours instead of 2.25.",
         "reason": "grade-split",
@@ -177,6 +219,13 @@
         "reason": "grade-split",
         "since": "2026-11-16",
         "detail": "evidence: drafter A, verifier could not grade."
+      },
+      {
+        "id": "indiana-ai-transcripts-expedited-mental-health-appeals",
+        "headline": "Because AI-assisted transcripts could be produced within minutes, Indiana's Marion County expedited mental-health appeals pilot reached a Court of Appeals opinion in an average of 30.85 days, against 143.3 days in 2023.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "window: drafter no grade, verifier pre."
       },
       {
         "id": "jeffcom-911-ai-administrative-calls",
@@ -200,6 +249,13 @@
         "detail": "dates.achieved_start (receipt 8): unsupported, The school-year span does not establish November 2024 as the starting month.."
       },
       {
+        "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
+        "headline": "Because of Kisan-eMitra's AI upgrade, India's PM-KISAN chatbot answered 2.69 million farmer queries in 186 days, a 668% increase over manual grievance handling, Wadhwani AI says.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "window: drafter no grade, verifier pre."
+      },
+      {
         "id": "korea-claude-chatbot-infertility-stress",
         "headline": "Because of AI, women in infertility treatment at one Korean clinic who used a Claude-based chatbot self-management program showed a larger fall in perceived stress than women on usual clinic care, in a small non-randomized feasibility study.",
         "reason": "grade-split",
@@ -219,6 +275,13 @@
         "reason": "grade-split",
         "since": "2026-11-09",
         "detail": "window: drafter ongoing, verifier could not grade."
+      },
+      {
+        "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
+        "headline": "AI-guided wearable monitoring after heart-failure discharge at five Veterans Affairs hospitals did not significantly cut heart-failure rehospitalization (16.3% vs 18.7%) compared with standard care.",
+        "reason": "ungrounded",
+        "since": "2026-11-17",
+        "detail": "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations.."
       },
       {
         "id": "lungimpact-ai-cxr-prioritisation-null",
@@ -247,6 +310,20 @@
         "reason": "grade-split",
         "since": "2026-11-16",
         "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing."
+      },
+      {
+        "id": "mount-sinai-ai-cds-postoperative-delirium-rct-null",
+        "headline": "An AI-driven decision-support prompt for anesthesia teams caring for 7,294 surgical patients with cognitive impairment at Mount Sinai did not significantly change postoperative delirium (35.1% vs 32.7%) or adherence to best practices.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "nestle-zest-ai-surplus-redistribution-fareshare",
+        "headline": "Because of Zest's AI surplus-matching, a UK consortium redistributed 201.9 tonnes of Nestlé factory surplus to charities, supporting an estimated 94,133 people.",
+        "reason": "ungrounded",
+        "since": "2026-11-18",
+        "detail": "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals.."
       },
       {
         "id": "numi-ai-math-tutoring-hamilton-county",
@@ -284,11 +361,25 @@
         "detail": "source 0 could not be read in full (HTTP 403); receipts for headline, effect.relative, effect.absolute, reach, dates.achieved_start, dates.achieved_end could not be checked."
       },
       {
+        "id": "rzx-ai-blood-cell-morphology-technologists-rct",
+        "headline": "Because of AI, medical laboratory technologists at a Chinese teaching hospital who trained for two weeks on an AI platform with real-time probability feedback scored higher on a blood cell morphology test than colleagues who used textbooks and atlases, in a randomised study of 52 technologists.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
         "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
         "headline": "Because of AI transit signal priority, San José says it increased bus speeds by 20 percent after expanding the system to all bus routes citywide.",
         "reason": "grade-split",
         "since": "2026-11-16",
         "detail": "attribution: drafter bundled, verifier could not grade."
+      },
+      {
+        "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
+        "headline": "Because of an AI-based smart fish feeder, small-scale tilapia farmers in Negeri Sembilan, Malaysia cut manual feeding time by 70% and feed waste by 20%, SEARCA reports.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre."
       },
       {
         "id": "sumner-county-coursemojo-tcap-ela",
@@ -326,6 +417,13 @@
         "detail": "attribution: drafter bundled, verifier isolated."
       },
       {
+        "id": "westminster-council-copilot-studio-chatbot-contact-centre",
+        "headline": "Because of a Copilot Studio chatbot, Westminster City Council says its chatbot handled 33,400 resident queries since September 2025, resolving 89.5% without a human agent.",
+        "reason": "grade-split",
+        "since": "2026-11-17",
+        "detail": "window: drafter no grade, verifier ongoing."
+      },
+      {
         "id": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct",
         "headline": "Because of AI, anesthesiology trainees in Wuhan who practiced with AI virtual standardized patients scored 88.2 on a 100-point simulated-performance rubric, against 80.4 with simulation and debriefing and 78.0 with conventional teaching.",
         "reason": "grade-split",
@@ -350,22 +448,6 @@
   },
   "verifications": [
     {
-      "id": "ai-reconstruction-ultra-low-dose-ctpa-rct",
-      "date": "2026-11-16",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "ai-reconstruction-ultra-low-dose-ctpa-rct/2026-11-16.json"
-    },
-    {
-      "id": "ai-sleep-feedback-high-school-soccer-pilot-rct",
-      "date": "2026-11-16",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier ai-vs-ai; window: drafter no grade, verifier pre.",
-      "record": "ai-sleep-feedback-high-school-soccer-pilot-rct/2026-11-16.json"
-    },
-    {
       "id": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
       "date": "2026-11-17",
       "result": "held",
@@ -374,36 +456,44 @@
       "record": "ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-17.json"
     },
     {
-      "id": "bellevue-ai-safer-signals-near-misses",
-      "date": "2026-11-16",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete consultancy blog reports more than 45% fewer near misses involving vulnerable road users following the bundled intervention. It supplies neither baseline counts nor achieved dates, so the benefit's timing and window cannot be established.",
-      "record": "bellevue-ai-safer-signals-near-misses/2026-11-16.json"
-    },
-    {
-      "id": "coach-usa-samsara-ai-multicam-pedestrian-incidents",
-      "date": "2026-11-16",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete news article supports the operator-reported 92% incident reduction from a package of AI cameras, alerts, coaching, and safety changes. It provides neither independent verification nor dates establishing the benefit's window.",
-      "record": "coach-usa-samsara-ai-multicam-pedestrian-incidents/2026-11-16.json"
-    },
-    {
-      "id": "faa-smart-ai-airspace-rerouted-flights",
-      "date": "2026-11-16",
+      "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
+      "date": "2026-11-18",
       "result": "held",
       "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
-      "record": "faa-smart-ai-airspace-rerouted-flights/2026-11-16.json"
+      "detail": "evidence: drafter C, verifier could not grade.",
+      "record": "autoweed-ai-spot-spraying-sugarcane-herbicide/2026-11-18.json"
     },
     {
-      "id": "hpv-chatbot-japan-caregivers-literacy-rct",
-      "date": "2026-11-16",
+      "id": "central-co-op-wasteinsight-ai-food-waste-avoided",
+      "date": "2026-11-18",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "hpv-chatbot-japan-caregivers-literacy-rct/2026-11-16.json"
+      "detail": "window: drafter no grade, verifier pre.",
+      "record": "central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json"
+    },
+    {
+      "id": "dvla-webchat-chatbot-handling-time",
+      "date": "2026-11-17",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "window: drafter no grade, verifier pre.",
+      "record": "dvla-webchat-chatbot-handling-time/2026-11-17.json"
+    },
+    {
+      "id": "genial-co-cade-surveillance-colonoscopy-italy-null",
+      "date": "2026-11-17",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json"
+    },
+    {
+      "id": "indiana-ai-transcripts-expedited-mental-health-appeals",
+      "date": "2026-11-17",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "window: drafter no grade, verifier pre.",
+      "record": "indiana-ai-transcripts-expedited-mental-health-appeals/2026-11-17.json"
     },
     {
       "id": "jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment",
@@ -414,44 +504,60 @@
       "record": "jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json"
     },
     {
-      "id": "medical-students-socratic-llm-chatbots-rct",
-      "date": "2026-11-16",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration..",
-      "record": "medical-students-socratic-llm-chatbots-rct/2026-11-16.json"
-    },
-    {
-      "id": "molemap-ai-nurse-teledermoscopy-malignancy-detection",
-      "date": "2026-11-16",
-      "result": "published",
-      "reason": null,
-      "detail": "The supplied abstract supports all quoted numbers and dates and reports higher malignancy detection associated with AI-assisted screening in actual patients. It does not establish causality, fewer missed cancers, or improved patient outcomes; methods and full results were not supplied.",
-      "record": "molemap-ai-nurse-teledermoscopy-malignancy-detection/2026-11-16.json"
-    },
-    {
-      "id": "moreton-bay-ai-pothole-detection-repairs",
-      "date": "2026-11-16",
+      "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
+      "date": "2026-11-18",
       "result": "held",
       "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier ongoing.",
-      "record": "moreton-bay-ai-pothole-detection-repairs/2026-11-16.json"
+      "detail": "window: drafter no grade, verifier pre.",
+      "record": "kisan-emitra-ai-chatbot-pm-kisan-queries/2026-11-18.json"
     },
     {
-      "id": "odisha-ai-chatbot-oral-health-education-cluster-rct",
-      "date": "2026-11-16",
+      "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
+      "date": "2026-11-17",
+      "result": "held",
+      "reason": "ungrounded",
+      "detail": "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitaliza",
+      "record": "link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json"
+    },
+    {
+      "id": "mhclg-planassist-householder-planning-tasks",
+      "date": "2026-11-17",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete government press release supports the reported 58% task-time reduction and expansion to 15 councils. It supplies neither an identifiable measurement comparison nor achieved dates, so the study does not pass all four tests.",
+      "record": "mhclg-planassist-householder-planning-tasks/2026-11-17.json"
+    },
+    {
+      "id": "mount-sinai-ai-cds-postoperative-delirium-rct-null",
+      "date": "2026-11-17",
       "result": "held",
       "reason": "grade-split",
       "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "odisha-ai-chatbot-oral-health-education-cluster-rct/2026-11-16.json"
+      "record": "mount-sinai-ai-cds-postoperative-delirium-rct-null/2026-11-17.json"
     },
     {
-      "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
-      "date": "2026-11-16",
+      "id": "nestle-zest-ai-surplus-redistribution-fareshare",
+      "date": "2026-11-18",
+      "result": "held",
+      "reason": "ungrounded",
+      "detail": "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals..",
+      "record": "nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json"
+    },
+    {
+      "id": "rzx-ai-blood-cell-morphology-technologists-rct",
+      "date": "2026-11-17",
       "result": "held",
       "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade.",
-      "record": "san-jose-lyt-ai-bus-signal-priority-citywide/2026-11-16.json"
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json"
+    },
+    {
+      "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
+      "date": "2026-11-18",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre.",
+      "record": "searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json"
     },
     {
       "id": "speac-lumen-voice-ai-coach-depression-anxiety-rct",
@@ -470,12 +576,12 @@
       "record": "thinksono-ai-guided-dvt-ultrasound-non-expert-triage/2026-11-17.json"
     },
     {
-      "id": "west-allis-notraffic-ai-signals-greenfield-delay",
-      "date": "2026-11-16",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete city press release supports the reported delay figures and deployment across twelve intersections through an uncontrolled before-and-after comparison. It does not establish measurement dates, independent verification, or the AI's contribution separately from the deployment package.",
-      "record": "west-allis-notraffic-ai-signals-greenfield-delay/2026-11-16.json"
+      "id": "westminster-council-copilot-studio-chatbot-contact-centre",
+      "date": "2026-11-17",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "window: drafter no grade, verifier ongoing.",
+      "record": "westminster-council-copilot-studio-chatbot-contact-centre/2026-11-17.json"
     },
     {
       "id": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct",
@@ -486,23 +592,12 @@
       "record": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json"
     }
   ],
-  "announced": [
-    {
-      "id": "ai-generated-forensic-images-medical-students-reasoning",
-      "date": "2026-11-15",
-      "url": "https://becauseofai.org/entry/ai-generated-forensic-images-medical-students-reasoning"
-    },
-    {
-      "id": "tanzania-ai-dr-screening-rct",
-      "date": "2026-11-15",
-      "url": "https://becauseofai.org/entry/tanzania-ai-dr-screening-rct"
-    }
-  ],
+  "announced": [],
   "leads_added": [
-    "AI-guided handheld echocardiography for rheumatic heart disease screening by nurse practitioners, rural Nepal, November 2025 camps, 76 analysed. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Preprint, diagnostic accuracy against cardiologist overread; screening reached people. Missing: whether the AI enabled screening that would not otherwise have happened (no usual-care comparison), outcomes beyond accuracy.",
-    "Dublin AI flood warning system rollout. [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/). Launch with no result yet. Missing: council's own page, any measured warning time or events.",
-    "Bocconi causal-reasoning game with ChatGPT, 2x2 cluster RCT. [AEA 20213](https://www.socialscienceregistry.org/trials/20213). Registered as completed 2026-11-11 to 2026-11-16; pre-analysis plan only. Watch for results.",
-    "Skipped: AEA registrations in development, reviews, model-accuracy papers, pharma-ads chatbot study, funding, earnings and market pieces."
+    "TEARS ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway from community optometry, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Not read; needs the results record or paper, achieved dates, absolute numbers.",
+    "AI-guided handheld echo for rheumatic heart disease screening, rural Nepal. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Already logged 2026-11-16.",
+    "Dublin AI flood warning rollout. Already logged 2026-11-16; no result reported yet.",
+    "Skipped: CADe trainee colonoscopy meta-analysis (review; the underlying RCTs are the leads), AEA registrations in development, model-accuracy and prediction papers, surveys, market and opinion pieces."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -572,41 +667,41 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-16",
-    "pageviews": 126,
-    "visits": 78,
+    "day": "2026-11-17",
+    "pageviews": 54,
+    "visits": 37,
     "top_paths": [
       {
         "path": "/",
-        "views": 78
+        "views": 30
       },
       {
-        "path": "/entry/hurricane-melissa-2025",
-        "views": 10
+        "path": "/method",
+        "views": 7
       },
       {
         "path": "/not-because-of-ai",
-        "views": 9
-      },
-      {
-        "path": "/entry/india-tribal-tb-ai-cxr",
         "views": 5
       },
       {
-        "path": "/entry/ethiopia-tb-ai-cxr",
-        "views": 4
-      },
-      {
-        "path": "/entry/columbia-star-birth",
-        "views": 4
-      },
-      {
-        "path": "/entry/waymo-injury-crashes",
+        "path": "/entry/thames-water-origin-orbit-satellite-leaks",
         "views": 3
       },
       {
-        "path": "/not-yet",
-        "views": 2
+        "path": "/entry/ucla-chart-summarizer-rct",
+        "views": 3
+      },
+      {
+        "path": "/about",
+        "views": 1
+      },
+      {
+        "path": "/entry/ai-micro-tese-nonobstructive-azoospermia",
+        "views": 1
+      },
+      {
+        "path": "/)**",
+        "views": 1
       }
     ]
   },
