@@ -1,0 +1,112 @@
+id: mobilio-ai-smartphone-navigation-blind-outdoor-path
+section: because
+rank: 80
+headline: >-
+  Because of an AI smartphone navigation app, 14 blind or visually impaired white-cane users needed 72% fewer
+  verbal corrections and took 13% less time on a 150-metre outdoor path than with Google Maps.
+impact: "72% fewer corrections than Google Maps"
+impact_number: "72%"
+impact_label: "fewer verbal corrections walking an outdoor path with Mobilio than with Google Maps"
+summary: >-
+  Harvard researchers tested Mobilio, a chest-worn smartphone app that uses machine learning, sensor fusion and
+  spatial audio cues, with 14 people with blindness or visual impairment walking a community path and an obstacle
+  course with their own white canes.
+caveat: >-
+  A small, short experiment with a researcher-built prototype on one simple 150-metre path. In the obstacle course
+  the app reduced contacts but made participants slower than the cane alone, and it was not tested over everyday
+  use.
+domain: accessibility
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Mobilio plus white cane vs Google Maps plus white cane (and a human guide) on a 150 m outdoor path, within-subject, randomized double-reversal order; Mobilio plus cane vs cane alone on an obstacle course"
+effect:
+  relative: "72% fewer verbal corrections and 13% less travel time than Google Maps on the community path; 41% fewer environmental contacts than the cane alone on the obstacle course"
+  absolute: null
+reach: "14 participants with blindness or visual impairment, each with at least 1 year of white-cane experience"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-24
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "Liu R, Slade P. Improving outdoor navigation for people with blindness using an AI-driven smartphone application and personalized audio guidance (Nature Biomedical Engineering, 24 August 2026), text read via arXiv copy"
+    url: https://doi.org/10.1038/s41551-026-01772-x
+    doi: 10.1038/s41551-026-01772-x
+    type: primary
+conflicts: "The authors built the Mobilio app they tested. The paper declares no competing interests. The text read was the preprint copy served for the DOI."
+what_would_change: "A longer field study of everyday use, with a larger and more varied group of users and routes."
+notes: >-
+  verify: the text read states no dates for when the experiments took place, so achieved dates and window are left empty.
+  verify: the evidence grade is C because the study is a small non-registered experiment; it fits none of the HANDOFF definitions cleanly.
+  verify: the summary says contacts were reduced "compared to using Google Maps and a white cane", but the Results compare the obstacle course with a white cane alone; the entry follows the Results.
+related: []
+history:
+  - date: 2026-11-18
+    note: Added by the backfill run.
+rationale: Each participant walked the same path with Mobilio and with Google Maps in randomized order, but the app bundles sensing, machine learning and audio feedback, so the comparison tests the whole app rather than the AI alone.
+receipts:
+  - field: headline
+    quote: Participants needed 72 ± 14% fewer corrections per run with Mobilio compared to Google maps
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: headline
+    quote: Participants took an average of 13 ± 3% less time to traverse the path when using Mobilio
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: headline
+    quote: participants with BVI (n = 14), guided them along an outdoor community path
+    locator: Summary
+    source: 0
+  - field: impact
+    quote: Participants needed 72 ± 14% fewer corrections per run with Mobilio compared to Google maps
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: impact_number
+    quote: Participants needed 72 ± 14% fewer corrections per run with Mobilio compared to Google maps
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: effect.relative
+    quote: Participants needed 72 ± 14% fewer corrections per run with Mobilio compared to Google maps
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: effect.relative
+    quote: Participants took an average of 13 ± 3% less time to traverse the path when using Mobilio
+    locator: Results, Navigation experiments for participants with BVI
+    source: 0
+  - field: effect.relative
+    quote: Participants using Mobilio reduced environmental contacts by 41 ± 5%
+    locator: Results, obstacle course navigation
+    source: 0
+  - field: reach
+    quote: participants with BVI (n = 14), guided them along an outdoor community path
+    locator: Summary
+    source: 0
+  - field: reach
+    quote: All participants had at least 1 year of experience walking with a white cane
+    locator: Methods, participants
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: a1b519c14ec07d0a2e3a180b7b1432d5c4927c973db3f73bdb6d6ecfd41dcbae
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "evidence: drafter C, verifier could not grade."
+  record: mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json
