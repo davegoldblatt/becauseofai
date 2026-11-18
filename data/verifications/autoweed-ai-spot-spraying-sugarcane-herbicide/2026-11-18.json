@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "autoweed-ai-spot-spraying-sugarcane-herbicide",
+  "date": "2026-11-18",
+  "as_of": "2026-11-18",
+  "entry_sha256": "00c8bba942e6a4b5ac48d786fef874867ce684724cd4bf9c8fb034a4b45bcc40",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-18"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://researchonline.jcu.edu.au/87429/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-18T09:12:24.591Z",
+      "final_url": "https://researchonline.jcu.edu.au/87429/",
+      "sha256": "f5753d21fee5f153ea835db170802968ff668f489510e61083c08cd5020e0c6e",
+      "chars": 3236,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "97% efficacy",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "a 54% reduction in herbicide load in irrigation runoff 3-6 days after spraying",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "a 39% reduction in herbicide concentration and a 54% reduction in herbicide load in irrigation runoff 3-6 days after spraying",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "with a 97% efficacy and a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "on 25 ha across six trials",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-18",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The trials compare the complete AI-based robotic AutoWeed spraying system with conventional broadcast spraying, without separating AI from the equipment and spraying method.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source supplies publication, conference and deposit dates but no trial dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Public and foundation funding is disclosed, but the supplied text establishes no vendor funding, employment, equity, patent or licence conflict; the entry's external employment claim cannot be verified here."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Trial dates are absent; the abstract also lacks enough design information to assign an evidence grade under the supplied definitions."
+      },
+      "summary": "The abstract supports all reported numerical results from six sugarcane field trials comparing AutoWeed with broadcast spraying. It provides neither trial dates nor sufficient design details to establish an evidence grade."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12997,
+      "output": 658,
+      "total": 13655,
+      "cached": 0,
+      "reasoning": 141
+    },
+    "duration_ms": 16898
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter C, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "C",
+        "verifier": null
+      }
+    ]
+  }
+}

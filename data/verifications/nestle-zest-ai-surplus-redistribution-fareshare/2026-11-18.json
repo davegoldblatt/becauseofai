@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nestle-zest-ai-surplus-redistribution-fareshare",
+  "date": "2026-11-18",
+  "as_of": "2026-11-18",
+  "entry_sha256": "972a06b088a7f34adde2f55d44fc44d14c20dbc5944a3610717218a727372ccd",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-18"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.newfoodmagazine.com/news/267084/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-18T09:13:24.337Z",
+      "final_url": "https://www.newfoodmagazine.com/news/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/2135060.article",
+      "sha256": "ef41436dd142a7df238ddd8db430ce609ebb7f7d8c37830adc9f3c5d88eb14d1",
+      "chars": 10235,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The redistributed food supported 94,133 people through hundreds of charities and community groups.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "supporting an estimated 94,133 people across 787 charities and community organisations",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "supporting an estimated 94,133 people across 787 charities and community organisations",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-18",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "contradicted",
+          "note": "The source also gives 499,863 meals, conflicting with the field's 480,529 meals."
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "Trials compared the AI-led process with manual waste analysis, while redistribution combined AI matching with charity networks and delivery logistics.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source describes a 16-month pilot without calendar start or end dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The article reports consortium findings involving Nestlé and AI vendor Zest, quotes their representatives, and identifies Innovate UK grant funding."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The pilot's calendar dates cannot be established; publication date and a 16-month duration do not establish when benefits occurred."
+      },
+      "summary": "The article reports 201.9 tonnes redistributed, an estimated 94,133 people supported, and trials comparing the AI-led process with manual analysis. It gives conflicting meal totals, no redistribution baseline for the full tonnage, and no calendar dates for the pilot."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14642,
+      "output": 699,
+      "total": 15341,
+      "cached": 0,
+      "reasoning": 147
+    },
+    "duration_ms": 16965
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals.."
+  }
+}

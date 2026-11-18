@@ -1,0 +1,93 @@
+id: searca-upm-ai-fish-feeder-malaysia-tilapia
+section: because
+rank: 76
+headline: >-
+  Because of an AI-based smart fish feeder, small-scale tilapia farmers in Negeri Sembilan,
+  Malaysia cut manual feeding time by 70% and feed waste by 20%, SEARCA reports.
+impact: "70% less manual feeding time, 20% less feed waste"
+impact_number: "70%"
+impact_label: "less time on manual feeding for small tilapia farms, project reports"
+summary: >-
+  SEARCA reports that automated feeders using computer-vision biomass estimates, built by
+  Universiti Putra Malaysia and installed in small farmers' tanks in Negeri Sembilan, reduced
+  manual feeding time by 70% and cut feed waste by 20%.
+caveat: >-
+  A funder's news release about its own grantee's pilot. No number of farms or tanks, no
+  measurement period, and no description of how the before-and-after figures were measured;
+  the team says it still intends to quantify long-term economic returns.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Manual feeding before the feeders were installed (no detail given)"
+effect:
+  relative: null
+  absolute: "Manual feeding time down 70% and feed waste down 20%; at least six hours of labour saved each week"
+reach: "Small-scale tilapia farmers in Negeri Sembilan, Malaysia"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-06-03
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "SEARCA: AI meets aquaculture: Smart fish feeder cuts labor and waste (3 June 2025)"
+    url: https://www.searca.org/news/ai-meets-aquaculture-smart-fish-feeder-cuts-labor-waste
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a news release by SEARCA, the grant funder (GRAINS programme), about its
+  own grantee's pilot, quoting the project lead and participating farmers. No independent
+  measurement.
+what_would_change: "Numbers of farms and tanks, the measurement period, and the economic returns the team says it will quantify."
+notes: >-
+  verify: the release gives no dates for the pilot and no sample size, so achieved dates and
+  the window grade are left empty. The announcement is from June 2025, outside the slice window.
+history:
+  - date: 2026-11-18
+    note: "Added by the backfill run."
+rationale: Bundled because the feeder also carries water-quality sensors and the release compares only to unspecified manual feeding, so the computer-vision feeding cannot be separated from the automation itself.
+receipts:
+  - field: headline
+    quote: reduced time spent on manual feeding by 70% and cut feed waste by 20%
+    locator: Body, first paragraph
+    source: 0
+  - field: impact
+    quote: reduced time spent on manual feeding by 70% and cut feed waste by 20%
+    locator: Body, first paragraph
+    source: 0
+  - field: impact_number
+    quote: reduced time spent on manual feeding by 70% and cut feed waste by 20%
+    locator: Body, first paragraph
+    source: 0
+  - field: effect.absolute
+    quote: reduced time spent on manual feeding by 70% and cut feed waste by 20%
+    locator: Body, first paragraph
+    source: 0
+  - field: effect.absolute
+    quote: saving at least six hours of labor each week
+    locator: Body, first paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 5ceecf94409d6d1fbcb077f0d96e8e5768dcf7e2dedaed8f93fda88810a078f2
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier pre."
+  record: searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json

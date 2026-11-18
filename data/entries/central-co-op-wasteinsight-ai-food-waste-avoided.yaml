@@ -1,0 +1,106 @@
+id: central-co-op-wasteinsight-ai-food-waste-avoided
+section: because
+rank: 77
+headline: >-
+  Because of Retail Insight's AI markdown system, Central Co-op says it avoided 8,796
+  tonnes of food waste and sold 32,449,817 reduced-to-clear items across its stores.
+impact: "8,796 tonnes of food waste avoided"
+impact_number: "8,796 t"
+impact_label: "of food waste avoided across Central Co-op stores, retailer says"
+summary: >-
+  Central Co-op, a UK retail co-operative, and its vendor Retail Insight report that the
+  WasteInsight AI system, which sets markdowns from expiry and stock data, avoided 8,796
+  tonnes of food waste and saved 20,977,826 meals.
+caveat: >-
+  A retailer-and-vendor press release, with no baseline waste figure, no description of how
+  "avoided" and "meals saved" were calculated, and no separation of the AI's effect from
+  staff action on its prompts.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown"
+effect:
+  relative: null
+  absolute: "8,796 tonnes of food waste avoided, 20,977,826 meals saved and 32,449,817 reduced-to-clear units sold (results reported since 2023)"
+reach: "Central Co-op: more than 500 trading premises across 23 counties in the UK"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-10-22
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "ISN Magazine: Central Co-op avoids over 8,800 tonnes of food waste with Retail Insight partnership (22 October 2025), copy of the press release"
+    url: https://internationalsupermarketnews.com/central-co-op-avoids-over-8800-tonnes-of-food-waste-with-retail-insight-partnership
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the joint announcement by Central Co-op and its software vendor Retail
+  Insight, as reproduced by a trade magazine, and quotes both companies. Retail Insight sells
+  the WasteInsight product. No independent audit. The vendor's own site could not be read.
+what_would_change: "Waste per store before and after rollout, an independent audit of the avoided-waste method, and the share of markdowns made by staff rather than automatically."
+notes: >-
+  verify: the release says "over three years" and "since 2023" at once and gives no calendar
+  period for the figures, so achieved dates and the window grade are left empty. The
+  announcement is from October 2025, outside the slice window.
+history:
+  - date: 2026-11-18
+    note: "Added by the backfill run."
+rationale: Bundled because the system prompts store teams to mark down stock and the release shows no comparison with waste before the system or in stores without it.
+receipts:
+  - field: headline
+    quote: 8,796 tonnes of food waste avoided
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: headline
+    quote: 32,449,817 reduced-to-clear units sold
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: impact
+    quote: 8,796 tonnes of food waste avoided
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: impact_number
+    quote: 8,796 tonnes of food waste avoided
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: effect.absolute
+    quote: 8,796 tonnes of food waste avoided
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: effect.absolute
+    quote: 20,977,826 meals saved
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: effect.absolute
+    quote: 32,449,817 reduced-to-clear units sold
+    locator: Body, "Results to date since 2023 include"
+    source: 0
+  - field: reach
+    quote: Through more than 500 trading premises across 23 counties
+    locator: Body, second paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 51b78e5b524e608ffaa90dffa83febdcf451a6ace6c6d4cc40327c0c3137115c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "window: drafter no grade, verifier pre."
+  record: central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json
