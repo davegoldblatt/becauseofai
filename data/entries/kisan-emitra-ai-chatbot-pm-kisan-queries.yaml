@@ -1,0 +1,82 @@
+id: kisan-emitra-ai-chatbot-pm-kisan-queries
+section: because
+rank: 75
+headline: >-
+  Because of Kisan-eMitra's AI upgrade, India's PM-KISAN chatbot answered 2.69 million
+  farmer queries in 186 days, a 668% increase over manual grievance handling, Wadhwani AI says.
+impact: "2.69 million farmer queries answered in 186 days"
+impact_number: "2.69M"
+impact_label: "farmer queries answered in 186 days by the PM-KISAN chatbot, Wadhwani AI says"
+summary: >-
+  Wadhwani AI reports that after it added language-model and translation features to the
+  government's Kisan-eMitra chatbot in February 2024, the chatbot answered 2.69 million
+  PM-KISAN queries in 186 days, about 13,000 a day, in 11 languages.
+caveat: >-
+  Wadhwani AI's own blog post. The 668% figure carries an unexplained asterisk, "answered"
+  is not the same as "resolved to the farmer's satisfaction", and no comparison period or
+  independent audit is given.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Traditional manual grievance redressal by block and district officials, as the source describes it (no figures given)"
+effect:
+  relative: "668% increase in queries answered compared with manual grievance redressal (the source's figure, marked with an asterisk)"
+  absolute: "2.69 million queries answered in 186 days, about 13,000 a day on average"
+reach: "Farmers on the PM-KISAN scheme, which disburses ₹6,000 a year to over 90 million farmers"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-11-06
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "Wadhwani AI: Empowering Millions of Indian Farmers with Instant AI Chatbot Support (6 November 2025)"
+    url: https://www.wadhwaniai.org/empowering-millions-of-indian-farmers-with-instant-ai-chatbot-support/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Wadhwani AI's own post about a chatbot it helped build, with support from
+  Google.org. The chatbot belongs to India's Ministry of Agriculture and Farmers' Welfare.
+  No independent audit of the counts.
+what_would_change: "A published evaluation of how many queries were resolved without escalation, with the baseline period for the manual process stated."
+notes: >-
+  verify: the post says "since the introduction of new AI features" and gives 186 days but
+  no calendar dates (the features were integrated in February 2024), so achieved dates and
+  the window grade are left empty. verify: the 668% has an asterisk with no footnote in the
+  text read. The announcement is from November 2025, outside the slice window.
+history:
+  - date: 2026-11-18
+    note: "Added by the backfill run."
+rationale: Bundled because the upgrade added AI answering to an existing chatbot on a scheme website, and the post compares only to unspecified manual redressal, not to a controlled baseline.
+receipts:
+  - field: headline
+    quote: has answered 2.69 million queries in just 186 days —a 668% increase* —compared to traditional manual grievance redressal
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: impact
+    quote: has answered 2.69 million queries in just 186 days
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: impact_number
+    quote: has answered 2.69 million queries in just 186 days
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: effect.relative
+    quote: a 668% increase* —compared to traditional manual grievance redressal
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: effect.absolute
+    quote: has answered 2.69 million queries in just 186 days
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: effect.absolute
+    quote: responds to an average of approximately 13,000 queries daily from farmers across the country
+    locator: Body, "Transforming the Grievance Redressal Landscape"
+    source: 0
+  - field: reach
+    quote: The scheme disburses ₹6,000 annually to over 90 million farmers
+    locator: Body, opening paragraph
+    source: 0

@@ -332,3 +332,21 @@ Looked at and rejected:
 - SSA backlog cuts, VA claims and CHAMPVA: credited to staffing and automation generally, no AI-specific number; SSA release 403.
 - HMCTS court transcription: a study announced, no results. Cincinnati 311 chat: launch with no result. Prince William 311: partial vendor summary, completion rate only.
 - Richmond 311 (Axios 403), HMRC and CRA call waits (attributed to staffing and digital work), immigration and tax-fraud AI: plans or no AI-specific result.
+
+## 2026-11-18, slice 21: announcements: agriculture and food, 2026-08-12 to 2026-11-11
+
+Drafted (5, all speculative at best; sources are the organisations' own pages, a wire copy, a trade report, and one conference abstract):
+- kisan-emitra-ai-chatbot-pm-kisan-queries: Wadhwani AI post, PM-KISAN chatbot answered 2.69 million queries in 186 days (Nov 2025).
+- searca-upm-ai-fish-feeder-malaysia-tilapia: SEARCA release, AI feeder cut manual feeding time 70% and feed waste 20% (Jun 2025).
+- central-co-op-wasteinsight-ai-food-waste-avoided: Central Co-op and Retail Insight release (ISN copy), 8,796 tonnes of food waste avoided (Oct 2025).
+- nestle-zest-ai-surplus-redistribution-fareshare: New Food report, 201.9 tonnes of factory surplus redistributed (Mar 2026).
+- autoweed-ai-spot-spraying-sugarcane-herbicide: JCU conference abstract, 35% less herbicide than broadcast spraying on 25 ha (2024).
+
+Looked at and rejected:
+- IRRI PaddyMitra (Rice Today, yield +7-12% over farmer practice, 1,500 farmers): strong result but the page carries no publication date, so no published date to record.
+- Digital Green FarmerChat (70% applied advice within 30 days): page undated; the Kenya RCT is registered with no results.
+- Nestlé's own release (403), Retail Insight's page (404), Retail Times copy (stub), The Packer (403), BusinessGreen (403), PIB (403).
+- Higher Bojewyan dairy farm (empty rate halved, smaXtec): single-farm trade story, rewrite, other changes on the farm.
+- Iceland/Retail Insight: rollout, no results. Trapview/Doktar, ICRISAT, Kenya and Nigeria RCTs: launches or protocols. Plantix, monsoon SMS: usage or survey only.
+- InFarm Cooktown trial (95% claim, 2024 one-acre test): old, single paddock. TNC Edge AI fishing monitoring: accuracy only. Aquaculture mortality claims, generic yield blogs: unsourced.
+- Wadhwani CottonAce: evaluation report not found, secondary figures only. Kisan e-Mitra "5 M+ grievances": usage count on a hub page, not used.

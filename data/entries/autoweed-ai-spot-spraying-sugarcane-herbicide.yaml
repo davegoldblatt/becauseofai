@@ -1,0 +1,89 @@
+id: autoweed-ai-spot-spraying-sugarcane-herbicide
+section: because
+rank: 79
+headline: >-
+  Because of AutoWeed AI spot spraying, sugarcane field trials in reef catchments used 35%
+  less herbicide than broadcast spraying at 97% weed efficacy.
+impact: "35% less herbicide, 54% less herbicide load in runoff"
+impact_number: "35%"
+impact_label: "less herbicide used on sugarcane than broadcast spraying, field trials"
+summary: >-
+  A conference paper from James Cook University reports six field trials on 25 ha of
+  sugarcane in reef catchments in which the AI-based AutoWeed spot sprayer used 35% less herbicide than
+  industry-standard broadcast spraying, with 97% efficacy, and cut herbicide load in
+  irrigation runoff by 54%.
+caveat: >-
+  Only the abstract of a conference paper could be read. It gives no dates, no description
+  of how trials were paired or replicated, and the saving depends on weed density.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Industry-standard broadcast spraying, compared in field trials"
+effect:
+  relative: "35% reduction in herbicide use, proportional to weed density; 39% reduction in herbicide concentration and 54% reduction in herbicide load in irrigation runoff 3-6 days after spraying"
+  absolute: "97% efficacy; trials covered 25 ha across six trials"
+reach: "Sugarcane farms in reef catchments: 25 ha across six field trials"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2024
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "Azghadi et al., Precise robotic spot-spraying of weeds for improved environmental and economic outcomes in the sugarcane industry (Proc. 45th ASSCT, 2024), ResearchOnline@JCU abstract"
+    url: https://researchonline.jcu.edu.au/87429/
+    type: primary
+conflicts: >-
+  The project was funded by the partnership between the Australian Government's Reef Trust
+  and the Great Barrier Reef Foundation. The abstract does not list author affiliations;
+  one author has been reported elsewhere as an operations manager at the company that
+  commercialises AI spot spraying, which is not confirmed in the text read.
+what_would_change: "The full paper's trial design, dates, and farmer-run results against broadcast spraying, including how weed density varied."
+notes: >-
+  verify: the abstract gives no trial dates, so achieved dates and the window grade are left
+  empty. verify: author ties to a vendor are not shown in the abstract. The paper is from
+  2024, outside the slice window; the repository record is dated November 2025.
+history:
+  - date: 2026-11-18
+    note: "Added by the backfill run."
+rationale: Bundled because the abstract compares AutoWeed with broadcast spraying but does not say whether trials were paired on the same fields or replicated, so the AI cannot be separated from site differences.
+receipts:
+  - field: headline
+    quote: a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: 97% efficacy
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: a 54% reduction in herbicide load in irrigation runoff 3-6 days after spraying
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: a 39% reduction in herbicide concentration and a 54% reduction in herbicide load in irrigation runoff 3-6 days after spraying
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: with a 97% efficacy and a 35% reduction in herbicide use, proportional to weed density, on 25 ha across six trials
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: on 25 ha across six trials
+    locator: Abstract
+    source: 0

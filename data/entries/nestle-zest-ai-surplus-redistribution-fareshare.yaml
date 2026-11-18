@@ -1,0 +1,82 @@
+id: nestle-zest-ai-surplus-redistribution-fareshare
+section: because
+rank: 78
+headline: >-
+  Because of Zest's AI surplus-matching, a UK consortium redistributed 201.9 tonnes of
+  Nestlé factory surplus to charities, supporting an estimated 94,133 people.
+impact: "201.9 tonnes of surplus food redistributed to people"
+impact_number: "201.9 t"
+impact_label: "of Nestlé factory surplus sent to charities instead of waste, consortium says"
+summary: >-
+  A nine-partner UK consortium reports that Zest's AI, built on Google Cloud, mapped waste on
+  a Nestlé production line and matched surplus from four sites to FareShare and Company Shop
+  Group, redistributing 201.9 tonnes, equivalent to 480,529 meals, over a 16-month pilot.
+caveat: >-
+  A trade-press report of the consortium's own results. The same article gives 480,529
+  meals and 499,863 meals, no baseline for how much surplus would have been redistributed
+  without the AI, and "supported people" is an estimate by the consortium.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Manual waste assessment; in one trial the AI-led process was faster and identified more surplus, per the report (no figures for the redistributed tonnage baseline)"
+effect:
+  relative: null
+  absolute: "201.9 tonnes of surplus redistributed, equivalent to 480,529 meals, supporting an estimated 94,133 people across 787 charities and community organisations"
+reach: "787 charities and community organisations supplied through FareShare and Company Shop Group"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-03-25
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "New Food Magazine: Nestlé-backed AI pilot cuts food waste and redistributes nearly 500,000 meals (25 March 2026)"
+    url: https://www.newfoodmagazine.com/news/267084/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a trade-press report of the consortium's own announcement; the consortium
+  includes Nestlé UK & Ireland and the AI vendor Zest, whose chief executive is quoted, and
+  the project was funded by a match-funded Innovate UK BridgeAI grant. The consortium's own
+  page could not be read. No independent audit.
+what_would_change: "The Sustainable Ventures white paper's data on tonnage redistributed in the period before the AI, and how meals and people supported were estimated."
+notes: >-
+  verify: the article states a 16-month project but no calendar dates, so achieved dates and
+  the window grade are left empty. verify: the article gives both 499,863 and 480,529 meals;
+  this entry uses the tonnage and the 480,529 figure from its list of impacts.
+history:
+  - date: 2026-11-18
+    note: "Added by the backfill run."
+rationale: Bundled because AI identified and matched the surplus but Nestlé sites, charities and a logistics partner did the redistribution, and the report gives no comparison with redistribution before the AI.
+receipts:
+  - field: headline
+    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    locator: Body, "Surplus redistribution delivers measurable impact"
+    source: 0
+  - field: headline
+    quote: The redistributed food supported 94,133 people through hundreds of charities and community groups.
+    locator: Body, "Surplus redistribution delivers measurable impact"
+    source: 0
+  - field: impact
+    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    locator: Body, "Surplus redistribution delivers measurable impact"
+    source: 0
+  - field: impact_number
+    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    locator: Body, "Surplus redistribution delivers measurable impact"
+    source: 0
+  - field: effect.absolute
+    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    locator: Body, "Surplus redistribution delivers measurable impact"
+    source: 0
+  - field: effect.absolute
+    quote: supporting an estimated 94,133 people across 787 charities and community organisations
+    locator: Body, second paragraph
+    source: 0
+  - field: reach
+    quote: supporting an estimated 94,133 people across 787 charities and community organisations
+    locator: Body, second paragraph
+    source: 0
