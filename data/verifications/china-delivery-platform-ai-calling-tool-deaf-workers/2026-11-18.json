@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "china-delivery-platform-ai-calling-tool-deaf-workers",
+  "date": "2026-11-18",
+  "as_of": "2026-11-18",
+  "entry_sha256": "01576b4a4a16ee9251b6b26777825cb7c1c248bbce521b9aeae0e3cb6aecb05a",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-18"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nber.org/digest/202610/ai-and-performance-workers-disabilities",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-18T18:29:39.933Z",
+      "final_url": "https://www.nber.org/digest/202610/ai-and-performance-workers-disabilities",
+      "sha256": "5bb0dee4eed7e6cdac0666037a220f48d95121871f4a646f009e64435f3f54d7",
+      "chars": 5572,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Late deliveries declined by 11 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Bad customer ratings fell by 22 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Late deliveries declined by 11 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Late deliveries declined by 11 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "delivery times for DHH workers fell by 3.5 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Late deliveries declined by 11 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Bad customer ratings fell by 22 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "all 4,284 newly registered DHH workers",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-18",
+    "output": {
+      "full_text": false,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The difference-in-differences comparison contrasts DHH workers receiving the AI tool with non-disabled workers who did not receive it.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the summary places rollout in mid-2022 and the administrative data in 2021–2023."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses platform compensation and collaboration, but the supplied summary establishes only proprietary platform data and non-vendor funding."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The supplied research summary supports all quoted numerical results and a large observational comparison of actual couriers after a mid-2022 rollout. It provides no in-window results, full working paper, or confirmation of the entry's platform-compensation disclosure."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13324,
+      "output": 709,
+      "total": 14033,
+      "cached": 0,
+      "reasoning": 225
+    },
+    "duration_ms": 17653
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

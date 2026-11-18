@@ -82,3 +82,24 @@ receipts:
     quote: all 4,284 newly registered DHH workers
     locator: Summary, data paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 01576b4a4a16ee9251b6b26777825cb7c1c248bbce521b9aeae0e3cb6aecb05a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: china-delivery-platform-ai-calling-tool-deaf-workers/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "window: drafter no grade, verifier pre."
+  record: china-delivery-platform-ai-calling-tool-deaf-workers/2026-11-18.json

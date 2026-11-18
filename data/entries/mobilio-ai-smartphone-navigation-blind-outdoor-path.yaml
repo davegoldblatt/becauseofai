@@ -89,3 +89,24 @@ receipts:
     quote: All participants had at least 1 year of experience walking with a white cane
     locator: Methods, participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: a1b519c14ec07d0a2e3a180b7b1432d5c4927c973db3f73bdb6d6ecfd41dcbae
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: fail
+  record: mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json
+held:
+  reason: grade-split
+  since: 2026-11-18
+  detail: "evidence: drafter C, verifier could not grade."
+  record: mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json

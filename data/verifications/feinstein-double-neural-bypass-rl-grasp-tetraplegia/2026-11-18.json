@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "feinstein-double-neural-bypass-rl-grasp-tetraplegia",
+  "date": "2026-11-18",
+  "as_of": "2026-11-18",
+  "entry_sha256": "30ede4ffe38661ba8ca137f709f3a778196c59a987405ed4b695db4da4fd03e7",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-18"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41591-026-04498-0",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-18T18:30:33.242Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13375563/fullTextXML",
+      "sha256": "37c018ab2f09155d26c600a09335ff137c165ad925c39b535dcfc401491c41d4",
+      "chars": 88206,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "87% success with RL and 27% success without RL",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "87% success with RL and 27% success without RL",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "87% success with RL and 27% success without RL",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "87% success with RL and 27% success without RL",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "we enrolled a 42-year-old man with complete C4 sensory/C5 motor tetraplegia",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-18",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "D",
+        "attribution": "ai-vs-ai",
+        "window": null
+      },
+      "attribution_rationale": "The comparison adds deep RL to an LSTM-controlled orthosis, so both conditions use AI.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "The text provides relative study durations but no calendar dates for the RL grasping experiments; the entry leaves achieved dates null."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses the corresponding author's financial interests and patents; the source additionally reports support from Blackrock Neurotech."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The calendar timing of the measured grasping benefit cannot be established from the supplied text."
+      },
+      "summary": "The paper supports 87% versus 27% mean session-level grasp success in one participant with RL on versus off. Both conditions used an AI decoder, and the supplied text does not establish when these experiments occurred."
+    },
+    "error": null,
+    "tokens": {
+      "input": 31249,
+      "output": 606,
+      "total": 31855,
+      "cached": 0,
+      "reasoning": 144
+    },
+    "duration_ms": 14638
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The paper supports 87% versus 27% mean session-level grasp success in one participant with RL on versus off. Both conditions used an AI decoder, and the supplied text does not establish when these experiments occurred.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Not dated yet (The calendar timing of the measured grasping benefit cannot be established from the supplied text.).",
+      "The two checkers disagreed on attribution: the drafter said isolated and the verifier said ai-vs-ai. The entry shows the drafter's grade, isolated; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "ai-vs-ai"
+      }
+    ]
+  }
+}

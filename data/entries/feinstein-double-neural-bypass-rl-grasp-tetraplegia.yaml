@@ -68,3 +68,23 @@ receipts:
     quote: we enrolled a 42-year-old man with complete C4 sensory/C5 motor tetraplegia
     locator: Main
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-18
+  content: 30ede4ffe38661ba8ca137f709f3a778196c59a987405ed4b695db4da4fd03e7
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-18
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-18
+    verdict: pass
+  record: feinstein-double-neural-bypass-rl-grasp-tetraplegia/2026-11-18.json
+  confidence: speculative
+  relaxed:
+    - Not dated yet (The calendar timing of the measured grasping benefit cannot be established from the supplied text.).
+    - "The two checkers disagreed on attribution: the drafter said isolated and the verifier said ai-vs-ai. The entry shows the drafter's grade, isolated; treat that grade as unsettled."
