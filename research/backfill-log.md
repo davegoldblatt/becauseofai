@@ -350,3 +350,20 @@ Looked at and rejected:
 - Iceland/Retail Insight: rollout, no results. Trapview/Doktar, ICRISAT, Kenya and Nigeria RCTs: launches or protocols. Plantix, monsoon SMS: usage or survey only.
 - InFarm Cooktown trial (95% claim, 2024 one-acre test): old, single paddock. TNC Edge AI fishing monitoring: accuracy only. Aquaculture mortality claims, generic yield blogs: unsourced.
 - Wadhwani CottonAce: evaluation report not found, secondary figures only. Kisan e-Mitra "5 M+ grievances": usage count on a hub page, not used.
+
+## 2026-11-18, slice 17: announcements: accessibility, 2026-08-12 to 2026-11-11
+
+Drafted (3; two from papers, one from an NBER summary; none is an organisation's own announcement):
+- mobilio-ai-smartphone-navigation-blind-outdoor-path: Nature Biomed Eng (arXiv text read), 14 blind or low-vision cane users, 72% fewer corrections and 13% less time than Google Maps. No dates in text, window empty.
+- feinstein-double-neural-bypass-rl-grasp-tetraplegia: Nature Medicine full text, one man with tetraplegia, deep-RL grip controller on vs off, 87% vs 27% of trials in force limit. Evidence D, no dates.
+- china-delivery-platform-ai-calling-tool-deaf-workers: NBER digest of WP 35372 (paper text unavailable), AI calling tool for 4,284 deaf couriers, late deliveries -11%, bad ratings -22%. No dates.
+
+Looked at and rejected:
+- UC Davis ALS speech BCI (Nature Medicine, June 2026): already an entry.
+- Fortell AI 2.0 (HearingTracker): manikin recordings, no people; Fortell trials already an entry.
+- UC Irvine BCI exoskeleton walking: epilepsy patient, not paralysed, April, proof of concept.
+- Meta Singapore glasses event, Be My Eyes, Aira and Meta glasses, VIA NaviLens: launches or events, no outcome number.
+- AFB AI assistive technology report (Aug 2026): survey and opinion. NHS Manchester video interpreting: human interpreters, not AI.
+- Voiceitt Deaf pilot (2024): word error rate only. ElevenLabs Impact Program: goal of 1 million, no measured count.
+- Michigan JMIR captioning pilot, JAMA Ophthalmology Meta glasses pilot, INTERACT sign-language framework: simulated or sighted testers, no real users.
+- Shenzhen Metro robot guide dog: page would not read. Sorenson, Sign-Speak, Deaf AI airport: pilots without results.

@@ -1,0 +1,70 @@
+id: feinstein-double-neural-bypass-rl-grasp-tetraplegia
+section: because
+rank: 81
+headline: >-
+  Because of a deep reinforcement-learning grip controller in a brain-computer interface, a man with complete
+  tetraplegia kept his grasp force within the set limit in 87% of trials, against 27% without it.
+impact: "Grip force kept in limit: 87% vs 27% of trials"
+impact_number: "87% vs 27%"
+impact_label: "of grasp trials kept within the force limit with the AI controller on versus off, one participant"
+summary: >-
+  In a first-in-human trial at the Feinstein Institutes, a man with complete tetraplegia used a brain implant whose
+  decoder and deep reinforcement-learning agent drove stimulation of his own hand, and grip control was compared with
+  the agent on and off.
+caveat: >-
+  A single participant in a first-in-human trial, with five sessions per condition. The paper's other gains (arm
+  strength, restored touch) come from spinal and cortical stimulation therapy, not from the AI alone.
+domain: accessibility
+ai_type: classic-ml
+grades:
+  evidence: D
+  attribution: isolated
+  window: null
+comparison: "Same participant gripping a hollow eggshell with the deep-RL agent on versus off, same task and force limit, five sessions per condition"
+effect:
+  relative: null
+  absolute: "87% of grasp trials within the force limit with the deep-RL agent versus 27% without it"
+reach: "One participant: a 42-year-old man with complete C4 sensory/C5 motor tetraplegia"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-16
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "Chandrasekaran S, Wandelt SK, Jangam A, et al. A neuroprosthesis for restoring hand movement and sensation in a person with complete tetraplegia (Nature Medicine 2026), full text via Europe PMC"
+    url: https://doi.org/10.1038/s41591-026-04498-0
+    doi: 10.1038/s41591-026-04498-0
+    type: primary
+conflicts: "The corresponding author has financial interests in Neuvotion, Inc., a neurotechnology device company, and in Sanguistat, LLC, and holds patents in neuroprosthetics, as the paper declares. The authors built the system they tested."
+what_would_change: "Results from more than one participant, and a comparison of daily-life function with and without the AI controller over months."
+notes: >-
+  verify: the text gives no calendar dates for the experiments (only the 2020 injury and a trial spanning more than 3 years), so achieved dates and window are left empty.
+  verify: the published date is the press date of 16 July 2026; the text read shows acceptance on 2 June 2026 and no day of publication.
+  verify: the trial is registered (NCT03680872) but this is a single participant, so the evidence grade is D.
+related: []
+history:
+  - date: 2026-11-18
+    note: Added by the backfill run.
+rationale: The same participant did the same grasp task with the deep-RL agent switched on and off, so the comparison isolates that AI component, though in one person.
+receipts:
+  - field: headline
+    quote: 87% success with RL and 27% success without RL
+    locator: Results, High-precision grasping with deep RL
+    source: 0
+  - field: impact
+    quote: 87% success with RL and 27% success without RL
+    locator: Results, High-precision grasping with deep RL
+    source: 0
+  - field: impact_number
+    quote: 87% success with RL and 27% success without RL
+    locator: Results, High-precision grasping with deep RL
+    source: 0
+  - field: effect.absolute
+    quote: 87% success with RL and 27% success without RL
+    locator: Results, High-precision grasping with deep RL
+    source: 0
+  - field: reach
+    quote: we enrolled a 42-year-old man with complete C4 sensory/C5 motor tetraplegia
+    locator: Main
+    source: 0

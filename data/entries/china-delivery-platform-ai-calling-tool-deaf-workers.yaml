@@ -1,0 +1,84 @@
+id: china-delivery-platform-ai-calling-tool-deaf-workers
+section: because
+rank: 82
+headline: >-
+  Because of an AI tool that turns text into phone calls, deaf or hard-of-hearing couriers on a Chinese food-delivery
+  platform had 11% fewer late deliveries and 22% fewer bad customer ratings.
+impact: "Late deliveries down 11% for deaf couriers"
+impact_number: "−11%"
+impact_label: "late deliveries for deaf or hard-of-hearing couriers after the AI calling tool"
+summary: >-
+  An NBER working paper compares deaf or hard-of-hearing couriers with non-disabled couriers before and after the
+  platform gave only the deaf couriers an AI tool that converts text prompts into automated phone calls to customers.
+caveat: >-
+  Read only through the NBER summary because the working paper's full text was unavailable; the platform is unnamed,
+  the data are its own administrative records, and the comparison is before and after against other couriers, not a
+  randomized trial.
+domain: accessibility
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Deaf or hard-of-hearing couriers before versus after the tool, relative to the same change in non-disabled couriers who did not get the tool (difference in differences)"
+effect:
+  relative: "Delivery times fell 3.5%, late deliveries fell 11% and bad customer ratings fell 22% for deaf or hard-of-hearing couriers"
+  absolute: null
+reach: "4,284 newly registered deaf or hard-of-hearing couriers on one of China's largest food delivery platforms"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-01
+  added: 2026-11-18
+  updated: 2026-11-18
+sources:
+  - title: "NBER Digest: AI and the Performance of Workers with Disabilities (summary of NBER Working Paper 35372, Empowering Inclusive Work), 1 October 2026"
+    url: https://www.nber.org/digest/202610/ai-and-performance-workers-disabilities
+    type: primary
+  - title: "NBER Working Paper 35372: Empowering Inclusive Work (record page; full text unavailable when read)"
+    url: https://www.nber.org/papers/w35372
+    doi: 10.3386/w35372
+    type: secondary
+conflicts: "The data are the delivery platform's proprietary administrative records, provided in collaboration with the platform; the acknowledgements say one author previously received compensation from the platform for unrelated work, and the paper was reviewed so that confidential information is not revealed. Funding is from Schmidt Sciences, the National Science Foundation, Chinese national research funds and the Gates Foundation. The platform built the tool."
+what_would_change: "The full working paper or a peer-reviewed version, with the sample period, the comparison group and the standard errors."
+notes: >-
+  verify: only the NBER non-technical summary could be read; the working paper page says its full text was temporarily unavailable. The rollout is dated only as mid-2022 and the sample as workers who joined between 2021 and 2023, so achieved dates and window are left empty.
+  verify: the summary gives percentages only, with no absolute levels, so effect.absolute is empty.
+related: []
+history:
+  - date: 2026-11-18
+    note: Added by the backfill run.
+rationale: The tool went only to deaf or hard-of-hearing couriers, and their change was compared with that of non-disabled couriers over the same period, so the comparison isolates the tool.
+receipts:
+  - field: headline
+    quote: Late deliveries declined by 11 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: headline
+    quote: Bad customer ratings fell by 22 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: impact
+    quote: Late deliveries declined by 11 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: impact_number
+    quote: Late deliveries declined by 11 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: effect.relative
+    quote: delivery times for DHH workers fell by 3.5 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: effect.relative
+    quote: Late deliveries declined by 11 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: effect.relative
+    quote: Bad customer ratings fell by 22 percent
+    locator: Summary, results paragraph
+    source: 0
+  - field: reach
+    quote: all 4,284 newly registered DHH workers
+    locator: Summary, data paragraph
+    source: 0
