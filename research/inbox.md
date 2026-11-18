@@ -378,3 +378,14 @@ Candidates: 138 over 2026-11-15 to 2026-11-17, 15 flagged randomized, 16 announc
 - AI-guided handheld echo for rheumatic heart disease screening, rural Nepal. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Already logged 2026-11-16.
 - Dublin AI flood warning rollout. Already logged 2026-11-16; no result reported yet.
 - Skipped: CADe trainee colonoscopy meta-analysis (review; the underlying RCTs are the leads), AEA registrations in development, model-accuracy and prediction papers, surveys, market and opinion pieces.
+
+## 2026-11-18 (daily scout)
+
+Candidates: 145 over 2026-11-16 to 2026-11-18, 11 flagged randomized, 13 announcements, 0 alerts, 38 source errors (Crossref 429s). No entries drafted.
+
+- Samsara Fleet Safety Report, AI dash cams: 37% lower crash rate at six months, 73% at 30 months, 2,600+ fleets. [Fleet World](https://vanfleetworld.co.uk/fleets-using-ai-safety-tech-cut-crash-rates-by-37-within-six-months-says-samsara/). Trade-press rewrite of a company report; reached drivers, but the comparison is unclear. Missing: Samsara's own report page, the baseline and how crash rates were compared.
+- HERMES ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway, cluster RCT, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Reader got a stub (JS-rendered record), still not read. Missing: a paper or readable results, dates, absolute numbers.
+- ieso six-week digital anxiety programme, ISRCTN52546704. [ISRCTN](https://www.isrctn.com/ISRCTN52546704). Results posted but the record is unreadable and the study is about engagement and acceptability; unclear that AI did the work.
+- WhatsApp foundational literacy programme, Pakistan, AEA 20081. [AEA](https://www.socialscienceregistry.org/trials/20081). Ongoing to 2026-11-30, registration only. Watch for results; check how AI is involved.
+- Dublin AI flood warning rollout, again in the news. Already logged 2026-11-16; no result yet.
+- Skipped: reviews and meta-analyses, education randomized trials without outcomes in people, prediction and model-accuracy papers, surveys, market and opinion pieces.
