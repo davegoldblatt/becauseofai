@@ -59,7 +59,7 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: headline
-    quote: "corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]"
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
     locator: Abstract, Results
     source: 0
   - field: headline
@@ -71,11 +71,11 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: "corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]"
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]"
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -83,14 +83,35 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]"
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "35.3%vs. 13.3%, p - 0.165"
+    quote: 35.3%vs. 13.3%, p - 0.165
     locator: Abstract, Results
     source: 0
   - field: reach
     quote: Of 107 patients screened, 100 were enrolled
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 53586cc4e2d2acbfd4784eb151b5625207d3ac0b2260633653a39331f5d36d57
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade."
+  record: gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json

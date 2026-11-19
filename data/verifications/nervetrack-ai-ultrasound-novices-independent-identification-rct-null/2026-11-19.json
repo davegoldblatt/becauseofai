@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
+  "date": "2026-11-19",
+  "as_of": "2026-11-19",
+  "entry_sha256": "8ec751ab8efb8ace13b7397781063ab51ec882f8396a0f88702d08df16aa2233",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-19"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1136/rapm-2026-108180",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-19T18:46:57.001Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1136%2Frapm-2026-108180%22&format=json&resultType=core",
+      "sha256": "6f57f536809139cc78ee138a6dc04ebc0261f546200368be53b3d7ad073b91be",
+      "chars": 2139,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "80 ultrasound novices (60 medical students and 20 anesthesiology residents)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the brachial plexus (35.0% vs 42.1%; RR 1.20, 95% CI 0.68 to 2.11; p=0.519)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the brachial plexus (35.0% vs 42.1%; RR 1.20, 95% CI 0.68 to 2.11; p=0.519)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "80 ultrasound novices (60 medical students and 20 anesthesiology residents)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "78 participants completed the study",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-19",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The randomized comparison used standardized training with versus without AI assistance, followed by assessment with AI disabled.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract supplies no study dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract contains no funding or disclosure statement, so conflicts cannot be determined; the entry acknowledges this limitation."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The study dates cannot be established from the abstract; the publication date does not date the measured outcomes."
+      },
+      "summary": "The abstract supports all quoted numbers and the randomized finding of no significant improvement in immediate independent identification. It supplies neither study dates nor confirmation that the primary endpoint was preregistered, so the window and evidence grade cannot be established under the supplied vocabulary."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12890,
+      "output": 583,
+      "total": 13473,
+      "cached": 0,
+      "reasoning": 84
+    },
+    "duration_ms": 15979
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

@@ -91,3 +91,24 @@ receipts:
     quote: 78 participants completed the study
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 8ec751ab8efb8ace13b7397781063ab51ec882f8396a0f88702d08df16aa2233
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: nervetrack-ai-ultrasound-novices-independent-identification-rct-null/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade."
+  record: nervetrack-ai-ultrasound-novices-independent-identification-rct-null/2026-11-19.json
