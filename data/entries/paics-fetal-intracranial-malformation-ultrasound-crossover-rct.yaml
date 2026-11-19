@@ -1,0 +1,72 @@
+id: paics-fetal-intracranial-malformation-ultrasound-crossover-rct
+section: because
+rank: 85
+headline: >-
+  AI assistance during real prenatal ultrasound scans of high-risk pregnancies at five Chinese centres raised
+  sonographers' sensitivity for fetal intracranial malformations by 0.087 without losing specificity.
+impact: "Sonographers caught more fetal brain malformations in high-risk pregnancies with AI assistance"
+impact_number: "+0.087"
+impact_label: "sensitivity for targeted fetal intracranial malformations with AI-assisted scanning (fetal-based analysis)"
+summary: >-
+  In a self-crossover randomized trial, sonographers scanned high-risk pregnancies once with real-time AI assistance
+  and once independently, and an expert panel reviewing the scan videos set the reference diagnosis.
+caveat: >-
+  Only the abstract could be read; the reference standard is an expert panel's review of the scan videos, sonographers
+  knew when AI was in use, and the outcome is detection sensitivity rather than later health outcomes.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Same sonographers scanning with PAICS-assisted real-time diagnosis vs independent real-time diagnosis, randomized order with a 4-week washout, against an expert-panel reference diagnosis"
+effect:
+  relative: null
+  absolute: "Fetal-based sensitivity increased by 0·087 (95% CI 0·029 to 0·147) with PAICS assistance"
+reach: "1584 scans of high-risk singleton pregnancies (11-32 weeks' gestation) at five Chinese centres"
+dates:
+  achieved_start: 2022-09-06
+  achieved_end: 2023-11-01
+  published: 2026-09-10
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China (The Lancet Digital Health, abstract via Europe PMC)"
+    url: https://doi.org/10.1016/j.landig.2026.101040
+    doi: 10.1016/j.landig.2026.101040
+    type: primary
+conflicts: "Funded by Chinese national, provincial and university research programmes; only the abstract could be read, so author ties to the PAICS developer were not seen."
+what_would_change: null
+notes: >-
+  verify: only the abstract was readable, so the dates and numbers come from it; the abstract is truncated after the sensitivity result and omits the specificity figures.
+  verify: registered as ChiCTR2200063424; registration timing was not checked.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: The same sonographers scanned with and without PAICS in randomized order with a washout, so the arms differ only by AI assistance.
+receipts:
+  - field: impact_number
+    quote: sensitivity increased by 0·087 (95% CI 0·029 to 0·147
+    locator: Abstract, Findings
+    source: 0
+  - field: effect.absolute
+    quote: sensitivity increased by 0·087 (95% CI 0·029 to 0·147
+    locator: Abstract, Findings
+    source: 0
+  - field: reach
+    quote: 1584 scans were completed
+    locator: Abstract, Findings
+    source: 0
+  - field: headline
+    quote: sensitivity increased by 0·087 (95% CI 0·029 to 0·147
+    locator: Abstract, Findings
+    source: 0
+  - field: dates.achieved_start
+    quote: Between Sept 6, 2022 and Nov 1, 2023, 1584 scans were completed
+    locator: Abstract, Findings
+    source: 0
+  - field: dates.achieved_end
+    quote: Between Sept 6, 2022 and Nov 1, 2023, 1584 scans were completed
+    locator: Abstract, Findings
+    source: 0
