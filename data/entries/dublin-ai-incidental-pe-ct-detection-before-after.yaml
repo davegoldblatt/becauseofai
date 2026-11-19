@@ -72,3 +72,13 @@ receipts:
     quote: September 1-December 31, 2023 (following introduction of AI)
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 2231706e5192be41b40538642d2137c1668ddb39650553305c033982983467ca
+held:
+  reason: ungrounded
+  since: 2026-11-19
+  detail: No receipt for headline.
+  record: dublin-ai-incidental-pe-ct-detection-before-after/2026-11-19.json

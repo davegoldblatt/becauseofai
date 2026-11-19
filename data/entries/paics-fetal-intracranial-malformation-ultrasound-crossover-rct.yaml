@@ -70,3 +70,24 @@ receipts:
     quote: Between Sept 6, 2022 and Nov 1, 2023, 1584 scans were completed
     locator: Abstract, Findings
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 0ee10aabb1c419f644f05749b77a7f56486ba08950f554774afe392ca7015f30
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: paics-fetal-intracranial-malformation-ultrasound-crossover-rct/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter A, verifier could not grade."
+  record: paics-fetal-intracranial-malformation-ultrasound-crossover-rct/2026-11-19.json

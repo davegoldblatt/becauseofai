@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "dublin-ai-incidental-pe-ct-detection-before-after",
+  "date": "2026-11-19",
+  "as_of": "2026-11-19",
+  "entry_sha256": "2231706e5192be41b40538642d2137c1668ddb39650553305c033982983467ca",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-19"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1093/bjr/tqag222",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-19T01:39:33.822Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbjr%2Ftqag222%22&format=json&resultType=core",
+      "sha256": "222d7b698b4731ffd98932fd4244a3fb66da36eb7bffdccdd2e57f59dbae2652",
+      "chars": 2410,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The segmental iPE detection rate increased significantly (0.08% vs 0.42%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 11 690 contrast-enhanced CT studies were analyzed, 10 411 of which were eligible non-computed tomography pulmonary angiography",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "September 1-December 31, 2023 (following introduction of AI)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "September 1-December 31, 2023 (following introduction of AI)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for headline."
+  }
+}

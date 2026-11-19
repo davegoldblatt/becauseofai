@@ -55,3 +55,24 @@ receipts:
     quote: A total of 60 university students with academic anxiety were included
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: b32abf198aea58a9509832bd708e51b44513562a2bd650a11d3c3d25bb7c9097
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade."
+  record: wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json
