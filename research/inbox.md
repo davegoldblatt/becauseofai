@@ -389,3 +389,13 @@ Candidates: 145 over 2026-11-16 to 2026-11-18, 11 flagged randomized, 13 announc
 - WhatsApp foundational literacy programme, Pakistan, AEA 20081. [AEA](https://www.socialscienceregistry.org/trials/20081). Ongoing to 2026-11-30, registration only. Watch for results; check how AI is involved.
 - Dublin AI flood warning rollout, again in the news. Already logged 2026-11-16; no result yet.
 - Skipped: reviews and meta-analyses, education randomized trials without outcomes in people, prediction and model-accuracy papers, surveys, market and opinion pieces.
+
+## 2026-11-19 (daily scout)
+
+Candidates: 157 over 2026-11-17 to 2026-11-19, 10 flagged randomized, 16 announcements, 0 alerts, 55 source errors (Crossref 429s). No entries drafted.
+
+- AI-enabled mentor-supervised case teaching in neurosurgery residency, 62 trainees, single centre, non-randomized, 2024-06-01 to 2026-05-31. [BMC Medical Education](https://doi.org/10.1186/s12909-026-10225-7). Read in full: composite score MD 4.36 (95% CI 2.58 to 6.14) versus lecture-based teaching. Reached trainees and has a comparison, but no baseline scores, allocation not random, imbalanced dose. Candidate for a speculative or reasonable entry; missing: a cautious grade call and whether the AI did something that would not otherwise have happened.
+- Fujitsu Japan AI study, 89% smaller clinical-trial patient review pool. [IBTimes Japan](https://jp.ibtimes.com/fujitsu-japan-ai-study-cuts-clinical-trial-patient-review-pool-89-105276). News rewrite. Missing: Fujitsu's own page, whether real patients were enrolled faster.
+- Samsara AI dash cams (37% lower crash rate). Already logged 2026-11-18.
+- HERMES ISRCTN18106677. Already logged 2026-11-17 and 2026-11-18; still unread.
+- Skipped: reviews and meta-analyses, protocols, prediction and model-accuracy papers, surveys, the Baltimore Omnilert lawsuit, earnings and market pieces.
