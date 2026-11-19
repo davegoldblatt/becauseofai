@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
+  "date": "2026-11-19",
+  "as_of": "2026-11-19",
+  "entry_sha256": "5d3cd7a95418bfbb9fe5db14c5e55921f066e6ac167619aaf7ba2a89c3f13ef4",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-19"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.appet.2026.108773",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-19T09:43:03.822Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.appet.2026.108773%22&format=json&resultType=core",
+      "sha256": "33b9807e2850273fc58a3f0fda07969793bbe75ea0f279f7b72407efe8504435",
+      "chars": 2124,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "we conducted a preregistered two-week randomised controlled trial with 587 adolescents",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "we conducted a preregistered two-week randomised controlled trial with 587 adolescents",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "increasingly chose plant-based lunches over time (from 44% to 59%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "increasingly chose plant-based lunches over time (from 44% to 59%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "OR = 1.06 per day",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-19",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The comparison between LLM-tailored and non-tailored messages isolates the added effect of AI linguistic tailoring.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract gives intervention duration but no calendar dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract provides no funding or competing-interest disclosures; the entry acknowledges that these remain unchecked."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because no intervention calendar dates are supplied; publication date does not establish when outcomes occurred."
+      },
+      "summary": "The abstract supports a preregistered randomized trial of 587 adolescents showing no additional short-term behavioural benefit from LLM tailoring and supports all receipted numbers. It does not establish when the intervention occurred or disclose funding and author ties."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12403,
+      "output": 576,
+      "total": 12979,
+      "cached": 0,
+      "reasoning": 115
+    },
+    "duration_ms": 15027
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The abstract supports a preregistered randomized trial of 587 adolescents showing no additional short-term behavioural benefit from LLM tailoring and supports all receipted numbers. It does not establish when the intervention occurred or disclose funding and author ties.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "Not dated yet (The dated test fails because no intervention calendar dates are supplied; publication date does not establish when outcomes occurred.)."
+    ]
+  }
+}

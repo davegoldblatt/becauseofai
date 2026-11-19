@@ -1,0 +1,88 @@
+id: llm-tailored-health-messages-adolescent-plant-based-lunch-null
+section: not-because
+rank: 23
+headline: >-
+  Rewriting daily health messages in each adolescent's own style with an LLM added no extra plant-based lunch choices
+  over plain messages in a trial of 587 UK and Irish adolescents.
+impact: "No extra benefit from LLM tailoring"
+impact_number: "44% to 59%"
+impact_label: "plant-based lunch choices over two weeks with daily messages, tailored or not"
+summary: >-
+  Adolescents got no messages, plain health messages, or LLM style-tailored messages for two weeks, and their choice of
+  a plant-based lunch was tracked.
+caveat: >-
+  Only the abstract could be read; the gain came from receiving messages at all, and the LLM tailoring itself showed
+  no extra short-term behavioural effect, only higher ratings of relevance in exploratory analyses.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "LLM style-tailored health messages vs non-tailored messages vs no messages, over two weeks"
+effect:
+  relative: "odds ratio 1.06 per day for choosing a plant-based lunch with messages, tailored or not"
+  absolute: "plant-based lunch choices rose from 44% to 59% with daily messages and stayed at 45-46% with none"
+reach: "587 adolescents aged about 13 in the UK and Ireland"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-03
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "The effect of AI-based linguistically tailored health messages on plant-based lunch choices of adolescents: A randomised controlled trial (Appetite; abstract via Europe PMC)"
+    url: https://doi.org/10.1016/j.appet.2026.108773
+    doi: 10.1016/j.appet.2026.108773
+    type: primary
+conflicts: "none stated in the abstract read; the full text could not be read, so funding and author ties are unchecked."
+what_would_change: "A longer trial in which LLM-tailored messages beat non-tailored messages on actual food choices."
+notes: >-
+  verify: the abstract gives no calendar dates for the two-week trial, so the achieved dates and the window grade are left empty.
+  verify: the 44% to 59% rise is for the message arms combined; the abstract reports no separate figure for the tailored arm.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: The tailored and non-tailored message arms differ only in the LLM style transfer, and the abstract reports the same behavioural effect in both.
+receipts:
+  - field: headline
+    quote: we conducted a preregistered two-week randomised controlled trial with 587 adolescents
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: we conducted a preregistered two-week randomised controlled trial with 587 adolescents
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: increasingly chose plant-based lunches over time (from 44% to 59%
+    locator: Abstract, results
+    source: 0
+  - field: effect.absolute
+    quote: increasingly chose plant-based lunches over time (from 44% to 59%
+    locator: Abstract, results
+    source: 0
+  - field: effect.relative
+    quote: OR = 1.06 per day
+    locator: Abstract, results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 5d3cd7a95418bfbb9fe5db14c5e55921f066e6ac167619aaf7ba2a89c3f13ef4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: pass
+  record: llm-tailored-health-messages-adolescent-plant-based-lunch-null/2026-11-19.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - Not dated yet (The dated test fails because no intervention calendar dates are supplied; publication date does not establish when outcomes occurred.).

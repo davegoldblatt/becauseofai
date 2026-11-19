@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
+  "date": "2026-11-19",
+  "as_of": "2026-11-19",
+  "entry_sha256": "61e9860271d57c04cc0412b60465d03a315e9c75a94a8ccf909cd662706d3fda",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-19"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s40290-026-00630-0",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-19T09:42:02.866Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13649876/fullTextXML",
+      "sha256": "706d1e3d1b940e6122e07cb43b0c487ef97d23e36cc9b13c94513acc4b5461d1",
+      "chars": 48984,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "This randomized crossover study enrolled 27 MSLs from six Amgen Asia-Pacific affiliates",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "between July and September 2025",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "between July and September 2025",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact."
+  }
+}

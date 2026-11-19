@@ -384,3 +384,18 @@ Rejected:
 - TI-RADS multi-view AI teaching RCT: resident interpretation accuracy only.
 - Ambient AI nurse survey (medRxiv): perceptions survey.
 - Other flagged medRxiv items (spectral CT, ovarian metabolomics, SHAP COVID, seizure prediction, sepsis and risk models): retrospective models or benchmarks. Protocol: LLM robot for MCI.
+
+## 2026-11-19, slice 24: papers and trial results, 2026-08-31 to 2026-09-07
+
+Drafted (2):
+- amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover: Pharmaceutical Medicine full text, 27 Amgen liaisons, satisfaction 3.304 vs 2.541 (randomized crossover, Jul-Sep 2025, window pre; Amgen authors, stated).
+- llm-tailored-health-messages-adolescent-plant-based-lunch-null: Appetite abstract, 587 adolescents, LLM-tailored messages no better than plain messages (not-because; no dates, window empty).
+
+Rejected:
+- AINAR blood-donor needle-fear game RCT (abstract): VVR 1.13% vs 1.8%, not significant; abstract never says what the AI did (same call as slice 22).
+- Pediatric asthma LLM education materials (JMIR, full text): raters scored materials, no health outcome in people.
+- ChatMD code status simulation pilot RCT (abstract): residents, p = 0.35 and 0.15, simulated encounter only.
+- Scaffolded AI problem-based learning for interns (JMIR, full text): retrospectively registered education evaluation, not drafted this run.
+- Nigerian teaching hospital AI triage platform (medRxiv): single-group pilot, no comparison on an outcome.
+- Chart summarization RCT (medRxiv): already entry ucla-chart-summarizer-rct.
+- Cornea LLM, e-consult vignette, diabetes app secondary analysis, EEG tDCS, meta-analyses, protocols, and the other medRxiv model or benchmark items: accuracy, vignette, secondary or retrospective only.
