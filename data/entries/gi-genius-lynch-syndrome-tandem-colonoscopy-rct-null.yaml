@@ -1,0 +1,117 @@
+id: gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null
+section: not-because
+rank: 24
+headline: >-
+  AI-assisted colonoscopy (GI Genius) did not significantly raise incremental
+  adenoma detection in Lynch syndrome (33.3% vs 11.1%) in a randomized tandem
+  trial of 100 patients.
+impact: "No significant gain in adenoma detection in Lynch syndrome (RCT)"
+impact_number: "33.3% vs 11.1%"
+impact_label: "incremental adenoma detection, AI-assisted vs HD white-light second colonoscopy, not significant"
+summary: >-
+  Patients with Lynch syndrome had a first high-definition white-light
+  colonoscopy, then were randomized to a second colonoscopy with either
+  white-light again or the AI device. The second exam found more additional
+  adenomas with AI, but the difference was not statistically significant.
+caveat: >-
+  Very few adenomas were found (12 and 6 in the AI group, 16 and 2 in the
+  control group), so the trial is too small to rule out a real benefit; only the
+  abstract could be read and it gives no study dates.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "AI-assisted second colonoscopy vs high-definition white-light second colonoscopy after a first white-light exam, 1:1 randomized, single centre"
+effect:
+  relative: "OR 4.0, 95% CI (0.68-23.40); p value- 0.124 for per-polyp incremental detection"
+  absolute: "Incremental adenoma detection rate 33.3% with AI vs 11.1% with HD-WLE per polyp; per patient 35.3% vs 13.3% (p - 0.165)"
+reach: "100 patients with Lynch syndrome enrolled from 107 screened, at a single centre"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-15
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Digestive and Liver Disease: The yield of artificial intelligence (GI genius) in Lynch syndrome - a randomized tandem-colonoscopy trial (Ido et al.), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.dld.2026.08.020
+    doi: 10.1016/j.dld.2026.08.020
+    type: primary
+conflicts: >-
+  The abstract carries no funding or disclosure statement; the full text, which
+  may name the device vendor and any author ties, could not be read.
+what_would_change: "A larger Lynch syndrome trial showing significantly more adenomas, or fewer interval cancers, with AI-assisted colonoscopy."
+notes: >-
+  Filed under not-because: no significant difference in adenoma or polyp
+  detection. The device named in the title is GI Genius.
+  verify: the source gives no study period, so the achieved dates and window are
+  left empty; trial registration and vendor ties, from the full text.
+related: [genial-co-cade-surveillance-colonoscopy-italy-null, eagle-cadde-colonoscopy-rct]
+history:
+  - date: 2026-11-19
+    note: "Added by the backfill run."
+rationale: Every patient had the same first colonoscopy and the second exam differed only in whether the AI device was used, so the comparison isolates the AI aid (isolated).
+receipts:
+  - field: headline
+    quote: corresponding to incremental detection rate (IDR) of 33.3%
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Of 107 patients screened, 100 were enrolled
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: corresponding to incremental detection rate (IDR) of 33.3%
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: corresponding to incremental detection rate (IDR) of 33.3%
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: corresponding to IDR of 11.1% [OR 4.0, 95% CI (0.68-23.40); p value- 0.124]
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 35.3%vs. 13.3%, p - 0.165
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Of 107 patients screened, 100 were enrolled
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 53586cc4e2d2acbfd4784eb151b5625207d3ac0b2260633653a39331f5d36d57
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade."
+  record: gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json
