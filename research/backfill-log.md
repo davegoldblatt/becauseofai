@@ -399,3 +399,18 @@ Rejected:
 - Nigerian teaching hospital AI triage platform (medRxiv): single-group pilot, no comparison on an outcome.
 - Chart summarization RCT (medRxiv): already entry ucla-chart-summarizer-rct.
 - Cornea LLM, e-consult vignette, diabetes app secondary analysis, EEG tDCS, meta-analyses, protocols, and the other medRxiv model or benchmark items: accuracy, vignette, secondary or retrospective only.
+
+## 2026-11-19, slice 20: papers and trial results, 2026-09-14 to 2026-09-21
+
+Drafted (2):
+- gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null: Digestive and Liver Disease abstract, 100 Lynch syndrome patients, incremental adenoma detection 33.3% vs 11.1% not significant (not-because; no dates, window empty).
+- nervetrack-ai-ultrasound-novices-independent-identification-rct-null: Reg Anesth Pain Med abstract, 80 novices, median-nerve success 65.8% vs 57.5% not significant (not-because; training study, no dates, window empty).
+
+Rejected:
+- Shadow-mode aneurysm CTA (JACR, abstract): radiologists blinded to the AI, so it changed no care.
+- ADHD rhythm phonological training RCT (Frontiers, full text): AI-supported teaching in every arm; the contrast is rhythm content, not the AI.
+- ENDO-AID Endocuff letter: a comment, no results.
+- Fasting weight-loss microbiome ML, mental-health chatbot vignette experiment, CKD systematic review: predictors, vignette, review.
+- TAILORx and PARTNER AI biomarker papers, spectral CT image quality, ACCESS-SHD 1-lead ECG, causal AI clinician for septic shock, GenEHR and the other medRxiv items: retrospective models or accuracy only.
+- Prehospital stroke ML, long-term-care mortality model, length-of-stay models, crash-narrative LLM, reviews and surveys: retrospective or accuracy only.
+- Only four sources were read with the reader this run; the rest were set aside from titles and abstracts shown in the candidate file as plainly retrospective, accuracy, review or protocol.

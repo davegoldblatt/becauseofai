@@ -1,0 +1,93 @@
+id: nervetrack-ai-ultrasound-novices-independent-identification-rct-null
+section: not-because
+rank: 25
+headline: >-
+  Brief AI-assisted nerve-tracking training did not significantly improve
+  first-attempt independent median-nerve identification (65.8% vs 57.5%) among
+  80 ultrasound novices.
+impact: "No significant gain in independent nerve identification after AI-assisted training (RCT)"
+impact_number: "65.8% vs 57.5%"
+impact_label: "first-attempt median-nerve identification, AI-assisted vs control training, not significant"
+summary: >-
+  Medical students and anesthesiology residents with no ultrasound experience
+  were randomized to B-mode ultrasound training with or without a real-time
+  nerve-tracking system (NerveTrack), then tested with the AI switched off.
+  Success on the first attempt did not differ significantly.
+caveat: >-
+  A training study in novices, not patient care; the abstract says the findings
+  do not establish long-term retention, transfer, or clinical procedural
+  performance. Only the abstract could be read and it gives no study dates.
+domain: education
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Training with a real-time AI nerve-tracking system vs B-mode ultrasound training without AI, randomized, tested with AI disabled"
+effect:
+  relative: "Median nerve RR 1.14, 95% CI 0.81 to 1.62; p=0.452; brachial plexus RR 1.20, 95% CI 0.68 to 2.11; p=0.519"
+  absolute: "Median nerve 65.8% with AI vs 57.5% control; supraclavicular brachial plexus 42.1% vs 35.0%"
+reach: "80 ultrasound novices (60 medical students and 20 anesthesiology residents) randomized, 78 completed"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-18
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Regional Anesthesia and Pain Medicine: Real-time AI-assisted nerve tracking for ultrasound-guided nerve identification: a prospective randomized trial (Kim et al.), abstract via Europe PMC"
+    url: https://doi.org/10.1136/rapm-2026-108180
+    doi: 10.1136/rapm-2026-108180
+    type: primary
+conflicts: >-
+  The abstract carries no funding or disclosure statement; the full text, which
+  may name the NerveTrack developer and any author ties, could not be read.
+what_would_change: "A trial showing that AI-assisted training improves retention, transfer to other anatomy, or procedural performance on patients."
+notes: >-
+  Filed under not-because: the primary outcome did not differ. Participants who
+  later received additional AI-assisted training reported higher confidence for
+  the brachial plexus (4.7 vs 4.4, p=0.046), which is not claimed as a benefit.
+  verify: the source gives no study period, so the achieved dates and window are
+  left empty; the registration is NCT05857787 per the abstract.
+related: [ksau-ai-caries-training-dental-students-null]
+history:
+  - date: 2026-11-19
+    note: "Added by the backfill run."
+rationale: Both groups received the same lecture and hands-on session and differed only in whether the real-time AI tracking was used, so the comparison isolates the AI aid (isolated).
+receipts:
+  - field: headline
+    quote: for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: 80 ultrasound novices (60 medical students and 20 anesthesiology residents)
+    locator: Abstract, Methods
+    source: 0
+  - field: impact_number
+    quote: for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: the brachial plexus (35.0% vs 42.1%; RR 1.20, 95% CI 0.68 to 2.11; p=0.519)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: for the median nerve (57.5% vs 65.8%; RR 1.14, 95% CI 0.81 to 1.62; p=0.452)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: the brachial plexus (35.0% vs 42.1%; RR 1.20, 95% CI 0.68 to 2.11; p=0.519)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 80 ultrasound novices (60 medical students and 20 anesthesiology residents)
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: 78 participants completed the study
+    locator: Abstract, Results
+    source: 0
