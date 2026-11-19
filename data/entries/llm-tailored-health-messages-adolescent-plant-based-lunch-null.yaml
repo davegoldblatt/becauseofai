@@ -66,3 +66,23 @@ receipts:
     quote: OR = 1.06 per day
     locator: Abstract, results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 5d3cd7a95418bfbb9fe5db14c5e55921f066e6ac167619aaf7ba2a89c3f13ef4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: pass
+  record: llm-tailored-health-messages-adolescent-plant-based-lunch-null/2026-11-19.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - Not dated yet (The dated test fails because no intervention calendar dates are supplied; publication date does not establish when outcomes occurred.).

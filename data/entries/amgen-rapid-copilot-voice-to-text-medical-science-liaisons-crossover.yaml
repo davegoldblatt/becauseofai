@@ -70,3 +70,13 @@ receipts:
     quote: between July and September 2025
     locator: Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 61e9860271d57c04cc0412b60465d03a315e9c75a94a8ccf909cd662706d3fda
+held:
+  reason: ungrounded
+  since: 2026-11-19
+  detail: No receipt for impact.
+  record: amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover/2026-11-19.json
