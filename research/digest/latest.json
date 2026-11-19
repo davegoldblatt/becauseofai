@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-18T14:11:43.145Z",
-  "since": "2026-11-17T14:11:43Z",
+  "generated_at": "2026-11-19T14:11:11.139Z",
+  "since": "2026-11-18T14:11:11Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 58,
-    "held": 48,
+    "published": 60,
+    "held": 55,
     "counts": {
       "because": 22,
       "not-because": 7,
@@ -12,96 +12,68 @@
     },
     "lower_levels": {
       "reasonable": 6,
-      "speculative": 18
+      "speculative": 20
     },
     "changed": [
       {
-        "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
-        "headline": "Because of AutoWeed AI spot spraying, sugarcane field trials in reef catchments used 35% less herbicide than broadcast spraying at 97% weed efficacy.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "central-co-op-wasteinsight-ai-food-waste-avoided",
-        "headline": "Because of Retail Insight's AI markdown system, Central Co-op says it avoided 8,796 tonnes of food waste and sold 32,449,817 reduced-to-clear items across its stores.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
-        "headline": "Because of Kisan-eMitra's AI upgrade, India's PM-KISAN chatbot answered 2.69 million farmer queries in 186 days, a 668% increase over manual grievance handling, Wadhwani AI says.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "nestle-zest-ai-surplus-redistribution-fareshare",
-        "headline": "Because of Zest's AI surplus-matching, a UK consortium redistributed 201.9 tonnes of Nestlé factory surplus to charities, supporting an estimated 94,133 people.",
+        "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
+        "headline": "In a randomized crossover trial of 27 Amgen medical science liaisons, AI voice-to-text (Microsoft Copilot) raised their documentation satisfaction score from 2.541 to 3.304 against manual CRM entry.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
-        "headline": "Because of an AI-based smart fish feeder, small-scale tilapia farmers in Negeri Sembilan, Malaysia cut manual feeding time by 70% and feed waste by 20%, SEARCA reports.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "dvla-webchat-chatbot-handling-time",
-        "headline": "Because of an AI chatbot on its webchat, the DVLA says average handling time fell from 8 minutes to 2 minutes 30 seconds and 25% to 30% of queries needed no adviser.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "indiana-ai-transcripts-expedited-mental-health-appeals",
-        "headline": "Because AI-assisted transcripts could be produced within minutes, Indiana's Marion County expedited mental-health appeals pilot reached a Court of Appeals opinion in an average of 30.85 days, against 143.3 days in 2023.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "mhclg-planassist-householder-planning-tasks",
-        "headline": "Because of PlanAssist, an AI tool for planning officers, England's housing ministry says early testing in three councils cut time spent on key planning tasks by 58%.",
+        "id": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
+        "headline": "Rewriting daily health messages in each adolescent's own style with an LLM added no extra plant-based lunch choices over plain messages in a trial of 587 UK and Irish adolescents.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/mhclg-planassist-householder-planning-tasks"
+        "url": "https://becauseofai.org/entry/llm-tailored-health-messages-adolescent-plant-based-lunch-null"
       },
       {
-        "id": "westminster-council-copilot-studio-chatbot-contact-centre",
-        "headline": "Because of a Copilot Studio chatbot, Westminster City Council says its chatbot handled 33,400 resident queries since September 2025, resolving 89.5% without a human agent.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "rzx-ai-blood-cell-morphology-technologists-rct",
-        "headline": "Because of AI, medical laboratory technologists at a Chinese teaching hospital who trained for two weeks on an AI platform with real-time probability feedback scored higher on a blood cell morphology test than colleagues who used textbooks and atlases, in a randomised study of 52 technologists.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "genial-co-cade-surveillance-colonoscopy-italy-null",
-        "headline": "AI-assisted colonoscopy did not significantly raise the adenoma detection rate (66.6% vs 61.0%) among 914 Italian screening-programme patients undergoing surveillance colonoscopy, and lengthened withdrawal time.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
-        "headline": "AI-guided wearable monitoring after heart-failure discharge at five Veterans Affairs hospitals did not significantly cut heart-failure rehospitalization (16.3% vs 18.7%) compared with standard care.",
+        "id": "dublin-ai-incidental-pe-ct-detection-before-after",
+        "headline": "After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported incidental PE rose from 0.35% to 0.63% of eligible scans.",
         "change": "added",
         "state": "held (ungrounded)",
         "url": null
       },
       {
-        "id": "mount-sinai-ai-cds-postoperative-delirium-rct-null",
-        "headline": "An AI-driven decision-support prompt for anesthesia teams caring for 7,294 surgical patients with cognitive impairment at Mount Sinai did not significantly change postoperative delirium (35.1% vs 32.7%) or adherence to best practices.",
+        "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
+        "headline": "Second-year medical students in Tamil Nadu who studied a drug class with generative AI remembered 61.4% of it after one month, against 35.9% for the class they studied from textbooks.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
+        "headline": "AI assistance during real prenatal ultrasound scans of high-risk pregnancies at five Chinese centres raised sonographers' sensitivity for fetal intracranial malformations by 0.087 without losing specificity.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
+        "headline": "A language-model virtual CBT coach in VR cut academic anxiety in 60 university students about as much as face-to-face CBT, and more than a minimal-support control, in a small randomized trial.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "china-delivery-platform-ai-calling-tool-deaf-workers",
+        "headline": "Because of an AI tool that turns text into phone calls, deaf or hard-of-hearing couriers on a Chinese food-delivery platform had 11% fewer late deliveries and 22% fewer bad customer ratings.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "feinstein-double-neural-bypass-rl-grasp-tetraplegia",
+        "headline": "Because of a deep reinforcement-learning grip controller in a brain-computer interface, a man with complete tetraplegia kept his grasp force within the set limit in 87% of trials, against 27% without it.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/feinstein-double-neural-bypass-rl-grasp-tetraplegia"
+      },
+      {
+        "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
+        "headline": "Because of an AI smartphone navigation app, 14 blind or visually impaired white-cane users needed 72% fewer verbal corrections and took 13% less time on a 150-metre outdoor path than with Google Maps.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
@@ -137,6 +109,13 @@
         "detail": "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline.."
       },
       {
+        "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
+        "headline": "In a randomized crossover trial of 27 Amgen medical science liaisons, AI voice-to-text (Microsoft Copilot) raised their documentation satisfaction score from 2.541 to 3.304 against manual CRM entry.",
+        "reason": "ungrounded",
+        "since": "2026-11-19",
+        "detail": "No receipt for impact."
+      },
+      {
         "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
         "headline": "Because of AutoWeed AI spot spraying, sugarcane field trials in reef catchments used 35% less herbicide than broadcast spraying at 97% weed efficacy.",
         "reason": "grade-split",
@@ -158,6 +137,13 @@
         "detail": "window: drafter no grade, verifier pre."
       },
       {
+        "id": "china-delivery-platform-ai-calling-tool-deaf-workers",
+        "headline": "Because of an AI tool that turns text into phone calls, deaf or hard-of-hearing couriers on a Chinese food-delivery platform had 11% fewer late deliveries and 22% fewer bad customer ratings.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "window: drafter no grade, verifier pre."
+      },
+      {
         "id": "chongqing-ai-boppps-cbl-neurology-interns-rct",
         "headline": "Because of AI, junior-college medical interns on a neurology rotation in Chongqing who got DeepSeek-supported case-based teaching scored higher on a simulated neurological-emergency assessment than interns on conventional teaching, in a randomized study of 118 interns.",
         "reason": "grade-split",
@@ -170,6 +156,13 @@
         "reason": "grade-split",
         "since": "2026-11-13",
         "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled."
+      },
+      {
+        "id": "dublin-ai-incidental-pe-ct-detection-before-after",
+        "headline": "After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported incidental PE rose from 0.35% to 0.63% of eligible scans.",
+        "reason": "ungrounded",
+        "since": "2026-11-19",
+        "detail": "No receipt for headline."
       },
       {
         "id": "dvla-webchat-chatbot-handling-time",
@@ -242,6 +235,13 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
+        "headline": "Second-year medical students in Tamil Nadu who studied a drug class with generative AI remembered 61.4% of it after one month, against 35.9% for the class they studied from textbooks.",
+        "reason": "grade-split",
+        "since": "2026-11-19",
+        "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled."
+      },
+      {
         "id": "khanmigo-hamilton-county-remedial-math-rct",
         "headline": "A two-year cluster randomized trial in 18 Tennessee middle schools found that remedial-math students given Khan Academy with the Khanmigo AI tutor gained 1.3 national percentile ranks per term more than control grades, a small gain the authors say resembles Khan Academy practice without AI.",
         "reason": "ungrounded",
@@ -298,6 +298,13 @@
         "detail": "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration.."
       },
       {
+        "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
+        "headline": "Because of an AI smartphone navigation app, 14 blind or visually impaired white-cane users needed 72% fewer verbal corrections and took 13% less time on a 150-metre outdoor path than with Google Maps.",
+        "reason": "grade-split",
+        "since": "2026-11-18",
+        "detail": "evidence: drafter C, verifier could not grade."
+      },
+      {
         "id": "montpellier-ai-discharge-docs-null",
         "headline": "An LLM that drafted discharge documents for 153 children leaving a paediatric emergency department did not improve how well families understood them.",
         "reason": "grade-split",
@@ -352,6 +359,13 @@
         "reason": "no-primary-source",
         "since": "2026-10-25",
         "detail": "No source is typed primary."
+      },
+      {
+        "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
+        "headline": "AI assistance during real prenatal ultrasound scans of high-risk pregnancies at five Chinese centres raised sonographers' sensitivity for fetal intracranial malformations by 0.087 without losing specificity.",
+        "reason": "grade-split",
+        "since": "2026-11-19",
+        "detail": "evidence: drafter A, verifier could not grade."
       },
       {
         "id": "rosie-chatbot-maternal-null",
@@ -431,6 +445,13 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
+        "headline": "A language-model virtual CBT coach in VR cut academic anxiety in 60 university students about as much as face-to-face CBT, and more than a minimal-support control, in a small randomized trial.",
+        "reason": "grade-split",
+        "since": "2026-11-19",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
         "id": "xaia-vr-cbt-ibd-pilot",
         "headline": "Because of an AI conversational avatar in virtual reality, adults with inflammatory bowel disease reported lower pain and anxiety right after a single cognitive-behavioral-therapy session, in a small two-centre pilot with no control group.",
         "reason": "grade-split",
@@ -448,12 +469,12 @@
   },
   "verifications": [
     {
-      "id": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
-      "date": "2026-11-17",
+      "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
+      "date": "2026-11-19",
       "result": "held",
       "reason": "ungrounded",
-      "detail": "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline..",
-      "record": "ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-17.json"
+      "detail": "No receipt for impact.",
+      "record": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover/2026-11-19.json"
     },
     {
       "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
@@ -472,36 +493,36 @@
       "record": "central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json"
     },
     {
-      "id": "dvla-webchat-chatbot-handling-time",
-      "date": "2026-11-17",
+      "id": "china-delivery-platform-ai-calling-tool-deaf-workers",
+      "date": "2026-11-18",
       "result": "held",
       "reason": "grade-split",
       "detail": "window: drafter no grade, verifier pre.",
-      "record": "dvla-webchat-chatbot-handling-time/2026-11-17.json"
+      "record": "china-delivery-platform-ai-calling-tool-deaf-workers/2026-11-18.json"
     },
     {
-      "id": "genial-co-cade-surveillance-colonoscopy-italy-null",
-      "date": "2026-11-17",
+      "id": "dublin-ai-incidental-pe-ct-detection-before-after",
+      "date": "2026-11-19",
       "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "genial-co-cade-surveillance-colonoscopy-italy-null/2026-11-17.json"
+      "reason": "ungrounded",
+      "detail": "No receipt for headline.",
+      "record": "dublin-ai-incidental-pe-ct-detection-before-after/2026-11-19.json"
     },
     {
-      "id": "indiana-ai-transcripts-expedited-mental-health-appeals",
-      "date": "2026-11-17",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier pre.",
-      "record": "indiana-ai-transcripts-expedited-mental-health-appeals/2026-11-17.json"
+      "id": "feinstein-double-neural-bypass-rl-grasp-tetraplegia",
+      "date": "2026-11-18",
+      "result": "published",
+      "reason": null,
+      "detail": "The paper supports 87% versus 27% mean session-level grasp success in one participant with RL on versus off. Both conditions used an AI decoder, and the supplied text does not establish when these experiments occurred.",
+      "record": "feinstein-double-neural-bypass-rl-grasp-tetraplegia/2026-11-18.json"
     },
     {
-      "id": "jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment",
-      "date": "2026-11-17",
+      "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
+      "date": "2026-11-19",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment/2026-11-17.json"
+      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
+      "record": "kanyakumari-ai-assisted-learning-medical-students-retention/2026-11-19.json"
     },
     {
       "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
@@ -512,28 +533,20 @@
       "record": "kisan-emitra-ai-chatbot-pm-kisan-queries/2026-11-18.json"
     },
     {
-      "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
-      "date": "2026-11-17",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitaliza",
-      "record": "link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json"
-    },
-    {
-      "id": "mhclg-planassist-householder-planning-tasks",
-      "date": "2026-11-17",
+      "id": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
+      "date": "2026-11-19",
       "result": "published",
       "reason": null,
-      "detail": "The complete government press release supports the reported 58% task-time reduction and expansion to 15 councils. It supplies neither an identifiable measurement comparison nor achieved dates, so the study does not pass all four tests.",
-      "record": "mhclg-planassist-householder-planning-tasks/2026-11-17.json"
+      "detail": "The abstract supports a preregistered randomized trial of 587 adolescents showing no additional short-term behavioural benefit from LLM tailoring and supports all receipted numbers. It does not establish when the intervention occurred or disclose funding and author ties.",
+      "record": "llm-tailored-health-messages-adolescent-plant-based-lunch-null/2026-11-19.json"
     },
     {
-      "id": "mount-sinai-ai-cds-postoperative-delirium-rct-null",
-      "date": "2026-11-17",
+      "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
+      "date": "2026-11-18",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "mount-sinai-ai-cds-postoperative-delirium-rct-null/2026-11-17.json"
+      "detail": "evidence: drafter C, verifier could not grade.",
+      "record": "mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json"
     },
     {
       "id": "nestle-zest-ai-surplus-redistribution-fareshare",
@@ -544,12 +557,12 @@
       "record": "nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json"
     },
     {
-      "id": "rzx-ai-blood-cell-morphology-technologists-rct",
-      "date": "2026-11-17",
+      "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
+      "date": "2026-11-19",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "rzx-ai-blood-cell-morphology-technologists-rct/2026-11-17.json"
+      "detail": "evidence: drafter A, verifier could not grade.",
+      "record": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct/2026-11-19.json"
     },
     {
       "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
@@ -560,44 +573,22 @@
       "record": "searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json"
     },
     {
-      "id": "speac-lumen-voice-ai-coach-depression-anxiety-rct",
-      "date": "2026-11-17",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete registry supports every receipted number and date in a randomized trial with a preregistered primary imaging endpoint; HADS was secondary. It reports greater mean distress reduction with the Lumen package than with waitlist, but provides no between-group statistical test or isolation of",
-      "record": "speac-lumen-voice-ai-coach-depression-anxiety-rct/2026-11-17.json"
-    },
-    {
-      "id": "thinksono-ai-guided-dvt-ultrasound-non-expert-triage",
-      "date": "2026-11-17",
-      "result": "published",
-      "reason": null,
-      "detail": "The abstract supports the reported diagnostic performance and estimated 35.32% potential reduction in specialist scans among actual patients. It does not establish realized scan avoidance, isolate AI's contribution, or date the study.",
-      "record": "thinksono-ai-guided-dvt-ultrasound-non-expert-triage/2026-11-17.json"
-    },
-    {
-      "id": "westminster-council-copilot-studio-chatbot-contact-centre",
-      "date": "2026-11-17",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier ongoing.",
-      "record": "westminster-council-copilot-studio-chatbot-contact-centre/2026-11-17.json"
-    },
-    {
-      "id": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct",
-      "date": "2026-11-17",
+      "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
+      "date": "2026-11-19",
       "result": "held",
       "reason": "grade-split",
       "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "wuhan-ai-virtual-standardized-patients-anesthesiology-trainees-pilot-rct/2026-11-17.json"
+      "record": "wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json"
     }
   ],
   "announced": [],
   "leads_added": [
-    "TEARS ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway from community optometry, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Not read; needs the results record or paper, achieved dates, absolute numbers.",
-    "AI-guided handheld echo for rheumatic heart disease screening, rural Nepal. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). Already logged 2026-11-16.",
-    "Dublin AI flood warning rollout. Already logged 2026-11-16; no result reported yet.",
-    "Skipped: CADe trainee colonoscopy meta-analysis (review; the underlying RCTs are the leads), AEA registrations in development, model-accuracy and prediction papers, surveys, market and opinion pieces."
+    "Samsara Fleet Safety Report, AI dash cams: 37% lower crash rate at six months, 73% at 30 months, 2,600+ fleets. [Fleet World](https://vanfleetworld.co.uk/fleets-using-ai-safety-tech-cut-crash-rates-by-37-within-six-months-says-samsara/). Trade-press rewrite of a company report; reached drivers, but the comparison is unclear. Missing: Samsara's own report page, the baseline and how crash rates were compared.",
+    "HERMES ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway, cluster RCT, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Reader got a stub (JS-rendered record), still not read. Missing: a paper or readable results, dates, absolute numbers.",
+    "ieso six-week digital anxiety programme, ISRCTN52546704. [ISRCTN](https://www.isrctn.com/ISRCTN52546704). Results posted but the record is unreadable and the study is about engagement and acceptability; unclear that AI did the work.",
+    "WhatsApp foundational literacy programme, Pakistan, AEA 20081. [AEA](https://www.socialscienceregistry.org/trials/20081). Ongoing to 2026-11-30, registration only. Watch for results; check how AI is involved.",
+    "Dublin AI flood warning rollout, again in the news. Already logged 2026-11-16; no result yet.",
+    "Skipped: reviews and meta-analyses, education randomized trials without outcomes in people, prediction and model-accuracy papers, surveys, market and opinion pieces."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -608,7 +599,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2122071653521764651",
         "text": "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.\n\nhttps://t.co/0wVbloJUpU https://t.co/IaZEQUVm3Y",
         "created_at": "2026-11-15T20:58:03.000Z",
-        "impressions": 14,
+        "impressions": 15,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
@@ -632,7 +623,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
         "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
         "created_at": "2026-11-14T20:33:20.000Z",
-        "impressions": 25,
+        "impressions": 29,
         "likes": 2,
         "replies": 0,
         "reposts": 1,
@@ -667,40 +658,20 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-17",
-    "pageviews": 54,
-    "visits": 37,
+    "day": "2026-11-18",
+    "pageviews": 39,
+    "visits": 31,
     "top_paths": [
       {
         "path": "/",
-        "views": 30
+        "views": 37
       },
       {
-        "path": "/method",
-        "views": 7
-      },
-      {
-        "path": "/not-because-of-ai",
-        "views": 5
-      },
-      {
-        "path": "/entry/thames-water-origin-orbit-satellite-leaks",
-        "views": 3
-      },
-      {
-        "path": "/entry/ucla-chart-summarizer-rct",
-        "views": 3
-      },
-      {
-        "path": "/about",
+        "path": "/entry/hurricane-melissa-2025",
         "views": 1
       },
       {
-        "path": "/entry/ai-micro-tese-nonobstructive-azoospermia",
-        "views": 1
-      },
-      {
-        "path": "/)**",
+        "path": "/entry/prea-chatbot-specialist-referral-rct",
         "views": 1
       }
     ]
