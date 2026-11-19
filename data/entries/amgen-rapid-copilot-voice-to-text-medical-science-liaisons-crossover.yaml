@@ -1,0 +1,72 @@
+id: amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover
+section: because
+rank: 87
+headline: >-
+  In a randomized crossover trial of 27 Amgen medical science liaisons, AI voice-to-text (Microsoft Copilot) raised
+  their documentation satisfaction score from 2.541 to 3.304 against manual CRM entry.
+impact: "Documentation satisfaction up 0.763"
+impact_number: "+0.763"
+impact_label: "points on the documentation satisfaction score with AI voice-to-text"
+summary: >-
+  Medical science liaisons documented field conversations for four weeks with AI voice-to-text and four weeks by manual
+  CRM entry, in random order, and rated the experience.
+caveat: >-
+  The outcome is self-reported satisfaction; expert-rated insight quality and interaction counts did not improve, and
+  satisfaction was lower among Japanese and Korean speakers because transcription was less accurate.
+domain: work
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "AI voice-to-text (Microsoft Copilot) vs existing practice of manual CRM entry, within the same 27 liaisons in a two-period crossover"
+effect:
+  relative: null
+  absolute: "composite satisfaction score mean 3.304 with AI voice-to-text versus 2.541 with manual entry, difference +0.763 (95% CI 0.187 to 1.339)"
+reach: "27 medical science liaisons across six Amgen Asia-Pacific affiliates"
+dates:
+  achieved_start: 2025-07
+  achieved_end: 2025-09
+  published: 2026-09-06
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Evaluating AI-Enabled Voice to Text for Medical Affairs Documentation and Insight Capture: The RAPID Randomized Crossover Trial (Pharmaceutical Medicine, open access via Europe PMC)"
+    url: https://doi.org/10.1007/s40290-026-00630-0
+    doi: 10.1007/s40290-026-00630-0
+    type: primary
+conflicts: "All authors were Amgen employees and the study was run by Amgen on its own staff with limited internal Amgen funding; Microsoft Copilot was used under Amgen's enterprise licence, and the authors declare no financial ties to Microsoft."
+what_would_change: "Independent replication outside the sponsoring company, and a measured gain in documented insight quality or time saved rather than self-reported satisfaction."
+notes: >-
+  verify: no trial registration was found in the text read, so evidence is graded B rather than A.
+  verify: the satisfaction score scale is not stated in the quotes used; the entry reports the means as printed.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: Each liaison used both methods in random order, so the comparison within the same people isolates the voice-to-text tool.
+receipts:
+  - field: headline
+    quote: mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339
+    locator: Results, primary analysis
+    source: 0
+  - field: impact_number
+    quote: mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339
+    locator: Results, primary analysis
+    source: 0
+  - field: effect.absolute
+    quote: mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339
+    locator: Results, primary analysis
+    source: 0
+  - field: reach
+    quote: This randomized crossover study enrolled 27 MSLs from six Amgen Asia-Pacific affiliates
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: between July and September 2025
+    locator: Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: between July and September 2025
+    locator: Methods
+    source: 0
