@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
+  "date": "2026-11-19",
+  "as_of": "2026-11-19",
+  "entry_sha256": "b32abf198aea58a9509832bd708e51b44513562a2bd650a11d3c3d25bb7c9097",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-19"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.3389/fpubh.2026.1874822",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-19T01:41:48.799Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13558035/fullTextXML",
+      "sha256": "4b57a655f7c6529aa40eefda7367d9e665787f3b1c09d1eb3c9d0c28e7d9f2d4",
+      "chars": 63816,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A total of 60 university students with academic anxiety were included",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 60 university students with academic anxiety were included",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-19",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The trial compared an integrated LLM, VR, CBT, and human-supervision package with face-to-face CBT and minimal support, without isolating the LLM.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the paper reports study duration but no calendar dates for recruitment or intervention."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor funding, employment, equity, patent, or licence is disclosed; the entry describes public funding and the authors' development of the system."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates of benefit cannot be established from the supplied text."
+      },
+      "summary": "The paper supports a 60-participant randomized trial showing greater anxiety reduction with the integrated package than minimal support, but does not establish equivalence to face-to-face CBT. No evidence grade fits the supplied vocabulary because this small RCT lacked prospective registration; benefit dates and window placement remain unknown."
+    },
+    "error": null,
+    "tokens": {
+      "input": 24509,
+      "output": 541,
+      "total": 25050,
+      "cached": 0,
+      "reasoning": 126
+    },
+    "duration_ms": 15245
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

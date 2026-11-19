@@ -1,0 +1,78 @@
+id: wuhan-llm-vr-cbt-academic-anxiety-students-rct
+section: because
+rank: 83
+headline: >-
+  A language-model virtual CBT coach in VR cut academic anxiety in 60 university students about as much as face-to-face
+  CBT, and more than a minimal-support control, in a small randomized trial.
+impact: "Academic anxiety fell more than in controls, similar to face-to-face CBT (small exploratory RCT)"
+impact_number: null
+impact_label: null
+summary: >-
+  Students with academic anxiety at a Wuhan university were randomly assigned to four weekly sessions with an
+  LLM-and-VR cognitive behavioural therapy system, face-to-face CBT, or a minimal-support control, and anxiety scores and
+  heart rate were compared before and after.
+caveat: >-
+  Single-centre, not prospectively registered, small, short-term, and adverse events were not systematically collected;
+  the LLM is bundled with VR scenes, so the trial cannot isolate the language model.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "LLM-VR-CBT system vs face-to-face CBT by licensed counsellors vs a minimal-support control (one weekly well-being tip), three-arm randomized trial"
+effect:
+  relative: "Group-by-time interaction significant for academic anxiety; LLM-VR-CBT and traditional CBT both reduced anxiety more than the control, and the two active groups did not differ significantly"
+  absolute: null
+reach: "60 university students with academic anxiety at one university in Wuhan"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-27
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Harnessing large language models in virtual CBT for university students' academic anxiety: a preliminary randomized trial (Frontiers in Public Health)"
+    url: https://doi.org/10.3389/fpubh.2026.1874822
+    doi: 10.3389/fpubh.2026.1874822
+    type: primary
+conflicts: "Funded by Chinese national and provincial research programmes, which the paper says had no role in the study; the authors built the system they tested (ERNIE Bot 4.0 base model with retrieval-augmented generation)."
+what_would_change: null
+notes: >-
+  verify: the paper gives no calendar period for the trial, so the achieved dates and the window grade are left empty.
+  verify: the trial was not prospectively registered, so evidence is graded B rather than A.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: Students were randomly assigned to the LLM-VR-CBT package, face-to-face CBT or a minimal-support control, so the comparison tests the whole package rather than the language model alone.
+receipts:
+  - field: headline
+    quote: A total of 60 university students with academic anxiety were included
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: A total of 60 university students with academic anxiety were included
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: b32abf198aea58a9509832bd708e51b44513562a2bd650a11d3c3d25bb7c9097
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade."
+  record: wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json

@@ -1,0 +1,90 @@
+id: kanyakumari-ai-assisted-learning-medical-students-retention
+section: because
+rank: 86
+headline: >-
+  Second-year medical students in Tamil Nadu who studied a drug class with generative AI remembered 61.4% of it after
+  one month, against 35.9% for the class they studied from textbooks.
+impact: "Medical students kept more of what they learned with AI help after one month (non-randomized, different topics)"
+impact_number: "61.4% vs 35.9%"
+impact_label: "knowledge retained at one month, AI-assisted vs traditional self-study"
+summary: >-
+  Each of 149 second-year MBBS students studied one pharmacology topic from textbooks and another with ChatGPT, Gemini
+  or NotebookLM, then took parallel short-answer tests immediately, at one week and at one month.
+caveat: >-
+  Not randomized, and the two methods used different drug classes (aminoglycosides vs quinolones) in a fixed order, so
+  topic and order are confounded with AI use; only 95 students had complete data, and the authors say this does not
+  establish causation.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Same students' one-month retention after AI-assisted self-study of quinolones vs textbook self-study of aminoglycosides, parallel 15-question short-answer tests"
+effect:
+  relative: null
+  absolute: "Retention at 1 month 61.4% with AI-assisted learning vs 35.9% with traditional learning (p<0.001); at 1 week 75.5% vs 57.9%"
+reach: "149 second-year MBBS students at Kanyakumari Government Medical College, Tamil Nadu, India"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-18
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Artificial Intelligence-Assisted Versus Traditional Learning and Long-Term Knowledge Retention Among Undergraduate Medical Students: A Sequential, Explanatory Mixed-Methods Study (Cureus, via Europe PMC)"
+    url: https://doi.org/10.7759/cureus.114362
+    doi: 10.7759/cureus.114362
+    type: primary
+conflicts: "none found"
+what_would_change: null
+notes: >-
+  verify: the paper gives ethics approval dated 7 March 2026 but no calendar dates for the learning sessions, so the achieved dates and the window grade are left empty.
+  verify: the two conditions differ in topic and fixed order; evidence B is generous for a non-randomized within-subject comparison.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: Each student served as their own comparison for AI-assisted versus traditional study with matched tests, but topic and order differed, so the comparison only approximately isolates the AI.
+receipts:
+  - field: impact_number
+    quote: 1 month (61.4% vs. 35.9%) compared with traditional learning (p<0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: 1 month (61.4% vs. 35.9%) compared with traditional learning (p<0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 1 month (61.4% vs. 35.9%) compared with traditional learning (p<0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: at 1 week (75.5% vs. 57.9%)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: among 149 second-year MBBS students at Kanyakumari Government Medical College, Tamil Nadu, India
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: e3fe9b78f0a788b75c1769f3ee56afc7619bbf479d24506e7787322f26441d90
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-19
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-19
+    verdict: fail
+  record: kanyakumari-ai-assisted-learning-medical-students-retention/2026-11-19.json
+held:
+  reason: grade-split
+  since: 2026-11-19
+  detail: "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled."
+  record: kanyakumari-ai-assisted-learning-medical-students-retention/2026-11-19.json

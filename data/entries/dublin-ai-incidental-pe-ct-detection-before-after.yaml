@@ -1,0 +1,84 @@
+id: dublin-ai-incidental-pe-ct-detection-before-after
+section: because
+rank: 84
+headline: >-
+  After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported
+  incidental PE rose from 0.35% to 0.63% of eligible scans.
+impact: "Incidental pulmonary emboli found on routine CT nearly doubled after AI was deployed"
+impact_number: "0.35% → 0.63%"
+impact_label: "of eligible non-CTPA contrast CTs had an incidental pulmonary embolism reported"
+summary: >-
+  A large tertiary hospital compared the same four months of 2022 (before) and 2023 (after an AI pulmonary embolism
+  detection tool was introduced) and counted incidental pulmonary emboli reported on contrast-enhanced CT scans ordered
+  for other reasons.
+caveat: >-
+  Retrospective before-and-after comparison at one hospital with no concurrent control; the AI analysed only 78.7% of
+  eligible scans and had modest sensitivity, and the abstract does not say how many extra cases changed management.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Incidental PE reporting rate on non-CTPA contrast CT, September to December 2022 (before AI) vs September to December 2023 (after AI), same hospital"
+effect:
+  relative: null
+  absolute: "Incidental PE detection rate rose from 0.35% to 0.63% (P = .0389); segmental incidental PE rose from 0.08% to 0.42%"
+reach: "11 690 contrast-enhanced CT studies, 10 411 of them eligible non-CTPA studies, at one tertiary care hospital"
+dates:
+  achieved_start: 2023-09-01
+  achieved_end: 2023-12-31
+  published: 2026-12-01
+  added: 2026-11-19
+  updated: 2026-11-19
+sources:
+  - title: "Incidental pulmonary embolism detection on routine contrast-enhanced computed tomography before and after deployment of a commercial artificial intelligence tool: a real-world evaluation (British Journal of Radiology, abstract via Europe PMC)"
+    url: https://doi.org/10.1093/bjr/tqag222
+    doi: 10.1093/bjr/tqag222
+    type: primary
+conflicts: "none found; only the abstract could be read, so funding and author ties to the vendor were not seen."
+what_would_change: null
+notes: >-
+  verify: only the abstract was readable; the dates and numbers are taken from it.
+  verify: the abstract does not name the commercial tool or say whether the hospital or the vendor funded the evaluation.
+  verify: the publication date 2026-12-01 is the journal issue date; the Europe PMC record shows online publication earlier.
+related: []
+history:
+  - date: 2026-11-19
+    note: Added by the backfill run.
+rationale: The same hospital's incidental PE reporting rate was compared across the same months before and after the AI tool was introduced, so the only planned change was the AI tool, though without a concurrent control.
+receipts:
+  - field: impact_number
+    quote: iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: The segmental iPE detection rate increased significantly (0.08% vs 0.42%
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 11 690 contrast-enhanced CT studies were analyzed, 10 411 of which were eligible non-computed tomography pulmonary angiography
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: September 1-December 31, 2023 (following introduction of AI)
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: September 1-December 31, 2023 (following introduction of AI)
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-19
+  content: 2231706e5192be41b40538642d2137c1668ddb39650553305c033982983467ca
+held:
+  reason: ungrounded
+  since: 2026-11-19
+  detail: No receipt for headline.
+  record: dublin-ai-incidental-pe-ct-detection-before-after/2026-11-19.json

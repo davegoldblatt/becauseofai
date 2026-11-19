@@ -367,3 +367,20 @@ Looked at and rejected:
 - Voiceitt Deaf pilot (2024): word error rate only. ElevenLabs Impact Program: goal of 1 million, no measured count.
 - Michigan JMIR captioning pilot, JAMA Ophthalmology Meta glasses pilot, INTERACT sign-language framework: simulated or sighted testers, no real users.
 - Shenzhen Metro robot guide dog: page would not read. Sorenson, Sign-Speak, Deaf AI airport: pilots without results.
+
+## 2026-11-19, slice 22: papers and trial results, 2026-09-07 to 2026-09-14
+
+Drafted (4; two from abstracts only, two from full text):
+- wuhan-llm-vr-cbt-academic-anxiety-students-rct: Frontiers Public Health, 60 students, LLM-VR-CBT vs face-to-face CBT vs control (full text read; not registered, evidence B, no dates, window empty).
+- dublin-ai-incidental-pe-ct-detection-before-after: BJR abstract, incidental PE 0.35% to 0.63% of eligible CTs after AI tool (before-and-after, window pre).
+- paics-fetal-intracranial-malformation-ultrasound-crossover-rct: Lancet Digital Health abstract, sensitivity +0.087 with AI-assisted scanning, 1584 scans (crossover RCT, window pre).
+- kanyakumari-ai-assisted-learning-medical-students-retention: Cureus full text, 149 medical students, one-month retention 61.4% vs 35.9% (non-randomized, topics differ).
+
+Rejected:
+- AINAR blood-donor needle-fear game RCT (abstract): VVR 1.8% vs 1.13%, not significant, but the abstract does not say what the AI did.
+- Iranian AI spiritual counselling and Korean nursing ethics education quasi-experiments (abstracts): test statistics only, no quotable effect size.
+- Pancreatic EUS crossover (Digestive Endoscopy), angiodysplasia AI (UEG J), ClearRead nodule CADe, gas-leak beamforming, IoMT intrusion survey: development, retrospective or accuracy only.
+- NYC overdose surveillance LLMs (AJPH): model accuracy, no outcome in people.
+- TI-RADS multi-view AI teaching RCT: resident interpretation accuracy only.
+- Ambient AI nurse survey (medRxiv): perceptions survey.
+- Other flagged medRxiv items (spectral CT, ovarian metabolomics, SHAP COVID, seizure prediction, sepsis and risk models): retrospective models or benchmarks. Protocol: LLM robot for MCI.
