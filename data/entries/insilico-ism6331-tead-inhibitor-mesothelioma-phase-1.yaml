@@ -1,0 +1,96 @@
+id: insilico-ism6331-tead-inhibitor-mesothelioma-phase-1
+section: because
+rank: 90
+headline: >-
+  Because Insilico designed ISM6331 with generative chemistry software, four of 22 evaluable previously treated
+  mesothelioma patients had partial responses in the first human data, reported at ESMO 2026.
+impact: "4 of 22 patients had partial responses"
+impact_number: "18.2%"
+impact_label: "response rate in 22 evaluable mesothelioma patients on an AI-designed drug, uncontrolled phase 1"
+summary: >-
+  An uncontrolled phase 1 dose-escalation trial of ISM6331, an oral TEAD inhibitor designed with Insilico's Chemistry42
+  generative chemistry software, reported partial responses in four of 22 evaluable mesothelioma patients.
+caveat: >-
+  An uncontrolled dose-escalation trial reported through trade press; no comparison arm, the study is ongoing, and the
+  response rate says nothing yet about survival or about how much of the result is due to the AI design step.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: null
+  absolute: "four of 22 evaluable patients had partial responses, a response rate of 18.2%; 68.2% had disease control at the first scan"
+reach: "22 evaluable mesothelioma patients (36 treated across mesothelioma and other solid tumours) in an ongoing phase 1 study"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-25
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Drug Discovery & Development: Insilico's AI-designed TEAD inhibitor shrank tumors in 4 of 22 mesothelioma patients (ESMO 2026 report)"
+    url: https://www.drugdiscoverytrends.com/insilicos-ai-designed-tead-inhibitor-shrank-tumors-in-4-of-22-mesothelioma-patients-randomized-phase-2a-planned-for-2027/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a trade-press report of the company's results presented at ESMO, with comments from Insilico's vice
+  president of clinical development; Insilico develops the drug and sells the AI platform that designed it. No independent audit.
+what_would_change: "A randomized phase 2 or later result against a comparator, and a peer-reviewed report with the trial dates."
+notes: >-
+  verify: the article gives a data cutoff of 14 August 2026 but no start of treatment, so achieved dates and the window
+  grade are left empty.
+  verify: the article reports 22 evaluable patients and 36 treated patients across tumour types; this entry uses the 22.
+related: []
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the AI only designed the molecule and the uncontrolled phase 1 result tests the drug in patients, with no comparison separating the AI's contribution.
+receipts:
+  - field: headline
+    quote: four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%
+    locator: Body, second paragraph
+    source: 0
+  - field: impact
+    quote: four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%
+    locator: Body, second paragraph
+    source: 0
+  - field: impact_number
+    quote: four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%
+    locator: Body, second paragraph
+    source: 0
+  - field: effect.absolute
+    quote: four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%
+    locator: Body, second paragraph
+    source: 0
+  - field: effect.absolute
+    quote: At the first scan, 68.2% had disease control, meaning their tumors shrank or held steady.
+    locator: Body, second paragraph
+    source: 0
+  - field: reach
+    quote: Across all 36 patients treated for mesothelioma or other solid tumors
+    locator: Body, fourth paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 6b52137bd895b7ef1ac991164406b056d37750758ad8e561d7ffdae412ee0b5b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json
+held:
+  reason: fails-test
+  since: 2026-11-20
+  detail: "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.)."
+  record: insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json

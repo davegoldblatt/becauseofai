@@ -1,0 +1,88 @@
+id: cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent
+section: because
+rank: 91
+headline: >-
+  Because Cleveland Clinic deployed Dyania Health's Synapsis AI across the system, it says study teams have on
+  average enrolled 40% more patients 47% faster.
+impact: "40% more patients enrolled, 47% faster"
+impact_number: "40%"
+impact_label: "more patients enrolled in clinical trials, on average, by teams using Synapsis AI, Cleveland Clinic says"
+summary: >-
+  Cleveland Clinic's newsroom reports that since Synapsis AI, an EMR-reading matching platform, was deployed enterprise-wide in
+  November 2025, study teams using it have on average enrolled 40% more patients 47% faster.
+caveat: >-
+  The release gives no baseline, number of trials or patients, or time window for the averages, and it is the health
+  system's own award announcement.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: "on average, study teams have enrolled 40% more patients 47% faster with the platform"
+  absolute: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-26
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Cleveland Clinic newsroom: Cleveland Clinic and Dyania's Work on AI in Clinical Trial Matching Earns 2026 Gartner Eye on Innovation Award (26 October 2026)"
+    url: https://newsroom.clevelandclinic.org/2026/10/26/cleveland-clinic-and-dyanias-work-on-ai-in-clinical-trial-matching-earns-2026-gartner-eye-on-innovation-award
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Cleveland Clinic's own press release about its own deployment of Dyania Health's product; Cleveland Clinic
+  Ventures is an investor in Dyania Health (disclosed in earlier Cleveland Clinic coverage, not in this release). No
+  independent audit and the comparison for "40% more" and "47% faster" is not stated.
+what_would_change: "The comparison group, number of trials and patients, and period behind the averages, or a peer-reviewed evaluation."
+notes: >-
+  verify: the release says the platform was deployed in November 2025 but gives no period for the enrollment averages, so
+  achieved dates and the window grade are left empty. verify: the baseline for "40% more" and "47% faster" is not stated.
+related: [cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment]
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the AI was one part of a screening workflow with coordinators and the release names no comparison group, so the figure cannot isolate the tool.
+receipts:
+  - field: headline
+    quote: On average, study teams have enrolled 40% more patients 47% faster with the platform.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: impact
+    quote: On average, study teams have enrolled 40% more patients 47% faster with the platform.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: impact_number
+    quote: On average, study teams have enrolled 40% more patients 47% faster with the platform.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: effect.relative
+    quote: On average, study teams have enrolled 40% more patients 47% faster with the platform.
+    locator: Body, fourth paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 92cf8afb15c6544b8ba0edcbe9fcca664c80463b886c99caf720d44014de385b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json

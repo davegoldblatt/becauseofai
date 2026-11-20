@@ -1,0 +1,97 @@
+id: recursion-rec-4881-fap-tupelo-polyp-burden
+section: because
+rank: 88
+headline: >-
+  Because Recursion's AI screen pointed a shelved Takeda drug at familial adenomatous polyposis, 12 evaluable
+  patients in the open-label TUPELO trial had a median 43% reduction in total polyp burden after 12 weeks.
+impact: "43% median polyp burden reduction"
+impact_number: "43%"
+impact_label: "median reduction in polyp burden at 12 weeks on REC-4881, 12 FAP patients, no control arm"
+summary: >-
+  Recursion reports that REC-4881, an oral MEK1/2 inhibitor it in-licensed from Takeda after its AI-driven phenotypic screen
+  linked MEK1/2 inhibition to APC loss, reduced total polyp burden in patients with familial adenomatous polyposis in the
+  phase 2 portion of the single-arm TUPELO trial.
+caveat: >-
+  A single-arm, open-label company announcement on 12 evaluable patients with no concurrent control; the natural-history
+  comparison is the company's own registry analysis, and the dates of the study period are not stated.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Change from each patient's own baseline polyp burden; company-run natural-history analysis of an untreated registry (n=55) as context, no concurrent control arm"
+effect:
+  relative: "median 43% reduction in total polyp burden after 12 weeks of treatment"
+  absolute: "75% of evaluable patients showed a reduction in polyp burden after 12 weeks of therapy"
+reach: "12 efficacy-evaluable patients with familial adenomatous polyposis in the TUPELO trial"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-12-08
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Recursion: Positive Phase 1b/2 Results from Ongoing REC-4881 TUPELO Trial (GlobeNewswire, 8 December 2025, via AAP)"
+    url: https://www.aap.com.au/aapreleases/globenewswire9598312/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Recursion's own press release about its own drug candidate and platform (Recursion OS); the company
+  in-licensed REC-4881 from Takeda and sponsors the trial. No independent audit or peer-reviewed report.
+what_would_change: "A peer-reviewed report or a controlled trial showing the reduction against placebo, with the study dates, and a larger cohort."
+notes: >-
+  verify: the release gives a data cutoff (25 November 2025) but no period when patients were treated, so achieved dates and
+  the window grade are left empty. verify: a later Recursion update (November 2026, reported by trade press; Recursion's own
+  page could not be read) gives 47% median reduction in 15 patients; this entry uses only the December 2025 release that was read.
+  verify: the AI's role is in choosing the indication; the drug itself was developed by Takeda.
+related: []
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the AI screen only suggested the indication for an existing drug, and the single-arm result tests the drug, with no comparison separating the AI's contribution.
+receipts:
+  - field: headline
+    quote: REC-4881 produced a median 43% reduction in total polyp burden among 12 efficacy-evaluable patients.
+    locator: Results, Week 13 Assessment
+    source: 0
+  - field: impact
+    quote: REC-4881 produced a median 43% reduction in total polyp burden among 12 efficacy-evaluable patients.
+    locator: Results, Week 13 Assessment
+    source: 0
+  - field: impact_number
+    quote: REC-4881 produced a median 43% reduction in total polyp burden among 12 efficacy-evaluable patients.
+    locator: Results, Week 13 Assessment
+    source: 0
+  - field: effect.relative
+    quote: REC-4881 produced a median 43% reduction in total polyp burden among 12 efficacy-evaluable patients.
+    locator: Results, Week 13 Assessment
+    source: 0
+  - field: effect.absolute
+    quote: The majority of evaluable patients responded, with 75% showing reductions in polyp burden after 12 weeks of therapy.
+    locator: Results, Week 13 Assessment
+    source: 0
+  - field: reach
+    quote: REC-4881 produced a median 43% reduction in total polyp burden among 12 efficacy-evaluable patients.
+    locator: Results, Week 13 Assessment
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 487eb1a521d0e53e4886cc155e31ccbb83bf13ee6f1f07170bd9ed8b67cc7e9b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: recursion-rec-4881-fap-tupelo-polyp-burden/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the data cutoff does not establish when the reported patient benefits occurred.).

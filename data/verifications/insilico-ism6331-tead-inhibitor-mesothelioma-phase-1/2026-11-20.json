@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "6b52137bd895b7ef1ac991164406b056d37750758ad8e561d7ffdae412ee0b5b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.drugdiscoverytrends.com/insilicos-ai-designed-tead-inhibitor-shrank-tumors-in-4-of-22-mesothelioma-patients-randomized-phase-2a-planned-for-2027/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T01:35:11.113Z",
+      "final_url": "https://www.drugdiscoverytrends.com/insilicos-ai-designed-tead-inhibitor-shrank-tumors-in-4-of-22-mesothelioma-patients-randomized-phase-2a-planned-for-2027/",
+      "sha256": "105c5e8a34665a3c2095a54533cb9a937a3ac54d723df4c4e5db45ccedf90d92",
+      "chars": 6215,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "four of 22 evaluable mesothelioma patients had partial responses, for a response rate of 18.2%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "At the first scan, 68.2% had disease control, meaning their tumors shrank or held steady.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Across all 36 patients treated for mesothelioma or other solid tumors",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "D",
+        "attribution": null,
+        "window": "ongoing"
+      },
+      "attribution_rationale": "The uncontrolled trial provides no comparison that separates the AI design step from the drug's effects or establishes that AI was necessary.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the report places ongoing responses at an August 14 cutoff in the context of ESMO 2026, including one lasting approximately a year."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The article reports the developer's trial results and quotes Insilico's vice president; the entry discloses this company involvement."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": false,
+        "dated": true,
+        "note": "The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established."
+      },
+      "summary": "The complete news article supports all reported response and reach numbers in actual patients, with responses documented at an August 2026 cutoff. It does not establish comparative benefit or that AI was necessary to produce the clinical results."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13605,
+      "output": 625,
+      "total": 14230,
+      "cached": 0,
+      "reasoning": 256
+    },
+    "duration_ms": 16205
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "fails-test",
+    "detail": "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.)."
+  }
+}

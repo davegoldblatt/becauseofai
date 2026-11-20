@@ -1,0 +1,100 @@
+id: cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment
+section: because
+rank: 89
+headline: >-
+  Because Cleveland Clinic ran Dyania Health's Synapsis AI over its records, seven patients were enrolled in a phase 3
+  ATTR-CM heart trial through AI-assisted screening, taking the site past its 16-patient goal.
+impact: "7 patients enrolled through AI screening"
+impact_number: "7"
+impact_label: "patients enrolled in a phase 3 heart trial through AI-assisted screening, past the site's 16-patient goal"
+summary: >-
+  In a pilot at Cleveland Clinic, an EMR-embedded medical LLM with clinician review identified 29 of 30 trial matches that
+  routine recruitment had missed, and seven patients were enrolled through it.
+caveat: >-
+  A trade-press interview with a pilot investigator; the AI was introduced three months into recruitment, after 10 patients
+  had already consented, and the site stopped at seven AI-sourced patients so the full yield is unknown.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Patients found by routine recruitment at the same site and trial versus patients found by AI-assisted screening with clinician review"
+effect:
+  relative: "36.6% of the 30 AI-identified patients were Black, compared with 7.1% identified through routine screening"
+  absolute: "29 of 30 AI-identified matches had been missed via traditional recruitment practices"
+reach: "Cleveland Clinic's EMR across 18 hospitals and 250 outpatient centers; 1,476 patients reviewed by the AI"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-04-08
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Clinical Research News: AI Tool Adding Speed and Diversity to Cleveland Clinic Trials (8 April 2026)"
+    url: https://www.clinicalresearchnewsonline.com/news/2026/04/08/ai-tool-adding-speed-and-diversity-to-cleveland-clinic-trials
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a trade-press interview in which the Cleveland Clinic pilot investigator describes the health system's own
+  pilot of Dyania Health's product; Cleveland Clinic Ventures is an investor in Dyania Health. The peer-reviewed paper
+  (Journal of Cardiac Failure) could not be read. No independent audit.
+what_would_change: "The Journal of Cardiac Failure paper read in full, with study dates, and a comparison of enrollment rates with and without the tool."
+notes: >-
+  verify: the article gives no calendar dates for the pilot, so achieved dates and the window grade are left empty.
+  verify: the article says 46 potential matches among 1,476 patients and also 30 patients screened in; this entry uses
+  the 29 of 30 and the seven enrolled as printed.
+related: []
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the AI was used together with clinician-in-the-loop chart review, and the comparison is routine screening at the same site, not an arm that differs only by AI.
+receipts:
+  - field: headline
+    quote: Seven patients were ultimately enrolled through AI-assisted screening, which enabled the site to exceed its 16-patient enrollment goal.
+    locator: Body, third paragraph
+    source: 0
+  - field: impact
+    quote: Seven patients were ultimately enrolled through AI-assisted screening, which enabled the site to exceed its 16-patient enrollment goal.
+    locator: Body, third paragraph
+    source: 0
+  - field: impact_number
+    quote: Seven patients were ultimately enrolled through AI-assisted screening, which enabled the site to exceed its 16-patient enrollment goal.
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.absolute
+    quote: the AI system was coupled with clinician-in-the-loop review to identify 29 of 30 matches missed via traditional recruitment practices
+    locator: Body, second paragraph
+    source: 0
+  - field: effect.relative
+    quote: Of the 30 AI-identified patients, 36.6% were Black, compared to just 7.1% identified through routine screening.
+    locator: Body, "Racial, geographic" paragraph
+    source: 0
+  - field: reach
+    quote: reviewing 1,476 patients and discovering 46 potential matches
+    locator: Body, second paragraph
+    source: 0
+  - field: reach
+    quote: across 18 hospitals and 250 outpatient centers in the U.S.
+    locator: Body, second paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 3734714b18abeb9de1d4c6f7fbe88d82e789de6ce26ae00912a6ee361701848a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the publication date and relative recruitment timing do not establish when the enrollments occurred.).

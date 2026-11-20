@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "92cf8afb15c6544b8ba0edcbe9fcca664c80463b886c99caf720d44014de385b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://newsroom.clevelandclinic.org/2026/10/26/cleveland-clinic-and-dyanias-work-on-ai-in-clinical-trial-matching-earns-2026-gartner-eye-on-innovation-award",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T01:34:56.894Z",
+      "final_url": "https://newsroom.clevelandclinic.org/2026/10/26/cleveland-clinic-and-dyanias-work-on-ai-in-clinical-trial-matching-earns-2026-gartner-eye-on-innovation-award",
+      "sha256": "2eb8073d22d4145fb2788f78c1d1571e1667896ddcd45bb6e57dbb7b97dda218",
+      "chars": 4680,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "On average, study teams have enrolled 40% more patients 47% faster with the platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "On average, study teams have enrolled 40% more patients 47% faster with the platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "On average, study teams have enrolled 40% more patients 47% faster with the platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "On average, study teams have enrolled 40% more patients 47% faster with the platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "No comparison group or baseline is identified, so the text cannot establish whether the AI's contribution was isolated or bundled.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; November 2025 dates deployment, while the enrollment averages have no stated measurement period."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Cleveland Clinic reports results from its own deployment and collaboration; the entry discloses this, but its investment claim is not established by this source."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The percentages imply a comparison but identify no benchmark, and deployment timing does not establish when the reported enrollment benefits occurred."
+      },
+      "summary": "The complete press release reports 40% more patients enrolled 47% faster using Synapsis AI. It provides neither an identifiable comparison nor achieved dates for those results."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13018,
+      "output": 526,
+      "total": 13544,
+      "cached": 0,
+      "reasoning": 81
+    },
+    "duration_ms": 13595
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}
