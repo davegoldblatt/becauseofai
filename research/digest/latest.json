@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-19T14:11:11.139Z",
-  "since": "2026-11-18T14:11:11Z",
+  "generated_at": "2026-11-20T14:11:40.610Z",
+  "since": "2026-11-19T14:11:40Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 60,
-    "held": 55,
+    "published": 65,
+    "held": 65,
     "counts": {
       "because": 22,
       "not-because": 7,
@@ -12,68 +12,110 @@
     },
     "lower_levels": {
       "reasonable": 6,
-      "speculative": 20
+      "speculative": 25
     },
     "changed": [
       {
-        "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
-        "headline": "In a randomized crossover trial of 27 Amgen medical science liaisons, AI voice-to-text (Microsoft Copilot) raised their documentation satisfaction score from 2.541 to 3.304 against manual CRM entry.",
+        "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
+        "headline": "Because of a generative AI assistant that drafts issue diagnoses and solutions, new Taobao after-sales agents randomly given access cut issue-identification time by 8.2% and raised customer ratings, with no change in customer retrials.",
         "change": "added",
-        "state": "held (ungrounded)",
+        "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
-        "headline": "Rewriting daily health messages in each adolescent's own style with an LLM added no extra plant-based lunch choices over plain messages in a trial of 587 UK and Irish adolescents.",
+        "id": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
+        "headline": "Because of two generative AI copilots drafting answers for its contact-centre agents, BBVA says average handling time for the most common customer enquiries in Italy and Germany fell by more than 15%.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/llm-tailored-health-messages-adolescent-plant-based-lunch-null"
+        "url": "https://becauseofai.org/entry/bbva-italy-germany-contact-centre-ai-copilots-handling-time"
       },
       {
-        "id": "dublin-ai-incidental-pe-ct-detection-before-after",
-        "headline": "After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported incidental PE rose from 0.35% to 0.63% of eligible scans.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
-        "headline": "Second-year medical students in Tamil Nadu who studied a drug class with generative AI remembered 61.4% of it after one month, against 35.9% for the class they studied from textbooks.",
+        "id": "copilot-three-field-experiments-software-developers-completed-tasks",
+        "headline": "Because of an AI coding assistant, software developers randomly given access at Microsoft, Accenture and a Fortune 100 company completed 26.08% more tasks, with a wide margin of error.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
-        "headline": "AI assistance during real prenatal ultrasound scans of high-risk pregnancies at five Chinese centres raised sonographers' sensitivity for fetal intracranial malformations by 0.087 without losing specificity.",
+        "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
+        "headline": "Because of a custom AI patent-drafting assistant, 133 practising patent lawyers randomly given access produced drafting work scored 0.38 SD higher at 90 days, and senior lawyers kept an advantage when redlining without AI.",
+        "change": "added",
+        "state": "held (fails-test)",
+        "url": null
+      },
+      {
+        "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
+        "headline": "A GPT-4 business assistant on WhatsApp, randomly offered to Kenyan small-business owners, had no detectable average effect on revenues or profits; high performers gained about 15% and low performers did about 8% worse.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
-        "headline": "A language-model virtual CBT coach in VR cut academic anxiety in 60 university students about as much as face-to-face CBT, and more than a minimal-support control, in a small randomized trial.",
+        "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
+        "headline": "Because of a generative AI assistant built into email, meetings and writing apps, randomly selected knowledge workers at 66 firms spent about 1.4 fewer hours a week in email sessions in months 4 to 6, a 12% decline.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "china-delivery-platform-ai-calling-tool-deaf-workers",
-        "headline": "Because of an AI tool that turns text into phone calls, deaf or hard-of-hearing couriers on a Chinese food-delivery platform had 11% fewer late deliveries and 22% fewer bad customer ratings.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "feinstein-double-neural-bypass-rl-grasp-tetraplegia",
-        "headline": "Because of a deep reinforcement-learning grip controller in a brain-computer interface, a man with complete tetraplegia kept his grasp force within the set limit in 87% of trials, against 27% without it.",
+        "id": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
+        "headline": "Because of an AI assistant that answered routine customer emails, Octopus Energy says its trial reached a 76% customer satisfaction score against 72% for comparable human responses, on about 8,000 emails a week.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/feinstein-double-neural-bypass-rl-grasp-tetraplegia"
+        "url": "https://becauseofai.org/entry/octopus-energy-arlo-ai-email-assistant-customer-satisfaction"
       },
       {
-        "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
-        "headline": "Because of an AI smartphone navigation app, 14 blind or visually impaired white-cane users needed 72% fewer verbal corrections and took 13% less time on a 150-metre outdoor path than with Google Maps.",
+        "id": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations",
+        "headline": "Because of an AI voice agent that takes home-care cancellation calls, Uniting NSW.ACT says about half of roughly 500 first-week interactions were handled completely by AI, at a handle time of three to three-and-a-half minutes with no queue.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations"
+      },
+      {
+        "id": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment",
+        "headline": "Because Cleveland Clinic ran Dyania Health's Synapsis AI over its records, seven patients were enrolled in a phase 3 ATTR-CM heart trial through AI-assisted screening, taking the site past its 16-patient goal.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment"
+      },
+      {
+        "id": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
+        "headline": "Because Cleveland Clinic deployed Dyania Health's Synapsis AI across the system, it says study teams have on average enrolled 40% more patients 47% faster.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
+        "headline": "Because Insilico designed ISM6331 with generative chemistry software, four of 22 evaluable previously treated mesothelioma patients had partial responses in the first human data, reported at ESMO 2026.",
+        "change": "added",
+        "state": "held (fails-test)",
+        "url": null
+      },
+      {
+        "id": "recursion-rec-4881-fap-tupelo-polyp-burden",
+        "headline": "Because Recursion's AI screen pointed a shelved Takeda drug at familial adenomatous polyposis, 12 evaluable patients in the open-label TUPELO trial had a median 43% reduction in total polyp burden after 12 weeks.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/recursion-rec-4881-fap-tupelo-polyp-burden"
+      },
+      {
+        "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
+        "headline": "In a 71-patient randomized placebo-controlled phase 2a trial of a drug whose target and molecule were both found with generative AI, lung function (FVC) rose +98.4 ml on 60 mg rentosertib against −20.3 ml on placebo over 12 weeks.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null",
+        "headline": "AI-assisted colonoscopy (GI Genius) did not significantly raise incremental adenoma detection in Lynch syndrome (33.3% vs 11.1%) in a randomized tandem trial of 100 patients.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
+        "headline": "Brief AI-assisted nerve-tracking training did not significantly improve first-attempt independent median-nerve identification (65.8% vs 57.5%) among 80 ultrasound novices.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
@@ -107,6 +149,13 @@
         "reason": "ungrounded",
         "since": "2026-11-17",
         "detail": "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline.."
+      },
+      {
+        "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
+        "headline": "Because of a generative AI assistant that drafts issue diagnoses and solutions, new Taobao after-sales agents randomly given access cut issue-identification time by 8.2% and raised customer ratings, with no change in customer retrials.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "evidence: drafter A, verifier could not grade."
       },
       {
         "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
@@ -149,6 +198,20 @@
         "reason": "grade-split",
         "since": "2026-11-15",
         "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
+        "headline": "Because Cleveland Clinic deployed Dyania Health's Synapsis AI across the system, it says study teams have on average enrolled 40% more patients 47% faster.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "attribution: drafter bundled, verifier could not grade."
+      },
+      {
+        "id": "copilot-three-field-experiments-software-developers-completed-tasks",
+        "headline": "Because of an AI coding assistant, software developers randomly given access at Microsoft, Accenture and a Fortune 100 company completed 26.08% more tasks, with a wide margin of error.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "attribution: drafter isolated, verifier bundled; window: drafter no grade, verifier pre."
       },
       {
         "id": "csun-ai-chatbot-student-support-rct",
@@ -200,11 +263,25 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null",
+        "headline": "AI-assisted colonoscopy (GI Genius) did not significantly raise incremental adenoma detection in Lynch syndrome (33.3% vs 11.1%) in a randomized tandem trial of 100 patients.",
+        "reason": "grade-split",
+        "since": "2026-11-19",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
         "id": "gleamer-boneview-paediatric-ed-fracture-exclusion",
         "headline": "Because of an AI fracture-detection second read, children sent home from a paediatric emergency department without an orthopaedic consultation stayed 1.78 hours instead of 2.25.",
         "reason": "grade-split",
         "since": "2026-11-13",
         "detail": "window: drafter pre, verifier could not grade."
+      },
+      {
+        "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
+        "headline": "Because of a custom AI patent-drafting assistant, 133 practising patent lawyers randomly given access produced drafting work scored 0.38 SD higher at 90 days, and senior lawyers kept an advantage when redlining without AI.",
+        "reason": "fails-test",
+        "since": "2026-11-20",
+        "detail": "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.)."
       },
       {
         "id": "hpv-chatbot-japan-caregivers-literacy-rct",
@@ -219,6 +296,13 @@
         "reason": "grade-split",
         "since": "2026-11-17",
         "detail": "window: drafter no grade, verifier pre."
+      },
+      {
+        "id": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
+        "headline": "Because Insilico designed ISM6331 with generative chemistry software, four of 22 evaluable previously treated mesothelioma patients had partial responses in the first human data, reported at ESMO 2026.",
+        "reason": "fails-test",
+        "since": "2026-11-20",
+        "detail": "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.)."
       },
       {
         "id": "jeffcom-911-ai-administrative-calls",
@@ -240,6 +324,13 @@
         "reason": "grade-split",
         "since": "2026-11-19",
         "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled."
+      },
+      {
+        "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
+        "headline": "A GPT-4 business assistant on WhatsApp, randomly offered to Kenyan small-business owners, had no detectable average effect on revenues or profits; high performers gained about 15% and low performers did about 8% worse.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
       },
       {
         "id": "khanmigo-hamilton-county-remedial-math-rct",
@@ -298,6 +389,13 @@
         "detail": "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration.."
       },
       {
+        "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
+        "headline": "Because of a generative AI assistant built into email, meetings and writing apps, randomly selected knowledge workers at 66 firms spent about 1.4 fewer hours a week in email sessions in months 4 to 6, a 12% decline.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+      },
+      {
         "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
         "headline": "Because of an AI smartphone navigation app, 14 blind or visually impaired white-cane users needed 72% fewer verbal corrections and took 13% less time on a 150-metre outdoor path than with Google Maps.",
         "reason": "grade-split",
@@ -323,6 +421,13 @@
         "headline": "An AI-driven decision-support prompt for anesthesia teams caring for 7,294 surgical patients with cognitive impairment at Mount Sinai did not significantly change postoperative delirium (35.1% vs 32.7%) or adherence to best practices.",
         "reason": "grade-split",
         "since": "2026-11-17",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
+        "headline": "Brief AI-assisted nerve-tracking training did not significantly improve first-attempt independent median-nerve identification (65.8% vs 57.5%) among 80 ultrasound novices.",
+        "reason": "grade-split",
+        "since": "2026-11-19",
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
@@ -366,6 +471,13 @@
         "reason": "grade-split",
         "since": "2026-11-19",
         "detail": "evidence: drafter A, verifier could not grade."
+      },
+      {
+        "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
+        "headline": "In a 71-patient randomized placebo-controlled phase 2a trial of a drug whose target and molecule were both found with generative AI, lung function (FVC) rose +98.4 ml on 60 mg rentosertib against −20.3 ml on placebo over 12 weeks.",
+        "reason": "grade-split",
+        "since": "2026-11-20",
+        "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
       },
       {
         "id": "rosie-chatbot-maternal-null",
@@ -469,6 +581,14 @@
   },
   "verifications": [
     {
+      "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
+      "date": "2026-11-20",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter A, verifier could not grade.",
+      "record": "alibaba-taobao-genai-assistant-after-sales-agents-rct/2026-11-20.json"
+    },
+    {
       "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
       "date": "2026-11-19",
       "result": "held",
@@ -477,28 +597,36 @@
       "record": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover/2026-11-19.json"
     },
     {
-      "id": "autoweed-ai-spot-spraying-sugarcane-herbicide",
-      "date": "2026-11-18",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter C, verifier could not grade.",
-      "record": "autoweed-ai-spot-spraying-sugarcane-herbicide/2026-11-18.json"
+      "id": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "BBVA reports a handling-time reduction exceeding 15%, daily use by more than 260 agents and nearly 100,000 monthly enquiries across the two contact centres. The source provides neither a dated measurement period nor an independent comparison.",
+      "record": "bbva-italy-germany-contact-centre-ai-copilots-handling-time/2026-11-20.json"
     },
     {
-      "id": "central-co-op-wasteinsight-ai-food-waste-avoided",
-      "date": "2026-11-18",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier pre.",
-      "record": "central-co-op-wasteinsight-ai-food-waste-avoided/2026-11-18.json"
+      "id": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The article supports seven AI-assisted enrollments, the stated screening comparisons, and the reported reach through an investigator's account. It does not establish calendar dates for the benefit or independently isolate the AI's contribution.",
+      "record": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment/2026-11-20.json"
     },
     {
-      "id": "china-delivery-platform-ai-calling-tool-deaf-workers",
-      "date": "2026-11-18",
+      "id": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
+      "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier pre.",
-      "record": "china-delivery-platform-ai-calling-tool-deaf-workers/2026-11-18.json"
+      "detail": "attribution: drafter bundled, verifier could not grade.",
+      "record": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json"
+    },
+    {
+      "id": "copilot-three-field-experiments-software-developers-completed-tasks",
+      "date": "2026-11-20",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter isolated, verifier bundled; window: drafter no grade, verifier pre.",
+      "record": "copilot-three-field-experiments-software-developers-completed-tasks/2026-11-20.json"
     },
     {
       "id": "dublin-ai-incidental-pe-ct-detection-before-after",
@@ -509,12 +637,28 @@
       "record": "dublin-ai-incidental-pe-ct-detection-before-after/2026-11-19.json"
     },
     {
-      "id": "feinstein-double-neural-bypass-rl-grasp-tetraplegia",
-      "date": "2026-11-18",
-      "result": "published",
-      "reason": null,
-      "detail": "The paper supports 87% versus 27% mean session-level grasp success in one participant with RL on versus off. Both conditions used an AI decoder, and the supplied text does not establish when these experiments occurred.",
-      "record": "feinstein-double-neural-bypass-rl-grasp-tetraplegia/2026-11-18.json"
+      "id": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null",
+      "date": "2026-11-19",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json"
+    },
+    {
+      "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
+      "date": "2026-11-20",
+      "result": "held",
+      "reason": "fails-test",
+      "detail": "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.).",
+      "record": "google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json"
+    },
+    {
+      "id": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
+      "date": "2026-11-20",
+      "result": "held",
+      "reason": "fails-test",
+      "detail": "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.).",
+      "record": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json"
     },
     {
       "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
@@ -525,12 +669,12 @@
       "record": "kanyakumari-ai-assisted-learning-medical-students-retention/2026-11-19.json"
     },
     {
-      "id": "kisan-emitra-ai-chatbot-pm-kisan-queries",
-      "date": "2026-11-18",
+      "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
+      "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
-      "detail": "window: drafter no grade, verifier pre.",
-      "record": "kisan-emitra-ai-chatbot-pm-kisan-queries/2026-11-18.json"
+      "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
+      "record": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json"
     },
     {
       "id": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
@@ -541,20 +685,28 @@
       "record": "llm-tailored-health-messages-adolescent-plant-based-lunch-null/2026-11-19.json"
     },
     {
-      "id": "mobilio-ai-smartphone-navigation-blind-outdoor-path",
-      "date": "2026-11-18",
+      "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
+      "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter C, verifier could not grade.",
-      "record": "mobilio-ai-smartphone-navigation-blind-outdoor-path/2026-11-18.json"
+      "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
+      "record": "microsoft-copilot-field-experiment-66-firms-email-hours/2026-11-20.json"
     },
     {
-      "id": "nestle-zest-ai-surplus-redistribution-fareshare",
-      "date": "2026-11-18",
+      "id": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
+      "date": "2026-11-19",
       "result": "held",
-      "reason": "ungrounded",
-      "detail": "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals..",
-      "record": "nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json"
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null/2026-11-19.json"
+    },
+    {
+      "id": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The company press release supports the reported 76% versus 72% satisfaction scores and approximately 8,000 emails weekly during a three-month trial. It provides no trial calendar dates or detailed comparison methods, so the benefit's window cannot be determined.",
+      "record": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction/2026-11-20.json"
     },
     {
       "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
@@ -565,12 +717,28 @@
       "record": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct/2026-11-19.json"
     },
     {
-      "id": "searca-upm-ai-fish-feeder-malaysia-tilapia",
-      "date": "2026-11-18",
+      "id": "recursion-rec-4881-fap-tupelo-polyp-burden",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The company release supports a median 43% reduction in polyp burden in 12 evaluable patients after 12 weeks, with 75% showing reductions against baseline. It establishes AI's role in selecting the drug but provides neither an isolated AI comparison nor calendar dates for the observed benefits.",
+      "record": "recursion-rec-4881-fap-tupelo-polyp-burden/2026-11-20.json"
+    },
+    {
+      "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
+      "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre.",
-      "record": "searca-upm-ai-fish-feeder-malaysia-tilapia/2026-11-18.json"
+      "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
+      "record": "rentosertib-phase-2a-ipf-fvc-nature-medicine/2026-11-20.json"
+    },
+    {
+      "id": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The article supports the reported first-week volume, AI completion share and handling times, with a historical service benchmark. These are self-reported operational results without independent verification, and their timing cannot resolve window eligibility.",
+      "record": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations/2026-11-20.json"
     },
     {
       "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
@@ -583,23 +751,22 @@
   ],
   "announced": [],
   "leads_added": [
-    "Samsara Fleet Safety Report, AI dash cams: 37% lower crash rate at six months, 73% at 30 months, 2,600+ fleets. [Fleet World](https://vanfleetworld.co.uk/fleets-using-ai-safety-tech-cut-crash-rates-by-37-within-six-months-says-samsara/). Trade-press rewrite of a company report; reached drivers, but the comparison is unclear. Missing: Samsara's own report page, the baseline and how crash rates were compared.",
-    "HERMES ISRCTN18106677, tele-ophthalmology and AI-ready referral pathway, cluster RCT, results posted. [ISRCTN](https://www.isrctn.com/ISRCTN18106677). Reader got a stub (JS-rendered record), still not read. Missing: a paper or readable results, dates, absolute numbers.",
-    "ieso six-week digital anxiety programme, ISRCTN52546704. [ISRCTN](https://www.isrctn.com/ISRCTN52546704). Results posted but the record is unreadable and the study is about engagement and acceptability; unclear that AI did the work.",
-    "WhatsApp foundational literacy programme, Pakistan, AEA 20081. [AEA](https://www.socialscienceregistry.org/trials/20081). Ongoing to 2026-11-30, registration only. Watch for results; check how AI is involved.",
-    "Dublin AI flood warning rollout, again in the news. Already logged 2026-11-16; no result yet.",
-    "Skipped: reviews and meta-analyses, education randomized trials without outcomes in people, prediction and model-accuracy papers, surveys, market and opinion pieces."
+    "AI-enabled mentor-supervised case teaching in neurosurgery residency, 62 trainees, single centre, non-randomized, 2024-06-01 to 2026-05-31. [BMC Medical Education](https://doi.org/10.1186/s12909-026-10225-7). Read in full: composite score MD 4.36 (95% CI 2.58 to 6.14) versus lecture-based teaching. Reached trainees and has a comparison, but no baseline scores, allocation not random, imbalanced dose. Candidate for a speculative or reasonable entry; missing: a cautious grade call and whether the AI did something that would not otherwise have happened.",
+    "Fujitsu Japan AI study, 89% smaller clinical-trial patient review pool. [IBTimes Japan](https://jp.ibtimes.com/fujitsu-japan-ai-study-cuts-clinical-trial-patient-review-pool-89-105276). News rewrite. Missing: Fujitsu's own page, whether real patients were enrolled faster.",
+    "Samsara AI dash cams (37% lower crash rate). Already logged 2026-11-18.",
+    "HERMES ISRCTN18106677. Already logged 2026-11-17 and 2026-11-18; still unread.",
+    "Skipped: reviews and meta-analyses, protocols, prediction and model-accuracy papers, surveys, the Baltimore Omnilert lawsuit, earnings and market pieces."
   ],
   "x": {
     "username": "bcuz_of_ai",
-    "followers": 5,
+    "followers": 6,
     "posts": [
       {
         "id": "2122071653521764651",
         "url": "https://x.com/bcuz_of_ai/status/2122071653521764651",
         "text": "Because of AI, people in Tanzania with referable diabetic retinopathy were about twice as likely to reach the eye clinic within 8 weeks: 35.9% against 18.2% with standard screening.\n\nhttps://t.co/0wVbloJUpU https://t.co/IaZEQUVm3Y",
         "created_at": "2026-11-15T20:58:03.000Z",
-        "impressions": 15,
+        "impressions": 16,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
@@ -611,7 +778,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2122071476388217098",
         "text": "Because of AI-generated teaching images, medical students in a forensic medicine course in India scored higher on clinical reasoning than classmates who used conventional forensic…\n\nhttps://t.co/PEQ02br6n1 https://t.co/Awim0i4JTs",
         "created_at": "2026-11-15T20:57:20.000Z",
-        "impressions": 36,
+        "impressions": 37,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
@@ -623,7 +790,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
         "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
         "created_at": "2026-11-14T20:33:20.000Z",
-        "impressions": 29,
+        "impressions": 31,
         "likes": 2,
         "replies": 0,
         "reposts": 1,
@@ -635,19 +802,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2121360755383738749",
         "text": "Because of an AI tool that categorizes and routes patient portal messages, the median time to first action in a Boston epilepsy clinic fell from 11.3 hours to 1.0 hour.\n\nhttps://t.co/O0R407oaGB https://t.co/YrkZkgldvX",
         "created_at": "2026-11-13T21:53:11.000Z",
-        "impressions": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
-        "quotes": 0
-      },
-      {
-        "id": "2121002800771391978",
-        "url": "https://x.com/bcuz_of_ai/status/2121002800771391978",
-        "text": "Sending Pakistan's mobile TB X-ray camps to sites picked by AI did not find significantly more tuberculosis per camp than sites picked by field staff, across 3,936 camps and 269,254 people screened, in the trial's…\n\nhttps://t.co/K8NAd5XDr6 https://t.co/djx6uQVjnA",
-        "created_at": "2026-11-12T22:10:48.000Z",
-        "impressions": 4,
+        "impressions": 5,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -658,20 +813,28 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-18",
-    "pageviews": 39,
-    "visits": 31,
+    "day": "2026-11-19",
+    "pageviews": 17,
+    "visits": 16,
     "top_paths": [
       {
         "path": "/",
-        "views": 37
+        "views": 13
       },
       {
-        "path": "/entry/hurricane-melissa-2025",
+        "path": "/entry/golden-bridge-ii-stroke",
         "views": 1
       },
       {
-        "path": "/entry/prea-chatbot-specialist-referral-rct",
+        "path": "/not-because-of-ai",
+        "views": 1
+      },
+      {
+        "path": "/not-yet",
+        "views": 1
+      },
+      {
+        "path": "/entry/columbia-epic-ai-draft-replies-null",
         "views": 1
       }
     ]
