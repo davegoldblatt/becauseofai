@@ -455,3 +455,19 @@ Rejected:
 - Vendor blogs on resolution and abandonment (Audibel, Omaha Steaks, orderbird, Webex): unsourced or title-only.
 - Journal pages (Management Science, eScholarship PDF): HTTP 403; used drafts or abstracts instead.
 - About sixteen searches and fourteen pages read, short of the floor.
+
+## 2026-11-20, slice 23: announcements: conservation and environment, 2026-08-12 to 2026-11-11
+
+Drafted (2):
+- unep-imeo-mars-ai-methane-alerts-mitigated-sources: UNEP press release, AI-assisted alerts helped mitigate sources estimated to have emitted 1.2M tonnes of methane (speculative; no period).
+- warddeken-megadetector-camera-trap-images-rangers-arnhem: CDU news item, MegaDetector cut images to analyse from 925,088 to 172,290 (speculative; no dates).
+
+Rejected:
+- Similipal AI cameras, 39 poachers (OECD.AI page): AI-written aggregator, no primary page; Feb 2026.
+- WWF Maasai Mara thermal cameras (3BL): 2016. Malaysia poaching arrests (Mugglehead): no AI link to the figures.
+- Sheldrick March 2026 report: 52 arrests, AI not credited. Mongabay Vietnam SMART/PoacherCams: no number, AI only a hope.
+- Indonesia fire-area drop (The Cool Down): rewrite, AI not shown to cause it.
+- USGS/Wyoming eagle curtailment (82% fewer fatalities): abstract and USGS page never name AI or the system.
+- CARB and Carbon Mapper Tanager methane pages: satellite detection, AI not named in the text; Duke Energy release 404.
+- Parks Victoria species model: accuracy only. WhaleSpotter San Francisco, Skylight, Rainforest Connection, GFW: launches or no result number found.
+- About twenty searches; thirteen pages read, short of the floor (search results thin on 2026 outcome numbers).
