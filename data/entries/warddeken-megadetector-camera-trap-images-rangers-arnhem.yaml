@@ -74,3 +74,23 @@ receipts:
     quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
     locator: Body, paragraph beginning "Following extensive consultation"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 83af26436073be4650d6f42646aae47977e166087d7d0a1dce58d8bfa7557070
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: warddeken-megadetector-camera-trap-images-rangers-arnhem/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The source does not establish when the measured benefits occurred; publication timing cannot establish achievement timing.).

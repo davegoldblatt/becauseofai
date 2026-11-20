@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "warddeken-megadetector-camera-trap-images-rangers-arnhem",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "83af26436073be4650d6f42646aae47977e166087d7d0a1dce58d8bfa7557070",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.cdu.edu.au/cdu-uni-news/all-editions/2026-10/rangers-reimagine-ai-wildlife-monitoring",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T18:04:29.789Z",
+      "final_url": "https://www.cdu.edu.au/cdu-uni-news/all-editions/2026-10/rangers-reimagine-ai-wildlife-monitoring",
+      "sha256": "e5350ce12900f4a6d87c6a6d57eab125a59a97c6ae842478c5b4800237b1ecde",
+      "chars": 4754,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The comparison measures images requiring human analysis before and after MegaDetector filtering of the same collected images.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source supplies only its October 2026 publication edition."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses university involvement in the research and publicity, but the source identifies no vendor funding, ownership, employment, patent or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The source does not establish when the measured benefits occurred; publication timing cannot establish achievement timing."
+      },
+      "summary": "The complete university news item supports the reported 81.4% reduction, from 925,088 to 172,290 images requiring analysis, and describes benefits to working rangers. It provides no achievement dates or independent comparison."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13002,
+      "output": 649,
+      "total": 13651,
+      "cached": 0,
+      "reasoning": 181
+    },
+    "duration_ms": 15499
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete university news item supports the reported 81.4% reduction, from 925,088 to 172,290 images requiring analysis, and describes benefits to working rangers. It provides no achievement dates or independent comparison.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "Not dated yet (The source does not establish when the measured benefits occurred; publication timing cannot establish achievement timing.)."
+    ]
+  }
+}

@@ -76,3 +76,23 @@ receipts:
     quote: enabling IMEO analysts to process 12 to 15 times more data while maintaining scientific rigour
     locator: Body, third paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 2ace9bd6e7571d3bc69844731ae396f2288b024269f0a1862670ad159b546483
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: unep-imeo-mars-ai-methane-alerts-mitigated-sources/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (No benchmark is supplied for the mitigation outcome; the throughput comparison concerns processing capacity, and the mitigation underlying the 1.2-million-tonne estimate is not dated.).
