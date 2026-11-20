@@ -67,3 +67,24 @@ receipts:
     quote: Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 6d4c966929278a74a03db4c7f56d8436cfd24564a5fc9cf1283a550224a5608e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+  record: kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json

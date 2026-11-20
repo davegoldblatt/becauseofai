@@ -87,3 +87,23 @@ receipts:
     quote: Uniting NSW.ACT has tens of thousands of clients ringing each month
     locator: Body, "Ring fencing the use-case" section
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: b5c8ce47bd9415bde0de5fd73f4c310d6a5ae7af0b6a50f2f6025e252a8d687f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."

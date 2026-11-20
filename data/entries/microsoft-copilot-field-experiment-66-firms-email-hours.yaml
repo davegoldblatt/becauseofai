@@ -79,3 +79,24 @@ receipts:
     quote: We present evidence from a field experiment across 66 firms and 7,137 knowledge workers.
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 53a8e97fff783a57d7bc0680503bd752170930ff549dc46675b9be17354fbeba
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: microsoft-copilot-field-experiment-66-firms-email-hours/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+  record: microsoft-copilot-field-experiment-66-firms-email-hours/2026-11-20.json

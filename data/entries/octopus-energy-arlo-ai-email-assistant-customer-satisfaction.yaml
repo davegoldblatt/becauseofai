@@ -80,3 +80,24 @@ receipts:
     quote: Arlo handled around 8,000 emails a week – 4% of all customer emails received by the energy supplier in the UK.
     locator: Body, third paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 12212f140ac67af560fe6adf65ae6f180cfa7ff894e7c89cdd95561da3a1c266
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: octopus-energy-arlo-ai-email-assistant-customer-satisfaction/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the trial's calendar dates cannot be established; the publication date alone does not establish them.).
+    - "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."

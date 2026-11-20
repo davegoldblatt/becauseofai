@@ -77,3 +77,23 @@ receipts:
     quote: the nearly 100,000 customer enquiries they receive every month
     locator: Body, second paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 2a025a73ea2565b36e3b306947da9dc0eaf47633516ab0706fd25dd433946783
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: bbva-italy-germany-contact-centre-ai-copilots-handling-time/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The handling-time reduction is reported against the previous workflow, but its measurement dates are absent; June message volume does not date the measured benefit.).

@@ -83,3 +83,24 @@ receipts:
     quote: we gave 133 practicing patent lawyers at eleven U.S. intellectual property law firms access to a custom AI patent drafting assistant
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: f9c542c75a6552ebfe2d52fa213b2a69844399098bc5500f73c4ad75e783d164
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json
+held:
+  reason: fails-test
+  since: 2026-11-20
+  detail: "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.)."
+  record: google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json

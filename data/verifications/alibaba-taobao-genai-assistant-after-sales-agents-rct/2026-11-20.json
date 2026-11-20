@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "620ff53c2b252dcb7cd58d8d6ea21061fa4657b80487632267a1beb2d63b81cf",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://arxiv.org/pdf/2603.29888",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-20T09:17:26.533Z",
+      "final_url": "https://arxiv.org/pdf/2603.29888",
+      "sha256": "bcfd5174a11489339b0417167d46af709de549400ce34f5eec1f096d86dbb91f",
+      "chars": 190484,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "access to the gen AI assistant reduced issue identification time and chat duration by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "access to the gen AI assistant reduced issue identification time and chat duration by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "raised average customer ratings by 0.042 points on a five-point scale",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "access to the gen AI assistant reduced issue identification time and chat duration by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "access to the gen AI assistant reduced issue identification time and chat duration by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "decreased the dissatisfaction rate by 0.012 (a 3.4% improvement relative to the pretreatment mean of 0.35)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "corresponding to absolute reductions of 3.2 seconds and 5.7 seconds.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "raised average customer ratings by 0.042 points on a five-point scale",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The experiment involved 5,940 new customer service agents with tenure of less than one year.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Alibaba conducted a four-week randomized A/B test from January 23, 2024, to February 19, 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Alibaba conducted a four-week randomized A/B test from January 23, 2024, to February 19, 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomly assigned agents received the same standard tools, with only treated agents receiving the additional generative AI assistant.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Section 3.4 establishes the treatment period as January 23 through February 19, 2024."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Alibaba conducted the experiment with its own assistant; the entry discloses the collaboration and affiliation, although the source lists two Alibaba-affiliated authors."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The complete preprint supports the reported numerical benefits, reach, and experimental dates, with no significant average effect on three-day retrials. Randomization is established, but a preregistered primary endpoint is not documented, so evidence grade A cannot be established and no other defined evidence grade fits."
+    },
+    "error": null,
+    "tokens": {
+      "input": 49217,
+      "output": 661,
+      "total": 49878,
+      "cached": 0,
+      "reasoning": 112
+    },
+    "duration_ms": 17030
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

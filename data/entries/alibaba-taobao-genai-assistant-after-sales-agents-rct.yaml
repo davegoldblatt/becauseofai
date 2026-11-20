@@ -97,3 +97,24 @@ receipts:
     quote: Alibaba conducted a four-week randomized A/B test from January 23, 2024, to February 19, 2024
     locator: Section 3.4 Experiment Design
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 620ff53c2b252dcb7cd58d8d6ea21061fa4657b80487632267a1beb2d63b81cf
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: alibaba-taobao-genai-assistant-after-sales-agents-rct/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "evidence: drafter A, verifier could not grade."
+  record: alibaba-taobao-genai-assistant-after-sales-agents-rct/2026-11-20.json

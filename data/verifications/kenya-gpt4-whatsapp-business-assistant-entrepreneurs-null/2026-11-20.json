@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "6d4c966929278a74a03db4c7f56d8436cfd24564a5fc9cf1283a550224a5608e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.hks.harvard.edu/centers/cid/publications/uneven-impact-generative-ai-entrepreneurial-performance",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T09:18:37.503Z",
+      "final_url": "https://www.hks.harvard.edu/centers/cid/publications/uneven-impact-generative-ai-entrepreneurial-performance",
+      "sha256": "0a3686cb7b157c5191a11e09814d534535666d5becb80d68eab93266ed8228f8",
+      "chars": 4954,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The experiment randomized entrepreneurs' access to the GPT-4 business assistant, comparing access with no access.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract provides only a December 2023 publication date, placing the reported results before the window without establishing trial dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The supplied abstract page reveals no vendor funding, employment, equity, patent, or licence conflict; the entry acknowledges that disclosure information was unavailable."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The text does not establish when the experiment occurred; randomization is stated, but a preregistered primary endpoint is not established, so evidence grade A cannot be assigned."
+      },
+      "summary": "The working-paper abstract supports no detectable average treatment effect and subgroup results of just over 15% improvement and about 8% deterioration. It supplies neither trial dates nor evidence of a preregistered primary endpoint."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13036,
+      "output": 606,
+      "total": 13642,
+      "cached": 0,
+      "reasoning": 136
+    },
+    "duration_ms": 14668
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}
