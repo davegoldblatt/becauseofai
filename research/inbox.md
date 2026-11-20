@@ -399,3 +399,15 @@ Candidates: 157 over 2026-11-17 to 2026-11-19, 10 flagged randomized, 16 announc
 - Samsara AI dash cams (37% lower crash rate). Already logged 2026-11-18.
 - HERMES ISRCTN18106677. Already logged 2026-11-17 and 2026-11-18; still unread.
 - Skipped: reviews and meta-analyses, protocols, prediction and model-accuracy papers, surveys, the Baltimore Omnilert lawsuit, earnings and market pieces.
+
+## 2026-11-20 (daily scout)
+
+Candidates: 168 over 2026-11-18 to 2026-11-20, 11 flagged randomized, 0 alerts, 57 source errors (mostly Crossref 429s). No entry drafted: nothing readable reached people with a comparison and a dated benefit.
+
+- GenAI-DBT, a DBT-informed generative AI mindfulness platform: 30-day pilot randomized study, 45 students. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428) (2026-11-19). Read the abstract: adherence 71.4% vs 53.3% (web) and 42.3% (chatbot), descriptive only; no significant difference on MAAS or DERS. Feasibility pilot, mostly null on outcomes. Missing: full text, study dates, a benefit measured on people. A possible `not-because` row if the full text gives dates.
+- Prediction of postoperative pancreatic fistula after left pancreatectomy by surgeons and AI: randomized multi-reader study. [Br J Surg](https://doi.org/10.1093/bjs/znag154) (2026-10-31). Reader study; no patient outcome known from the snippet. Watch only.
+- Voice-based conversational AI coach to reduce competitive anxiety in elite athletes. [Frontiers in Digital Health](https://doi.org/10.3389/fdgth.2026.1962543). Protocol; check later for results.
+- Protocol to watch: ambient AI to reduce nursing documentation time, EHR-embedded pragmatic RCT. [Contemporary Clinical Trials](https://doi.org/10.1016/j.cct.2026.108534).
+- Dublin flood-warning AI, [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/): a plan, no measured result yet.
+- Still open: Samsara AI dash cams (already logged 2026-11-18).
+- Skipped: the ACTIVE exercise-prescription protocol, retrospective model validations, benchmarks, reviews, surveys (including the NBER undergraduate AI survey), earnings and funding news.
