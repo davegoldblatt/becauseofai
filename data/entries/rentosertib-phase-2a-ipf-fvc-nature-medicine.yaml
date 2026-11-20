@@ -1,0 +1,90 @@
+id: rentosertib-phase-2a-ipf-fvc-nature-medicine
+section: because
+rank: 92
+headline: >-
+  In a 71-patient randomized placebo-controlled phase 2a trial of a drug whose target and molecule were both found with
+  generative AI, lung function (FVC) rose +98.4 ml on 60 mg rentosertib against −20.3 ml on placebo over 12 weeks.
+impact: "+98.4 ml lung function vs −20.3 ml placebo"
+impact_number: "+98.4 ml"
+impact_label: "mean change in forced vital capacity on 60 mg rentosertib in IPF, against −20.3 ml on placebo"
+summary: >-
+  Insilico's rentosertib, an inhibitor of the TNIK target and designed with generative chemistry, was tested for safety
+  against placebo in idiopathic pulmonary fibrosis; forced vital capacity, a secondary endpoint, rose in the highest-dose group.
+caveat: >-
+  The primary endpoint was safety, not lung function; the FVC result is a secondary endpoint in small groups (17 to 18
+  patients), the confidence intervals are wide, and liver toxicity led to discontinuations.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Placebo, 12 weeks of treatment, randomized double-blind in 71 patients with idiopathic pulmonary fibrosis"
+effect:
+  relative: null
+  absolute: "mean FVC change +98.4 ml (95% CI 10.9 to 185.9) on 60 mg once daily versus −20.3 ml (95% CI −116.1 to 75.6) on placebo"
+reach: "71 patients with idiopathic pulmonary fibrosis in a multicentre trial in China"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-06-03
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "A generative AI-discovered TNIK inhibitor for idiopathic pulmonary fibrosis: a randomized phase 2a trial (Nature Medicine, open access via Europe PMC)"
+    url: https://doi.org/10.1038/s41591-025-03743-2
+    doi: 10.1038/s41591-025-03743-2
+    type: primary
+conflicts: "Insilico Medicine was the study sponsor and many authors, including the corresponding author, are Insilico employees; the molecule and target were found with Insilico's own AI platform."
+what_would_change: "The phase 3 trial (GENESIS-IPF-3) showing an FVC benefit against placebo over 52 weeks."
+notes: >-
+  verify: the Europe PMC text read gives no calendar dates for the treatment period, so achieved dates and the window
+  grade are left empty. verify: evidence is graded B rather than A because the preregistered primary endpoint was safety
+  and the FVC result is secondary and exploratory in size. verify: the paper's own text has the 60 mg QD arm's FVC
+  result; patients also on standard antifibrotics did not show a significant change.
+related: [rentosertib-phase-3]
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the placebo comparison tests the drug itself, not what the generative AI added to finding it, and the AI's role cannot be separated from the drug's.
+receipts:
+  - field: headline
+    quote: We observed increased forced vital capacity at the highest dosage with a mean change of +98.4 ml (95% confidence interval 10.9 to 185.9)
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: After 12 weeks of treatment, patients who received placebo experienced deteriorating FVC with a mean change of −20.3 ml
+    locator: Results, Secondary lung function endpoints
+    source: 0
+  - field: headline
+    quote: Preliminary results from a phase 2a trial involving 71 patients
+    locator: Abstract summary
+    source: 0
+  - field: impact
+    quote: We observed increased forced vital capacity at the highest dosage with a mean change of +98.4 ml (95% confidence interval 10.9 to 185.9)
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: After 12 weeks of treatment, patients who received placebo experienced deteriorating FVC with a mean change of −20.3 ml
+    locator: Results, Secondary lung function endpoints
+    source: 0
+  - field: impact_number
+    quote: We observed increased forced vital capacity at the highest dosage with a mean change of +98.4 ml (95% confidence interval 10.9 to 185.9)
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: We observed increased forced vital capacity at the highest dosage with a mean change of +98.4 ml (95% confidence interval 10.9 to 185.9)
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: After 12 weeks of treatment, patients who received placebo experienced deteriorating FVC with a mean change of −20.3 ml
+    locator: Results, Secondary lung function endpoints
+    source: 0
+  - field: reach
+    quote: Preliminary results from a phase 2a trial involving 71 patients
+    locator: Abstract summary
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20

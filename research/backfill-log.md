@@ -414,3 +414,22 @@ Rejected:
 - TAILORx and PARTNER AI biomarker papers, spectral CT image quality, ACCESS-SHD 1-lead ECG, causal AI clinician for septic shock, GenEHR and the other medRxiv items: retrospective models or accuracy only.
 - Prehospital stroke ML, long-term-care mortality model, length-of-stay models, crash-narrative LLM, reviews and surveys: retrospective or accuracy only.
 - Only four sources were read with the reader this run; the rest were set aside from titles and abstracts shown in the candidate file as plainly retrospective, accuracy, review or protocol.
+
+## 2026-11-20, slice 25: announcements: medicines and trials, 2026-08-12 to 2026-11-11
+
+Drafted (5):
+- recursion-rec-4881-fap-tupelo-polyp-burden: Recursion's Dec 2025 release (via wire copy), 43% median polyp-burden reduction in 12 evaluable FAP patients, single arm (speculative; no dates).
+- cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment: trade-press interview, 7 patients enrolled via AI screening in a phase 3 ATTR-CM trial, 29 of 30 matches missed by routine recruitment (speculative; no dates).
+- cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent: Cleveland Clinic newsroom, 40% more patients enrolled 47% faster, no baseline stated (speculative; no dates).
+- insilico-ism6331-tead-inhibitor-mesothelioma-phase-1: trade report of ESMO 2026 data, 4 of 22 evaluable patients with partial responses, uncontrolled (speculative; no dates).
+- rentosertib-phase-2a-ipf-fvc-nature-medicine: Nature Medicine full text read via Europe PMC, FVC +98.4 ml vs -20.3 ml placebo, 71 patients, secondary endpoint (evidence B; no dates in text).
+
+Rejected:
+- Cleveland Clinic PV trial screening (Dec 2025): AI found 22 eligible patients but no enrolment or outcome reported.
+- Triomics trial matching (40% more matches, 30% more enrolment): only vendor and funding coverage; original release and ASCO abstract not found.
+- Mount Sinai PRISM: launch only, no results yet.
+- Zasocitinib phase 3: no AI role stated in the results; Healx HLX-1502, Acrivon ACR-2316: no results or AI role unclear, release not read.
+- Recursion Nov 2026 update (47% in 15 patients): Recursion's own pages gave HTTP 403; only trade press, used as a note.
+- MGB RECTIFIER (JAMA, 2025): outside the window and Becker's page gave HTTP 403.
+- Every Cure, drug-repurposing case reports and model-only repurposing papers: old, single cases or no patients.
+- Fewer than the twenty queries and fifteen reads the brief asks for were done this run (about sixteen searches, ten pages read).
