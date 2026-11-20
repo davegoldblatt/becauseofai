@@ -1,0 +1,78 @@
+id: unep-imeo-mars-ai-methane-alerts-mitigated-sources
+section: because
+rank: 100
+headline: >-
+  Because of AI that screens satellite data for methane plumes, the UN
+  Environment Programme says its alert system helped mitigate sources estimated
+  to have emitted 1.2 million tonnes of methane.
+impact: "Sources estimated to have emitted 1.2M tonnes of methane mitigated"
+impact_number: "1.2M"
+impact_label: "tonnes of methane, estimated emissions from sources mitigated after UNEP's AI-assisted alerts"
+summary: >-
+  UNEP's International Methane Emissions Observatory says its Methane Alert and
+  Response System uses AI on data from more than 30 satellite instruments, that
+  analysts can process 12 to 15 times more data, and that AI-assisted workflows
+  helped mitigate sources estimated to have emitted 1.2 million tonnes of
+  methane; every AI-flagged detection is verified by analysts before a
+  notification is sent.
+caveat: >-
+  UNEP's own press release about its own system. The 1.2 million tonnes is the
+  estimated emissions of the sources mitigated, not a measured reduction, and no
+  comparison without the AI is shown.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown; the release does not compare outcomes with a workflow without AI"
+effect:
+  relative: "12 to 15 times more satellite data processed by analysts"
+  absolute: "Helping to mitigate sources estimated to have emitted 1.2 million tonnes of methane"
+reach: "Governments and oil and gas companies notified through UNEP's Methane Alert and Response System, worldwide"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-15
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "UNEP press release: AI helping UN detect methane emissions and spark real reductions in climate-warming gas (15 July 2026)"
+    url: https://www.unep.org/news-and-stories/press-release/ai-helping-un-detect-methane-emissions-and-spark-real-reductions
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is UNEP's own press release about the report on its own system
+  (IMEO's Methane Alert and Response System); no independent audit of the
+  estimate.
+what_would_change: "Operator-confirmed repairs for each notified source, with follow-up satellite checks showing the plume gone."
+notes: >-
+  verify: the release gives no period for the 1.2 million tonne estimate other
+  than operation since 2024, so achieved dates and the window grade are left empty.
+  verify: the release says the figure is the estimated emissions of the mitigated
+  sources, not a measured reduction.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the mitigation follows from AI screening plus analyst verification plus the response of governments and operators, and the release gives no comparison without the AI.
+receipts:
+  - field: headline
+    quote: helping to mitigate sources estimated to have emitted 1.2 million tonnes of methane
+    locator: Body, third paragraph
+    source: 0
+  - field: impact
+    quote: helping to mitigate sources estimated to have emitted 1.2 million tonnes of methane
+    locator: Body, third paragraph
+    source: 0
+  - field: impact_number
+    quote: helping to mitigate sources estimated to have emitted 1.2 million tonnes of methane
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.absolute
+    quote: helping to mitigate sources estimated to have emitted 1.2 million tonnes of methane
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.relative
+    quote: enabling IMEO analysts to process 12 to 15 times more data while maintaining scientific rigour
+    locator: Body, third paragraph
+    source: 0

@@ -1,0 +1,76 @@
+id: warddeken-megadetector-camera-trap-images-rangers-arnhem
+section: because
+rank: 101
+headline: >-
+  Because of the MegaDetector AI model, Indigenous rangers in West Arnhem had
+  81.4 per cent fewer camera-trap images to analyse, Charles Darwin University
+  reports.
+impact: "81.4% fewer images to analyse"
+impact_number: "81.4%"
+impact_label: "fewer camera-trap images for Indigenous rangers to analyse, after an AI pre-filter"
+summary: >-
+  A Charles Darwin University news item on research with Warddeken Land
+  Management and CSIRO says MegaDetector cut the images needing analysis from
+  925,088 to 172,290, shortening processing time from six months to two months,
+  and that the time rangers gave to processing fell, freeing time for language
+  documentation.
+caveat: >-
+  A university newsroom summary of a published study, read as a news item, not the
+  paper. It shows time saved on image sorting, not conservation outcomes, and
+  people still verify the detections.
+domain: work
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: isolated
+  window: null
+comparison: "Images needing analysis after MegaDetector filtering against all images collected by the rangers"
+effect:
+  relative: "An 81.4 per cent reduction in images needing analysis"
+  absolute: "Images needing analysis fell from 925,088 to 172,290"
+reach: "Daluk and bininj rangers of the Mayh wildlife program, Warddeken Indigenous Protected Area, West Arnhem, Northern Territory"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Charles Darwin University news: Rangers reimagine AI in wildlife monitoring (October 2026 edition)"
+    url: https://www.cdu.edu.au/cdu-uni-news/all-editions/2026-10/rangers-reimagine-ai-wildlife-monitoring
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the university's own news item about research its staff took part
+  in, with Warddeken Land Management and CSIRO; the published paper was not read.
+what_would_change: "The published paper in Conservation Science and Practice, with the survey dates and how the counts were made."
+notes: >-
+  verify: the news item gives no survey period for the 1,572 hours of data, so
+  achieved dates and the window grade are left empty.
+  verify: the item names the paper in Conservation Science and Practice; its
+  figures were not checked against it.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because the only change described is the AI pre-filter removing images before rangers review them, compared with reviewing every image, though no separate control group is shown.
+receipts:
+  - field: headline
+    quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
+    locator: Body, paragraph beginning "Following extensive consultation"
+    source: 0
+  - field: impact
+    quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
+    locator: Body, paragraph beginning "Following extensive consultation"
+    source: 0
+  - field: impact_number
+    quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
+    locator: Body, paragraph beginning "Following extensive consultation"
+    source: 0
+  - field: effect.relative
+    quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
+    locator: Body, paragraph beginning "Following extensive consultation"
+    source: 0
+  - field: effect.absolute
+    quote: MegaDetector reduced the number of images needing analysis from 925,088 to 172,290 – an 81.4 per cent reduction
+    locator: Body, paragraph beginning "Following extensive consultation"
+    source: 0
