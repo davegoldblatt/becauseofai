@@ -82,3 +82,19 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-20
+  content: 3734714b18abeb9de1d4c6f7fbe88d82e789de6ce26ae00912a6ee361701848a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the publication date and relative recruitment timing do not establish when the enrollments occurred.).

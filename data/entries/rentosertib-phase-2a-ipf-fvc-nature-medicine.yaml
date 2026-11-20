@@ -88,3 +88,20 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-20
+  content: b5e9ceffc2b89e7b9d24ef12c94d73f06331cda349a14e4c9cc67a31a2ac9174
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: rentosertib-phase-2a-ipf-fvc-nature-medicine/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
+  record: rentosertib-phase-2a-ipf-fvc-nature-medicine/2026-11-20.json

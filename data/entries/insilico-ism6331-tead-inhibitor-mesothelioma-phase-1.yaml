@@ -77,3 +77,20 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-20
+  content: 6b52137bd895b7ef1ac991164406b056d37750758ad8e561d7ffdae412ee0b5b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json
+held:
+  reason: fails-test
+  since: 2026-11-20
+  detail: "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.)."
+  record: insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json

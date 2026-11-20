@@ -69,3 +69,20 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-20
+  content: 92cf8afb15c6544b8ba0edcbe9fcca664c80463b886c99caf720d44014de385b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json

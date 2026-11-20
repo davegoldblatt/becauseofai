@@ -79,3 +79,19 @@ drafted:
   vendor: anthropic
   model: claude-sonnet-5-5
   date: 2026-11-20
+  content: 487eb1a521d0e53e4886cc155e31ccbb83bf13ee6f1f07170bd9ed8b67cc7e9b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: pass
+  record: recursion-rec-4881-fap-tupelo-polyp-burden/2026-11-20.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the data cutoff does not establish when the reported patient benefits occurred.).
