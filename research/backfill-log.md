@@ -433,3 +433,25 @@ Rejected:
 - MGB RECTIFIER (JAMA, 2025): outside the window and Becker's page gave HTTP 403.
 - Every Cure, drug-repurposing case reports and model-only repurposing papers: old, single cases or no patients.
 - Fewer than the twenty queries and fifteen reads the brief asks for were done this run (about sixteen searches, ten pages read).
+
+## 2026-11-20, slice 27: announcements: workplaces and customer service, 2026-08-12 to 2026-11-11
+
+Drafted (8; one not-because):
+- microsoft-copilot-field-experiment-66-firms-email-hours: arXiv/NBER full text, 7,137 workers at 66 firms, 1.4 fewer email hours a week (12%); Microsoft authors; dates left empty.
+- alibaba-taobao-genai-assistant-after-sales-agents-rct: arXiv full text, 5,940 agents, issue identification 8.2% faster, ratings +0.042, retrials null; 2024-01-23 to 2024-02-19.
+- copilot-three-field-experiments-software-developers-completed-tasks: MIT draft, 4,867 developers, +26.08% completed tasks (SE 10.3%); post-registered, evidence B.
+- google-ai-patent-drafting-assistant-lawyers-three-month-rct: NBER abstract page, 133 lawyers, +0.38 SD at 90 days; Google-run (abstract only).
+- bbva-italy-germany-contact-centre-ai-copilots-handling-time: BBVA's own page, handling time down more than 15% (speculative; no period).
+- octopus-energy-arlo-ai-email-assistant-customer-satisfaction: Octopus press release, 76% vs 72% satisfaction, 8,000 emails a week (speculative; no dates).
+- uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations: trade report of the provider's talk, about half of 500 first-week calls fully handled by AI (speculative).
+- kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null: HKS abstract page, no average effect on revenue or profit (not-because; abstract only, 2023).
+
+Rejected:
+- Humlum and Vestergaard Danish chatbot study: observational, chatbots in general, no named system.
+- Voxel/Americold (70% or 77% fewer injuries): vendor page, undated, safety programme bundled; other Voxel and iFactory figures are marketing.
+- DVLA FY26 chatbot count: same programme as an existing entry. Klarna, Centrica 140 to 87 s: no primary page read or found.
+- Kraken Magic Ink (techUK): undated, "around 70%" satisfaction vague. P&G Cybernetic Teammate (NBER w33641): 2025, performance score without a stated number.
+- Survey-based hours-saved claims (BCG, NHS Copilot, civil service, New York Life): self-reported or projected.
+- Vendor blogs on resolution and abandonment (Audibel, Omaha Steaks, orderbird, Webex): unsourced or title-only.
+- Journal pages (Management Science, eScholarship PDF): HTTP 403; used drafts or abstracts instead.
+- About sixteen searches and fourteen pages read, short of the floor.

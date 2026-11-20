@@ -1,0 +1,99 @@
+id: alibaba-taobao-genai-assistant-after-sales-agents-rct
+section: because
+rank: 95
+headline: >-
+  Because of a generative AI assistant that drafts issue diagnoses and solutions, new Taobao
+  after-sales agents randomly given access cut issue-identification time by 8.2% and raised
+  customer ratings, with no change in customer retrials.
+impact: "Issue identification 8.2% faster; ratings +0.042 on a five-point scale"
+impact_number: "8.2%"
+impact_label: "shorter time to identify a customer's issue for new agents given the AI assistant (3.2 seconds)"
+summary: >-
+  A working paper by university researchers and an Alibaba employee reports a four-week
+  randomized A/B test in Alibaba's Taobao after-sales chat support. 5,940 agents with under a
+  year of tenure were randomly assigned to have, or not have, an assistant that drafts a
+  diagnosis and solution proposal at the start of a chat. Access sped up the opening stage and
+  raised ratings but did not change three-day retrials.
+caveat: >-
+  A preprint, not peer-reviewed, written with an Alibaba employee about Alibaba's own
+  assistant. The gains are small (chat duration fell 1.1%), the effect on three-day customer
+  retrials is near zero and not significant, and the authors report that top-performing agents
+  did worse with the tool. Only agents with under a year of tenure were included.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Agents randomly assigned to the AI assistant (2,895) vs agents randomly assigned to no assistant (3,045), same Taobao after-sales chat service"
+effect:
+  relative: "Access reduced issue identification time by 8.2% and chat duration by 1.1%; dissatisfaction rate down 3.4% relative to the pretreatment mean"
+  absolute: "Issue identification time down 3.2 seconds and chat duration down 5.7 seconds; customer ratings up 0.042 points on a five-point scale; three-day retrial rate effect near zero and not significant"
+reach: "5,940 new customer service agents handling approximately 2.56 million chats"
+dates:
+  achieved_start: 2024-01-23
+  achieved_end: 2024-02-19
+  published: 2026-07
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Ni, Wang, Feng, Lu, Wang and Zhou: Generative AI in Action: Field Experimental Evidence from Alibaba's Customer Service Operations (arXiv 2603.29888, July 2026 version)"
+    url: https://arxiv.org/pdf/2603.29888
+    type: primary
+conflicts: >-
+  The study was run in collaboration with Alibaba, which operates the platform and the assistant;
+  one author is affiliated with Alibaba Group. The paper is a preprint.
+what_would_change: "A peer-reviewed version or replication by authors independent of the platform, with longer follow-up and agent-level outcomes beyond the first year of tenure."
+notes: >-
+  verify: the paper's own count of agents is 5,940 (2,895 treated, 3,045 control); the absolute
+  and relative effects quoted are the intent-to-treat estimates in Table 3.
+  verify: the published date is the paper's "July 2026" version line; the arXiv identifier dates it to March 2026.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because agents were randomly assigned at agent level to the assistant or to none and compared over the same four weeks.
+receipts:
+  - field: headline
+    quote: access to the gen AI assistant reduced issue identification time and chat duration by 8.2%
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: impact
+    quote: access to the gen AI assistant reduced issue identification time and chat duration by 8.2%
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: impact
+    quote: raised average customer ratings by 0.042 points on a five-point scale
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: impact_number
+    quote: access to the gen AI assistant reduced issue identification time and chat duration by 8.2%
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: effect.relative
+    quote: access to the gen AI assistant reduced issue identification time and chat duration by 8.2%
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: effect.relative
+    quote: decreased the dissatisfaction rate by 0.012 (a 3.4% improvement relative to the pretreatment mean of 0.35)
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: effect.absolute
+    quote: corresponding to absolute reductions of 3.2 seconds and 5.7 seconds.
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: effect.absolute
+    quote: raised average customer ratings by 0.042 points on a five-point scale
+    locator: Section 5.2 Gen AI's ITT Effect
+    source: 0
+  - field: reach
+    quote: The experiment involved 5,940 new customer service agents with tenure of less than one year.
+    locator: Section 3.4 Experiment Design
+    source: 0
+  - field: dates.achieved_start
+    quote: Alibaba conducted a four-week randomized A/B test from January 23, 2024, to February 19, 2024
+    locator: Section 3.4 Experiment Design
+    source: 0
+  - field: dates.achieved_end
+    quote: Alibaba conducted a four-week randomized A/B test from January 23, 2024, to February 19, 2024
+    locator: Section 3.4 Experiment Design
+    source: 0

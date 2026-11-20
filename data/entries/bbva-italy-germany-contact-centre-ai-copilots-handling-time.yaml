@@ -1,0 +1,79 @@
+id: bbva-italy-germany-contact-centre-ai-copilots-handling-time
+section: because
+rank: 94
+headline: >-
+  Because of two generative AI copilots drafting answers for its contact-centre agents, BBVA
+  says average handling time for the most common customer enquiries in Italy and Germany fell
+  by more than 15%.
+impact: "Handling time cut by more than 15%"
+impact_number: ">15%"
+impact_label: "shorter average handling time for common enquiries at BBVA's Italy and Germany contact centres"
+summary: >-
+  BBVA's contact-centre teams in Italy and Germany built two AI assistants that turn the bank's
+  internal knowledge into a draft reply for the agent, who reviews it before sending. The bank
+  reports a lower average handling time for routine enquiries and that more than 260 agents use
+  the tool daily.
+caveat: >-
+  The bank's own announcement, with no baseline period, comparison group, quality or
+  repeat-contact measure, and no independent audit. The figure covers common enquiry types only.
+  Agents review every draft, so the gain is the agents' time, not automated resolution.
+domain: work
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Average handling time for the same enquiry types before the assistants (no period given)"
+effect:
+  relative: "Average handling time reduced by more than 15% for the most common enquiries"
+  absolute: null
+reach: "More than 260 customer service agents daily; nearly 100,000 customer enquiries a month in Italy and Germany"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-31
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "BBVA: BBVA Cuts Customer Inquiry Response Times by More Than 15% in Italy and Germany Thanks to AI (31 July 2026)"
+    url: https://www.bbva.com/en/innovation/bbva-cuts-customer-inquiry-response-times-by-more-than-15-in-italy-and-germany-thanks-to-ai/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is BBVA's own announcement about its own project, built on its in-house BBVA
+  Assistants platform that uses OpenAI's models. No independent audit.
+what_would_change: "Before-and-after handling times with the measurement period, enquiry mix and a quality or repeat-contact measure, ideally against agents not given the tool."
+notes: >-
+  verify: the page gives no period for the handling-time measurement, so achieved dates and
+  window are left empty. The date shown is the page's "Updated: 31 Jul 2026" line.
+  verify: the page says "nearly 100,000" enquiries a month and "more than 260" agents; the
+  handling-time figure applies only to the most common enquiries.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the bank compares handling time before and after the assistants with no control group and no separation from other changes.
+receipts:
+  - field: headline
+    quote: reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%
+    locator: Lead paragraph
+    source: 0
+  - field: impact
+    quote: reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%
+    locator: Lead paragraph
+    source: 0
+  - field: impact_number
+    quote: reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%
+    locator: Lead paragraph
+    source: 0
+  - field: effect.relative
+    quote: reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%
+    locator: Lead paragraph
+    source: 0
+  - field: reach
+    quote: Used daily by more than 260 customer service agents across both countries
+    locator: Body, fourth paragraph
+    source: 0
+  - field: reach
+    quote: the nearly 100,000 customer enquiries they receive every month
+    locator: Body, second paragraph
+    source: 0

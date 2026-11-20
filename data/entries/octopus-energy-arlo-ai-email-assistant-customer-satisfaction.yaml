@@ -1,0 +1,82 @@
+id: octopus-energy-arlo-ai-email-assistant-customer-satisfaction
+section: because
+rank: 98
+headline: >-
+  Because of an AI assistant that answered routine customer emails, Octopus Energy says its
+  trial reached a 76% customer satisfaction score against 72% for comparable human responses,
+  on about 8,000 emails a week.
+impact: "Satisfaction 76% vs 72% for human replies"
+impact_number: "76%"
+impact_label: "customer satisfaction for AI-written email replies, vs 72% for comparable human responses"
+summary: >-
+  Octopus Energy and Kraken built Arlo, an AI customer-support assistant that answers
+  straightforward customer emails about tariff renewals, payment dates and account details.
+  The supplier's press release reports a three-month trial in which Arlo handled about 4% of
+  UK customer emails and scored higher on satisfaction than comparable human replies.
+caveat: >-
+  The company's own press release about its own trial, with no method, sample or significance
+  given, no trial dates, and no independent audit. The assistant only takes routine enquiries,
+  so the comparison is against human replies to comparable, not identical, questions.
+domain: work
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Arlo's customer satisfaction score vs comparable responses from human advisors at the same supplier"
+effect:
+  relative: "Satisfaction score of 76% beating comparable human responses at 72%"
+  absolute: "Arlo handled around 8,000 emails a week, 4% of all customer emails the supplier received in the UK"
+reach: "Around 8,000 customer emails a week during the three-month trial"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-07
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Octopus Energy press release: Octopus Energy's AI trial wins customer approval (7 July 2026)"
+    url: https://octopus.energy/press/octopus-energy-s-ai-trial-wins-customer-approval/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Octopus Energy's own press release about its own product. Arlo was built in
+  partnership with Kraken, which recently spun out of Octopus Energy Group. No independent audit.
+what_would_change: "Published trial method and dates, with satisfaction compared on matched enquiry types and resolution or re-contact rates."
+notes: >-
+  verify: the release says "three-month trial" and gives its date as 7 July 2026 but no trial
+  dates, so achieved dates and window are left empty.
+  verify: the 76% and 72% figures are described as customer satisfaction scores; the survey method is not given.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the release compares the assistant's replies with human replies to comparable emails with no stated randomisation or matching.
+receipts:
+  - field: headline
+    quote: Arlo achieved a 76% customer satisfaction score, beating comparable responses from human advisors, which scored 72%.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: headline
+    quote: Arlo handled around 8,000 emails a week – 4% of all customer emails received by the energy supplier in the UK.
+    locator: Body, third paragraph
+    source: 0
+  - field: impact
+    quote: Arlo achieved a 76% customer satisfaction score, beating comparable responses from human advisors, which scored 72%.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: impact_number
+    quote: Arlo achieved a 76% customer satisfaction score, beating comparable responses from human advisors, which scored 72%.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: effect.relative
+    quote: Arlo achieved a 76% customer satisfaction score, beating comparable responses from human advisors, which scored 72%.
+    locator: Body, fourth paragraph
+    source: 0
+  - field: effect.absolute
+    quote: Arlo handled around 8,000 emails a week – 4% of all customer emails received by the energy supplier in the UK.
+    locator: Body, third paragraph
+    source: 0
+  - field: reach
+    quote: Arlo handled around 8,000 emails a week – 4% of all customer emails received by the energy supplier in the UK.
+    locator: Body, third paragraph
+    source: 0

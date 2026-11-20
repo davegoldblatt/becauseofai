@@ -1,0 +1,81 @@
+id: microsoft-copilot-field-experiment-66-firms-email-hours
+section: because
+rank: 93
+headline: >-
+  Because of a generative AI assistant built into email, meetings and writing apps, randomly
+  selected knowledge workers at 66 firms spent about 1.4 fewer hours a week in email sessions
+  in months 4 to 6, a 12% decline.
+impact: "1.4 fewer hours a week on email (12%), randomized"
+impact_number: "1.4 hrs"
+impact_label: "less email time per week among workers given Copilot (12% decline, months 4 to 6)"
+summary: >-
+  A working paper by Microsoft Research and Harvard Business School reports a field experiment
+  in which 7,137 knowledge workers at 66 firms were randomly selected to get Microsoft 365
+  Copilot. Using telemetry, the authors find less time in email and more email-free blocks of
+  time, and no detectable shift in meetings or the mix of tasks.
+caveat: >-
+  A preprint, not peer-reviewed, by authors at the vendor. The figure is an intent-to-treat
+  estimate from usage telemetry, not worker-reported or measured output, and email time is
+  inferred from reading-pane activity. Treated workers were free not to use the tool. The paper
+  finds no change in meetings or Word time and no shift in the composition of tasks.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "Workers randomly selected to receive Copilot licences vs eligible workers who did not, at the same 66 firms, compared with their own pre-period"
+effect:
+  relative: "A 12% decline from the pre-period average email time (17% for workers who used the tool)"
+  absolute: "An average of 1.4 fewer hours per week in email sessions over post-period months 4-6 (2 hours for workers who used the tool)"
+reach: "7,137 knowledge workers (3,684 treated) at 66 firms"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-11-13
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Dillon, Jaffe, Immorlica and Stanton: Shifting Work Patterns with Generative AI (arXiv 2504.11436 v4, NBER Working Paper 33795)"
+    url: https://arxiv.org/pdf/2504.11436
+    type: primary
+conflicts: >-
+  Two authors are at Microsoft Research, which makes the tool studied (Microsoft 365 Copilot),
+  and Outlook session metrics were developed in consultation with the Microsoft product team
+  that manages the telemetry. The paper is a preprint.
+what_would_change: "A replication by authors independent of the vendor, or output and wage measures showing whether the saved email time was turned into other work."
+notes: >-
+  verify: the paper gives licence start dates between September 2023 and April 2024 and a 24-week
+  post period, but no single achieved period for the headline estimate, so achieved dates and window
+  are left empty.
+  verify: the headline figure is the intent-to-treat estimate; the 2-hour figure is the effect on
+  workers who used the tool.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because workers at the same firms were randomly selected to receive the tool and compared with those not selected.
+receipts:
+  - field: headline
+    quote: an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6
+    locator: Section 2.2.1 Effects on Time Use
+    source: 0
+  - field: impact
+    quote: an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6
+    locator: Section 2.2.1 Effects on Time Use
+    source: 0
+  - field: impact_number
+    quote: an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6
+    locator: Section 2.2.1 Effects on Time Use
+    source: 0
+  - field: effect.absolute
+    quote: an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6
+    locator: Section 2.2.1 Effects on Time Use
+    source: 0
+  - field: effect.relative
+    quote: 1.4 (2) fewer hours per week in email sessions over post-period months 4-6, a 12% (17%)
+    locator: Section 2.2.1 Effects on Time Use
+    source: 0
+  - field: reach
+    quote: We present evidence from a field experiment across 66 firms and 7,137 knowledge workers.
+    locator: Abstract
+    source: 0

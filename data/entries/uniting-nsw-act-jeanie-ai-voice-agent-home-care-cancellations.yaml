@@ -1,0 +1,89 @@
+id: uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations
+section: because
+rank: 97
+headline: >-
+  Because of an AI voice agent that takes home-care cancellation calls, Uniting NSW.ACT says
+  about half of roughly 500 first-week interactions were handled completely by AI, at a
+  handle time of three to three-and-a-half minutes with no queue.
+impact: "Half of first-week calls fully handled by AI"
+impact_number: "~50%"
+impact_label: "of about 500 first-week calls handled completely by the AI voice agent, with no wait"
+summary: >-
+  An Australian aged-care and community-services provider put an AI voice agent built on Webex
+  Contact Center in front of home-care appointment cancellations. A trade-press report of its
+  IT manager's conference talk gives first-week figures and the queue and call times before.
+caveat: >-
+  A trade-press report of the organisation's own presentation, covering the first week after
+  going live, with no control group and no independent audit. Before-and-after call times come
+  from the manager's account, not a stated measurement. The bot's first live test lost one
+  caller who did not know their ID, after which the flow was changed.
+domain: work
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Cancellation calls before the voice agent, when callers waited in queues for 15 minutes and a cancellation conversation could take 15 minutes"
+effect:
+  relative: "About half of the roughly 500 first-week interactions were handled completely by AI; the rest were escalated to humans"
+  absolute: "Average handle time of three to three-and-a-half minutes, without wait times, against queues of 15 minutes and calls of up to 15 minutes before"
+reach: "Roughly 500 interactions in the first week; the provider has tens of thousands of clients ringing each month"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-12-18
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "techpartner.news: This is AI speaking: what Uniting NSW.ACT's voice bot tells us about the future of call centres (18 December 2025)"
+    url: https://www.techpartner.news/news/this-is-ai-speaking-what-uniting-nswacts-voice-bot-tells-us-about-the-future-of-call-centres-622657
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are the organisation's own, given by its IT customer-experience manager in a talk
+  at Cisco Live Melbourne 2025 and reported by a trade outlet whose writer travelled to the event
+  as a guest of Cisco. The agent runs on Cisco's Webex Contact Center and was built with Optus
+  and Cisco. No independent audit.
+what_would_change: "Published call data over a longer period, with escalation reasons, repeat-contact and client-outcome measures, and the comparison queue times."
+notes: >-
+  verify: the article gives no calendar date for go-live ("two weeks before Cisco Live Melbourne
+  2025"), so achieved dates and window are left empty.
+  verify: the page is a trade-press report of an interview and conference talk, not a page of
+  the organisation itself; no primary page from Uniting NSW.ACT was found.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Bundled because the figures are the organisation's own before-and-after account with no comparison group and no separation from other call-handling changes.
+receipts:
+  - field: headline
+    quote: In the first week, Uniting NSW.ACT recorded around 500 interactions with Jeanie; about half were handled completely by AI.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: headline
+    quote: The average “handle time” for the calls was three to three-and-a-half minutes, without wait times.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: impact_number
+    quote: In the first week, Uniting NSW.ACT recorded around 500 interactions with Jeanie; about half were handled completely by AI.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: effect.relative
+    quote: In the first week, Uniting NSW.ACT recorded around 500 interactions with Jeanie; about half were handled completely by AI.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: effect.absolute
+    quote: The average “handle time” for the calls was three to three-and-a-half minutes, without wait times.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: effect.absolute
+    quote: callers regularly waited in queues for 15 minutes, a conversation to cancel an appointment could take 15 minutes
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: reach
+    quote: In the first week, Uniting NSW.ACT recorded around 500 interactions with Jeanie; about half were handled completely by AI.
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
+  - field: reach
+    quote: Uniting NSW.ACT has tens of thousands of clients ringing each month
+    locator: Body, "Ring fencing the use-case" section
+    source: 0
