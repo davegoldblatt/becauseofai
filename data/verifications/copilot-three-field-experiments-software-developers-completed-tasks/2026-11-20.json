@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "copilot-three-field-experiments-software-developers-completed-tasks",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "2b380a815a426fa87968f565e7ce8b2edb05cdd3f7647c68ae9d0b9891d97a42",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-20T09:18:01.232Z",
+      "final_url": "https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf",
+      "sha256": "31a4ef92cc8a5cc5fee00c93081d23079a1e7df45850e26a2709c6727754b900",
+      "chars": 65236,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The pooled comparison includes Accenture developers offered Copilot plus training and managerial encouragement versus controls without that package.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": true,
+        "note": "The entry has no achieved dates; the source dates observations to 2022–2024, but gives Microsoft's experiment end as both May 3, 2023 and April 2023, and Anonymous Company's start as October versus September–October 2023."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Two authors list Microsoft affiliations, and the experiments were company-run with company-provided data; the entry discloses these relationships."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports a pooled 26.08% increase (SE 10.3%) in completed tasks estimated for Copilot adoption using randomized access as an instrument. The trials were post-registered, preventing grade A, and the pooled intervention includes adoption support beyond AI access."
+    },
+    "error": null,
+    "tokens": {
+      "input": 23256,
+      "output": 705,
+      "total": 23961,
+      "cached": 0,
+      "reasoning": 236
+    },
+    "duration_ms": 17258
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter isolated, verifier bundled; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "bundled"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

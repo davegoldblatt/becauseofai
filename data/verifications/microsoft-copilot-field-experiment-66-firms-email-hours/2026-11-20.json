@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "microsoft-copilot-field-experiment-66-firms-email-hours",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "53a8e97fff783a57d7bc0680503bd752170930ff549dc46675b9be17354fbeba",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://arxiv.org/pdf/2504.11436",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-20T09:18:52.409Z",
+      "final_url": "https://arxiv.org/pdf/2504.11436",
+      "sha256": "1f62f482af34c01b81f4c1d637eef9af7a56f013216109e1a164f28e2d72f325",
+      "chars": 119553,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "an average of 1.4 (2) fewer hours per week in email sessions over post-period months 4-6",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "1.4 (2) fewer hours per week in email sessions over post-period months 4-6, a 12% (17%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "We present evidence from a field experiment across 66 firms and 7,137 knowledge workers.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Random assignment compared access to Copilot with existing technologies at the same firms, isolating the incremental effect of Copilot access.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "Entry achieved dates are null; the introduction dates the experiment September 2023–October 2024, and Appendix A dates treatment starts September 2023–April 2024 with up to 24 weeks of follow-up."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Microsoft ran the experiment and supplied telemetry; three authors have Microsoft Research affiliations, whereas the entry says two."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "All four tests pass; evidence grade is null because randomization is documented but preregistration of a primary endpoint is not established, and the other evidence categories do not fit."
+      },
+      "summary": "The source supports the reported randomized reduction of 1.4 weekly email-session hours (12%) during months 4–6, with data collected before the registry window. It does not establish preregistration, measured productivity gains, or in-window benefits."
+    },
+    "error": null,
+    "tokens": {
+      "input": 37878,
+      "output": 723,
+      "total": 38601,
+      "cached": 0,
+      "reasoning": 221
+    },
+    "duration_ms": 17095
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

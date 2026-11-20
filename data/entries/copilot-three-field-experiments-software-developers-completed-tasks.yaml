@@ -1,0 +1,95 @@
+id: copilot-three-field-experiments-software-developers-completed-tasks
+section: because
+rank: 96
+headline: >-
+  Because of an AI coding assistant, software developers randomly given access at Microsoft,
+  Accenture and a Fortune 100 company completed 26.08% more tasks, with a wide margin of error.
+impact: "26.08% more tasks completed (SE 10.3%), pooled randomized trials"
+impact_number: "+26%"
+impact_label: "more completed tasks for developers given the GitHub Copilot coding assistant (SE 10.3%)"
+summary: >-
+  Three randomized experiments run by companies in the ordinary course of business gave a random
+  subset of software developers access to GitHub Copilot. Pooled across 4,867 developers, the
+  authors estimate more completed tasks among developers with the tool. Less experienced
+  developers adopted the tool more and gained more.
+caveat: >-
+  A working-paper draft (February 2025; later published in Management Science, which the
+  reader could not open). Each experiment is noisy and the pooled estimate has a standard error
+  of 10.3 percentage points. Adoption among treated developers was low, the trial was
+  post-registered, and completed tasks (pull requests and similar activity) are a proxy for
+  output, not quality. Microsoft authors study a Microsoft-owned product.
+domain: work
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Developers randomly offered access to GitHub Copilot vs developers not offered access, within each of three companies"
+effect:
+  relative: "26.08% increase (SE: 10.3%) in completed tasks among developers using the AI tool, pooled across three experiments"
+  absolute: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-02
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Cui, Demirer, Jaffe, Musolff, Peng and Salz: The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers (draft, February 2025)"
+    url: https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
+    type: primary
+conflicts: >-
+  Two authors are at Microsoft, which owns GitHub, the maker of Copilot, and the Microsoft
+  experiment was run inside Microsoft. The paper thanks employees of Microsoft, GitHub and
+  Accenture for data. The randomized trial was post-registered as AEARCTR-0014530.
+what_would_change: "A replication by authors independent of the vendor measuring code quality and longer-run output, with higher adoption."
+notes: >-
+  verify: the draft read is dated February 2025; the journal version (Management Science,
+  doi 10.1287/mnsc.2025.00535) returned HTTP 403, so numbers may differ in the final version.
+  verify: the Accenture experiment started in the last week of July 2023 and the Anonymous
+  Company experiment in October 2023, but the Microsoft start date and a common end date are not
+  given, so achieved dates and window are left empty.
+  verify: evidence B because the randomized trial was registered after it began.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because developers were randomly assigned access to the coding assistant within each company and compared with those not given access.
+receipts:
+  - field: headline
+    quote: "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among"
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among"
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among"
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: "our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among"
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 2b380a815a426fa87968f565e7ce8b2edb05cdd3f7647c68ae9d0b9891d97a42
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: copilot-three-field-experiments-software-developers-completed-tasks/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "attribution: drafter isolated, verifier bundled; window: drafter no grade, verifier pre."
+  record: copilot-three-field-experiments-software-developers-completed-tasks/2026-11-20.json

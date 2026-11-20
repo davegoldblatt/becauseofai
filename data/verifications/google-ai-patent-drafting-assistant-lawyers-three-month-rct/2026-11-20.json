@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "f9c542c75a6552ebfe2d52fa213b2a69844399098bc5500f73c4ad75e783d164",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nber.org/papers/w35720",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T09:18:18.826Z",
+      "final_url": "https://www.nber.org/papers/w35720",
+      "sha256": "5abfcac74c14df6684fbdd8dbc794836fb58e49712200137217336a75e7672a7",
+      "chars": 5703,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "and 90 days (0.38 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "and 90 days (0.38 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "and 90 days (0.38 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "AI access raised the quality of work delivered on benchmark patent drafting tasks at 10 days (0.34 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "and 90 days (0.38 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Treated lawyers outperformed controls by 0.32 SD",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "we gave 133 practicing patent lawyers at eleven U.S. intellectual property law firms access to a custom AI patent drafting assistant",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The randomized comparison contrasts lawyers given AI access with controls without that access.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source supplies relative follow-up times but no calendar dates for the trial."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Google conducted and funded the study; disclosed relationships include employee equity, paid contracting, and fellowship support."
+      },
+      "tests": {
+        "reached_people": false,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent."
+      },
+      "summary": "The abstract supports the reported numerical gains and randomized AI-access comparison. It does not establish a preregistered primary endpoint, calendar dates of benefit, or benefits beyond experimental task scores."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13427,
+      "output": 759,
+      "total": 14186,
+      "cached": 0,
+      "reasoning": 256
+    },
+    "duration_ms": 18488
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "fails-test",
+    "detail": "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.)."
+  }
+}

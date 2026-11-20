@@ -1,0 +1,90 @@
+id: kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null
+section: not-because
+rank: 26
+headline: >-
+  A GPT-4 business assistant on WhatsApp, randomly offered to Kenyan small-business owners, had
+  no detectable average effect on revenues or profits; high performers gained about 15% and
+  low performers did about 8% worse.
+impact: "No average effect on revenue or profit; +15% for high performers, -8% for low"
+impact_number: "+15%"
+impact_label: "for high performers, about 8% worse for low performers, no average effect (GPT-4 business assistant)"
+summary: >-
+  A Harvard Business School working paper reports a field experiment in which Kenyan
+  entrepreneurs were randomly given access to a GPT-4-powered business assistant over WhatsApp.
+  The authors cannot reject no average effect on revenues or profits, and find the effect
+  differed by baseline performance.
+caveat: >-
+  Read from the Harvard Kennedy School listing of the December 2023 working paper's abstract
+  only; the journal version (Management Science) returned HTTP 403. The abstract gives no
+  sample size or trial dates, and the 15% and 8% figures are sub-sample results.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "Entrepreneurs randomized to a GPT-4-powered AI business assistant via WhatsApp vs entrepreneurs not given access"
+effect:
+  relative: "Unable to reject no average treatment effect on revenues and profits; high performers at baseline benefited by just over 15%, low performers did about 8% worse"
+  absolute: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2023-12
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Otis, Clarke, Delecourt, Holtz and Koning: The Uneven Impact of Generative AI on Entrepreneurial Performance (Harvard Business School Working Paper 24-042, December 2023; listing on Harvard Kennedy School CID)"
+    url: https://www.hks.harvard.edu/centers/cid/publications/uneven-impact-generative-ai-entrepreneurial-performance
+    type: primary
+conflicts: >-
+  None stated in the abstract page read. The page is a working-paper listing; the authors'
+  funding and any tie to OpenAI or the platform were not visible in the text read.
+what_would_change: "A replication with larger samples that tests whether guidance on which AI advice to follow narrows the gap between high and low performers."
+notes: >-
+  verify: abstract only. The sample size, trial dates and funding were not in the text read.
+  verify: the study is from 2023 and the paper is published in Management Science (doi 10.1287/mnsc.2024.06909), which could not be opened; this entry is outside the slice window and was found through a field-experiment search.
+  verify: the sub-sample figures (15% and 8%) are for high and low performers at baseline.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because access to the assistant was randomized across entrepreneurs, so the null average effect compares assigned and unassigned owners.
+receipts:
+  - field: headline
+    quote: Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: Sub-sample analyses show high performers benefited by just over 15% from the AI assistant, whereas low performers did about 8% worse.
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: 6d4c966929278a74a03db4c7f56d8436cfd24564a5fc9cf1283a550224a5608e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json
+held:
+  reason: grade-split
+  since: 2026-11-20
+  detail: "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+  record: kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
+  "date": "2026-11-20",
+  "as_of": "2026-11-20",
+  "entry_sha256": "2a025a73ea2565b36e3b306947da9dc0eaf47633516ab0706fd25dd433946783",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-20"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.bbva.com/en/innovation/bbva-cuts-customer-inquiry-response-times-by-more-than-15-in-italy-and-germany-thanks-to-ai/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-20T09:17:44.027Z",
+      "final_url": "https://www.bbva.com/en/innovation/bbva-cuts-customer-inquiry-response-times-by-more-than-15-in-italy-and-germany-thanks-to-ai/",
+      "sha256": "c03b45d1f68542e3173532e4a975014143bf537259b865a006b7acbe1b049dd3",
+      "chars": 9283,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "reduced the average handling time for the most common customer enquiries about products, services and general procedures by more than 15%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Used daily by more than 260 customer service agents across both countries",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "the nearly 100,000 customer enquiries they receive every month",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-20",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported comparison is between the previous manual information-search workflow and AI assistants deployed with knowledge management, supervision and agent training.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source dates June usage but gives no measurement period for the handling-time reduction."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "BBVA reports results for its own internally developed deployment, and the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The handling-time reduction is reported against the previous workflow, but its measurement dates are absent; June message volume does not date the measured benefit."
+      },
+      "summary": "BBVA reports a handling-time reduction exceeding 15%, daily use by more than 260 agents and nearly 100,000 monthly enquiries across the two contact centres. The source provides neither a dated measurement period nor an independent comparison."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13896,
+      "output": 646,
+      "total": 14542,
+      "cached": 0,
+      "reasoning": 147
+    },
+    "duration_ms": 16924
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "BBVA reports a handling-time reduction exceeding 15%, daily use by more than 260 agents and nearly 100,000 monthly enquiries across the two contact centres. The source provides neither a dated measurement period nor an independent comparison.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "Not dated yet (The handling-time reduction is reported against the previous workflow, but its measurement dates are absent; June message volume does not date the measured benefit.)."
+    ]
+  }
+}

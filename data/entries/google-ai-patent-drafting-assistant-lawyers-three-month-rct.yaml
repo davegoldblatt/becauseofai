@@ -1,0 +1,106 @@
+id: google-ai-patent-drafting-assistant-lawyers-three-month-rct
+section: because
+rank: 99
+headline: >-
+  Because of a custom AI patent-drafting assistant, 133 practising patent lawyers randomly given
+  access produced drafting work scored 0.38 SD higher at 90 days, and senior lawyers kept an
+  advantage when redlining without AI.
+impact: "Drafting quality +0.38 SD at 90 days (randomized, blinded scoring)"
+impact_number: "+0.38 SD"
+impact_label: "drafting quality at 90 days for patent lawyers given an AI drafting assistant"
+summary: >-
+  An NBER working paper reports a pre-registered three-month randomized trial in which 133
+  patent lawyers at eleven U.S. law firms were given a custom AI drafting assistant. Blinded
+  expert attorneys scored the work. Quality was higher with the assistant at 10 and 90 days,
+  and after three months, tested without AI, treated lawyers outperformed controls, but the
+  gain was concentrated among senior lawyers.
+caveat: >-
+  Read from the NBER abstract page only (reasonable at best). The delivered-work gains were on
+  benchmark patent drafting tasks, not live client matters. Junior lawyers showed no average
+  gain when later working without AI. The study was run and funded by Google, the tool's
+  developer. Working paper, not peer-reviewed.
+domain: work
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "Patent lawyers randomized to a custom AI drafting assistant vs lawyers not given it, with all work scored by blinded expert patent attorneys"
+effect:
+  relative: "AI access raised the quality of work delivered on benchmark patent drafting tasks at 10 days (0.34 SD) and 90 days (0.38 SD)"
+  absolute: "Without AI after three months, treated lawyers outperformed controls by 0.32 SD (0.45 SD among senior lawyers, no average gain among junior lawyers)"
+reach: "133 practicing patent lawyers at eleven U.S. intellectual property law firms"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09
+  added: 2026-11-20
+  updated: 2026-11-20
+sources:
+  - title: "Autor, Rodchenko, Martin, Iscenko, Strand, Pearl and Ferere: Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting (NBER Working Paper 35720, September 2026, revised October 2026)"
+    url: https://www.nber.org/papers/w35720
+    type: primary
+conflicts: >-
+  The study was conducted by Google, whose AI assistant was tested, and funded by Google for its
+  direct costs. Five authors are Google employees with equity, one is a paid Google contractor,
+  and the lead author acknowledges Google-linked fellowship support. Pre-registered as
+  AEARCTR-0015823 on 21 May 2025.
+what_would_change: "A replication by authors independent of the developer on live client matters, with longer follow-up on junior lawyers."
+notes: >-
+  verify: only the NBER abstract page could be read, not the paper, so the numbers are from the abstract.
+  verify: the abstract gives no trial dates (registration was 21 May 2025), so achieved dates and window are left empty.
+  verify: the reader printed the p-value symbol as "?"; no p-values are used in the receipts.
+history:
+  - date: 2026-11-20
+    note: "Added by the backfill run."
+rationale: Isolated because lawyers were randomized to the assistant or not and their work was scored blind against controls.
+receipts:
+  - field: headline
+    quote: and 90 days (0.38 SD
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: and 90 days (0.38 SD
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: and 90 days (0.38 SD
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: AI access raised the quality of work delivered on benchmark patent drafting tasks at 10 days (0.34 SD
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: and 90 days (0.38 SD
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: Treated lawyers outperformed controls by 0.32 SD
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: we gave 133 practicing patent lawyers at eleven U.S. intellectual property law firms access to a custom AI patent drafting assistant
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-20
+  content: f9c542c75a6552ebfe2d52fa213b2a69844399098bc5500f73c4ad75e783d164
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-20
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-20
+    verdict: fail
+  record: google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json
+held:
+  reason: fails-test
+  since: 2026-11-20
+  detail: "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.)."
+  record: google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json
