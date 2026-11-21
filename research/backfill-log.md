@@ -486,3 +486,18 @@ Rejected:
 - Pancreatic EUS tandem video study: reader study on recorded video, no patients.
 - Protocols (SAMURAI-fracture, SmaRTWork, AI-guided exercise ring), editorial, APHINITY TIL secondary analysis, validation studies, surveys, reviews and the model or benchmark papers on medRxiv: no people reached or accuracy only; set aside from titles.
 - Short of the floor: 6 sources read with the reader out of 104 candidates.
+
+## 2026-11-21, slice 30: papers and trial results, 2026-08-10 to 2026-08-17
+
+Drafted (0).
+
+Read and rejected:
+- Mozambique dCXR/CAD for TB in advanced HIV (Diagnostics, full text): real patients (238), but CAD results "did not formally alter the diagnostic pathway", so the AI changed nothing; the paper is a retrospective accuracy analysis (sensitivity 50%).
+- Dolphin bimodal LLM patient-education RCT (Med, abstract only): findings cut off in the printed text, no quotable people-level number; comparator is another LLM.
+- Psychotherapy dropout prediction (Clin Psychol Psychother): prediction model, F1 0.303, no patients reached.
+- Art history LLM crossover pilot (Front Psychol, full text): six students answering a question set with the LLM open; a test-performance gain, no learning outcome, no dates.
+- LLM persuasive-prompt psychoeducation experiment (Front Public Health, full text): 40 online participants reading passages, attitude scale only, no real use, no dates.
+- AI-assisted athlete training and mindfulness (Acta Psychol, abstract only): no quotable effect size or number in the abstract.
+- Protocols (AI echo INSIGHT, HeartBot II, ASHA Assist, Ecosystem Justice Translator), editorial, systematic reviews, survey, qualitative study, and the medRxiv model, benchmark and retrospective validation papers: no people reached or accuracy only; set aside from titles and snippets.
+- AlloSure kidney transplant record (NCT04786067): donor cfDNA test, not AI in use.
+- Short of the floor: 6 sources read with the reader out of 71 candidates; the rest are protocols, reviews or model-accuracy papers.
