@@ -60,3 +60,24 @@ receipts:
     quote: A total of 68 nursing staff members (34 in each group) were recruited from eight medium-sized nursing homes
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 138ba044cd3263d0c53b08ee318fe488bd0b6b7edfeb1ca92d2a068684214e36
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: fail
+  record: gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan/2026-11-21.json
+held:
+  reason: grade-split
+  since: 2026-11-21
+  detail: "evidence: drafter D, verifier could not grade; attribution: drafter bundled, verifier isolated."
+  record: gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan/2026-11-21.json
