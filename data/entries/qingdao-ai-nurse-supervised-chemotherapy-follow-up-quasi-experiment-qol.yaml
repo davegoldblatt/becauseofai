@@ -81,3 +81,24 @@ receipts:
     quote: conducted from January to June 2024
     locator: Methods 2.1 Study design and setting
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 21883bcdab8ea5d190c6403a78417de8c57c44d8a07241c04d4db5173be74c9c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: fail
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json
+held:
+  reason: ungrounded
+  since: 2026-11-21
+  detail: "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up.."
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json

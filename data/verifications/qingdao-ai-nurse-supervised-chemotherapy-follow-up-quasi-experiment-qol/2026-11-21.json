@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
+  "date": "2026-11-21",
+  "as_of": "2026-11-21",
+  "entry_sha256": "21883bcdab8ea5d190c6403a78417de8c57c44d8a07241c04d4db5173be74c9c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-21"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.3389/fpubh.2026.1863027",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-21T16:59:34.665Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13506697/fullTextXML",
+      "sha256": "d0cb03e5e0dd5859ec3ec17959bd33236e62a46e978dbc8b03cebfeed87c7a29",
+      "chars": 43144,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A total of 189 patients were included in the final analysis",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 189 patients were included in the final analysis",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "conducted from January to June 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "conducted from January to June 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-21",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "contradicted",
+          "note": "189 was the total study population; only 96 patients received AI-assisted follow-up."
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tested AI communication and risk monitoring together with structured humanistic care and nurse supervision against conventional telephone and outpatient follow-up.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods specify January–June 2024, consistent with the abstract."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No commercial or financial conflict is established; the entry discloses author development and evaluation, but omits acknowledged technical support from the DeepSeek development team."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports a 5.88-point adjusted QoL association in 96 intervention patients versus 93 controls, rather than 189 AI recipients or an isolated causal AI effect. Evidence is ungraded because this small nonrandomized comparative study fits none of the supplied evidence categories."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20576,
+      "output": 771,
+      "total": 21347,
+      "cached": 0,
+      "reasoning": 217
+    },
+    "duration_ms": 20344
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up.."
+  }
+}
