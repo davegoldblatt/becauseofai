@@ -501,3 +501,17 @@ Read and rejected:
 - Protocols (AI echo INSIGHT, HeartBot II, ASHA Assist, Ecosystem Justice Translator), editorial, systematic reviews, survey, qualitative study, and the medRxiv model, benchmark and retrospective validation papers: no people reached or accuracy only; set aside from titles and snippets.
 - AlloSure kidney transplant record (NCT04786067): donor cfDNA test, not AI in use.
 - Short of the floor: 6 sources read with the reader out of 71 candidates; the rest are protocols, reviews or model-accuracy papers.
+
+## 2026-11-21, slice 26: papers and trial results, 2026-08-24 to 2026-08-31
+
+Drafted (1):
+- qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol: 189 chemotherapy patients, nurse-supervised DeepSeek-assisted follow-up vs conventional care, adjusted QoL difference 5.88 (non-randomized, so evidence B, bundled).
+
+Read and rejected:
+- Neurosurgery pixel-level segmentation first-in-human (medRxiv, IDEAL stage 1, abstract and page): six surgical cases, feasibility only, no outcome number or comparison, no dates.
+- UCLA EHR chart summarizer RCT (medRxiv 2026.08.26.26361496) and Lumen voice coach RCT: already entries.
+- Aneurysm false-positive education reader study, oncologist literature-review ratings, neuroradiology report simplification, forensic and ureter video review: reader or rater studies, no patients reached.
+- Tess correction notice: erratum, not a result.
+- Digital self-help prediction, ED coding LLM accuracy, wheelchair detection, pancreatic PASS-01 multimodal ML, APHINITY TIL scoring, and the other medRxiv and PubMed model, benchmark, validation, review and survey papers: accuracy or prediction only, or opinion; set aside from titles and snippets.
+- MW151 radiotherapy record (NCT05417282): drug safety trial, not AI in use.
+- Short of the floor: 2 sources read with the reader out of 71 candidates; the rest were set aside from titles and snippets as above.
