@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan",
+  "date": "2026-11-21",
+  "as_of": "2026-11-21",
+  "entry_sha256": "138ba044cd3263d0c53b08ee318fe488bd0b6b7edfeb1ca92d2a068684214e36",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-21"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.ijnurstu.2026.105752",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-21T19:08:05.678Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.ijnurstu.2026.105752%22&format=json&resultType=core",
+      "sha256": "3ca092f455716f06e520ae8905cc843153ea87580f5aaaa3887a96b734adb916",
+      "chars": 2969,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "client-related burnout (B = -6.86, SE = 2.44, p = .005)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "client-related burnout (B = -6.86, SE = 2.44, p = .005)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 68 nursing staff members (34 in each group) were recruited from eight medium-sized nursing homes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-21",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The comparison was routine care with the AI communication system versus routine care alone, with no additional intervention components described.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract gives first enrollment on 2024-09-24 and three months of follow-up but no calendar dates for outcome collection."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The supplied abstract contains no funding or author relationship disclosures, so conflicts cannot be determined."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates of measured benefits cannot be established from first enrollment and follow-up duration alone; the small quasi-experimental study also does not fit any supplied evidence-grade definition."
+      },
+      "summary": "The abstract supports the reported burnout estimate and enrollment of 68 staff across eight nursing homes. It does not establish outcome collection dates, a window grade, or an evidence grade under the supplied definitions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12474,
+      "output": 668,
+      "total": 13142,
+      "cached": 0,
+      "reasoning": 236
+    },
+    "duration_ms": 18292
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier could not grade; attribution: drafter bundled, verifier isolated.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      }
+    ]
+  }
+}

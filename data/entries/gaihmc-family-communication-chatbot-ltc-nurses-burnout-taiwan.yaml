@@ -1,0 +1,83 @@
+id: gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan
+section: because
+rank: 106
+headline: >-
+  Because of a generative AI chatbot that answered families' health questions, nursing home nurses in
+  northern Taiwan reported less client-related burnout after three months than nurses at comparison
+  homes, in a small non-randomised study.
+impact: "Less client-related burnout (small non-randomised study)"
+impact_number: "−6.86"
+impact_label: "client-related burnout score, group-by-time difference at three months versus routine care"
+summary: >-
+  Sixty-eight nursing staff at eight nursing homes were followed for three months; those at homes using the
+  chatbot for family health education and Q&A showed larger drops in personal and client-related burnout than
+  those continuing routine care.
+caveat: >-
+  Quasi-experimental, 68 staff, no random allocation, and the authors note no adjustment for multiple testing;
+  work-related burnout and over-commitment showed no difference.
+domain: work
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Nursing staff at homes continuing routine care, compared with staff at homes using the chatbot, over three months"
+effect:
+  relative: "client-related burnout (B = -6.86, SE = 2.44, p = .005)"
+  absolute: null
+reach: "68 nursing staff members (34 in each group) from eight nursing homes in northern Taiwan"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-11-13
+  added: 2026-11-21
+  updated: 2026-11-21
+sources:
+  - title: "Effects of an artificial intelligence-supported family communication system on burnout and quality of life among long-term care nurses: A quasi-experimental study (International Journal of Nursing Studies)"
+    url: https://doi.org/10.1016/j.ijnurstu.2026.105752
+    type: primary
+conflicts: "The abstract states no funding or author relationships; vendor ties to the chatbot are not visible in the abstract."
+what_would_change: null
+notes: >-
+  verify: only the abstract could be read (Europe PMC); the full text was not available.
+  verify: the abstract gives the first enrolment date (24/09/2024) but no study end, so achieved dates and the window grade are left empty.
+  verify: allocation to groups is by nursing home and not random; baseline differences are not shown in the abstract.
+related: []
+history:
+  - date: 2026-11-21
+    note: Added by the daily scout.
+rationale: The comparison group at other nursing homes continued routine care, but allocation was not random and groups may differ, so the change cannot be cleanly attributed to the chatbot and attribution is bundled.
+receipts:
+  - field: impact_number
+    quote: client-related burnout (B = -6.86, SE = 2.44, p = .005)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: client-related burnout (B = -6.86, SE = 2.44, p = .005)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 68 nursing staff members (34 in each group) were recruited from eight medium-sized nursing homes
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 138ba044cd3263d0c53b08ee318fe488bd0b6b7edfeb1ca92d2a068684214e36
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: fail
+  record: gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan/2026-11-21.json
+held:
+  reason: grade-split
+  since: 2026-11-21
+  detail: "evidence: drafter D, verifier could not grade; attribution: drafter bundled, verifier isolated."
+  record: gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan/2026-11-21.json
