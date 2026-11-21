@@ -1,0 +1,104 @@
+id: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol
+section: because
+rank: 105
+headline: >-
+  Because of AI, 189 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life
+  5.88 points higher than patients on conventional follow-up.
+impact: "Quality of life +5.88 points"
+impact_number: "+5.88"
+impact_label: "points higher global quality of life with nurse-supervised AI follow-up during chemotherapy (adjusted)"
+summary: >-
+  A prospective, non-randomized study at a Chinese hospital allocated chemotherapy patients to a nurse-supervised follow-up
+  system (rule-based risk alerts plus DeepSeek-based message support) or to routine telephone and clinic follow-up, and compared
+  self-reported quality of life, self-management and satisfaction.
+caveat: >-
+  Allocation was by patient preference and scheduling, not randomization; self-management and satisfaction were measured with
+  study-specific questionnaires that were not psychometrically validated; single centre; short-term outcomes only.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Nurse-supervised AI-assisted digital follow-up system vs conventional care (routine telephone follow-up and outpatient visits), non-randomized"
+effect:
+  relative: null
+  absolute: "Global health status/QoL scale (EORTC QLQ-C30), adjusted mean difference 5.88 points (95% CI 5.71 to 6.05) in favour of the AI-assisted group"
+reach: "189 patients undergoing chemotherapy at the Affiliated Hospital of Qingdao University"
+dates:
+  achieved_start: 2024-01
+  achieved_end: 2024-06
+  published: 2026-08-12
+  added: 2026-11-21
+  updated: 2026-11-21
+sources:
+  - title: "Evaluation of an AI-assisted digital health follow-up system integrating humanistic care for patients undergoing chemotherapy: a prospective quasi-experimental study (Frontiers in Public Health)"
+    url: https://doi.org/10.3389/fpubh.2026.1863027
+    doi: 10.3389/fpubh.2026.1863027
+    type: primary
+conflicts: >-
+  The authors declare no commercial or financial relationships and no financial support. The authors built and ran the system
+  they evaluated; the large language model used is DeepSeek.
+what_would_change: "A randomized multicentre trial, as the authors themselves call for, with validated outcome instruments."
+notes: >-
+  verify: the system bundles rule-based alerts, nurse review and LLM-assisted messaging, so the LLM alone is not isolated.
+  verify: effect sizes are very large for this kind of intervention; the authors treat them as adjusted associations, not causal effects.
+  verify: the paper says the study ran January to June 2024; the outcome was measured at the end of the intervention period for each patient.
+history:
+  - date: 2026-11-21
+    note: Added by the backfill run.
+rationale: Patients were allocated to the AI-assisted follow-up or to conventional follow-up without randomization, and the system bundled rule-based alerts and nurse review with LLM messaging, so the attribution is bundled.
+receipts:
+  - field: headline
+    quote: A total of 189 patients were included in the final analysis
+    locator: Results 3.1
+    source: 0
+  - field: headline
+    quote: adjusted mean difference 5.88, 95% CI 5.71 to 6.05
+    locator: Results 3.3 Quality of life
+    source: 0
+  - field: impact
+    quote: adjusted mean difference 5.88, 95% CI 5.71 to 6.05
+    locator: Results 3.3 Quality of life
+    source: 0
+  - field: impact_number
+    quote: adjusted mean difference 5.88, 95% CI 5.71 to 6.05
+    locator: Results 3.3 Quality of life
+    source: 0
+  - field: effect.absolute
+    quote: adjusted mean difference 5.88, 95% CI 5.71 to 6.05
+    locator: Results 3.3 Quality of life
+    source: 0
+  - field: reach
+    quote: A total of 189 patients were included in the final analysis
+    locator: Results 3.1
+    source: 0
+  - field: dates.achieved_start
+    quote: conducted from January to June 2024
+    locator: Methods 2.1 Study design and setting
+    source: 0
+  - field: dates.achieved_end
+    quote: conducted from January to June 2024
+    locator: Methods 2.1 Study design and setting
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 21883bcdab8ea5d190c6403a78417de8c57c44d8a07241c04d4db5173be74c9c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: fail
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json
+held:
+  reason: ungrounded
+  since: 2026-11-21
+  detail: "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up.."
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json
