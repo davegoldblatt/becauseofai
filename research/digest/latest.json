@@ -1,124 +1,54 @@
 {
-  "generated_at": "2026-11-20T14:11:40.610Z",
-  "since": "2026-11-19T14:11:40Z",
+  "generated_at": "2026-11-21T14:11:45.245Z",
+  "since": "2026-11-20T14:11:45Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 65,
-    "held": 65,
+    "published": 69,
+    "held": 66,
     "counts": {
-      "because": 22,
+      "because": 23,
       "not-because": 7,
       "not-yet": 5
     },
     "lower_levels": {
       "reasonable": 6,
-      "speculative": 25
+      "speculative": 28
     },
     "changed": [
       {
-        "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
-        "headline": "Because of a generative AI assistant that drafts issue diagnoses and solutions, new Taobao after-sales agents randomly given access cut issue-identification time by 8.2% and raised customer ratings, with no change in customer retrials.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
-        "headline": "Because of two generative AI copilots drafting answers for its contact-centre agents, BBVA says average handling time for the most common customer enquiries in Italy and Germany fell by more than 15%.",
+        "id": "ai-fracture-detection-ortho-ed-los-before-after-israel",
+        "headline": "Because of AI, patients whose fractures were ruled out in an orthopedic emergency department spent 127.5 minutes there on average after an AI fracture-detection tool was deployed, down from 135.6.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/bbva-italy-germany-contact-centre-ai-copilots-handling-time"
+        "url": "https://becauseofai.org/entry/ai-fracture-detection-ortho-ed-los-before-after-israel"
       },
       {
-        "id": "copilot-three-field-experiments-software-developers-completed-tasks",
-        "headline": "Because of an AI coding assistant, software developers randomly given access at Microsoft, Accenture and a Fortune 100 company completed 26.08% more tasks, with a wide margin of error.",
+        "id": "ai-second-forward-view-right-colon-adr-rct-japan",
+        "headline": "Because of AI, an AI-assisted second look at the right colon found adenomas in 36.4% of colonoscopy patients against 27.9% with standard colonoscopy.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
-        "headline": "Because of a custom AI patent-drafting assistant, 133 practising patent lawyers randomly given access produced drafting work scored 0.38 SD higher at 90 days, and senior lawyers kept an advantage when redlining without AI.",
+        "id": "aim-chd-ai-secondary-prevention-fuwai-rct",
+        "headline": "Because of AI, 45% of coronary heart disease patients using an AI-enhanced management system were at their blood-pressure target after three months, against 35% with usual care.",
         "change": "added",
-        "state": "held (fails-test)",
-        "url": null
+        "state": "published",
+        "url": "https://becauseofai.org/entry/aim-chd-ai-secondary-prevention-fuwai-rct"
       },
       {
-        "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
-        "headline": "A GPT-4 business assistant on WhatsApp, randomly offered to Kenyan small-business owners, had no detectable average effect on revenues or profits; high performers gained about 15% and low performers did about 8% worse.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
-        "headline": "Because of a generative AI assistant built into email, meetings and writing apps, randomly selected knowledge workers at 66 firms spent about 1.4 fewer hours a week in email sessions in months 4 to 6, a 12% decline.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
-        "headline": "Because of an AI assistant that answered routine customer emails, Octopus Energy says its trial reached a 76% customer satisfaction score against 72% for comparable human responses, on about 8,000 emails a week.",
+        "id": "unep-imeo-mars-ai-methane-alerts-mitigated-sources",
+        "headline": "Because of AI that screens satellite data for methane plumes, the UN Environment Programme says its alert system helped mitigate sources estimated to have emitted 1.2 million tonnes of methane.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/octopus-energy-arlo-ai-email-assistant-customer-satisfaction"
+        "url": "https://becauseofai.org/entry/unep-imeo-mars-ai-methane-alerts-mitigated-sources"
       },
       {
-        "id": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations",
-        "headline": "Because of an AI voice agent that takes home-care cancellation calls, Uniting NSW.ACT says about half of roughly 500 first-week interactions were handled completely by AI, at a handle time of three to three-and-a-half minutes with no queue.",
+        "id": "warddeken-megadetector-camera-trap-images-rangers-arnhem",
+        "headline": "Because of the MegaDetector AI model, Indigenous rangers in West Arnhem had 81.4 per cent fewer camera-trap images to analyse, Charles Darwin University reports.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations"
-      },
-      {
-        "id": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment",
-        "headline": "Because Cleveland Clinic ran Dyania Health's Synapsis AI over its records, seven patients were enrolled in a phase 3 ATTR-CM heart trial through AI-assisted screening, taking the site past its 16-patient goal.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment"
-      },
-      {
-        "id": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
-        "headline": "Because Cleveland Clinic deployed Dyania Health's Synapsis AI across the system, it says study teams have on average enrolled 40% more patients 47% faster.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
-        "headline": "Because Insilico designed ISM6331 with generative chemistry software, four of 22 evaluable previously treated mesothelioma patients had partial responses in the first human data, reported at ESMO 2026.",
-        "change": "added",
-        "state": "held (fails-test)",
-        "url": null
-      },
-      {
-        "id": "recursion-rec-4881-fap-tupelo-polyp-burden",
-        "headline": "Because Recursion's AI screen pointed a shelved Takeda drug at familial adenomatous polyposis, 12 evaluable patients in the open-label TUPELO trial had a median 43% reduction in total polyp burden after 12 weeks.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/recursion-rec-4881-fap-tupelo-polyp-burden"
-      },
-      {
-        "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
-        "headline": "In a 71-patient randomized placebo-controlled phase 2a trial of a drug whose target and molecule were both found with generative AI, lung function (FVC) rose +98.4 ml on 60 mg rentosertib against −20.3 ml on placebo over 12 weeks.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null",
-        "headline": "AI-assisted colonoscopy (GI Genius) did not significantly raise incremental adenoma detection in Lynch syndrome (33.3% vs 11.1%) in a randomized tandem trial of 100 patients.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
-        "headline": "Brief AI-assisted nerve-tracking training did not significantly improve first-attempt independent median-nerve identification (65.8% vs 57.5%) among 80 ultrasound novices.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
+        "url": "https://becauseofai.org/entry/warddeken-megadetector-camera-trap-images-rangers-arnhem"
       }
     ],
     "held_list": [
@@ -134,6 +64,13 @@
         "headline": "Because of AI, a deep learning CT reconstruction algorithm let a pulmonary CT angiography protocol cut effective radiation dose by 84.93% in a randomized trial of low-BMI patients while keeping diagnostic image quality.",
         "reason": "grade-split",
         "since": "2026-11-16",
+        "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "ai-second-forward-view-right-colon-adr-rct-japan",
+        "headline": "Because of AI, an AI-assisted second look at the right colon found adenomas in 36.4% of colonoscopy patients against 27.9% with standard colonoscopy.",
+        "reason": "grade-split",
+        "since": "2026-11-21",
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
@@ -581,20 +518,36 @@
   },
   "verifications": [
     {
+      "id": "ai-fracture-detection-ortho-ed-los-before-after-israel",
+      "date": "2026-11-21",
+      "result": "published",
+      "reason": null,
+      "detail": "The abstract supports the reported visit counts, dates and reduction in mean length of stay associated with AI deployment. It does not establish causation, and follow-up through February 2026 warrants an ongoing window grade.",
+      "record": "ai-fracture-detection-ortho-ed-los-before-after-israel/2026-11-21.json"
+    },
+    {
+      "id": "ai-second-forward-view-right-colon-adr-rct-japan",
+      "date": "2026-11-21",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter B, verifier could not grade.",
+      "record": "ai-second-forward-view-right-colon-adr-rct-japan/2026-11-21.json"
+    },
+    {
+      "id": "aim-chd-ai-secondary-prevention-fuwai-rct",
+      "date": "2026-11-21",
+      "result": "published",
+      "reason": null,
+      "detail": "The source supports 45% versus 35% BP target attainment at three months in a randomized trial of 1100 patients completed before the window. It establishes the package’s benefit, but does not isolate AI’s contribution or demonstrate improved cardiovascular events.",
+      "record": "aim-chd-ai-secondary-prevention-fuwai-rct/2026-11-21.json"
+    },
+    {
       "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
       "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
       "detail": "evidence: drafter A, verifier could not grade.",
       "record": "alibaba-taobao-genai-assistant-after-sales-agents-rct/2026-11-20.json"
-    },
-    {
-      "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for impact.",
-      "record": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover/2026-11-19.json"
     },
     {
       "id": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
@@ -629,22 +582,6 @@
       "record": "copilot-three-field-experiments-software-developers-completed-tasks/2026-11-20.json"
     },
     {
-      "id": "dublin-ai-incidental-pe-ct-detection-before-after",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "No receipt for headline.",
-      "record": "dublin-ai-incidental-pe-ct-detection-before-after/2026-11-19.json"
-    },
-    {
-      "id": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null/2026-11-19.json"
-    },
-    {
       "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
       "date": "2026-11-20",
       "result": "held",
@@ -661,28 +598,12 @@
       "record": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json"
     },
     {
-      "id": "kanyakumari-ai-assisted-learning-medical-students-retention",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
-      "record": "kanyakumari-ai-assisted-learning-medical-students-retention/2026-11-19.json"
-    },
-    {
       "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
       "date": "2026-11-20",
       "result": "held",
       "reason": "grade-split",
       "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
       "record": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json"
-    },
-    {
-      "id": "llm-tailored-health-messages-adolescent-plant-based-lunch-null",
-      "date": "2026-11-19",
-      "result": "published",
-      "reason": null,
-      "detail": "The abstract supports a preregistered randomized trial of 587 adolescents showing no additional short-term behavioural benefit from LLM tailoring and supports all receipted numbers. It does not establish when the intervention occurred or disclose funding and author ties.",
-      "record": "llm-tailored-health-messages-adolescent-plant-based-lunch-null/2026-11-19.json"
     },
     {
       "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
@@ -693,28 +614,12 @@
       "record": "microsoft-copilot-field-experiment-66-firms-email-hours/2026-11-20.json"
     },
     {
-      "id": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "nervetrack-ai-ultrasound-novices-independent-identification-rct-null/2026-11-19.json"
-    },
-    {
       "id": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
       "date": "2026-11-20",
       "result": "published",
       "reason": null,
       "detail": "The company press release supports the reported 76% versus 72% satisfaction scores and approximately 8,000 emails weekly during a three-month trial. It provides no trial calendar dates or detailed comparison methods, so the benefit's window cannot be determined.",
       "record": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction/2026-11-20.json"
-    },
-    {
-      "id": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "paics-fetal-intracranial-malformation-ultrasound-crossover-rct/2026-11-19.json"
     },
     {
       "id": "recursion-rec-4881-fap-tupelo-polyp-burden",
@@ -733,6 +638,14 @@
       "record": "rentosertib-phase-2a-ipf-fvc-nature-medicine/2026-11-20.json"
     },
     {
+      "id": "unep-imeo-mars-ai-methane-alerts-mitigated-sources",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The release supports the reported source-emissions estimate and processing-capacity multiplier, with AI identifiable within a broader operational workflow. It supplies neither a mitigation-outcome comparison nor dates establishing when the claimed 1.2-million-tonne benefit occurred.",
+      "record": "unep-imeo-mars-ai-methane-alerts-mitigated-sources/2026-11-20.json"
+    },
+    {
       "id": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations",
       "date": "2026-11-20",
       "result": "published",
@@ -741,21 +654,23 @@
       "record": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations/2026-11-20.json"
     },
     {
-      "id": "wuhan-llm-vr-cbt-academic-anxiety-students-rct",
-      "date": "2026-11-19",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "wuhan-llm-vr-cbt-academic-anxiety-students-rct/2026-11-19.json"
+      "id": "warddeken-megadetector-camera-trap-images-rangers-arnhem",
+      "date": "2026-11-20",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete university news item supports the reported 81.4% reduction, from 925,088 to 172,290 images requiring analysis, and describes benefits to working rangers. It provides no achievement dates or independent comparison.",
+      "record": "warddeken-megadetector-camera-trap-images-rangers-arnhem/2026-11-20.json"
     }
   ],
   "announced": [],
   "leads_added": [
-    "AI-enabled mentor-supervised case teaching in neurosurgery residency, 62 trainees, single centre, non-randomized, 2024-06-01 to 2026-05-31. [BMC Medical Education](https://doi.org/10.1186/s12909-026-10225-7). Read in full: composite score MD 4.36 (95% CI 2.58 to 6.14) versus lecture-based teaching. Reached trainees and has a comparison, but no baseline scores, allocation not random, imbalanced dose. Candidate for a speculative or reasonable entry; missing: a cautious grade call and whether the AI did something that would not otherwise have happened.",
-    "Fujitsu Japan AI study, 89% smaller clinical-trial patient review pool. [IBTimes Japan](https://jp.ibtimes.com/fujitsu-japan-ai-study-cuts-clinical-trial-patient-review-pool-89-105276). News rewrite. Missing: Fujitsu's own page, whether real patients were enrolled faster.",
-    "Samsara AI dash cams (37% lower crash rate). Already logged 2026-11-18.",
-    "HERMES ISRCTN18106677. Already logged 2026-11-17 and 2026-11-18; still unread.",
-    "Skipped: reviews and meta-analyses, protocols, prediction and model-accuracy papers, surveys, the Baltimore Omnilert lawsuit, earnings and market pieces."
+    "GenAI-DBT, a DBT-informed generative AI mindfulness platform: 30-day pilot randomized study, 45 students. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428) (2026-11-19). Read the abstract: adherence 71.4% vs 53.3% (web) and 42.3% (chatbot), descriptive only; no significant difference on MAAS or DERS. Feasibility pilot, mostly null on outcomes. Missing: full text, study dates, a benefit measured on people. A possible `not-because` row if the full text gives dates.",
+    "Prediction of postoperative pancreatic fistula after left pancreatectomy by surgeons and AI: randomized multi-reader study. [Br J Surg](https://doi.org/10.1093/bjs/znag154) (2026-10-31). Reader study; no patient outcome known from the snippet. Watch only.",
+    "Voice-based conversational AI coach to reduce competitive anxiety in elite athletes. [Frontiers in Digital Health](https://doi.org/10.3389/fdgth.2026.1962543). Protocol; check later for results.",
+    "Protocol to watch: ambient AI to reduce nursing documentation time, EHR-embedded pragmatic RCT. [Contemporary Clinical Trials](https://doi.org/10.1016/j.cct.2026.108534).",
+    "Dublin flood-warning AI, [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/): a plan, no measured result yet.",
+    "Still open: Samsara AI dash cams (already logged 2026-11-18).",
+    "Skipped: the ACTIVE exercise-prescription protocol, retrospective model validations, benchmarks, reviews, surveys (including the NBER undergraduate AI survey), earnings and funding news."
   ],
   "x": {
     "username": "bcuz_of_ai",
@@ -790,51 +705,39 @@
         "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
         "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
         "created_at": "2026-11-14T20:33:20.000Z",
-        "impressions": 31,
+        "impressions": 33,
         "likes": 2,
         "replies": 0,
         "reposts": 1,
         "bookmarks": 1,
-        "quotes": 0
-      },
-      {
-        "id": "2121360755383738749",
-        "url": "https://x.com/bcuz_of_ai/status/2121360755383738749",
-        "text": "Because of an AI tool that categorizes and routes patient portal messages, the median time to first action in a Boston epilepsy clinic fell from 11.3 hours to 1.0 hour.\n\nhttps://t.co/O0R407oaGB https://t.co/YrkZkgldvX",
-        "created_at": "2026-11-13T21:53:11.000Z",
-        "impressions": 5,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "bookmarks": 0,
         "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-19",
-    "pageviews": 17,
-    "visits": 16,
+    "day": "2026-11-20",
+    "pageviews": 50,
+    "visits": 40,
     "top_paths": [
       {
         "path": "/",
-        "views": 13
-      },
-      {
-        "path": "/entry/golden-bridge-ii-stroke",
-        "views": 1
+        "views": 43
       },
       {
         "path": "/not-because-of-ai",
+        "views": 3
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 2
+      },
+      {
+        "path": "/entry/ethiopia-tb-ai-cxr",
         "views": 1
       },
       {
         "path": "/not-yet",
-        "views": 1
-      },
-      {
-        "path": "/entry/columbia-epic-ai-draft-replies-null",
         "views": 1
       }
     ]
