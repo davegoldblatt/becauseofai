@@ -411,3 +411,13 @@ Candidates: 168 over 2026-11-18 to 2026-11-20, 11 flagged randomized, 0 alerts, 
 - Dublin flood-warning AI, [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/): a plan, no measured result yet.
 - Still open: Samsara AI dash cams (already logged 2026-11-18).
 - Skipped: the ACTIVE exercise-prescription protocol, retrospective model validations, benchmarks, reviews, surveys (including the NBER undergraduate AI survey), earnings and funding news.
+
+## 2026-11-21 (daily scout)
+
+Candidates: 143 over 2026-11-19 to 2026-11-21, 9 flagged randomized, 17 announcements, 0 alerts, 60 source errors (mostly Crossref 429s). One entry drafted.
+
+- Drafted: GAIHMC family-communication chatbot and nursing-home nurse burnout, Taiwan, quasi-experimental, 68 staff. [IJNS](https://doi.org/10.1016/j.ijnurstu.2026.105752). Abstract only; reasonable at best.
+- Alpha School, $75,000 AI day: [Grit Daily](https://gritdaily.com/wealthy-parents-pay-alpha-school-ai-learning-results/). Reports internal data showing many students missed growth targets, a possible `not-because` lead. Missing: the school's own data and a comparison.
+- Samsara 37% lower crash rate (UK release, 2026-11-18): already logged 2026-11-18.
+- Dublin flood-warning AI: already logged 2026-11-20; still no measured result.
+- Skipped: ACTIVE and ambient-nursing protocols, reviews, retrospective model validations, benchmarks, surveys (Korea workers, NBER), the Alzheimer's risk model, earnings and funding news.
