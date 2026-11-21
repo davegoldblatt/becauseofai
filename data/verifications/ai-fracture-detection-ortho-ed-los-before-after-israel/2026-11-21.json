@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-fracture-detection-ortho-ed-los-before-after-israel",
+  "date": "2026-11-21",
+  "as_of": "2026-11-21",
+  "entry_sha256": "e4d92d4c2fbb6039e47e91552f3f094a9f24102ade833326d12984a31a0bd11a",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-21"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.ijmedinf.2026.106679",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-21T01:00:56.378Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.ijmedinf.2026.106679%22&format=json&resultType=core",
+      "sha256": "186e2631841c76f9972a2f0c0fdd7080de30aae2553cedb2296ba0b06a1917c2",
+      "chars": 1824,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Mean F-E LOS decreased from 135.6 to 127.5 min",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Mean F-E LOS decreased from 135.6 to 127.5 min",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "(Δ -8.13 min; 95% CI -11.52 to -4.70",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Mean F-E LOS decreased from 135.6 to 127.5 min (Δ -8.13 min; 95% CI -11.52 to -4.70",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "We included 8253F-E and 6864F-C visits between January 2021 and February 2026",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "ED LOS before versus after deployment on 1 October 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "We included 8253F-E and 6864F-C visits between January 2021 and February 2026",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-21",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "ongoing"
+      },
+      "attribution_rationale": "The comparison evaluates AI deployment before versus after introduction, with fracture-confirmed visits as an internal control and no accompanying intervention package described.",
+      "achieved_dates": {
+        "from": "abstract",
+        "conflicting": false,
+        "note": "Deployment occurred on 1 October 2023, and observation continued through February 2026, including new data within the window."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract provides no funding or author disclosures; the entry acknowledges this limitation."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The abstract supports the reported visit counts, dates and reduction in mean length of stay associated with AI deployment. It does not establish causation, and follow-up through February 2026 warrants an ongoing window grade."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12531,
+      "output": 564,
+      "total": 13095,
+      "cached": 0,
+      "reasoning": 67
+    },
+    "duration_ms": 14960
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The abstract supports the reported visit counts, dates and reduction in mean length of stay associated with AI deployment. It does not establish causation, and follow-up through February 2026 warrants an ongoing window grade.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "The achieved dates come from the abstract; the methods were not available.",
+      "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled.",
+      "The two checkers disagreed on window: the drafter said pre and the verifier said ongoing. The entry shows the more cautious of the two, pre."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      },
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": "ongoing"
+      }
+    ]
+  }
+}

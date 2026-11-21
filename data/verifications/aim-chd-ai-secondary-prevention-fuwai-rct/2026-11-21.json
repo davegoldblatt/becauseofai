@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "aim-chd-ai-secondary-prevention-fuwai-rct",
+  "date": "2026-11-21",
+  "as_of": "2026-11-21",
+  "entry_sha256": "811f3763be0f4c09f6696474115f37d19ee5fcd33e3188924b72f1f146af6bc3",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-21"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12916-026-05135-w",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-21T01:01:43.247Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13488134/fullTextXML",
+      "sha256": "4275cf99f1faded2e83d5ab5bfaa7284feb402924fd38acd36b0b4637a923fcf",
+      "chars": 39621,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "(60.4 ± 23.4 vs. 63.7 ± 26.0 mg/dL), with an adjusted mean difference of − 3.2 mg/dL",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 1100 adults with confirmed CHD were randomized 1:1",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "conducted from November 23, 2024, to June 30, 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "conducted from November 23, 2024, to June 30, 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-21",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized comparison tested the full AIM-CHD package, including AI data capture, risk assessment, education, feedback and reminders, against usual care with a restricted reporting app.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods give November 23, 2024–June 30, 2025; results confirm the final follow-up date."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The hospital developed and evaluated its own system with hospital AI funding and author involvement; the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports 45% versus 35% BP target attainment at three months in a randomized trial of 1100 patients completed before the window. It establishes the package’s benefit, but does not isolate AI’s contribution or demonstrate improved cardiovascular events."
+    },
+    "error": null,
+    "tokens": {
+      "input": 21901,
+      "output": 569,
+      "total": 22470,
+      "cached": 0,
+      "reasoning": 72
+    },
+    "duration_ms": 16022
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The source supports 45% versus 35% BP target attainment at three months in a randomized trial of 1100 patients completed before the window. It establishes the package’s benefit, but does not isolate AI’s contribution or demonstrate improved cardiovascular events.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

@@ -80,3 +80,25 @@ receipts:
     quote: We included 8253F-E and 6864F-C visits between January 2021 and February 2026
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: e4d92d4c2fbb6039e47e91552f3f094a9f24102ade833326d12984a31a0bd11a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: pass
+  record: ai-fracture-detection-ortho-ed-los-before-after-israel/2026-11-21.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - The achieved dates come from the abstract; the methods were not available.
+    - "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."
+    - "The two checkers disagreed on window: the drafter said pre and the verifier said ongoing. The entry shows the more cautious of the two, pre."

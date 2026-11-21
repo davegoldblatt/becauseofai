@@ -84,3 +84,20 @@ receipts:
     quote: conducted from November 23, 2024, to June 30, 2025
     locator: Methods, Study design and participants
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 811f3763be0f4c09f6696474115f37d19ee5fcd33e3188924b72f1f146af6bc3
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: pass
+  record: aim-chd-ai-secondary-prevention-fuwai-rct/2026-11-21.json
+  confidence: strict

@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-second-forward-view-right-colon-adr-rct-japan",
+  "date": "2026-11-21",
+  "as_of": "2026-11-21",
+  "entry_sha256": "5058b87920e5fc1374678ad28c2b03b6832d365041eecfe2ebdcd94c72800a5d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-21"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.14309/ajg.0000000000004184",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-21T01:01:12.758Z",
+      "final_url": "https://www.ovid.com/jnls/ajg/abstract/10.14309/ajg.0000000000004184~ai-assisted-second-forward-view-examination-of-the-right?redirectionsource=fulltextview",
+      "sha256": "013266194716cef3cdf4dc40abdb9fcea60ceefe135f91aaf22b5b773a983750",
+      "chars": 3607,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "(36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "(36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "(36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "(36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 606 patients were included in the analysis",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-21",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The randomized comparison tested AI assistance plus a second right-colon examination against standard colonoscopy, so it does not isolate AI's contribution.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "The abstract gives no study dates; August 20, 2026 is the publication date."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No funding or conflict disclosures are visible; the entry acknowledges this limitation."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Study dates are absent; randomization and a primary outcome are reported, but preregistration cannot be established, so evidence grade A cannot be confirmed."
+      },
+      "summary": "The abstract supports the reported detection rates, 8.5 percentage-point increase, and 606 analyzed patients for the combined AI-assisted second examination. It does not establish study dates, preregistration, or the independent contribution of AI."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12773,
+      "output": 585,
+      "total": 13358,
+      "cached": 0,
+      "reasoning": 116
+    },
+    "duration_ms": 15011
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}
