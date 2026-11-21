@@ -1,0 +1,94 @@
+id: ai-second-forward-view-right-colon-adr-rct-japan
+section: because
+rank: 103
+headline: >-
+  Because of AI, an AI-assisted second look at the right colon found adenomas in
+  36.4% of colonoscopy patients against 27.9% with standard colonoscopy.
+impact: "36.4% vs 27.9% right-colon ADR"
+impact_number: "8.5 pts"
+impact_label: "higher right-colon adenoma detection rate"
+summary: >-
+  A multicentre trial randomized colonoscopy patients to standard colonoscopy or
+  a real-time AI-assisted second forward-view examination of the right colon and
+  compared the right-colon adenoma detection rate.
+caveat: >-
+  The extra AI-assisted examination is a second look as well as AI, so the trial
+  cannot separate the AI from the repeat inspection, which the authors say
+  warrants further investigation; the outcome is adenoma detection, not cancers
+  prevented.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "AI-assisted second forward-view examination of the right colon vs standard colonoscopy, 1:1 randomization"
+effect:
+  relative: null
+  absolute: "Right-colon adenoma detection rate 36.4% vs 27.9%, an absolute increase of 8.5%"
+reach: "606 patients undergoing colonoscopy in a multicentre trial"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-20
+  added: 2026-11-21
+  updated: 2026-11-21
+sources:
+  - title: "Nishikawa et al., American Journal of Gastroenterology 2026: AI-Assisted Second Forward-View Examination of the Right Colon Significantly Improves the Adenoma Detection Rate: A Multicenter Randomized Controlled Trial (abstract)"
+    url: https://doi.org/10.14309/ajg.0000000000004184
+    type: primary
+conflicts: "none found in the abstract; funding and author disclosures were not visible in the text read."
+what_would_change: null
+notes: >-
+  verify: the source gives no study period, so the achieved dates and the window
+  are left empty. verify: only the abstract was read; trial registration and
+  the vendor of the AI system are not stated in it, so evidence is graded B, not
+  A. verify: the AI arm combines AI with a second examination, so the effect
+  of AI alone is not isolated.
+related: []
+history:
+  - date: 2026-11-21
+    note: "Added by the backfill run."
+rationale: The AI arm received both a second forward-view examination and real-time AI while the control had a standard examination, so the comparison tests the combined strategy rather than AI alone (bundled).
+receipts:
+  - field: headline
+    quote: (36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: (36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: (36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: (36.4% vs 27.9%; P = 0.03; absolute increase, 8.5%)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 606 patients were included in the analysis
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-21
+  content: 5058b87920e5fc1374678ad28c2b03b6832d365041eecfe2ebdcd94c72800a5d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-21
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-21
+    verdict: fail
+  record: ai-second-forward-view-right-colon-adr-rct-japan/2026-11-21.json
+held:
+  reason: grade-split
+  since: 2026-11-21
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ai-second-forward-view-right-colon-adr-rct-japan/2026-11-21.json
