@@ -1,0 +1,86 @@
+id: aim-chd-ai-secondary-prevention-fuwai-rct
+section: because
+rank: 102
+headline: >-
+  Because of AI, 45% of coronary heart disease patients using an AI-enhanced
+  management system were at their blood-pressure target after three months,
+  against 35% with usual care.
+impact: "BP target 45% vs 35%"
+impact_number: "45% vs 35%"
+impact_label: "of CHD patients at blood-pressure target at 3 months"
+summary: >-
+  Fuwai Hospital randomized adults with coronary heart disease at discharge to
+  usual care or usual care plus AIM-CHD, a smartphone system with automated data
+  capture, AI risk stratification and closed-loop feedback, and measured LDL
+  cholesterol and risk-factor targets at three months.
+caveat: >-
+  Single centre, open label, three months of follow-up, and the gain in LDL
+  cholesterol was small; HbA1c, BMI and medication adherence did not differ and
+  the trial was not powered for cardiovascular events.
+domain: medicine
+ai_type: hybrid
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "Usual post-discharge care plus the AIM-CHD smartphone system vs usual care alone, 1:1 randomization, 3 months"
+effect:
+  relative: "Blood-pressure target achieved: RR 1.27 (95% CI 1.09–1.48)"
+  absolute: "Blood-pressure target achieved by 45% vs 35%; mean LDL-C 60.4 vs 63.7 mg/dL, adjusted difference − 3.2 mg/dL"
+reach: "1100 adults with confirmed coronary heart disease, Fuwai Hospital, Beijing"
+dates:
+  achieved_start: 2024-11-23
+  achieved_end: 2025-06-30
+  published: 2026-08-18
+  added: 2026-11-21
+  updated: 2026-11-21
+sources:
+  - title: "Ba et al., BMC Medicine 2026: Artificial intelligence–enhanced management system for secondary prevention of coronary heart disease: a randomized clinical trial"
+    url: https://doi.org/10.1186/s12916-026-05135-w
+    type: primary
+conflicts: "Funded by Chinese public research funds and a Fuwai Hospital AI fund; the system was developed by hospital staff, several of whom are authors. The authors declare no competing interests."
+what_would_change: null
+notes: >-
+  verify: the achieved dates are the trial's conduct period, which includes
+  the three-month follow-up. verify: the system bundles AI risk stratification
+  with alerts, guidance and referral advice, so the trial tests the package, not
+  the AI alone. verify: the trial was registered (NCT06686056) on 11 November
+  2024, before the 23 November 2024 start.
+related: []
+history:
+  - date: 2026-11-21
+    note: "Added by the backfill run."
+rationale: Patients were randomized 1:1 to usual care with or without the AIM-CHD system, but the system is a bundle of AI risk stratification, alerts and referral advice, so the comparison tests the package (bundled).
+receipts:
+  - field: headline
+    quote: the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: the BP target (45% vs. 35%; RR, 1.27; 95% CI, 1.09–1.48
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: (60.4 ± 23.4 vs. 63.7 ± 26.0 mg/dL), with an adjusted mean difference of − 3.2 mg/dL
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 1100 adults with confirmed CHD were randomized 1:1
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: conducted from November 23, 2024, to June 30, 2025
+    locator: Methods, Study design and participants
+    source: 0
+  - field: dates.achieved_end
+    quote: conducted from November 23, 2024, to June 30, 2025
+    locator: Methods, Study design and participants
+    source: 0

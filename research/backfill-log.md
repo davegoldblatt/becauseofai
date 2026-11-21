@@ -471,3 +471,18 @@ Rejected:
 - CARB and Carbon Mapper Tanager methane pages: satellite detection, AI not named in the text; Duke Energy release 404.
 - Parks Victoria species model: accuracy only. WhaleSpotter San Francisco, Skylight, Rainforest Connection, GFW: launches or no result number found.
 - About twenty searches; thirteen pages read, short of the floor (search results thin on 2026 outcome numbers).
+
+## 2026-11-21, slice 28: papers and trial results, 2026-08-17 to 2026-08-24
+
+Drafted (3):
+- aim-chd-ai-secondary-prevention-fuwai-rct: BMC Medicine RCT full text, 1100 CHD patients, AIM-CHD system vs usual care, BP target 45% vs 35% and LDL-C 60.4 vs 63.7 mg/dL at 3 months (registered before start; bundled; window pre, Nov 2024 to Jun 2025).
+- ai-second-forward-view-right-colon-adr-rct-japan: AJG abstract only (Ovid), 606 patients, right-colon ADR 36.4% vs 27.9% (RCT; second look plus AI so bundled; no dates, window empty).
+- ai-fracture-detection-ortho-ed-los-before-after-israel: IJMI abstract only, 8253 fracture-excluded visits, ED stay 135.6 to 127.5 min after AI deployment, internal control (retrospective; authors say not causal; window pre).
+
+Rejected:
+- Med bimodal LLM patient education RCT (abstract only): outcomes cut off in the printed text, no quotable people-level number; comparator is another LLM (AI vs AI).
+- Ambient AI scribe in linguistically diverse setting (medRxiv, read): retrospective, compares languages, no comparison with and without AI.
+- Medical-education lecture-content study (medRxiv): HTTP 403, not read.
+- Pancreatic EUS tandem video study: reader study on recorded video, no patients.
+- Protocols (SAMURAI-fracture, SmaRTWork, AI-guided exercise ring), editorial, APHINITY TIL secondary analysis, validation studies, surveys, reviews and the model or benchmark papers on medRxiv: no people reached or accuracy only; set aside from titles.
+- Short of the floor: 6 sources read with the reader out of 104 candidates.

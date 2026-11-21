@@ -1,0 +1,82 @@
+id: ai-fracture-detection-ortho-ed-los-before-after-israel
+section: because
+rank: 104
+headline: >-
+  Because of AI, patients whose fractures were ruled out in an orthopedic
+  emergency department spent 127.5 minutes there on average after an AI
+  fracture-detection tool was deployed, down from 135.6.
+impact: "135.6 to 127.5 minutes in the ED"
+impact_number: "−8.13 min"
+impact_label: "mean ED stay for patients without a fracture"
+summary: >-
+  A tertiary ambulatory orthopedic ED compared length of stay for limb-radiograph
+  patients without a fracture before and after deploying an AI fracture-detection
+  tool, using patients with confirmed fractures as an internal control.
+caveat: >-
+  A retrospective before-after cohort whose authors state the associations do not
+  establish causation; fracture status came from discharge diagnosis codes and
+  only the abstract could be read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "ED length of stay in fracture-excluded patients before vs after AI fracture-detection deployment on 1 October 2023, with fracture-confirmed patients as internal control"
+effect:
+  relative: null
+  absolute: "Mean length of stay fell from 135.6 to 127.5 min (Δ -8.13 min; 95% CI -11.52 to -4.70)"
+reach: "8253 fracture-excluded and 6864 fracture-confirmed ED visits at one tertiary hospital"
+dates:
+  achieved_start: 2023-10-01
+  achieved_end: 2026-02
+  published: 2026-08-20
+  added: 2026-11-21
+  updated: 2026-11-21
+sources:
+  - title: "Graif et al., International Journal of Medical Informatics 2026: AI-assisted radiographic fracture detection and length of stay in the adult ambulatory orthopedic emergency department (abstract)"
+    url: https://doi.org/10.1016/j.ijmedinf.2026.106679
+    type: primary
+conflicts: "none found in the abstract; funding and author disclosures were not visible in the text read."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read; the p value and revisit figures are cut off
+  in the printed text. verify: dates come from the abstract (deployment date and
+  study window January 2021 to February 2026); the window is graded pre as the
+  cautious choice though the post-deployment data run into 2026. verify: no
+  comparison isolates the AI; the before-after design with an internal control
+  is graded bundled because the options offered do not fit it better.
+related: []
+history:
+  - date: 2026-11-21
+    note: "Added by the backfill run."
+rationale: The comparison is a before-after change in one department with fracture-confirmed patients as an internal control, which does not isolate the AI from other changes over time (bundled).
+receipts:
+  - field: headline
+    quote: Mean F-E LOS decreased from 135.6 to 127.5 min
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Mean F-E LOS decreased from 135.6 to 127.5 min
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: (Δ -8.13 min; 95% CI -11.52 to -4.70
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Mean F-E LOS decreased from 135.6 to 127.5 min (Δ -8.13 min; 95% CI -11.52 to -4.70
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: We included 8253F-E and 6864F-C visits between January 2021 and February 2026
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: ED LOS before versus after deployment on 1 October 2023
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: We included 8253F-E and 6864F-C visits between January 2021 and February 2026
+    locator: Abstract, Methods
+    source: 0
