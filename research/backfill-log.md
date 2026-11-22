@@ -515,3 +515,20 @@ Read and rejected:
 - Digital self-help prediction, ED coding LLM accuracy, wheelchair detection, pancreatic PASS-01 multimodal ML, APHINITY TIL scoring, and the other medRxiv and PubMed model, benchmark, validation, review and survey papers: accuracy or prediction only, or opinion; set aside from titles and snippets.
 - MW151 radiotherapy record (NCT05417282): drug safety trial, not AI in use.
 - Short of the floor: 2 sources read with the reader out of 71 candidates; the rest were set aside from titles and snippets as above.
+
+## 2026-11-22, slice 31: announcements: screening and public health programmes, 2026-05-13 to 2026-08-12
+
+Drafted (4):
+- nhs-england-ai-chest-xray-lung-cancer-faster-reporting: DHSC release, AI chest X-ray tools in half of trusts, scans analysed in 4 days vs 8, over 4 million patients (speculative, press release).
+- va-cade-colonoscopy-cluster-randomized-adenoma-detection: VA cluster-randomized CADe deployment, adenoma detection +4.2 points vs -0.7 at control (abstract only, reasonable at best).
+- india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent: Government of India backgrounder, 27% decline in adverse TB outcomes (speculative, no period).
+- hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care: npj Digital Medicine retrospective case-control, OR 1.15, 3,745 patients, dates from methods.
+
+Read and rejected:
+- Tanzania DR RCT, Delhi slum TB, Ethiopia TB, Goa and Malaysia lung, MASAI mammography, NHS stroke imaging: already entries.
+- GEMINI Grampian breast screening (Glasgow release): parallel-run simulation of AI scenarios, not AI in use on women's results.
+- Philippines TB cost-effectiveness (EurekAlert): model on a theoretical cohort.
+- Ireland NSS AI programme page: plan, no result. Taiwan CAD colonoscopy RCT (JAMA Netw Open): not readable, noninferiority primary with the gain only in a subgroup.
+- TriNetX AI-era colonoscopy interval cancer (Healio via search): AI use per patient not known, era comparison.
+- Viz.ai 44% DIDO release, Wisconsin DR blog, LSHTM and Hopkins press pages, MSH Ethiopia brief: NOT READ (403, 404 or fetch failed).
+- Short of the floor: about 20 queries and 15 reads; four entries from them, the rest set aside above.

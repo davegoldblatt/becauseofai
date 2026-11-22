@@ -1,0 +1,82 @@
+id: hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care
+section: because
+rank: 110
+headline: >-
+  Because of autonomous AI diabetic eye screening in Johns Hopkins primary care, African-American
+  patients were more likely to present to specialist eye care, an exploratory association (p = 0.02).
+impact: "Odds 1.15 of reaching eye care as African-American"
+impact_number: "OR 1.15"
+impact_label: "odds that a patient reaching specialist eye care through AI screening was African-American, exploratory"
+summary: >-
+  Johns Hopkins deployed the LumineticsCore autonomous AI for diabetic retinopathy at primary care
+  sites from 2020. Among 3,745 adults with diabetes referred to the Wilmer Eye Institute, those
+  coming through the AI pathway were more often African-American than those referred by a
+  primary care provider, which the authors read as improved access to specialist eye care.
+caveat: >-
+  A retrospective, exploratory case-control analysis at one health system; the authors say no
+  causal inference can be drawn. It compares who arrived through each pathway, not attendance
+  rates, and the effect could come partly from having screening done in the office at all.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Patients referred to the Wilmer Eye Institute after autonomous AI screening at primary care (393) vs routine primary care provider referral (3,352), propensity-score weighted"
+effect:
+  relative: "Odds of being African-American 1.15 times higher in the AI group (95% CI 1.02 to 1.29, p = 0.022)"
+  absolute: null
+reach: "3745 adults with diabetes referred to the Wilmer Eye Institute from Johns Hopkins Medicine primary care sites"
+dates:
+  achieved_start: 2020-08
+  achieved_end: 2022-09
+  published: 2026-03-05
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Leong et al., Autonomous AI-assisted diabetic retinopathy screening at primary care is associated with increased presentation to eye care by at risk patients. npj Digital Medicine 2026"
+    url: https://doi.org/10.1038/s41746-026-02460-5
+    type: primary
+conflicts: >-
+  One author (Abramoff) declares patents assigned to the University of Iowa and Digital Diagnostics,
+  and is an investor, director and consultant at Digital Diagnostics, maker of LumineticsCore.
+  Another author declares research support from Novo Nordisk, unrelated. Funded in part by a
+  Research to Prevent Blindness Career Development Award and the Gills AI Innovation Center.
+what_would_change: "Attendance and outcome data for all screened patients (not only those referred), compared with sites without the AI, in a prospective design."
+notes: >-
+  verify: the paper dates the referrals from August 2020 to September 2022; the AI system was
+  deployed from 2020. verify: the journal page shows 5 March 2026 as the online date and the
+  Hopkins press release says 15 April 2026; the entry uses the earlier date.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Bundled because the comparison is between two referral pathways at different sites, so the AI result is entangled with office-based screening and differences in primary care referral behaviour.
+receipts:
+  - field: headline
+    quote: was associated with increased presentation to eye care specialist care by African-Americans ( p  = 0.02)
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    locator: Results, propensity score matching
+    source: 0
+  - field: impact_number
+    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    locator: Results, propensity score matching
+    source: 0
+  - field: effect.relative
+    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    locator: Results, propensity score matching
+    source: 0
+  - field: reach
+    quote: Adult patients with diabetes ( n  = 3745) seen at Johns Hopkins Medicine primary care sites
+    locator: Abstract
+    source: 0
+  - field: dates.achieved_start
+    quote: between August 2020 and September 2022
+    locator: Methods, patient and variable selection
+    source: 0
+  - field: dates.achieved_end
+    quote: between August 2020 and September 2022
+    locator: Methods, patient and variable selection
+    source: 0

@@ -1,0 +1,73 @@
+id: india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent
+section: because
+rank: 109
+headline: >-
+  Because of AI tools in its National TB Elimination Programme, India's government says adverse
+  TB outcomes fell 27%.
+impact: "27% fewer adverse TB outcomes"
+impact_number: "27%"
+impact_label: "decline in adverse TB outcomes with AI tools in India's TB programme, government says"
+summary: >-
+  A Government of India backgrounder reports that AI tools in the National TB Elimination
+  Programme, which flag patients at high risk of treatment failure once treatment starts,
+  were followed by a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+caveat: >-
+  A government backgrounder, not an evaluation. It gives no baseline, period, definition of
+  "adverse outcome", comparison group or count of patients, and it does not separate the AI
+  flags from the clinical follow-up that acts on them.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Adverse TB outcomes after nationwide deployment against an unstated earlier level; no control group"
+effect:
+  relative: "27% decline in adverse TB outcomes"
+  absolute: null
+reach: "India's National TB Elimination Programme, with over 4,500 outbreak alerts issued"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-13
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Government of India (PIB) backgrounder: Transforming Healthcare Delivery Through Artificial Intelligence (13 February 2026)"
+    url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc2026213788701.pdf
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the Government of India's own backgrounder about programmes it runs. No
+  independent audit; the AI tools' vendors are not named for this result.
+what_would_change: "A programme report defining adverse outcome, giving the baseline and period, the number of patients flagged, and outcomes among flagged patients with and without the AI flag."
+notes: >-
+  verify: the backgrounder gives the years 2022 to 2025 for the whole AI programme but no period
+  for the 27% figure, so achieved dates and the window grade are left empty. verify: the figure is
+  cited in a table row as "Reported 27% decline in adverse outcomes after nationwide deployment",
+  which links to an earlier PIB release that was not read.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Bundled because the only comparison is adverse outcomes before and after nationwide deployment, and the AI flags act through the programme's clinical follow-up, so the AI's own share cannot be separated out.
+receipts:
+  - field: headline
+    quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+    locator: Body, public health delivery paragraph
+    source: 0
+  - field: impact
+    quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+    locator: Body, public health delivery paragraph
+    source: 0
+  - field: impact_number
+    quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+    locator: Body, public health delivery paragraph
+    source: 0
+  - field: effect.relative
+    quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+    locator: Body, public health delivery paragraph
+    source: 0
+  - field: reach
+    quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
+    locator: Body, public health delivery paragraph
+    source: 0

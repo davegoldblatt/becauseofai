@@ -1,0 +1,88 @@
+id: va-cade-colonoscopy-cluster-randomized-adenoma-detection
+section: because
+rank: 108
+headline: >-
+  Because of AI computer-aided detection, Veterans Health Administration colonoscopy sites raised
+  adenoma detection by 4.2 percentage points, while control sites fell 0.7 points.
+impact: "Adenoma detection up 4.2 points at AI sites"
+impact_number: "+4.2 pts"
+impact_label: "adenoma detection rate at VA sites given AI detection devices, against −0.7 at control sites"
+summary: >-
+  The VA's National Colorectal Cancer Screening Program randomly chose facilities to receive
+  computer-aided detection (CADe) devices for colonoscopy and compared them with control
+  facilities given a later random deployment date. Across 42 CADe and 97 control facilities,
+  adenoma detection rose from 50.7% to 54.9% with CADe and fell from 51.8% to 51.1% without.
+caveat: >-
+  Read from the abstract only. Detection of adenomas is a quality measure, not cancers prevented;
+  the abstract says the effect on cancer outcomes and on endoscopist deskilling is undetermined.
+  Device use was not tracked per procedure, and the population is predominantly male veterans.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: null
+comparison: "Facilities randomly equipped with CADe devices vs control facilities given a random later deployment date, before and after deployment"
+effect:
+  relative: "Odds of detecting an adenoma 1.22 times higher with CADe availability (95% CI 1.15 to 1.28)"
+  absolute: "Adenoma detection rate rose 4.2 percentage points (95% CI 3.48 to 4.74), from 50.7% to 54.9%, at CADe sites; it fell 0.7 points at control sites"
+reach: "269 endoscopists at 42 VA facilities with CADe, 71,594 pre- and 35,399 postdeployment colonoscopies"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-05
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Dominitz et al., Impact of Availability of Computer-Aided Detection Devices on Adenoma Detection During Colonoscopy: A Cluster Randomized Study. Gastroenterology 2026 (abstract)"
+    url: https://doi.org/10.1053/j.gastro.2026.05.018
+    type: primary
+conflicts: >-
+  Funded by the VHA Quality Enhancement Research Initiative; the lead author directs the VA's
+  national colorectal cancer screening program, which then bought the devices for all VA
+  facilities. One author reported consulting for Olympus America. The devices were GI Genius
+  per the trade press; the abstract does not name the vendor.
+what_would_change: "Full-text methods giving the follow-up periods, and evidence that the higher adenoma detection lowers colorectal cancer incidence or death."
+notes: >-
+  verify: only the abstract was readable. The abstract gives the deployment window (October 2022
+  to February 2023) but not the period over which post-deployment colonoscopies were counted,
+  so achieved dates and the window grade are left empty. verify: ClinicalTrials.gov NCT05888623
+  is the registration; whether the primary endpoint was preregistered as ADR was not checked, so
+  evidence A is the drafter's reading.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Isolated because randomly chosen facilities received the CADe devices while control facilities did not, so the difference in adenoma detection between the two groups is attributable to device availability.
+receipts:
+  - field: headline
+    quote: from 50.7% to 54.9%, at CADe sites and ADR decreased by 0.7 percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points)
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: CADe availability was associated with a significantly increased odds of adenoma detection (odds ratio, 1.22; 95% CI, 1.15 to 1.28)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: ADR decreased by 0.7 percentage points (95% CI, -1.16 to -0.28 percentage points)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: from 269 endoscopists at 42 facilities with CADe performing 71,594 pre- and 35,399 postdeployment colonoscopies
+    locator: Abstract, Results
+    source: 0
