@@ -1,0 +1,90 @@
+id: povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing
+section: not-because
+rank: 27
+headline: >-
+  AI-assisted starting gonadotropin dosing did not raise IVF live birth (49.6%
+  vs 50.4%) in 119 matched pairs at a Beijing reproductive centre.
+impact: "No difference in live birth (matched cohort)"
+impact_number: "49.6% vs 50.4%"
+impact_label: "cumulative live birth, AI-assisted vs experience-based starting dose, not significant"
+summary: >-
+  At the Peking University Third Hospital reproductive centre, women whose
+  starting gonadotropin dose was set with the POvaStim decision-support tool
+  were matched to women dosed by clinician experience. Pregnancy and live birth
+  did not differ; dosing was less variable with the tool.
+caveat: >-
+  A single-centre pilot, not randomized: AI use was completely confounded with
+  which clinicians treated the patient, so the authors say the tool's own
+  contribution cannot be isolated. The confidence intervals are wide and do not
+  rule out clinically important differences.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "AI-assisted starting gonadotropin dose (POvaStim) vs clinician experience-based dosing, one-to-one propensity-matched cohort, single centre, Beijing"
+effect:
+  relative: "Cumulative live birth risk difference −0.8% (95% CI −13.5 to +11.9; P = 0.897)"
+  absolute: "Cumulative live birth 59 of 119 (49.6%) with AI vs 60 of 119 (50.4%) control; clinical pregnancy 67 of 119 (56.3%) vs 76 of 119 (63.9%)"
+reach: "119 matched pairs of women undergoing IVF/ICSI with a GnRH-antagonist protocol"
+dates:
+  achieved_start: 2022-08-03
+  achieved_end: 2022-12-31
+  published: 2026-11-05
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Frontiers in Endocrinology: Real-world implementation of AI-assisted starting gonadotropin dosing in routine ovarian stimulation: an exposure-defined, propensity score-matched observational cohort study (Xu et al.)"
+    url: https://doi.org/10.3389/fendo.2026.1944764
+    doi: 10.3389/fendo.2026.1944764
+    type: primary
+conflicts: >-
+  The authors declare no commercial or financial relationships; the tool was
+  developed at the same institution that ran the study.
+what_would_change: "A randomized comparison with clinicians as their own control, showing higher live birth or fewer hyperstimulation freeze-all cycles with the tool."
+notes: >-
+  Filed under not-because: live birth did not differ. Dosing was less variable
+  (interquartile range 43% narrower) but gonadotropin exposure was higher with
+  the tool and freeze-all was more frequent (46.2% vs 34.5%).
+  verify: the window is graded pre because the benefit was not shown; the
+  treatment dates are from the abstract's methods and follow-up ran to a
+  data-lock of 31 December 2024.
+related: []
+history:
+  - date: 2026-11-22
+    note: "Added by the daily scout."
+rationale: Dosing differed by clinician group rather than by randomization, so AI use is confounded with clinician experience, as the authors state (bundled).
+receipts:
+  - field: headline
+    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: yielded 119 matched pairs
+    locator: Abstract, Methods
+    source: 0
+  - field: impact_number
+    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: "Cumulative clinical pregnancy occurred in 67 of 119 (56.3%) in the AI-assisted arm versus 76 of 119 (63.9%) in the control arm"
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: yielded 119 matched pairs
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: were treated between August 3 and December 31, 2022
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: were treated between August 3 and December 31, 2022
+    locator: Abstract, Methods
+    source: 0

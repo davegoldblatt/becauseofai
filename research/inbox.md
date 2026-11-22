@@ -421,3 +421,16 @@ Candidates: 143 over 2026-11-19 to 2026-11-21, 9 flagged randomized, 17 announce
 - Samsara 37% lower crash rate (UK release, 2026-11-18): already logged 2026-11-18.
 - Dublin flood-warning AI: already logged 2026-11-20; still no measured result.
 - Skipped: ACTIVE and ambient-nursing protocols, reviews, retrospective model validations, benchmarks, surveys (Korea workers, NBER), the Alzheimer's risk model, earnings and funding news.
+
+## 2026-11-22 (daily scout)
+
+Candidates: 107 over 2026-11-20 to 2026-11-22, 5 flagged randomized, 12 announcements, 1 alert, 35 source errors (mostly Crossref 429s). One entry drafted.
+
+- Drafted: POvaStim AI starting-dose gonadotropin in IVF, matched cohort, null on live birth. [Frontiers in Endocrinology](https://doi.org/10.3389/fendo.2026.1944764). Full text read; confounded with clinician group.
+- AI-assisted CT reporting of rib fractures, pre/post implementation, Ji'an, China: [AJTR](https://doi.org/10.62347/PUOD9220). Reports faster turnaround (P < 0.001) and higher concordance; retrospective, reference standard is radiologist consensus. Missing: absolute turnaround minutes and implementation dates for a receipted entry.
+- Samsara 37% lower crash rate: already logged 2026-11-18. Microsoft climate information for farmers, [Punch](https://punchng.com/microsoft-deploys-ai-to-improve-climate-information-for-farmers/): no measured result seen; find the organisation's own page.
+- Skipped: ACTIVE protocol (again), retrospective model validations, reviews, surveys, benchmarks, funding and product news.
+
+### Alerts
+
+- `jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref lists a new version (10.12688/f1000research.183558.2, 2026-09-17). Check whether numbers changed.
