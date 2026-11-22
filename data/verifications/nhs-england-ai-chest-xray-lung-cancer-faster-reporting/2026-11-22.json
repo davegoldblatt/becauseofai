@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "32f4ab0e2419218f2485e6c67ce16c8af9287b3a87c8246f944f234ac850df3f",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.gov.uk/government/news/ai-to-speed-up-cancer-diagnosis-for-millions-of-nhs-patients",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T00:03:21.023Z",
+      "final_url": "https://www.gov.uk/government/news/ai-to-speed-up-cancer-diagnosis-for-millions-of-nhs-patients",
+      "sha256": "7ff0a17c4d2c61957626818f788cfd9001ee87d4953eebf6135f4c33befbf3d9",
+      "chars": 13197,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "helping more than 4 million receive a faster diagnosis or all-clear for lung cancer by improving patient care routes.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "helping more than 4 million receive a faster diagnosis or all-clear for lung cancer by improving patient care routes.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The historical comparison concerns AI-supported radiology and improved patient care routes together, without isolating the AI contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source supplies no measurement period, and its publication date does not establish when the reported benefits occurred."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The government reports benefits from a programme it funds and is expanding, as the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because the source gives no dates for the reported benefits or underlying measurements."
+      },
+      "summary": "The complete press release supports the reported 4 versus 8 days and more than 4 million patients as government claims. It provides neither a measurement period nor an independent evaluation isolating AI's contribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14636,
+      "output": 723,
+      "total": 15359,
+      "cached": 0,
+      "reasoning": 237
+    },
+    "duration_ms": 16955
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete press release supports the reported 4 versus 8 days and more than 4 million patients as government claims. It provides neither a measurement period nor an independent evaluation isolating AI's contribution.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "Not dated yet (The dated test fails because the source gives no dates for the reported benefits or underlying measurements.)."
+    ]
+  }
+}

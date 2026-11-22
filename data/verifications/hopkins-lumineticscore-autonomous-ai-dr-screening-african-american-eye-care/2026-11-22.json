@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "7e71c53103223d5cd09af5e1b6fbeb0f812a3ea002585a2971fd0d2386ad4caf",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41746-026-02460-5",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-22T00:02:45.119Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13077085/fullTextXML",
+      "sha256": "19a52477b162fc57a1eb40dbbf5ae852b93ed642cad8ec93996a73580094fcf9",
+      "chars": 20336,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "was associated with increased presentation to eye care specialist care by African-Americans ( p  = 0.02)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Adult patients with diabetes ( n  = 3745) seen at Johns Hopkins Medicine primary care sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "between August 2020 and September 2022",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "between August 2020 and September 2022",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tests office-based autonomous AI screening and its referral pathway against routine primary care referral, without separating AI from office-based screening.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods specify referrals between August 2020 and September 2022."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Abramoff declares relevant patents and investor, director, and consultant roles at Digital Diagnostics; the entry discloses these interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The retrospective comparison supports an exploratory association between the AI screening pathway and higher odds of being African-American among patients reaching specialist care (OR 1.15). It does not establish improved attendance rates, causality, or AI's contribution separately from office-based screening."
+    },
+    "error": null,
+    "tokens": {
+      "input": 16706,
+      "output": 553,
+      "total": 17259,
+      "cached": 0,
+      "reasoning": 48
+    },
+    "duration_ms": 15106
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The retrospective comparison supports an exploratory association between the AI screening pathway and higher odds of being African-American among patients reaching specialist care (OR 1.15). It does not establish improved attendance rates, causality, or AI's contribution separately from office-based screening.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "36babf454e47d0ab9f8b7e815890851fb5c80afaee5501c1b01b8df09368b014",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc2026213788701.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-22T00:03:01.176Z",
+      "final_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc2026213788701.pdf",
+      "sha256": "aee69fda5bf3d04a19d78a51b2463b107d038ed2820a21d43b5161eed0c5841f",
+      "chars": 37287,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "program-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "program-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported decline follows nationwide deployment of AI within the TB programme, without a comparison separating predictive flags from programme care.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the report places the initiatives and their results broadly within 2022–2025, without dating the TB decline more precisely."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The government reports results from its own programme, which the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The reported decline implies an earlier benchmark but gives no baseline details; the broad 2022–2025 period cannot establish whether the benefit falls within the assessment window."
+      },
+      "summary": "The report supports a government-reported 27% decline after nationwide deployment, without an independent evaluation or isolated AI effect. Its table attributes the 4,500-plus alerts to Media Disease Surveillance, rather than the TB programme."
+    },
+    "error": null,
+    "tokens": {
+      "input": 18058,
+      "output": 765,
+      "total": 18823,
+      "cached": 0,
+      "reasoning": 310
+    },
+    "duration_ms": 18540
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The report supports a government-reported 27% decline after nationwide deployment, without an independent evaluation or isolated AI effect. Its table attributes the 4,500-plus alerts to Media Disease Surveillance, rather than the TB programme.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report."
+    ]
+  }
+}

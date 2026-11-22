@@ -1,0 +1,101 @@
+id: nhs-england-ai-chest-xray-lung-cancer-faster-reporting
+section: because
+rank: 107
+headline: >-
+  Because of AI chest X-ray tools in half of England's NHS trusts, the government says scans are
+  analysed in an average of 4 days instead of 8 for the most complex cases, and more than
+  4 million patients have had a faster lung cancer diagnosis or all-clear.
+impact: "Scans analysed in 4 days, not 8"
+impact_number: "4 days"
+impact_label: "average to analyse the most complex chest X-rays, down from 8, government says"
+summary: >-
+  The Department of Health and Social Care reports that AI chest X-ray tools, a second pair of
+  eyes for radiologists, are in use in half of England's NHS trusts. Early data show the most
+  complex scans analysed in an average of 4 days against 8 before, and the government says over
+  4 million patients have had a faster diagnosis or all-clear for lung cancer.
+caveat: >-
+  A government press release announcing funding. It calls the data early, does not say which
+  tool or tools, over what period, or how the 4 million were counted, and gives no control group.
+  A separate randomised trial of AI prioritisation of chest X-rays (see the LungIMPACT entry)
+  found no faster diagnosis.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Average days to analyse the most complex scans, before the AI tools against now; no control group"
+effect:
+  relative: null
+  absolute: "Scans analysed in an average of 4 days, compared to 8 days for the most complex cases previously"
+reach: "More than 4 million patients, in half of England's NHS trusts"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-10
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "GOV.UK press release: AI to speed up cancer diagnosis for millions of NHS patients (10 June 2026)"
+    url: https://www.gov.uk/government/news/ai-to-speed-up-cancer-diagnosis-for-millions-of-nhs-patients
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the government's own press release about a programme it funds and is expanding
+  (£20 million to extend the tools to every trust). No vendor is named and there is no independent
+  evaluation.
+what_would_change: "A published evaluation naming the tools, the period, the number of scans, and reporting times with and without AI at the same trusts."
+notes: >-
+  verify: the release gives no period for the early data, so achieved dates and the window grade
+  are left empty. verify: the release says "improving patient care routes" without defining how
+  4 million patients were counted. verify: the randomised LungIMPACT trial (a different
+  prioritisation design) found no speed-up in diagnosis.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Bundled because the only comparison is the average analysis time before the tools against now, with no control group, and the tools were rolled out alongside other pathway changes.
+receipts:
+  - field: headline
+    quote: analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.
+    locator: Body, third paragraph
+    source: 0
+  - field: headline
+    quote: helping more than 4 million receive a faster diagnosis or all-clear for lung cancer by improving patient care routes.
+    locator: Body, third paragraph
+    source: 0
+  - field: impact
+    quote: analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.
+    locator: Body, third paragraph
+    source: 0
+  - field: impact_number
+    quote: analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.
+    locator: Body, third paragraph
+    source: 0
+  - field: effect.absolute
+    quote: analyse scans in an average of just 4 days, compared to 8 days for the most complex cases previously.
+    locator: Body, third paragraph
+    source: 0
+  - field: reach
+    quote: helping more than 4 million receive a faster diagnosis or all-clear for lung cancer by improving patient care routes.
+    locator: Body, third paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 32f4ab0e2419218f2485e6c67ce16c8af9287b3a87c8246f944f234ac850df3f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: nhs-england-ai-chest-xray-lung-cancer-faster-reporting/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the source gives no dates for the reported benefits or underlying measurements.).
