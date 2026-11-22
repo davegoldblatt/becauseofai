@@ -1,0 +1,112 @@
+id: mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings
+section: because
+rank: 119
+headline: >-
+  Because of AI, Mercy says imaging AI cut scan-to-result time for flagged urgent
+  cases from 19.8 hours to 1.3 hours, and 5,642 patients got accelerated
+  attention for incidental findings in five months.
+impact: "19.8 hours to 1.3 hours scan-to-result"
+impact_number: "19.8 h → 1.3 h"
+impact_label: "scan-to-result turnaround for flagged urgent cases at Mercy"
+summary: >-
+  A health-system announcement of a white paper (August 2026) says Mercy, with
+  Aidoc's imaging AI deployed across more than 50 hospitals, used the software to
+  flag urgent cases, shortening scan-to-result turnaround, and flagged 50,749
+  incidental findings in five months, of which 5,642 patients received
+  accelerated clinical attention.
+caveat: >-
+  Mercy's own press release about a white paper it commissioned with the vendor;
+  the release gives no comparison group, no definition of the 19.8-hour baseline
+  and no confirmed diagnoses among the flagged findings.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Scan-to-result turnaround for flagged urgent cases against a 19.8-hour figure the release does not define"
+effect:
+  relative: null
+  absolute: "Scan-to-result turnaround cut from 19.8 hours to 1.3 hours; 5,642 of 50,749 flagged incidental findings led to accelerated clinical attention"
+reach: "Mercy, a health system with more than 50 hospitals"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-25
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Mercy newsroom: Mercy and Aidoc Reveal Faster Diagnoses and Earlier Treatment for Thousands of Patients"
+    url: https://www.mercy.net/newsroom/2026-08-25/mercy-and-aidoc-reveal-faster-diagnoses-and-earlier-treatment-fo/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is Mercy's own press release about its own deployment, announcing a
+  white paper by AVIA, Mercy and Aidoc; the software is from the vendor Aidoc,
+  Mercy's partner. The release calls the AVIA review independent, but Mercy
+  commissioned it. The white paper itself was not read.
+what_would_change: "The white paper's methods, a comparison period for turnaround, and confirmed-diagnosis counts among the flagged incidental findings."
+notes: >-
+  verify: the release says five months of data were studied but gives no calendar
+  dates for them (the platform launched in January 2025), so dates and the
+  window grade are left empty.
+  verify: it is not stated whether 19.8 hours is a before-deployment figure or
+  an unflagged-case figure.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Mercy credits the imaging software's prioritisation together with the radiologist workflow that reads flagged cases first, and gives no control group, so the software's own share cannot be separated out.
+receipts:
+  - field: headline
+    quote: reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours
+    locator: Key findings, bullet 1
+    source: 0
+  - field: headline
+    quote: From those, 5,642 patients received accelerated clinical attention
+    locator: Key findings, bullet 3
+    source: 0
+  - field: impact
+    quote: reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours
+    locator: Key findings, bullet 1
+    source: 0
+  - field: impact_number
+    quote: reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours
+    locator: Key findings, bullet 1
+    source: 0
+  - field: effect.absolute
+    quote: reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours
+    locator: Key findings, bullet 1
+    source: 0
+  - field: effect.absolute
+    quote: Mercy and Aidoc flagged 50,749 incidental findings
+    locator: Key findings, bullet 3
+    source: 0
+  - field: effect.absolute
+    quote: From those, 5,642 patients received accelerated clinical attention
+    locator: Key findings, bullet 3
+    source: 0
+  - field: reach
+    quote: Mercy deployed 13 AI imaging solutions across more than 50 hospitals in just four months
+    locator: Key findings, bullet 4
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 3e1b70b8e01e109f3e11c9f004a30859967befcbb2059ec72f3f56ea9d03cc2f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings/2026-11-22.json

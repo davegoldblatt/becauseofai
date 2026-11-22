@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "3e1b70b8e01e109f3e11c9f004a30859967befcbb2059ec72f3f56ea9d03cc2f",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.mercy.net/newsroom/2026-08-25/mercy-and-aidoc-reveal-faster-diagnoses-and-earlier-treatment-fo/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T17:30:35.082Z",
+      "final_url": "https://www.mercy.net/newsroom/2026-08-25/mercy-and-aidoc-reveal-faster-diagnoses-and-earlier-treatment-fo/",
+      "sha256": "0aaf94468d4fd15604fdecdb2bf267e07731a39ca3ad2d263c019ab76e19b0c7",
+      "chars": 5579,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "From those, 5,642 patients received accelerated clinical attention",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "reduce scan-to-result turnaround time from 19.8 hours to 1.3 hours",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Mercy and Aidoc flagged 50,749 incidental findings",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "From those, 5,642 patients received accelerated clinical attention",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Mercy deployed 13 AI imaging solutions across more than 50 hospitals in just four months",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "The release compares 19.8 hours with 1.3 hours but does not describe the comparison conditions sufficiently to distinguish isolated AI effects from a bundled intervention.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the January 2025 launch and unspecified five-month observation period do not establish the benefit's calendar dates."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Mercy reports its own deployment and commissioned the review of its partnership with vendor Aidoc; the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because the five-month measurement period has no calendar endpoints; the deployment launch and publication dates do not establish when the reported benefits occurred."
+      },
+      "summary": "The complete press release supports the reported turnaround figures, incidental-finding counts, accelerated attention and hospital reach. It does not establish the measurement dates or provide enough comparison detail to determine attribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13287,
+      "output": 708,
+      "total": 13995,
+      "cached": 0,
+      "reasoning": 199
+    },
+    "duration_ms": 18411
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}
