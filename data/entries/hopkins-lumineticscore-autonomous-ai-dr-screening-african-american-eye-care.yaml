@@ -57,15 +57,15 @@ receipts:
     locator: Abstract
     source: 0
   - field: impact
-    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    quote: "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)"
     locator: Results, propensity score matching
     source: 0
   - field: impact_number
-    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    quote: "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)"
     locator: Results, propensity score matching
     source: 0
   - field: effect.relative
-    quote: 'the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)'
+    quote: "the AI group was more likely to be African-American (OR = 1.15, 95% CI: 1.02, 1.29, p  = 0.022)"
     locator: Results, propensity score matching
     source: 0
   - field: reach
@@ -80,3 +80,20 @@ receipts:
     quote: between August 2020 and September 2022
     locator: Methods, patient and variable selection
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 7e71c53103223d5cd09af5e1b6fbeb0f812a3ea002585a2971fd0d2386ad4caf
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care/2026-11-22.json
+  confidence: strict

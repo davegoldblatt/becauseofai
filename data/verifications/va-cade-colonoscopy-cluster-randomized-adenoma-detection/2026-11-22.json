@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "a1443fe9cb395964673adbe3d99eba7b911b5f4b89ba9d763db3c03cd0c7a0a0",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1053/j.gastro.2026.05.018",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-22T00:04:08.750Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1053%2Fj.gastro.2026.05.018%22&format=json&resultType=core",
+      "sha256": "13b123c162ebaf9a560e3daf236b4c7a319023c7456aa2ed5689b915f951f956",
+      "chars": 2229,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "from 50.7% to 54.9%, at CADe sites and ADR decreased by 0.7 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "CADe availability was associated with a significantly increased odds of adenoma detection (odds ratio, 1.22; 95% CI, 1.15 to 1.28)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the absolute increase in ADR was 4.2 percentage points (95% CI, 3.48 to 4.74 percentage points), from 50.7% to 54.9%, at CADe sites",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "ADR decreased by 0.7 percentage points (95% CI, -1.16 to -0.28 percentage points)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "from 269 endoscopists at 42 facilities with CADe performing 71,594 pre- and 35,399 postdeployment colonoscopies",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "Randomly selected facilities received CADe devices, and outcomes were compared with control facilities receiving usual care.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract dates device deployment to October 2022–February 2023 but does not date the outcome observation periods."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract contains no conflict disclosures; the entry's funding, consulting, and procurement statements cannot be verified from it."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Outcome observation dates are absent; evidence grade A also cannot be established because a preregistered primary endpoint is not documented."
+      },
+      "summary": "The abstract supports all receipted numbers and a randomized comparison showing increased adenoma detection with CADe availability. It does not establish outcome dates, primary-endpoint preregistration, or improved cancer outcomes."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12972,
+      "output": 648,
+      "total": 13620,
+      "cached": 0,
+      "reasoning": 152
+    },
+    "duration_ms": 15223
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

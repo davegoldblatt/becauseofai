@@ -71,3 +71,22 @@ receipts:
     quote: resulting in a 27% decline in adverse TB outcomes and over 4,500 outbreak alerts.
     locator: Body, public health delivery paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 36babf454e47d0ab9f8b7e815890851fb5c80afaee5501c1b01b8df09368b014
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.

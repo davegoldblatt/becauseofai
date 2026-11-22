@@ -79,3 +79,23 @@ receipts:
     quote: helping more than 4 million receive a faster diagnosis or all-clear for lung cancer by improving patient care routes.
     locator: Body, third paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 32f4ab0e2419218f2485e6c67ce16c8af9287b3a87c8246f944f234ac850df3f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: nhs-england-ai-chest-xray-lung-cancer-faster-reporting/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because the source gives no dates for the reported benefits or underlying measurements.).

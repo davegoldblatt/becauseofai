@@ -86,3 +86,24 @@ receipts:
     quote: from 269 endoscopists at 42 facilities with CADe performing 71,594 pre- and 35,399 postdeployment colonoscopies
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: a1443fe9cb395964673adbe3d99eba7b911b5f4b89ba9d763db3c03cd0c7a0a0
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: va-cade-colonoscopy-cluster-randomized-adenoma-detection/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter A, verifier could not grade."
+  record: va-cade-colonoscopy-cluster-randomized-adenoma-detection/2026-11-22.json
