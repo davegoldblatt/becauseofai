@@ -532,3 +532,21 @@ Read and rejected:
 - TriNetX AI-era colonoscopy interval cancer (Healio via search): AI use per patient not known, era comparison.
 - Viz.ai 44% DIDO release, Wisconsin DR blog, LSHTM and Hopkins press pages, MSH Ethiopia brief: NOT READ (403, 404 or fetch failed).
 - Short of the floor: about 20 queries and 15 reads; four entries from them, the rest set aside above.
+
+## 2026-11-22, slice 33: announcements: emergency response and weather, 2026-05-13 to 2026-08-12
+
+Drafted (4, all speculative-level; officials' own figures in trade press or local news, no baselines):
+- sparks-pd-ai-assistant-non-emergency-calls-25-percent: Police1, AI assistant answered 25% of non-emergency calls (about 1,500) in two weeks.
+- dane-county-ava-ai-non-emergency-calls-24000: Spectrum News, AVA handled over 24,000 non-emergency calls in a month.
+- weber-911-ai-agent-non-emergency-calls-10-percent: KUTV, AI agent handling about 10% of non-emergency calls.
+- san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent: Police1 (sponsored), Hyper answers up to 20% of non-emergency calls.
+
+Looked at and rejected:
+- Fairfax County 911 AI (VACo award form): the 600,000 calls a year is a projection, no measured result.
+- Jeffcom/Carbyne (FireRescue1, 2024): launch story, no result; Jeffcom 33% already an entry.
+- Motorola page on San Diego (71% deflection): names a different vendor from Police1 for the same office; not used, flagged in the entry.
+- Volusia "Ava" (Police1): reassigned staff, no number about people.
+- Galveston County flood sensors (Route Fifty): launch, no result. Google Android earthquake alerts: one billion alerts, no AI role stated.
+- Axios Colorado Springs, Fast Company wildfire cameras: HTTP 403. Pano/ALERTCalifornia: already entries.
+- Heat warnings, Seattle fire AI triage, Corti, Honolulu and Brussels flood plans: no measured AI outcome or plans only.
+- Short of the floor: 9 searches and 12 pages read.

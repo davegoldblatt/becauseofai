@@ -1,0 +1,66 @@
+id: dane-county-ava-ai-non-emergency-calls-24000
+section: because
+rank: 112
+headline: >-
+  Because of an AI voice assistant, Dane County officials say more than 24,000
+  non-emergency calls were handled in its first month, freeing dispatchers for 911.
+impact: "24,000+ non-emergency calls handled by AI"
+impact_number: "24,000+"
+impact_label: "non-emergency calls handled by an AI voice assistant in a month"
+summary: >-
+  Dane County Public Safety Communications (Wisconsin) launched an AI voice
+  assistant, AVA, on its non-emergency line. After about a month, officials told
+  Spectrum News it had handled more than 24,000 calls with no major mistakes.
+caveat: >-
+  A one-month officials' update in a news report. It counts calls handled, not
+  wait times, 911 answer times or caller outcomes, and there is no comparison.
+domain: disaster
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: null
+  absolute: "More than 24,000 non-emergency calls handled by the AI voice assistant in about a month"
+reach: "Callers to the Dane County non-emergency line"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-28
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Spectrum News: Dane County shares one month update on AI non-emergency line, 28 September 2026"
+    url: https://spectrumnews1.com/wi/green-bay/news/2026/09/28/dane-county-public-safety-ai-non-emergency-calls
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure is the county's own statement about its own programme, relayed by a
+  news report; the vendor is not named. No independent audit.
+what_would_change: "County call logs with before-and-after hold times and 911 answer times."
+notes: >-
+  verify: the source gives only "about a month" since launch and no calendar
+  dates, so dates and the window grade are left empty.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the count of calls is an operational tally of one system's workload with no comparison group or baseline.
+receipts:
+  - field: headline
+    quote: an artificial intelligence voice assistant has handled more than 24,000 non-emergency calls since the county launched the program about a month ago
+    locator: Opening paragraph
+    source: 0
+  - field: impact
+    quote: an artificial intelligence voice assistant has handled more than 24,000 non-emergency calls since the county launched the program about a month ago
+    locator: Opening paragraph
+    source: 0
+  - field: impact_number
+    quote: an artificial intelligence voice assistant has handled more than 24,000 non-emergency calls since the county launched the program about a month ago
+    locator: Opening paragraph
+    source: 0
+  - field: effect.absolute
+    quote: an artificial intelligence voice assistant has handled more than 24,000 non-emergency calls since the county launched the program about a month ago
+    locator: Opening paragraph
+    source: 0

@@ -1,0 +1,71 @@
+id: san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent
+section: because
+rank: 114
+headline: >-
+  Because of an AI call service, the San Diego County Sheriff's Office says it
+  answers up to 20% of non-emergency calls without a dispatcher.
+impact: "Up to 20% of non-emergency calls answered by AI"
+impact_number: "20%"
+impact_label: "of non-emergency calls answered by an AI system at a sheriff's dispatch centre"
+summary: >-
+  The San Diego County Sheriff's Office launched an AI call-answering service,
+  Hyper, on its non-emergency line in March 2026. Police1 reports it answers up
+  to 20% of those calls, and the captain says non-emergency wait times are
+  already cut in half while data are still being collected.
+caveat: >-
+  Officials' early account in a sponsored trade article; the agency says it is
+  still collecting data. No baseline figures are given for wait times.
+domain: disaster
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: "Hyper is answering up to 20% of non-emergency calls"
+  absolute: null
+reach: "Callers to the San Diego County Sheriff's Office non-emergency line"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-13
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Police1: How San Diego County uses AI to answer non-emergency calls and support 911 dispatchers, 13 August 2026"
+    url: https://www.police1.com/innovation-report/how-san-diego-county-uses-ai-to-answer-non-emergency-calls-and-support-911-dispatchers
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure is the sheriff's office's own account of its own system, relayed by
+  an article marked "Sponsored by" (sponsor not named in the text); the system is
+  from the vendor Hyper. No independent audit.
+what_would_change: "Sheriff's call data with hold times and 911 answer times before and after launch."
+notes: >-
+  verify: the source gives a launch month but the "up to 20%" figure has no
+  stated period, so dates and the window grade are left empty.
+  verify: a Motorola Solutions page describes a different vendor and a 71%
+  deflection rate for the same office; the two accounts were not reconciled and
+  only this source is used.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the share of calls answered is an operational tally alongside a new remote dispatch unit, with no comparison group or baseline.
+receipts:
+  - field: headline
+    quote: Hyper is answering up to 20% of non-emergency calls
+    locator: Section "AI as a tool, not a dispatcher"
+    source: 0
+  - field: impact
+    quote: Hyper is answering up to 20% of non-emergency calls
+    locator: Section "AI as a tool, not a dispatcher"
+    source: 0
+  - field: impact_number
+    quote: Hyper is answering up to 20% of non-emergency calls
+    locator: Section "AI as a tool, not a dispatcher"
+    source: 0
+  - field: effect.relative
+    quote: Hyper is answering up to 20% of non-emergency calls
+    locator: Section "AI as a tool, not a dispatcher"
+    source: 0
