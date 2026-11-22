@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "3452f192e0856bc2b36f6dfee757d9180e9ffed1d36933c55f70e9d7838f1668",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.3389/fendo.2026.1944764",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-22T19:30:30.759Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13781726/fullTextXML",
+      "sha256": "05dcd73da656dec3ce95b82db245226acbd08f4be8b0f24ed48bd88b59b6b612",
+      "chars": 85838,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "yielded 119 matched pairs",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Cumulative clinical pregnancy occurred in 67 of 119 (56.3%) in the AI-assisted arm versus 76 of 119 (63.9%) in the control arm",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "yielded 119 matched pairs",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "were treated between August 3 and December 31, 2022",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "were treated between August 3 and December 31, 2022",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tested POvaStim recommendations, dose discretisation and implementation by one clinician group against conventional dosing by another clinician group.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods establish treatment and retrieval dates of August 3–December 31, 2022; cumulative pregnancy and live-birth outcomes accrued through December 31, 2024."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses institutional tool development, but the supplied text does not establish that relationship or another qualifying conflict; authors declare no commercial or financial relationships."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The AI-containing care strategy was identifiable and compared as a package; its independent contribution remains confounded with clinician group."
+      },
+      "summary": "The source supports the reported matched-cohort numbers and no statistically detectable live-birth difference, with wide uncertainty. This pilot observational paper fits none of the specified evidence categories cleanly and cannot isolate the tool's contribution or establish equivalence."
+    },
+    "error": null,
+    "tokens": {
+      "input": 31414,
+      "output": 631,
+      "total": 32045,
+      "cached": 8448,
+      "reasoning": 107
+    },
+    "duration_ms": 16010
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter C, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "C",
+        "verifier": null
+      }
+    ]
+  }
+}

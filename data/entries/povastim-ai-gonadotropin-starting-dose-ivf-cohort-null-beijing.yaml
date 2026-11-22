@@ -57,7 +57,7 @@ history:
 rationale: Dosing differed by clinician group rather than by randomization, so AI use is confounded with clinician experience, as the authors state (bundled).
 receipts:
   - field: headline
-    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    quote: cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)
     locator: Abstract, Results
     source: 0
   - field: headline
@@ -65,15 +65,15 @@ receipts:
     locator: Abstract, Methods
     source: 0
   - field: impact_number
-    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    quote: cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)"
+    quote: cumulative live birth in 59 of 119 (49.6%) versus 60 of 119 (50.4%) (risk difference −0.8%, 95% CI −13.5 to +11.9; P = 0.897)
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "Cumulative clinical pregnancy occurred in 67 of 119 (56.3%) in the AI-assisted arm versus 76 of 119 (63.9%) in the control arm"
+    quote: Cumulative clinical pregnancy occurred in 67 of 119 (56.3%) in the AI-assisted arm versus 76 of 119 (63.9%) in the control arm
     locator: Abstract, Results
     source: 0
   - field: reach
@@ -88,3 +88,24 @@ receipts:
     quote: were treated between August 3 and December 31, 2022
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 3452f192e0856bc2b36f6dfee757d9180e9ffed1d36933c55f70e9d7838f1668
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter C, verifier could not grade."
+  record: povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing/2026-11-22.json
