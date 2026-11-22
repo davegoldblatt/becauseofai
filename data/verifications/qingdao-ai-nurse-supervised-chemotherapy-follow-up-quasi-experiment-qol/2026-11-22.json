@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "495a5f8c25c253bb4cefc0a54babb2aeb15c34f0b2597f8f5f4cd4258128a53b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.3389/fpubh.2026.1863027",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-22T20:35:11.574Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13506697/fullTextXML",
+      "sha256": "d0cb03e5e0dd5859ec3ec17959bd33236e62a46e978dbc8b03cebfeed87c7a29",
+      "chars": 43144,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "including 96 in the AI-assisted follow-up group and 93 in the conventional care group",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "adjusted mean difference 5.88, 95% CI 5.71 to 6.05",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 189 patients were included in the final analysis",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "conducted from January to June 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "conducted from January to June 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tested AI communication, digital monitoring, nurse escalation and structured humanistic care together against conventional telephone and outpatient follow-up.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods 2.1 gives January–June 2024, consistent with the abstract."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No commercial relationship, vendor funding, equity or patent is established; the entry discloses author self-evaluation, while the source also acknowledges DeepSeek technical support."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports all quoted numbers and a measured association between the integrated intervention and higher quality of life in 2024, without isolating AI's contribution or establishing causality. Evidence is null because this small nonrandomized study does not clearly fit any supplied evidence category."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20586,
+      "output": 760,
+      "total": 21346,
+      "cached": 0,
+      "reasoning": 269
+    },
+    "duration_ms": 17609
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

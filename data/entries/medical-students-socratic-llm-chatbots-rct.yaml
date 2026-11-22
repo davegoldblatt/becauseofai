@@ -78,22 +78,22 @@ receipts:
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-16
-  content: 6889170281a23e81fd635799687dc7f8b8ac8cd48fb3197e00c246ea8068eeef
+  model: claude-opus-5-5
+  date: 2026-11-22
+  content: 40a63a4cb2cfafe46e4e2d605b94618c76983a5366a43e27be70ea6a08bfca88
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-16
+    model: claude-opus-5-5
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-16
+    date: 2026-11-22
     verdict: fail
-  record: medical-students-socratic-llm-chatbots-rct/2026-11-16.json
+  record: medical-students-socratic-llm-chatbots-rct/2026-11-22.json
 held:
-  reason: ungrounded
-  since: 2026-11-16
-  detail: "impact (receipt 2): unsupported, The quote gives score gains but does not establish the impact field's 10-minute duration.."
-  record: medical-students-socratic-llm-chatbots-rct/2026-11-16.json
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier isolated."
+  record: medical-students-socratic-llm-chatbots-rct/2026-11-22.json

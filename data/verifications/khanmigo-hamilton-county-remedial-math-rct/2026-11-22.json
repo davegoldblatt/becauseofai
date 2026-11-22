@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "khanmigo-hamilton-county-remedial-math-rct",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "3b651ff21ad2a6e4e947af6d22a947e357c1bd9ab8d5375ef0b1b4259af6bea0",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://edworkingpapers.com/sites/default/files/ai26-1551.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-22T20:32:42.715Z",
+      "final_url": "https://edworkingpapers.com/sites/default/files/ai26-1551.pdf",
+      "sha256": "8a36abfbb864446a78df667369e53ccbc6ef7311574a6a00867ba729b5dd714c",
+      "chars": 103374,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Assignment raises math achievement by 1.3 national percentile ranks per term, or about 0.06 to 0.08 standard deviations over a school year",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "cluster randomized trial in 18 Tennessee middle schools",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Assignment raises math achievement by 1.3 national percentile ranks per term",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Assignment raises math achievement by 1.3 national percentile ranks per term, or about 0.06 to 0.08 standard deviations over a school year",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the implied effect of a full year of active participation reaches 0.14 standard deviations",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "across 18 middle schools in Hamilton County,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The primary sample comprises 6,902 student-term observations",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Minimum RTI (Winter 2025) Nov 4 – Dec 4",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Spring 2026 Testing Period Apr 13 – May 8",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "Randomized grades received Khan Academy with Khanmigo during remedial sessions versus usual remediation, so the comparison tests the combined package.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Table 1 establishes November 2024 through May 2026 for analyzed terms; excluded Fall 2024 exposure is separately described, and continued delivery after May 2026 is not established."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Khan Academy's platform guidance, partnership facilitation and data provision are disclosed in both texts, but vendor funding, vendor-employed authors or other specified conflicts are not established."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preregistered cluster randomized study supports the reported gains for the Khan Academy–Khanmigo package and all receipt numbers and dates. It does not isolate Khanmigo's added benefit or establish ongoing delivery after the study ended."
+    },
+    "error": null,
+    "tokens": {
+      "input": 34634,
+      "output": 721,
+      "total": 35355,
+      "cached": 8448,
+      "reasoning": 192
+    },
+    "duration_ms": 16789
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The preregistered cluster randomized study supports the reported gains for the Khan Academy–Khanmigo package and all receipt numbers and dates. It does not isolate Khanmigo's added benefit or establish ongoing delivery after the study ended.",
+    "confidence": "speculative",
+    "relaxed": [
+      "The two checkers disagreed on window: the drafter said ongoing and the verifier said in. The entry shows the drafter's grade, ongoing; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": "ongoing",
+        "verifier": "in"
+      }
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "medical-students-socratic-llm-chatbots-rct",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "40a63a4cb2cfafe46e4e2d605b94618c76983a5366a43e27be70ea6a08bfca88",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s40670-026-02832-2",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T20:34:13.758Z",
+      "final_url": "https://link.springer.com/article/10.1007/s40670-026-02832-2",
+      "sha256": "25bbc3cc925b9dbf552a34f685c0122b99bd9d6ee58685d5475b6dead3bfa18a",
+      "chars": 12026,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the other read the medical textbook, both for 10 min. A 15-question test",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the other read the medical textbook, both for 10 min. A 15-question test",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "The respective increase in results was 3.7 and 8.9.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "The average of the group before and after using the bot ( n  = 20) are 3.9 +/- 0.9 and 12.8 +/- 1.6 respectively",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Forty students participated in the study.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The randomized comparison tests AI chatbot instruction against reading the same textbook for the same duration, with no additional intervention package described.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "No study dates are provided; publication dates and the IRB reference do not establish when students received the intervention."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The visible declarations report no funding or relevant interests; the entry incorrectly says those disclosures were unavailable."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Study dates are absent; evidence is ungraded because preregistration is not established and this small randomized trial does not fit B, C, or D."
+      },
+      "summary": "The abstract supports the reported immediate test gains in 40 randomized students. It does not establish achieved dates or a preregistered primary endpoint, and the full article body is inaccessible."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14896,
+      "output": 656,
+      "total": 15552,
+      "cached": 0,
+      "reasoning": 186
+    },
+    "duration_ms": 15585
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier isolated.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      }
+    ]
+  }
+}

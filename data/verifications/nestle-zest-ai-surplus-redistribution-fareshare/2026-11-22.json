@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nestle-zest-ai-surplus-redistribution-fareshare",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "9c07e342f378a00b3df6ed72029e3a0f2ea59b8f0534319fe811d1a6011dd548",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.newfoodmagazine.com/news/267084/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T20:34:30.401Z",
+      "final_url": "https://www.newfoodmagazine.com/news/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/2135060.article",
+      "sha256": "668c2f6fea60aee73d860b69398c173921b5e3c280ca86757a0dcd5e0f559e34",
+      "chars": 10209,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The redistributed food supported 94,133 people through hundreds of charities and community groups.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "201.9 tonnes of surplus food were redistributed to people",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "supporting an estimated 94,133 people across 787 charities and community organisations",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "supporting an estimated 94,133 people across 787 charities and community organisations",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "Trials compared the AI-led process with manual waste analysis, while redistribution combined AI matching with consortium logistics and charity networks.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source gives a 16-month duration without calendar endpoints, so the window cannot be established."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The article reports the consortium's own findings, includes AI vendor Zest as a partner, quotes its CEO, and identifies Innovate UK funding; the entry discloses these interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The source reports comparisons with manual analysis but no baseline for the total 201.9 tonnes; the dated test fails because neither pilot endpoint is given."
+      },
+      "summary": "The complete news article supports the reported tonnage, estimated people supported, charity reach, and a bundled AI process compared with manual analysis. It does not establish calendar dates or how much of the total redistribution was additional because of AI."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14591,
+      "output": 603,
+      "total": 15194,
+      "cached": 0,
+      "reasoning": 102
+    },
+    "duration_ms": 14683
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete news article supports the reported tonnage, estimated people supported, charity reach, and a bundled AI process compared with manual analysis. It does not establish calendar dates or how much of the total redistribution was additional because of AI.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "Not dated yet (The source reports comparisons with manual analysis but no baseline for the total 201.9 tonnes; the dated test fails because neither pilot endpoint is given.)."
+    ]
+  }
+}

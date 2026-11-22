@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "numi-ai-math-tutoring-hamilton-county",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "742f968f5a59dfd607df3b3383b1332fbeb810218194111881a278fa264b3153",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-22T20:34:46.666Z",
+      "final_url": "https://www.nber.org/system/files/working_papers/w35621/w35621.pdf",
+      "sha256": "71804bee45be0d5e77a306f4098724f3f7b4f888686918549ad21fc36f3788c8",
+      "chars": 178570,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "All mastery students 0.370 0.402 0.032* 0.017 0.065 3,209",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Among mastery students, CAL-only students answered 37.0 percent of the practiced",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Students assigned to AI answered 40.2 percent",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "All mastery students 0.370 0.402 0.032* 0.017 0.065 3,209",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "AI increased the probability that the next attempt was correct by 8.5 percentage points.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The study included students in grades 6 through 8 across 20 schools and just under",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "March 23–27, 2026, teachers selected one regular math",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "March 30–April 3, teachers selected a class period to administer a short delayed assessment,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Full mastery sample 0.370 0.402 0.032* (0.017) 0.065 3,209",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "contradicted",
+          "note": "Tables report 3.2 percentage points, but Section 5.5 twice gives 3.1 percentage points for the same effect."
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "contradicted",
+          "note": "Tables report 3.2 percentage points, but Section 5.5 gives 3.1 percentage points for the same delayed-test effect."
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "contradicted",
+          "note": "Table A3 reports 3.2 percentage points, but Section 5.5 gives 3.1 percentage points for the same effect."
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "Within the randomized mastery condition, students received the same CAL platform and progression rules, differing by access to the AI tutor.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Section 3.1 dates practice to March 23–27, 2026 and delayed assessment to March 30–April 3."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses funding and project development of NUMI; the source establishes no vendor funding, vendor employment, equity, patent or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized classroom experiment supports an imprecise practiced Exercise 1 delayed-test gain and improved observed post-mistake recovery, with an internal 3.1-versus-3.2-point discrepancy. Registration and preregistered hypotheses are mentioned, but a preregistered primary endpoint is not established, preventing evidence grade A."
+    },
+    "error": null,
+    "tokens": {
+      "input": 50976,
+      "output": 956,
+      "total": 51932,
+      "cached": 0,
+      "reasoning": 277
+    },
+    "duration_ms": 22250
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "impact_number (receipt 1): contradicted, Tables report 3.2 percentage points, but Section 5.5 twice gives 3.1 percentage points for the same effect.; effect.absolute (receipt 4): contradicted, Tables report 3.2 percentage points, but Section 5.5 gives 3.1 percentage points for the same delayed-test effect.; headline (receipt 9): contradicted, Table A3 reports 3.2 percentage points, but Section 5.5 gives 3.1 percentage points for the same effect.."
+  }
+}

@@ -112,22 +112,22 @@ receipts:
     source: 1
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-17
-  content: 7bf3c3af3a4f865b6af8bb3edd4c71eae1e5ff228745d616f2b00057ab38d28a
+  model: claude-opus-5-5
+  date: 2026-11-22
+  content: 4df454639c9c3c5f616b981e6996708ac1ad7bc9b11ca1c42882d39b726a3213
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-17
+    model: claude-opus-5-5
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-17
+    date: 2026-11-22
     verdict: fail
-  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-22.json
 held:
   reason: ungrounded
   since: 2026-11-17
-  detail: "headline (receipt 1): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; impact_number (receipt 2): contradicted, The abstract supports 18.7%, but the registry reports 16 control HF hospitalizations among 91 participants, inconsistent with that percentage.; effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients with HF rehospitalization, whereas the registry reports 16 control HF hospitalizations.."
-  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-17.json
+  detail: "effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients, but the registry reports 16 control heart-failure hospitalizations.."
+  record: link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-22.json
