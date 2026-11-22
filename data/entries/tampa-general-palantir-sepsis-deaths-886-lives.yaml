@@ -1,0 +1,83 @@
+id: tampa-general-palantir-sepsis-deaths-886-lives
+section: because
+rank: 116
+headline: >-
+  Because of AI, Tampa General Hospital reports that Palantir's sepsis software
+  has saved 886 lives since August 2022, with sepsis deaths cut by 68%.
+impact: "886 lives saved (hospital's estimate)"
+impact_number: "886"
+impact_label: "lives the hospital says its sepsis software has saved"
+summary: >-
+  A June 2026 news report says Tampa General Hospital in Florida uses Palantir
+  software that pulls vital signs, labs and clinician notes together to flag
+  early sepsis, letting doctors detect it within an hour of admission so nurses
+  give antibiotics sooner. The hospital reports 886 lives saved and the report
+  cites research in the Times of a 68% cut in sepsis deaths.
+caveat: >-
+  A newspaper's account of the hospital's own figures: no baseline period,
+  denominator or method is given, "lives saved" is a modelled estimate, and the
+  68% figure is relayed from a report the entry could not read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Sepsis deaths after the software against an unstated earlier level, as reported by the hospital"
+effect:
+  relative: "Sepsis deaths cut by 68%"
+  absolute: "886 lives saved since August 2022, as the hospital reports"
+reach: "Tampa General Hospital, Florida"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-18
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Palo Alto Daily Post: Hospital reduces sepsis deaths with AI technology"
+    url: https://padailypost.com/2026/06/18/hospital-reduces-sepsis-deaths-with-ai-technology/
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are the hospital's own report about its own programme, relayed by
+  a newspaper; the software is from the vendor Palantir, the hospital's partner.
+  The 68% figure is attributed to a Times article, not read here. No independent
+  audit.
+what_would_change: "The hospital's own data release or a peer-reviewed evaluation with a baseline period, case counts and risk adjustment."
+notes: >-
+  verify: the article gives "since August 2022" for the lives-saved figure but no
+  end date, and no period for the 68% cut; dates and the window grade are left
+  empty.
+  verify: other outlets give 866 rather than 886 lives; the page read says 886.
+  verify: the primary announcement from the hospital or the Times study was not
+  found readable.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The hospital credits the sepsis software together with the nurses and rapid-response workflow that act on its alerts, and gives no control group, so the software's own share cannot be separated out.
+receipts:
+  - field: headline
+    quote: The Tampa hospital reports this software has saved 886 lives since August 2022.
+    locator: Article body, paragraph 2
+    source: 0
+  - field: headline
+    quote: to cut sepsis deaths by 68%, according to research published by the UK Times
+    locator: Article body, paragraph 1
+    source: 0
+  - field: impact
+    quote: The Tampa hospital reports this software has saved 886 lives since August 2022.
+    locator: Article body, paragraph 2
+    source: 0
+  - field: impact_number
+    quote: The Tampa hospital reports this software has saved 886 lives since August 2022.
+    locator: Article body, paragraph 2
+    source: 0
+  - field: effect.absolute
+    quote: The Tampa hospital reports this software has saved 886 lives since August 2022.
+    locator: Article body, paragraph 2
+    source: 0
+  - field: effect.relative
+    quote: to cut sepsis deaths by 68%, according to research published by the UK Times
+    locator: Article body, paragraph 1
+    source: 0

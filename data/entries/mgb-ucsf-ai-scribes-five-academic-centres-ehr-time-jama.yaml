@@ -1,0 +1,78 @@
+id: mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama
+section: because
+rank: 115
+headline: >-
+  Because of AI, clinicians who adopted ambient AI scribes at five US academic
+  health systems spent 16.0 fewer minutes on documentation than comparison
+  clinicians, with a modest rise in weekly visits.
+impact: "16 fewer minutes of documentation"
+impact_number: "−16.0 min"
+impact_label: "documentation time, AI scribe adopters vs comparison clinicians"
+summary: >-
+  A JAMA multisite cohort study (April 2026) of 8,581 ambulatory clinicians at
+  five US academic institutions compared clinicians who adopted AI scribes with
+  those who did not, using difference-in-differences. Adopters spent fewer
+  minutes on the EHR and on documentation and delivered slightly more visits a
+  week; EHR time outside work hours did not change significantly.
+caveat: >-
+  Observational; scribe access was an opt-in choice at four of the five sites, so
+  adopters may differ from non-adopters. Only the abstract could be read. The
+  reduction is modest and the abstract reports no change in after-hours EHR time.
+domain: work
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Clinicians who adopted AI scribes against clinicians at the same institutions who did not, difference-in-differences before and after adoption"
+effect:
+  relative: null
+  absolute: "13.4 (95% CI, 9.1-17.7) fewer minutes of EHR time and 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time, normalized to 8 scheduled patient hours"
+reach: "8581 clinicians, including 1809 AI scribe adopters"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-04-01
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "JAMA: Changes in Clinician Time Expenditure and Visit Quantity With Adoption of AI-Powered Scribes: A Multisite Study (Europe PMC abstract)"
+    url: https://doi.org/10.1001/jama.2026.2253
+    type: primary
+conflicts: >-
+  The senior authors are employed by the health systems that deployed the scribes.
+  The lead author reports grants and travel support from FeelBetter Inc. and
+  advisory roles with Eko Health and Augmedix Inc. (per the Mass General Brigham
+  release); the full disclosure list was not read.
+what_would_change: "Randomized evidence on time and patient outcomes, and whether time saved is spent on patient care."
+notes: >-
+  verify: the abstract says scribes were introduced between June 2023 and August
+  2025 but gives no period for the measured benefit, so dates and the window
+  grade are left empty.
+  verify: only the abstract was readable; full-text dates and disclosures not
+  checked.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: Adopters were compared with non-adopting clinicians at the same institutions before and after adoption in a difference-in-differences analysis, so the scribe is the main difference between the groups, though adoption was opt-in.
+receipts:
+  - field: headline
+    quote: 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 13.4 (95% CI, 9.1-17.7) fewer minutes of EHR time, 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: The sample comprised 8581 clinicians, including 1809 AI scribe adopters.
+    locator: Abstract, Results
+    source: 0

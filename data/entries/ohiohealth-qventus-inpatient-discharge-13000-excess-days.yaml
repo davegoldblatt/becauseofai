@@ -1,0 +1,76 @@
+id: ohiohealth-qventus-inpatient-discharge-13000-excess-days
+section: because
+rank: 118
+headline: >-
+  Because of AI, Qventus says its discharge-planning software saved OhioHealth
+  nearly 13,000 excess hospital days, equivalent to almost 35 patient-years.
+impact: "~13,000 excess hospital days saved"
+impact_number: "~13,000"
+impact_label: "excess hospital days saved, according to the vendor"
+summary: >-
+  A July 2026 announcement by the software vendor Qventus says OhioHealth, an
+  Ohio health system, used its AI Inpatient Capacity Solution to plan and speed
+  discharges, saving nearly 13,000 excess hospital days and automating nearly
+  2,900 hours of staff administrative work.
+caveat: >-
+  The vendor's own announcement of a customer's results: no baseline period,
+  comparison, dates or method for counting "excess days" are given, and the
+  hospital's own figures were not read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Excess hospital days after the software against an unstated earlier level, as counted by the vendor"
+effect:
+  relative: null
+  absolute: "Saved nearly 13,000 excess hospital days, equivalent to almost 35 excess patient years"
+reach: "OhioHealth, 16 hospitals in Ohio"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-28
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Qventus announcement: OhioHealth Taps Qventus to Automate Care Operations Across the Enterprise"
+    url: https://www.qventus.com/company/newsroom/ohiohealth-taps-qventus-to-automate-care-operations-across-the-enterprise/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the vendor Qventus's own announcement about its own product and
+  customer; it also announces a new sale to OhioHealth. The figures are not
+  independently audited and OhioHealth's own report was not read.
+what_would_change: "OhioHealth's own published figures, or an independent evaluation with a baseline period and a definition of excess days."
+notes: >-
+  verify: the announcement gives no period for the 13,000 days, so dates and
+  the window grade are left empty.
+  verify: the page is dated 7/28/2026 but its dateline reads "TBD, 2026".
+  verify: earlier Qventus pages give a smaller annualized figure (8,554 days)
+  for an earlier period; this entry uses only the figure on the page read.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The vendor credits its discharge-planning software, used together with the hospital's case-management teams who act on its prompts, and gives no control, so the software's own share cannot be separated out.
+receipts:
+  - field: headline
+    quote: saved nearly 13,000 excess hospital days – equivalent to almost 35 excess patient years
+    locator: Announcement, paragraph 1
+    source: 0
+  - field: impact
+    quote: saved nearly 13,000 excess hospital days
+    locator: Announcement, paragraph 1
+    source: 0
+  - field: impact_number
+    quote: saved nearly 13,000 excess hospital days
+    locator: Announcement, paragraph 1
+    source: 0
+  - field: effect.absolute
+    quote: saved nearly 13,000 excess hospital days – equivalent to almost 35 excess patient years
+    locator: Announcement, paragraph 1
+    source: 0
+  - field: reach
+    quote: OhioHealth serves its communities through 16 hospitals
+    locator: About OhioHealth
+    source: 0

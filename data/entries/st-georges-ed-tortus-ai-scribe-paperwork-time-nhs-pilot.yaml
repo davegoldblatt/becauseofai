@@ -1,0 +1,76 @@
+id: st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot
+section: because
+rank: 117
+headline: >-
+  Because of AI, emergency clinicians at St George's Hospital in London halved
+  their paperwork time, saving each an additional 47 minutes, in an NHS
+  England-funded AI-scribe pilot.
+impact: "47 minutes of paperwork saved per clinician"
+impact_number: "47 min"
+impact_label: "paperwork time saved per emergency clinician, as the trust reports"
+summary: >-
+  St George's University Hospitals NHS Foundation Trust, the only emergency
+  department in a pilot run by Great Ormond Street Hospital and funded by NHS
+  England, reports that the TORTUS ambient AI-scribing tool halved the time its
+  clinicians spent on paperwork and raised patient capacity per shift.
+caveat: >-
+  The trust's own press release: no comparison group, baseline period, sample
+  size or dates are given in it, and the paperwork saving is time, not patient
+  outcome.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: isolated
+  window: null
+comparison: "Clinician paperwork time with the TORTUS AI scribe against time without it, as described by the trust; the design is not stated"
+effect:
+  relative: "Halved the time it took clinicians to do paperwork"
+  absolute: "Saving each clinician an additional 47 minutes, equivalent to one patient per shift; patient capacity up 13.4% per shift"
+reach: "Emergency department clinicians at St George's University Hospitals NHS Foundation Trust, London"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-09-04
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "St George's University Hospitals NHS Foundation Trust press release: Emergency department clinicians able to see more patients, thanks to new AI tech"
+    url: https://www.stgeorges.nhs.uk/newsitem/emergency-department-clinicians-able-to-see-more-patients-thanks-to-new-ai-tech/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the hospital trust's own press release about its own pilot, run
+  by Great Ormond Street Hospital and funded by NHS England; the tool is TORTUS,
+  a vendor. No independent audit.
+what_would_change: "The pilot's evaluation report with baseline and comparison periods, clinician numbers and patient-experience measures."
+notes: >-
+  verify: the press release gives no period for the pilot, so dates and the
+  window grade are left empty.
+  verify: the release does not say how the paperwork time was measured or what
+  the 47 minutes is compared with.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The release reports clinicians' paperwork time with the scribe against their time without it, so the scribe is the thing that differs, but the design is not described.
+receipts:
+  - field: headline
+    quote: halved the time it took clinicians to do paperwork, saving each an additional 47 minutes
+    locator: Press release, paragraph 2
+    source: 0
+  - field: impact
+    quote: halved the time it took clinicians to do paperwork, saving each an additional 47 minutes
+    locator: Press release, paragraph 2
+    source: 0
+  - field: impact_number
+    quote: halved the time it took clinicians to do paperwork, saving each an additional 47 minutes
+    locator: Press release, paragraph 2
+    source: 0
+  - field: effect.absolute
+    quote: saving each an additional 47 minutes – the equivalent of one patient per shift
+    locator: Press release, paragraph 2
+    source: 0
+  - field: effect.absolute
+    quote: which was also found to increase patient capacity by 13.4% per shift
+    locator: Press release, paragraph 5
+    source: 0

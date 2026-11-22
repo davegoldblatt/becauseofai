@@ -550,3 +550,22 @@ Looked at and rejected:
 - Axios Colorado Springs, Fast Company wildfire cameras: HTTP 403. Pano/ALERTCalifornia: already entries.
 - Heat warnings, Seattle fire AI triage, Corti, Honolulu and Brussels flood plans: no measured AI outcome or plans only.
 - Short of the floor: 9 searches and 12 pages read.
+
+## 2026-11-22, slice 29: announcements: hospitals and health systems, 2026-05-13 to 2026-08-12
+
+Drafted (5):
+- mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama: JAMA abstract (Europe PMC), 8581 clinicians, 16.0 fewer documentation minutes vs non-adopters, difference-in-differences (reasonable at best; no benefit period, window empty).
+- tampa-general-palantir-sepsis-deaths-886-lives: Palo Alto Daily Post relaying the hospital, 886 lives saved and sepsis deaths cut 68% (speculative; news rewrite, no baseline or period).
+- st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot: trust press release (Sept 2025), paperwork halved, 47 minutes saved per clinician (speculative; no period).
+- ohiohealth-qventus-inpatient-discharge-13000-excess-days: Qventus announcement, nearly 13,000 excess days saved (speculative; vendor, no period).
+- mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings: Mercy press release, scan-to-result 19.8 h to 1.3 h, 5,642 patients with accelerated attention (speculative; no period).
+
+Read and rejected:
+- RWJBarnabas Epic deterioration, LungIMPACT, NHS stroke imaging, Brainomix: already entries. Johns Hopkins TREWS FDA release, RWJBarnabas page, Becker's, TechSpot, Corewell (HealthcareIT), Children's National LWBS: HTTP 403 or 429, not read.
+- Valley Medical Center ambient pilot: self-reported "up to 30 minutes to 2 hours", survey-style, no measured number.
+- Reid Health Abridge (AHA): 10-12 minutes per note, but no publication date on the page, so no valid published date.
+- Dartmouth portal-reply study: retrospective comparison of model drafts, no patients or physicians in use.
+- Opmed/Mayo OR scheduling: retrospective holdout prediction error. Mount Sinai Dragon Copilot and Mount Sinai AIRS: rollout and development, no result.
+- North York General SmartER Zones, BHR chest X-ray: launch or target, no result.
+- HonorHealth Qventus blog: page dated 2024, outside the slice; later length-of-stay blog not found.
+- About twenty queries and eighteen pages read.
