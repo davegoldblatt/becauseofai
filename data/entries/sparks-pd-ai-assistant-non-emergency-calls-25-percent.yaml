@@ -69,3 +69,24 @@ receipts:
     quote: That’s about 1,500 calls and 50 hours of talk time.
     locator: Section "Early results"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: d8ab053806b894f4db38657e9c16ef495197de3a838989b87c827b9da1522f8e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade."
+  record: sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json

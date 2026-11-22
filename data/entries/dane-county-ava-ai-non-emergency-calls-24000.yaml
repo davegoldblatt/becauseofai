@@ -64,3 +64,24 @@ receipts:
     quote: an artificial intelligence voice assistant has handled more than 24,000 non-emergency calls since the county launched the program about a month ago
     locator: Opening paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 2116ca0ac864b6868945a576d8a9f637272344d83cdf322afe166785d63eb99a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: dane-county-ava-ai-non-emergency-calls-24000/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+  record: dane-county-ava-ai-non-emergency-calls-24000/2026-11-22.json

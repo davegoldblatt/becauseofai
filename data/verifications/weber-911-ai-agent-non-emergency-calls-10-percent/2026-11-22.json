@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "weber-911-ai-agent-non-emergency-calls-10-percent",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "f959f400d2cc6bc8424458bc5756ba0ae54b171f72ddf1c7f1af0c8926319892",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://kutv.com/news/local/ai-now-handling-weber-county-non-emergency-dispatch-calls",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T08:52:13.250Z",
+      "final_url": "https://kutv.com/news/local/ai-now-handling-weber-county-non-emergency-dispatch-calls",
+      "sha256": "dfd52332955c64666bab4c718f6931b498a03078377e233326f27551fd13c96a",
+      "chars": 6188,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Currently, the AI agent is handling about 10% of the non-emergency calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Currently, the AI agent is handling about 10% of the non-emergency calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Currently, the AI agent is handling about 10% of the non-emergency calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Currently, the AI agent is handling about 10% of the non-emergency calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "D",
+        "attribution": null,
+        "window": "in"
+      },
+      "attribution_rationale": "No measured comparison is reported from which to assign an attribution grade.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the report body places operation in the month preceding September 9, 2026."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses the centre's self-reported estimate, but the source identifies no vendor funding, employment, equity, patent, or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The measured-against test fails: the reported call share has no measured control, prior-period comparison, or other benchmark; 25% is a goal."
+      },
+      "summary": "The report supports the director's estimate that AI handles about 10% of non-emergency calls during an actual deployment in August–September 2026. It supplies no measured comparison or evidence of improved caller outcomes or dispatcher response times."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13238,
+      "output": 609,
+      "total": 13847,
+      "cached": 0,
+      "reasoning": 153
+    },
+    "duration_ms": 14312
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

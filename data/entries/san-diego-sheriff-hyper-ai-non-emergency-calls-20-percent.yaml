@@ -69,3 +69,24 @@ receipts:
     quote: Hyper is answering up to 20% of non-emergency calls
     locator: Section "AI as a tool, not a dispatcher"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 2a9ac2653851e4243ac09745d38fd0c753ed7247ea4e84bd7ebc3d05a68cc2ad
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
+  record: san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent/2026-11-22.json

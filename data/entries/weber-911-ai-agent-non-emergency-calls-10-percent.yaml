@@ -64,3 +64,24 @@ receipts:
     quote: Currently, the AI agent is handling about 10% of the non-emergency calls.
     locator: Body, paragraph on 280,000 calls
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: f959f400d2cc6bc8424458bc5756ba0ae54b171f72ddf1c7f1af0c8926319892
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+  record: weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json

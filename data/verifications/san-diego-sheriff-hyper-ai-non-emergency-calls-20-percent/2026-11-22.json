@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "2a9ac2653851e4243ac09745d38fd0c753ed7247ea4e84bd7ebc3d05a68cc2ad",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.police1.com/innovation-report/how-san-diego-county-uses-ai-to-answer-non-emergency-calls-and-support-911-dispatchers",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T08:51:40.860Z",
+      "final_url": "https://www.police1.com/innovation-report/how-san-diego-county-uses-ai-to-answer-non-emergency-calls-and-support-911-dispatchers",
+      "sha256": "645b3eb288ac19d38dcaae7068a3e0db15108267b805f6cca3e70fffcebffec3",
+      "chars": 12763,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Hyper is answering up to 20% of non-emergency calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Hyper is answering up to 20% of non-emergency calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Hyper is answering up to 20% of non-emergency calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Hyper is answering up to 20% of non-emergency calls",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The article compares pre-Hyper caller queues with operations after deployment within a larger remote communications unit project, without separately controlling for staffing changes.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the article places launch in March 2026 and reports benefits by August 13, 2026."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The article is marked sponsored, without naming the sponsor in the supplied text, and the entry discloses this."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The sponsored article reports an agency operational account of AI answering up to 20% of non-emergency calls and halving wait times after a March 2026 launch. It supplies a prior-period comparison but no underlying call data or independent evaluation."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14516,
+      "output": 571,
+      "total": 15087,
+      "cached": 0,
+      "reasoning": 132
+    },
+    "duration_ms": 13962
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

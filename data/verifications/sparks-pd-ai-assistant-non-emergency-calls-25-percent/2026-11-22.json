@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "d8ab053806b894f4db38657e9c16ef495197de3a838989b87c827b9da1522f8e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.police1.com/911-and-dispatch/how-ai-is-helping-a-nevada-police-department-reduce-non-emergency-dispatch-calls",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T08:51:56.424Z",
+      "final_url": "https://www.police1.com/911-and-dispatch/how-ai-is-helping-a-nevada-police-department-reduce-non-emergency-dispatch-calls",
+      "sha256": "29a22f9d9725dd747a0b1b3d0d671e5855dd48d592dc7105ffe2afb29ac98d30",
+      "chars": 9246,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "That’s about 1,500 calls and 50 hours of talk time.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "The department reports AI call volume without a measured comparison against dispatcher handling, a prior period, or another system, so attribution cannot be graded.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source describes the first two weeks without calendar dates; publication on May 14, 2026 does not establish that span."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses departmental self-reporting, but the source establishes no vendor funding, ownership, employment, patent, licence, or company-run evaluation."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The call share is an operational count without a measured comparator, and the two-week reporting period has no established calendar dates."
+      },
+      "summary": "The source supports the department's report that AI handled 25% of non-emergency calls, about 1,500 calls and 50 hours, during its first two weeks. It provides neither a measured comparative benefit nor calendar dates for that period."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13901,
+      "output": 702,
+      "total": 14603,
+      "cached": 0,
+      "reasoning": 203
+    },
+    "duration_ms": 16700
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      },
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}
