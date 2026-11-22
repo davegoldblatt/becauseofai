@@ -29,7 +29,7 @@ dates:
   achieved_end: 2025-09
   published: 2026-09-06
   added: 2026-11-19
-  updated: 2026-11-19
+  updated: 2026-11-22
 sources:
   - title: "Evaluating AI-Enabled Voice to Text for Medical Affairs Documentation and Insight Capture: The RAPID Randomized Crossover Trial (Pharmaceutical Medicine, open access via Europe PMC)"
     url: https://doi.org/10.1007/s40290-026-00630-0
@@ -44,8 +44,18 @@ related: []
 history:
   - date: 2026-11-19
     note: Added by the backfill run.
+  - date: 2026-11-22
+    note: "Corrected: added the missing impact receipt (the +0.763 difference, Results) and a headline receipt for the 27 liaisons, both quotes the gate already found for other fields; no value changed."
 rationale: Each liaison used both methods in random order, so the comparison within the same people isolates the voice-to-text tool.
 receipts:
+  - field: impact
+    quote: mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339
+    locator: Results, primary analysis
+    source: 0
+  - field: headline
+    quote: This randomized crossover study enrolled 27 MSLs from six Amgen Asia-Pacific affiliates
+    locator: Abstract, Methods
+    source: 0
   - field: headline
     quote: mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339
     locator: Results, primary analysis

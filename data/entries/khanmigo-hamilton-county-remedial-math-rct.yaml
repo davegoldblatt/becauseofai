@@ -37,7 +37,7 @@ dates:
   achieved_end: 2026-05
   published: 2026-08
   added: 2026-11-15
-  updated: 2026-11-15
+  updated: 2026-11-22
 sources:
   - title: "EdWorkingPaper 26-1551: One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment (Oreopoulos and Low)"
     url: https://edworkingpapers.com/sites/default/files/ai26-1551.pdf
@@ -57,6 +57,8 @@ history:
     note: Added by the backfill run.
   - date: 2026-11-15
     note: "Updated: achieved dates set to November 2024 to May 2026 from Table 1 (pdftotext available this run); window graded ongoing, since three of five measured terms predate the window."
+  - date: 2026-11-22
+    note: "Corrected: dropped the school-year receipt for achieved_start, which the verifier rightly said does not establish November 2024; the start rests on Table 1's Nov 4 to Dec 4 first term. No value changed."
 rationale: Grades were randomized within schools to Khan Academy with the Khanmigo tutor versus usual remedial instruction, but the tutor arrives bundled with the practice platform and the authors report similar gains from the platform alone.
 receipts:
   - field: headline
@@ -86,10 +88,6 @@ receipts:
   - field: reach
     quote: The primary sample comprises 6,902 student-term observations
     locator: Section 3, Sample
-    source: 0
-  - field: dates.achieved_start
-    quote: Over the 2024–25 and 2025–26 school years, we conducted a cluster randomized trial across 18 middle schools
-    locator: Section 1, Introduction
     source: 0
   - field: dates.achieved_start
     quote: Minimum RTI (Winter 2025) Nov 4 – Dec 4

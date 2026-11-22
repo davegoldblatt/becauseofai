@@ -29,7 +29,7 @@ dates:
   achieved_end: 2023-02
   published: 2026-09-26
   added: 2026-11-17
-  updated: 2026-11-17
+  updated: 2026-11-22
 sources:
   - title: "A machine learning-based ecological momentary intervention for mental health promotion in youth: a micro-randomized trial (Translational Psychiatry, open access via Europe PMC)"
     url: https://doi.org/10.1038/s41398-026-04475-8
@@ -47,14 +47,12 @@ related: []
 history:
   - date: 2026-11-17
     note: Added by the backfill run.
+  - date: 2026-11-22
+    note: "Corrected: dropped a headline receipt that carried no number (the verifier found it unsupported); the 49 youths keep their receipt. No value changed."
 rationale: Each participant's decision points were randomized between ML-based and random assignment of the same intervention components, so the arms differ only in whether the machine-learning model chose the component.
 receipts:
   - field: headline
     quote: A total of 49 youths (mean age 20.6; 78% female) were included.
-    locator: Abstract, Results
-    source: 0
-  - field: headline
-    quote: whereas there was no evidence of beneficial effects on positive or negative affect
     locator: Abstract, Results
     source: 0
   - field: impact

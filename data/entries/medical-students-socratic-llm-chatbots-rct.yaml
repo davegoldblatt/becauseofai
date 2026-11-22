@@ -29,7 +29,7 @@ dates:
   achieved_end: null
   published: 2026-07-29
   added: 2026-11-16
-  updated: 2026-11-16
+  updated: 2026-11-22
 sources:
   - title: "A Randomised Controlled Trial to Study the Use of Large Language Models Prompt Engineered with Socratic Methods on the Impact of Medical Students' Learning (Medical Science Educator, abstract)"
     url: https://doi.org/10.1007/s40670-026-02832-2
@@ -44,6 +44,8 @@ related: []
 history:
   - date: 2026-11-16
     note: Added by the daily scout.
+  - date: 2026-11-22
+    note: "Corrected: the impact receipt now quotes the 10-minute session from the abstract's Methods, which the verifier found the score quote did not support; a headline receipt for the 10 minutes and the 15-question test added. No value changed."
 rationale: Students were randomised to chatbot dialogue or passive textbook reading for equal time, so the gain reflects an interactive Socratic format delivered by the model, not the model alone.
 receipts:
   - field: headline
@@ -51,8 +53,12 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: The respective increase in results was 3.7 and 8.9.
-    locator: Abstract, Results
+    quote: the other read the medical textbook, both for 10 min. A 15-question test
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: the other read the medical textbook, both for 10 min. A 15-question test
+    locator: Abstract, Methods
     source: 0
   - field: impact_number
     quote: The respective increase in results was 3.7 and 8.9.

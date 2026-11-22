@@ -1,0 +1,111 @@
+id: instructor-designed-ai-19-universities-stem-exams-rct
+section: because
+rank: 120
+headline: >-
+  Because of AI tools their own instructors designed, students in applied STEM classes at
+  19 universities scored 0.32 standard deviations higher on proctored, AI-free exams than
+  students in classes randomized to wait a term.
+impact: "+0.32 SD on proctored exams (RCT, preprint)"
+impact_number: "+0.32 SD"
+impact_label: "on proctored exam scores, classes with instructor-designed AI vs classes randomized to wait a term"
+summary: >-
+  In a pre-registered trial, applied STEM classes at 19 universities were randomized within
+  subject clusters to deploy AI tools their instructors had designed (Socratic coaches, tutors,
+  simulations, role-plays, course navigators) either immediately or one term later, and
+  uncurved scores on proctored exams were compared with each class's own earlier years.
+caveat: >-
+  A preprint, not peer-reviewed; the headline estimates come from a regression slightly
+  simpler than the pre-registered one (the authors report the pre-registered versions as nearly
+  identical); the effect is in standard deviations with no raw-score difference, the instructors
+  who designed the tools are co-authors, and engagement and satisfaction did not change.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: ongoing
+comparison: "Classes deploying instructor-designed AI tools in the experimental term vs classes randomized to deploy one term later, difference-in-differences against each class's pre-experimental terms, 44 class-terms analysed for learning"
+effect:
+  relative: "Student-level +0.32 SD (95% CI 0.06 to 0.59, P = 0.019); class-level +0.26 SD (95% CI 0.02 to 0.51); engagement and satisfaction not significantly different"
+  absolute: "Not reported as a raw score difference; outcomes are standardised within class"
+reach: "7,200 student enrollments in 55 applied STEM classes taught by 42 instructors at 19 universities"
+dates:
+  achieved_start: 2025
+  achieved_end: 2026
+  published: 2026-11-14
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Instructor-designed AI improves learning in a randomized trial across 19 universities (Li, Bray, Martin, Van den Steen, Wu et al., arXiv:2611.19099, preprint)"
+    url: https://arxiv.org/pdf/2611.19099
+    type: primary
+  - title: "arXiv abstract page, 2611.19099"
+    url: https://arxiv.org/abs/2611.19099
+    type: secondary
+conflicts: >-
+  Funded by discretionary research funds from Northwestern University and the University of
+  Michigan; the authors declare no competing interests. The AI platform (Faculty Twin) was
+  co-developed with Google's Rapid Innovation Team, and many co-authors are the instructors who
+  designed the AI tools and taught the treated classes, so the people delivering the intervention
+  also report it.
+what_would_change: "Peer-reviewed publication with the pre-registered specification as the headline, and a raw-score difference on the proctored exams."
+notes: >-
+  Window ongoing, argued: the three cohorts ran in spring 2025 (1,692 enrollments, before the
+  window opened on 22 November 2025), fall 2025 (2,301, mostly before it) and spring 2026 (3,207,
+  inside it), so the programme began earlier and has new in-window data. Achieved dates are years
+  only because the paper names semesters, not months.
+  Evidence B rather than A: randomized and pre-registered on OSF (28 February 2025, amended four
+  times, the last on 24 August 2026, after the last term), but not peer-reviewed, randomized at the
+  class level with 44 class-terms in the learning analysis, and the reported regressions are not the
+  pre-registered ones.
+  Attribution bundled: the treatment is the instructor's redesign of the course around AI with
+  the research team's technical support and workshops, against a delayed start; it does not
+  isolate the AI from the redesign effort.
+  verify: "7,200 students" in the paper sums enrollments across semesters (Fig. 1b), so a student
+  in two classes counts twice.
+related: [khanmigo-hamilton-county-remedial-math-rct, numi-ai-math-tutoring-hamilton-county, maryland-ai-tutor-negative]
+history:
+  - date: 2026-11-22
+    note: "Added."
+rationale: Classes were randomized to start their instructor-designed AI now or a term later, but the treatment is AI plus the instructor's course redesign and the research team's support, so the comparison reaches the bundle.
+receipts:
+  - field: headline
+    quote: The student-level treatment effect estimate is 0.32 standard deviations, SD (SE=0.13; P=0.019; 95% CI=[0.06, 0.59]).
+    locator: Results, Instructor-designed AI solutions improved learning
+    source: 0
+  - field: headline
+    quote: The experiment involved 19 universities, 42 instructors, and 7,200 students.
+    locator: Methods, Participants
+    source: 0
+  - field: impact
+    quote: The student-level treatment effect estimate is 0.32 standard deviations, SD (SE=0.13; P=0.019; 95% CI=[0.06, 0.59]).
+    locator: Results, Instructor-designed AI solutions improved learning
+    source: 0
+  - field: impact_number
+    quote: The student-level treatment effect estimate is 0.32 standard deviations, SD (SE=0.13; P=0.019; 95% CI=[0.06, 0.59]).
+    locator: Results, Instructor-designed AI solutions improved learning
+    source: 0
+  - field: effect.relative
+    quote: The student-level treatment effect estimate is 0.32 standard deviations, SD (SE=0.13; P=0.019; 95% CI=[0.06, 0.59]).
+    locator: Results, Instructor-designed AI solutions improved learning
+    source: 0
+  - field: effect.relative
+    quote: The class-level estimate is 0.26 SD (SE=0.12; P=0.038; 95% CI=[0.02, 0.51]).
+    locator: Results, Instructor-designed AI solutions improved learning
+    source: 0
+  - field: reach
+    quote: The experiment involved 19 universities, 42 instructors, and 7,200 students.
+    locator: Methods, Participants
+    source: 0
+  - field: reach
+    quote: It comprised 55 classes and 67 experimental class-terms
+    locator: Methods, Participants
+    source: 0
+  - field: dates.achieved_start
+    quote: over three academic semesters from spring 2025 to spring 2026
+    locator: Introduction
+    source: 0
+  - field: dates.achieved_end
+    quote: over three academic semesters from spring 2025 to spring 2026
+    locator: Introduction
+    source: 0

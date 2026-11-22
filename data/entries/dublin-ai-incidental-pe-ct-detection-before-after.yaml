@@ -30,7 +30,7 @@ dates:
   achieved_end: 2023-12-31
   published: 2026-12-01
   added: 2026-11-19
-  updated: 2026-11-19
+  updated: 2026-11-22
 sources:
   - title: "Incidental pulmonary embolism detection on routine contrast-enhanced computed tomography before and after deployment of a commercial artificial intelligence tool: a real-world evaluation (British Journal of Radiology, abstract via Europe PMC)"
     url: https://doi.org/10.1093/bjr/tqag222
@@ -46,8 +46,14 @@ related: []
 history:
   - date: 2026-11-19
     note: Added by the backfill run.
+  - date: 2026-11-22
+    note: "Corrected: added the missing headline receipt (the 0.35% to 0.63% rate, the abstract's Results, the quote the gate already found for impact_number); no value changed."
 rationale: The same hospital's incidental PE reporting rate was compared across the same months before and after the AI tool was introduced, so the only planned change was the AI tool, though without a concurrent control.
 receipts:
+  - field: headline
+    quote: iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation
+    locator: Abstract, Results
+    source: 0
   - field: impact_number
     quote: iPE detection rate increased from 0.35% to 0.63% (P = .0389) following AI implementation
     locator: Abstract, Results

@@ -3,10 +3,10 @@ section: because
 rank: 33
 headline: >-
   An LLM math tutor given to middle-school students in Hamilton County, Tennessee
-  helped them recover from mistakes and, inside a mastery workflow, scored 3.1
+  helped them recover from mistakes and, inside a mastery workflow, scored 3.2
   points higher on a delayed test of practiced material, a suggestive result.
 impact: "Small, imprecise gain on a one-week delayed test (RCT)"
-impact_number: "+3.1 pts"
+impact_number: "+3.2 pts"
 impact_label: "on a delayed test of practiced material, AI vs computer-assisted practice alone (p=0.065)"
 summary: >-
   An NBER working paper reports a randomized field experiment in which middle
@@ -27,14 +27,14 @@ grades:
 comparison: "NUMI with an LLM tutor vs NUMI computer-assisted learning only, students randomized to each; mastery-workflow students compared on a delayed test one week later"
 effect:
   relative: "Practiced Exercise 1 delayed-test correct: 40.2 percent with AI vs 37.0 percent CAL-only among mastery students"
-  absolute: "3.1 percentage points higher (p=0.065); after a mistake, the next attempt was 8.5 percentage points more likely to be correct"
+  absolute: "3.2 percentage points higher (p=0.065); after a mistake, the next attempt was 8.5 percentage points more likely to be correct"
 reach: "Grades 6 through 8 in 20 Hamilton County schools, just under 100 teachers"
 dates:
   achieved_start: 2026-03-23
   achieved_end: 2026-04-03
   published: 2026-08
   added: 2026-11-13
-  updated: 2026-11-15
+  updated: 2026-11-22
 sources:
   - title: "NBER Working Paper 35621: Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment"
     url: https://www.nber.org/system/files/working_papers/w35621/w35621.pdf
@@ -46,7 +46,7 @@ conflicts: >-
 what_would_change: "A replication with larger samples or a longer follow-up showing durable gains."
 notes: >-
   verify: the practiced Exercise 1 gain is reported by the authors as suggestive (p=0.065); the unpracticed question shows about zero effect.
-  verify: the sample size was not located in the text read.
+  The delayed-test difference is 0.032 (3.2 percentage points) in Tables A2 and A3, with N = 3,209 mastery-student observations; Section 5.5's prose rounds it to 3.1, and 40.2 minus 37.0 is 3.2, so the entry follows the tables.
   verify: the dates are the activity week (March 23 to 27, 2026) and the delayed assessment week ending April 3; the paper gives no year for the second week's dates beyond context.
 related: [maryland-ai-tutor-negative, sierra-leone-gemini-math]
 history:
@@ -54,11 +54,13 @@ history:
     note: Added by the backfill run.
   - date: 2026-11-15
     note: "Corrected: added the missing headline receipt (the 3.1-point delayed-test difference, Section 5.5, the quote the gate already found for impact_number); no value changed."
+  - date: 2026-11-22
+    note: "Corrected the delayed-test gain from 3.1 to 3.2 percentage points in the headline, impact_number and effect.absolute, as Tables A2 and A3 report (0.032; the prose rounds to 3.1); receipts replaced with the table rows and the unsupported 'suggestive' receipt dropped."
 rationale: Students were randomized to the AI tutor or to computer-assisted practice alone with the same platform, so the delayed-test gap isolates the tutor, though it is imprecise.
 receipts:
   - field: impact_number
-    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
-    locator: Section 5.5, Delayed learning among mastery students
+    quote: All mastery students 0.370 0.402 0.032* 0.017 0.065 3,209
+    locator: Table A2, Panel A
     source: 0
   - field: effect.relative
     quote: Among mastery students, CAL-only students answered 37.0 percent of the practiced
@@ -69,12 +71,8 @@ receipts:
     locator: Section 5.5
     source: 0
   - field: effect.absolute
-    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
-    locator: Section 5.5
-    source: 0
-  - field: effect.absolute
-    quote: interpreted as suggestive.
-    locator: Section 5.5
+    quote: All mastery students 0.370 0.402 0.032* 0.017 0.065 3,209
+    locator: Table A2, Panel A
     source: 0
   - field: effect.absolute
     quote: AI increased the probability that the next attempt was correct by 8.5 percentage points.
@@ -93,8 +91,8 @@ receipts:
     locator: Section 3.1 Setting
     source: 0
   - field: headline
-    quote: correctly, a difference of 3.1 percentage points. The corresponding effect on the unpracticed
-    locator: Section 5.5, Delayed learning among mastery students
+    quote: Full mastery sample 0.370 0.402 0.032* (0.017) 0.065 3,209
+    locator: Table A3, Panel A
     source: 0
 drafted:
   vendor: anthropic

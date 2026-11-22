@@ -18,7 +18,8 @@ summary: >-
 caveat: >-
   A feasibility study with exploratory clinical endpoints, 171 analysed patients
   and wide confidence intervals; it cannot rule out a benefit. Only the abstract
-  could be read.
+  could be read, and the paper and the registry disagree by one control event
+  (17 in the paper, 16 in the registry's posted 90-day results).
 domain: medicine
 ai_type: classic-ml
 grades:
@@ -35,7 +36,7 @@ dates:
   achieved_end: 2024-08-31
   published: 2026-10-09
   added: 2026-11-17
-  updated: 2026-11-17
+  updated: 2026-11-22
 sources:
   - title: "JACC Heart Failure: Artificial Intelligence-Enabled Detection and Management of Physiological Instability in Heart Failure: Results of the Randomized LINK-HF2 Trial (Sideris et al.), abstract via Europe PMC"
     url: https://doi.org/10.1016/j.jchf.2026.103422
@@ -58,12 +59,19 @@ notes: >-
   completion of 31 August 2024, both before the window; only the publication is new.
   Evidence B rather than A: the primary aim was feasibility and the clinical
   endpoints are described as exploratory.
+  Source discrepancy: the paper's abstract reports HF rehospitalization in 13 of 80
+  intervention and 17 of 91 control patients; the registry's posted primary outcome
+  (90-day HF hospitalization) gives 13 of 80 and 16 of 91. The registry counts may use
+  a fixed 90-day window where the paper does not; both show no significant difference.
+  The entry keeps the paper's figures, which are the published analysis.
   verify: the vendor of the monitoring model and any author ties, from the full
   text's disclosures.
 related: [uva-comet-deterioration-null, latent-ai-ecg-af-null]
 history:
   - date: 2026-11-17
     note: "Added by the backfill run."
+  - date: 2026-11-22
+    note: "Updated: stated the one-event discrepancy the verifier found between the paper (17 control HF rehospitalizations) and the registry's posted 90-day results (16) in the caveat and notes; values kept from the published paper, which both sources agree is a null."
 rationale: Both arms wore the same patch and differed in whether AI notifications and a clinician response algorithm were used, so the comparison tests the package of AI alert plus response (bundled).
 receipts:
   - field: headline
