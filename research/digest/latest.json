@@ -1,54 +1,89 @@
 {
-  "generated_at": "2026-11-21T14:11:45.245Z",
-  "since": "2026-11-20T14:11:45Z",
+  "generated_at": "2026-11-22T14:11:28.077Z",
+  "since": "2026-11-21T14:11:28Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 69,
-    "held": 66,
+    "published": 72,
+    "held": 73,
     "counts": {
-      "because": 23,
+      "because": 24,
       "not-because": 7,
       "not-yet": 5
     },
     "lower_levels": {
       "reasonable": 6,
-      "speculative": 28
+      "speculative": 30
     },
     "changed": [
       {
-        "id": "ai-fracture-detection-ortho-ed-los-before-after-israel",
-        "headline": "Because of AI, patients whose fractures were ruled out in an orthopedic emergency department spent 127.5 minutes there on average after an AI fracture-detection tool was deployed, down from 135.6.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/ai-fracture-detection-ortho-ed-los-before-after-israel"
-      },
-      {
-        "id": "ai-second-forward-view-right-colon-adr-rct-japan",
-        "headline": "Because of AI, an AI-assisted second look at the right colon found adenomas in 36.4% of colonoscopy patients against 27.9% with standard colonoscopy.",
+        "id": "dane-county-ava-ai-non-emergency-calls-24000",
+        "headline": "Because of an AI voice assistant, Dane County officials say more than 24,000 non-emergency calls were handled in its first month, freeing dispatchers for 911.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "aim-chd-ai-secondary-prevention-fuwai-rct",
-        "headline": "Because of AI, 45% of coronary heart disease patients using an AI-enhanced management system were at their blood-pressure target after three months, against 35% with usual care.",
+        "id": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent",
+        "headline": "Because of an AI call service, the San Diego County Sheriff's Office says it answers up to 20% of non-emergency calls without a dispatcher.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
+        "headline": "Because of an AI call assistant, Sparks Police in Nevada says it answered 25% of its non-emergency calls in the system's first two weeks.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "weber-911-ai-agent-non-emergency-calls-10-percent",
+        "headline": "Because of an AI agent, Weber 911 in Utah says it is handling about 10% of its non-emergency calls a month after launch.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care",
+        "headline": "Because of autonomous AI diabetic eye screening in Johns Hopkins primary care, African-American patients were more likely to present to specialist eye care, an exploratory association (p = 0.02).",
         "change": "added",
         "state": "published",
-        "url": "https://becauseofai.org/entry/aim-chd-ai-secondary-prevention-fuwai-rct"
+        "url": "https://becauseofai.org/entry/hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care"
       },
       {
-        "id": "unep-imeo-mars-ai-methane-alerts-mitigated-sources",
-        "headline": "Because of AI that screens satellite data for methane plumes, the UN Environment Programme says its alert system helped mitigate sources estimated to have emitted 1.2 million tonnes of methane.",
+        "id": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent",
+        "headline": "Because of AI tools in its National TB Elimination Programme, India's government says adverse TB outcomes fell 27%.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/unep-imeo-mars-ai-methane-alerts-mitigated-sources"
+        "url": "https://becauseofai.org/entry/india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent"
       },
       {
-        "id": "warddeken-megadetector-camera-trap-images-rangers-arnhem",
-        "headline": "Because of the MegaDetector AI model, Indigenous rangers in West Arnhem had 81.4 per cent fewer camera-trap images to analyse, Charles Darwin University reports.",
+        "id": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting",
+        "headline": "Because of AI chest X-ray tools in half of England's NHS trusts, the government says scans are analysed in an average of 4 days instead of 8 for the most complex cases, and more than 4 million patients have had a faster lung cancer diagnosis or all-clear.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/warddeken-megadetector-camera-trap-images-rangers-arnhem"
+        "url": "https://becauseofai.org/entry/nhs-england-ai-chest-xray-lung-cancer-faster-reporting"
+      },
+      {
+        "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
+        "headline": "Because of AI computer-aided detection, Veterans Health Administration colonoscopy sites raised adenoma detection by 4.2 percentage points, while control sites fell 0.7 points.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan",
+        "headline": "Because of a generative AI chatbot that answered families' health questions, nursing home nurses in northern Taiwan reported less client-related burnout after three months than nurses at comparison homes, in a small non-randomised study.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
+        "headline": "Because of AI, 189 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life 5.88 points higher than patients on conventional follow-up.",
+        "change": "added",
+        "state": "held (ungrounded)",
+        "url": null
       }
     ],
     "held_list": [
@@ -158,6 +193,13 @@
         "detail": "evidence: drafter A, verifier could not grade; attribution: drafter isolated, verifier bundled."
       },
       {
+        "id": "dane-county-ava-ai-non-emergency-calls-24000",
+        "headline": "Because of an AI voice assistant, Dane County officials say more than 24,000 non-emergency calls were handled in its first month, freeing dispatchers for 911.",
+        "reason": "grade-split",
+        "since": "2026-11-22",
+        "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+      },
+      {
         "id": "dublin-ai-incidental-pe-ct-detection-before-after",
         "headline": "After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported incidental PE rose from 0.35% to 0.63% of eligible scans.",
         "reason": "ungrounded",
@@ -184,6 +226,13 @@
         "reason": "grade-split",
         "since": "2026-11-16",
         "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+      },
+      {
+        "id": "gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan",
+        "headline": "Because of a generative AI chatbot that answered families' health questions, nursing home nurses in northern Taiwan reported less client-related burnout after three months than nurses at comparison homes, in a small non-randomised study.",
+        "reason": "grade-split",
+        "since": "2026-11-21",
+        "detail": "evidence: drafter D, verifier could not grade; attribution: drafter bundled, verifier isolated."
       },
       {
         "id": "geisinger-ml-colorectal-outreach",
@@ -410,6 +459,13 @@
         "detail": "evidence: drafter A, verifier could not grade."
       },
       {
+        "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
+        "headline": "Because of AI, 189 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life 5.88 points higher than patients on conventional follow-up.",
+        "reason": "ungrounded",
+        "since": "2026-11-21",
+        "detail": "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up.."
+      },
+      {
         "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
         "headline": "In a 71-patient randomized placebo-controlled phase 2a trial of a drug whose target and molecule were both found with generative AI, lung function (FVC) rose +98.4 ml on 60 mg rentosertib against −20.3 ml on placebo over 12 weeks.",
         "reason": "grade-split",
@@ -431,6 +487,13 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent",
+        "headline": "Because of an AI call service, the San Diego County Sheriff's Office says it answers up to 20% of non-emergency calls without a dispatcher.",
+        "reason": "grade-split",
+        "since": "2026-11-22",
+        "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
+      },
+      {
         "id": "san-jose-lyt-ai-bus-signal-priority-citywide",
         "headline": "Because of AI transit signal priority, San José says it increased bus speeds by 20 percent after expanding the system to all bus routes citywide.",
         "reason": "grade-split",
@@ -443,6 +506,13 @@
         "reason": "grade-split",
         "since": "2026-11-18",
         "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre."
+      },
+      {
+        "id": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
+        "headline": "Because of an AI call assistant, Sparks Police in Nevada says it answered 25% of its non-emergency calls in the system's first two weeks.",
+        "reason": "grade-split",
+        "since": "2026-11-22",
+        "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade."
       },
       {
         "id": "sumner-county-coursemojo-tcap-ela",
@@ -473,11 +543,25 @@
         "detail": "evidence: drafter B, verifier could not grade."
       },
       {
+        "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
+        "headline": "Because of AI computer-aided detection, Veterans Health Administration colonoscopy sites raised adenoma detection by 4.2 percentage points, while control sites fell 0.7 points.",
+        "reason": "grade-split",
+        "since": "2026-11-22",
+        "detail": "evidence: drafter A, verifier could not grade."
+      },
+      {
         "id": "vastra-gotaland-brainomix-thrombectomy-times",
         "headline": "Because of AI imaging support, stroke patients in western Sweden got to thrombectomy faster: the adjusted median from CT to groin puncture fell from 47 to 35 minutes, though outcomes did not differ.",
         "reason": "grade-split",
         "since": "2026-11-11",
         "detail": "attribution: drafter bundled, verifier isolated."
+      },
+      {
+        "id": "weber-911-ai-agent-non-emergency-calls-10-percent",
+        "headline": "Because of an AI agent, Weber 911 in Utah says it is handling about 10% of its non-emergency calls a month after launch.",
+        "reason": "grade-split",
+        "since": "2026-11-22",
+        "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
       },
       {
         "id": "westminster-council-copilot-studio-chatbot-contact-centre",
@@ -542,140 +626,116 @@
       "record": "aim-chd-ai-secondary-prevention-fuwai-rct/2026-11-21.json"
     },
     {
-      "id": "alibaba-taobao-genai-assistant-after-sales-agents-rct",
-      "date": "2026-11-20",
+      "id": "dane-county-ava-ai-non-emergency-calls-24000",
+      "date": "2026-11-22",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
+      "record": "dane-county-ava-ai-non-emergency-calls-24000/2026-11-22.json"
+    },
+    {
+      "id": "gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan",
+      "date": "2026-11-21",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier could not grade; attribution: drafter bundled, verifier isolated.",
+      "record": "gaihmc-family-communication-chatbot-ltc-nurses-burnout-taiwan/2026-11-21.json"
+    },
+    {
+      "id": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care",
+      "date": "2026-11-22",
+      "result": "published",
+      "reason": null,
+      "detail": "The retrospective comparison supports an exploratory association between the AI screening pathway and higher odds of being African-American among patients reaching specialist care (OR 1.15). It does not establish improved attendance rates, causality, or AI's contribution separately from office-based",
+      "record": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care/2026-11-22.json"
+    },
+    {
+      "id": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent",
+      "date": "2026-11-22",
+      "result": "published",
+      "reason": null,
+      "detail": "The report supports a government-reported 27% decline after nationwide deployment, without an independent evaluation or isolated AI effect. Its table attributes the 4,500-plus alerts to Media Disease Surveillance, rather than the TB programme.",
+      "record": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent/2026-11-22.json"
+    },
+    {
+      "id": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting",
+      "date": "2026-11-22",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete press release supports the reported 4 versus 8 days and more than 4 million patients as government claims. It provides neither a measurement period nor an independent evaluation isolating AI's contribution.",
+      "record": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting/2026-11-22.json"
+    },
+    {
+      "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
+      "date": "2026-11-21",
+      "result": "held",
+      "reason": "ungrounded",
+      "detail": "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up..",
+      "record": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json"
+    },
+    {
+      "id": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent",
+      "date": "2026-11-22",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
+      "record": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent/2026-11-22.json"
+    },
+    {
+      "id": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
+      "date": "2026-11-22",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade.",
+      "record": "sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json"
+    },
+    {
+      "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
+      "date": "2026-11-22",
       "result": "held",
       "reason": "grade-split",
       "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "alibaba-taobao-genai-assistant-after-sales-agents-rct/2026-11-20.json"
+      "record": "va-cade-colonoscopy-cluster-randomized-adenoma-detection/2026-11-22.json"
     },
     {
-      "id": "bbva-italy-germany-contact-centre-ai-copilots-handling-time",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "BBVA reports a handling-time reduction exceeding 15%, daily use by more than 260 agents and nearly 100,000 monthly enquiries across the two contact centres. The source provides neither a dated measurement period nor an independent comparison.",
-      "record": "bbva-italy-germany-contact-centre-ai-copilots-handling-time/2026-11-20.json"
-    },
-    {
-      "id": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The article supports seven AI-assisted enrollments, the stated screening comparisons, and the reported reach through an investigator's account. It does not establish calendar dates for the benefit or independently isolate the AI's contribution.",
-      "record": "cleveland-clinic-synapsis-ai-attr-cm-trial-enrollment/2026-11-20.json"
-    },
-    {
-      "id": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent",
-      "date": "2026-11-20",
+      "id": "weber-911-ai-agent-non-emergency-calls-10-percent",
+      "date": "2026-11-22",
       "result": "held",
       "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade.",
-      "record": "cleveland-clinic-synapsis-ai-enterprise-trial-enrollment-40-percent/2026-11-20.json"
-    },
-    {
-      "id": "copilot-three-field-experiments-software-developers-completed-tasks",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter isolated, verifier bundled; window: drafter no grade, verifier pre.",
-      "record": "copilot-three-field-experiments-software-developers-completed-tasks/2026-11-20.json"
-    },
-    {
-      "id": "google-ai-patent-drafting-assistant-lawyers-three-month-rct",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "fails-test",
-      "detail": "Failed: reached people (The reported benefits are scores on experimental drafting and redlining tasks, without demonstrated benefits in actual client work; trial calendar dates are absent.).",
-      "record": "google-ai-patent-drafting-assistant-lawyers-three-month-rct/2026-11-20.json"
-    },
-    {
-      "id": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "fails-test",
-      "detail": "Failed: the AI did something that would not otherwise have happened (The uncontrolled trial has no comparison arm or defined external benchmark; the separate competitor trial is contextual, and AI's necessity is not established.).",
-      "record": "insilico-ism6331-tead-inhibitor-mesothelioma-phase-1/2026-11-20.json"
-    },
-    {
-      "id": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "kenya-gpt4-whatsapp-business-assistant-entrepreneurs-null/2026-11-20.json"
-    },
-    {
-      "id": "microsoft-copilot-field-experiment-66-firms-email-hours",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "microsoft-copilot-field-experiment-66-firms-email-hours/2026-11-20.json"
-    },
-    {
-      "id": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The company press release supports the reported 76% versus 72% satisfaction scores and approximately 8,000 emails weekly during a three-month trial. It provides no trial calendar dates or detailed comparison methods, so the benefit's window cannot be determined.",
-      "record": "octopus-energy-arlo-ai-email-assistant-customer-satisfaction/2026-11-20.json"
-    },
-    {
-      "id": "recursion-rec-4881-fap-tupelo-polyp-burden",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The company release supports a median 43% reduction in polyp burden in 12 evaluable patients after 12 weeks, with 75% showing reductions against baseline. It establishes AI's role in selecting the drug but provides neither an isolated AI comparison nor calendar dates for the observed benefits.",
-      "record": "recursion-rec-4881-fap-tupelo-polyp-burden/2026-11-20.json"
-    },
-    {
-      "id": "rentosertib-phase-2a-ipf-fvc-nature-medicine",
-      "date": "2026-11-20",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "rentosertib-phase-2a-ipf-fvc-nature-medicine/2026-11-20.json"
-    },
-    {
-      "id": "unep-imeo-mars-ai-methane-alerts-mitigated-sources",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The release supports the reported source-emissions estimate and processing-capacity multiplier, with AI identifiable within a broader operational workflow. It supplies neither a mitigation-outcome comparison nor dates establishing when the claimed 1.2-million-tonne benefit occurred.",
-      "record": "unep-imeo-mars-ai-methane-alerts-mitigated-sources/2026-11-20.json"
-    },
-    {
-      "id": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The article supports the reported first-week volume, AI completion share and handling times, with a historical service benchmark. These are self-reported operational results without independent verification, and their timing cannot resolve window eligibility.",
-      "record": "uniting-nsw-act-jeanie-ai-voice-agent-home-care-cancellations/2026-11-20.json"
-    },
-    {
-      "id": "warddeken-megadetector-camera-trap-images-rangers-arnhem",
-      "date": "2026-11-20",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete university news item supports the reported 81.4% reduction, from 925,088 to 172,290 images requiring analysis, and describes benefits to working rangers. It provides no achievement dates or independent comparison.",
-      "record": "warddeken-megadetector-camera-trap-images-rangers-arnhem/2026-11-20.json"
+      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
+      "record": "weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json"
     }
   ],
-  "announced": [],
+  "announced": [
+    {
+      "id": "aim-chd-ai-secondary-prevention-fuwai-rct",
+      "date": "2026-11-21",
+      "url": "https://becauseofai.org/entry/aim-chd-ai-secondary-prevention-fuwai-rct"
+    }
+  ],
   "leads_added": [
-    "GenAI-DBT, a DBT-informed generative AI mindfulness platform: 30-day pilot randomized study, 45 students. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428) (2026-11-19). Read the abstract: adherence 71.4% vs 53.3% (web) and 42.3% (chatbot), descriptive only; no significant difference on MAAS or DERS. Feasibility pilot, mostly null on outcomes. Missing: full text, study dates, a benefit measured on people. A possible `not-because` row if the full text gives dates.",
-    "Prediction of postoperative pancreatic fistula after left pancreatectomy by surgeons and AI: randomized multi-reader study. [Br J Surg](https://doi.org/10.1093/bjs/znag154) (2026-10-31). Reader study; no patient outcome known from the snippet. Watch only.",
-    "Voice-based conversational AI coach to reduce competitive anxiety in elite athletes. [Frontiers in Digital Health](https://doi.org/10.3389/fdgth.2026.1962543). Protocol; check later for results.",
-    "Protocol to watch: ambient AI to reduce nursing documentation time, EHR-embedded pragmatic RCT. [Contemporary Clinical Trials](https://doi.org/10.1016/j.cct.2026.108534).",
-    "Dublin flood-warning AI, [Irish Times](https://www.irishtimes.com/ireland/dublin/2026/11/16/the-most-valuable-thing-we-can-give-people-is-time-ai-to-help-provide-dublin-flood-warnings/): a plan, no measured result yet.",
-    "Still open: Samsara AI dash cams (already logged 2026-11-18).",
-    "Skipped: the ACTIVE exercise-prescription protocol, retrospective model validations, benchmarks, reviews, surveys (including the NBER undergraduate AI survey), earnings and funding news."
+    "Drafted: GAIHMC family-communication chatbot and nursing-home nurse burnout, Taiwan, quasi-experimental, 68 staff. [IJNS](https://doi.org/10.1016/j.ijnurstu.2026.105752). Abstract only; reasonable at best.",
+    "Alpha School, $75,000 AI day: [Grit Daily](https://gritdaily.com/wealthy-parents-pay-alpha-school-ai-learning-results/). Reports internal data showing many students missed growth targets, a possible `not-because` lead. Missing: the school's own data and a comparison.",
+    "Samsara 37% lower crash rate (UK release, 2026-11-18): already logged 2026-11-18.",
+    "Dublin flood-warning AI: already logged 2026-11-20; still no measured result.",
+    "Skipped: ACTIVE and ambient-nursing protocols, reviews, retrospective model validations, benchmarks, surveys (Korea workers, NBER), the Alzheimer's risk model, earnings and funding news."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 6,
     "posts": [
+      {
+        "id": "2124254929543905718",
+        "url": "https://x.com/bcuz_of_ai/status/2124254929543905718",
+        "text": "Because of AI, 45% of coronary heart disease patients using an AI-enhanced management system were at their blood-pressure target after three months, against 35% with usual care.\n\nhttps://t.co/UWnr0WSSzw https://t.co/jO7tstPMwK",
+        "created_at": "2026-11-21T21:33:36.000Z",
+        "impressions": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
       {
         "id": "2122071653521764651",
         "url": "https://x.com/bcuz_of_ai/status/2122071653521764651",
@@ -699,41 +759,41 @@
         "reposts": 0,
         "bookmarks": 0,
         "quotes": 0
-      },
-      {
-        "id": "2121703047189422405",
-        "url": "https://x.com/bcuz_of_ai/status/2121703047189422405",
-        "text": "Because of AI, surgeons at two Chengdu hospitals retrieved sperm in 68.1% of men with non-obstructive azoospermia, against 47.6% with conventional microdissection, and live birth per transfer was 38.5%…\n\nhttps://t.co/ydFLsKCmCn https://t.co/fEHMwKOJYx",
-        "created_at": "2026-11-14T20:33:20.000Z",
-        "impressions": 33,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 1,
-        "bookmarks": 1,
-        "quotes": 0
       }
     ],
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-20",
-    "pageviews": 50,
-    "visits": 40,
+    "day": "2026-11-21",
+    "pageviews": 57,
+    "visits": 43,
     "top_paths": [
       {
         "path": "/",
-        "views": 43
+        "views": 37
+      },
+      {
+        "path": "/entry/ucsd-aspire-ai-tutor-precalculus-failure-rate",
+        "views": 10
       },
       {
         "path": "/not-because-of-ai",
         "views": 3
       },
       {
-        "path": "/entry/hurricane-melissa-2025",
+        "path": "/about",
         "views": 2
       },
       {
-        "path": "/entry/ethiopia-tb-ai-cxr",
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 1
+      },
+      {
+        "path": "/changelog",
+        "views": 1
+      },
+      {
+        "path": "/entry/maryland-ai-tutor-negative",
         "views": 1
       },
       {
