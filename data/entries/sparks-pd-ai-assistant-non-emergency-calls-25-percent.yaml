@@ -1,0 +1,92 @@
+id: sparks-pd-ai-assistant-non-emergency-calls-25-percent
+section: because
+rank: 111
+headline: >-
+  Because of an AI call assistant, Sparks Police in Nevada says it answered 25%
+  of its non-emergency calls in the system's first two weeks.
+impact: "25% of non-emergency calls answered by AI"
+impact_number: "25%"
+impact_label: "of non-emergency calls answered by an AI assistant at a police dispatch centre"
+summary: >-
+  Sparks Police Department (Nevada) put an AI assistant on its non-emergency
+  line. Police1 reports that after two weeks it had answered 25% of those calls,
+  about 1,500 calls, easing pressure on dispatchers who also work radio channels.
+caveat: >-
+  Early, self-reported figure from the first two weeks. It shows calls handled by
+  the AI, not wait times, caller outcomes or any change in 911 answer times.
+domain: disaster
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Share of non-emergency calls answered by the AI assistant rather than a dispatcher, as reported by the department after two weeks"
+effect:
+  relative: "The AI assistant answered 25% of non-emergency calls"
+  absolute: "About 1,500 calls and 50 hours of talk time in two weeks"
+reach: "Callers to the Sparks Police non-emergency line"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-05-14
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "Police1: How AI is helping a Nevada police department reduce non-emergency dispatch calls, 14 May 2026"
+    url: https://www.police1.com/911-and-dispatch/how-ai-is-helping-a-nevada-police-department-reduce-non-emergency-dispatch-calls
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure comes from the department's own account of its own system, relayed
+  by a trade publication; the assistant is named as Desk Officer (the vendor).
+  No independent audit.
+what_would_change: "Sparks Police call-handling data over a longer period, with hold times and 911 answer times before and after."
+notes: >-
+  verify: the source says "first two weeks" but gives no calendar dates, so dates
+  and the window grade are left empty.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the share of calls answered is reported alongside new routing rules and dispatcher work, and the source gives no comparison group or baseline.
+receipts:
+  - field: headline
+    quote: After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.
+    locator: Section "Early results"
+    source: 0
+  - field: impact
+    quote: After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.
+    locator: Section "Early results"
+    source: 0
+  - field: impact_number
+    quote: After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.
+    locator: Section "Early results"
+    source: 0
+  - field: effect.relative
+    quote: After two weeks of use, the Sparks Police AI assistant has been able to answer 25% of its non-emergent calls.
+    locator: Section "Early results"
+    source: 0
+  - field: effect.absolute
+    quote: That’s about 1,500 calls and 50 hours of talk time.
+    locator: Section "Early results"
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: d8ab053806b894f4db38657e9c16ef495197de3a838989b87c827b9da1522f8e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade."
+  record: sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json

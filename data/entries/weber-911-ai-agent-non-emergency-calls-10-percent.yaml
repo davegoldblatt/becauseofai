@@ -1,0 +1,87 @@
+id: weber-911-ai-agent-non-emergency-calls-10-percent
+section: because
+rank: 113
+headline: >-
+  Because of an AI agent, Weber 911 in Utah says it is handling about 10% of
+  its non-emergency calls a month after launch.
+impact: "~10% of non-emergency calls handled by AI"
+impact_number: "~10%"
+impact_label: "of non-emergency calls handled by an AI agent at a dispatch centre"
+summary: >-
+  Weber 911 (Utah) replaced human answering on its non-emergency line with an AI
+  agent about a month before KUTV reported. Its executive director said the agent
+  was handling about 10% of non-emergency calls, against a goal of 25%.
+caveat: >-
+  An executive director's spoken estimate in a local news report, a month in. It
+  gives a share of calls handled, not wait times or outcomes for callers.
+domain: disaster
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: "The AI agent is handling about 10% of non-emergency calls"
+  absolute: null
+reach: "Callers to the Weber County non-emergency line"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-09
+  added: 2026-11-22
+  updated: 2026-11-22
+sources:
+  - title: "KUTV: AI now handling Weber County non-emergency dispatch calls, 9 September 2026"
+    url: https://kutv.com/news/local/ai-now-handling-weber-county-non-emergency-dispatch-calls
+    type: primary
+    announcement: true
+conflicts: >-
+  The figure is the dispatch centre's own statement about its own system,
+  relayed by a news report; the vendor is not named. No independent audit.
+what_would_change: "Weber 911 call data with hold times and 911 answer times before and after the agent."
+notes: >-
+  verify: the source gives only "the past month" and no calendar dates, so dates
+  and the window grade are left empty.
+history:
+  - date: 2026-11-22
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the share of calls handled is an operational tally with no comparison group or baseline.
+receipts:
+  - field: headline
+    quote: Currently, the AI agent is handling about 10% of the non-emergency calls.
+    locator: Body, paragraph on 280,000 calls
+    source: 0
+  - field: impact
+    quote: Currently, the AI agent is handling about 10% of the non-emergency calls.
+    locator: Body, paragraph on 280,000 calls
+    source: 0
+  - field: impact_number
+    quote: Currently, the AI agent is handling about 10% of the non-emergency calls.
+    locator: Body, paragraph on 280,000 calls
+    source: 0
+  - field: effect.relative
+    quote: Currently, the AI agent is handling about 10% of the non-emergency calls.
+    locator: Body, paragraph on 280,000 calls
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: f959f400d2cc6bc8424458bc5756ba0ae54b171f72ddf1c7f1af0c8926319892
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in."
+  record: weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json
