@@ -10,7 +10,7 @@ impact_label: "of Nestlé factory surplus sent to charities instead of waste, co
 summary: >-
   A nine-partner UK consortium reports that Zest's AI, built on Google Cloud, mapped waste on
   a Nestlé production line and matched surplus from four sites to FareShare and Company Shop
-  Group, redistributing 201.9 tonnes, equivalent to 480,529 meals, over a 16-month pilot.
+  Group, redistributing 201.9 tonnes over a 16-month pilot.
 caveat: >-
   A trade-press report of the consortium's own results. The same article gives 480,529
   meals and 499,863 meals, no baseline for how much surplus would have been redistributed
@@ -24,14 +24,14 @@ grades:
 comparison: "Manual waste assessment; in one trial the AI-led process was faster and identified more surplus, per the report (no figures for the redistributed tonnage baseline)"
 effect:
   relative: null
-  absolute: "201.9 tonnes of surplus redistributed, equivalent to 480,529 meals, supporting an estimated 94,133 people across 787 charities and community organisations"
+  absolute: "201.9 tonnes of surplus redistributed, supporting an estimated 94,133 people across 787 charities and community organisations"
 reach: "787 charities and community organisations supplied through FareShare and Company Shop Group"
 dates:
   achieved_start: null
   achieved_end: null
   published: 2026-03-25
   added: 2026-11-18
-  updated: 2026-11-18
+  updated: 2026-11-22
 sources:
   - title: "New Food Magazine: Nestlé-backed AI pilot cuts food waste and redistributes nearly 500,000 meals (25 March 2026)"
     url: https://www.newfoodmagazine.com/news/267084/nestle-backed-ai-pilot-cuts-food-waste-and-redistributes-nearly-500000-meals/
@@ -46,14 +46,17 @@ what_would_change: "The Sustainable Ventures white paper's data on tonnage redis
 notes: >-
   verify: the article states a 16-month project but no calendar dates, so achieved dates and
   the window grade are left empty. verify: the article gives both 499,863 and 480,529 meals;
-  this entry uses the tonnage and the 480,529 figure from its list of impacts.
+  the entry now carries the tonnage only and no meals figure, since the source contradicts
+  itself on meals.
 history:
   - date: 2026-11-18
     note: "Added by the backfill run."
+  - date: 2026-11-22
+    note: "Corrected: removed the meals equivalent from the summary and effect.absolute, because the source gives both 480,529 and 499,863 meals; the tonnage and people-supported figures stand, with the tonnage receipt shortened to the tonnage sentence."
 rationale: Bundled because AI identified and matched the surplus but Nestlé sites, charities and a logistics partner did the redistribution, and the report gives no comparison with redistribution before the AI.
 receipts:
   - field: headline
-    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    quote: 201.9 tonnes of surplus food were redistributed to people
     locator: Body, "Surplus redistribution delivers measurable impact"
     source: 0
   - field: headline
@@ -61,15 +64,15 @@ receipts:
     locator: Body, "Surplus redistribution delivers measurable impact"
     source: 0
   - field: impact
-    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    quote: 201.9 tonnes of surplus food were redistributed to people
     locator: Body, "Surplus redistribution delivers measurable impact"
     source: 0
   - field: impact_number
-    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    quote: 201.9 tonnes of surplus food were redistributed to people
     locator: Body, "Surplus redistribution delivers measurable impact"
     source: 0
   - field: effect.absolute
-    quote: 201.9 tonnes of surplus food were redistributed to people – equivalent to 480,529 meals
+    quote: 201.9 tonnes of surplus food were redistributed to people
     locator: Body, "Surplus redistribution delivers measurable impact"
     source: 0
   - field: effect.absolute
@@ -82,22 +85,21 @@ receipts:
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-18
-  content: 972a06b088a7f34adde2f55d44fc44d14c20dbc5944a3610717218a727372ccd
+  model: claude-opus-5-5
+  date: 2026-11-22
+  content: 9c07e342f378a00b3df6ed72029e3a0f2ea59b8f0534319fe811d1a6011dd548
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-18
+    model: claude-opus-5-5
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-18
-    verdict: fail
-  record: nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json
-held:
-  reason: ungrounded
-  since: 2026-11-18
-  detail: "effect.absolute (receipt 5): contradicted, The source also gives 499,863 meals, conflicting with the field's 480,529 meals.."
-  record: nestle-zest-ai-surplus-redistribution-fareshare/2026-11-18.json
+    date: 2026-11-22
+    verdict: pass
+  record: nestle-zest-ai-surplus-redistribution-fareshare/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The source reports comparisons with manual analysis but no baseline for the total 201.9 tonnes; the dated test fails because neither pilot endpoint is given.).

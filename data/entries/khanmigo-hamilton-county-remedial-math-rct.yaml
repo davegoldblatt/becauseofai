@@ -37,7 +37,7 @@ dates:
   achieved_end: 2026-05
   published: 2026-08
   added: 2026-11-15
-  updated: 2026-11-15
+  updated: 2026-11-22
 sources:
   - title: "EdWorkingPaper 26-1551: One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment (Oreopoulos and Low)"
     url: https://edworkingpapers.com/sites/default/files/ai26-1551.pdf
@@ -57,6 +57,8 @@ history:
     note: Added by the backfill run.
   - date: 2026-11-15
     note: "Updated: achieved dates set to November 2024 to May 2026 from Table 1 (pdftotext available this run); window graded ongoing, since three of five measured terms predate the window."
+  - date: 2026-11-22
+    note: "Corrected: dropped the school-year receipt for achieved_start, which the verifier rightly said does not establish November 2024; the start rests on Table 1's Nov 4 to Dec 4 first term. No value changed."
 rationale: Grades were randomized within schools to Khan Academy with the Khanmigo tutor versus usual remedial instruction, but the tutor arrives bundled with the practice platform and the authors report similar gains from the platform alone.
 receipts:
   - field: headline
@@ -88,10 +90,6 @@ receipts:
     locator: Section 3, Sample
     source: 0
   - field: dates.achieved_start
-    quote: Over the 2024–25 and 2025–26 school years, we conducted a cluster randomized trial across 18 middle schools
-    locator: Section 1, Introduction
-    source: 0
-  - field: dates.achieved_start
     quote: Minimum RTI (Winter 2025) Nov 4 – Dec 4
     locator: Table 1, Implementation Schedule, Year 1 (2024–25), term 1
     source: 0
@@ -102,21 +100,19 @@ receipts:
 drafted:
   vendor: anthropic
   model: claude-opus-5-5
-  date: 2026-11-15
-  content: 8e1cf8bc6ac74806e7b43f0c602f2b29eddafe9eadd6f5ae75a14707d0b4f697
+  date: 2026-11-22
+  content: 3b651ff21ad2a6e4e947af6d22a947e357c1bd9ab8d5375ef0b1b4259af6bea0
 verification:
   drafter:
     vendor: anthropic
     model: claude-opus-5-5
-    date: 2026-11-15
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-15
-    verdict: fail
-  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15-2.json
-held:
-  reason: ungrounded
-  since: 2026-11-15
-  detail: "dates.achieved_start (receipt 8): unsupported, The school-year span does not establish November 2024 as the starting month.."
-  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-15-2.json
+    date: 2026-11-22
+    verdict: pass
+  record: khanmigo-hamilton-county-remedial-math-rct/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - "The two checkers disagreed on window: the drafter said ongoing and the verifier said in. The entry shows the drafter's grade, ongoing; treat that grade as unsettled."

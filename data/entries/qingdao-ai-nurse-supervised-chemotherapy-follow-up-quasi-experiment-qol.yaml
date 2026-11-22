@@ -2,8 +2,8 @@ id: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol
 section: because
 rank: 105
 headline: >-
-  Because of AI, 189 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life
-  5.88 points higher than patients on conventional follow-up.
+  Because of AI, 96 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life
+  5.88 points higher than 93 patients on conventional follow-up.
 impact: "Quality of life +5.88 points"
 impact_number: "+5.88"
 impact_label: "points higher global quality of life with nurse-supervised AI follow-up during chemotherapy (adjusted)"
@@ -30,7 +30,7 @@ dates:
   achieved_end: 2024-06
   published: 2026-08-12
   added: 2026-11-21
-  updated: 2026-11-21
+  updated: 2026-11-22
 sources:
   - title: "Evaluation of an AI-assisted digital health follow-up system integrating humanistic care for patients undergoing chemotherapy: a prospective quasi-experimental study (Frontiers in Public Health)"
     url: https://doi.org/10.3389/fpubh.2026.1863027
@@ -47,10 +47,12 @@ notes: >-
 history:
   - date: 2026-11-21
     note: Added by the backfill run.
+  - date: 2026-11-22
+    note: "Corrected the headline: 96 patients received the AI-assisted follow-up and 93 conventional care; 189 was the whole study, as the verifier found. Headline receipt replaced; reach keeps the 189 total."
 rationale: Patients were allocated to the AI-assisted follow-up or to conventional follow-up without randomization, and the system bundled rule-based alerts and nurse review with LLM messaging, so the attribution is bundled.
 receipts:
   - field: headline
-    quote: A total of 189 patients were included in the final analysis
+    quote: including 96 in the AI-assisted follow-up group and 93 in the conventional care group
     locator: Results 3.1
     source: 0
   - field: headline
@@ -83,22 +85,22 @@ receipts:
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-21
-  content: 21883bcdab8ea5d190c6403a78417de8c57c44d8a07241c04d4db5173be74c9c
+  model: claude-opus-5-5
+  date: 2026-11-22
+  content: 495a5f8c25c253bb4cefc0a54babb2aeb15c34f0b2597f8f5f4cd4258128a53b
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-21
+    model: claude-opus-5-5
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-21
+    date: 2026-11-22
     verdict: fail
-  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-22.json
 held:
-  reason: ungrounded
-  since: 2026-11-21
-  detail: "headline (receipt 1): contradicted, 189 was the total study population; only 96 patients received AI-assisted follow-up.."
-  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-21.json
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter B, verifier could not grade."
+  record: qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-22.json

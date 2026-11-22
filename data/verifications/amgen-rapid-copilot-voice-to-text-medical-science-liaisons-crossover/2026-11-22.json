@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "643ba0fd91e76997bf9e884591fcdf102558e572b53e7677c14c8784cd930107",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1007/s40290-026-00630-0",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-22T20:31:41.738Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13649876/fullTextXML",
+      "sha256": "706d1e3d1b940e6122e07cb43b0c487ef97d23e36cc9b13c94513acc4b5461d1",
+      "chars": 48984,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "This randomized crossover study enrolled 27 MSLs from six Amgen Asia-Pacific affiliates",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "mean 3.304 versus 2.541; mean difference + 0.763; 95% CI 0.187 to 1.339",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "This randomized crossover study enrolled 27 MSLs from six Amgen Asia-Pacific affiliates",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "between July and September 2025",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "between July and September 2025",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The crossover compared a Word dictation and Copilot structuring workflow with training, prompting guidance, and technical support against manual CRM entry.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods dates the study to July–September 2025."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Amgen conducted and internally funded the study; all authors were employees, and several were enrolled participants."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports a 0.763-point improvement in self-reported documentation satisfaction among 27 MSLs, without demonstrated improvements in insight quality or objective efficiency. Evidence is ungraded because this small randomized pilot has no stated preregistration and does not fit the supplied B–D definitions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 21973,
+      "output": 571,
+      "total": 22544,
+      "cached": 0,
+      "reasoning": 92
+    },
+    "duration_ms": 14144
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "b1d53b152c739cc34e59461a4e75a334a38c3e93e4c3b42d7fb6ac032888f952",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41398-026-04475-8",
+      "ok": true,
+      "method": "unpaywall:europepmc",
+      "fetched_at": "2026-11-22T20:31:25.209Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13615972/fullTextXML",
+      "sha256": "5f8d4891042e8ae9272532b5ec7ca8907378f62bc262d8196f8845e965709278",
+      "chars": 52717,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "A total of 49 youths (mean age 20.6; 78% female) were included.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "B  = 0.147",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "B  = 0.147",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "B  = 0.147, 95% confidence interval (CI), 0.004 – 0.290, p  = 0.044",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 49 youths (mean age 20.6; 78% female) were included.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Proximal outcome data were available for 42 participants (86%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "from July 2022 to February 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "from July 2022 to February 2023",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Decision points were randomized between ML-based and random assignment of the same intervention components, isolating the ML assignment policy.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Study design specifies July 2022 to February 2023."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Academic developers evaluated their system with public funding and declared no competing interests; no vendor relationship, equity, patent, or licence is disclosed."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports the participant counts, dates, resilience estimate, and absence of demonstrated affect benefits. Evidence is ungraded because primary-endpoint preregistration is not established for this randomized trial, and none of the other evidence categories fits."
+    },
+    "error": null,
+    "tokens": {
+      "input": 22945,
+      "output": 549,
+      "total": 23494,
+      "cached": 0,
+      "reasoning": 78
+    },
+    "duration_ms": 14038
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

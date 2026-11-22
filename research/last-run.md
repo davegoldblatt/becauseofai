@@ -1,34 +1,36 @@
-# Last research run — 2026-11-15
+# Last research run — 2026-11-22
 
-Window: 2025-11-15 to 2026-11-15. Inputs: `npm run validate` (28 held), `.scout/candidates.json` (217 candidates over 8 days, 26 flagged randomized, 15 announcements, 0 alerts, 14 Crossref errors), the inbox, and the existing entries. `pdftotext` was installed in this session, so the reader could open PDFs (NBER, EdWorkingPapers, Google, LSHTM) for the first time in a weekly run. Every quote was checked against the reader's text with the gate's own `findQuote`.
+Window: 2025-11-22 to 2026-11-22. Inputs: `npm run validate` (77 held before this run), `.scout/candidates.json` (234 candidates over 2026-11-14 to 2026-11-22, 17 flagged randomized, 10 announcements, 0 alerts, 65 source errors), the inbox, and the existing entries. `pdftotext` was installed again in this session. Every quote was checked against the reader's text with the gate's own `findQuote`.
 
-## Held list worked (14 entry files changed, 0 added)
-- **Missing receipts**: ksau (headline, 79 students), yan (headline, 60 residents), numi (headline, 3.1 points), sumner (reach, which names the 2024-2025 pilot), jeffcom (reach: its only digits are the name "Jeffcom 911"). No value changed.
-- **Quotes the gate could not find**: ubc. The reader runs "Methods" into "Thirty" with no space, so a quote starting "Thirty adults" fails the token-boundary match. The 30 now rests on "83% (25/30)".
-- **Wrong receipt**: tongji. Dropped the 187-screened quote, which the verifier rightly said does not support 90 randomized.
-- **Unstated conflicts**: lungimpact (a Qure.ai SBRI co-applicant and a Qure.ai travel grant, with the paper's statement that Qure.ai had no influence on the design; the headline now says "five NHS trusts" as the Methods do) and tanzania (SELENA+ supplied free for academic use; authors' fees and one author's equity, none from EyRIS).
-- **Window left empty by the drafter**: google-eedi (13 April to 7 July 2026 from the report and AEA registry AEARCTR-0018079, now a source; in), forensic images (January to July 2025; pre), tsm-al (September 2024 to June 2025; pre; evidence B now argued from "formal clinical trial registration was not required"), and khanmigo (November 2024 to May 2026 from Table 1; **ongoing**, against the verifier's in, because three of the five measured terms predate the window. Expect it to publish at speculative).
-- **spot-tb**: now published in The Lancet Global Health (12 Nov 2026). The abstract matches the preprint (ITT 1.07, per-protocol 1.32, 269,254 screened). It is added as a secondary source because only the abstract could be read, and the not-peer-reviewed caveat is dropped. Re-verification is needed.
+## Added (1)
+- **instructor-designed-ai-19-universities-stem-exams-rct** (arXiv 2611.19099, 14 Nov 2026; read in full). Pre-registered (OSF, 28 Feb 2025) class-randomized trial: applied STEM classes at 19 universities used AI tools their instructors designed, now or a term later. Proctored, AI-free exams +0.32 SD at student level (95% CI 0.06 to 0.59) and +0.26 SD at class level. No change in engagement or satisfaction. Graded **B** (preprint; class-level randomization with 44 class-terms analysed; the headline regressions are slightly simpler than the pre-registered ones), **bundled** (the AI arrives with the instructor's course redesign and the team's support), and **ongoing** (cohorts in spring 2025, fall 2025 and spring 2026; only the last is fully in the window). Conflicts stated: the instructors who designed the tools are co-authors, and Google co-developed the platform.
+
+## Held list worked (9 entry files changed)
+- **numi**: corrected 3.1 to **3.2 percentage points** in the headline, impact_number and effect.absolute. Tables A2 and A3 give 0.032, and 40.2 − 37.0 = 3.2; the prose rounds to 3.1. Receipts now quote the table rows, and the unsupported "suggestive" receipt is gone.
+- **nestle-zest**: the source gives both 480,529 and 499,863 meals, so the meals figure is removed from the summary and effect.absolute. The tonnage (201.9 t) and the 94,133 people stand.
+- **qingdao**: the headline said 189 patients got the AI follow-up. It is 96, against 93 on conventional care. Corrected, with a new receipt.
+- **link-hf2**: the paper counts 17 control HF rehospitalizations and the registry's posted 90-day result counts 16. The discrepancy is now stated in the caveat and notes, and the paper's values are kept (both sources show a null).
+- **Missing or unsupported receipts, no value changed**: dublin (headline), amgen (impact, plus a headline receipt for the 27 liaisons), medical-students-socratic (impact now quotes the 10-minute session), ai4u (dropped a headline receipt with no number), khanmigo (dropped the school-year receipt for achieved_start; Table 1's Nov 4 start remains).
+- Not fixable in the entry: most remaining holds are "verifier could not grade" on evidence or window. That is a gate-side outcome, so those entries were left alone.
 
 ## Placed below strict, and what would raise them
-- google-eedi stays speculative: the source is the developer's own report, marked `announcement`. A peer-reviewed version would raise it.
-- khanmigo is a window disagreement (ongoing vs in), so it publishes at speculative. If a human agrees with "in", it can go higher.
-- tsm-al may stay held: the verifier could not grade evidence last time. That is not fixable in the entry.
+- The 19-universities entry will be at most reasonable if the verifier says A on evidence (our B is the more cautious grade), and it may be speculative on the window (ongoing vs in). The peer-reviewed version would settle the evidence grade.
+- dublin and link-hf2 rest on abstracts (Europe PMC), so they are reasonable at best. Full texts would raise them.
+- nestle-zest stays speculative: trade press, no dates, no baseline.
 
 ## Rejected (reached humans · measured against something · AI made the difference · we know when)
-- **KITE-CRM cystic renal masses** (EClinicalMedicine, randomized 5,869, Nov 2025 to Feb 2026): fails **AI made the difference** as far as the abstract shows. Benign treatment fell overall (28/2934 vs 104/2935), but in the cystic-mass subgroup the AI actually read, it was not significant (5/29 vs 19/56, p = 0.105), and treated counts differ sharply (171 vs 258) under 1:1 randomization. Inbox for the full text.
-- **AI vs teacher essay feedback** (Front Psychol, 312 students): not preregistered, one feedback cycle, and feedback generated in September 2025, so pre. AI matched teachers (d 0.60 vs 0.59 over no feedback). Inbox as a weak lead only.
-- **Socratic GPT-3.5 chatbots, medical students** (Med Sci Educ): fails **we know when**, with no study dates given. It is a 10-minute session with a 40-student, implausibly large effect.
-- **GenAI vs primary-care physicians, self-management advice** (medRxiv): fails **reached humans**; the study used vignettes.
-- **AI-HEALS multimorbidity** (BMJ Open): a protocol. **Perioperative AI-information communication** (Health Expect): the AI is the topic of the information, not the intervention.
-- Other randomized hits: AEA registrations in development, protocols, and a CT acquisition trial.
+- **GenAI-DBT** (arXiv 2611.25428, 45 students): its primary outcomes (MAAS, DERS, mood) were null, but it is a feasibility pilot not powered to show a difference. It is neither a clean benefit nor a clean null, so it fails **AI made the difference**. Inbox.
+- **Vibe Interventions** (arXiv 2611.20315) and the **AI Adoption Survey Experiment** (AEA 20199) fail **reached humans** as a measured benefit. **ACTIVE**, **ambient-AI nursing** and **HIET-2** are protocols.
+- **Pancreatic fistula multi-reader study** (BJS) and **DL-reconstruction low-contrast CTPA** (image quality): reader or image outcomes, so they fail **reached humans**.
+- **Agentic AI vs paediatric emergency physicians** (medRxiv): retrospective cases, failing **reached humans**.
+- Announcements: **Samsara** (already in the inbox; company report, no comparison group), **Alpha School** (no comparison), **Alzheimer's risk prediction** (validation, failing **reached humans**), **Microsoft farmer climate information** (deployment, no measurement), and the pharma timelines, Rockefeller/OpenAI funding and product news (no benefit measured).
 
 ## Searched, empty
-- Not-yet checks: rentosertib Phase III began dosing in 2026, with results projected for 2029. GB-0895 SOLAIRIA-1/2 are recruiting with no readout. FireSat has no documented detection with an agency response since the July 2026 launch. Flood Hub and Every Cure were not re-searched this week.
-- medRxiv 2026.11.10.26367736 printed a stub, so the abstract came from the bioRxiv API. BMJ Open returned 403.
+- Not-yet checks: **Every Cure**: ARPA-H follow-on funding and an OpenEvidence partnership, but no patient outcome from a MATRIX match. **FireSat**: no documented detection with an agency response since launch. **Flood Hub**: no independent evacuation or loss evaluation; the Bihar 30% medical-cost claim is still only a PreventionWeb case study (in the inbox since October). Rentosertib Phase III and GB-0895 were not re-searched this week (last week: readouts 2029 and recruiting).
+- Waymo's quarterly hub was not re-read this week.
 
 ## Needs a human
-- **waymo-injury-crashes**: published without a receipt for `achieved_start` (2019-01). Neither the Safety Impact hub nor the September 2026 post carries a 2019 date. Find the source or set the field to what the hub supports. Left untouched.
-- **lungimpact attribution**: the verifier says ai-vs-ai (AI marks visible in both arms), and we say isolated (only prioritisation differs). The argument is in the rationale.
-- **khanmigo window**: ongoing vs in, argued in the notes.
-- Carried over: Rosie (403, no full text), Oman (no primary source), and the published entries still lacking receipts (validate lists 15).
+- **ai4u**: this run the reader fell back to the Europe PMC abstract, so receipts quoted from the full text (42 analysed, July 2022 to February 2023) did not match in my check. This is probably transient; if the gate reports them, it is the reader, not the quotes.
+- **link-hf2**: decide whether the registry's 90-day count (16) or the paper's (17) should lead.
+- **19-universities entry**: "7,200 students" sums enrollments across semesters (Fig. 1b), and the entry's reach says "enrollments". Check that a reader will not take it as unique students.
+- Carried over: the waymo-injury-crashes `achieved_start` receipt, rosie (403), oman (no primary source), the Crossref alert on the jordan nursing entry (new F1000 version 2), and the 15 published entries still lacking receipts.

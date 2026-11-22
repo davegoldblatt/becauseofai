@@ -434,3 +434,11 @@ Candidates: 107 over 2026-11-20 to 2026-11-22, 5 flagged randomized, 12 announce
 ### Alerts
 
 - `jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref lists a new version (10.12688/f1000research.183558.2, 2026-09-17). Check whether numbers changed.
+
+## 2026-11-22 (weekly run)
+
+- AI-guided handheld echocardiography for rheumatic heart disease screening by non-cardiologists, rural Nepal, mixed-methods feasibility. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). The counterfactual (no cardiologist) is clean. Missing: a comparison (cases found vs usual referral), dates, whether screened people reached treatment.
+- EHR-embedded pragmatic RCT of ambient AI to cut nursing documentation time, protocol. [Contemp Clin Trials](https://doi.org/10.1016/j.cct.2026.108534). Protocol only; watch for results.
+- HIET-2, AI-assisted vs human-produced podcasts from Cochrane plain-language summaries, non-inferiority RCT protocol. [ISRCTN28623546](https://www.isrctn.com/ISRCTN28623546). Protocol only.
+- GenAI-DBT (carried over from the scout): read in full this run. A 45-student, 30-day feasibility pilot; MAAS and DERS showed no time-by-group interaction and mood did not differ. Too small and unpowered for a `not-because`; the only positive is textual sentiment, which the authors say is not emotional state. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428).
+- Instructor-designed AI across 19 universities: drafted as `instructor-designed-ai-19-universities-stem-exams-rct`. Watch for the peer-reviewed version and the OSF pre-registration link, which the paper does not print.

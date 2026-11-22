@@ -29,7 +29,7 @@ dates:
   achieved_end: 2023-02
   published: 2026-09-26
   added: 2026-11-17
-  updated: 2026-11-17
+  updated: 2026-11-22
 sources:
   - title: "A machine learning-based ecological momentary intervention for mental health promotion in youth: a micro-randomized trial (Translational Psychiatry, open access via Europe PMC)"
     url: https://doi.org/10.1038/s41398-026-04475-8
@@ -47,14 +47,12 @@ related: []
 history:
   - date: 2026-11-17
     note: Added by the backfill run.
+  - date: 2026-11-22
+    note: "Corrected: dropped a headline receipt that carried no number (the verifier found it unsupported); the 49 youths keep their receipt. No value changed."
 rationale: Each participant's decision points were randomized between ML-based and random assignment of the same intervention components, so the arms differ only in whether the machine-learning model chose the component.
 receipts:
   - field: headline
     quote: A total of 49 youths (mean age 20.6; 78% female) were included.
-    locator: Abstract, Results
-    source: 0
-  - field: headline
-    quote: whereas there was no evidence of beneficial effects on positive or negative affect
     locator: Abstract, Results
     source: 0
   - field: impact
@@ -87,22 +85,22 @@ receipts:
     source: 0
 drafted:
   vendor: anthropic
-  model: claude-sonnet-5-5
-  date: 2026-11-17
-  content: aeeab91e51a3409348be756506e4402d159270d031bf29ce576baaec8975ab28
+  model: claude-opus-5-5
+  date: 2026-11-22
+  content: b1d53b152c739cc34e59461a4e75a334a38c3e93e4c3b42d7fb6ac032888f952
 verification:
   drafter:
     vendor: anthropic
-    model: claude-sonnet-5-5
-    date: 2026-11-17
+    model: claude-opus-5-5
+    date: 2026-11-22
   verifier:
     vendor: openai
     model: gpt-6.1-sol
-    date: 2026-11-17
+    date: 2026-11-22
     verdict: fail
-  record: ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-17.json
+  record: ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-22.json
 held:
-  reason: ungrounded
-  since: 2026-11-17
-  detail: "headline (receipt 2): unsupported, The quote establishes no numeric value in the headline.."
-  record: ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-17.json
+  reason: grade-split
+  since: 2026-11-22
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-22.json
