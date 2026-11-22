@@ -74,3 +74,24 @@ receipts:
     quote: OhioHealth serves its communities through 16 hospitals
     locator: About OhioHealth
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: eaa47efcff7d5780c4fb9ad2605a8dafd834e06be175d983d334722ab8f52375
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: ohiohealth-qventus-inpatient-discharge-13000-excess-days/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: ohiohealth-qventus-inpatient-discharge-13000-excess-days/2026-11-22.json

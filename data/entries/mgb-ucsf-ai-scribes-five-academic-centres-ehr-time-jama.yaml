@@ -76,3 +76,23 @@ receipts:
     quote: The sample comprised 8581 clinicians, including 1809 AI scribe adopters.
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 82289af9f1383d68ee501975bdac2bbf89311e6d1d98687966105c507ba1595d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 could be read only in part (an abstract or a summary), not the full document.
+    - Not dated yet (The dates of benefit measurement cannot be established from institutional introduction dates alone.).

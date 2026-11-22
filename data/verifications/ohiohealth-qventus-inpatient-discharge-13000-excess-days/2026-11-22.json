@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ohiohealth-qventus-inpatient-discharge-13000-excess-days",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "eaa47efcff7d5780c4fb9ad2605a8dafd834e06be175d983d334722ab8f52375",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.qventus.com/company/newsroom/ohiohealth-taps-qventus-to-automate-care-operations-across-the-enterprise/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-22T17:33:36.503Z",
+      "final_url": "https://www.qventus.com/company/newsroom/ohiohealth-taps-qventus-to-automate-care-operations-across-the-enterprise/",
+      "sha256": "bd540d79ff34960fe12c4b340aac28a554a0cb89d96de57fcede570e244489f7",
+      "chars": 7908,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "saved nearly 13,000 excess hospital days – equivalent to almost 35 excess patient years",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "saved nearly 13,000 excess hospital days",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "saved nearly 13,000 excess hospital days",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "saved nearly 13,000 excess hospital days – equivalent to almost 35 excess patient years",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "OhioHealth serves its communities through 16 hospitals",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": null
+      },
+      "attribution_rationale": "The announcement credits the Inpatient Capacity Solution but describes no comparison from which to determine an attribution grade.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source gives no dated measurement period; its publication date does not establish when the savings occurred."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Qventus announces results for its own product and an expanded customer partnership, which the entry discloses."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The source reports operational benefits at OhioHealth and identifies the AI solution, but supplies neither an identifiable benchmark nor dates for the benefits."
+      },
+      "summary": "The complete vendor announcement reports nearly 13,000 excess hospital days saved, almost 35 patient-years, and an OhioHealth network of 16 hospitals. It provides no measurement period, defined comparator, or comparison isolating AI's contribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13469,
+      "output": 645,
+      "total": 14114,
+      "cached": 0,
+      "reasoning": 168
+    },
+    "duration_ms": 15415
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      }
+    ]
+  }
+}

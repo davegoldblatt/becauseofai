@@ -89,3 +89,24 @@ receipts:
     quote: Mercy deployed 13 AI imaging solutions across more than 50 hospitals in just four months
     locator: Key findings, bullet 4
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 3e1b70b8e01e109f3e11c9f004a30859967befcbb2059ec72f3f56ea9d03cc2f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter bundled, verifier could not grade."
+  record: mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings/2026-11-22.json

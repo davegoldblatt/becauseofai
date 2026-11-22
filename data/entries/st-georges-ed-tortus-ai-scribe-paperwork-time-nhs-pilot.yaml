@@ -74,3 +74,24 @@ receipts:
     quote: which was also found to increase patient capacity by 13.4% per shift
     locator: Press release, paragraph 5
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 1b75520e18e707363f110304307a97d22d967834d1f8e12d229183aa16384f57
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: fail
+  record: st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot/2026-11-22.json
+held:
+  reason: grade-split
+  since: 2026-11-22
+  detail: "attribution: drafter isolated, verifier could not grade; window: drafter no grade, verifier pre."
+  record: st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot/2026-11-22.json

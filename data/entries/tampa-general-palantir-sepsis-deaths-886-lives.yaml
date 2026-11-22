@@ -81,3 +81,22 @@ receipts:
     quote: to cut sepsis deaths by 68%, according to research published by the UK Times
     locator: Article body, paragraph 1
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-22
+  content: 4114b9774e49767778951a954b48252e9d476f6a0bb58cfbbb40a831f327a855
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-22
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-22
+    verdict: pass
+  record: tampa-general-palantir-sepsis-deaths-886-lives/2026-11-22.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.

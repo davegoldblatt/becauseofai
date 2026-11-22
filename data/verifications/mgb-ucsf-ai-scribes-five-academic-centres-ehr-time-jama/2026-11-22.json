@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama",
+  "date": "2026-11-22",
+  "as_of": "2026-11-22",
+  "entry_sha256": "82289af9f1383d68ee501975bdac2bbf89311e6d1d98687966105c507ba1595d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-22"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1001/jama.2026.2253",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-22T17:33:18.901Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1001%2Fjama.2026.2253%22&format=json&resultType=core",
+      "sha256": "1d68ae141ef97495eb5c3017aac2c03503c10ae849f1f4bd3c1af9b54fcca6cc",
+      "chars": 2684,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "13.4 (95% CI, 9.1-17.7) fewer minutes of EHR time, 16.0 (95% CI, 13.7-18.3) fewer minutes of documentation time",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The sample comprised 8581 clinicians, including 1809 AI scribe adopters.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-22",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": null
+      },
+      "attribution_rationale": "The difference-in-differences comparison contrasts AI scribe adopters with non-adopters, with no accompanying intervention package described.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the abstract dates institutional scribe introductions to June 2023–August 2025 but does not establish the outcome measurement period."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses potential conflicts, but the supplied abstract contains no funding or conflict disclosures to verify them."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dates of benefit measurement cannot be established from institutional introduction dates alone."
+      },
+      "summary": "The abstract supports the reported time reductions and clinician counts in a large observational comparison of AI scribe adopters and non-adopters. It does not establish the benefit measurement dates or verify the entry's conflict disclosures."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12770,
+      "output": 677,
+      "total": 13447,
+      "cached": 0,
+      "reasoning": 207
+    },
+    "duration_ms": 17336
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The abstract supports the reported time reductions and clinician counts in a large observational comparison of AI scribe adopters and non-adopters. It does not establish the benefit measurement dates or verify the entry's conflict disclosures.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 could be read only in part (an abstract or a summary), not the full document.",
+      "Not dated yet (The dates of benefit measurement cannot be established from institutional introduction dates alone.)."
+    ]
+  }
+}
