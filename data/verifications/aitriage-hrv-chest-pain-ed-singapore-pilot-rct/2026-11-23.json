@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "aitriage-hrv-chest-pain-ed-singapore-pilot-rct",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "0317a56e4613ddc8f7ef4ea799bd00a0bbe2dc7cabb8e4923d373f0fe8ef6693",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.15441/ceem.26.035",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-23T00:34:58.303Z",
+      "final_url": "https://www.ceemjournal.org/journal/view.php?doi=10.15441/ceem.26.035",
+      "sha256": "149897b4c9bf3075fc3d8f7abeaae605d81d5829994235ddaae76171cd66d129",
+      "chars": 8507,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the HRV-guided protocol reduced hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "serial cardiac enzyme testing (32.1% vs 41.7%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "hospital admissions (50.2% vs 61.1%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Of 426 analysed patients (mean age 54 ± 13 years",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact."
+  }
+}

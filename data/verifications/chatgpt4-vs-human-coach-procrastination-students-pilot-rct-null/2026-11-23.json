@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "19f8373844dd2ca6f7fc1f01fb2e6db915ebf4ffae5e6167e5cd9291ce12fa6d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1177/20552076261450336",
+      "ok": true,
+      "method": "unpaywall:europepmc",
+      "fetched_at": "2026-11-23T00:36:15.423Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13402774/fullTextXML",
+      "sha256": "4a4b66c1ba6dd456a6d7881c5112f9e057b554bd952378dbb31ca0373b0462c2",
+      "chars": 55751,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "62 university students (M age 23.60 years, 93.5% female) were analyzed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Unwanted negative effects at post-assessment were reported by 43.1% of participants",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Unwanted negative effects at post-assessment were reported by 43.1% of participants",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "non-significant group × time interaction effect ( p = .117, η 2 p = 0.05)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Unwanted negative effects at post-assessment were reported by 43.1% of participants",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "62 university students (M age 23.60 years, 93.5% female) were analyzed",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "The study was conducted between October 2023 and July 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "The study was conducted between October 2023 and July 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact."
+  }
+}

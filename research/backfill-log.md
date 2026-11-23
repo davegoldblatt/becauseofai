@@ -569,3 +569,19 @@ Read and rejected:
 - North York General SmartER Zones, BHR chest X-ray: launch or target, no result.
 - HonorHealth Qventus blog: page dated 2024, outside the slice; later length-of-stay blog not found.
 - About twenty queries and eighteen pages read.
+
+## 2026-11-23, slice 34: papers and trial results, 2026-07-27 to 2026-08-03
+
+Drafted (5):
+- milvue-ai-paediatric-fracture-ed-leipzig-recall-null: BMC Emerg Med full text, 667 children, revisions 8.6% vs 5.7% with AI, not significant (alternating days, B, window pre, Apr to Sep 2025).
+- chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null: Digital Health full text, 62 students, ChatGPT-4 vs human coach, p = .117, 43.1% unwanted effects (pre, Oct 2023 to Jul 2024).
+- adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null: ClinicalTrials.gov results record, 757 smokers, OR 1.11 for verified abstinence (A, pre; registry p-value looks inconsistent, flagged).
+- ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain: abstract only, 46 adults, further healthcare 3 vs 10 (reasonable at best; no dates).
+- aitriage-hrv-chest-pain-ed-singapore-pilot-rct: abstract only, 426 patients, admissions 50.2% vs 61.1% (reasonable at best; no dates).
+
+Rejected:
+- Pilates and craniovertebral angle RCT: AI only measures an outcome. AI caries-excavation training RCT: dental students, no patients.
+- WISDOM wound monitoring (qualitative interviews): no outcome number. Other protocols, reviews, surveys and editorials: no people reached.
+- Intraoperative ischemia EEG, TBI federated learning, Gleason, mammography, ECG, ICU and other prediction or validation papers: accuracy only.
+- Prostate MRI "real-world" and blood-culture ML pipeline: retrospective or prospective validation, AI not used in care.
+- Short of the floor: 5 sources read with the reader out of 78 candidates; the rest set aside from titles and snippets.

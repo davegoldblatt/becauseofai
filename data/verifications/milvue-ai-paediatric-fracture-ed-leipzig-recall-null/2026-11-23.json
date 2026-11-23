@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "e78774b1f6e04bcc8d12dc646540a00c83fe69c2f5eb17acab3d849c37b2bd6d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1186/s12873-026-01697-3",
+      "ok": true,
+      "method": "unpaywall:pdf",
+      "fetched_at": "2026-11-23T00:37:11.886Z",
+      "final_url": "https://link.springer.com/content/pdf/10.1186/s12873-026-01697-3.pdf",
+      "sha256": "bdaeb5c848c326875c4a93bfc4fb2167b85eeac0093cb3320cbb9a0e25e6ccf3",
+      "chars": 41577,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Diagnostic revisions occurred in 8.6% without AI, in 5.7% with AI support",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Among 1515 screened patients, 667 were enrolled",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Diagnostic revisions occurred in 8.6% without AI, in 5.7% with AI support",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "(risk ratio 0.66; 95% CI 0.37–1.19)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Resulting therapeutic changes were rare in both groups (2.0% vs. 0.4%;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Among 1515 screened patients, 667 were enrolled (median age 11.0 years, 61% male)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "between April and September 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "between April and September 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-23",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison used the same clinical workflow with versus without AI availability on alternating days, although technical outages were assigned to the non-AI group.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "The methods establish April–September 2025, consistent with the abstract."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "No vendor conflict is disclosed; contrary to the entry's wording, the paper explicitly states no study funding and no competing interests, with open-access funding through Projekt DEAL."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The paper supports the reported numbers and a nonsignificant difference in next-day diagnostic revisions among 667 patients studied in April–September 2025. Its exploratory, quasi-randomised design does not establish absence of benefit."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20054,
+      "output": 557,
+      "total": 20611,
+      "cached": 0,
+      "reasoning": 73
+    },
+    "duration_ms": 14334
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The paper supports the reported numbers and a nonsignificant difference in next-day diagnostic revisions among 667 patients studied in April–September 2025. Its exploratory, quasi-randomised design does not establish absence of benefit.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

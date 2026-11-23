@@ -1,0 +1,105 @@
+id: milvue-ai-paediatric-fracture-ed-leipzig-recall-null
+section: not-because
+rank: 28
+headline: >-
+  AI fracture detection did not significantly cut next-day diagnostic revisions
+  (8.6% without AI, 5.7% with AI) among 667 children imaged out of hours in a
+  German paediatric emergency department.
+impact: "No significant cut in next-day recalls (alternating-day study)"
+impact_number: "8.6% vs 5.7%"
+impact_label: "next-day diagnostic revisions without vs with AI fracture detection, not significant"
+summary: >-
+  In a prospective, quasi-randomised study at a tertiary hospital, children aged
+  2 to 18 having limb radiographs on call were read with or without a commercial
+  AI fracture detector on alternating days; revisions leading to recall, therapy
+  changes, length of stay and senior consultation did not differ significantly.
+caveat: >-
+  The study was exploratory and not powered for small differences, allocation was
+  by alternating day (with technical outages moved into the no-AI arm), and the
+  hospital already re-reads every film the next day, which limits what AI can add.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Junior-resident reading of paediatric limb radiographs with the Milvue AI fracture-detection overlay vs without, alternating days, same emergency department and next-day radiologist consensus as reference"
+effect:
+  relative: "Risk ratio for diagnostic revision with AI 0.66 (95% CI 0.37–1.19), not significant"
+  absolute: "Diagnostic revisions 8.6% without AI vs 5.7% with AI; therapeutic changes 2.0% vs 0.4% (p = 0.10)"
+reach: "667 enrolled children and adolescents (median age 11.0 years) at one tertiary referral hospital, out-of-hours care, 2025"
+dates:
+  achieved_start: 2025-04
+  achieved_end: 2025-09
+  published: 2026-07-29
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "BMC Emergency Medicine: Artificial intelligence for pediatric fracture detection: impact on diagnostic revisions and patient recall rates in a tertiary emergency setting (Deffaa, Pape et al.)"
+    url: https://doi.org/10.1186/s12873-026-01697-3
+    doi: 10.1186/s12873-026-01697-3
+    type: primary
+conflicts: >-
+  The tool is a commercial CE-marked product (Milvue, Paris); the text read does
+  not state funding or vendor ties.
+what_would_change: "A confirmatory, adequately powered trial in a setting without next-day expert re-reading that shows fewer recalls or therapy changes with the aid."
+notes: >-
+  Filed under not-because: the primary endpoint (diagnostic revision leading to
+  recall) did not differ significantly. Allocation was every second day, so
+  evidence is graded B rather than A.
+  verify: funding and competing-interest statement, not in the text read.
+related: [gleamer-boneview-paediatric-ed-fracture-exclusion]
+history:
+  - date: 2026-11-23
+    note: "Added by the backfill run."
+rationale: Both groups were read by the same residents in the same emergency department and differed only in whether the AI overlay was switched on that day, so the comparison isolates the AI aid (isolated).
+receipts:
+  - field: headline
+    quote: Diagnostic revisions occurred in 8.6% without AI, in 5.7% with AI support
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Among 1515 screened patients, 667 were enrolled
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Diagnostic revisions occurred in 8.6% without AI, in 5.7% with AI support
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: (risk ratio 0.66; 95% CI 0.37–1.19)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Resulting therapeutic changes were rare in both groups (2.0% vs. 0.4%;
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Among 1515 screened patients, 667 were enrolled (median age 11.0 years, 61% male)
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: between April and September 2025
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: between April and September 2025
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: e78774b1f6e04bcc8d12dc646540a00c83fe69c2f5eb17acab3d849c37b2bd6d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-23
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-23
+    verdict: pass
+  record: milvue-ai-paediatric-fracture-ed-leipzig-recall-null/2026-11-23.json
+  confidence: strict

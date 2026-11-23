@@ -1,0 +1,88 @@
+id: aitriage-hrv-chest-pain-ed-singapore-pilot-rct
+section: because
+rank: 122
+headline: >-
+  Because of AI, fewer emergency-department chest-pain patients in Singapore were
+  admitted to hospital (50.2% vs 61.1%) when physicians were guided by an AI
+  heart-rate-variability risk score, in a pilot randomized trial.
+impact: "-10.9 points in hospital admissions"
+impact_number: "50.2% vs 61.1%"
+impact_label: "hospital admissions, AI HRV-guided triage vs standard care"
+summary: >-
+  In a single-blinded pilot randomized trial at Singapore General Hospital, patients
+  with suspected acute coronary syndrome had five minutes of ECG monitoring that
+  produced an AI HRV risk score and triage advice for the treating team (or hidden
+  from it in the control arm); admissions and serial enzyme testing fell.
+caveat: >-
+  A pilot, not powered for safety: 426 of 560 randomized were analysed, the
+  length-of-stay difference's interval crosses zero, and the authors call for an
+  adequately powered trial; only the abstract could be read.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "HRV-guided triage recommendations (aiTriage) shown to emergency physicians vs standard care with the HRV result blinded, randomized, Singapore General Hospital"
+effect:
+  relative: "Risk difference in hospital admission -10.9 percentage points (95% CI -20.1 to -1.8)"
+  absolute: "Admissions 50.2% vs 61.1%; serial cardiac enzyme testing 32.1% vs 41.7%"
+reach: "426 analysed emergency-department patients with suspected acute coronary syndrome (mean age 54 years), Singapore General Hospital"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-27
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "Clinical and Experimental Emergency Medicine: Pilot Evaluation of a Novel AI Heart Rate Variability-Guided Risk Stratification for Chest Pain in the Emergency Department: A Randomized Controlled Trial (Wang et al.), accepted article abstract"
+    url: https://doi.org/10.15441/ceem.26.035
+    doi: 10.15441/ceem.26.035
+    type: primary
+conflicts: >-
+  The abstract states no funding or disclosures. aiTriage is a named commercial tool
+  and the authors' ties to its developer could not be checked from the abstract.
+notes: >-
+  The abstract reports registration on ClinicalTrials.gov (NCT07074808); the
+  record was not read, so evidence is graded B.
+  verify: the source gives no study period, so the achieved dates and window are left empty.
+  verify: whether authors have ties to the aiTriage developer, from the full text.
+history:
+  - date: 2026-11-23
+    note: "Added by the backfill run."
+rationale: Both arms recorded the same HRV and differed only in whether physicians saw the AI-generated risk score and triage advice, so the comparison isolates the AI output (isolated).
+receipts:
+  - field: headline
+    quote: "the HRV-guided protocol reduced hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8)"
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: "risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: serial cardiac enzyme testing (32.1% vs 41.7%
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: hospital admissions (50.2% vs 61.1%
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Of 426 analysed patients (mean age 54 ± 13 years
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 0317a56e4613ddc8f7ef4ea799bd00a0bbe2dc7cabb8e4923d373f0fe8ef6693
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: aitriage-hrv-chest-pain-ed-singapore-pilot-rct/2026-11-23.json

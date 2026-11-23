@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "6b05e35b2a7dce4e38ec73884d60bf581177c544453f7cc30e2e8254d372e226",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.msksp.2026.103626",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-23T00:34:56.393Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.msksp.2026.103626%22&format=json&resultType=core",
+      "sha256": "5549af96765d42f5ea1626f3d298571e68a95aa46049027c5e96a53452690902",
+      "chars": 2123,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Forty-six adults (mean age 59 years) with rotator cuff-related shoulder pain were randomized",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "MD -1.01; 95% CI -1.8 to -0.2",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Forty-six adults (mean age 59 years) with rotator cuff-related shoulder pain were randomized",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact."
+  }
+}

@@ -1,0 +1,90 @@
+id: ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain
+section: because
+rank: 121
+headline: >-
+  Because of AI, fewer adults with rotator cuff-related shoulder pain needed
+  further healthcare after physiotherapy (3 vs 10 participants) when an AI
+  home-exercise app with real-time computer-vision feedback was added, in a
+  randomized trial of 46.
+impact: "3 vs 10 needing further care"
+impact_number: "3 vs 10"
+impact_label: "participants needing post-treatment healthcare, with vs without the AI exercise app"
+summary: >-
+  In a single-centre, assessor-blinded randomized trial, adults with rotator cuff-related
+  shoulder pain had 12 weeks of conventional physiotherapy with or without an
+  AI app that watches exercise with computer vision; pain, function, fear-avoidance and
+  later healthcare use favoured the app group on several time points.
+caveat: >-
+  Only 46 people at one centre, and only the abstract could be read, so dates,
+  registration, funding and any vendor ties are not confirmed; benefits appeared at
+  some weeks and not others.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Conventional physiotherapy plus an AI-based digital rehabilitation program (computer-vision real-time feedback) vs conventional physiotherapy alone, 12 weeks"
+effect:
+  relative: "Pain scores lower with the app at week 4 (mean difference -1.01; 95% CI -1.8 to -0.2)"
+  absolute: "Post-intervention healthcare needed by 3 participants in the app group vs 10 in the control group (p = 0.02)"
+reach: "46 adults with rotator cuff-related shoulder pain (mean age 59 years), single centre"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-27
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "Musculoskeletal Science & Practice: Effectiveness of an AI-based home exercise app for rehabilitation of rotator cuff-related shoulder pain: A randomized controlled trial (Villar-Alises et al.), abstract via Europe PMC"
+    url: https://doi.org/10.1016/j.msksp.2026.103626
+    doi: 10.1016/j.msksp.2026.103626
+    type: primary
+conflicts: >-
+  The abstract carries no funding or disclosure statement; the full text, which may
+  name the app developer and author ties, could not be read.
+notes: >-
+  Attribution is bundled: the app also adds home exercise supervision and
+  monitoring, and the arms differ by the whole digital program, not only its AI.
+  verify: the source gives no study period, so the achieved dates and window are left empty.
+  verify: the country in the id ("spain") comes from the authors' affiliations, which the abstract does not print; confirm from the full text.
+  verify: trial registration, funding and the app's vendor, from the full text.
+history:
+  - date: 2026-11-23
+    note: "Added by the backfill run."
+rationale: The app group received the whole digital rehabilitation program (exercise guidance, monitoring and computer-vision feedback) on top of physiotherapy, so the trial tests the package against physiotherapy alone (bundled).
+receipts:
+  - field: headline
+    quote: Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Forty-six adults (mean age 59 years) with rotator cuff-related shoulder pain were randomized
+    locator: Abstract, Method
+    source: 0
+  - field: impact_number
+    quote: Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: MD -1.01; 95% CI -1.8 to -0.2
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Fewer participants in the experimental group required post-intervention healthcare (3 vs 10; p = 0.02)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Forty-six adults (mean age 59 years) with rotator cuff-related shoulder pain were randomized
+    locator: Abstract, Method
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 6b05e35b2a7dce4e38ec73884d60bf581177c544453f7cc30e2e8254d372e226
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain/2026-11-23.json

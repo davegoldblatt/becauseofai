@@ -1,0 +1,97 @@
+id: adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null
+section: not-because
+rank: 30
+headline: >-
+  A machine-learning system that chose motivational text messages did not
+  significantly raise biochemically verified quitting at 6 months among 757
+  socioeconomically disadvantaged US smokers, against quitline-facilitation texts alone.
+impact: "No significant gain in verified quitting (RCT, 757 smokers)"
+impact_number: "OR 1.11"
+impact_label: "odds of verified 7-day abstinence at 6 months, Adapt2Quit vs control, confidence interval spans 1"
+summary: >-
+  In the Adapt2Quit randomized trial, smokers recruited through US health systems
+  received quitline-facilitation texts with or without machine-learning-selected
+  motivational messages for six months; the registry's results post verified
+  abstinence at 6 months as an odds ratio whose confidence interval includes no
+  effect.
+caveat: >-
+  Results come from the registry record alone (no paper read); the record's p-value
+  field reads "<0.05" although the odds-ratio interval spans 1, and 6-month outcome
+  data were missing for a sizeable share of those randomized.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Machine-learning (recommender) selected motivational text messages plus quitline-facilitation texts vs quitline-facilitation texts only, 1:1 randomized, 6 months"
+effect:
+  relative: "Odds ratio for biochemically verified 7-day abstinence at 6 months 1.11, with a confidence interval that includes no effect, per the registry analysis"
+  absolute: "Per-arm counts of abstinent participants are posted in the registry record; no absolute difference is stated"
+reach: "757 smokers enrolled, United States (Massachusetts and Maryland sites)"
+dates:
+  achieved_start: 2021-06-28
+  achieved_end: 2024-10-10
+  published: 2026-07-31
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "ClinicalTrials.gov NCT04720625: Adapt2Quit - A Machine-Learning, Adaptive Motivational System: RCT for Socio-Economically Disadvantaged Smokers (results posted 31 July 2026)"
+    url: https://clinicaltrials.gov/study/NCT04720625
+    type: primary
+conflicts: >-
+  Funded by the National Cancer Institute (NIH R01); the sponsor is the University
+  of Massachusetts, Worcester, whose investigator designed the intervention. No
+  vendor is named in the record.
+what_would_change: "A peer-reviewed report of the full analysis showing verified abstinence higher with ML-selected messages."
+notes: >-
+  Filed under not-because: the registered primary outcome (verified abstinence at 6
+  months) shows an odds ratio of 1.11 with an interval spanning 1.
+  The record's two analysis entries sit under the secondary outcome but the first
+  one's description names the biochemically verified outcome; the stated p-value
+  "<0.05" conflicts with its interval.
+  verify: read the published trial paper for the primary analysis and p-value.
+  verify: the end date is the registry's primary completion date.
+history:
+  - date: 2026-11-23
+    note: "Added by the backfill run."
+rationale: Both arms received the same quitline-facilitation texts and differed only in the machine-learning-selected motivational messages, so the comparison isolates the AI's message selection (isolated).
+receipts:
+  - field: headline
+    quote: '"count": 757,'
+    locator: designModule, enrollmentInfo
+    source: 0
+  - field: headline
+    quote: The 6-month study compares an adaptive, personalized motivational messaging intervention
+    locator: descriptionModule, detailedDescription
+    source: 0
+  - field: impact_number
+    quote: '"paramValue": "1.11",'
+    locator: resultsSection, outcomeMeasures, first analysis
+    source: 0
+  - field: effect.relative
+    quote: '"paramValue": "1.11",'
+    locator: resultsSection, outcomeMeasures, first analysis
+    source: 0
+  - field: reach
+    quote: '"count": 757,'
+    locator: designModule, enrollmentInfo
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2021-06-28",'
+    locator: statusModule, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2024-10-10",'
+    locator: statusModule, primaryCompletionDateStruct
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 955c01ac7dbc4c1d5dcaa25da36d2f2aabc2eba1555279f77cd522f7238829ab
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null/2026-11-23.json

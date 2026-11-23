@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "955c01ac7dbc4c1d5dcaa25da36d2f2aabc2eba1555279f77cd522f7238829ab",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://clinicaltrials.gov/study/NCT04720625",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-23T00:34:27.096Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT04720625?format=json",
+      "sha256": "aad6d9bd91685bb6f4cce198a640e0bc0f183648eaf7aee58c7913b5d31e3d03",
+      "chars": 24701,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "\"count\": 757,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The 6-month study compares an adaptive, personalized motivational messaging intervention",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "\"paramValue\": \"1.11\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "\"paramValue\": \"1.11\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "\"count\": 757,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "\"date\": \"2021-06-28\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "\"date\": \"2024-10-10\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for impact."
+  }
+}
