@@ -85,3 +85,13 @@ receipts:
     quote: Between March 2024 and May 2025, 872 neuroimaging scans labelled as suspected stroke were acquired
     locator: Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: d813e94d93c144c9f2ebbcce055b04acf31234136d76339f0856e2248362172c
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: "impact_number: the quote is not in source 0 (quote not found in the source text); effect.relative: the quote is not in source 0 (quote not found in the source text); effect.absolute: the quote is not in source 0 (quote not found in the source text); headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text)."
+  record: catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null/2026-11-23.json

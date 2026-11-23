@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "d813e94d93c144c9f2ebbcce055b04acf31234136d76339f0856e2248362172c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1093/esj/aakag085",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-23T10:08:51.016Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fesj%2Faakag085%22&format=json&resultType=core",
+      "sha256": "862a92e848186c1a7f1c44c90621fd0a6642d606e96b880e5dd317b63b73d256",
+      "chars": 2531,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "We included 265 patients (136 in the post-implementation cohort; 129 in the pre-implementation cohort).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "We included 265 patients (136 in the post-implementation cohort; 129 in the pre-implementation cohort).",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "One centre serves 385,672 people within an area of 700 km 2 , the other serves 156,972 inhabitants",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Between March 2024 and May 2025, 872 neuroimaging scans labelled as suspected stroke were acquired",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Between March 2024 and May 2025, 872 neuroimaging scans labelled as suspected stroke were acquired",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "quote not found in the source text"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "impact_number: the quote is not in source 0 (quote not found in the source text); effect.relative: the quote is not in source 0 (quote not found in the source text); effect.absolute: the quote is not in source 0 (quote not found in the source text); headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text)."
+  }
+}

@@ -71,3 +71,24 @@ receipts:
     quote: scores in the control group increased from 2.43 ± 0.68 to 2.57 ± 0.63
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: bdcbd5d546f106ae7df2199e23137549e67df67081236936e3d564bffb87bf61
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-23
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-23
+    verdict: fail
+  record: chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment/2026-11-23.json
+held:
+  reason: grade-split
+  since: 2026-11-23
+  detail: "evidence: drafter B, verifier could not grade."
+  record: chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment/2026-11-23.json

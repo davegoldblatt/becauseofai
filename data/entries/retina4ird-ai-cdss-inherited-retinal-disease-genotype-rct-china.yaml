@@ -76,3 +76,13 @@ receipts:
     quote: Of these, 295 participants (median age 33 years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis.
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: ea52145da6603214d9e2e8237f7914b5a271526ce0981c56efadc5ae62e9299c
+held:
+  reason: no-full-text
+  since: 2026-11-23
+  detail: "No primary source could be read in full (source 0: fetch failed: The operation was aborted due to timeout)."
+  record: retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china/2026-11-23.json
