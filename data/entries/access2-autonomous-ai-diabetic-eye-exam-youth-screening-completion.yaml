@@ -1,0 +1,86 @@
+id: access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion
+section: because
+rank: 125
+headline: >-
+  Because of an autonomous AI eye exam at the point of care, 98% of non-White and 99.5% of White youth with
+  diabetes completed a diabetic retinopathy screen, though before it fewer non-White youth had had a prior exam.
+impact: "Near-equal completion of diabetic eye screening in youth, at the clinic visit"
+impact_number: "98%"
+impact_label: "of non-White youth with diabetes completed a diabetic eye exam at the visit (99.5% of White youth)"
+summary: >-
+  In a prospective single-group study of 397 youth with type 1 or type 2 diabetes, an autonomous AI eye exam
+  was done at diabetes care visits. Prior exam completion had been lower in the non-White cohort (61.8% v 79.8%);
+  after the AI exam was offered, completion was 98% against 99.5%, meeting the equivalence endpoint.
+caveat: >-
+  Single group with no concurrent comparison arm: the before comparison is self-reported prior exam history, not
+  a control group. Only the abstract could be read; sensitivity of 100% rests on a small number of cases (95% CI 67.6 to 100).
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Prior diabetic eye exam completion before the visit (White 79.8% versus non-White 61.8%), compared with completion of the point-of-care autonomous AI exam"
+effect:
+  relative: null
+  absolute: "99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam"
+reach: "397 White and non-White youth with type 1 (72%) and type 2 (28%) diabetes enrolled at diabetes care visits"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-23
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "ACCESS2 study: the potential for autonomous AI to mitigate disparities in diabetic retinopathy screening in youth (Nature Communications)"
+    url: https://doi.org/10.1038/s41467-026-78842-w
+    type: primary
+conflicts: "The abstract states no funding or author relationships; the registry record lists NIH (NEI) and JDRF funding and an FDA-regulated device. Vendor ties of the authors were not visible in the text read."
+what_would_change: null
+notes: >-
+  verify: only the Europe PMC abstract could be read; the Nature Communications page returned a stub.
+  verify: the abstract gives no study period, so achieved dates and the window grade are left empty (the registry shows a July 2022 start but an estimated December 2026 end, and is still recruiting).
+  verify: the comparison is the baseline prior-exam history, not a concurrent control; evidence C and bundled attribution are the cautious calls.
+related: []
+history:
+  - date: 2026-11-23
+    note: Added by the daily scout.
+rationale: Screening completion is compared with the cohorts' own prior-exam history in a single group with no concurrent control, so the AI's contribution cannot be separated from the visit-based offer and attribution is bundled.
+receipts:
+  - field: headline
+    quote: 99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: 99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: This prospective study enrolled 397 White and non-White youth with type 1 (72%) and type 2 (28%) diabetes at diabetes care visits.
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 98100d4f74e08c5c101f1438ce6abe4f1da1e4951f9d80fa977363d95dba922d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-23
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-23
+    verdict: fail
+  record: access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion/2026-11-23.json
+held:
+  reason: grade-split
+  since: 2026-11-23
+  detail: "evidence: drafter C, verifier could not grade."
+  record: access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion/2026-11-23.json

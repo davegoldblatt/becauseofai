@@ -442,3 +442,18 @@ Candidates: 107 over 2026-11-20 to 2026-11-22, 5 flagged randomized, 12 announce
 - HIET-2, AI-assisted vs human-produced podcasts from Cochrane plain-language summaries, non-inferiority RCT protocol. [ISRCTN28623546](https://www.isrctn.com/ISRCTN28623546). Protocol only.
 - GenAI-DBT (carried over from the scout): read in full this run. A 45-student, 30-day feasibility pilot; MAAS and DERS showed no time-by-group interaction and mood did not differ. Too small and unpowered for a `not-because`; the only positive is textual sentiment, which the authors say is not emotional state. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428).
 - Instructor-designed AI across 19 universities: drafted as `instructor-designed-ai-19-universities-stem-exams-rct`. Watch for the peer-reviewed version and the OSF pre-registration link, which the paper does not print.
+
+## 2026-11-23 (daily scout)
+
+Candidates: 102 over 2026-11-21 to 2026-11-23, 11 flagged randomized, 15 announcements, 1 alert, 39 source errors (mostly Crossref 429s). One entry drafted.
+
+- Drafted: ACCESS2 autonomous AI diabetic eye exams in youth, 397 participants, equivalent completion (98% v 99.5%). [Nature Communications](https://doi.org/10.1038/s41467-026-78842-w). Abstract only; reasonable at best.
+- AI-guided EEG cap placement quality assurance, [Epilepsia](https://doi.org/10.1002/epi.70591): page returned 403 and could not be read. Missing: the paper itself, to see whether people were measured against usual placement.
+- LLM simulated patient for nursing triage, Hong Kong, [JMIR Nursing](https://doi.org/10.2196/98543): developmental study with usability and Net Promoter Score only, no outcome comparison. Skipped as an entry.
+- Cervical cancer awareness chatbot for women living with HIV, Nigeria, [PLOS Digital Health](https://doi.org/10.1371/journal.pdig.0001837): co-design evaluation, usage counts and appropriateness ratings, no comparison. Watch for an outcome study.
+- EDITH AI breast screening trial (Warwick) started recruiting, [press release](https://news.europawire.eu/university-of-warwick-led-10m-edith-study-starts-recruiting-women-for-ai-breast-screening-trial/eu-press-release/2026/11/23/12/23/07/189195/): protocol, no result yet.
+- Skipped: AEA registrations in development, retrospective model validations, reviews, benchmarks, surveys, funding, IPO and policy news; Samsara 37% already logged 2026-11-18.
+
+### Alerts
+
+- `jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref new version (10.12688/f1000research.183558.2), already noted 2026-11-22; still to check whether numbers changed.
