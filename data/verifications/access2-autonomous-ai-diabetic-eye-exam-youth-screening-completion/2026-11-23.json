@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "98100d4f74e08c5c101f1438ce6abe4f1da1e4951f9d80fa977363d95dba922d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41467-026-78842-w",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-23T23:51:35.308Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-026-78842-w%22&format=json&resultType=core",
+      "sha256": "4d0a3a7972def6052c02099d1120ab19b94ea970bebd96f2a2aeb367b657f6df",
+      "chars": 1895,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "99.5% in the White cohort and 98% in the non-White cohort completed the autonomous artificial-intelligence diabetic eye exam",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "This prospective study enrolled 397 White and non-White youth with type 1 (72%) and type 2 (28%) diabetes at diabetes care visits.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-23",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "Prior exam completion is compared with completion after point-of-care AI implementation, so AI and the change in access are not separated.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract provides no study dates; publication does not establish when screening occurred."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The supplied abstract discloses no vendor relationships or funding; the registry information mentioned in the entry was not supplied."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The abstract gives no dates for the examinations; it also does not establish a study design that clearly meets an evidence-grade category."
+      },
+      "summary": "The abstract supports the reported completion percentages and enrollment, with prior examination completion as a benchmark for the point-of-care AI package. It does not establish achieved dates, isolate AI from improved access, or provide enough design information for a confident evidence grade."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12482,
+      "output": 731,
+      "total": 13213,
+      "cached": 0,
+      "reasoning": 276
+    },
+    "duration_ms": 17791
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter C, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "C",
+        "verifier": null
+      }
+    ]
+  }
+}
