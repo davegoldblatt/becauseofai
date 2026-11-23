@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "bdcbd5d546f106ae7df2199e23137549e67df67081236936e3d564bffb87bf61",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1016/j.ijotn.2026.101305",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-23T10:09:48.076Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.ijotn.2026.101305%22&format=json&resultType=core",
+      "sha256": "894e7012492e5558559b8e1e7547c651c4b80bd5ba5d54a6773a5d6897f7d8d8",
+      "chars": 2228,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "scores in the control group increased from 2.43 ± 0.68 to 2.57 ± 0.63",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "F(1,58) = 9.705, p = .003",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "scores in the control group increased from 2.43 ± 0.68 to 2.57 ± 0.63",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-23",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison tests a structured workshop incorporating ChatGPT-assisted concept mapping against standard instructional activities.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the abstract supplies no intervention dates."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract shows no vendor funding or author ties; the entry acknowledges that these remain unchecked."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The intervention dates cannot be established; the publication date does not establish when students benefited."
+      },
+      "summary": "The abstract supports all reported numerical results and a comparison of an AI-containing workshop with standard teaching. It supplies no achieved dates, and its quasi-experimental design does not establish eligibility for any defined evidence grade, including B's large observational requirement."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12592,
+      "output": 554,
+      "total": 13146,
+      "cached": 0,
+      "reasoning": 117
+    },
+    "duration_ms": 14994
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      }
+    ]
+  }
+}

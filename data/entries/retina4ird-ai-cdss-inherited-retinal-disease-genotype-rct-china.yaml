@@ -1,0 +1,88 @@
+id: retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china
+section: because
+rank: 123
+headline: >-
+  In a multicentre randomized trial of 295 patients with suspected inherited retinal disease, specialists using the
+  Retina4IRD AI decision-support system named the right gene category in their top five guesses 88.5% of the time,
+  against 67.3% for specialists alone.
+impact: "Specialists with AI got the genotype right more often"
+impact_number: "88.5%"
+impact_label: "top-5 genetic accuracy with AI-assisted specialists, vs 67.3% for specialists alone"
+summary: >-
+  Patients with suspected inherited retinal disease were randomized 1:1 to a specialist assisted by Retina4IRD, which
+  predicts the genotype from colour fundus and OCT images, or to a specialist alone, and the specialists' genotype
+  guesses were scored against next-generation sequencing reports.
+caveat: >-
+  Abstract only. The outcome is how often specialists named the right genotype category before genetic testing, not a
+  later health outcome for the patients; the abstract gives no calendar period for the trial.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Retina4IRD-assisted specialist vs specialist-only diagnosis, patients randomized 1:1, genotype guesses scored against next-generation sequencing reports"
+effect:
+  relative: "Top-5 genetic accuracy 88.5% vs 67.3% (P < 0.001)"
+  absolute: "Top-1 accuracy 37.8% vs 22.4%; top-4 accuracy 81.8% vs 53.1%"
+reach: "300 patients with suspected inherited retinal disease randomized, 295 analysed, multicentre, China"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-01
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "AI-based clinician decision support system for diagnosis of inherited retinal diseases: a multicenter, randomized trial (Nature Medicine), abstract via Europe PMC"
+    url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42498742?resultType=core&format=xml"
+    type: primary
+conflicts: "Two authors list affiliations with companies (Medi Whale Inc., GlaucoTech Co.) and the system was built by the study authors; funding is from the National Natural Science Foundation of China. The abstract carries no competing-interests statement."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read; it gives no period for the randomized trial, so dates and the window grade are left empty.
+  verify: the abstract gives ClinicalTrials.gov NCT06839170 but not when it was registered relative to enrolment, so evidence is B rather than A.
+  verify: the outcome is specialist genotype prediction accuracy against sequencing, a step before genetic testing rather than a patient outcome.
+related: []
+history:
+  - date: 2026-11-23
+    note: Added by the backfill run.
+rationale: Both arms were specialists diagnosing suspected inherited retinal disease and differed only in whether they had the AI's genotype predictions, with patients randomized 1:1.
+receipts:
+  - field: impact_number
+    quote: top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Of these, 295 participants (median age 33 years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: top-1 accuracy of 37.8% versus 22.4% and top-4 accuracy of 81.8% versus 53.1%
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: We conducted a randomized controlled trial with 300 participants with suspected IRD randomized 1:1 to either Retina4IRD-assisted specialist arm or specialist-only arm.
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Of these, 295 participants (median age 33 years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis.
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: ea52145da6603214d9e2e8237f7914b5a271526ce0981c56efadc5ae62e9299c
+held:
+  reason: no-full-text
+  since: 2026-11-23
+  detail: "No primary source could be read in full (source 0: fetch failed: The operation was aborted due to timeout)."
+  record: retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china/2026-11-23.json

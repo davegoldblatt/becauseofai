@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china",
+  "date": "2026-11-23",
+  "as_of": "2026-11-23",
+  "entry_sha256": "ea52145da6603214d9e2e8237f7914b5a271526ce0981c56efadc5ae62e9299c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-23"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/42498742?resultType=core&format=xml",
+      "ok": false,
+      "method": "html",
+      "fetched_at": "2026-11-23T10:12:32.128Z",
+      "reason": "fetch failed: The operation was aborted due to timeout"
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Of these, 295 participants (median age 33 years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P < 0.001)",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "top-1 accuracy of 37.8% versus 22.4% and top-4 accuracy of 81.8% versus 53.1%",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "We conducted a randomized controlled trial with 300 participants with suspected IRD randomized 1:1 to either Retina4IRD-assisted specialist arm or specialist-only arm.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Of these, 295 participants (median age 33 years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis.",
+      "found": false,
+      "exact": false,
+      "status": "unsupported",
+      "note": "source 0 could not be read: fetch failed: The operation was aborted due to timeout"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "no-full-text",
+    "detail": "No primary source could be read in full (source 0: fetch failed: The operation was aborted due to timeout)."
+  }
+}

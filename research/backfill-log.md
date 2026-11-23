@@ -585,3 +585,19 @@ Rejected:
 - Intraoperative ischemia EEG, TBI federated learning, Gleason, mammography, ECG, ICU and other prediction or validation papers: accuracy only.
 - Prostate MRI "real-world" and blood-culture ML pipeline: retrospective or prospective validation, AI not used in care.
 - Short of the floor: 5 sources read with the reader out of 78 candidates; the rest set aside from titles and snippets.
+
+## 2026-11-23, slice 36: papers and trial results, 2026-07-20 to 2026-07-27
+
+Drafted (3):
+- catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null: European Stroke Journal full text, 265 transferred patients, arrival to transfer request 59 vs 61 min (adjusted difference -2.40, not significant); not-because, bundled, Mar 2024 to May 2025 (pre); vendor ties stated.
+- retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china: Nature Medicine abstract via Europe PMC (publisher page a stub), 295 analysed, top-5 genetic accuracy 88.5% vs 67.3% (reasonable at best; no dates).
+- chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment: abstract only, nursing students, score 2.40 to 2.97 vs 2.43 to 2.57 (non-randomized, bundled; no dates).
+
+Read and rejected:
+- ARTERY optima4BP hypertension RCT (NCT04223934): results are in the registry JSON with each value on its own line and the 12-month arm labels look swapped, so no contiguous quote; left out.
+- Mayo pediatric asthma A-GPS RCT (NCT06062433): 22 children, one or two events per arm, no usable comparison.
+- Knee PSI RCT (Int Orthop): AI planning in both arms; the contrast is the instruments.
+- Nephrology LLM RCT (Kidney Int Rep), responsibility-allocation RCT (JMIR): vignette tasks, no patients. LLM data-extraction crossover (OFID): 5 reviewers, 20 tasks, CI includes zero, not real use.
+- Safe-place VR RCT (JMIR AI): volunteer sample, no clinical use. Dermatology GenAI cross-sectional study: correlations and standardized patients. ChatGPT Health triage (medRxiv): retrospective model evaluation.
+- LLM lay-language protocols (JMIR) and mindfulness response prediction (JMIR AI): reader timed out or model prediction only.
+- Remaining medRxiv and PubMed items: models, benchmarks, reviews, surveys, protocols; set aside from titles.

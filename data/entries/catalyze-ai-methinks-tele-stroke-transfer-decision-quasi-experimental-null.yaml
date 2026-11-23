@@ -1,0 +1,97 @@
+id: catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null
+section: not-because
+rank: 31
+headline: >-
+  After an AI large-vessel-occlusion tool was added to two tele-stroke centres, the time from arrival to a transfer
+  request for 265 stroke patients did not shorten: median 59 minutes before, 61 after.
+impact: "AI stroke triage did not speed transfer decisions"
+impact_number: "−2.40 min"
+impact_label: "adjusted median change in arrival-to-transfer-request time, not significant"
+summary: >-
+  In a prospective before-and-after study of two tele-stroke centres referring to one comprehensive stroke centre,
+  giving remote neurologists the Methinks AI read of the non-contrast CT and CT angiography did not shorten the time
+  from arrival to the transfer request, the primary outcome. Time from arrival to groin puncture was shorter, but the
+  authors tie that to more CT angiography at the referring centres rather than to the AI.
+caveat: >-
+  Non-randomised comparison of consecutive cohorts from different periods; CT angiography use rose from 28% to 81%
+  at the same time, so the AI's own effect on later intervals cannot be separated; the authors call the sample small
+  and the AI optional for clinicians.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "Consecutive transferred patients after the Methinks Stroke Suite outputs were shared with remote stroke neurologists (March 2024 onward) vs a pre-implementation registry cohort at the same two tele-stroke centres, adjusted quantile regression"
+effect:
+  relative: "Arrival to transfer request: adjusted median difference −2.40 min (95% CI −6.16 to 4.48), not significant"
+  absolute: "Median arrival to transfer request 59 min (IQR 43–88) before vs 61 min (IQR 46–99) after"
+reach: "265 transferred stroke patients at two tele-stroke centres serving 385,672 and 156,972 people, Spain"
+dates:
+  achieved_start: 2024-03
+  achieved_end: 2025-05
+  published: 2026-07-24
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "CATalyze-AI: accelerating referral for thrombectomy in acute stroke patients using an AI-based software. A prospective, multicentre, quasi-experimental cohort study (European Stroke Journal), full text via Europe PMC"
+    url: "https://doi.org/10.1093/esj/aakag085"
+    type: primary
+conflicts: "Two authors report prior research funding from Methinks AI, the vendor of the software; one of them holds modest ownership in and advises Methinks AI, and another author is employed by Methinks AI. The study received no external funding."
+what_would_change: null
+notes: >-
+  verify: the pre-implementation cohort came from a registry (May 2022 to October 2023) and the post cohort was screened prospectively, so period effects are possible.
+  verify: the software was already installed before the protocol began; what changed in March 2024 was that its outputs were shared with the neurologists.
+  verify: window is pre because the benefit period (March 2024 to May 2025) ended before the last twelve months began.
+related: []
+history:
+  - date: 2026-11-23
+    note: Added by the backfill run.
+rationale: The comparison is between earlier and later consecutive cohorts at the same two centres, and the later period also brought much more CT angiography, so the AI's contribution is bundled with a workflow change.
+receipts:
+  - field: impact_number
+    quote: "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48"
+    locator: Results, Primary outcome
+    source: 0
+  - field: effect.relative
+    quote: "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48"
+    locator: Results, Primary outcome
+    source: 0
+  - field: effect.absolute
+    quote: "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48"
+    locator: Results, Primary outcome
+    source: 0
+  - field: headline
+    quote: "59 [43–88] vs 61 [46–99] min; adjusted median difference: −2.40; 95% CI, −6.16 to 4.48"
+    locator: Results, Primary outcome
+    source: 0
+  - field: headline
+    quote: We included 265 patients (136 in the post-implementation cohort; 129 in the pre-implementation cohort).
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: We included 265 patients (136 in the post-implementation cohort; 129 in the pre-implementation cohort).
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: One centre serves 385,672 people within an area of 700 km 2 , the other serves 156,972 inhabitants
+    locator: Methods, Hub-and-spoke description
+    source: 0
+  - field: dates.achieved_start
+    quote: Between March 2024 and May 2025, 872 neuroimaging scans labelled as suspected stroke were acquired
+    locator: Results
+    source: 0
+  - field: dates.achieved_end
+    quote: Between March 2024 and May 2025, 872 neuroimaging scans labelled as suspected stroke were acquired
+    locator: Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: d813e94d93c144c9f2ebbcce055b04acf31234136d76339f0856e2248362172c
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: "impact_number: the quote is not in source 0 (quote not found in the source text); effect.relative: the quote is not in source 0 (quote not found in the source text); effect.absolute: the quote is not in source 0 (quote not found in the source text); headline: the quote is not in source 0 (quote not found in the source text); reach: the quote is not in source 0 (quote not found in the source text); dates.achieved_start: the quote is not in source 0 (quote not found in the source text); dates.achieved_end: the quote is not in source 0 (quote not found in the source text)."
+  record: catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null/2026-11-23.json

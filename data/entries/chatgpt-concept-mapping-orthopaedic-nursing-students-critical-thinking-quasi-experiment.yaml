@@ -1,0 +1,94 @@
+id: chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment
+section: because
+rank: 124
+headline: >-
+  In a two-group study of orthopaedic nursing students, critical-thinking scores rose from 2.40 to 2.97 after a
+  workshop using ChatGPT for concept mapping, against 2.43 to 2.57 in a control group with standard teaching.
+impact: "Students' critical-thinking scores rose more with AI concept mapping"
+impact_number: "2.97"
+impact_label: "mean critical-thinking score after AI-assisted concept mapping, vs 2.57 in the control group"
+summary: >-
+  Undergraduate students in an orthopaedic nursing course were allocated to a workshop in which they used ChatGPT to
+  build concept maps or to standard instructional activities, and a 12-item concept-map-based tool scored their
+  critical thinking before and after.
+caveat: >-
+  Abstract only. Allocation was not randomized, the groups differ in the workshop as a whole and not only in the AI,
+  the scale is a locally validated tool, and the abstract does not say when the course ran.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "ChatGPT-assisted concept-mapping workshop vs standard instructional activities, two-group pretest-posttest, same course"
+effect:
+  relative: "Group-by-time interaction F(1,58) = 9.705, p = .003, greater improvement in the AI group"
+  absolute: "AI group 2.40 to 2.97; control group 2.43 to 2.57 on the 12-item critical-thinking tool"
+reach: "Undergraduate students enrolled in an orthopaedic nursing course"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-21
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "AI-assisted concept mapping enhances orthopaedic nursing students' critical thinking: A quasi-experimental study (International Journal of Orthopaedic and Trauma Nursing), abstract via Europe PMC"
+    url: "https://doi.org/10.1016/j.ijotn.2026.101305"
+    type: primary
+conflicts: "none found in the abstract; the full text could not be read, so funding and author ties are unchecked."
+what_would_change: null
+notes: >-
+  verify: only the abstract was read; it gives no calendar period for the workshop, so dates and the window grade are left empty.
+  verify: allocation method is not described beyond "allocated"; evidence is B as a controlled but non-randomized study.
+  verify: the abstract does not state the number of students; the F test's degrees of freedom imply a small class.
+related: []
+history:
+  - date: 2026-11-23
+    note: Added by the backfill run.
+rationale: Students in the same course either used ChatGPT for concept mapping in a workshop or received standard instruction, so the difference is the whole workshop and not the AI alone.
+receipts:
+  - field: impact_number
+    quote: increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: scores in the control group increased from 2.43 ± 0.68 to 2.57 ± 0.63
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: F(1,58) = 9.705, p = .003
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: increased from 2.40 ± 0.50 at pretest to 2.97 ± 0.72 at posttest
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: scores in the control group increased from 2.43 ± 0.68 to 2.57 ± 0.63
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: bdcbd5d546f106ae7df2199e23137549e67df67081236936e3d564bffb87bf61
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-23
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-23
+    verdict: fail
+  record: chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment/2026-11-23.json
+held:
+  reason: grade-split
+  since: 2026-11-23
+  detail: "evidence: drafter B, verifier could not grade."
+  record: chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment/2026-11-23.json
