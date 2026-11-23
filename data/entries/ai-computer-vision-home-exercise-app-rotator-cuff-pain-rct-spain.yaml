@@ -78,3 +78,13 @@ receipts:
     quote: Forty-six adults (mean age 59 years) with rotator cuff-related shoulder pain were randomized
     locator: Abstract, Method
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 6b05e35b2a7dce4e38ec73884d60bf581177c544453f7cc30e2e8254d372e226
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain/2026-11-23.json

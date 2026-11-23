@@ -67,7 +67,7 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "(risk ratio 0.66; 95% CI 0.37–1.19)"
+    quote: (risk ratio 0.66; 95% CI 0.37–1.19)
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -86,3 +86,20 @@ receipts:
     quote: between April and September 2025
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: e78774b1f6e04bcc8d12dc646540a00c83fe69c2f5eb17acab3d849c37b2bd6d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-23
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-23
+    verdict: pass
+  record: milvue-ai-paediatric-fracture-ed-leipzig-recall-null/2026-11-23.json
+  confidence: strict

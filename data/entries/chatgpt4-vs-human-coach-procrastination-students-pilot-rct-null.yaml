@@ -87,3 +87,13 @@ receipts:
     quote: The study was conducted between October 2023 and July 2024
     locator: Methods, Design and recruitment
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 19f8373844dd2ca6f7fc1f01fb2e6db915ebf4ffae5e6167e5cd9291ce12fa6d
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null/2026-11-23.json

@@ -85,3 +85,13 @@ receipts:
     quote: '"date": "2024-10-10",'
     locator: statusModule, primaryCompletionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 955c01ac7dbc4c1d5dcaa25da36d2f2aabc2eba1555279f77cd522f7238829ab
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null/2026-11-23.json

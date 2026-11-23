@@ -53,7 +53,7 @@ history:
 rationale: Both arms recorded the same HRV and differed only in whether physicians saw the AI-generated risk score and triage advice, so the comparison isolates the AI output (isolated).
 receipts:
   - field: headline
-    quote: 'the HRV-guided protocol reduced hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8)'
+    quote: "the HRV-guided protocol reduced hospital admissions (50.2% vs 61.1%; risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8)"
     locator: Abstract, Results
     source: 0
   - field: impact_number
@@ -61,7 +61,7 @@ receipts:
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: 'risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8'
+    quote: "risk difference -10.9 percentage points, 95% CI: -20.1 to -1.8"
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
@@ -76,3 +76,13 @@ receipts:
     quote: Of 426 analysed patients (mean age 54 ± 13 years
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-23
+  content: 0317a56e4613ddc8f7ef4ea799bd00a0bbe2dc7cabb8e4923d373f0fe8ef6693
+held:
+  reason: ungrounded
+  since: 2026-11-23
+  detail: No receipt for impact.
+  record: aitriage-hrv-chest-pain-ed-singapore-pilot-rct/2026-11-23.json
