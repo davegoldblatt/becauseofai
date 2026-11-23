@@ -1,0 +1,89 @@
+id: chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null
+section: not-because
+rank: 29
+headline: >-
+  A ChatGPT-4 coach did not reduce procrastination significantly more than a
+  human coach in a randomized pilot of 62 German university students, and 43.1%
+  reported unwanted negative effects.
+impact: "No difference vs a human coach; 43.1% unwanted effects"
+impact_number: "43.1%"
+impact_label: "of students reported unwanted negative effects, with no difference between ChatGPT-4 and a human coach"
+summary: >-
+  In a single-blind randomized pilot, university students received three 20-minute
+  chat sessions of cognitive-behavioural procrastination coaching from ChatGPT-4
+  or from a trained master's student; the group-by-time effect on procrastination
+  was not significant and both arms had similar, fairly high rates of unwanted
+  effects.
+caveat: >-
+  The comparison is AI against a human coach, not against no coaching, so it
+  cannot say whether either helped; the sample was small, 93.5% female, and
+  self-reported.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Three-session chat coaching delivered by ChatGPT-4 vs by a human conversational agent (master's students in clinical psychology), same manual and word limit"
+effect:
+  relative: "Group × time interaction on procrastination not significant (p = .117)"
+  absolute: "Unwanted negative effects reported by 43.1% of participants at post-assessment, no significant group difference"
+reach: "62 university students analysed (mean age 23.60 years, 93.5% female), University of Mainz, Germany"
+dates:
+  achieved_start: 2023-10
+  achieved_end: 2024-07
+  published: 2026-07-26
+  added: 2026-11-23
+  updated: 2026-11-23
+sources:
+  - title: "Digital Health: Generative AI versus human conversational agent for reducing procrastination: A randomized pilot trial (Hennemann et al.)"
+    url: https://doi.org/10.1177/20552076261450336
+    doi: 10.1177/20552076261450336
+    type: primary
+conflicts: >-
+  The authors received no external funding and declared no conflicts of interest.
+  The chatbot was the paid ChatGPT-4 model with study-written prompts, and humans
+  supervised the chats.
+what_would_change: "A larger trial against a no-coaching or waitlist control, with clinically meaningful samples, showing procrastination falls with the chatbot and unwanted effects are not higher."
+notes: >-
+  Filed under not-because: the planned comparison of efficacy was not significant.
+  Pre-registered on aspredicted.org (not a clinical registry), so evidence is B.
+  Attribution isolated is the comparison of AI vs human delivery of the same
+  protocol; it does not isolate benefit over no coaching.
+history:
+  - date: 2026-11-23
+    note: "Added by the backfill run."
+rationale: The two arms followed the same three-session manual and 100-word limit and differed only in whether ChatGPT-4 or a human typed the replies, so the comparison isolates who delivered the coaching (isolated).
+receipts:
+  - field: headline
+    quote: 62 university students (M age 23.60 years, 93.5% female) were analyzed
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: Unwanted negative effects at post-assessment were reported by 43.1% of participants
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Unwanted negative effects at post-assessment were reported by 43.1% of participants
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: non-significant group × time interaction effect ( p = .117, η 2 p = 0.05)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Unwanted negative effects at post-assessment were reported by 43.1% of participants
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: 62 university students (M age 23.60 years, 93.5% female) were analyzed
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: The study was conducted between October 2023 and July 2024
+    locator: Methods, Design and recruitment
+    source: 0
+  - field: dates.achieved_end
+    quote: The study was conducted between October 2023 and July 2024
+    locator: Methods, Design and recruitment
+    source: 0
