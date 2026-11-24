@@ -86,3 +86,24 @@ receipts:
     quote: 5th-grade regular users saw a 10-point NDSA gain
     locator: What are the impacts of Amira Learning?
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: 0d9cfd6f3f0e56c74f968a3f4a913ce9ed321cca7a160fe2473c60897defdbb8
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: north-dakota-dpi-amira-regular-users-ndsa-gains/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier pre."
+  record: north-dakota-dpi-amira-regular-users-ndsa-gains/2026-11-24.json

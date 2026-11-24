@@ -90,3 +90,24 @@ receipts:
     quote: In 2019, the state of Espírito Santo piloted an artificial intelligence (AI) platform called Letrus
     locator: Introduction
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: d3c6f250cf441c9ec284f3df67c6a7c12387990b07cf2759d8aa8418118a1217
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: letrus-espirito-santo-ai-essay-feedback-enem-rct/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled."
+  record: letrus-espirito-santo-ai-essay-feedback-enem-rct/2026-11-24.json

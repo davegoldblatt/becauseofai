@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "henry-county-kentucky-gemini-writing-feedback-novice-tier",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "b8de71b7c17f8fbee6f169f69b9a5d5d6777f1555176c038f37a145eccda3e1e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://blog.google/products-and-platforms/products/education/henry-county-public-schools/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:27:40.442Z",
+      "final_url": "https://blog.google/products-and-platforms/products/education/henry-county-public-schools/",
+      "sha256": "9afc60b1df26134ba07652b70ea2ccf9f3529ef9ce40c4db025df8c6c014cc7b",
+      "chars": 6696,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "33% of students were graded in the novice tier",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "15% of students advanced out of the novice group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "15% of students advanced out of the novice group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "15% of students advanced out of the novice group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "33% of students were graded in the novice tier",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "15% of students advanced out of the novice group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": true,
+      "source_kind": "program-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "program-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The district compares assessment outcomes before and after implementing Gemini-supported feedback with rubric calibration and teacher review, without separating these components.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates, and the source supplies no assessment or implementation dates; publication alone cannot establish the benefit window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The superintendent reports his own district's program on Google's product blog, with Gemini supplied at no additional charge; the entry discloses these interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because no dates are given for implementation or assessment outcomes."
+      },
+      "summary": "The complete district account supports the reported 33% novice baseline and 15% of students advancing out of that group after Gemini-supported feedback. It provides neither an independent comparison nor dates establishing when the benefit occurred."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13254,
+      "output": 650,
+      "total": 13904,
+      "cached": 0,
+      "reasoning": 155
+    },
+    "duration_ms": 17479
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The complete district account supports the reported 33% novice baseline and 15% of students advancing out of that group after Gemini-supported feedback. It provides neither an independent comparison nor dates establishing when the benefit occurred.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.",
+      "Not dated yet (The dated test fails because no dates are given for implementation or assessment outcomes.).",
+      "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
+    ],
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "north-dakota-dpi-amira-regular-users-ndsa-gains",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "0d9cfd6f3f0e56c74f968a3f4a913ce9ed321cca7a160fe2473c60897defdbb8",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.nd.gov/dpi/education-programs/literacy/amira-learning",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:29:05.868Z",
+      "final_url": "https://www.nd.gov/dpi/education-programs/literacy/amira-learning",
+      "sha256": "7f41e7a2455d2441a92db189794e9e7ac7205040d1318205d0efac4b47481cf9",
+      "chars": 3337,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "4th-grade regular users saw a 17-point NDSA gain",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "5th-grade regular users saw a 10-point NDSA gain",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "4th-grade regular users saw a 17-point NDSA gain",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "5th-grade regular users saw a 10-point NDSA gain",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": false,
+      "source_kind": "other",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "other",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": "pre"
+      },
+      "attribution_rationale": "The page identifies regular Amira users but gives no comparison that establishes whether AI was isolated or tested within a package.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the page dates the reported assessment gains to 2024."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "NDDPI reports outcomes for a vendor with which it has a direct licensing contract and research partnership; the entry discloses the contractual relationship."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The benchmark underlying the reported gains is unspecified, so the measured-against test cannot be established."
+      },
+      "summary": "The program overview supports the reported 15-, 17-, and 10-point gains among regular users on the 2024 assessment. It links to an efficacy analysis but does not supply its comparison, sample size, or methods."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12944,
+      "output": 862,
+      "total": 13806,
+      "cached": 0,
+      "reasoning": 369
+    },
+    "duration_ms": 20081
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

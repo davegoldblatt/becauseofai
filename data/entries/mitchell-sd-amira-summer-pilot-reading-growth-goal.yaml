@@ -78,3 +78,24 @@ receipts:
     quote: Timmer estimates more than 60 students who attended 80 percent of the summer sessions helped pilot the program.
     locator: Article body, pilot paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: b7ddb88325bf598cc31a8f94601ec0f3a8261d135f52f813a07b43d66b9224be
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: mitchell-sd-amira-summer-pilot-reading-growth-goal/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
+  record: mitchell-sd-amira-summer-pilot-reading-growth-goal/2026-11-24.json

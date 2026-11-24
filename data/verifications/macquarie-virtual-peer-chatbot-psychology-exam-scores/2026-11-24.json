@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "macquarie-virtual-peer-chatbot-psychology-exam-scores",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "183f57ea197a5774f8ea20ebe79b86596a44046045b5eca09e73ef7fce0d61a9",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://news.microsoft.com/source/asia/2025/03/24/macquarie-university-students-exam-scores-up-by-nearly-10-per-cent-thanks-to-new-ai-powered-chatbot/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:28:13.674Z",
+      "final_url": "https://news.microsoft.com/source/asia/2025/03/24/macquarie-university-students-exam-scores-up-by-nearly-10-per-cent-thanks-to-new-ai-powered-chatbot/",
+      "sha256": "c5efc6f18bb16c2321dcaf216712175dcbdc0fd632f7a131be47b1ef5ee104af",
+      "chars": 14976,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The reported comparison is chatbot users versus non-users, adjusted for past achievement, with no additional intervention package described, although self-selection limits causal inference.",
+      "achieved_dates": {
+        "from": "press-release",
+        "conflicting": false,
+        "note": "The pilot is explicitly dated October 2024; the earlier reference to an operational prototype by late 2024 supplies no different pilot date."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Microsoft publishes this promotional account of a university pilot using Microsoft products and describes its own participation in development."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The vendor account supports a reported 9.45% exam-score advantage among chatbot users in an October 2024 pilot involving 1,400 students. It establishes an adjusted observational association, without randomization, independent verification, or new in-window outcome data."
+    },
+    "error": null,
+    "tokens": {
+      "input": 15091,
+      "output": 661,
+      "total": 15752,
+      "cached": 0,
+      "reasoning": 167
+    },
+    "duration_ms": 16653
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The vendor account supports a reported 9.45% exam-score advantage among chatbot users in an October 2024 pilot involving 1,400 students. It establishes an adjusted observational association, without randomization, independent verification, or new in-window outcome data.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "The achieved dates come from the press release.",
+      "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      }
+    ]
+  }
+}

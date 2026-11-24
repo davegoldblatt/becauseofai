@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "nigeria-edo-copilot-english-tutoring-world-bank-rct",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "ad5edfecff751f03481bbd2153d6f0a72205d4d57b6469628a17afc94c541d77",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://openknowledge.worldbank.org/entities/publication/15e1ff08-15ae-4f7a-b2a8-d146e6c113ee/full",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:28:49.318Z",
+      "final_url": "https://openknowledge.worldbank.org/entities/publication/15e1ff08-15ae-4f7a-b2a8-d146e6c113ee/full",
+      "sha256": "71bfff81bf3ff6a6e6f354e7b8622c899ab01aa2802500c20810d813817d73a2",
+      "chars": 5491,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The effect on English, the main outcome of interest, was of 0.23 standard deviations.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "significant improvement of 0.31 standard deviation on an assessment",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "The effect on English, the main outcome of interest, was of 0.23 standard deviations.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "The effect on English, the main outcome of interest, was of 0.23 standard deviations.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "significant improvement of 0.31 standard deviation on an assessment",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "The effect on English, the main outcome of interest, was of 0.23 standard deviations.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "equating to 1.5 to 2 years of ’business-as-usual’ schooling",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": false,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized trial evaluates a program incorporating Copilot, without establishing a comparison that isolates the tool's contribution.",
+      "achieved_dates": {
+        "from": "not-found",
+        "conflicting": false,
+        "note": "The abstract gives six weeks of intervention but no calendar dates; the results were already reported by May 2025, before the window."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses World Bank involvement, but the supplied text does not establish author employment, program funding, or vendor interests."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates for the intervention are absent; randomization is reported, but preregistration is not established, preventing an A evidence grade."
+      },
+      "summary": "The repository abstract supports the reported learning gains and schooling-equivalent estimate from a randomized program evaluation. It does not provide the full paper, trial dates, preregistration, or details sufficient to isolate Copilot's contribution."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13605,
+      "output": 664,
+      "total": 14269,
+      "cached": 0,
+      "reasoning": 178
+    },
+    "duration_ms": 15884
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

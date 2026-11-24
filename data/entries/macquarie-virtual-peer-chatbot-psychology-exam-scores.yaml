@@ -85,3 +85,24 @@ receipts:
     quote: The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024
     locator: AI-powered learning yields significant improvements
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: 183f57ea197a5774f8ea20ebe79b86596a44046045b5eca09e73ef7fce0d61a9
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: pass
+  record: macquarie-virtual-peer-chatbot-psychology-exam-scores/2026-11-24.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - The achieved dates come from the press release.
+    - "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."

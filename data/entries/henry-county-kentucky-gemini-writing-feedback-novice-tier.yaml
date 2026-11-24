@@ -78,3 +78,24 @@ receipts:
     quote: 15% of students advanced out of the novice group
     locator: Improving student outcomes
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: b8de71b7c17f8fbee6f169f69b9a5d5d6777f1555176c038f37a145eccda3e1e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: pass
+  record: henry-county-kentucky-gemini-writing-feedback-novice-tier/2026-11-24.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because no dates are given for implementation or assessment outcomes.).
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."

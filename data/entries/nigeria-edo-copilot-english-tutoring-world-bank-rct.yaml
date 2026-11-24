@@ -82,3 +82,24 @@ receipts:
     quote: equating to 1.5 to 2 years of ’business-as-usual’ schooling
     locator: Abstract
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: ad5edfecff751f03481bbd2153d6f0a72205d4d57b6469628a17afc94c541d77
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: nigeria-edo-copilot-english-tutoring-world-bank-rct/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+  record: nigeria-edo-copilot-english-tutoring-world-bank-rct/2026-11-24.json

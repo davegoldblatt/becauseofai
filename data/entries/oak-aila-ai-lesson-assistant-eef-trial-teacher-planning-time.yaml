@@ -86,3 +86,24 @@ receipts:
     quote: 81% of teachers in the Aila group used it at least once
     locator: Article body, usage paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: 7d50d9abaad98cc5e2b46844190a81384e0f3fbaae0a0dc54815a606d8c1d32c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter B, verifier could not grade."
+  record: oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time/2026-11-24.json
