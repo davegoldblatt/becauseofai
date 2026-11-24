@@ -1,0 +1,109 @@
+id: north-dakota-dpi-amira-regular-users-ndsa-gains
+section: because
+rank: 128
+headline: >-
+  North Dakota's education department says third graders who read with the Amira AI
+  tutor regularly (more than 20 minutes a week) saw an average 15-point gain on the 2024
+  state assessment, fourth graders 17 points and fifth graders 10 points.
+impact: "15-point average state-test gain for regular third-grade Amira users (state agency analysis)"
+impact_number: "+15 pts"
+impact_label: "average gain on the North Dakota state assessment for third graders who read with the Amira AI tutor more than 20 minutes a week"
+summary: >-
+  The North Dakota Department of Public Instruction, which pays for Amira licences
+  statewide, reports an efficacy analysis of students who used the AI reading tutor
+  regularly and their gains on the 2024 state assessment in grades 3, 4 and 5.
+caveat: >-
+  The state agency's own summary of an analysis commissioned around its own contract
+  with the vendor; the page does not say what the gain is measured against, how
+  students who used Amira regularly differ from those who did not, or how many students
+  are included.
+domain: education
+ai_type: hybrid
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Students who used Amira regularly (more than 20 minutes per week), gain on the 2024 North Dakota State Assessment; the comparison group is not stated on the page"
+effect:
+  relative: "Grade 3 regular users: average 15-point NDSA gain; grade 4: 17 points; grade 5: 10 points"
+  absolute: null
+reach: null
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "Amira Learning (North Dakota Department of Public Instruction)"
+    url: https://www.nd.gov/dpi/education-programs/literacy/amira-learning
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the state agency's own page about a product it contracts for directly
+  with the vendor, Amira Learning; the underlying efficacy analysis is described, not
+  shown. No independent evaluation.
+what_would_change: "The linked research analysis with a named comparison group and student counts, or the REACH-ND trial results."
+notes: >-
+  verify: the page is undated; published is set to the year 2026 because it describes funding for 2025-2026 and 2026-2027 and a grant timeline starting January 2026.
+  verify: the page gives the 2024 state assessment but no period of Amira use, so dates and window are left empty.
+  verify: "average of a 15-point gain" is the page's wording; the page does not say gain over what.
+related: [mitchell-sd-amira-summer-pilot-reading-growth-goal]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Regular users are compared (by the page, without naming a comparison group) on a state test, and regular use is likely tied to other differences between students, so the effect cannot be isolated to the AI tutor.
+receipts:
+  - field: headline
+    quote: 3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: headline
+    quote: 4th-grade regular users saw a 17-point NDSA gain
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: headline
+    quote: 5th-grade regular users saw a 10-point NDSA gain
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: impact
+    quote: 3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: impact_number
+    quote: 3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: effect.relative
+    quote: 3rd-grade students who read with Amira regularly (more than 20 minutes per week) saw an average of a 15-point gain on NDSA
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: effect.relative
+    quote: 4th-grade regular users saw a 17-point NDSA gain
+    locator: What are the impacts of Amira Learning?
+    source: 0
+  - field: effect.relative
+    quote: 5th-grade regular users saw a 10-point NDSA gain
+    locator: What are the impacts of Amira Learning?
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: 0d9cfd6f3f0e56c74f968a3f4a913ce9ed321cca7a160fe2473c60897defdbb8
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: north-dakota-dpi-amira-regular-users-ndsa-gains/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier pre."
+  record: north-dakota-dpi-amira-regular-users-ndsa-gains/2026-11-24.json

@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mitchell-sd-amira-summer-pilot-reading-growth-goal",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "b7ddb88325bf598cc31a8f94601ec0f3a8261d135f52f813a07b43d66b9224be",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.govtech.com/education/k-12/mitchell-school-district-s-d-applies-ai-to-boost-literacy",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:28:30.792Z",
+      "final_url": "https://www.govtech.com/education/k-12/mitchell-school-district-s-d-applies-ai-to-boost-literacy",
+      "sha256": "6136e941b8177d719b8bfc48041599b0b48dd1ccd08b850ec3f29666c825cb37",
+      "chars": 8302,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Timmer estimates more than 60 students who attended 80 percent of the summer sessions helped pilot the program.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Timmer estimates more than 60 students who attended 80 percent of the summer sessions helped pilot the program.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "in"
+      },
+      "attribution_rationale": "The district compared growth under a package of Amira, small-group tutoring and whole-group instruction with its quarter-year growth goal.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the article body places the seven-week pilot in summer 2026, just before the school year began."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The source identifies foundation funding and district-reported results but discloses no vendor funding, employment, equity, patent or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The complete news article supports the reported counts and percentage against the district's growth goal during summer 2026. It provides no independent comparison or estimate separating Amira's contribution from the accompanying instruction."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13915,
+      "output": 717,
+      "total": 14632,
+      "cached": 0,
+      "reasoning": 276
+    },
+    "duration_ms": 18043
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "D",
+        "verifier": "C"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

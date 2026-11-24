@@ -615,3 +615,23 @@ Read and rejected:
 - RESCUE rare-disease LLM screening, code stroke LLM triage notes, rheumatology referral LLMs, prostate MRI deep learning: retrospective or scenario evaluations, accuracy only.
 - Boora obesity platform: usability study, 15 users for 24 hours, no outcome. Canadian students GenAI survey and Dutch willingness-to-pay survey: opinion and prevalence.
 - Protocols (CHAT-AF-S, telerehabilitation, CABG chatbot, intergenerational, echo INSIGHT, construction education) and the remaining models, benchmarks and reviews: set aside from titles.
+
+## 2026-11-24, slice 37: announcements: schools and tutoring, 2026-05-13 to 2026-08-12
+
+Drafted (7):
+- henry-county-kentucky-gemini-writing-feedback-novice-tier: superintendent's post on Google's blog, novice tier 33% before, 15% advanced out after Gemini feedback (speculative; no dates).
+- mitchell-sd-amira-summer-pilot-reading-growth-goal: Daily Republic via GovTech, 47 of 60+ students (76%) met the quarter-year reading-growth goal with Amira (speculative; no control, no dates).
+- north-dakota-dpi-amira-regular-users-ndsa-gains: state education department page, regular Amira users +15, +17, +10 points on the 2024 state test in grades 3 to 5 (speculative; undated page, comparison unstated).
+- oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time: trade report of the EEF/NFER RCT, 49 fewer minutes a week of planning (EEF page gave HTTP 403; news source only).
+- nigeria-edo-copilot-english-tutoring-world-bank-rct: World Bank working paper abstract, 0.23 SD in English, 0.31 SD overall (RCT, abstract only; no dates).
+- macquarie-virtual-peer-chatbot-psychology-exam-scores: Microsoft customer story, users scored nearly five marks (9.45%) higher, 1,400 students, Oct 2024 (self-selected users; pre).
+- letrus-espirito-santo-ai-essay-feedback-enem-rct: J-PAL case study, +0.09 SD (17 of 1,000 points) on entrance exam, 178 schools, 2019 (summary, not the paper; pre).
+
+Rejected:
+- Khanmigo Hamilton County (NBER w35620) and Maryland AI tutor: already entries. Sumner County Coursemojo: already an entry.
+- World Bank Peru (Eligiendo mi Camino): reach of 4,500 students only, no outcome; teacher-training RCT gives no number.
+- Estonia AI Leap: take-up counts only, impact study not yet reported. DfE England AI tutoring: plan, no outcomes.
+- Connecticut AI pilot evaluation (CCERC, full text): surveys and focus groups only.
+- Southeast Delco Amira (CBS): 59 to 91 words a minute at one school, but the school year is not clear; not drafted (eight-entry room, weak dates).
+- SFUSD Amira, Imagine Learning and NoRedInk grading case studies, OECD pass-rate figure, Rori Ghana (2024 paper), Bastani Türkiye study: older, vendor marketing or not read.
+- About 18 searches and 17 pages read.

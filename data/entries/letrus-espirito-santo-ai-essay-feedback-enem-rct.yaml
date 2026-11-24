@@ -1,0 +1,113 @@
+id: letrus-espirito-santo-ai-essay-feedback-enem-rct
+section: because
+rank: 132
+headline: >-
+  A randomised evaluation in 178 public schools in Espírito Santo, Brazil found that
+  AI essay feedback on the Letrus platform raised university entrance exam scores by
+  about 0.09 standard deviations, equivalent to 17 points out of 1,000.
+impact: "17 more points out of 1,000 on the entrance exam essay for students given AI writing feedback (RCT)"
+impact_number: "+17 pts"
+impact_label: "out of 1,000 on the national university entrance exam for public school seniors given AI essay feedback, about 0.09 SD"
+summary: >-
+  J-PAL's case study describes a 2019 randomised evaluation of Letrus, an AI platform
+  giving high-school seniors instant feedback on practice essays for the national
+  entrance exam, and the state's later roll-out to all public school seniors. The
+  AI-only version did as well as one that added human scorers.
+caveat: >-
+  Read from J-PAL's case-study summary, not the underlying paper; the 2019 pilot is
+  before this window and only the year is given; the evaluation was funded by Google.org
+  and run with the company and the state education department.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Students in 110 schools given the Letrus platform vs 68 comparison schools without access, score on the national university entrance exam essay"
+effect:
+  relative: "Both interventions increased students' entrance exam scores by about 0.09 standard deviations, closing about nine percent of the public-private school gap in essay scores"
+  absolute: "17 points out of a possible 1,000 points"
+reach: "178 public schools, with approximately 12,000 students in 110 schools receiving access to the platform"
+dates:
+  achieved_start: 2019
+  achieved_end: null
+  published: 2024-08
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "Artificial intelligence to strengthen high school students' writing skills (J-PAL case study)"
+    url: https://www.povertyactionlab.org/case-study/artificial-intelligence-strengthen-high-school-students-writing-skills
+    type: primary
+conflicts: >-
+  The evaluation received support from Google.org through J-PAL; Letrus, the company,
+  and the state education department were partners in the study, and the state's
+  statement is quoted in the case study. The case study is J-PAL's summary of the
+  researchers' work, not the paper.
+what_would_change: "The underlying paper with dates, pre-registration and confidence intervals, or the longer-term outcomes study."
+notes: >-
+  verify: only the year 2019 is given for the pilot; achieved_end is left empty although the platform later reached more than 100,000 seniors, which this entry does not claim as an effect.
+  verify: the case study was last updated August 2024; published is set to 2024-08.
+  verify: the case study does not state the confidence interval for the 0.09 SD effect.
+related: [sierra-leone-gemini-math]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Schools were randomly assigned to the AI-only platform, an AI-plus-human version, or comparison, so the AI-only arm isolates the platform against usual practice.
+receipts:
+  - field: headline
+    quote: The evaluation was conducted in 178 public schools, with approximately 12,000 students in 110 schools receiving access to the Letrus platform.
+    locator: The Research
+    source: 0
+  - field: headline
+    quote: Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points
+    locator: The Research
+    source: 0
+  - field: impact
+    quote: Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points
+    locator: The Research
+    source: 0
+  - field: impact_number
+    quote: Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points
+    locator: The Research
+    source: 0
+  - field: effect.relative
+    quote: Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points
+    locator: The Research
+    source: 0
+  - field: effect.relative
+    quote: closing about nine percent of the public-private school gap in essay scores
+    locator: The Research
+    source: 0
+  - field: effect.absolute
+    quote: Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points
+    locator: The Research
+    source: 0
+  - field: reach
+    quote: The evaluation was conducted in 178 public schools, with approximately 12,000 students in 110 schools receiving access to the Letrus platform.
+    locator: The Research
+    source: 0
+  - field: dates.achieved_start
+    quote: In 2019, the state of Espírito Santo piloted an artificial intelligence (AI) platform called Letrus
+    locator: Introduction
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: d3c6f250cf441c9ec284f3df67c6a7c12387990b07cf2759d8aa8418118a1217
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: letrus-espirito-santo-ai-essay-feedback-enem-rct/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled."
+  record: letrus-espirito-santo-ai-essay-feedback-enem-rct/2026-11-24.json

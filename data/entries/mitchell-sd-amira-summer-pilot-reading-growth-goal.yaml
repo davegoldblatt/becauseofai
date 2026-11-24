@@ -1,0 +1,101 @@
+id: mitchell-sd-amira-summer-pilot-reading-growth-goal
+section: because
+rank: 127
+headline: >-
+  Mitchell School District in South Dakota says 47 of the more than 60 students who
+  attended 80 percent of a summer programme using the Amira AI reading tutor, 76
+  percent, met or exceeded the district's goal of a quarter-year of reading growth.
+impact: "76% of summer-pilot students met the district's reading-growth goal with the Amira AI tutor"
+impact_number: "76%"
+impact_label: "of summer pilot students met the district's quarter-year reading growth goal using the Amira AI reading tutor"
+summary: >-
+  A newspaper report distributed by GovTech describes a seven-week summer pilot in which
+  elementary students used Amira, an AI oral-reading tutor that listens to a child read
+  aloud and corrects errors, alongside small-group tutoring. The district reports how
+  many of the students who attended most sessions reached its growth goal.
+caveat: >-
+  A news report quoting district staff; the comparison is to the district's own growth
+  goal, not to a control group; the pilot also included small-group tutoring and
+  whole-group instruction; the figure covers only students who attended 80 percent of
+  sessions.
+domain: education
+ai_type: hybrid
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Students who attended 80 percent of summer sessions, reading growth against the district's goal of a quarter-year of growth; no control group"
+effect:
+  relative: "47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth"
+  absolute: null
+reach: "More than 60 students who attended 80 percent of the summer sessions piloted the program"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-24
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "Mitchell School District, S.D., Applies AI to Boost Literacy (The Daily Republic, via GovTech)"
+    url: https://www.govtech.com/education/k-12/mitchell-school-district-s-d-applies-ai-to-boost-literacy
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are the district's own, reported by a local newspaper from district staff
+  who bought the product; the vendor is Amira Learning. The pilot was paid for by the
+  Musick Family Foundation. No independent analysis.
+what_would_change: "An evaluation against students who did not use Amira, or the district's school-year results."
+notes: >-
+  verify: the report says the pilot ran about seven weeks in the KERNELS Summer Scholar Program but gives no calendar dates, so dates and window are left empty.
+  verify: the report calls the figure "more than 60 students" and then 47 students at 76 percent, which implies about 62; the exact denominator is not stated.
+related: [sumner-county-coursemojo-tcap-ela]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Students used the AI tutor together with small-group tutoring and the result is measured against the district's own target rather than a control group, so the package is what was observed.
+receipts:
+  - field: headline
+    quote: Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.
+    locator: Article body, pilot paragraph
+    source: 0
+  - field: headline
+    quote: Timmer estimates more than 60 students who attended 80 percent of the summer sessions helped pilot the program.
+    locator: Article body, pilot paragraph
+    source: 0
+  - field: impact
+    quote: Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.
+    locator: Article body, pilot paragraph
+    source: 0
+  - field: impact_number
+    quote: Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.
+    locator: Article body, pilot paragraph
+    source: 0
+  - field: effect.relative
+    quote: Of those, 47 students, or 76 percent, met or exceeded the district's goal of a quarter-year's worth of reading growth.
+    locator: Article body, pilot paragraph
+    source: 0
+  - field: reach
+    quote: Timmer estimates more than 60 students who attended 80 percent of the summer sessions helped pilot the program.
+    locator: Article body, pilot paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: b7ddb88325bf598cc31a8f94601ec0f3a8261d135f52f813a07b43d66b9224be
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: mitchell-sd-amira-summer-pilot-reading-growth-goal/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
+  record: mitchell-sd-amira-summer-pilot-reading-growth-goal/2026-11-24.json

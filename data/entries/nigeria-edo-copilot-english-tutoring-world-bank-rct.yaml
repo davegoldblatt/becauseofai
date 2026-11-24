@@ -1,0 +1,105 @@
+id: nigeria-edo-copilot-english-tutoring-world-bank-rct
+section: because
+rank: 130
+headline: >-
+  In a randomised trial in Nigeria, six weeks of GPT-4-powered Microsoft Copilot
+  tutoring for first-year senior secondary students raised English scores by 0.23
+  standard deviations, and a wider curriculum assessment by 0.31 standard deviations.
+impact: "0.23 SD higher English scores after six weeks of AI tutoring (RCT, Nigeria)"
+impact_number: "+0.23 SD"
+impact_label: "English learning gain after six weeks of AI tutoring for first-year senior secondary students in Nigeria"
+summary: >-
+  A World Bank working paper reports a randomised controlled trial of a virtual
+  tutoring programme that used Microsoft Copilot (GPT-4) to support English language
+  learning in Nigerian secondary schools, with gains on a curriculum-aligned assessment
+  and in English, the main outcome.
+caveat: >-
+  Read here from the abstract only; the study period is not dated in the abstract; the
+  programme is a package (teacher-supervised tutoring sessions plus the tool), so the
+  gain is for the programme, not for the model alone; short follow-up of six weeks.
+domain: education
+ai_type: generative
+grades:
+  evidence: A
+  attribution: bundled
+  window: null
+comparison: "Students randomised to the Copilot tutoring programme vs students receiving business-as-usual schooling, assessment of English and related topics after six weeks"
+effect:
+  relative: "Improvement of 0.31 standard deviation on the overall assessment; 0.23 standard deviations in English, the main outcome"
+  absolute: "Equating to 1.5 to 2 years of 'business-as-usual' schooling"
+reach: "First-year senior secondary students in Nigeria, six weeks of English tutoring"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-05-20
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "From Chalkboards to Chatbots: Evaluating the Impact of Generative AI on Learning Outcomes in Nigeria (World Bank Policy Research Working Paper 11125)"
+    url: https://openknowledge.worldbank.org/entities/publication/15e1ff08-15ae-4f7a-b2a8-d146e6c113ee/full
+    doi: 10.1596/1813-9450-11125
+    type: primary
+conflicts: >-
+  The authors are World Bank staff and a Nigerian partner evaluating a programme the
+  World Bank supported; the tool is Microsoft's Copilot. Working paper, not
+  peer-reviewed.
+what_would_change: "The full text, with the trial dates, sample size and registration, read and checked."
+notes: >-
+  verify: the abstract does not give calendar dates for the six weeks, so dates and window are left empty.
+  verify: the abstract does not give the number of students; read the full paper (PDF linked from the repository page) for sample size and registration.
+  verify: the equivalence to 1.5 to 2 years of schooling is the authors' cost-effectiveness calculation.
+related: [sierra-leone-gemini-math]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Students were randomly assigned to the tutoring programme or usual schooling, but the programme combined the AI tool with supervised sessions, so the effect belongs to the bundle.
+receipts:
+  - field: headline
+    quote: The effect on English, the main outcome of interest, was of 0.23 standard deviations.
+    locator: Abstract
+    source: 0
+  - field: headline
+    quote: significant improvement of 0.31 standard deviation on an assessment
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: The effect on English, the main outcome of interest, was of 0.23 standard deviations.
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: The effect on English, the main outcome of interest, was of 0.23 standard deviations.
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: significant improvement of 0.31 standard deviation on an assessment
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: The effect on English, the main outcome of interest, was of 0.23 standard deviations.
+    locator: Abstract
+    source: 0
+  - field: effect.absolute
+    quote: equating to 1.5 to 2 years of ’business-as-usual’ schooling
+    locator: Abstract
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: ad5edfecff751f03481bbd2153d6f0a72205d4d57b6469628a17afc94c541d77
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: fail
+  record: nigeria-edo-copilot-english-tutoring-world-bank-rct/2026-11-24.json
+held:
+  reason: grade-split
+  since: 2026-11-24
+  detail: "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre."
+  record: nigeria-edo-copilot-english-tutoring-world-bank-rct/2026-11-24.json

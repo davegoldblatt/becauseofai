@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "letrus-espirito-santo-ai-essay-feedback-enem-rct",
+  "date": "2026-11-24",
+  "as_of": "2026-11-24",
+  "entry_sha256": "d3c6f250cf441c9ec284f3df67c6a7c12387990b07cf2759d8aa8418118a1217",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-24"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.povertyactionlab.org/case-study/artificial-intelligence-strengthen-high-school-students-writing-skills",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-24T16:27:58.271Z",
+      "final_url": "https://www.povertyactionlab.org/case-study/artificial-intelligence-strengthen-high-school-students-writing-skills",
+      "sha256": "776ef8578aba7c937cf53c565a5633bcf38881b95a956303b85caf492b0c1847",
+      "chars": 8791,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The evaluation was conducted in 178 public schools, with approximately 12,000 students in 110 schools receiving access to the Letrus platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "closing about nine percent of the public-private school gap in essay scores",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Both interventions increased students’ entrance exam scores by about 0.09 standard deviations—equivalent to 17 points out of a possible 1,000 points",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "The evaluation was conducted in 178 public schools, with approximately 12,000 students in 110 schools receiving access to the Letrus platform.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "In 2019, the state of Espírito Santo piloted an artificial intelligence (AI) platform called Letrus",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-24",
+    "output": {
+      "full_text": true,
+      "source_kind": "program-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "program-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tested access to an AI writing platform with structured practice essays against no platform access, rather than holding the platform and practice program constant while varying AI.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "The report identifies the evaluated pilot as the 2019 study; no more precise evaluation dates are supplied."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Letrus partnered in evaluating its own platform, and Google.org supported the evaluation; the entry discloses both."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The report supports the stated reach and a 2019 randomized evaluation finding gains of about 0.09 SD, or 17 out of 1,000 points. It does not establish a preregistered primary endpoint for grade A, and the randomized design does not fit the observational definition of grade B."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14008,
+      "output": 585,
+      "total": 14593,
+      "cached": 0,
+      "reasoning": 67
+    },
+    "duration_ms": 15280
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}

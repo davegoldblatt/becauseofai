@@ -1,0 +1,101 @@
+id: henry-county-kentucky-gemini-writing-feedback-novice-tier
+section: because
+rank: 126
+headline: >-
+  Henry County Public Schools in Kentucky says 33% of students were in the novice tier
+  on state writing assessments before teachers used Gemini for rubric-aligned
+  feedback, and 15% of students advanced out of that tier afterwards.
+impact: "15% of students moved out of the novice writing tier after Gemini-supported feedback (district report)"
+impact_number: "15%"
+impact_label: "of students advanced out of the novice writing tier after Gemini-supported feedback, from 33% in it before"
+summary: >-
+  The district's superintendent, writing on Google's blog, says high-school teachers
+  with about 180 students each used Gemini, checked against the state rubric, to draft
+  writing feedback that teachers reviewed before students saw it. He reports the share
+  of students in the lowest (novice) tier on state assessments before and after.
+caveat: >-
+  The district's own account on the vendor's blog; a before and after comparison with
+  no control group and no dates; teachers reviewed the feedback, so this is AI plus
+  teacher; the post does not say how many students were involved.
+domain: education
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: null
+comparison: "Share of students in the novice tier on state writing assessments before vs after Gemini-supported feedback, same district, no control group"
+effect:
+  relative: "33% of students were in the novice tier before; 15% of students advanced out of the novice group after"
+  absolute: null
+reach: "High-school students in a rural Kentucky district; the number of students is not stated"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-25
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "How a Kentucky school district is scaling writing feedback with Gemini (Jim Masters, superintendent, Google blog)"
+    url: https://blog.google/products-and-platforms/products/education/henry-county-public-schools/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the district superintendent's own account of the district's programme,
+  published on Google's blog about Google's product (Gemini, provided at no additional
+  charge as part of a Google for Education district). No independent evaluation.
+what_would_change: "An independent analysis with a comparison group, or the state assessment data by year."
+notes: >-
+  verify: the post gives no calendar dates for before and after, so dates and window are left empty.
+  verify: "15% of students advanced out of the novice group" is the district's wording; whether this is a percentage of all students or of the novice group is not clear.
+  verify: the post also says the district saved thousands of instructional hours; no number is given, so it is not used.
+related: [sumner-county-coursemojo-tcap-ela]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: The comparison is the same district before and after adopting the tool with no control group, and teachers reviewed every piece of feedback, so the tool and the teacher practice around it are bundled.
+receipts:
+  - field: headline
+    quote: 33% of students were graded in the novice tier
+    locator: Improving student outcomes
+    source: 0
+  - field: headline
+    quote: 15% of students advanced out of the novice group
+    locator: Improving student outcomes
+    source: 0
+  - field: impact
+    quote: 15% of students advanced out of the novice group
+    locator: Improving student outcomes
+    source: 0
+  - field: impact_number
+    quote: 15% of students advanced out of the novice group
+    locator: Improving student outcomes
+    source: 0
+  - field: effect.relative
+    quote: 33% of students were graded in the novice tier
+    locator: Improving student outcomes
+    source: 0
+  - field: effect.relative
+    quote: 15% of students advanced out of the novice group
+    locator: Improving student outcomes
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-24
+  content: b8de71b7c17f8fbee6f169f69b9a5d5d6777f1555176c038f37a145eccda3e1e
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-24
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-24
+    verdict: pass
+  record: henry-county-kentucky-gemini-writing-feedback-novice-tier/2026-11-24.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The dated test fails because no dates are given for implementation or assessment outcomes.).
+    - "The two checkers disagreed on evidence: the drafter said D and the verifier said C. The entry shows the more cautious of the two, D."
