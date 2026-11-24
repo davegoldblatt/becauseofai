@@ -1,0 +1,88 @@
+id: oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time
+section: because
+rank: 129
+headline: >-
+  In an EEF-commissioned randomised trial of primary teachers in England, teachers
+  assigned to Oak National Academy's Aila AI lesson assistant spent around 49 minutes
+  less per week preparing lessons and resources, averaging 2.5 hours against 3.3 hours.
+impact: "49 fewer minutes a week of lesson preparation for teachers using the Aila AI lesson assistant (RCT)"
+impact_number: "−49 min"
+impact_label: "a week of lesson and resource preparation for primary teachers assigned to the Aila AI lesson assistant, vs a comparison group"
+summary: >-
+  A trade-press report of an independent trial run by NFER for the Education Endowment
+  Foundation says Year 3 to Year 6 teachers assigned to Aila prepared lessons faster
+  than a comparison group, with resource quality judged no worse. Use of the tool was
+  low and fell during the trial.
+caveat: >-
+  Read here from a trade-press report of the trial, not the EEF report itself (the EEF
+  page would not load); comparison teachers could still use other AI tools; Aila was
+  used for only around 7% of lessons; saving planning time does not mean better teaching.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: isolated
+  window: null
+comparison: "Teachers assigned to use Aila vs a comparison group of teachers not assigned to it, hours a week on lesson and resource preparation, ten weeks"
+effect:
+  relative: "Teachers using Aila spent 76% as much time preparing lessons and resources as teachers in the comparison group"
+  absolute: "Around 2.5 hours a week against 3.3 hours, about 49 minutes less per week"
+reach: "Year 3 to Year 6 teachers in England; 81% of teachers in the Aila group used it at least once"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-10-07
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "Oak's Aila saves primary teachers 49 minutes a week on lesson planning, EEF trial finds (EdTech Innovation Hub)"
+    url: https://www.edtechinnovationhub.com/news/oaks-aila-saves-primary-teachers-49-minutes-a-week-on-lesson-planning-eef-trial-finds
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a trade-press news report, not the trial report. The tool is made by
+  Oak National Academy, whose chief executive is quoted; the trial was commissioned by
+  the EEF and run by NFER, which the report calls independent.
+what_would_change: "The EEF and NFER evaluation report, read in full, confirming the figures and the pre-registered outcome."
+notes: >-
+  verify: the report says the trial ran ten weeks in autumn 2025 without calendar dates, so dates and window are left empty.
+  verify: whether the primary outcome was pre-registered is not stated in the text read, so evidence is B rather than A.
+  verify: the EEF project page returned HTTP 403 for the reader; replace this source with the EEF report when it reads.
+related: []
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Teachers were randomly assigned to use the tool or not, so the arms differ in access to the AI assistant, although comparison teachers could use other AI tools.
+receipts:
+  - field: headline
+    quote: spent around 49 minutes less per week on lesson and resource preparation
+    locator: Standfirst
+    source: 0
+  - field: headline
+    quote: averaging around 2.5 hours a week against 3.3 hours
+    locator: Article body, paragraph 3
+    source: 0
+  - field: impact
+    quote: spent around 49 minutes less per week on lesson and resource preparation
+    locator: Standfirst
+    source: 0
+  - field: impact_number
+    quote: spent around 49 minutes less per week on lesson and resource preparation
+    locator: Standfirst
+    source: 0
+  - field: effect.relative
+    quote: Teachers using Aila spent 76% as much time preparing lessons and resources as teachers in the comparison group
+    locator: Article body, paragraph 3
+    source: 0
+  - field: effect.absolute
+    quote: averaging around 2.5 hours a week against 3.3 hours
+    locator: Article body, paragraph 3
+    source: 0
+  - field: effect.absolute
+    quote: spent around 49 minutes less per week on lesson and resource preparation
+    locator: Standfirst
+    source: 0
+  - field: reach
+    quote: 81% of teachers in the Aila group used it at least once
+    locator: Article body, usage paragraph
+    source: 0

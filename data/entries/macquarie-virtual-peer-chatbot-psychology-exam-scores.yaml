@@ -1,0 +1,87 @@
+id: macquarie-virtual-peer-chatbot-psychology-exam-scores
+section: because
+rank: 131
+headline: >-
+  Macquarie University says second-year psychology students who used its Virtual Peer
+  AI chatbot in the two weeks before the final exam scored nearly five marks higher, a
+  9.45 per cent improvement, than non-users, in a pilot of 1,400 students.
+impact: "9.45% higher exam scores for users of the Virtual Peer AI study chatbot than non-users (university pilot)"
+impact_number: "+9.45%"
+impact_label: "higher final-exam scores for second-year psychology students who used the Virtual Peer AI chatbot than for non-users"
+summary: >-
+  A Microsoft customer story reports a Macquarie University pilot of Virtual Peer, a
+  retrieval-grounded chatbot built on Azure OpenAI that answers study and
+  administrative questions from the unit's own materials. Exam scores are compared
+  between users and non-users, controlling for past achievement.
+caveat: >-
+  A vendor customer story of the university's own pilot; students chose whether to use
+  the chatbot, so users may differ from non-users in ways past grades do not capture;
+  no control group was assigned; the report is dated 2025, before this window.
+domain: education
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "Students who used Virtual Peer in the two weeks before the exam vs non-users, final exam score, controlling for past academic achievement"
+effect:
+  relative: "A 9.45 per cent improvement in exam score for users compared with non-users"
+  absolute: "Nearly five marks higher on average"
+reach: "A pilot study involving 1,400 students enrolled in a second-year psychology unit"
+dates:
+  achieved_start: 2024-10
+  achieved_end: 2024-10
+  published: 2025-03-24
+  added: 2026-11-24
+  updated: 2026-11-24
+sources:
+  - title: "Macquarie University students' exam scores up by nearly 10 per cent thanks to new AI-powered chatbot (Microsoft Source Asia)"
+    url: https://news.microsoft.com/source/asia/2025/03/24/macquarie-university-students-exam-scores-up-by-nearly-10-per-cent-thanks-to-new-ai-powered-chatbot/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a Microsoft customer story about a Microsoft product (Azure OpenAI and
+  related services) with the university's own staff quoted on their own system; the
+  build used a Microsoft partner. No independent evaluation.
+what_would_change: "A randomised or pre-registered comparison, or an independent analysis of the extended 2025 trial across faculties."
+notes: >-
+  verify: the pilot is dated only as October 2024 in the text, so both achieved dates are set to 2024-10; the exam date itself is not stated.
+  verify: the story's own headline says "nearly 10 per cent"; the body gives 9.45 per cent and nearly five marks.
+related: [csun-ai-chatbot-student-support-rct]
+history:
+  - date: 2026-11-24
+    note: Added by the backfill run.
+rationale: Users and non-users are compared with a control for past achievement but students chose whether to use the tool, so self-selection is not ruled out.
+receipts:
+  - field: headline
+    quote: scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: headline
+    quote: The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: impact
+    quote: scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: impact_number
+    quote: scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: effect.relative
+    quote: scored nearly five marks higher on average – a 9.45 per cent improvement – compared to non-users
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: reach
+    quote: The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: dates.achieved_start
+    quote: The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024
+    locator: AI-powered learning yields significant improvements
+    source: 0
+  - field: dates.achieved_end
+    quote: The university conducted a pilot study involving 1,400 students enrolled in a second-year psychology unit in October 2024
+    locator: AI-powered learning yields significant improvements
+    source: 0
