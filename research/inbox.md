@@ -457,3 +457,12 @@ Candidates: 102 over 2026-11-21 to 2026-11-23, 11 flagged randomized, 15 announc
 ### Alerts
 
 - `jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref new version (10.12688/f1000research.183558.2), already noted 2026-11-22; still to check whether numbers changed.
+
+## 2026-11-24 (daily scout)
+
+Candidates: 144 over 2026-11-22 to 2026-11-24, 6 flagged randomized, 19 announcements, 0 alerts, 47 source errors (mostly Crossref 429s). No entries drafted.
+
+- Houston Methodist predictive AI (HDAI) follow-up for high-risk Medicare surgical patients: 30-day post-discharge mortality fell about 35%, readmissions about 18% (O/E ratios 0.48 to 0.31 and 1.17 to 0.96). [MedPage Today](https://www.medpagetoday.com/hospitalbasedmedicine/generalhospitalpractice/124037), HLTH conference case study. Reached patients and has a risk-matched comparison. Missing: the hospital's or HDAI's own page or a paper (the news report is secondary), exact achieved dates, absolute counts, and the fact it is a before-after against Medicare benchmark, not a trial.
+- Fleets using AI dash cams cut crash rates 37% in six months, Samsara: already logged 2026-11-18.
+- EDITH AI breast screening trial (Warwick/Cambridge) began: protocol, no result. Already noted 2026-11-23.
+- Skipped: ECG deep-learning ATTR-CM prioritisation (JAMA, diagnostic validation), bladder cancer risk prediction, medRxiv model validations, target-trial emulation of immunotherapy (not AI benefit), AEA registration in development, reviews, stocks and funding news.
