@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-23T14:11:48.835Z",
-  "since": "2026-11-22T14:11:48Z",
+  "generated_at": "2026-11-24T14:11:42.956Z",
+  "since": "2026-11-23T14:11:42Z",
   "site": "https://becauseofai.org",
   "entries": {
     "published": 78,
-    "held": 82,
+    "held": 83,
     "counts": {
       "because": 24,
       "not-because": 8,
@@ -16,175 +16,21 @@
     },
     "changed": [
       {
-        "id": "catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null",
-        "headline": "After an AI large-vessel-occlusion tool was added to two tele-stroke centres, the time from arrival to a transfer request for 265 stroke patients did not shorten: median 59 minutes before, 61 after.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "chatgpt-concept-mapping-orthopaedic-nursing-students-critical-thinking-quasi-experiment",
-        "headline": "In a two-group study of orthopaedic nursing students, critical-thinking scores rose from 2.40 to 2.97 after a workshop using ChatGPT for concept mapping, against 2.43 to 2.57 in a control group with standard teaching.",
+        "id": "access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion",
+        "headline": "Because of an autonomous AI eye exam at the point of care, 98% of non-White and 99.5% of White youth with diabetes completed a diabetic retinopathy screen, though before it fewer non-White youth had had a prior exam.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
-      },
-      {
-        "id": "retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china",
-        "headline": "In a multicentre randomized trial of 295 patients with suspected inherited retinal disease, specialists using the Retina4IRD AI decision-support system named the right gene category in their top five guesses 88.5% of the time, against 67.3% for specialists alone.",
-        "change": "added",
-        "state": "held (no-full-text)",
-        "url": null
-      },
-      {
-        "id": "adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null",
-        "headline": "A machine-learning system that chose motivational text messages did not significantly raise biochemically verified quitting at 6 months among 757 socioeconomically disadvantaged US smokers, against quitline-facilitation texts alone.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain",
-        "headline": "Because of AI, fewer adults with rotator cuff-related shoulder pain needed further healthcare after physiotherapy (3 vs 10 participants) when an AI home-exercise app with real-time computer-vision feedback was added, in a randomized trial of 46.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "aitriage-hrv-chest-pain-ed-singapore-pilot-rct",
-        "headline": "Because of AI, fewer emergency-department chest-pain patients in Singapore were admitted to hospital (50.2% vs 61.1%) when physicians were guided by an AI heart-rate-variability risk score, in a pilot randomized trial.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null",
-        "headline": "A ChatGPT-4 coach did not reduce procrastination significantly more than a human coach in a randomized pilot of 62 German university students, and 43.1% reported unwanted negative effects.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null",
-        "headline": "AI fracture detection did not significantly cut next-day diagnostic revisions (8.6% without AI, 5.7% with AI) among 667 children imaged out of hours in a German paediatric emergency department.",
-        "change": "added",
-        "state": "published",
-        "url": "https://becauseofai.org/entry/milvue-ai-paediatric-fracture-ed-leipzig-recall-null"
-      },
-      {
-        "id": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
-        "headline": "A machine-learning model that chose which mental-health micro-intervention to send 49 young people showed no benefit on positive or negative affect, and only a borderline gain in momentary resilience over random assignment.",
-        "change": "changed",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
-        "headline": "In a randomized crossover trial of 27 Amgen medical science liaisons, AI voice-to-text (Microsoft Copilot) raised their documentation satisfaction score from 2.541 to 3.304 against manual CRM entry.",
-        "change": "changed",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "dublin-ai-incidental-pe-ct-detection-before-after",
-        "headline": "After a Dublin tertiary hospital deployed a commercial AI tool for pulmonary embolism on routine contrast CT, reported incidental PE rose from 0.35% to 0.63% of eligible scans.",
-        "change": "changed",
-        "state": "held (fails-test)",
-        "url": null
-      },
-      {
-        "id": "instructor-designed-ai-19-universities-stem-exams-rct",
-        "headline": "Because of AI tools their own instructors designed, students in applied STEM classes at 19 universities scored 0.32 standard deviations higher on proctored, AI-free exams than students in classes randomized to wait a term.",
-        "change": "added",
-        "state": "published as reasonable",
-        "url": "https://becauseofai.org/entry/instructor-designed-ai-19-universities-stem-exams-rct"
-      },
-      {
-        "id": "khanmigo-hamilton-county-remedial-math-rct",
-        "headline": "A two-year cluster randomized trial in 18 Tennessee middle schools found that remedial-math students given Khan Academy with the Khanmigo AI tutor gained 1.3 national percentile ranks per term more than control grades, a small gain the authors say resembles Khan Academy practice without AI.",
-        "change": "changed",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/khanmigo-hamilton-county-remedial-math-rct"
-      },
-      {
-        "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
-        "headline": "AI-guided wearable monitoring after heart-failure discharge at five Veterans Affairs hospitals did not significantly cut heart-failure rehospitalization (16.3% vs 18.7%) compared with standard care.",
-        "change": "changed",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "medical-students-socratic-llm-chatbots-rct",
-        "headline": "Because of AI, third-year medical students who spent 10 minutes with two Socratic-prompted GPT-3.5 chatbots gained 8.9 points on a 15-question test, against 3.7 points for students who read the textbook for the same time, in a randomised trial.",
-        "change": "changed",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "nestle-zest-ai-surplus-redistribution-fareshare",
-        "headline": "Because of Zest's AI surplus-matching, a UK consortium redistributed 201.9 tonnes of Nestlé factory surplus to charities, supporting an estimated 94,133 people.",
-        "change": "changed",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/nestle-zest-ai-surplus-redistribution-fareshare"
-      },
-      {
-        "id": "numi-ai-math-tutoring-hamilton-county",
-        "headline": "An LLM math tutor given to middle-school students in Hamilton County, Tennessee helped them recover from mistakes and, inside a mastery workflow, scored 3.2 points higher on a delayed test of practiced material, a suggestive result.",
-        "change": "changed",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
-        "headline": "Because of AI, 96 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life 5.88 points higher than 93 patients on conventional follow-up.",
-        "change": "changed",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing",
-        "headline": "AI-assisted starting gonadotropin dosing did not raise IVF live birth (49.6% vs 50.4%) in 119 matched pairs at a Beijing reproductive centre.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings",
-        "headline": "Because of AI, Mercy says imaging AI cut scan-to-result time for flagged urgent cases from 19.8 hours to 1.3 hours, and 5,642 patients got accelerated attention for incidental findings in five months.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama",
-        "headline": "Because of AI, clinicians who adopted ambient AI scribes at five US academic health systems spent 16.0 fewer minutes on documentation than comparison clinicians, with a modest rise in weekly visits.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama"
-      },
-      {
-        "id": "ohiohealth-qventus-inpatient-discharge-13000-excess-days",
-        "headline": "Because of AI, Qventus says its discharge-planning software saved OhioHealth nearly 13,000 excess hospital days, equivalent to almost 35 patient-years.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot",
-        "headline": "Because of AI, emergency clinicians at St George's Hospital in London halved their paperwork time, saving each an additional 47 minutes, in an NHS England-funded AI-scribe pilot.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "tampa-general-palantir-sepsis-deaths-886-lives",
-        "headline": "Because of AI, Tampa General Hospital reports that Palantir's sepsis software has saved 886 lives since August 2022, with sepsis deaths cut by 68%.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/tampa-general-palantir-sepsis-deaths-886-lives"
       }
     ],
     "held_list": [
+      {
+        "id": "access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion",
+        "headline": "Because of an autonomous AI eye exam at the point of care, 98% of non-White and 99.5% of White youth with diabetes completed a diabetic retinopathy screen, though before it fewer non-White youth had had a prior exam.",
+        "reason": "grade-split",
+        "since": "2026-11-23",
+        "detail": "evidence: drafter C, verifier could not grade."
+      },
       {
         "id": "adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null",
         "headline": "A machine-learning system that chose motivational text messages did not significantly raise biochemically verified quitting at 6 months among 757 socioeconomically disadvantaged US smokers, against quitline-facilitation texts alone.",
@@ -763,6 +609,14 @@
   },
   "verifications": [
     {
+      "id": "access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion",
+      "date": "2026-11-23",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter C, verifier could not grade.",
+      "record": "access2-autonomous-ai-diabetic-eye-exam-youth-screening-completion/2026-11-23.json"
+    },
+    {
       "id": "adapt2quit-ml-text-messages-disadvantaged-smokers-rct-null",
       "date": "2026-11-23",
       "result": "held",
@@ -779,28 +633,12 @@
       "record": "ai-computer-vision-home-exercise-app-rotator-cuff-pain-rct-spain/2026-11-23.json"
     },
     {
-      "id": "ai4u-ml-assigned-micro-interventions-youth-mrt-null",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "ai4u-ml-assigned-micro-interventions-youth-mrt-null/2026-11-22.json"
-    },
-    {
       "id": "aitriage-hrv-chest-pain-ed-singapore-pilot-rct",
       "date": "2026-11-23",
       "result": "held",
       "reason": "ungrounded",
       "detail": "No receipt for impact.",
       "record": "aitriage-hrv-chest-pain-ed-singapore-pilot-rct/2026-11-23.json"
-    },
-    {
-      "id": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
-      "record": "amgen-rapid-copilot-voice-to-text-medical-science-liaisons-crossover/2026-11-22.json"
     },
     {
       "id": "catalyze-ai-methinks-tele-stroke-transfer-decision-quasi-experimental-null",
@@ -827,86 +665,6 @@
       "record": "chatgpt4-vs-human-coach-procrastination-students-pilot-rct-null/2026-11-23.json"
     },
     {
-      "id": "dane-county-ava-ai-non-emergency-calls-24000",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
-      "record": "dane-county-ava-ai-non-emergency-calls-24000/2026-11-22.json"
-    },
-    {
-      "id": "dublin-ai-incidental-pe-ct-detection-before-after",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "fails-test",
-      "detail": "The source shows a conflict of interest the entry does not state: The paper discloses one author's payments from several medical companies, although no Aidoc ties are declared; the entry says none found.",
-      "record": "dublin-ai-incidental-pe-ct-detection-before-after/2026-11-22.json"
-    },
-    {
-      "id": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The retrospective comparison supports an exploratory association between the AI screening pathway and higher odds of being African-American among patients reaching specialist care (OR 1.15). It does not establish improved attendance rates, causality, or AI's contribution separately from office-based",
-      "record": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care/2026-11-22.json"
-    },
-    {
-      "id": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The report supports a government-reported 27% decline after nationwide deployment, without an independent evaluation or isolated AI effect. Its table attributes the 4,500-plus alerts to Media Disease Surveillance, rather than the TB programme.",
-      "record": "india-ntep-ai-tools-adverse-tb-outcomes-decline-27-percent/2026-11-22.json"
-    },
-    {
-      "id": "instructor-designed-ai-19-universities-stem-exams-rct",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The preprint supports the reported exam effects, participation counts, and Spring 2025–Spring 2026 implementation period in a randomized study with preregistered outcomes. The headline OLS specification and AI-proof assessment exclusion were not preregistered, and the study does not separate AI from",
-      "record": "instructor-designed-ai-19-universities-stem-exams-rct/2026-11-22.json"
-    },
-    {
-      "id": "khanmigo-hamilton-county-remedial-math-rct",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The preregistered cluster randomized study supports the reported gains for the Khan Academy–Khanmigo package and all receipt numbers and dates. It does not isolate Khanmigo's added benefit or establish ongoing delivery after the study ended.",
-      "record": "khanmigo-hamilton-county-remedial-math-rct/2026-11-22.json"
-    },
-    {
-      "id": "link-hf2-ai-wearable-hf-rehospitalization-null",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "effect.absolute (receipt 5): contradicted, The abstract reports 17 control patients, but the registry reports 16 control heart-failure hospitalizations..",
-      "record": "link-hf2-ai-wearable-hf-rehospitalization-null/2026-11-22.json"
-    },
-    {
-      "id": "medical-students-socratic-llm-chatbots-rct",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter bundled, verifier isolated.",
-      "record": "medical-students-socratic-llm-chatbots-rct/2026-11-22.json"
-    },
-    {
-      "id": "mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade.",
-      "record": "mercy-aidoc-imaging-ai-scan-turnaround-incidental-findings/2026-11-22.json"
-    },
-    {
-      "id": "mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The abstract supports the reported time reductions and clinician counts in a large observational comparison of AI scribe adopters and non-adopters. It does not establish the benefit measurement dates or verify the entry's conflict disclosures.",
-      "record": "mgb-ucsf-ai-scribes-five-academic-centres-ehr-time-jama/2026-11-22.json"
-    },
-    {
       "id": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null",
       "date": "2026-11-23",
       "result": "published",
@@ -915,144 +673,57 @@
       "record": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null/2026-11-23.json"
     },
     {
-      "id": "nestle-zest-ai-surplus-redistribution-fareshare",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete news article supports the reported tonnage, estimated people supported, charity reach, and a bundled AI process compared with manual analysis. It does not establish calendar dates or how much of the total redistribution was additional because of AI.",
-      "record": "nestle-zest-ai-surplus-redistribution-fareshare/2026-11-22.json"
-    },
-    {
-      "id": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete press release supports the reported 4 versus 8 days and more than 4 million patients as government claims. It provides neither a measurement period nor an independent evaluation isolating AI's contribution.",
-      "record": "nhs-england-ai-chest-xray-lung-cancer-faster-reporting/2026-11-22.json"
-    },
-    {
-      "id": "numi-ai-math-tutoring-hamilton-county",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "ungrounded",
-      "detail": "impact_number (receipt 1): contradicted, Tables report 3.2 percentage points, but Section 5.5 twice gives 3.1 percentage points for the same effect.; effect.absolute (receipt 4): contradicted, Tables report 3.2 percentage points, but Section 5.5 gives 3.1 percentage points for the same delayed-test ",
-      "record": "numi-ai-math-tutoring-hamilton-county/2026-11-22.json"
-    },
-    {
-      "id": "ohiohealth-qventus-inpatient-discharge-13000-excess-days",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade.",
-      "record": "ohiohealth-qventus-inpatient-discharge-13000-excess-days/2026-11-22.json"
-    },
-    {
-      "id": "povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter C, verifier could not grade.",
-      "record": "povastim-ai-gonadotropin-starting-dose-ivf-cohort-null-beijing/2026-11-22.json"
-    },
-    {
-      "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol/2026-11-22.json"
-    },
-    {
       "id": "retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china",
       "date": "2026-11-23",
       "result": "held",
       "reason": "no-full-text",
       "detail": "No primary source could be read in full (source 0: fetch failed: The operation was aborted due to timeout).",
       "record": "retina4ird-ai-cdss-inherited-retinal-disease-genotype-rct-china/2026-11-23.json"
-    },
-    {
-      "id": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
-      "record": "san-diego-sheriff-hyper-ai-non-emergency-calls-20-percent/2026-11-22.json"
-    },
-    {
-      "id": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier C; attribution: drafter bundled, verifier could not grade.",
-      "record": "sparks-pd-ai-assistant-non-emergency-calls-25-percent/2026-11-22.json"
-    },
-    {
-      "id": "st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter isolated, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "st-georges-ed-tortus-ai-scribe-paperwork-time-nhs-pilot/2026-11-22.json"
-    },
-    {
-      "id": "tampa-general-palantir-sepsis-deaths-886-lives",
-      "date": "2026-11-22",
-      "result": "published",
-      "reason": null,
-      "detail": "The complete news article supports the hospital's reported 886 lives saved since August 2022 and the attributed 68% reduction in sepsis deaths. It supplies no calculation method, defined baseline, independent evaluation, or dated in-window results.",
-      "record": "tampa-general-palantir-sepsis-deaths-886-lives/2026-11-22.json"
-    },
-    {
-      "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "va-cade-colonoscopy-cluster-randomized-adenoma-detection/2026-11-22.json"
-    },
-    {
-      "id": "weber-911-ai-agent-non-emergency-calls-10-percent",
-      "date": "2026-11-22",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier in.",
-      "record": "weber-911-ai-agent-non-emergency-calls-10-percent/2026-11-22.json"
     }
   ],
   "announced": [
     {
-      "id": "aim-chd-ai-secondary-prevention-fuwai-rct",
-      "date": "2026-11-21",
-      "url": "https://becauseofai.org/entry/aim-chd-ai-secondary-prevention-fuwai-rct"
-    },
-    {
       "id": "hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care",
       "date": "2026-11-22",
       "url": "https://becauseofai.org/entry/hopkins-lumineticscore-autonomous-ai-dr-screening-african-american-eye-care"
+    },
+    {
+      "id": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null",
+      "date": "2026-11-24",
+      "url": "https://becauseofai.org/entry/milvue-ai-paediatric-fracture-ed-leipzig-recall-null"
     }
   ],
   "leads_added": [
-    "AI-guided handheld echocardiography for rheumatic heart disease screening by non-cardiologists, rural Nepal, mixed-methods feasibility. [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.12.26367974v1). The counterfactual (no cardiologist) is clean. Missing: a comparison (cases found vs usual referral), dates, whether screened people reached treatment.",
-    "EHR-embedded pragmatic RCT of ambient AI to cut nursing documentation time, protocol. [Contemp Clin Trials](https://doi.org/10.1016/j.cct.2026.108534). Protocol only; watch for results.",
-    "HIET-2, AI-assisted vs human-produced podcasts from Cochrane plain-language summaries, non-inferiority RCT protocol. [ISRCTN28623546](https://www.isrctn.com/ISRCTN28623546). Protocol only.",
-    "GenAI-DBT (carried over from the scout): read in full this run. A 45-student, 30-day feasibility pilot; MAAS and DERS showed no time-by-group interaction and mood did not differ. Too small and unpowered for a `not-because`; the only positive is textual sentiment, which the authors say is not emotional state. [arXiv 2611.25428](https://arxiv.org/abs/2611.25428).",
-    "Instructor-designed AI across 19 universities: drafted as `instructor-designed-ai-19-universities-stem-exams-rct`. Watch for the peer-reviewed version and the OSF pre-registration link, which the paper does not print.",
-    "Drafted: POvaStim AI starting-dose gonadotropin in IVF, matched cohort, null on live birth. [Frontiers in Endocrinology](https://doi.org/10.3389/fendo.2026.1944764). Full text read; confounded with clinician group.",
-    "AI-assisted CT reporting of rib fractures, pre/post implementation, Ji'an, China: [AJTR](https://doi.org/10.62347/PUOD9220). Reports faster turnaround (P < 0.001) and higher concordance; retrospective, reference standard is radiologist consensus. Missing: absolute turnaround minutes and implementation dates for a receipted entry.",
-    "Samsara 37% lower crash rate: already logged 2026-11-18. Microsoft climate information for farmers, [Punch](https://punchng.com/microsoft-deploys-ai-to-improve-climate-information-for-farmers/): no measured result seen; find the organisation's own page.",
-    "Skipped: ACTIVE protocol (again), retrospective model validations, reviews, surveys, benchmarks, funding and product news.",
-    "`jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref lists a new version (10.12688/f1000research.183558.2, 2026-09-17). Check whether numbers changed."
+    "Drafted: ACCESS2 autonomous AI diabetic eye exams in youth, 397 participants, equivalent completion (98% v 99.5%). [Nature Communications](https://doi.org/10.1038/s41467-026-78842-w). Abstract only; reasonable at best.",
+    "AI-guided EEG cap placement quality assurance, [Epilepsia](https://doi.org/10.1002/epi.70591): page returned 403 and could not be read. Missing: the paper itself, to see whether people were measured against usual placement.",
+    "LLM simulated patient for nursing triage, Hong Kong, [JMIR Nursing](https://doi.org/10.2196/98543): developmental study with usability and Net Promoter Score only, no outcome comparison. Skipped as an entry.",
+    "Cervical cancer awareness chatbot for women living with HIV, Nigeria, [PLOS Digital Health](https://doi.org/10.1371/journal.pdig.0001837): co-design evaluation, usage counts and appropriateness ratings, no comparison. Watch for an outcome study.",
+    "EDITH AI breast screening trial (Warwick) started recruiting, [press release](https://news.europawire.eu/university-of-warwick-led-10m-edith-study-starts-recruiting-women-for-ai-breast-screening-trial/eu-press-release/2026/11/23/12/23/07/189195/): protocol, no result yet.",
+    "Skipped: AEA registrations in development, retrospective model validations, reviews, benchmarks, surveys, funding, IPO and policy news; Samsara 37% already logged 2026-11-18.",
+    "`jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref new version (10.12688/f1000research.183558.2), already noted 2026-11-22; still to check whether numbers changed."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 6,
     "posts": [
       {
+        "id": "2125059513937952800",
+        "url": "https://x.com/bcuz_of_ai/status/2125059513937952800",
+        "text": "AI fracture detection did not significantly cut next-day diagnostic revisions (8.6% without AI, 5.7% with AI) among 667 children imaged out of hours in a German paediatric emergency department.\n\nhttps://t.co/dNZxPdKRO7 https://t.co/iPmtxq3nV6",
+        "created_at": "2026-11-24T02:50:44.000Z",
+        "impressions": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
         "id": "2124618874142220547",
         "url": "https://x.com/bcuz_of_ai/status/2124618874142220547",
         "text": "Because of autonomous AI diabetic eye screening in Johns Hopkins primary care, African-American patients were more likely to present to specialist eye care, an exploratory…\n\nhttps://t.co/ADhhE491l6 https://t.co/gKq5tow1j6",
         "created_at": "2026-11-22T21:39:47.000Z",
-        "impressions": 2,
+        "impressions": 3,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -1075,24 +746,36 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-22",
+    "day": "2026-11-23",
     "pageviews": 23,
-    "visits": 17,
+    "visits": 18,
     "top_paths": [
       {
         "path": "/",
-        "views": 19
+        "views": 16
       },
       {
-        "path": "/entry/octopus-energy-arlo-ai-email-assistant-customer-satisfaction",
+        "path": "/not-because-of-ai",
         "views": 2
+      },
+      {
+        "path": "/entry/hurricane-melissa-2025",
+        "views": 1
+      },
+      {
+        "path": "/entry/waymo-injury-crashes",
+        "views": 1
       },
       {
         "path": "/entry/ucsd-aspire-ai-tutor-precalculus-failure-rate",
         "views": 1
       },
       {
-        "path": "/about",
+        "path": "/entry/advance-ai-ecg-liver",
+        "views": 1
+      },
+      {
+        "path": "/method",
         "views": 1
       }
     ]
