@@ -601,3 +601,17 @@ Read and rejected:
 - Safe-place VR RCT (JMIR AI): volunteer sample, no clinical use. Dermatology GenAI cross-sectional study: correlations and standardized patients. ChatGPT Health triage (medRxiv): retrospective model evaluation.
 - LLM lay-language protocols (JMIR) and mindfulness response prediction (JMIR AI): reader timed out or model prediction only.
 - Remaining medRxiv and PubMed items: models, benchmarks, reviews, surveys, protocols; set aside from titles.
+
+## 2026-11-24, slice 32: papers and trial results, 2026-08-03 to 2026-08-10
+
+Drafted (0).
+
+Read and rejected:
+- Lille LLM lay summaries of brain MRI reports RCT (medRxiv, NCT07310394): 2,727 e-cohort volunteers read standardized reports, not their own; a vignette task, no clinical use (objective comprehension 58.3% vs 59.4%).
+- YOOMI gamified inpatient exercise pilot (NCT05815017): 24 analysed, length of stay 4.1 vs 6.3 days, but the record names AI only as a keyword and never says what the software does with AI; unblinded, tiny; left out.
+- PAINRelieveIt sickle cell RCT (NCT00600665): algorithm-based decision support run 2007 to 2013, not AI in any sense the record states.
+- Queen of Hearts AI-ECG crossover (Mil Med): 21 PAs reading 50 de-identified ECGs, a reader study; abstract only.
+- Hawaii CADe colonoscopy paper (Hawai'i J Health Soc Welf): the PDF prints as garbled text, so no quote can be checked; Europe PMC and the publisher copy would not read.
+- RESCUE rare-disease LLM screening, code stroke LLM triage notes, rheumatology referral LLMs, prostate MRI deep learning: retrospective or scenario evaluations, accuracy only.
+- Boora obesity platform: usability study, 15 users for 24 hours, no outcome. Canadian students GenAI survey and Dutch willingness-to-pay survey: opinion and prevalence.
+- Protocols (CHAT-AF-S, telerehabilitation, CABG chatbot, intergenerational, echo INSIGHT, construction education) and the remaining models, benchmarks and reviews: set aside from titles.
