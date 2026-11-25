@@ -1,0 +1,75 @@
+id: boston-google-project-green-light-ai-signal-retiming-delay-inrix
+section: because
+rank: 141
+headline: >-
+  Because of Google's AI signal-timing recommendations, Boston reports an average 13.5%
+  reduction in delay at retimed intersections.
+impact: "13.5% less delay at retimed intersections"
+impact_number: "13.5%"
+impact_label: "average reduction in delay at intersections retimed with AI recommendations, city says"
+summary: >-
+  Boston's Traffic Management Center applied Google Research's Project Green Light
+  recommendations, which use AI and Google Maps driving trends, to retime 114 intersections
+  in 20 neighbourhoods. The city, with traffic-analytics firm INRIX evaluating, reports
+  delay down 13.5% on average and up to 24% at some locations.
+caveat: >-
+  The city's own announcement. The release does not say over what dates the before and
+  after were measured, and the delay figure covers the intersections that were retimed in
+  phase 2 of the pilot, not the whole network. Human traffic engineers decide and apply
+  each retiming.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Delay at intersections before and after retiming with Project Green Light recommendations, evaluated with INRIX data"
+effect:
+  relative: "Average 13.5% reduction in delay, up to 24% at some locations"
+  absolute: null
+reach: "114 intersections across 20 Boston neighbourhoods"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-06-17
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "City of Boston: Mayor Wu Announces Expansion of Project Green Light Signal Optimization Program (17 June 2025)"
+    url: https://www.boston.gov/news/mayor-wu-announces-expansion-project-green-light-signal-optimization-program
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the City of Boston's own announcement about its own partnership with
+  Google Research, which supplies the AI recommendations; the city commissioned INRIX to
+  evaluate the impact. No independent audit of the figures.
+what_would_change: "A published INRIX evaluation with dated before and after periods and control intersections."
+notes: >-
+  verify: the release gives "since April 2024" for when analysis began but no dates for the
+  before and after measurement of delay, so achieved dates and the window grade are left
+  empty. The release is from June 2025, outside the slice window.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the AI only recommends timings and city engineers retime the signals alongside their own work, and no untreated comparison intersections are shown.
+receipts:
+  - field: headline
+    quote: the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%
+    locator: Body, paragraph beginning "The City of Boston has partnered with INRIX"
+    source: 0
+  - field: impact
+    quote: the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%
+    locator: Body, paragraph beginning "The City of Boston has partnered with INRIX"
+    source: 0
+  - field: impact_number
+    quote: the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%
+    locator: Body, paragraph beginning "The City of Boston has partnered with INRIX"
+    source: 0
+  - field: effect.relative
+    quote: the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%
+    locator: Body, paragraph beginning "The City of Boston has partnered with INRIX"
+    source: 0
+  - field: reach
+    quote: optimize 114 intersections across 20 neighborhoods
+    locator: Body, first paragraph
+    source: 0

@@ -654,3 +654,16 @@ Rejected:
 - VA SYD/Siemens (2021), Aganova Dublin (no result), CivilSense/Oldcastle (survey), Water Online/Itron (paywall stub), MIT ACEEE papers (reader returned an index page): not usable.
 - National Grid/Emerald AI UK trial, Southern Water sewer floods, Pumps & Systems: NOT READ (HTTP 403). CEPR copy of the Veolia paper: 403, NBER copy read instead.
 - About 22 searches and 26 pages read.
+
+## 2026-11-25, slice 35: announcements: roads, vehicles, rail, and aviation, 2026-05-13 to 2026-08-12
+
+Drafted (3):
+- iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower: IIHS preprint (July 2026, full text read), Waymo driverless crash rate 68% below human drivers 2021-2024 (B, isolated; window pre). Independent of Waymo's own hub entry.
+- septa-ai-bus-cameras-parking-violations-per-camera-hour: Inquirer (Aug 2026), violations 1.8 to 0.75 per camera hour, 41 s faster median bus time (agency figures; no dates).
+- boston-google-project-green-light-ai-signal-retiming-delay-inrix: city release (June 2025), delay down 13.5% at 114 retimed intersections (city's own figure; no dates).
+
+Rejected or not drafted:
+- Waymo hub (already waymo-injury-crashes); Tesla FSD/robotaxi reports (Oct 2026, self-reported, page 403); Baidu Dubai trial (Sept 2025, 40 trips); Wuhan Apollo Go outage (March 2026, vehicle counts only).
+- Hayward adaptive signals (city, July 2026): speeds up 20-49% but no AI named. San Anselmo, Nashville, Missouri City, Tucson NoTraffic: 403/404 or vendor estimates, undated.
+- NATS Pairwise (Aug 2025, rule-based, not AI), Assaia (vendor claims), British Airways (2025), Union Pacific ATI (sensors, no AI effect shown), KL City Hall (no figure), Samsara 73% (2025 vendor report), Aurora (zero collisions, company claim, not read).
+- Short of the floor on entries only: about 22 searches and 20 pages read; 3 entries.

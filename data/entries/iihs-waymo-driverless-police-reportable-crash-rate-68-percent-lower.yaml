@@ -1,0 +1,86 @@
+id: iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower
+section: because
+rank: 139
+headline: >-
+  Because of Waymo's driverless AI driver, an independent IIHS study found a 68% lower
+  police-reportable crash rate than human drivers in the same areas.
+impact: "68% lower crash rate"
+impact_number: "68%"
+impact_label: "lower police-reportable crash rate than human drivers, Waymo driverless, IIHS preprint"
+summary: >-
+  The Insurance Institute for Highway Safety cleaned federal crash reports for driverless
+  vehicles, coded which would have been reported to police, and compared Waymo's driverless
+  miles in San Francisco, Phoenix, Los Angeles and Austin with human drivers in the same
+  areas and years. Waymo's rate was 68% lower overall, lower in three of four cities.
+caveat: >-
+  A preprint submitted to a journal, not yet peer reviewed. It covers 2021 to 2024 and one
+  operator, uses Waymo's own mileage figures, and rests on the authors' coding of crash
+  narratives. Austin was not lower (small sample), and the authors say the results apply
+  only to the vehicles studied.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Waymo driverless police-reportable crash involvements per million miles vs human drivers' police-reported crashes in the same areas and years"
+effect:
+  relative: "Police-reportable crash involvement rate 68% lower than human drivers"
+  absolute: null
+reach: "About 50 million driverless Waymo miles in San Francisco, Phoenix, Los Angeles and Austin"
+dates:
+  achieved_start: 2021
+  achieved_end: 2024
+  published: 2026-07-23
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "Teoh, Kidd, Riexinger: Rise of the machines: crash experiences of highly automated vehicles and human drivers (IIHS preprint, July 2026)"
+    url: https://www.iihs.org/api/datastoredocument/bibliography/2374
+    type: primary
+  - title: "IIHS news: Waymo's driverless cars crash less often than people (23 July 2026)"
+    url: https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people
+    type: secondary
+conflicts: >-
+  The study was supported by the Insurance Institute for Highway Safety, which is also its
+  publisher. Waymo supplied the driverless mileage figures; no other operator reports them.
+what_would_change: "Peer-reviewed publication, and a repeat with later years and national mileage reporting for all operators."
+notes: >-
+  verify: the preprint says 3% higher in Austin; the IIHS news page says 4% higher. The
+  achieved dates are the study years 2021 to 2024 from the table titles. Waymo's own hub
+  figures are a separate entry (waymo-injury-crashes).
+related:
+  - waymo-injury-crashes
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: The comparison sets Waymo's driverless crash involvements against police-reported human crashes in the same areas and years, so the only difference is who or what drives.
+receipts:
+  - field: headline
+    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    locator: Section 3 Results, after Table 3
+    source: 0
+  - field: impact
+    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    locator: Section 3 Results, after Table 3
+    source: 0
+  - field: impact_number
+    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    locator: Section 3 Results, after Table 3
+    source: 0
+  - field: effect.relative
+    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    locator: Section 3 Results, after Table 3
+    source: 0
+  - field: reach
+    quote: "Waymo vehicles traveled about 50 million miles in driverless operation during the study period"
+    locator: Section 3 Results, before Table 4
+    source: 0
+  - field: dates.achieved_start
+    quote: "excluding interstates and freeways, 2021–2024"
+    locator: Table 4 title
+    source: 0
+  - field: dates.achieved_end
+    quote: "excluding interstates and freeways, 2021–2024"
+    locator: Table 4 title
+    source: 0

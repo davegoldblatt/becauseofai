@@ -1,0 +1,79 @@
+id: septa-ai-bus-cameras-parking-violations-per-camera-hour
+section: because
+rank: 140
+headline: >-
+  Because of AI cameras on SEPTA buses, Philadelphia says illegal parking in enforcement
+  areas fell from 1.8 to 0.75 violations per camera hour.
+impact: "1.8 to 0.75 violations per camera hour"
+impact_number: "1.8 → 0.75"
+impact_label: "violations per camera hour, AI bus cameras in Philadelphia, agency says"
+summary: >-
+  SEPTA and the Philadelphia Parking Authority put AI cameras on 152 buses on 16 routes to
+  flag vehicles blocking bus lanes and stops. SEPTA's planner told the Inquirer violations
+  fell from 1.8 to 0.75 per camera hour while camera use stayed steady, and median bus
+  travel time in enforcement areas dropped 41 seconds in March.
+caveat: >-
+  The agencies' own figures as reported by a newspaper; there is no control route and no
+  dates for the baseline. SEPTA's planner cautions that ridership growth and other factors
+  affect bus speeds, and the 41 seconds is one month against the same month a year before.
+  Human officers verify each violation before a ticket is issued.
+domain: transport
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Violations per camera hour as enforcement began vs about a year later, same routes"
+effect:
+  relative: null
+  absolute: "Violations fell from 1.8 to 0.75 per camera hour; median bus travel time in enforcement areas 41 seconds shorter in March than the March before"
+reach: "152 buses on 16 SEPTA routes in Center City and West Philadelphia"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-08-07
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "The Philadelphia Inquirer: Under the watchful eye of SEPTA's AI bus cameras, a decline in parking perpetrators (7 August 2026)"
+    url: https://www.inquirer.com/transportation/septa-ai-bus-cameras-stopping-parking-violations-fines-20260807.html
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are SEPTA's and the Philadelphia Parking Authority's own, reported in a news
+  article quoting their officials; the agencies run the programme and collect the fines.
+  No independent evaluation.
+what_would_change: "A published SEPTA or city evaluation with route-level travel times and a comparison with routes without cameras."
+notes: >-
+  verify: the article gives no start and end dates for the 1.8 to 0.75 comparison beyond
+  enforcement beginning "last year" (May 2025), so achieved dates and the window grade are
+  left empty. The cameras detect; human officers confirm before ticketing.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the AI cameras operate together with fines and officer verification, and the article shows no comparison routes without cameras.
+receipts:
+  - field: headline
+    quote: Violations fell from 1.8 to 0.75 per camera per hour, Zapson said.
+    locator: Body, paragraph after "In just over a year"
+    source: 0
+  - field: impact
+    quote: Violations fell from 1.8 to 0.75 per camera per hour, Zapson said.
+    locator: Body, paragraph after "In just over a year"
+    source: 0
+  - field: impact_number
+    quote: Violations fell from 1.8 to 0.75 per camera per hour, Zapson said.
+    locator: Body, paragraph after "In just over a year"
+    source: 0
+  - field: effect.absolute
+    quote: Violations fell from 1.8 to 0.75 per camera per hour, Zapson said.
+    locator: Body, paragraph after "In just over a year"
+    source: 0
+  - field: effect.absolute
+    quote: dropped 41 seconds in March compared with the same month last year before the cameras
+    locator: Body, second paragraph
+    source: 0
+  - field: reach
+    quote: cameras on 152 buses on 16 routes
+    locator: Body, paragraph beginning "Tickets are sent"
+    source: 0
