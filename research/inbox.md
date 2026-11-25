@@ -466,3 +466,13 @@ Candidates: 144 over 2026-11-22 to 2026-11-24, 6 flagged randomized, 19 announce
 - Fleets using AI dash cams cut crash rates 37% in six months, Samsara: already logged 2026-11-18.
 - EDITH AI breast screening trial (Warwick/Cambridge) began: protocol, no result. Already noted 2026-11-23.
 - Skipped: ECG deep-learning ATTR-CM prioritisation (JAMA, diagnostic validation), bladder cancer risk prediction, medRxiv model validations, target-trial emulation of immunotherapy (not AI benefit), AEA registration in development, reviews, stocks and funding news.
+
+## 2026-11-25 (daily scout)
+
+Candidates: 198 over 2026-11-23 to 2026-11-25, 13 flagged randomized, 15 announcements, 0 alerts, 73 source errors (mostly Crossref 429s). One entry drafted.
+
+- Drafted: CONCERN early-warning system, 74-unit cluster-randomized trial, in-hospital mortality HR 0.644. Read from the medRxiv preprint (the reader's Unpaywall copy); the Nature Medicine version is [10.1038/s41591-025-03609-7](https://doi.org/10.1038/s41591-025-03609-7). A new [medRxiv critique](https://www.medrxiv.org/content/10.64898/2026.11.23.26368768v1) raises spillover, exclusion and cluster-imbalance concerns; stated in the entry's conflicts.
+- AI companion and mental health of the elderly, Jiangsu, [AEA RCT 17436](https://www.socialscienceregistry.org/trials/17436): completed 2025-12 to 2026-07, registration only. Watch for results.
+- AI-assisted abdominal ultrasound crossover, [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.23.26368613v1): 33 sonographers, exam time down 2.23 minutes; standardized exams, no evidence it reached patients. Skipped.
+- ECG deep learning for ATTR-CM testing priority, [JAMA](https://jamanetwork.com/journals/jama/fullarticle/2853388): reader returned 403 (`NOT READ`). Missing: the paper, to see whether it reached patients.
+- Skipped: model validations, reviews, benchmarks, EDITH trial (protocol, already noted), funding and stock news.
