@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "concern-ews-cluster-rct-inpatient-mortality-columbia-brigham",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "19271c6f212657c195d6dc2b56dc4fc1b737e0c2bedda9f0aad0cd2a1527239b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1038/s41591-025-03609-7",
+      "ok": true,
+      "method": "unpaywall:pdf",
+      "fetched_at": "2026-11-25T21:43:46.681Z",
+      "final_url": "https://www.medrxiv.org/content/medrxiv/early/2024/06/04/2024.06.04.24308436.full.pdf",
+      "sha256": "39db37df8e1c48d688cee8097c9aa161f8cbef476a328e99dee0acb84d9cf0ae",
+      "chars": 38935,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Patients in the intervention group had a 35.6% decreased risk of death",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "The trial included 74 clinical units (37 intervention, 37 usual-care)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Patients in the intervention group had a 35.6% decreased risk of death",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Patients in the intervention group had a 35.6% decreased risk of death",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "95% confidence interval [CI], 0.532-0.778; P<.0001), 11.2% decreased LOS",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "A total of 181 patients in the intervention and 265 patients in usual-care experienced in-hospital mortality",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 60 893 hospital encounters (33 024 intervention and 27 869 usual-care) were",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "the trial was conducted at Site A from October 2020 to October 2021",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Site B from October 2021 to October 2022",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized units displayed or withheld the AI score while existing deterioration and escalation policies remained identical across groups.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Site A ran October 2020–October 2021 and Site B October 2021–October 2022."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The entry discloses Bates's outside grants, fees and equity; the source also identifies the algorithm as proprietary intellectual property."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preprint supports the reported randomized comparison and numbers, although the 181 versus 265 deaths count mortality as the first negative event in the survival analysis. Evidence grade A cannot be confirmed because the supplied text identifies registration and a priori endpoints without establishing that those endpoints were preregistered; the secondary critique was not supplied."
+    },
+    "error": null,
+    "tokens": {
+      "input": 21042,
+      "output": 838,
+      "total": 21880,
+      "cached": 0,
+      "reasoning": 322
+    },
+    "duration_ms": 19911
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

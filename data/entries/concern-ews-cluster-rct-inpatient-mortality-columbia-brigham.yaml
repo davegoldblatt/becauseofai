@@ -95,3 +95,24 @@ receipts:
     quote: Site B from October 2021 to October 2022
     locator: Methods, study design
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 19271c6f212657c195d6dc2b56dc4fc1b737e0c2bedda9f0aad0cd2a1527239b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: fail
+  record: concern-ews-cluster-rct-inpatient-mortality-columbia-brigham/2026-11-25.json
+held:
+  reason: grade-split
+  since: 2026-11-25
+  detail: "evidence: drafter A, verifier could not grade."
+  record: concern-ews-cluster-rct-inpatient-mortality-columbia-brigham/2026-11-25.json
