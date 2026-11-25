@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "cc1d0cf9ed8c168eb2527b17056ff4ceb38595fe47fd4aaca9ff8dd2be09945a",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.iihs.org/api/datastoredocument/bibliography/2374",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-25T16:07:46.500Z",
+      "final_url": "https://www.iihs.org/api/datastoredocument/bibliography/2374",
+      "sha256": "f6f7b4d1827dd7c4c7a8d37adc847aef7d3ffe36ba2a2edd194775a731e30c75",
+      "chars": 65796,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Waymo vehicles traveled about 50 million miles in driverless operation during the study period",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "excluding interstates and freeways, 2021–2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "excluding interstates and freeways, 2021–2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison tests Waymo's complete driverless vehicle deployment against human driving, with differences in vehicles and operating environments rather than AI alone.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Methods specify July 2021 through December 2024 for SGO data; the full-year 2021 human benchmark is explicitly explained."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "IIHS support and publicly reported Waymo mileage are disclosed, but the text identifies no vendor funding, employment, equity, patent, or licence conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The preprint supports a 68% lower police-reportable crash involvement rate across about 50 million driverless miles during 2021–2024. The observational comparison does not isolate AI from the broader vehicle deployment and operating conditions."
+    },
+    "error": null,
+    "tokens": {
+      "input": 25854,
+      "output": 738,
+      "total": 26592,
+      "cached": 0,
+      "reasoning": 217
+    },
+    "duration_ms": 17883
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The preprint supports a 68% lower police-reportable crash involvement rate across about 50 million driverless miles during 2021–2024. The observational comparison does not isolate AI from the broader vehicle deployment and operating conditions.",
+    "confidence": "speculative",
+    "relaxed": [
+      "The two checkers disagreed on attribution: the drafter said isolated and the verifier said bundled. The entry shows the drafter's grade, isolated; treat that grade as unsettled."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": "bundled"
+      }
+    ]
+  }
+}

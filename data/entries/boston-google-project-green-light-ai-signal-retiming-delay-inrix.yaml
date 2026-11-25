@@ -73,3 +73,24 @@ receipts:
     quote: optimize 114 intersections across 20 neighborhoods
     locator: Body, first paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: f4ccdd38249aef45c38f2f5a4b7bda47534d8e2872b5997662ba6a6990c07059
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: fail
+  record: boston-google-project-green-light-ai-signal-retiming-delay-inrix/2026-11-25.json
+held:
+  reason: grade-split
+  since: 2026-11-25
+  detail: "window: drafter no grade, verifier pre."
+  record: boston-google-project-green-light-ai-signal-retiming-delay-inrix/2026-11-25.json

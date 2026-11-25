@@ -57,30 +57,49 @@ history:
 rationale: The comparison sets Waymo's driverless crash involvements against police-reported human crashes in the same areas and years, so the only difference is who or what drives.
 receipts:
   - field: headline
-    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    quote: Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.
     locator: Section 3 Results, after Table 3
     source: 0
   - field: impact
-    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    quote: Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.
     locator: Section 3 Results, after Table 3
     source: 0
   - field: impact_number
-    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    quote: Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.
     locator: Section 3 Results, after Table 3
     source: 0
   - field: effect.relative
-    quote: "Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers."
+    quote: Overall, when including police-reportable crashes, Waymo’s crash rate was 68% lower than that of human drivers.
     locator: Section 3 Results, after Table 3
     source: 0
   - field: reach
-    quote: "Waymo vehicles traveled about 50 million miles in driverless operation during the study period"
+    quote: Waymo vehicles traveled about 50 million miles in driverless operation during the study period
     locator: Section 3 Results, before Table 4
     source: 0
   - field: dates.achieved_start
-    quote: "excluding interstates and freeways, 2021–2024"
+    quote: excluding interstates and freeways, 2021–2024
     locator: Table 4 title
     source: 0
   - field: dates.achieved_end
-    quote: "excluding interstates and freeways, 2021–2024"
+    quote: excluding interstates and freeways, 2021–2024
     locator: Table 4 title
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: cc1d0cf9ed8c168eb2527b17056ff4ceb38595fe47fd4aaca9ff8dd2be09945a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: pass
+  record: iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower/2026-11-25.json
+  confidence: speculative
+  relaxed:
+    - "The two checkers disagreed on attribution: the drafter said isolated and the verifier said bundled. The entry shows the drafter's grade, isolated; treat that grade as unsettled."

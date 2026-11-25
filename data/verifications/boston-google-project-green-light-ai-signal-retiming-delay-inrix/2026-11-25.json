@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "boston-google-project-green-light-ai-signal-retiming-delay-inrix",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "f4ccdd38249aef45c38f2f5a4b7bda47534d8e2872b5997662ba6a6990c07059",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.boston.gov/news/mayor-wu-announces-expansion-project-green-light-signal-optimization-program",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-25T16:07:27.496Z",
+      "final_url": "https://www.boston.gov/news/mayor-wu-announces-expansion-project-green-light-signal-optimization-program",
+      "sha256": "9d9c35b797f7cfca940b4421a94d068df4a42eb82cd238438feefe02a9a913e3",
+      "chars": 6754,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "the City has seen an average 13.5% reduction in delay, with some locations seeing improvements of up to 24%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "optimize 114 intersections across 20 neighborhoods",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The reported comparison evaluates traffic delay after engineers implemented AI recommendations together with signal retiming and coordination, without separately isolating the AI contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; phase 2 measurement periods are unspecified, and April 2024 dates the start of traffic analysis."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The city reports results from its own partnership with Google Research, the AI supplier, and includes a Google product manager's endorsement."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The dated test fails because the phase 2 benefit measurement dates are unspecified; the results were already reported by June 2025, before the current window."
+      },
+      "summary": "The release supports the reported 13.5% average delay reduction, improvements up to 24%, and implementation at 114 intersections across 20 neighborhoods. It provides neither dated measurement periods nor a comparison isolating AI from the implemented retiming package."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13336,
+      "output": 745,
+      "total": 14081,
+      "cached": 0,
+      "reasoning": 248
+    },
+    "duration_ms": 18204
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}
