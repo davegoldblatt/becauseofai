@@ -635,3 +635,22 @@ Rejected:
 - Southeast Delco Amira (CBS): 59 to 91 words a minute at one school, but the school year is not clear; not drafted (eight-entry room, weak dates).
 - SFUSD Amira, Imagine Learning and NoRedInk grading case studies, OECD pass-rate figure, Rori Ghana (2024 paper), Bastani Türkiye study: older, vendor marketing or not read.
 - About 18 searches and 17 pages read.
+
+## 2026-11-25, slice 39: announcements: water, power, and buildings, 2026-05-13 to 2026-08-12
+
+Drafted (6):
+- veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment: NBER-hosted working paper, 164 French plants, electricity -5.4%, CO2 -6%, energy spend -8.2% (full text read; B, isolated; window pre).
+- fluix-ai-cooling-tenhats-knoxville-data-center-pue: FLUIX press release, PUE 1.36 to 1.27 (modeled HVAC saving; speculative).
+- mit-campus-ai-building-optimization-nw23-summer-energy-savings: MIT sustainability page, 10-70% summer savings in one building (no baseline or dates).
+- apavital-iasi-xylem-vue-ai-leak-detection-injected-volume: Xylem case study, injected volume -44%, night use -64% in one district (vendor; no dates).
+- china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat: AI for Good write-up of a talk, heat -7%, electricity >10% (speaker's figures; no dates).
+- evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow: EPA smart-sewers page, CSO down more than 100 million gallons a year (no years).
+
+Rejected:
+- Thames Water Origin Orbit and R-Zero children's hospital: already entries.
+- Slättö Uppsala (INREV, 13% heating cut): drafted then dropped; the page has no date and the schema needs a published date.
+- Wild Rice Electric (T&D World): remote-sensing vegetation plan, no AI named. National Grid/AiDash (Renewable Energy World): 2024 trade report, undated results, not drafted.
+- ecobee Grid Resiliency (108 MW): what the AI did is unclear. MPWiK Wroclaw (Deloitte): prediction accuracy only.
+- VA SYD/Siemens (2021), Aganova Dublin (no result), CivilSense/Oldcastle (survey), Water Online/Itron (paywall stub), MIT ACEEE papers (reader returned an index page): not usable.
+- National Grid/Emerald AI UK trial, Southern Water sewer floods, Pumps & Systems: NOT READ (HTTP 403). CEPR copy of the Veolia paper: 403, NBER copy read instead.
+- About 22 searches and 26 pages read.

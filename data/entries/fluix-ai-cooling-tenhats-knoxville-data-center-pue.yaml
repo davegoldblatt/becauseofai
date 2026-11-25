@@ -1,0 +1,85 @@
+id: fluix-ai-cooling-tenhats-knoxville-data-center-pue
+section: because
+rank: 134
+headline: >-
+  Because of AI cooling control, a Knoxville data centre's PUE improved from 1.36
+  to 1.27, FLUIX reports.
+impact: "PUE 1.36 to 1.27"
+impact_number: "6.6%"
+impact_label: "better power usage effectiveness at a data centre under AI cooling control"
+summary: >-
+  FLUIX AI says its autonomous cooling controller, running a 2 MW Knoxville data
+  centre's cooling for several months, moved power usage effectiveness from 1.36
+  to 1.27 with no service-level excursions.
+caveat: >-
+  The vendor's own press release about its own product; the HVAC saving is
+  modeled rather than metered, and the larger power-headroom and revenue figures
+  are projections.
+domain: infrastructure
+ai_type: hybrid
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "PUE during full AI control against PUE outside it at the same site (vendor analysis, said to be reviewed by TRC)"
+effect:
+  relative: "6.6% PUE improvement"
+  absolute: "PUE moved from 1.36 to 1.27; 0.4 MWh/day modeled HVAC savings"
+reach: "TenHats, a 2 MW data centre in Knoxville, Tennessee"
+dates:
+  achieved_start: 2025-12
+  achieved_end: 2026-03
+  published: 2026-06-18
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "FLUIX Inc. press release: Tennessee Data Center's AI Cooling System Cuts Energy Waste, Opens Path to More Compute (18 June 2026)"
+    url: https://www.utilitydive.com/press-release/20260617-tennessee-data-centers-ai-cooling-system-cuts-energy-waste-opens-path-to/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the vendor FLUIX's own press release about its own product, with
+  a quote from its customer TenHats; the work was supported by TVA EnergyRight.
+  The release says the results are preliminary.
+what_would_change: "Metered (not modeled) energy at full load against a comparison period or site, published by someone other than the vendor."
+notes: >-
+  verify: the dates come from an image caption in the release (December 2025 to
+  March 2026). The people reached are the facility's operators and tenants, not
+  individuals measured; the benefit is facility energy.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the comparison is the vendor's own PUE during full AI control against other periods at one site, with load and weather not separated from the AI's effect.
+receipts:
+  - field: headline
+    quote: 6.6% PUE improvement, moving from 1.36 to 1.27
+    locator: Body, paragraph beginning "Preliminary analysis showed"
+    source: 0
+  - field: impact
+    quote: 6.6% PUE improvement, moving from 1.36 to 1.27
+    locator: Body, paragraph beginning "Preliminary analysis showed"
+    source: 0
+  - field: impact_number
+    quote: 6.6% PUE improvement, moving from 1.36 to 1.27
+    locator: Body, paragraph beginning "Preliminary analysis showed"
+    source: 0
+  - field: effect.relative
+    quote: 6.6% PUE improvement, moving from 1.36 to 1.27
+    locator: Results Summary
+    source: 0
+  - field: effect.absolute
+    quote: 0.4 MWh/day of modeled HVAC savings during full A.I.M.I. control periods and a 6.6% PUE improvement, moving from 1.36 to 1.27
+    locator: Body, paragraph beginning "Preliminary analysis showed"
+    source: 0
+  - field: reach
+    quote: TenHats is a 2 MW data center built for AI-ready, mission-critical operations
+    locator: About TenHats
+    source: 0
+  - field: dates.achieved_start
+    quote: Preliminary results from the TenHats deployment (December 2025–March 2026)
+    locator: Media gallery caption
+    source: 0
+  - field: dates.achieved_end
+    quote: Preliminary results from the TenHats deployment (December 2025–March 2026)
+    locator: Media gallery caption
+    source: 0

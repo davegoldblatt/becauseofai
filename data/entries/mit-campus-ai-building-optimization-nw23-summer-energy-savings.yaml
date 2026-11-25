@@ -1,0 +1,69 @@
+id: mit-campus-ai-building-optimization-nw23-summer-energy-savings
+section: because
+rank: 135
+headline: >-
+  Because of AI building optimization, MIT reports 10–70% summer energy savings
+  in one campus building.
+impact: "10–70% summer energy savings"
+impact_number: "10–70%"
+impact_label: "summer energy savings in one MIT campus building from building-level AI optimization"
+summary: >-
+  MIT's sustainability office reports early pilot results from machine-learning
+  controls that use weather forecasts, occupancy, schedules and grid conditions
+  to run heating and cooling in a campus building.
+caveat: >-
+  The institution's own progress note about its own pilot with a vendor partner;
+  no baseline, period or method is stated, the range is wide, and the pilot
+  layers AI on top of other controls changes.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None stated in the source"
+effect:
+  relative: "10–70% summer energy savings in building NW23"
+  absolute: null
+reach: "Campus buildings at MIT (pilot in Building NW23)"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-03-12
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "MIT Office of Sustainability: AI to Reduce Building Energy Use: Pilot Program Update and Next Steps (12 March 2026)"
+    url: https://sustainability.mit.edu/article/ai-reduce-building-energy-use-pilot-program-update-and-next-steps
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is MIT's own announcement about its own pilot, run with Schneider
+  Electric staff on the project team; no independent audit.
+what_would_change: "Metered savings against a stated baseline over a named period, with the AI layer separated from the scheduling and set-point changes."
+notes: >-
+  verify: the source gives no period or baseline for the savings, so achieved
+  dates and the window grade are left empty. The page also reports up to 40%
+  annual savings in Building 66 classrooms from scheduling and improved controls,
+  which is not credited to AI here.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the savings come from a pilot that layers machine-learning optimization on scheduling and set-point controls, and the page states no comparison that isolates the AI layer.
+receipts:
+  - field: headline
+    quote: 10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions
+    locator: Early Results section
+    source: 0
+  - field: impact
+    quote: 10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions
+    locator: Early Results section
+    source: 0
+  - field: impact_number
+    quote: 10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions
+    locator: Early Results section
+    source: 0
+  - field: effect.relative
+    quote: 10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions
+    locator: Early Results section
+    source: 0

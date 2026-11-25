@@ -1,0 +1,83 @@
+id: veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment
+section: because
+rank: 133
+headline: >-
+  Because of AI aeration control, French wastewater plants used 5.4% less
+  electricity and emitted 6% less carbon, and paid 8.2% less for energy.
+impact: "5.4% less electricity"
+impact_number: "5.4%"
+impact_label: "less electricity used by wastewater plants under full AI aeration control"
+summary: >-
+  A working paper compares French wastewater plants before and after an AI
+  aeration-control system took over, against plants not yet switched on and
+  against hours when the AI was interrupted, and finds lower electricity use,
+  emissions and energy bills.
+caveat: >-
+  A working paper, not yet peer reviewed; the plants volunteered and were
+  selected for technical compatibility, the effect is measured over the first ten
+  weeks after activation, and the data came from the operator and the AI vendor.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: isolated
+  window: pre
+comparison: "Plants before and after AI activation, against not-yet-treated plants and against periods when the AI was interrupted (staggered roll-out)"
+effect:
+  relative: "Electricity use −5.4%, carbon emissions −6%, energy expenditure −8.2% under full AI control"
+  absolute: null
+reach: "164 French wastewater treatment plants, January 2022 to July 2025"
+dates:
+  achieved_start: 2022-10
+  achieved_end: 2025-07
+  published: 2026-07-17
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "Abitbol, Aghion, Antonin, Barrage and Lengereau: Green AI in Industry. Quasi-Experimental Evidence from the Water Treatment Sector (working paper, 17 July 2026)"
+    url: https://conference.nber.org/conf_papers/f240807.pdf
+    type: primary
+conflicts: >-
+  The authors thank the operator's staff for transmitting and handling the data;
+  the AI system is the vendor Purecontrol's product, run by the operator Veolia.
+  The authors report EU (ERC) funding and no tie to the vendor. This is a
+  working paper, not a peer-reviewed article.
+what_would_change: "Peer-reviewed publication, and results over a longer window than the first ten weeks after activation."
+notes: >-
+  verify: the achieved dates are the first AI activation (October 2022) and the
+  end of the observation period (4 July 2025); the AI control kept running
+  after that. The window grade is set to pre because the observation ended a
+  year before publication.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Isolated because the same plants are compared before and after AI control, against not-yet-treated plants and against hours when the AI was interrupted, so the arms differ only by the AI aeration control.
+receipts:
+  - field: headline
+    quote: reduces plants’ electricity consumption and carbon emissions by 5.4% and 6% respectively, and energy expenditures by 8.2%
+    locator: Abstract
+    source: 0
+  - field: impact
+    quote: reduces plants’ electricity consumption and carbon emissions by 5.4% and 6%
+    locator: Abstract
+    source: 0
+  - field: impact_number
+    quote: reduces plants’ electricity consumption and carbon emissions by 5.4% and 6%
+    locator: Abstract
+    source: 0
+  - field: effect.relative
+    quote: reduces plants’ electricity consumption and carbon emissions by 5.4% and 6% respectively, and energy expenditures by 8.2%
+    locator: Abstract
+    source: 0
+  - field: reach
+    quote: sample covers 164 plants observed from January 2022 to July 2025
+    locator: Section 1, Introduction
+    source: 0
+  - field: dates.achieved_start
+    quote: the first AI activation occurring in October 2022
+    locator: Section 2, company-wide rollout
+    source: 0
+  - field: dates.achieved_end
+    quote: As of July 4, 2025, the end of our observation period
+    locator: Section 2, company-wide rollout
+    source: 0
