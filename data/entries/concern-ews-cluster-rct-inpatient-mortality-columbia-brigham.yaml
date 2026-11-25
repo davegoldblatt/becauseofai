@@ -1,0 +1,118 @@
+id: concern-ews-cluster-rct-inpatient-mortality-columbia-brigham
+section: because
+rank: 142
+headline: >-
+  Because of an AI early-warning score shown to care teams, hospitalized
+  patients had a 35.6% lower instantaneous risk of in-hospital death in a
+  74-unit cluster-randomized trial.
+impact: "35.6% lower risk of in-hospital death"
+impact_number: "−36%"
+impact_label: "risk of in-hospital death with the CONCERN early-warning score"
+summary: >-
+  The CONCERN EWS, a model that reads nursing notes and other EHR data to flag
+  patients at risk of deterioration, was displayed on 37 randomly assigned
+  units at two health systems and withheld on 37 others. Across 60,893
+  encounters, in-hospital deaths were 181 in the intervention group and 265 in
+  usual care (adjusted HR 0.644, 95% CI 0.532-0.778). Unanticipated ICU
+  transfers rose by 24.9%.
+caveat: >-
+  Read from the June 2024 medRxiv preprint; a separate 2026 critique raises
+  concerns about ICU-bed spillover, exclusions and pre-trial unit mortality
+  differences that could overstate the effect. Unanticipated ICU transfers
+  increased.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Units showing the CONCERN EWS risk score vs usual-care units, cluster-randomized (37 vs 37 units)"
+effect:
+  relative: "35.6% decreased risk of death (adjusted HR 0.644, 95% CI 0.532-0.778); 11.2% decreased length of stay"
+  absolute: "181 in-hospital deaths in the intervention group vs 265 in usual care"
+reach: "60,893 hospital encounters (33,024 intervention, 27,869 usual care) on 74 units at two health systems"
+dates:
+  achieved_start: 2020-10
+  achieved_end: 2022-10
+  published: 2024-06-04
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "medRxiv preprint: Multisite Pragmatic Cluster-Randomized Controlled Trial of the CONCERN Early Warning System (NCT03911687; published in Nature Medicine 2025, doi 10.1038/s41591-025-03609-7)"
+    url: https://doi.org/10.1038/s41591-025-03609-7
+    doi: 10.1038/s41591-025-03609-7
+    type: primary
+  - title: "medRxiv: Concerns over spillover, exclusions, and hospital unit differences in an AI early warning system trial (CONCERN-EWS)"
+    url: https://www.medrxiv.org/content/10.64898/2026.11.23.26368768v1
+    type: secondary
+conflicts: "Funded by NINR; one author discloses grants, fees and equity from several health-technology companies, outside the submitted work. A 2026 RAND/Cedars-Sinai critique questions spillover and cluster imbalance."
+what_would_change: null
+notes: >-
+  verify: dates.published is the preprint date (2024-06-04); the Nature Medicine
+  version is later and the reader returned the preprint text.
+  verify: the two sites ran at different times (Site A October 2020 to October
+  2021, Site B October 2021 to October 2022); the end date is the later one.
+  verify: window is pre because the trial ended more than twelve months ago.
+related: []
+history:
+  - date: 2026-11-25
+    note: Added by the daily scout.
+rationale: Units were randomized to display the score or not, so the arms differ only by the AI's risk score and attribution is isolated.
+receipts:
+  - field: headline
+    quote: Patients in the intervention group had a 35.6% decreased risk of death
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: The trial included 74 clinical units (37 intervention, 37 usual-care)
+    locator: Methods, study design
+    source: 0
+  - field: impact
+    quote: Patients in the intervention group had a 35.6% decreased risk of death
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Patients in the intervention group had a 35.6% decreased risk of death
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: 95% confidence interval [CI], 0.532-0.778; P<.0001), 11.2% decreased LOS
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: A total of 181 patients in the intervention and 265 patients in usual-care experienced in-hospital mortality
+    locator: Results 3.2 Primary Outcomes
+    source: 0
+  - field: reach
+    quote: A total of 60 893 hospital encounters (33 024 intervention and 27 869 usual-care) were
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: the trial was conducted at Site A from October 2020 to October 2021
+    locator: Methods, study design
+    source: 0
+  - field: dates.achieved_end
+    quote: Site B from October 2021 to October 2022
+    locator: Methods, study design
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 19271c6f212657c195d6dc2b56dc4fc1b737e0c2bedda9f0aad0cd2a1527239b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: fail
+  record: concern-ews-cluster-rct-inpatient-mortality-columbia-brigham/2026-11-25.json
+held:
+  reason: grade-split
+  since: 2026-11-25
+  detail: "evidence: drafter A, verifier could not grade."
+  record: concern-ews-cluster-rct-inpatient-mortality-columbia-brigham/2026-11-25.json
