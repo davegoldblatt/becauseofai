@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "cc431d8c87a570d771c883c7d5d4b73462e45a25feb5290c72193aa5e9b733c8",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://conference.nber.org/conf_papers/f240807.pdf",
+      "ok": true,
+      "method": "pdf",
+      "fetched_at": "2026-11-25T03:16:34.772Z",
+      "final_url": "https://conference.nber.org/conf_papers/f240807.pdf",
+      "sha256": "b01d269f2a5474fc21a6eb963c53cfd547b5d14acb11214571010d4e5c76a980",
+      "chars": 109589,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "reduces plants’ electricity consumption and carbon emissions by 5.4% and 6% respectively, and energy expenditures by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "reduces plants’ electricity consumption and carbon emissions by 5.4% and 6%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "reduces plants’ electricity consumption and carbon emissions by 5.4% and 6%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "reduces plants’ electricity consumption and carbon emissions by 5.4% and 6% respectively, and energy expenditures by 8.2%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "sample covers 164 plants observed from January 2022 to July 2025",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "the first AI activation occurring in October 2022",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "As of July 4, 2025, the end of our observation period",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "preprint",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "preprint",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The quasi-experiment compares AI control with conventional automated control using staggered activation, not-yet-treated plants, and interruptions within equipped plants.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Section 2.4 gives first activation in October 2022 and observation ending July 4, 2025; Section 4.2 corroborates the start."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "Operator and vendor data provision and internal assessments are disclosed in both texts, but the source establishes no vendor funding, author financial ties, or company control of the study."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The working paper supports estimated reductions of 5.4% in electricity, 6% in electricity-related emissions, and 8.2% in energy expenditure under full AI control across the first ten post-activation weeks. Its 164-plant analytical sample includes untreated controls, and its observations end before the current twelve-month window."
+    },
+    "error": null,
+    "tokens": {
+      "input": 34446,
+      "output": 773,
+      "total": 35219,
+      "cached": 0,
+      "reasoning": 222
+    },
+    "duration_ms": 19018
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The working paper supports estimated reductions of 5.4% in electricity, 6% in electricity-related emissions, and 8.2% in energy expenditure under full AI control across the first ten post-activation weeks. Its 164-plant analytical sample includes untreated controls, and its observations end before the current twelve-month window.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

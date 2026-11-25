@@ -1,0 +1,96 @@
+id: china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat
+section: because
+rank: 137
+headline: >-
+  Because of AI forecasting and control, a Changsha district heating network used
+  7% less heat and more than 10% less electricity over a heating season, China
+  Unicom says.
+impact: "7% less heat, >10% less electricity"
+impact_number: "7%"
+impact_label: "less heat needed to run a district heating network serving about 60,000 people"
+summary: >-
+  A China Unicom data scientist told the AI for Good Global Summit 2026 that a
+  demand-forecasting and supply-control system, with operators approving its
+  decisions, cut heat and electricity use across a private district heating
+  network in Changsha for a full heating season.
+caveat: >-
+  A conference talk by the vendor-side team, written up by the summit organiser;
+  no baseline period or control network is stated, and the savings are the
+  speaker's own figures.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None stated in the source"
+effect:
+  relative: "Overall heat required to operate the grid −7%; electricity consumption down by more than 10%"
+  absolute: null
+reach: "A private district heating operator's network in Changsha, China, serving approximately 60,000 people"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-09-23
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "AI for Good: How AI is reducing energy waste in urban heating networks (23 September 2026)"
+    url: https://aiforgood.itu.int/how-ai-is-reducing-energy-waste-in-urban-heating-networks/
+    type: primary
+    announcement: true
+conflicts: >-
+  The figures are those of the speaker, a China Unicom data scientist describing
+  his own team's deployment for a client; the page says the views are the
+  speakers' own and not endorsed by ITU. No independent audit.
+what_would_change: "Metered heat and electricity against a stated baseline season or matched network, reported by someone other than the team that built the system."
+notes: >-
+  verify: the page says only that the system ran through a full heating season
+  "from the previous year into the beginning of 2026", with no calendar dates, so
+  achieved dates and the window grade are left empty.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the reported saving comes from forecasting, control and anomaly monitoring working together with operator review, and the page gives no comparison period or network that isolates the AI.
+receipts:
+  - field: headline
+    quote: Electricity consumption fell by more than 10%, while the overall heat required to operate the grid decreased by 7%.
+    locator: Section "Reducing energy use across the network"
+    source: 0
+  - field: impact
+    quote: Electricity consumption fell by more than 10%, while the overall heat required to operate the grid decreased by 7%.
+    locator: Section "Reducing energy use across the network"
+    source: 0
+  - field: impact_number
+    quote: the overall heat required to operate the grid decreased by 7%
+    locator: Section "Reducing energy use across the network"
+    source: 0
+  - field: effect.relative
+    quote: Electricity consumption fell by more than 10%, while the overall heat required to operate the grid decreased by 7%.
+    locator: Section "Reducing energy use across the network"
+    source: 0
+  - field: reach
+    quote: The network serves more than 140 substations and approximately 60,000 people.
+    locator: Section "Applying AI in Changsha"
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 7f0f44e91191ce1c11d1a2c791bc890954959736080e7c44e39d3a08a3da55ea
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: fail
+  record: china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat/2026-11-25.json
+held:
+  reason: grade-split
+  since: 2026-11-25
+  detail: "window: drafter no grade, verifier in."
+  record: china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat/2026-11-25.json

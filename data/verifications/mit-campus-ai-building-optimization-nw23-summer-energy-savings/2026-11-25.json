@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "mit-campus-ai-building-optimization-nw23-summer-energy-savings",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "cd3fc57f5bf2e6613ce2006c8f808fd8d4822ee79253cc49c41a8f0071dd9fdf",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://sustainability.mit.edu/article/ai-reduce-building-energy-use-pilot-program-update-and-next-steps",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-25T03:16:34.471Z",
+      "final_url": "https://sustainability.mit.edu/article/ai-reduce-building-energy-use-pilot-program-update-and-next-steps",
+      "sha256": "1b0e5fbccab3aefb23b420e2f30caf81613f8307811b1192aca7fb706f6ee467",
+      "chars": 7218,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": null,
+  "adjudication": {
+    "result": "held",
+    "reason": "ungrounded",
+    "detail": "No receipt for reach."
+  }
+}

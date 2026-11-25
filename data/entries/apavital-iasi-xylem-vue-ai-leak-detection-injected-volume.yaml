@@ -1,0 +1,91 @@
+id: apavital-iasi-xylem-vue-ai-leak-detection-injected-volume
+section: because
+rank: 136
+headline: >-
+  Because of AI leak detection, Xylem says ApaVital in Romania cut night water use
+  by 64% in one district and network injected volumes by 44%.
+impact: "44% less water injected"
+impact_number: "44%"
+impact_label: "fall in water volume injected into the ApaVital network, per Xylem"
+summary: >-
+  Xylem's case study says ApaVital, a utility serving 500,000 people in
+  north-eastern Romania, used an AI platform that flags abnormal flow patterns to
+  steer repairs, and that injected volumes fell across the network.
+caveat: >-
+  The vendor's own case study about its own product; no baseline year, control
+  area or independent audit, and a fall in injected volume can also come from
+  pressure management, repairs and metering.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "None shown (before/after reported by the vendor)"
+effect:
+  relative: "Night water usage −64% in one district; injected volumes −44% across the network"
+  absolute: null
+reach: "ApaVital S.A. network serving 500,000 people in 90 locations, Iasi region, Romania"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-02-05
+  added: 2026-11-25
+  updated: 2026-11-25
+sources:
+  - title: "Xylem: Romanian utility ApaVital S.A. secures water supply with Xylem Vue's smart leak detection (5 February 2026)"
+    url: https://www.xylem.com/en-ca/resources/blog-posts/making-waves/romanian-utility-apavital-sa-secures-water-supply/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the vendor Xylem's own case study of its own product (Xylem Vue)
+  and its customer, with quotes from the utility's managers; no independent audit.
+what_would_change: "Metered injected volume and non-revenue water against a stated baseline year, with repairs, pressure management and metering changes separated from the AI analytics."
+notes: >-
+  verify: the page gives no calendar period for the results beyond "in just six
+  months", so achieved dates and the window grade are left empty.
+history:
+  - date: 2026-11-25
+    note: "Added by the backfill run."
+rationale: Bundled because the reduction comes from a package of sensors, an AI anomaly-detection platform and field repairs, and the page offers no comparison that isolates the AI.
+receipts:
+  - field: headline
+    quote: ApaVital cut night water usage by 64% in one district, and across the entire network, injected volumes have fallen by 44%
+    locator: Results section
+    source: 0
+  - field: impact
+    quote: across the entire network, injected volumes have fallen by 44%
+    locator: Results section
+    source: 0
+  - field: impact_number
+    quote: across the entire network, injected volumes have fallen by 44%
+    locator: Results section
+    source: 0
+  - field: effect.relative
+    quote: ApaVital cut night water usage by 64% in one district, and across the entire network, injected volumes have fallen by 44%
+    locator: Results section
+    source: 0
+  - field: reach
+    quote: a leading utility serving 500,000 people in 90 locations across northeastern Romania
+    locator: Body, second paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 06afdc5380aa4e90bd54e3520200e350a4c437ac0ef619bccc74544058af15a0
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: pass
+  record: apavital-iasi-xylem-vue-ai-leak-detection-injected-volume/2026-11-25.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The date test fails because an unanchored six-month duration and publication date do not establish when the benefits occurred.).

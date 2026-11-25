@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "apavital-iasi-xylem-vue-ai-leak-detection-injected-volume",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "06afdc5380aa4e90bd54e3520200e350a4c437ac0ef619bccc74544058af15a0",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.xylem.com/en-ca/resources/blog-posts/making-waves/romanian-utility-apavital-sa-secures-water-supply/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-25T03:15:27.674Z",
+      "final_url": "https://www.xylem.com/en-ca/resources/blog-posts/making-waves/romanian-utility-apavital-sa-secures-water-supply/",
+      "sha256": "ff7d4c0f29af57232716205c4e6da1fde0352d3c5ba5beeb52f0669c373907b8",
+      "chars": 9048,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "ApaVital cut night water usage by 64% in one district, and across the entire network, injected volumes have fallen by 44%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "across the entire network, injected volumes have fallen by 44%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "across the entire network, injected volumes have fallen by 44%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "ApaVital cut night water usage by 64% in one district, and across the entire network, injected volumes have fallen by 44%",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "a leading utility serving 500,000 people in 90 locations across northeastern Romania",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "operational-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported before-and-after reductions followed a package of AI analytics, sensors, network management and targeted field interventions, without a comparison isolating AI.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source mentions six months but gives no calendar dates for the results."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Xylem reports results for its own product and customer, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The date test fails because an unanchored six-month duration and publication date do not establish when the benefits occurred."
+      },
+      "summary": "The vendor report supports the stated reductions and service population, with AI contributing within a broader operational package. It provides neither calendar dates for the results nor an independent comparison isolating AI."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13782,
+      "output": 498,
+      "total": 14280,
+      "cached": 0,
+      "reasoning": 63
+    },
+    "duration_ms": 13291
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The vendor report supports the stated reductions and service population, with AI contributing within a broader operational package. It provides neither calendar dates for the results nor an independent comparison isolating AI.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.",
+      "Not dated yet (The date test fails because an unanchored six-month duration and publication date do not establish when the benefits occurred.)."
+    ]
+  }
+}
