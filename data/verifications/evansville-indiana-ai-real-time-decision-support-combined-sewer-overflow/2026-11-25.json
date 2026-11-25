@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "5fd546d1f15e4a5f5c066c86056a55cccbc0bd3328f64507fe3603bb6d976b7b",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.epa.gov/npdes/combined-sewer-overflow-smart-sewers-layout",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-25T03:16:01.611Z",
+      "final_url": "https://www.epa.gov/npdes/combined-sewer-overflow-smart-sewers-layout",
+      "sha256": "6ecf6a8953efa6404a17002e85d1bdaadbf97f9dcbc5174d0031fbd4bfe2b4b7",
+      "chars": 11254,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Thanks to the RTDSS, Evansville has reduced combined sewer overflows by more than 100 million gallons annually.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "Evansville has reduced combined sewer overflows by more than 100 million gallons annually",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Evansville has reduced combined sewer overflows by more than 100 million gallons annually",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Evansville has reduced combined sewer overflows by more than 100 million gallons annually",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "program-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "program-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported reduction follows implementation of a package combining sensors, real-time monitoring, AI and operator recommendations, without a comparison separating AI's contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the source provides no Evansville implementation or measurement dates, only a page update date."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The text establishes no vendor, funding, employment, equity, patent or licence conflict; the entry's claim of an unnamed vendor is not established."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "The source reports an operational reduction but identifies no baseline period or measured comparator, and gives no dates for the benefit."
+      },
+      "summary": "The EPA report supports the claimed reduction of more than 100 million gallons annually from Evansville's AI-containing system. It supplies neither a defined measurement comparison nor achieved dates, so the entry does not pass all four tests."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14038,
+      "output": 657,
+      "total": 14695,
+      "cached": 0,
+      "reasoning": 196
+    },
+    "duration_ms": 16923
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The EPA report supports the claimed reduction of more than 100 million gallons annually from Evansville's AI-containing system. It supplies neither a defined measurement comparison nor achieved dates, so the entry does not pass all four tests.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.",
+      "Not measured against something or dated yet (The source reports an operational reduction but identifies no baseline period or measured comparator, and gives no dates for the benefit.)."
+    ]
+  }
+}

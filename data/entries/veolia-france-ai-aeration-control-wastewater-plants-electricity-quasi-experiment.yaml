@@ -81,3 +81,20 @@ receipts:
     quote: As of July 4, 2025, the end of our observation period
     locator: Section 2, company-wide rollout
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: cc431d8c87a570d771c883c7d5d4b73462e45a25feb5290c72193aa5e9b733c8
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: pass
+  record: veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment/2026-11-25.json
+  confidence: strict

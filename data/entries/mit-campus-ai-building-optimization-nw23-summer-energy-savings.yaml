@@ -67,3 +67,13 @@ receipts:
     quote: 10–70% summer energy savings in NW23 through Building-Level AI optimization that accounts for weather, occupancy, scheduling, and grid conditions
     locator: Early Results section
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: cd3fc57f5bf2e6613ce2006c8f808fd8d4822ee79253cc49c41a8f0071dd9fdf
+held:
+  reason: ungrounded
+  since: 2026-11-25
+  detail: No receipt for reach.
+  record: mit-campus-ai-building-optimization-nw23-summer-energy-savings/2026-11-25.json

@@ -67,3 +67,23 @@ receipts:
     quote: Evansville has reduced combined sewer overflows by more than 100 million gallons annually
     locator: Section "Taking the Guesswork Out of Wet Weather Events"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 5fd546d1f15e4a5f5c066c86056a55cccbc0bd3328f64507fe3603bb6d976b7b
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: pass
+  record: evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow/2026-11-25.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not measured against something or dated yet (The source reports an operational reduction but identifies no baseline period or measured comparator, and gives no dates for the benefit.).

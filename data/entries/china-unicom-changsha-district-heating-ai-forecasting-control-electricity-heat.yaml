@@ -73,3 +73,24 @@ receipts:
     quote: The network serves more than 140 substations and approximately 60,000 people.
     locator: Section "Applying AI in Changsha"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 7f0f44e91191ce1c11d1a2c791bc890954959736080e7c44e39d3a08a3da55ea
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: fail
+  record: china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat/2026-11-25.json
+held:
+  reason: grade-split
+  since: 2026-11-25
+  detail: "window: drafter no grade, verifier in."
+  record: china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat/2026-11-25.json

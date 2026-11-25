@@ -83,3 +83,25 @@ receipts:
     quote: Preliminary results from the TenHats deployment (December 2025–March 2026)
     locator: Media gallery caption
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-25
+  content: 72bf6346b0cb7819ebfd0af1b8e0f95da8a79e91c3c80bb8606443b433e14b99
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-25
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-25
+    verdict: pass
+  record: fluix-ai-cooling-tenhats-knoxville-data-center-pue/2026-11-25.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a press release, not a study, a registry record, or an official report.
+    - The achieved dates come from the press release.
+    - "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled."
+    - "The two checkers disagreed on window: the drafter said pre and the verifier said in. The entry shows the more cautious of the two, pre."

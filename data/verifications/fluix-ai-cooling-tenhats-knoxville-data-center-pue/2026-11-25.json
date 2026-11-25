@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "fluix-ai-cooling-tenhats-knoxville-data-center-pue",
+  "date": "2026-11-25",
+  "as_of": "2026-11-25",
+  "entry_sha256": "72bf6346b0cb7819ebfd0af1b8e0f95da8a79e91c3c80bb8606443b433e14b99",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-25"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.utilitydive.com/press-release/20260617-tennessee-data-centers-ai-cooling-system-cuts-energy-waste-opens-path-to/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-25T03:16:19.074Z",
+      "final_url": "https://www.utilitydive.com/press-release/20260617-tennessee-data-centers-ai-cooling-system-cuts-energy-waste-opens-path-to/",
+      "sha256": "25943b9b9254c37e6588779cc4d7732f39952bf30d2dd0b4baaefc486b7bdd7c",
+      "chars": 8956,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "6.6% PUE improvement, moving from 1.36 to 1.27",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "6.6% PUE improvement, moving from 1.36 to 1.27",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "6.6% PUE improvement, moving from 1.36 to 1.27",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "6.6% PUE improvement, moving from 1.36 to 1.27",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "0.4 MWh/day of modeled HVAC savings during full A.I.M.I. control periods and a 6.6% PUE improvement, moving from 1.36 to 1.27",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "TenHats is a 2 MW data center built for AI-ready, mission-critical operations",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Preliminary results from the TenHats deployment (December 2025–March 2026)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Preliminary results from the TenHats deployment (December 2025–March 2026)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-25",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "The reported comparison is existing cooling operation versus AI control at the same facility, using existing equipment without new sensors or replacement infrastructure.",
+      "achieved_dates": {
+        "from": "press-release",
+        "conflicting": false,
+        "note": "The media gallery dates the preliminary deployment results to December 2025–March 2026, entirely within the window."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "FLUIX issued the release about its own product, and the entry discloses this vendor conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The release supports the reported PUE improvement at a live production facility during December 2025–March 2026. It provides vendor-reported preliminary results, modeled HVAC savings, and projected capacity value rather than independently documented metered savings or realized revenue."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14165,
+      "output": 576,
+      "total": 14741,
+      "cached": 0,
+      "reasoning": 89
+    },
+    "duration_ms": 14914
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The release supports the reported PUE improvement at a live production facility during December 2025–March 2026. It provides vendor-reported preliminary results, modeled HVAC savings, and projected capacity value rather than independently documented metered savings or realized revenue.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a press release, not a study, a registry record, or an official report.",
+      "The achieved dates come from the press release.",
+      "The two checkers disagreed on attribution: the drafter said bundled and the verifier said isolated. The entry shows the drafter's grade, bundled; treat that grade as unsettled.",
+      "The two checkers disagreed on window: the drafter said pre and the verifier said in. The entry shows the more cautious of the two, pre."
+    ],
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      },
+      {
+        "grade": "window",
+        "drafter": "pre",
+        "verifier": "in"
+      }
+    ]
+  }
+}
