@@ -1,0 +1,91 @@
+id: surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility
+section: because
+rank: 145
+headline: >-
+  Because of AI, heart-failure patients with implanted pulmonary-artery pressure sensors adjusted their own diuretic
+  doses with a clinician-confirmed language-model tool and spent 88.4% of the time in their target pressure range over 90
+  days, with no safety event detected in a 21-patient feasibility study.
+impact: "88.4% of time in target pressure range"
+impact_number: "88.4%"
+impact_label: "of time in the target pulmonary-artery pressure range over 90 days"
+summary: >-
+  A single-arm, single-centre study had adults with implanted pulmonary-artery sensors follow a prescribed loop-diuretic
+  sliding scale supported by ARTHUR, a domain-trained language model, with clinician confirmation of every adjustment.
+caveat: >-
+  A 21-patient single-arm preprint with no comparison group, in patients already at their pressure goal at baseline, with
+  sparse laboratory checks; it shows feasibility, not benefit.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: D
+  attribution: bundled
+  window: in
+comparison: null
+effect:
+  relative: null
+  absolute: "Time in the optimal pressure range 88.4% (intention-to-treat) and 91.3% (per-protocol); 17 of 19 per-protocol patients (89%) needed no protocol-triggered escalation"
+reach: "21 adults with implanted pulmonary-artery pressure sensors at one hospital"
+dates:
+  achieved_start: 2026-01-14
+  achieved_end: 2026-04-14
+  published: 2026-07-13
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "Atzenhoefer et al., SURPASS-HF: Safety and Utility of Remote Pulmonary Artery Sensor Shared-management in Heart Failure (medRxiv preprint, abstract)"
+    url: https://www.medrxiv.org/content/10.64898/2026.07.10.26357468v1
+    type: primary
+conflicts: >-
+  The lead author wrote the algorithm the tool runs and is a consultant and speaker for Abbott Cardiovascular (maker of
+  the CardioMEMS sensor, whose regional key opinion leader they are); ARTHUR is patent pending; no funding was received.
+what_would_change: "A randomized, adequately powered comparison against clinician-led pressure management showing fewer hospitalizations or better time in range."
+notes: >-
+  verify: preprint, not peer reviewed; there is no comparison group, so the benefit is unmeasured against anything.
+  verify: the language model executed a published deterministic algorithm with clinician confirmation of every adjustment, so how much the AI added beyond the algorithm is unclear.
+  verify: the preprint says the cohort was already at goal at baseline (mean baseline PAD 14.8 mmHg) and the change in PAD was not significant.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: There was no comparison arm, so the language-model tool is bundled with the sensor, the prescribed algorithm and clinician confirmation.
+receipts:
+  - field: headline
+    quote: TIR-PAP was 88.4% (ITT)/91.3% (PP)
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: Twenty-one adults with implanted PA sensors enrolled
+    locator: Abstract, Methods
+    source: 0
+  - field: headline
+    quote: Non-randomized, prospective, single-arm, single-center 90-day feasibility study
+    locator: Abstract, Methods
+    source: 0
+  - field: impact
+    quote: TIR-PAP was 88.4% (ITT)/91.3% (PP)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: TIR-PAP was 88.4% (ITT)/91.3% (PP)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: TIR-PAP was 88.4% (ITT)/91.3% (PP)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Seventeen of 19 PP patients (89%) required no protocol-triggered escalation
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Twenty-one adults with implanted PA sensors enrolled
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_start
+    quote: January 14-April 14, 2026; 60.1 patient-months
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: January 14-April 14, 2026; 60.1 patient-months
+    locator: Abstract, Methods
+    source: 0

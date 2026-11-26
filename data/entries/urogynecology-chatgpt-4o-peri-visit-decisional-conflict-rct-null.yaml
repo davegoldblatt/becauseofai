@@ -1,0 +1,73 @@
+id: urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null
+section: not-because
+rank: 33
+headline: >-
+  Letting urogynecology patients ask ChatGPT-4o about their problem before or after the first visit did not change how
+  uncertain they felt about their decisions, in a randomized trial of 125 patients.
+impact: "No difference in decisional conflict"
+impact_number: "125"
+impact_label: "patients randomized; chatbot use before or after the visit did not change decisional conflict"
+summary: >-
+  A single-centre randomized trial gave patients with prolapse, incontinence or urinary symptoms ChatGPT-4o to use before
+  the visit, after it, or not at all, and measured decisional conflict immediately and at three months.
+caveat: >-
+  Read from the abstract only; the patients were mostly White and well educated, were nearly all new to medical chatbots,
+  and the study measured decision-making and satisfaction, not health outcomes.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "ChatGPT-4o use before the urogynecology visit, or after the visit, vs usual care with no chatbot, three-arm randomization"
+effect:
+  relative: null
+  absolute: "Decisional conflict was low and did not differ immediately (P = 0.691) or at 3 months (P = 0.875)"
+reach: "125 randomized patients at one centre"
+dates:
+  achieved_start: 2024-07
+  achieved_end: 2024-12
+  published: 2026-07-10
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "Wood et al., Chatbot Use by Patients Seeking Urogynecologic Consultation: A Randomized Trial (Urogynecology, abstract via Europe PMC)"
+    url: https://doi.org/10.1097/SPV.0000000000001906
+    doi: 10.1097/SPV.0000000000001906
+    type: primary
+conflicts: "none found in the abstract; the full text could not be read, so funding and author disclosures are unchecked."
+what_would_change: "A multi-centre trial with clinical outcomes, or a chatbot tuned to patients' reading level, showing a change in decisional conflict or understanding."
+notes: >-
+  verify: only the abstract could be read; the full text with funding and disclosures was not available.
+  verify: the abstract gives no effect sizes, only P values, so no absolute effect beyond them is stated.
+  verify: window is pre because enrolment ended December 2024.
+related: [kenya-ai-consult-null]
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Patients were randomized to ChatGPT-4o use before the visit, after it, or none, so the arms differ only by chatbot use.
+receipts:
+  - field: headline
+    quote: Among 125 randomized patients (July 2024-December 2024)
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Among 125 randomized patients (July 2024-December 2024)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: Decisional conflict was low and did not differ immediately (P = 0.691) or at 3 months (P = 0.875)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Among 125 randomized patients (July 2024-December 2024)
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: Among 125 randomized patients (July 2024-December 2024)
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_end
+    quote: Among 125 randomized patients (July 2024-December 2024)
+    locator: Abstract, Results
+    source: 0

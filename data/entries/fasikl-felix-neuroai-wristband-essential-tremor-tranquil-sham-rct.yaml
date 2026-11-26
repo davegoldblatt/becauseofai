@@ -1,0 +1,106 @@
+id: fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct
+section: because
+rank: 143
+headline: >-
+  Because of AI, a wrist-worn neurostimulator that adapts its stimulation with an AI algorithm improved essential-tremor
+  daily-living scores by 6.9 points at 90 days against 2.7 points with a sham device, in a randomized trial of 125 people.
+impact: "−6.9 vs −2.7 tremor-disability points at 90 days"
+impact_number: "−4.2"
+impact_label: "TETRAS daily-living points more improvement than a sham device at 90 days"
+summary: >-
+  The TRANQUIL trial randomized adults with upper-limb essential tremor 2:1 to the Felix NeuroAI Wristband or an identical
+  sham device and compared the change in the TETRAS modified activities-of-daily-living score at day 90 (posted results).
+caveat: >-
+  This is the sponsor's own ClinicalTrials.gov results posting, not a peer-reviewed paper, and the arms differ by whether
+  the device stimulated at all, so the AI adaptation is bundled with the stimulation itself.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "Felix NeuroAI Wristband (stimulation adapted by an AI algorithm) vs a sham device with the same appearance and components that delivers no treatment, 2:1 randomization, participants and outcome assessors masked"
+effect:
+  relative: null
+  absolute: "Change in TETRAS mADL score at day 90 of −6.9 (Felix) vs −2.7 (sham); net difference −4.2 points, p<0.0001, where a lower score is milder tremor"
+reach: "125 people with upper-limb essential tremor randomized in a multi-centre, multi-region trial"
+dates:
+  achieved_start: 2024-02-27
+  achieved_end: 2024-10-31
+  published: 2026-07-09
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "ClinicalTrials.gov NCT06235190 record with posted results (TRANQUIL, Fasikl Inc.)"
+    url: https://clinicaltrials.gov/study/NCT06235190
+    type: primary
+conflicts: >-
+  The trial sponsor and responsible party is Fasikl Inc., the maker of the Felix NeuroAI Wristband, and the results were
+  posted by the sponsor; no independent analysis is shown.
+what_would_change: "A peer-reviewed report with independent analysis, or a trial with an active-stimulation control that is not AI-adapted."
+notes: >-
+  verify: achieved_end uses the registry's primary completion date (2024-10-31), the end of the 90-day primary-outcome data collection; overall study completion is 2025-11-06 and includes a long-term open-label phase.
+  verify: the analysis posted is a two-sided t-test on 62 and 36 participants at day 90, fewer than the 125 randomized; the registry shows 83 and 42 starting.
+  verify: window is pre because primary data collection ended more than twelve months before this entry was added; results were posted 2026-07-09.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Participants were randomized to the AI-adapted stimulation wristband or a visually identical sham, so the arms differ by stimulation of which the AI adaptation is one part, which makes the attribution bundled.
+receipts:
+  - field: headline
+    quote: '"value": "-6.9",'
+    locator: Results, primary outcome measurement (Felix group)
+    source: 0
+  - field: headline
+    quote: '"value": "-2.7",'
+    locator: Results, primary outcome measurement (sham group)
+    source: 0
+  - field: headline
+    quote: '"count": 125,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: headline
+    quote: '"timeFrame": "90 days",'
+    locator: Results, primary outcome time frame
+    source: 0
+  - field: impact
+    quote: '"value": "-6.9",'
+    locator: Results, primary outcome measurement (Felix group)
+    source: 0
+  - field: impact
+    quote: '"value": "-2.7",'
+    locator: Results, primary outcome measurement (sham group)
+    source: 0
+  - field: impact_number
+    quote: '"paramValue": "-4.2"'
+    locator: Results, primary outcome analysis (net mean difference)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-6.9",'
+    locator: Results, primary outcome measurement (Felix group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-2.7",'
+    locator: Results, primary outcome measurement (sham group)
+    source: 0
+  - field: effect.absolute
+    quote: '"paramValue": "-4.2"'
+    locator: Results, primary outcome analysis (net mean difference)
+    source: 0
+  - field: effect.absolute
+    quote: '"pValue": "<0.0001",'
+    locator: Results, primary outcome analysis
+    source: 0
+  - field: reach
+    quote: '"count": 125,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2024-02-27",'
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2024-10-31",'
+    locator: Status module, primaryCompletionDateStruct
+    source: 0

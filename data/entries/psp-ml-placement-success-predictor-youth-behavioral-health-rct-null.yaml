@@ -1,0 +1,100 @@
+id: psp-ml-placement-success-predictor-youth-behavioral-health-rct-null
+section: not-because
+rank: 32
+headline: >-
+  A machine-learning tool that scored each young person's likelihood of success in different care placements showed no
+  better symptom change in a randomized trial: children's symptom z-scores changed by 0.45 with the tool against 0.14
+  without it, where higher means worse.
+impact: "No improvement: 0.45 vs 0.14 (higher is worse)"
+impact_number: "0.45"
+impact_label: "symptom z-score change in children with the tool, vs 0.14 without (higher is worse)"
+summary: >-
+  The Placement Success Predictor efficacy study randomized youth in behavioral-health care to have site-specific
+  machine-learning placement scores shown to the clinical team or not, and compared the change in a parent-and-youth-rated
+  symptom scale (TOP-CS) 60 to 120 days later.
+caveat: >-
+  This is the sponsor's own registry posting with no between-group test posted, in small child and adolescent samples
+  analysed separately, so it shows no benefit rather than a measured harm.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Site-specific machine-learning placement success scores provided to the clinical team vs no scores generated, youth randomized within a child sample and an adolescent sample"
+effect:
+  relative: null
+  absolute: "Mean change in average symptom z-score (negative is improvement): children 0.45 with the tool vs 0.14 without; adolescents −0.06 with the tool vs −0.20 without"
+reach: "213 youth randomized to the efficacy study"
+dates:
+  achieved_start: 2025-02-03
+  achieved_end: 2026-01-26
+  published: 2026-07-08
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "ClinicalTrials.gov NCT06815562 record with posted results (Placement Success Predictor efficacy study, Outcome Referrals, Inc.)"
+    url: https://clinicaltrials.gov/study/NCT06815562
+    type: primary
+conflicts: >-
+  The sponsor is Outcome Referrals, Inc., a company that makes the Placement Success Predictor, and the study is funded by
+  an NIH small-business grant; the results are the sponsor's own registry posting.
+what_would_change: "A peer-reviewed analysis with a between-group test and larger samples showing a difference in symptom change, in either direction."
+notes: >-
+  verify: the registry posts group means and standard deviations for the primary outcome but no between-group statistical analysis.
+  verify: the child and adolescent samples are reported as separate arms (35 and 27 children, 76 and 75 adolescents); the entry states no pooled effect.
+  verify: window is pre because the study ended 2026-01-26 and the benefit, if any, spans a period that starts more than twelve months before this entry.
+related: [uva-comet-deterioration-null]
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Youth were randomized to receive the machine-learning placement scores or none, so the arms differ only by the AI tool.
+receipts:
+  - field: headline
+    quote: '"value": "0.45",'
+    locator: Results, primary outcome measurement (child experimental group)
+    source: 0
+  - field: headline
+    quote: '"value": "0.14",'
+    locator: Results, primary outcome measurement (child control group)
+    source: 0
+  - field: impact
+    quote: '"value": "0.45",'
+    locator: Results, primary outcome measurement (child experimental group)
+    source: 0
+  - field: impact
+    quote: '"value": "0.14",'
+    locator: Results, primary outcome measurement (child control group)
+    source: 0
+  - field: impact_number
+    quote: '"value": "0.45",'
+    locator: Results, primary outcome measurement (child experimental group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "0.45",'
+    locator: Results, primary outcome measurement (child experimental group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "0.14",'
+    locator: Results, primary outcome measurement (child control group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-0.06",'
+    locator: Results, primary outcome measurement (adolescent experimental group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "-0.20",'
+    locator: Results, primary outcome measurement (adolescent control group)
+    source: 0
+  - field: reach
+    quote: '"count": 213,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2025-02-03",'
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2026-01-26",'
+    locator: Status module, completionDateStruct
+    source: 0

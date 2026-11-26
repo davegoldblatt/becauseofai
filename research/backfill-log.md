@@ -667,3 +667,19 @@ Rejected or not drafted:
 - Hayward adaptive signals (city, July 2026): speeds up 20-49% but no AI named. San Anselmo, Nashville, Missouri City, Tucson NoTraffic: 403/404 or vendor estimates, undated.
 - NATS Pairwise (Aug 2025, rule-based, not AI), Assaia (vendor claims), British Airways (2025), Union Pacific ATI (sensors, no AI effect shown), KL City Hall (no figure), Samsara 73% (2025 vendor report), Aurora (zero collisions, company claim, not read).
 - Short of the floor on entries only: about 22 searches and 20 pages read; 3 entries.
+
+## 2026-11-26, slice 40: papers and trial results, 2026-07-06 to 2026-07-13
+
+Drafted (5):
+- fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct: ClinicalTrials.gov results, sham-controlled RCT of 125, TETRAS mADL -6.9 vs -2.7 at 90 days (A, bundled; sponsor is the maker).
+- esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care: registry results, cluster RCT, falls 19.3 vs 21.2 per 100 person-years, RR 0.91 (A, bundled).
+- psp-ml-placement-success-predictor-youth-behavioral-health-rct-null: registry results, ML placement scores, no better symptom change; no between-group test posted (not-because).
+- urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null: abstract only, 125 patients, no difference in decisional conflict (not-because).
+- surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility: medRxiv, 21-patient single-arm, 88.4% time in range; no comparison (speculative).
+
+Rejected or not drafted:
+- Closing the Loop (NEJM Catalyst): 3 months silent mode, no patient reached. Kenya DMT-PHE agent: simulated scenarios only. Dental avatar experiments: online hypothetical patients.
+- SCALE-UP II chatbot log analysis: no numbers for the comparison in the abstract. Endodontic Socratic LLM RCT, radiology residents AI teaching RCT, nurses ECG simulation RCT: abstracts cut off at the key P values, students only.
+- AI life skills adolescents (Acta Psychologica): no numbers in the abstract. Liver ultrasound detector: retrospective images. Protocols (nursing scribe, LuAna, DR screening, EJT): no results.
+- The rest of the 96 candidates were retrospective models, reviews, benchmarks, or software papers, judged from titles and snippets.
+- 14 candidates read with npm run read; entry files wait for the gate.
