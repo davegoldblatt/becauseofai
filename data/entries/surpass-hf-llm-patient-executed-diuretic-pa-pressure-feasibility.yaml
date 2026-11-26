@@ -89,3 +89,24 @@ receipts:
     quote: January 14-April 14, 2026; 60.1 patient-months
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 962c65f232832a43f26331507979a250976df4aaabeb1b609709e73c2e250787
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter D, verifier could not grade."
+  record: surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility/2026-11-26.json

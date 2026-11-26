@@ -108,3 +108,20 @@ receipts:
     quote: '"date": "2025-05-08",'
     locator: Status module, primaryCompletionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 0b848e9239c92655824692f112328de90ae3ffae0411641834cb9ca39e1262a1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: pass
+  record: esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care/2026-11-26.json
+  confidence: strict

@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct",
+  "date": "2026-11-26",
+  "as_of": "2026-11-26",
+  "entry_sha256": "b4634e8fb674ac3afe1ede51dfeaeb930c283beb1b74ea9bfcf8bc74a067b658",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-26"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://clinicaltrials.gov/study/NCT06235190",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-26T02:34:08.360Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT06235190?format=json",
+      "sha256": "565f7e0e92dc30c55638a4bcf2f23943c1471d3d3293028188930916e2ee087e",
+      "chars": 51158,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "\"value\": \"-6.9\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "\"value\": \"-2.7\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "\"count\": 125,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "\"timeFrame\": \"90 days\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "\"value\": \"-6.9\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "\"value\": \"-2.7\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "\"paramValue\": \"-4.2\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"value\": \"-6.9\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"value\": \"-2.7\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"paramValue\": \"-4.2\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"pValue\": \"<0.0001\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "\"count\": 125,",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "\"date\": \"2024-02-27\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "\"date\": \"2024-10-31\",",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-26",
+    "output": {
+      "full_text": true,
+      "source_kind": "registry-record",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "A",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The randomized comparison tested AI-adapted neurostimulation against a sham delivering no treatment, bundling AI adaptation with stimulation.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "Actual study start and primary completion are 2024-02-27 and 2024-10-31; the 2025-11-06 overall completion includes the extension phase."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Fasikl Inc. is the industry sponsor and responsible party, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The registry supports the reported 90-day changes and −4.2-point difference, with 125 randomized and 98 analyzed for the primary outcome. It does not isolate AI adaptation's contribution from stimulation, and it cites a peer-reviewed trial report despite the entry's caveat."
+    },
+    "error": null,
+    "tokens": {
+      "input": 27028,
+      "output": 671,
+      "total": 27699,
+      "cached": 0,
+      "reasoning": 64
+    },
+    "duration_ms": 17303
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The registry supports the reported 90-day changes and −4.2-point difference, with 125 randomized and 98 analyzed for the primary outcome. It does not isolate AI adaptation's contribution from stimulation, and it cites a peer-reviewed trial report despite the entry's caveat.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

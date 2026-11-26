@@ -104,3 +104,20 @@ receipts:
     quote: '"date": "2024-10-31",'
     locator: Status module, primaryCompletionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: b4634e8fb674ac3afe1ede51dfeaeb930c283beb1b74ea9bfcf8bc74a067b658
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: pass
+  record: fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct/2026-11-26.json
+  confidence: strict
