@@ -50,34 +50,55 @@ history:
 rationale: Patients were triaged by both methods in randomized order, but the remote arm combined scans, photos and a survey with the AI, so attribution to the AI alone is bundled.
 receipts:
   - field: headline
-    quote: "Teleorthodontic triage duration was 2.9 times faster than F2F."
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
     locator: Abstract, Results
     source: 0
   - field: headline
-    quote: "TAI triage had a sensitivity of 1, a specificity of 0.67"
+    quote: TAI triage had a sensitivity of 1, a specificity of 0.67
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: "Teleorthodontic triage duration was 2.9 times faster than F2F."
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: "Teleorthodontic triage duration was 2.9 times faster than F2F."
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
     locator: Abstract, Results
     source: 0
   - field: effect.relative
-    quote: "Teleorthodontic triage duration was 2.9 times faster than F2F."
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "TAI triage had a sensitivity of 1, a specificity of 0.67, and an overall diagnostic accuracy of 0.98, with three referrals incorrectly rejected"
+    quote: TAI triage had a sensitivity of 1, a specificity of 0.67, and an overall diagnostic accuracy of 0.98, with three referrals incorrectly rejected
     locator: Abstract, Results
     source: 0
   - field: reach
-    quote: "A total of 178 participants completed the trial"
+    quote: A total of 178 participants completed the trial
     locator: Abstract, Methods
     source: 0
   - field: reach
-    quote: "A total of 255 patients referred for public orthodontic treatment"
+    quote: A total of 255 patients referred for public orthodontic treatment
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: da8145aef0243d0cb38128cc09ba9cd33e2d5f5f804c1cc90ca61238fd4e880a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: ai-teleorthodontics-triage-public-clinic-crossover-rct/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ai-teleorthodontics-triage-public-clinic-crossover-rct/2026-11-26.json

@@ -49,26 +49,47 @@ history:
 rationale: Students were randomized to hear the same scripts in a cloned AI voice or the teacher's recorded voice, so the voice is the only difference between the arms.
 receipts:
   - field: headline
-    quote: "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;"
+    quote: (51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;"
+    quote: (51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;"
+    quote: (51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;"
+    quote: (51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "(22.5, SD 6.45 vs 35, SD 7.07 minutes per video)"
+    quote: (22.5, SD 6.45 vs 35, SD 7.07 minutes per video)
     locator: Abstract, Results
     source: 0
   - field: reach
-    quote: "A total of 88 students were randomized, and 64 (72.7%)"
+    quote: A total of 88 students were randomized, and 64 (72.7%)
     locator: Abstract, Results
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 77f102280e78f1ee1b5531b7ee87bb833e7884e08b548e82311663a38888ac06
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre."
+  record: ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon/2026-11-26.json

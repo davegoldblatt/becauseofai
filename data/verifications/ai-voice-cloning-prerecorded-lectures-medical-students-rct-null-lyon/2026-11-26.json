@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon",
+  "date": "2026-11-26",
+  "as_of": "2026-11-26",
+  "entry_sha256": "77f102280e78f1ee1b5531b7ee87bb833e7884e08b548e82311663a38888ac06",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-26"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.2196/86569",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-26T15:59:49.117Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13376843/fullTextXML",
+      "sha256": "32c36f607201f9c1013126625630eb1b6d0e7bef1b788c95071f5a98cb822490",
+      "chars": 33412,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "(51.2, SD 4.9 vs 51.8, SD 6.9 out of 100;",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "(22.5, SD 6.45 vs 35, SD 7.07 minutes per video)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "A total of 88 students were randomized, and 64 (72.7%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-26",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized groups received identical slides and scripts, differing only in AI-cloned versus teacher-recorded audio.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; Results explicitly place participation in June 2025."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The paper declares no conflicts and no funding; the teacher's personal ElevenLabs account does not establish a vendor financial relationship."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The paper supports the reported numbers and a randomized null comparison in students participating in June 2025, but does not establish equivalence. Evidence is ungraded because preregistration is not established and this randomized study does not fit the other defined evidence categories."
+    },
+    "error": null,
+    "tokens": {
+      "input": 19077,
+      "output": 740,
+      "total": 19817,
+      "cached": 0,
+      "reasoning": 269
+    },
+    "duration_ms": 17824
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "B",
+        "verifier": null
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "pre"
+      }
+    ]
+  }
+}

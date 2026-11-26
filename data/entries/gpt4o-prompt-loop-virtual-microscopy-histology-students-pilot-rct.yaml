@@ -48,34 +48,55 @@ history:
 rationale: Students were randomized to a structured GPT-4o workflow or standard virtual microscopy, but the workflow's verification routine and the AI are bundled, so the gain cannot be assigned to the AI alone.
 receipts:
   - field: headline
-    quote: "The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85)."
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
     locator: Abstract, Results
     source: 0
   - field: impact
-    quote: "The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85)."
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
     locator: Abstract, Results
     source: 0
   - field: impact_number
-    quote: "The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85)."
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85)."
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "morphologic reasoning (38.4 ± 10.2 vs. 31.0 ± 8.2; p = 0.005; d = 0.80)"
+    quote: morphologic reasoning (38.4 ± 10.2 vs. 31.0 ± 8.2; p = 0.005; d = 0.80)
     locator: Abstract, Results
     source: 0
   - field: effect.absolute
-    quote: "identification scores showed no significant difference (p = 0.073)"
+    quote: identification scores showed no significant difference (p = 0.073)
     locator: Abstract, Results
     source: 0
   - field: reach
-    quote: "A parallel-design randomized controlled trial was conducted with 55 first-year medical students."
+    quote: A parallel-design randomized controlled trial was conducted with 55 first-year medical students.
     locator: Abstract, Methods
     source: 0
   - field: reach
-    quote: "Standard Virtual Microscopy (VM) learning (n = 28) or VM Prompt Loop (n = 27)"
+    quote: Standard Virtual Microscopy (VM) learning (n = 28) or VM Prompt Loop (n = 27)
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 987cfd41e366738aac747b866960f3ea7cf2b418191d83ca6d951806a85e69e4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter B, verifier could not grade."
+  record: gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct/2026-11-26.json
