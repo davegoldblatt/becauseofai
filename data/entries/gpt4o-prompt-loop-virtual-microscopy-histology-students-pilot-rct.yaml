@@ -1,0 +1,102 @@
+id: gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct
+section: because
+rank: 148
+headline: >-
+  Because of AI, first-year medical students who used a GPT-4o "Prompt Loop" to check its errors while learning histology
+  scored 78.0 on a morphologic reasoning assessment against 67.1 for students using standard virtual microscopy.
+impact: "Total score 78.0 vs 67.1 (p = 0.003)"
+impact_number: "78.0 vs 67.1"
+impact_label: "total histology assessment score with a GPT-4o verification workflow vs standard virtual microscopy"
+summary: >-
+  A pilot randomized trial in first-year medical students compared standard virtual microscopy study with a four-stage
+  Observation, Reasoning, Verification and Consolidation workflow in which a multimodal AI assistant's mistakes were used as
+  prompts to check evidence, and tested both groups on a supervised morphologic reasoning assessment.
+caveat: >-
+  Only the abstract could be read. This is a small single-course pilot, the outcome is an in-course assessment, the AI
+  was used inside a structured workflow rather than freely, and the abstract gives no dates, funding or conflicts.
+domain: education
+ai_type: generative
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "VM Prompt Loop (GPT-4o in a four-stage observe, reason, verify, consolidate cycle) vs standard virtual microscopy learning, first-year medical students randomized in parallel groups"
+effect:
+  relative: null
+  absolute: "Total score 78.0 ± 13.5 vs 67.1 ± 12.0 (p = 0.003; Cohen's d = 0.85); morphologic reasoning 38.4 ± 10.2 vs 31.0 ± 8.2 (p = 0.005); identification scores not significantly different (p = 0.073)"
+reach: "55 first-year medical students: 28 in standard virtual microscopy, 27 in the Prompt Loop"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-30
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "Turning AI hallucinations into scaffolds for morphologic reasoning: A pilot randomized trial of prompt-guided virtual microscopy learning during a focused histology module (Anatomical Sciences Education, abstract via Europe PMC)"
+    url: https://doi.org/10.1002/ase.70297
+    doi: 10.1002/ase.70297
+    type: primary
+conflicts: "The abstract states no funding or conflicts. The AI was a commercial model (GPT-4o) and the authors designed the workflow they tested."
+what_would_change: "The full paper's funding statement and trial dates, and a larger replication across courses with a comparison group that uses AI without the structured verification steps."
+notes: >-
+  verify: only the abstract could be read, so the trial period, funding and conflicts are unknown; achieved dates and window left empty.
+  verify: the abstract does not say whether the standard group had any AI access.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Students were randomized to a structured GPT-4o workflow or standard virtual microscopy, but the workflow's verification routine and the AI are bundled, so the gain cannot be assigned to the AI alone.
+receipts:
+  - field: headline
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: The VM Prompt Loop group achieved higher total scores (78.0 ± 13.5 vs. 67.1 ± 12.0; p = 0.003; Cohen's d = 0.85).
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: morphologic reasoning (38.4 ± 10.2 vs. 31.0 ± 8.2; p = 0.005; d = 0.80)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: identification scores showed no significant difference (p = 0.073)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A parallel-design randomized controlled trial was conducted with 55 first-year medical students.
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: Standard Virtual Microscopy (VM) learning (n = 28) or VM Prompt Loop (n = 27)
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 987cfd41e366738aac747b866960f3ea7cf2b418191d83ca6d951806a85e69e4
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter B, verifier could not grade."
+  record: gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct/2026-11-26.json

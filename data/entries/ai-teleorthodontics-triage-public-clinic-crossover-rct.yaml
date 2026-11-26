@@ -1,0 +1,104 @@
+id: ai-teleorthodontics-triage-public-clinic-crossover-rct
+section: because
+rank: 147
+headline: >-
+  Because of AI-supported teleorthodontics, triage of patients referred to a public orthodontic clinic was 2.9 times faster than
+  face-to-face screening in a crossover trial, with sensitivity of 1 but specificity of 0.67 for referral acceptance.
+impact: "Triage 2.9 times faster than face-to-face"
+impact_number: "2.9×"
+impact_label: "faster orthodontic triage with AI-supported teleorthodontics than face-to-face screening"
+summary: >-
+  A crossover randomized trial in a public orthodontic clinic had referred patients triaged both remotely (intraoral scans
+  analysed with Dental Monitoring AI, photos and an online history) and face-to-face, and compared the two on referral
+  acceptance and screening time.
+caveat: >-
+  Only the abstract could be read. The AI could not measure several traits (crossbite, contact point displacement,
+  functional shift), borderline cases could not be graded confidently, and three referrals were wrongly rejected. The
+  tool bundles remote scanning, photos and a survey with the AI.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "Teleorthodontic triage with AI-supported Dental Monitoring scans, photos and an online history vs face-to-face triage of the same patients, crossover with a 2-month washout"
+effect:
+  relative: "Teleorthodontic triage duration 2.9 times faster than face-to-face"
+  absolute: "At the IOTN DHC ≥3 referral threshold, sensitivity of 1, specificity of 0.67 and overall diagnostic accuracy of 0.98, with three referrals incorrectly rejected"
+reach: "178 of 255 randomized patients referred for public orthodontic treatment completed the trial"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-01
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "The use of teleorthodontics and artificial intelligence for orthodontic triage and screening in a publicly funded healthcare system: A crossover randomized controlled trial (European Journal of Orthodontics, abstract via Europe PMC)"
+    url: https://doi.org/10.1093/ejo/cjag050
+    doi: 10.1093/ejo/cjag050
+    type: primary
+conflicts: "The abstract states no funding or conflicts. The AI component is the commercial Dental Monitoring system; whether any author has ties to the vendor is not shown in the abstract."
+what_would_change: "The full paper's funding and conflict statements, and a multi-site trial showing the same triage time and accuracy."
+notes: >-
+  verify: only the abstract could be read, so funding, conflicts and the trial's calendar period are not known; achieved dates and window left empty.
+  verify: registered as ACTRN12623000327684 per the abstract.
+  verify: the abstract reports 255 randomized and 178 completing; analysis was of completers.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Patients were triaged by both methods in randomized order, but the remote arm combined scans, photos and a survey with the AI, so attribution to the AI alone is bundled.
+receipts:
+  - field: headline
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: TAI triage had a sensitivity of 1, a specificity of 0.67
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.relative
+    quote: Teleorthodontic triage duration was 2.9 times faster than F2F.
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: TAI triage had a sensitivity of 1, a specificity of 0.67, and an overall diagnostic accuracy of 0.98, with three referrals incorrectly rejected
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 178 participants completed the trial
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: A total of 255 patients referred for public orthodontic treatment
+    locator: Abstract, Methods
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: da8145aef0243d0cb38128cc09ba9cd33e2d5f5f804c1cc90ca61238fd4e880a
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: fail
+  record: ai-teleorthodontics-triage-public-clinic-crossover-rct/2026-11-26.json
+held:
+  reason: grade-split
+  since: 2026-11-26
+  detail: "evidence: drafter B, verifier could not grade."
+  record: ai-teleorthodontics-triage-public-clinic-crossover-rct/2026-11-26.json
