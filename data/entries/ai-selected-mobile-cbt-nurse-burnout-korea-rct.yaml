@@ -1,0 +1,84 @@
+id: ai-selected-mobile-cbt-nurse-burnout-korea-rct
+section: because
+rank: 146
+headline: >-
+  Because of AI, 62 Korean nurses given an AI-selected mobile CBT program had larger four-week falls in client-related,
+  personal and work-related burnout than 63 nurses given burnout information only.
+impact: "Burnout fell more than control on all 3 subscales (work-related F = 38.194, P < .001)"
+impact_number: "38.194"
+impact_label: "F value for the larger fall in work-related burnout with AI-selected CBT than with information only (P < .001)"
+summary: >-
+  A randomized trial of nurses recruited from two Korean online communities compared a mobile app in which an algorithm
+  picked CBT-based modules from each nurse's burnout profile against an information-only control, measuring three burnout
+  subdomains at baseline, 2 weeks and 4 weeks.
+caveat: >-
+  Online-recruited volunteers, self-reported burnout, analysis of completers only with no intention-to-treat analysis, a
+  four-week follow-up, and the control arm received information rather than a non-AI version of the same app, so the
+  algorithm's selection is not separated from the CBT content.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: pre
+comparison: "AI-selected mobile CBT-based modules (nurse burnout profile, job stress and coping used to choose modules) vs burnout-management information only, nurses randomized 1:1"
+effect:
+  relative: null
+  absolute: "Greater reduction than control in client-related burnout (F 1,121 = 7.548; P = .007), personal burnout (F 1,121 = 6.533; P = .01) and work-related burnout (F 1,121 = 38.194; P < .001); no significant difference in coping, job stress or stress response"
+reach: "125 nurses analysed: 62 in the AI-selected CBT group and 63 in the control group"
+dates:
+  achieved_start: 2024-10
+  achieved_end: 2024-12
+  published: 2026-07-03
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "Alleviating Nurse Burnout With an Artificial Intelligence–Selected Mobile Cognitive Behavioral Therapy–Based Intervention: Mixed Methods Randomized Controlled Trial (JMIR mHealth and uHealth, open access via Europe PMC)"
+    url: https://doi.org/10.2196/85986
+    doi: 10.2196/85986
+    type: primary
+conflicts: "Funded by the National Research Foundation of Korea (South Korean government grant). The authors declare no conflicts of interest. The authors designed the intervention and its algorithm themselves."
+what_would_change: "A trial with intention-to-treat analysis, a control that receives the same app without algorithmic module selection, and follow-up beyond four weeks."
+notes: >-
+  verify: the achieved period is the October to December 2024 enrolment and allocation window given in the abstract; the exact four-week intervention dates per nurse are not stated.
+  verify: registered as KCT0009853 on 16 October 2024, at the start of enrolment.
+  verify: the paper states the mixed-design repeated-measures ANOVA showed group effects but no significant time or interaction effects.
+  verify: no intention-to-treat analysis; 162 were randomized and 125 analysed after attrition and outlier exclusion.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Nurses were randomized to an AI-selected CBT app or an information-only control, but the control lacked the app's CBT content, so the AI selection is bundled with the intervention itself.
+receipts:
+  - field: headline
+    quote: "the experimental group (n=62) or the control group (n=63)"
+    locator: Abstract, Methods
+    source: 0
+  - field: reach
+    quote: "the experimental group (n=62) or the control group (n=63)"
+    locator: Abstract, Methods
+    source: 0
+  - field: impact
+    quote: "and work-related burnout ( F 1,121 =38.194; P <.001)"
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: "and work-related burnout ( F 1,121 =38.194; P <.001)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: "client-related ( F 1,121 =7.548; P =.007), personal ( F 1,121 =6.533; P =.01)"
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: "and work-related burnout ( F 1,121 =38.194; P <.001)"
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: "(n=63) between October 2024 and December 2024"
+    locator: Abstract, Methods
+    source: 0
+  - field: dates.achieved_end
+    quote: "(n=63) between October 2024 and December 2024"
+    locator: Abstract, Methods
+    source: 0

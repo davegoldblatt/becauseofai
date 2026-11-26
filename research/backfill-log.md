@@ -683,3 +683,20 @@ Rejected or not drafted:
 - AI life skills adolescents (Acta Psychologica): no numbers in the abstract. Liver ultrasound detector: retrospective images. Protocols (nursing scribe, LuAna, DR screening, EJT): no results.
 - The rest of the 96 candidates were retrospective models, reviews, benchmarks, or software papers, judged from titles and snippets.
 - 14 candidates read with npm run read; entry files wait for the gate.
+
+## 2026-11-26, slice 42: papers and trial results, 2026-06-29 to 2026-07-06
+
+Drafted (4):
+- ai-selected-mobile-cbt-nurse-burnout-korea-rct: JMIR mHealth full text, 125 nurses, burnout fell more than information-only control on three subscales (work-related F 38.194); B, bundled, Oct to Dec 2024 (pre).
+- ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon: JMIR Med Educ full text, 88 students, test score 51.2 vs 51.8, no difference (not-because; no dates, window empty).
+- ai-teleorthodontics-triage-public-clinic-crossover-rct: Eur J Orthod abstract only, 178 completers, triage 2.9 times faster than face-to-face (reasonable at best; no dates).
+- gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct: Anat Sci Educ abstract only, 55 students, score 78.0 vs 67.1 (reasonable at best; no dates).
+
+Read and rejected:
+- Pneumothorax AI second reader (BMC Emerg Med, full text): online simulation of 20 radiographs by 231 physicians, no patients.
+- AI teaching assistants for struggling medical students (Acad Med, abstract): outcome figures cut off in the printed text, only baseline scores quotable.
+- NCT05349422 antihypertensive adherence teamlets (NYU): results posted, but the record never describes AI.
+- RESCUE rare-disease LLM screening, suspected-ACS trends, Nepal shadow-mode chest X-ray triage, eFI in stroke, GenericML blood pressure secondary analysis: retrospective, shadow-mode or accuracy only, no care changed.
+- Protocol (AI DR/AMD screening, JMIR Res Protoc), My Heart Counts design paper, medical history-taking acceptance study (JMIR Med Educ): no results or opinion only.
+- Remaining medRxiv and PubMed items (models, reviews, benchmarks, withdrawn preprint): set aside from titles and snippets.
+- 15 sources read with npm run read.
