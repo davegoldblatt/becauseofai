@@ -1,107 +1,79 @@
 {
-  "generated_at": "2026-11-25T14:11:28.032Z",
-  "since": "2026-11-24T14:11:28Z",
+  "generated_at": "2026-11-26T14:11:54.119Z",
+  "since": "2026-11-25T14:11:54Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 84,
-    "held": 90,
+    "published": 87,
+    "held": 96,
     "counts": {
-      "because": 25,
+      "because": 27,
       "not-because": 8,
       "not-yet": 5
     },
     "lower_levels": {
       "reasonable": 7,
-      "speculative": 39
+      "speculative": 40
     },
     "changed": [
       {
-        "id": "apavital-iasi-xylem-vue-ai-leak-detection-injected-volume",
-        "headline": "Because of AI leak detection, Xylem says ApaVital in Romania cut night water use by 64% in one district and network injected volumes by 44%.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/apavital-iasi-xylem-vue-ai-leak-detection-injected-volume"
-      },
-      {
-        "id": "china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat",
-        "headline": "Because of AI forecasting and control, a Changsha district heating network used 7% less heat and more than 10% less electricity over a heating season, China Unicom says.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow",
-        "headline": "Because of an AI decision-support system, the EPA says Evansville, Indiana cut combined sewer overflows by more than 100 million gallons a year.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow"
-      },
-      {
-        "id": "fluix-ai-cooling-tenhats-knoxville-data-center-pue",
-        "headline": "Because of AI cooling control, a Knoxville data centre's PUE improved from 1.36 to 1.27, FLUIX reports.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/fluix-ai-cooling-tenhats-knoxville-data-center-pue"
-      },
-      {
-        "id": "mit-campus-ai-building-optimization-nw23-summer-energy-savings",
-        "headline": "Because of AI building optimization, MIT reports 10–70% summer energy savings in one campus building.",
-        "change": "added",
-        "state": "held (ungrounded)",
-        "url": null
-      },
-      {
-        "id": "veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment",
-        "headline": "Because of AI aeration control, French wastewater plants used 5.4% less electricity and emitted 6% less carbon, and paid 8.2% less for energy.",
+        "id": "esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care",
+        "headline": "Because of AI, older adults in primary clinics using a machine-learning fall-risk screen with a tailored exercise plan had 19.3 falls per 100 person-years against 21.2 in usual-care clinics, a 9% lower rate in a cluster-randomized trial.",
         "change": "added",
         "state": "published",
-        "url": "https://becauseofai.org/entry/veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment"
+        "url": "https://becauseofai.org/entry/esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care"
       },
       {
-        "id": "henry-county-kentucky-gemini-writing-feedback-novice-tier",
-        "headline": "Henry County Public Schools in Kentucky says 33% of students were in the novice tier on state writing assessments before teachers used Gemini for rubric-aligned feedback, and 15% of students advanced out of that tier afterwards.",
+        "id": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct",
+        "headline": "Because of AI, a wrist-worn neurostimulator that adapts its stimulation with an AI algorithm improved essential-tremor daily-living scores by 6.9 points at 90 days against 2.7 points with a sham device, in a randomized trial of 125 people.",
+        "change": "added",
+        "state": "published",
+        "url": "https://becauseofai.org/entry/fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct"
+      },
+      {
+        "id": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null",
+        "headline": "A machine-learning tool that scored each young person's likelihood of success in different care placements showed no better symptom change in a randomized trial: children's symptom z-scores changed by 0.45 with the tool against 0.14 without it, where higher means worse.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility",
+        "headline": "Because of AI, heart-failure patients with implanted pulmonary-artery pressure sensors adjusted their own diuretic doses with a clinician-confirmed language-model tool and spent 88.4% of the time in their target pressure range over 90 days, with no safety event detected in a 21-patient feasibility study.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null",
+        "headline": "Letting urogynecology patients ask ChatGPT-4o about their problem before or after the first visit did not change how uncertain they felt about their decisions, in a randomized trial of 125 patients.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "concern-ews-cluster-rct-inpatient-mortality-columbia-brigham",
+        "headline": "Because of an AI early-warning score shown to care teams, hospitalized patients had a 35.6% lower instantaneous risk of in-hospital death in a 74-unit cluster-randomized trial.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "boston-google-project-green-light-ai-signal-retiming-delay-inrix",
+        "headline": "Because of Google's AI signal-timing recommendations, Boston reports an average 13.5% reduction in delay at retimed intersections.",
+        "change": "added",
+        "state": "held (grade-split)",
+        "url": null
+      },
+      {
+        "id": "iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower",
+        "headline": "Because of Waymo's driverless AI driver, an independent IIHS study found a 68% lower police-reportable crash rate than human drivers in the same areas.",
         "change": "added",
         "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/henry-county-kentucky-gemini-writing-feedback-novice-tier"
+        "url": "https://becauseofai.org/entry/iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower"
       },
       {
-        "id": "letrus-espirito-santo-ai-essay-feedback-enem-rct",
-        "headline": "A randomised evaluation in 178 public schools in Espírito Santo, Brazil found that AI essay feedback on the Letrus platform raised university entrance exam scores by about 0.09 standard deviations, equivalent to 17 points out of 1,000.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "macquarie-virtual-peer-chatbot-psychology-exam-scores",
-        "headline": "Macquarie University says second-year psychology students who used its Virtual Peer AI chatbot in the two weeks before the final exam scored nearly five marks higher, a 9.45 per cent improvement, than non-users, in a pilot of 1,400 students.",
-        "change": "added",
-        "state": "published as speculative",
-        "url": "https://becauseofai.org/entry/macquarie-virtual-peer-chatbot-psychology-exam-scores"
-      },
-      {
-        "id": "mitchell-sd-amira-summer-pilot-reading-growth-goal",
-        "headline": "Mitchell School District in South Dakota says 47 of the more than 60 students who attended 80 percent of a summer programme using the Amira AI reading tutor, 76 percent, met or exceeded the district's goal of a quarter-year of reading growth.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "nigeria-edo-copilot-english-tutoring-world-bank-rct",
-        "headline": "In a randomised trial in Nigeria, six weeks of GPT-4-powered Microsoft Copilot tutoring for first-year senior secondary students raised English scores by 0.23 standard deviations, and a wider curriculum assessment by 0.31 standard deviations.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "north-dakota-dpi-amira-regular-users-ndsa-gains",
-        "headline": "North Dakota's education department says third graders who read with the Amira AI tutor regularly (more than 20 minutes a week) saw an average 15-point gain on the 2024 state assessment, fourth graders 17 points and fifth graders 10 points.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time",
-        "headline": "In an EEF-commissioned randomised trial of primary teachers in England, teachers assigned to Oak National Academy's Aila AI lesson assistant spent around 49 minutes less per week preparing lessons and resources, averaging 2.5 hours against 3.3 hours.",
+        "id": "septa-ai-bus-cameras-parking-violations-per-camera-hour",
+        "headline": "Because of AI cameras on SEPTA buses, Philadelphia says illegal parking in enforcement areas fell from 1.8 to 0.75 violations per camera hour.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
@@ -193,6 +165,13 @@
         "detail": "evidence: drafter C, verifier could not grade."
       },
       {
+        "id": "boston-google-project-green-light-ai-signal-retiming-delay-inrix",
+        "headline": "Because of Google's AI signal-timing recommendations, Boston reports an average 13.5% reduction in delay at retimed intersections.",
+        "reason": "grade-split",
+        "since": "2026-11-25",
+        "detail": "window: drafter no grade, verifier pre."
+      },
+      {
         "id": "brown-ai-lecture-summaries-neurology-clerkship-rct-null",
         "headline": "Medical students randomized to receive an AI-generated lecture summary before each quiz scored higher in 9 of 11 clerkship cohorts, but the difference between students was only +0.28 of 10 points and not significant.",
         "reason": "grade-split",
@@ -254,6 +233,13 @@
         "reason": "grade-split",
         "since": "2026-11-20",
         "detail": "attribution: drafter bundled, verifier could not grade."
+      },
+      {
+        "id": "concern-ews-cluster-rct-inpatient-mortality-columbia-brigham",
+        "headline": "Because of an AI early-warning score shown to care teams, hospitalized patients had a 35.6% lower instantaneous risk of in-hospital death in a 74-unit cluster-randomized trial.",
+        "reason": "grade-split",
+        "since": "2026-11-25",
+        "detail": "evidence: drafter A, verifier could not grade."
       },
       {
         "id": "copilot-three-field-experiments-software-developers-completed-tasks",
@@ -585,6 +571,13 @@
         "detail": "evidence: drafter C, verifier could not grade."
       },
       {
+        "id": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null",
+        "headline": "A machine-learning tool that scored each young person's likelihood of success in different care placements showed no better symptom change in a randomized trial: children's symptom z-scores changed by 0.45 with the tool against 0.14 without it, where higher means worse.",
+        "reason": "grade-split",
+        "since": "2026-11-26",
+        "detail": "evidence: drafter A, verifier could not grade; window: drafter pre, verifier in."
+      },
+      {
         "id": "qingdao-ai-nurse-supervised-chemotherapy-follow-up-quasi-experiment-qol",
         "headline": "Because of AI, 96 patients on chemotherapy in Qingdao who got a nurse-supervised AI follow-up system reported quality of life 5.88 points higher than 93 patients on conventional follow-up.",
         "reason": "grade-split",
@@ -641,6 +634,13 @@
         "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier pre."
       },
       {
+        "id": "septa-ai-bus-cameras-parking-violations-per-camera-hour",
+        "headline": "Because of AI cameras on SEPTA buses, Philadelphia says illegal parking in enforcement areas fell from 1.8 to 0.75 violations per camera hour.",
+        "reason": "grade-split",
+        "since": "2026-11-25",
+        "detail": "window: drafter no grade, verifier ongoing."
+      },
+      {
         "id": "sparks-pd-ai-assistant-non-emergency-calls-25-percent",
         "headline": "Because of an AI call assistant, Sparks Police in Nevada says it answered 25% of its non-emergency calls in the system's first two weeks.",
         "reason": "grade-split",
@@ -662,6 +662,13 @@
         "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in."
       },
       {
+        "id": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility",
+        "headline": "Because of AI, heart-failure patients with implanted pulmonary-artery pressure sensors adjusted their own diuretic doses with a clinician-confirmed language-model tool and spent 88.4% of the time in their target pressure range over 90 days, with no safety event detected in a 21-patient feasibility study.",
+        "reason": "grade-split",
+        "since": "2026-11-26",
+        "detail": "evidence: drafter D, verifier could not grade."
+      },
+      {
         "id": "tongji-ai-nutrition-gi-surgery-rct",
         "headline": "Because of AI-drafted, dietitian-reviewed guidance, 66.7% of gastric and colorectal cancer surgery patients at one Wuhan hospital ate enough energy 30 days after discharge, against 40.0% given standard advice.",
         "reason": "grade-split",
@@ -681,6 +688,13 @@
         "reason": "grade-split",
         "since": "2026-11-15",
         "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null",
+        "headline": "Letting urogynecology patients ask ChatGPT-4o about their problem before or after the first visit did not change how uncertain they felt about their decisions, in a randomized trial of 125 patients.",
+        "reason": "grade-split",
+        "since": "2026-11-26",
+        "detail": "evidence: drafter A, verifier could not grade."
       },
       {
         "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
@@ -750,12 +764,36 @@
       "record": "apavital-iasi-xylem-vue-ai-leak-detection-injected-volume/2026-11-25.json"
     },
     {
+      "id": "boston-google-project-green-light-ai-signal-retiming-delay-inrix",
+      "date": "2026-11-25",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "window: drafter no grade, verifier pre.",
+      "record": "boston-google-project-green-light-ai-signal-retiming-delay-inrix/2026-11-25.json"
+    },
+    {
       "id": "china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat",
       "date": "2026-11-25",
       "result": "held",
       "reason": "grade-split",
       "detail": "window: drafter no grade, verifier in.",
       "record": "china-unicom-changsha-district-heating-ai-forecasting-control-electricity-heat/2026-11-25.json"
+    },
+    {
+      "id": "concern-ews-cluster-rct-inpatient-mortality-columbia-brigham",
+      "date": "2026-11-25",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "evidence: drafter A, verifier could not grade.",
+      "record": "concern-ews-cluster-rct-inpatient-mortality-columbia-brigham/2026-11-25.json"
+    },
+    {
+      "id": "esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care",
+      "date": "2026-11-26",
+      "result": "published",
+      "reason": null,
+      "detail": "The registry supports the reported fall rates, relative effect, enrollment, and dates in a cluster-randomized evaluation of the eSTEPS package. It does not isolate the algorithm's contribution, and it lists a peer-reviewed trial publication despite the entry's suggestion that one is still awaited.",
+      "record": "esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care/2026-11-26.json"
     },
     {
       "id": "evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow",
@@ -766,6 +804,14 @@
       "record": "evansville-indiana-ai-real-time-decision-support-combined-sewer-overflow/2026-11-25.json"
     },
     {
+      "id": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct",
+      "date": "2026-11-26",
+      "result": "published",
+      "reason": null,
+      "detail": "The registry supports the reported 90-day changes and −4.2-point difference, with 125 randomized and 98 analyzed for the primary outcome. It does not isolate AI adaptation's contribution from stimulation, and it cites a peer-reviewed trial report despite the entry's caveat.",
+      "record": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct/2026-11-26.json"
+    },
+    {
       "id": "fluix-ai-cooling-tenhats-knoxville-data-center-pue",
       "date": "2026-11-25",
       "result": "published",
@@ -774,28 +820,12 @@
       "record": "fluix-ai-cooling-tenhats-knoxville-data-center-pue/2026-11-25.json"
     },
     {
-      "id": "henry-county-kentucky-gemini-writing-feedback-novice-tier",
-      "date": "2026-11-24",
+      "id": "iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower",
+      "date": "2026-11-25",
       "result": "published",
       "reason": null,
-      "detail": "The complete district account supports the reported 33% novice baseline and 15% of students advancing out of that group after Gemini-supported feedback. It provides neither an independent comparison nor dates establishing when the benefit occurred.",
-      "record": "henry-county-kentucky-gemini-writing-feedback-novice-tier/2026-11-24.json"
-    },
-    {
-      "id": "letrus-espirito-santo-ai-essay-feedback-enem-rct",
-      "date": "2026-11-24",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; attribution: drafter isolated, verifier bundled.",
-      "record": "letrus-espirito-santo-ai-essay-feedback-enem-rct/2026-11-24.json"
-    },
-    {
-      "id": "macquarie-virtual-peer-chatbot-psychology-exam-scores",
-      "date": "2026-11-24",
-      "result": "published",
-      "reason": null,
-      "detail": "The vendor account supports a reported 9.45% exam-score advantage among chatbot users in an October 2024 pilot involving 1,400 students. It establishes an adjusted observational association, without randomization, independent verification, or new in-window outcome data.",
-      "record": "macquarie-virtual-peer-chatbot-psychology-exam-scores/2026-11-24.json"
+      "detail": "The preprint supports a 68% lower police-reportable crash involvement rate across about 50 million driverless miles during 2021–2024. The observational comparison does not isolate AI from the broader vehicle deployment and operating conditions.",
+      "record": "iihs-waymo-driverless-police-reportable-crash-rate-68-percent-lower/2026-11-25.json"
     },
     {
       "id": "mit-campus-ai-building-optimization-nw23-summer-energy-savings",
@@ -806,36 +836,36 @@
       "record": "mit-campus-ai-building-optimization-nw23-summer-energy-savings/2026-11-25.json"
     },
     {
-      "id": "mitchell-sd-amira-summer-pilot-reading-growth-goal",
-      "date": "2026-11-24",
+      "id": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null",
+      "date": "2026-11-26",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier C; window: drafter no grade, verifier in.",
-      "record": "mitchell-sd-amira-summer-pilot-reading-growth-goal/2026-11-24.json"
+      "detail": "evidence: drafter A, verifier could not grade; window: drafter pre, verifier in.",
+      "record": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null/2026-11-26.json"
     },
     {
-      "id": "nigeria-edo-copilot-english-tutoring-world-bank-rct",
-      "date": "2026-11-24",
+      "id": "septa-ai-bus-cameras-parking-violations-per-camera-hour",
+      "date": "2026-11-25",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "nigeria-edo-copilot-english-tutoring-world-bank-rct/2026-11-24.json"
+      "detail": "window: drafter no grade, verifier ongoing.",
+      "record": "septa-ai-bus-cameras-parking-violations-per-camera-hour/2026-11-25.json"
     },
     {
-      "id": "north-dakota-dpi-amira-regular-users-ndsa-gains",
-      "date": "2026-11-24",
+      "id": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility",
+      "date": "2026-11-26",
       "result": "held",
       "reason": "grade-split",
-      "detail": "attribution: drafter bundled, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "north-dakota-dpi-amira-regular-users-ndsa-gains/2026-11-24.json"
+      "detail": "evidence: drafter D, verifier could not grade.",
+      "record": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility/2026-11-26.json"
     },
     {
-      "id": "oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time",
-      "date": "2026-11-24",
+      "id": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null",
+      "date": "2026-11-26",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "oak-aila-ai-lesson-assistant-eef-trial-teacher-planning-time/2026-11-24.json"
+      "detail": "evidence: drafter A, verifier could not grade.",
+      "record": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null/2026-11-26.json"
     },
     {
       "id": "veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment",
@@ -851,24 +881,42 @@
       "id": "milvue-ai-paediatric-fracture-ed-leipzig-recall-null",
       "date": "2026-11-24",
       "url": "https://becauseofai.org/entry/milvue-ai-paediatric-fracture-ed-leipzig-recall-null"
+    },
+    {
+      "id": "veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment",
+      "date": "2026-11-26",
+      "url": "https://becauseofai.org/entry/veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment"
     }
   ],
   "leads_added": [
-    "Houston Methodist predictive AI (HDAI) follow-up for high-risk Medicare surgical patients: 30-day post-discharge mortality fell about 35%, readmissions about 18% (O/E ratios 0.48 to 0.31 and 1.17 to 0.96). [MedPage Today](https://www.medpagetoday.com/hospitalbasedmedicine/generalhospitalpractice/124037), HLTH conference case study. Reached patients and has a risk-matched comparison. Missing: the hospital's or HDAI's own page or a paper (the news report is secondary), exact achieved dates, absolute counts, and the fact it is a before-after against Medicare benchmark, not a trial.",
-    "Fleets using AI dash cams cut crash rates 37% in six months, Samsara: already logged 2026-11-18.",
-    "EDITH AI breast screening trial (Warwick/Cambridge) began: protocol, no result. Already noted 2026-11-23.",
-    "Skipped: ECG deep-learning ATTR-CM prioritisation (JAMA, diagnostic validation), bladder cancer risk prediction, medRxiv model validations, target-trial emulation of immunotherapy (not AI benefit), AEA registration in development, reviews, stocks and funding news."
+    "Drafted: CONCERN early-warning system, 74-unit cluster-randomized trial, in-hospital mortality HR 0.644. Read from the medRxiv preprint (the reader's Unpaywall copy); the Nature Medicine version is [10.1038/s41591-025-03609-7](https://doi.org/10.1038/s41591-025-03609-7). A new [medRxiv critique](https://www.medrxiv.org/content/10.64898/2026.11.23.26368768v1) raises spillover, exclusion and cluster-imbalance concerns; stated in the entry's conflicts.",
+    "AI companion and mental health of the elderly, Jiangsu, [AEA RCT 17436](https://www.socialscienceregistry.org/trials/17436): completed 2025-12 to 2026-07, registration only. Watch for results.",
+    "AI-assisted abdominal ultrasound crossover, [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.23.26368613v1): 33 sonographers, exam time down 2.23 minutes; standardized exams, no evidence it reached patients. Skipped.",
+    "ECG deep learning for ATTR-CM testing priority, [JAMA](https://jamanetwork.com/journals/jama/fullarticle/2853388): reader returned 403 (`NOT READ`). Missing: the paper, to see whether it reached patients.",
+    "Skipped: model validations, reviews, benchmarks, EDITH trial (protocol, already noted), funding and stock news."
   ],
   "x": {
     "username": "bcuz_of_ai",
     "followers": 6,
     "posts": [
       {
+        "id": "2125743213608665446",
+        "url": "https://x.com/bcuz_of_ai/status/2125743213608665446",
+        "text": "Because of AI aeration control, French wastewater plants used 5.4% less electricity and emitted 6% less carbon, and paid 8.2% less for energy.\n\nhttps://t.co/exwqaBVALF https://t.co/qxxjmAR3dt",
+        "created_at": "2026-11-26T00:07:31.000Z",
+        "impressions": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "bookmarks": 0,
+        "quotes": 0
+      },
+      {
         "id": "2125059513937952800",
         "url": "https://x.com/bcuz_of_ai/status/2125059513937952800",
         "text": "AI fracture detection did not significantly cut next-day diagnostic revisions (8.6% without AI, 5.7% with AI) among 667 children imaged out of hours in a German paediatric emergency department.\n\nhttps://t.co/dNZxPdKRO7 https://t.co/iPmtxq3nV6",
         "created_at": "2026-11-24T02:50:44.000Z",
-        "impressions": 3,
+        "impressions": 5,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -903,20 +951,20 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-24",
-    "pageviews": 24,
-    "visits": 23,
+    "day": "2026-11-25",
+    "pageviews": 23,
+    "visits": 17,
     "top_paths": [
       {
         "path": "/",
-        "views": 19
+        "views": 16
       },
       {
-        "path": "/entry/tampa-general-palantir-sepsis-deaths-886-lives",
+        "path": "/entry/hurricane-melissa-2025",
         "views": 1
       },
       {
-        "path": "/entry/columbia-star-birth",
+        "path": "/entry/instructor-designed-ai-19-universities-stem-exams-rct",
         "views": 1
       },
       {
@@ -924,11 +972,19 @@
         "views": 1
       },
       {
+        "path": "/entry/waymo-injury-crashes",
+        "views": 1
+      },
+      {
+        "path": "/not-because-of-ai",
+        "views": 1
+      },
+      {
         "path": "/method",
         "views": 1
       },
       {
-        "path": "/entry/gb-0895-phase-3",
+        "path": "/entry/uva-comet-deterioration-null",
         "views": 1
       }
     ]
