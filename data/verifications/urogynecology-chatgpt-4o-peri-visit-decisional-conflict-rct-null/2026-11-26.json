@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null",
+  "date": "2026-11-26",
+  "as_of": "2026-11-26",
+  "entry_sha256": "cbe60c3b5ae57906fe591fb2cd56fe26bb5ca363008c8eb4163c14a3390f8e4e",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-26"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1097/SPV.0000000000001906",
+      "ok": true,
+      "method": "europepmc-abstract",
+      "fetched_at": "2026-11-26T02:35:08.219Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1097%2FSPV.0000000000001906%22&format=json&resultType=core",
+      "sha256": "a5415a687ce1657b736670b022ddfd0f0d9b09fe50f14536d49fff92ef3ad085",
+      "chars": 2174,
+      "truncated": false,
+      "partial": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Among 125 randomized patients (July 2024-December 2024)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "Among 125 randomized patients (July 2024-December 2024)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "Decisional conflict was low and did not differ immediately (P = 0.691) or at 3 months (P = 0.875)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Among 125 randomized patients (July 2024-December 2024)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "Among 125 randomized patients (July 2024-December 2024)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "Among 125 randomized patients (July 2024-December 2024)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-26",
+    "output": {
+      "full_text": false,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": false
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized groups compared ChatGPT-4o use before or after the visit with usual care without chatbot use.",
+      "achieved_dates": {
+        "from": "abstract",
+        "conflicting": false,
+        "note": "July–December 2024 dates randomization; dates of the three-month follow-up are not explicitly reported."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The abstract provides no funding or author disclosures; the entry acknowledges that these remain unchecked."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The abstract supports 125 randomized patients and no statistically significant difference in decisional conflict immediately or at three months. Evidence grade A cannot be established because preregistration of the primary endpoint is not reported."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12570,
+      "output": 530,
+      "total": 13100,
+      "cached": 0,
+      "reasoning": 66
+    },
+    "duration_ms": 13562
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

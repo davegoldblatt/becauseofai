@@ -1,0 +1,127 @@
+id: esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care
+section: because
+rank: 144
+headline: >-
+  Because of AI, older adults in primary clinics using a machine-learning fall-risk screen with a tailored exercise
+  plan had 19.3 falls per 100 person-years against 21.2 in usual-care clinics, a 9% lower rate in a cluster-randomized trial.
+impact: "19.3 vs 21.2 falls per 100 person-years"
+impact_number: "19.3"
+impact_label: "falls per 100 person-years with the eSTEPS tool, vs 21.2 in usual care"
+summary: >-
+  The eSTEPS cluster-randomized trial in urban primary care gave clinicians a machine-learning fall-injury risk screen
+  and a tailored exercise plan inside the Epic record at Medicare Wellness Visits, and compared the fall rate with usual care.
+caveat: >-
+  The registry posting is a results record, not a peer-reviewed paper, and the tool bundles an ML risk screen with
+  clinician decision support and an exercise app, so the benefit cannot be credited to the algorithm alone.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: bundled
+  window: pre
+comparison: "eSTEPS clinical decision support (machine-learning fall-injury risk screening, provider alert and smart set, patient exercise app) vs usual care, primary care clinics randomized as clusters"
+effect:
+  relative: "Fall rate ratio 0.91 (95% CI 0.88 to 0.95), p<0.0001"
+  absolute: "19.3 vs 21.2 falls per 100 person-years"
+reach: "11,945 older adults in the trial's primary care clinics"
+dates:
+  achieved_start: 2023-06-08
+  achieved_end: 2025-05-08
+  published: 2026-07-08
+  added: 2026-11-26
+  updated: 2026-11-26
+sources:
+  - title: "ClinicalTrials.gov NCT04993781 record with posted results (eSTEPS, Brigham and Women's Hospital)"
+    url: https://clinicaltrials.gov/study/NCT04993781
+    type: primary
+conflicts: >-
+  The trial was run by the Brigham and Women's team that developed the eSTEPS tool, with the National Institute on Aging
+  as collaborator; the results are the investigators' own registry posting and no independent analysis is shown.
+what_would_change: "A peer-reviewed paper with the cluster-adjusted analysis, or a trial isolating the machine-learning screen from the exercise plan."
+notes: >-
+  verify: the registry posts an enrolment of 11,945 but the primary analysis counts participants as 5,681 intervention and 6,264 control; the unit of randomization is the clinic cluster per the brief summary.
+  verify: the secondary outcome fall-related injuries (15.7 vs 16.7 per 100 person-years) is not reported in the entry.
+  verify: achieved_end is the registry primary completion date (2025-05-08); overall completion is 2025-08-31.
+related: []
+history:
+  - date: 2026-11-26
+    note: Added by the backfill run.
+rationale: Clinics were randomized to the eSTEPS tool or usual care, but the tool combines a machine-learning risk screen with decision support and a patient app, so the attribution is bundled.
+receipts:
+  - field: headline
+    quote: '"value": "19.3",'
+    locator: Results, primary outcome measurement (eSTEPS group)
+    source: 0
+  - field: headline
+    quote: '"value": "21.2",'
+    locator: Results, primary outcome measurement (control group)
+    source: 0
+  - field: headline
+    quote: '"paramValue": "0.91",'
+    locator: Results, primary outcome analysis (risk ratio)
+    source: 0
+  - field: impact
+    quote: '"value": "19.3",'
+    locator: Results, primary outcome measurement (eSTEPS group)
+    source: 0
+  - field: impact
+    quote: '"value": "21.2",'
+    locator: Results, primary outcome measurement (control group)
+    source: 0
+  - field: impact_number
+    quote: '"value": "19.3",'
+    locator: Results, primary outcome measurement (eSTEPS group)
+    source: 0
+  - field: effect.relative
+    quote: '"paramValue": "0.91",'
+    locator: Results, primary outcome analysis (risk ratio)
+    source: 0
+  - field: effect.relative
+    quote: '"ciLowerLimit": "0.88",'
+    locator: Results, primary outcome analysis
+    source: 0
+  - field: effect.relative
+    quote: '"ciUpperLimit": "0.95"'
+    locator: Results, primary outcome analysis
+    source: 0
+  - field: effect.relative
+    quote: '"pValue": "<0.0001",'
+    locator: Results, primary outcome analysis
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "19.3",'
+    locator: Results, primary outcome measurement (eSTEPS group)
+    source: 0
+  - field: effect.absolute
+    quote: '"value": "21.2",'
+    locator: Results, primary outcome measurement (control group)
+    source: 0
+  - field: reach
+    quote: '"count": 11945,'
+    locator: Design module, enrollmentInfo
+    source: 0
+  - field: dates.achieved_start
+    quote: '"date": "2023-06-08",'
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: '"date": "2025-05-08",'
+    locator: Status module, primaryCompletionDateStruct
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-26
+  content: 0b848e9239c92655824692f112328de90ae3ffae0411641834cb9ca39e1262a1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-26
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-26
+    verdict: pass
+  record: esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care/2026-11-26.json
+  confidence: strict
