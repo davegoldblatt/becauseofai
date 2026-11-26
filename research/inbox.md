@@ -476,3 +476,16 @@ Candidates: 198 over 2026-11-23 to 2026-11-25, 13 flagged randomized, 15 announc
 - AI-assisted abdominal ultrasound crossover, [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.23.26368613v1): 33 sonographers, exam time down 2.23 minutes; standardized exams, no evidence it reached patients. Skipped.
 - ECG deep learning for ATTR-CM testing priority, [JAMA](https://jamanetwork.com/journals/jama/fullarticle/2853388): reader returned 403 (`NOT READ`). Missing: the paper, to see whether it reached patients.
 - Skipped: model validations, reviews, benchmarks, EDITH trial (protocol, already noted), funding and stock news.
+
+## 2026-11-26 (daily scout)
+
+Candidates: 192 over 2026-11-24 to 2026-11-26, 14 flagged randomized, 14 announcements, 0 alerts, 58 source errors (mostly Crossref 429s). No entries drafted.
+
+- AI-supported practice for vaccine-hesitancy communication among student pharmacists, randomized study, [Am J Pharm Educ](https://doi.org/10.1016/j.ajpe.2026.102132): education RCT with students as participants. Missing: the paper read, the comparison arm and absolute scores, achieved dates.
+- AI companion and mental health of the elderly, Jiangsu, [AEA RCT 17436](https://www.socialscienceregistry.org/trials/17436): completed, registration only, already noted 2026-11-25. Watch for results.
+- Causal reasoning and Gemini-assisted decision-making, Italy, [AEA RCT 20278](https://www.socialscienceregistry.org/trials/20278): completed 2026-11-18 to 2026-11-20, registration only; decision task, unclear it reached people outside the experiment.
+- Skipped: AEA registrations in development or ongoing (employer AI training, "Hiding the Bot"), CONCERN-EWS critique (already in the entry), ECG ATTR-CM (already noted), EDITH (protocol), model validations, reviews, benchmarks, vignette comparisons, opinion, funding and market-report news.
+
+### Alerts
+
+None.
