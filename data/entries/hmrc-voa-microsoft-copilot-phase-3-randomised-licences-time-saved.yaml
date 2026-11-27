@@ -1,0 +1,84 @@
+id: hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved
+section: because
+rank: 151
+headline: >-
+  Because of Microsoft Copilot, HMRC staff randomly given a licence self-reported saving 2-3% of
+  their working week, around 60 minutes a week.
+impact: "~60 minutes saved per week"
+impact_number: "2–3%"
+impact_label: "of the working week saved, self-reported by HMRC staff given Copilot"
+summary: >-
+  HMRC's evaluation of the third phase of its Microsoft 365 Copilot trial randomly allocated 3,000
+  licences to staff in office-based roles and surveyed them, reporting a cautious estimate of time
+  saved.
+caveat: >-
+  The time saving is self-reported in a survey answered by 45% of licence holders, then reduced by
+  about 20% by the analysts; the report calls it a baseline estimate rather than a precise measure.
+domain: work
+ai_type: generative
+grades:
+  evidence: C
+  attribution: isolated
+  window: pre
+comparison: "HMRC staff randomly allocated a Copilot licence; savings estimated by the licence holders themselves"
+effect:
+  relative: "2-3% of the working week saved"
+  absolute: "Around 60 minutes per week for a full-time equivalent working pattern"
+reach: "3,000 HMRC employees randomly allocated a licence"
+dates:
+  achieved_start: "2024-09"
+  achieved_end: "2024-12"
+  published: "2026-07"
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "GOV.UK (HMRC): Evaluating the Impact of Microsoft Copilot in HMRC (phase 3 trial)"
+    url: https://www.gov.uk/government/publications/evaluation-report-phase-3-trial-of-microsoft-copilot/evaluating-the-impact-of-microsoft-copilot-in-hmrc
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is HMRC's own evaluation of its own trial of a Microsoft product. The time savings
+  are self-reported. No independent audit.
+what_would_change: "Measured task times for licence holders and unlicensed colleagues from the randomised groups, rather than survey estimates."
+notes: >-
+  verify: the publication month (July 2026) is from the GOV.UK listing seen in search, not the page
+  text. verify: the trial ended more than twelve months before this entry was added, so the window
+  is pre. The evidence grade is C because the outcome is a self-reported survey estimate even
+  though licences were randomly allocated.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Isolated because licences were randomly allocated across business groups, though the time saved is estimated by the licence holders rather than measured against the unlicensed group.
+receipts:
+  - field: headline
+    quote: HMRC participants self-reported saving 2-3% of their working week
+    locator: Results, Time Savings
+    source: 0
+  - field: impact
+    quote: equating to around 60 minutes per week for a full-time equivalent working pattern
+    locator: Results, Time Savings
+    source: 0
+  - field: impact_number
+    quote: HMRC participants self-reported saving 2-3% of their working week
+    locator: Results, Time Savings
+    source: 0
+  - field: effect.relative
+    quote: HMRC participants self-reported saving 2-3% of their working week
+    locator: Results, Time Savings
+    source: 0
+  - field: effect.absolute
+    quote: equating to around 60 minutes per week for a full-time equivalent working pattern
+    locator: Results, Time Savings
+    source: 0
+  - field: reach
+    quote: 3,000 HMRC employees were randomly allocated a full Copilot license
+    locator: Copilot Trials in HMRC
+    source: 0
+  - field: dates.achieved_start
+    quote: running from September to December 2024
+    locator: Copilot Trials in HMRC
+    source: 0
+  - field: dates.achieved_end
+    quote: running from September to December 2024
+    locator: Copilot Trials in HMRC
+    source: 0

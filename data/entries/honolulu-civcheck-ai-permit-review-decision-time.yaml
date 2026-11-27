@@ -1,0 +1,77 @@
+id: honolulu-civcheck-ai-permit-review-decision-time
+section: because
+rank: 154
+headline: >-
+  Because of CivCheck, an AI plan-review tool, Honolulu's average permit decision time for smaller
+  residential projects fell from 73 days to 32.5 days in the first quarter of 2026.
+impact: "73 days to 32.5 days"
+impact_number: "32.5 days"
+impact_label: "average permit decision time, down from 73 days, for permits through CivCheck"
+summary: >-
+  HousingWire reports that Honolulu's Department of Planning & Permitting replaced its legacy
+  permitting systems with CivCheck from August 2025, and that permits processed through it had a
+  lower average decision time in the first quarter of 2026.
+caveat: >-
+  A trade-press report relaying city and vendor figures. The comparison is against the earlier
+  average, with the AI tool arriving inside a wholesale system replacement, and the figure covers
+  only single-family, duplex, ADU, addition and renovation permits.
+domain: infrastructure
+ai_type: hybrid
+grades:
+  evidence: C
+  attribution: bundled
+  window: in
+comparison: "Average decision time for permits processed through CivCheck against the 73-day average before"
+effect:
+  relative: null
+  absolute: "Average permit decision time reduced from 73 days to 32.5 days"
+reach: null
+dates:
+  achieved_start: "2026-01"
+  achieved_end: "2026-03"
+  published: "2026"
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "HousingWire: How Honolulu leveraged AI to cut permit review times in half"
+    url: https://www.housingwire.com/articles/how-honolulu-leveraged-ai-to-cut-permit-review-times-in-half/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is a news report relaying the city's results, with a quote from the chief executive of
+  Clariti, the vendor that owns CivCheck. The city paid $7 million for the system and the report
+  notes local pushback on the cost. No independent audit.
+what_would_change: "An audited city report of decision times before and after, separating the AI plan check from the replaced permitting system and staffing changes."
+notes: >-
+  verify: the article page printed no publication date (it says commercial pre-checks launch "later
+  this summer"), so only the year 2026 is recorded as published. The achieved range is the quarter
+  the article names, Q1 2026. The city's own page was not found.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Bundled because CivCheck arrived with the replacement of the city's legacy permitting systems, so the change in decision time is that of the whole package.
+receipts:
+  - field: headline
+    quote: reduced average permit decision times from 73 days to 32.5 days
+    locator: Body, Early progress
+    source: 0
+  - field: impact
+    quote: reduced average permit decision times from 73 days to 32.5 days
+    locator: Body, Early progress
+    source: 0
+  - field: impact_number
+    quote: reduced average permit decision times from 73 days to 32.5 days
+    locator: Body, Early progress
+    source: 0
+  - field: effect.absolute
+    quote: reduced average permit decision times from 73 days to 32.5 days
+    locator: Body, Early progress
+    source: 0
+  - field: dates.achieved_start
+    quote: Q1 2026 data shows that permits processed through CivCheck
+    locator: Body, Early progress
+    source: 0
+  - field: dates.achieved_end
+    quote: Q1 2026 data shows that permits processed through CivCheck
+    locator: Body, Early progress
+    source: 0

@@ -1,0 +1,85 @@
+id: dwp-microsoft-365-copilot-trial-comparison-group-time-saved
+section: because
+rank: 150
+headline: >-
+  Because of Microsoft 365 Copilot, DWP staff with a licence saved an average of 19 minutes a day
+  across eight routine tasks, compared with similar staff without one.
+impact: "19 minutes saved per day"
+impact_number: "19 min"
+impact_label: "saved per day by DWP staff using Copilot, against non-users"
+summary: >-
+  The Department for Work and Pensions evaluated a six-month trial of licensed Microsoft 365
+  Copilot among 3,549 staff, surveying licence holders and a comparison group of non-users and
+  estimating the difference by regression.
+caveat: >-
+  The report itself lists non-random allocation of licences, self-reported time savings and no
+  pre-trial baseline as limitations; the staff were central-office roles, not frontline jobcentre
+  staff, so no effect on claimants is measured.
+domain: work
+ai_type: generative
+grades:
+  evidence: C
+  attribution: isolated
+  window: pre
+comparison: "DWP staff holding a Copilot licence against a stratified random sample of non-users with similar grade and business area, regression-adjusted"
+effect:
+  relative: "90% of users indicated that Copilot helped them save time"
+  absolute: "Average of 19 minutes per day saved across eight routine tasks, adjusted for demographic, occupational and AI-keenness variables"
+reach: "3,549 DWP staff in the trial"
+dates:
+  achieved_start: "2024-10"
+  achieved_end: "2025-03"
+  published: 2026-01-29
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "GOV.UK (DWP): An Evaluation of DWP's Microsoft 365 Copilot Trial"
+    url: https://www.gov.uk/government/publications/an-evaluation-of-dwps-microsoft-copilot-365-trial/an-evaluation-of-dwps-microsoft-365-copilot-trial
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the department's own evaluation of its own trial of a Microsoft product. Licence
+  uptake was voluntary and outcomes were self-reported by staff. No independent audit.
+what_would_change: "A measured (not self-reported) comparison of task times, or evidence of effect on claimant-facing service."
+notes: >-
+  verify: the published date (29 January 2026) comes from the GOV.UK listing seen in search, not
+  from the page text the reader printed. verify: evidence grade taken as C although a comparison
+  group exists, because allocation was not random and outcomes were self-reported. The trial
+  ended more than twelve months before this entry was added, so the window is pre.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Isolated because licence holders were compared with a similar non-user group by regression, though licences were not randomly allocated and the time savings are self-reported.
+receipts:
+  - field: headline
+    quote: saved an average of 19 minutes per day across eight routine tasks
+    locator: Chapter 4, Task efficiency
+    source: 0
+  - field: impact
+    quote: saved an average of 19 minutes per day across eight routine tasks
+    locator: Chapter 4, Task efficiency
+    source: 0
+  - field: impact_number
+    quote: saved an average of 19 minutes per day across eight routine tasks
+    locator: Chapter 4, Task efficiency
+    source: 0
+  - field: effect.relative
+    quote: 90% of users indicated that Copilot helped them save time
+    locator: Executive summary, Key findings
+    source: 0
+  - field: effect.absolute
+    quote: saved an average of 19 minutes per day across eight routine tasks
+    locator: Chapter 4, Task efficiency
+    source: 0
+  - field: reach
+    quote: involved 3,549 members of staff
+    locator: Executive summary, Background
+    source: 0
+  - field: dates.achieved_start
+    quote: The trial ran from October 2024 to March 2025
+    locator: Executive summary, Background
+    source: 0
+  - field: dates.achieved_end
+    quote: The trial ran from October 2024 to March 2025
+    locator: Executive summary, Background
+    source: 0
