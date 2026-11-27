@@ -65,3 +65,24 @@ receipts:
     quote: which has analyzed 250,000 applications to date
     locator: Body, first paragraph
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: d163be1a88bb3ee71b5f9596613999136829763f22c013f4d620607bd07ba901
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: uspto-class-act-trademark-pre-examination-queue-searchable/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "attribution: drafter bundled, verifier isolated; window: drafter no grade, verifier in."
+  record: uspto-class-act-trademark-pre-examination-queue-searchable/2026-11-27.json

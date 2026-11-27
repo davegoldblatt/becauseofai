@@ -75,3 +75,23 @@ receipts:
     quote: Five planning authorities from across the country took part
     locator: Body, Scaling into other geographies
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 168b025d9725dd29e8851d68afe8f02bd4881d1bc0ee455be862a187a1d2d182
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: planai-consultation-response-analysis-five-planning-authorities/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The source does not establish when the measured time savings occurred.).

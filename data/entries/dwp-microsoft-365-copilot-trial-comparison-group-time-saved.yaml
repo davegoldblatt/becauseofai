@@ -83,3 +83,23 @@ receipts:
     quote: The trial ran from October 2024 to March 2025
     locator: Executive summary, Background
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: cf2a7b7f227e850d9970cc45a4989f85b5b7852f7dbc79796291c60f2b1a763d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: dwp-microsoft-365-copilot-trial-comparison-group-time-saved/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - "The two checkers disagreed on evidence: the drafter said C and the verifier said B. The entry shows the more cautious of the two, C."

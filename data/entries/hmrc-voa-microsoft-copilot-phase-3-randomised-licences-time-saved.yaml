@@ -82,3 +82,24 @@ receipts:
     quote: running from September to December 2024
     locator: Copilot Trials in HMRC
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 7080d0f08eba52680dc81beb71121bc2296073c5b650f5432d3780a91b11b617
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "attribution: drafter isolated, verifier could not grade."
+  record: hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved/2026-11-27.json

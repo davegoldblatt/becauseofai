@@ -75,3 +75,22 @@ receipts:
     quote: Q1 2026 data shows that permits processed through CivCheck
     locator: Body, Early progress
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: ef2ff51fcd1e4a9f5b4db02df479fddb3e9882703cdd26078cf29a0d0c19b68f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: honolulu-civcheck-ai-permit-review-decision-time/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
