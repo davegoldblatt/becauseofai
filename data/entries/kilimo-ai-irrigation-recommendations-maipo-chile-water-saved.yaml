@@ -1,0 +1,98 @@
+id: kilimo-ai-irrigation-recommendations-maipo-chile-water-saved
+section: because
+rank: 156
+headline: >-
+  Because of Kilimo's satellite-and-weather irrigation recommendations, farms in Chile's Maipo River basin
+  reduced water use by 15%-20% on average, the company says.
+impact: "15%-20% less irrigation water on average; 60 million cubic feet saved in the Maipo basin"
+impact_number: "15%-20%"
+impact_label: "less irrigation water used on average by Kilimo's Chilean farm clients, per Kilimo"
+summary: >-
+  Microsoft's Latin America newsroom reports on Kilimo, a water-stewardship platform that combines satellite
+  images, weather and soil data and evapotranspiration estimates to issue weekly irrigation recommendations to
+  fruit and nut farms. Kilimo says users cut water use by 15%-20% on average, measured against each farm's
+  previous three-year average adjusted for rainfall, and that a three-year project saved 60 million cubic feet.
+caveat: >-
+  Every figure is Kilimo's own, relayed by Microsoft's newsroom. The baseline is the farm's earlier water use, not
+  a control group, and the article does not separate the model from the agronomists who visit farms and advise.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Each farm's average irrigation over the preceding three years, adjusted for rainfall"
+effect:
+  relative: "Users have reduced water usage by 15%-20% on average, according to Kilimo"
+  absolute: "60 million cubic feet of water saved in the Maipo River basin by a three-year irrigation management project, according to Kilimo"
+reach: "Farms in the Maipo River basin, Chile, in Kilimo's irrigation management project"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2025-12-09
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "Data-driven farming and AI are transforming water management in Chile (Microsoft Source Latin America)"
+    url: https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile?lang=en
+    type: primary
+    announcement: true
+conflicts: >-
+  The article is a Microsoft newsroom feature about a Microsoft partner. Kilimo built the platform, runs it on
+  Microsoft Azure, was developed in partnership with Microsoft, and is paid by corporate partners for verified water
+  savings. All figures are attributed to Kilimo. This is an organisation's own announcement about its own product.
+what_would_change: "An independent audit of the water savings with a comparison group of farms not using the platform, with dates."
+notes: >-
+  verify: the article gives no start and end dates for the savings (only a "three-year" project), so achieved dates
+  and the window grade are left empty. verify: published 2025-12-09 is earlier than the slice window; found by
+  search for 2026 announcements and retained as a result not rejected for timing. verify: agronomists visit farms
+  and advise, so the AI is only part of the intervention.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Bundled because savings are measured against each farm's own prior three-year use and delivered through agronomist visits as well as the model, so no comparison isolates the AI.
+receipts:
+  - field: headline
+    quote: On average, users have reduced water usage by 15%-20%, Kilimo said.
+    locator: Technology and human touch
+    source: 0
+  - field: impact
+    quote: On average, users have reduced water usage by 15%-20%, Kilimo said.
+    locator: Technology and human touch
+    source: 0
+  - field: impact
+    quote: has saved 60 million cubic feet of water in the Maipo River basin
+    locator: Body, paragraph on the three-year project
+    source: 0
+  - field: impact_number
+    quote: On average, users have reduced water usage by 15%-20%, Kilimo said.
+    locator: Technology and human touch
+    source: 0
+  - field: effect.relative
+    quote: On average, users have reduced water usage by 15%-20%, Kilimo said.
+    locator: Technology and human touch
+    source: 0
+  - field: effect.absolute
+    quote: has saved 60 million cubic feet of water in the Maipo River basin
+    locator: Body, paragraph on the three-year project
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 483eae5b23e8094dc9840e19f08741b706f8a3608a66262bfa025563c48060f1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: kilimo-ai-irrigation-recommendations-maipo-chile-water-saved/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The aggregate benefits lack calendar dates; dated individual farm examples do not establish the aggregate measurement period.).

@@ -1,0 +1,96 @@
+id: irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield
+section: because
+rank: 155
+headline: >-
+  Because of PaddyMitra, a WhatsApp fertiliser advisory built on machine learning, rice farmers in three Odisha
+  districts got yields about 7–12% above their own fertiliser practice in a single season.
+impact: "Rice yield about 7–12% higher than farmers' fertiliser practice"
+impact_number: "7–12%"
+impact_label: "higher rice yield than farmers' own fertiliser practice, Odisha pilot"
+summary: >-
+  IRRI reports that PaddyMitra, a WhatsApp advisory whose nutrient recommendations come from machine learning
+  applied to years of Rice Crop Manager field data, was piloted in the 2025 wet season among about 1500 farmers
+  in Odisha. Recommended plots out-yielded farmers' fertiliser practice in all three districts studied, by 0.38
+  to 0.60 t/ha.
+caveat: >-
+  The source is IRRI's own magazine article about its own tool. It states the analysis covers a single season
+  and gives no sample sizes per district, no statistical test and no dates.
+domain: infrastructure
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Farmers' own fertiliser practice, with the rest of crop management kept the same, in the same districts"
+effect:
+  relative: "Yield improvement of approximately 7–12% over farmers' fertiliser practice"
+  absolute: "Yield improvement ranging from 0.38 to 0.60 t/ha across Puri, Ganjam and Balasore"
+reach: "About 1500 farmers in the Kharif 2025 pilot in Odisha, India"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "Gakhar, Bharti and Sahoo, Meet PaddyMitra, An AI Extension Agent (Rice Today, IRRI)"
+    url: https://ricetoday.irri.org/meet-paddymitra-an-ai-extension-agent/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the International Rice Research Institute's own magazine reporting on a tool IRRI built and
+  runs. It is the organisation's own announcement about its own programme, not an independent evaluation.
+what_would_change: "A multi-season analysis with sample sizes, a statistical test and trial dates, ideally from outside IRRI."
+notes: >-
+  verify: the article gives no period for the benefit beyond the 2025 wet season (Kharif), so achieved dates and
+  the window grade are left empty. verify: the article's publication date is not printed in the text read; 2026 is
+  inferred from its related-story dates. verify: how the advisory arm and the farmers' practice arm were assigned
+  is not stated.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Bundled because PaddyMitra plots are compared with farmers' fertiliser practice but the article does not say how plots were assigned, so the machine-learning advice cannot be separated from the agronomic advice itself.
+receipts:
+  - field: headline
+    quote: a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%
+    locator: Yield gains over farmers' practice
+    source: 0
+  - field: impact
+    quote: a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%
+    locator: Yield gains over farmers' practice
+    source: 0
+  - field: impact_number
+    quote: a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%
+    locator: Yield gains over farmers' practice
+    source: 0
+  - field: effect.relative
+    quote: a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%
+    locator: Yield gains over farmers' practice
+    source: 0
+  - field: effect.absolute
+    quote: a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%
+    locator: Yield gains over farmers' practice
+    source: 0
+  - field: reach
+    quote: PaddyMitra has been piloted during Kharif (wet season) 2025 among ~1500 farmers
+    locator: Yield gains over farmers' practice
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: ef79b26f5fa890db341c0e345a4417f5e615a4d41a99bec1f5c411a6b8a52224
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
