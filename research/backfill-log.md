@@ -700,3 +700,21 @@ Read and rejected:
 - Protocol (AI DR/AMD screening, JMIR Res Protoc), My Heart Counts design paper, medical history-taking acceptance study (JMIR Med Educ): no results or opinion only.
 - Remaining medRxiv and PubMed items (models, reviews, benchmarks, withdrawn preprint): set aside from titles and snippets.
 - 15 sources read with npm run read.
+
+## 2026-11-27, slice 38: papers and trial results, 2026-07-13 to 2026-07-20
+
+Drafted (2):
+- ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou: JMIR mHealth RCT, 513 patients, AI stool-photo app, 1245.5 vs 1586.2 mL laxative, cleansing not inferior (full text, because).
+- cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null: Lancet Gastro Hepatol RCT, 757 patients, ADR 33.8% vs 30.9% not significant (abstract only, not-because).
+
+Read and rejected:
+- NCT04223934 ARTERY (optima4BP hypertension CDS, results posted): registry outcome table has mislabelled arms at 12 months and no test statistics; not quotable cleanly.
+- NCT05574699 (social-needs CDS, Hopkins): record describes a risk score, not AI.
+- SCALE-UP II chatbot log analysis (medRxiv): descriptive engagement, chatbot not shown to be AI, chatbot arm requested fewer kits.
+- Simplified vitrification in donor oocytes (RBMO, abstract): AI only graded oocytes, the intervention was a lab protocol.
+- Blood culture ML, FIT ML referral models, respiratory speech triage (medRxiv): retrospective model performance.
+- ThinkSono DVT ultrasound (medRxiv): already an entry.
+- Boora obesity platform: usability study, no outcome. Biomedical troubleshooting training (BMC Med Educ): exploratory, no comparison.
+- Sinus CT deep learning (Int Forum Allergy Rhinol): reader timed out; AI used to measure trial outcomes, not a benefit.
+- Protocols (VISION-AI, LuAna, ambient nursing scribes, chatbot childbearing) and the rest: set aside from titles.
+- 13 sources read with npm run read.
