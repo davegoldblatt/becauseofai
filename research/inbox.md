@@ -489,3 +489,18 @@ Candidates: 192 over 2026-11-24 to 2026-11-26, 14 flagged randomized, 14 announc
 ### Alerts
 
 None.
+
+## 2026-11-27 (daily scout)
+
+Candidates: 188 over 2026-11-25 to 2026-11-27, 11 flagged randomized, 16 announcements, 0 alerts, 60 source errors (mostly Crossref 429s). No entries drafted.
+
+- Kingsbridge Healthcare (Northern Ireland) clinical-letter review AI, GCD Technologies: manual review workload down up to 30%, letters reach patients sooner. [Building Better Healthcare](https://www.buildingbetterhealthcare.com/gcd-technologies-helps-ni-s-largest-private-healthcare-provider). Vendor-written piece; the measured outcome is staff workload, with no turnaround figure or dates. Missing: the organisation's own page, a number about patients, achieved dates.
+- Colorectal lesion detection by procedure order with and without AI, secondary analysis of an RCT, [Life](https://doi.org/10.3390/life16111786): find the parent trial's primary report before logging.
+- Retinopathy screening, conventional vs AI-assisted, single-centre prospective, [Medicina](https://doi.org/10.3390/medicina62112267): looks like a diagnostic comparison. Missing: the paper read, whether the AI changed patient outcomes.
+- Smartwatch loss-of-pulse detection for cardiac arrest, [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.25.26368935v1): device validation, no evidence it reached patients.
+- Causal reasoning and Gemini-assisted decision-making, Italy, [AEA RCT 20278](https://www.socialscienceregistry.org/trials/20278): already noted 2026-11-26.
+- Skipped: AEA protocols and registrations in development, coronary CTA and MASLD trial protocols, EDITH (protocol), reviews, model validations, vignette comparisons, layoffs, funding, and market-report news.
+
+### Alerts
+
+None.
