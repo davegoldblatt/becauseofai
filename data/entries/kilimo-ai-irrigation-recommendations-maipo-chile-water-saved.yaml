@@ -76,3 +76,23 @@ receipts:
     quote: has saved 60 million cubic feet of water in the Maipo River basin
     locator: Body, paragraph on the three-year project
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 483eae5b23e8094dc9840e19f08741b706f8a3608a66262bfa025563c48060f1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: kilimo-ai-irrigation-recommendations-maipo-chile-water-saved/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not dated yet (The aggregate benefits lack calendar dates; dated individual farm examples do not establish the aggregate measurement period.).

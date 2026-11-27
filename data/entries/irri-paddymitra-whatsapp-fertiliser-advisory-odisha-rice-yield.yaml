@@ -75,3 +75,22 @@ receipts:
     quote: PaddyMitra has been piloted during Kharif (wet season) 2025 among ~1500 farmers
     locator: Yield gains over farmers' practice
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: ef79b26f5fa890db341c0e345a4417f5e615a4d41a99bec1f5c411a6b8a52224
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.

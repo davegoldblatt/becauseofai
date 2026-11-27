@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield",
+  "date": "2026-11-27",
+  "as_of": "2026-11-27",
+  "entry_sha256": "ef79b26f5fa890db341c0e345a4417f5e615a4d41a99bec1f5c411a6b8a52224",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-27"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://ricetoday.irri.org/meet-paddymitra-an-ai-extension-agent/",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-27T23:47:09.680Z",
+      "final_url": "https://ricetoday.irri.org/meet-paddymitra-an-ai-extension-agent/",
+      "sha256": "4f4558c86936ac002515ddc0aa4779b19154689025ce3a886b16f5b9fabd7ac5",
+      "chars": 11268,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "a yield improvement ranging from 0.38 to 0.60 t ha⁻¹, corresponding to an increase of approximately 7–12%",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "PaddyMitra has been piloted during Kharif (wet season) 2025 among ~1500 farmers",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-27",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The comparison tests the ML-informed WhatsApp advisory package against farmers’ fertilizer practice, keeping other crop management constant but not separating the algorithm from advisory delivery.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the report identifies Kharif 2025 as the measurement season, without dates precise enough to place the benefit relative to November 27, 2025."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "IRRI’s own magazine reports on the tool developed and piloted by IRRI, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The source supports approximately 7–12% higher yields and gains of 0.38–0.60 t/ha in a Kharif 2025 pilot involving about 1500 farmers. It provides no randomization, statistical tests, independent evaluation, or precise harvest dates establishing the window."
+    },
+    "error": null,
+    "tokens": {
+      "input": 14627,
+      "output": 719,
+      "total": 15346,
+      "cached": 0,
+      "reasoning": 208
+    },
+    "duration_ms": 17791
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The source supports approximately 7–12% higher yields and gains of 0.38–0.60 t/ha in a Kharif 2025 pilot involving about 1500 farmers. It provides no randomization, statistical tests, independent evaluation, or precise harvest dates establishing the window.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report."
+    ]
+  }
+}
