@@ -1,0 +1,97 @@
+id: planai-consultation-response-analysis-five-planning-authorities
+section: because
+rank: 152
+headline: >-
+  Because of PlanAI, an AI tool that summarises local plan consultation responses, time to analyse
+  them fell from around 18.5 hours to about 16 minutes in the first trial.
+impact: "18.5 hours to 16 minutes"
+impact_number: "~90%"
+impact_label: "efficiency gain analysing consultation responses across five planning authorities"
+summary: >-
+  England's housing ministry reports that PlanAI, built with Greater Cambridge Shared Planning and
+  the University of Liverpool, cut the time to analyse planning consultation responses in the first
+  trial and gave gains of around 90% when five more planning authorities used it.
+caveat: >-
+  A government blog about its own funded pilot. The blog notes the headline saving covers one stage:
+  redacting and formatting responses and rerunning outputs took two to three weeks for some
+  authorities, and officers must check the output. No dates or response counts for the trials.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Time to analyse consultation responses before the tool, as reported by the pilot authorities (method not given)"
+effect:
+  relative: "Efficiency gains of around 90% across participating planning authorities"
+  absolute: "Analysis time reduced from around 18.5 hours to approximately 16 minutes in the initial trial"
+reach: "Five planning authorities (Greenwich, Hull, Milton Keynes, Liverpool City Region, Tameside) after the Greater Cambridge trial"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-30
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "MHCLG Digital blog: Using AI to support faster local plan consultation analysis (30 July 2026)"
+    url: https://mhclgdigital.blog.gov.uk/2026/07/30/using-ai-to-support-faster-local-plan-consultation-analysis/
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the ministry's own blog about a pilot it funded through the PropTech Innovation
+  Fund. The tool was developed by Greater Cambridge Shared Planning and the University of
+  Liverpool, which ran the initial trial. No independent evaluation.
+what_would_change: "A published evaluation giving the number of responses, the timing method, and officer quality-assurance time with and without the tool."
+notes: >-
+  verify: the blog gives no dates for the initial trial or the five-authority pilot, so achieved
+  dates and the window grade are left empty. The measured outcome is officer time, not residents'
+  outcomes; about 5% of respondents in one consultation opted out of AI summarising.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Bundled because the saving is for one stage of a wider process that also needs governance, redaction and officer quality assurance, and no comparison group is described.
+receipts:
+  - field: headline
+    quote: the time taken to analyse planning consultation responses was reduced from around 18.5 hours to approximately 16 minutes
+    locator: Body, The initial pilot
+    source: 0
+  - field: impact
+    quote: the time taken to analyse planning consultation responses was reduced from around 18.5 hours to approximately 16 minutes
+    locator: Body, The initial pilot
+    source: 0
+  - field: impact_number
+    quote: the pilot produced efficiency gains of around 90%
+    locator: Body, Scaling into other geographies
+    source: 0
+  - field: effect.relative
+    quote: the pilot produced efficiency gains of around 90%
+    locator: Body, Scaling into other geographies
+    source: 0
+  - field: effect.absolute
+    quote: the time taken to analyse planning consultation responses was reduced from around 18.5 hours to approximately 16 minutes
+    locator: Body, The initial pilot
+    source: 0
+  - field: reach
+    quote: Five planning authorities from across the country took part
+    locator: Body, Scaling into other geographies
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 168b025d9725dd29e8851d68afe8f02bd4881d1bc0ee455be862a187a1d2d182
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: pass
+  record: planai-consultation-response-analysis-five-planning-authorities/2026-11-27.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.
+    - Not dated yet (The source does not establish when the measured time savings occurred.).

@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "dwp-microsoft-365-copilot-trial-comparison-group-time-saved",
+  "date": "2026-11-27",
+  "as_of": "2026-11-27",
+  "entry_sha256": "cf2a7b7f227e850d9970cc45a4989f85b5b7852f7dbc79796291c60f2b1a763d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-27"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.gov.uk/government/publications/an-evaluation-of-dwps-microsoft-copilot-365-trial/an-evaluation-of-dwps-microsoft-365-copilot-trial",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-27T15:38:39.936Z",
+      "final_url": "https://www.gov.uk/government/publications/an-evaluation-of-dwps-microsoft-copilot-365-trial/an-evaluation-of-dwps-microsoft-365-copilot-trial",
+      "sha256": "268fa2665536da211dd3ffa258f7b6694b35e6063a1079e8c0a3c8e436e1cc7e",
+      "chars": 92370,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "saved an average of 19 minutes per day across eight routine tasks",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "saved an average of 19 minutes per day across eight routine tasks",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "saved an average of 19 minutes per day across eight routine tasks",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "90% of users indicated that Copilot helped them save time",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "saved an average of 19 minutes per day across eight routine tasks",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "involved 3,549 members of staff",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "The trial ran from October 2024 to March 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "The trial ran from October 2024 to March 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-27",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "operational-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "B",
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "The analysis compares Copilot licence holders with non-users, adjusting for demographic, occupational and AI-attitude differences to estimate the contribution of Copilot access.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "Chapter 1 gives October 2024–March 2025 as the trial period; February–March survey dates describe measurement within that period."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses DWP's evaluation of its own trial, but the source identifies no vendor funding, vendor-employed authors or other specified commercial conflict."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The report supports the reported numbers and dates through a large observational comparison with regression adjustment. The 19-minute estimate relies on self-reported task times, and non-random licence allocation leaves residual confounding possible."
+    },
+    "error": null,
+    "tokens": {
+      "input": 29787,
+      "output": 787,
+      "total": 30574,
+      "cached": 0,
+      "reasoning": 287
+    },
+    "duration_ms": 20192
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The report supports the reported numbers and dates through a large observational comparison with regression adjustment. The 19-minute estimate relies on self-reported task times, and non-random licence allocation leaves residual confounding possible.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is the organisation's own announcement, not a study, a registry record, or an official report.",
+      "The two checkers disagreed on evidence: the drafter said C and the verifier said B. The entry shows the more cautious of the two, C."
+    ],
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "C",
+        "verifier": "B"
+      }
+    ]
+  }
+}

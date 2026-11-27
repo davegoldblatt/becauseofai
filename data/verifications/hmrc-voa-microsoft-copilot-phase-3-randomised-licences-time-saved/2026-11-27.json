@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved",
+  "date": "2026-11-27",
+  "as_of": "2026-11-27",
+  "entry_sha256": "7080d0f08eba52680dc81beb71121bc2296073c5b650f5432d3780a91b11b617",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-27"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.gov.uk/government/publications/evaluation-report-phase-3-trial-of-microsoft-copilot/evaluating-the-impact-of-microsoft-copilot-in-hmrc",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-27T15:39:00.418Z",
+      "final_url": "https://www.gov.uk/government/publications/evaluation-report-phase-3-trial-of-microsoft-copilot/evaluating-the-impact-of-microsoft-copilot-in-hmrc",
+      "sha256": "662b96590f6574f2ea66cba7b31d13bbd5068e85268f6cc489247d9ee7e269d3",
+      "chars": 7382,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "HMRC participants self-reported saving 2-3% of their working week",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "equating to around 60 minutes per week for a full-time equivalent working pattern",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "HMRC participants self-reported saving 2-3% of their working week",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "HMRC participants self-reported saving 2-3% of their working week",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "equating to around 60 minutes per week for a full-time equivalent working pattern",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "3,000 HMRC employees were randomly allocated a full Copilot license",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "running from September to December 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "running from September to December 2024",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-27",
+    "output": {
+      "full_text": true,
+      "source_kind": "operational-report",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "operational-report",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": null,
+        "window": "pre"
+      },
+      "attribution_rationale": "Random licence allocation is described, but no outcomes for an unlicensed comparison group or other explicit benchmark are reported.",
+      "achieved_dates": {
+        "from": "report-body",
+        "conflicting": false,
+        "note": "The Phase III trial ran from September to December 2024."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": false,
+        "note": "The entry discloses HMRC's self-evaluation, but the source establishes no vendor funding, financial interests, or vendor-run evaluation."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "The report gives self-reported savings but does not specify a measured baseline or report comparison-group outcomes."
+      },
+      "summary": "The report supports the stated self-reported savings, licence allocation count, and trial dates. Random allocation alone does not establish an isolated comparative effect, and no preregistered endpoint is reported."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13632,
+      "output": 803,
+      "total": 14435,
+      "cached": 0,
+      "reasoning": 315
+    },
+    "duration_ms": 19339
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter isolated, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "isolated",
+        "verifier": null
+      }
+    ]
+  }
+}

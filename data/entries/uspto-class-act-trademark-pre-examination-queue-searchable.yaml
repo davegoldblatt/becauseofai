@@ -1,0 +1,88 @@
+id: uspto-class-act-trademark-pre-examination-queue-searchable
+section: because
+rank: 153
+headline: >-
+  Because of Class ACT, the USPTO says trademark applications waiting in its pre-examination queue
+  became searchable in minutes rather than months, with 250,000 applications analysed.
+impact: "250,000 trademark applications analysed"
+impact_number: "250,000"
+impact_label: "trademark applications analysed by the USPTO's Class ACT AI tool"
+summary: >-
+  The US Patent and Trademark Office reports that its Classification Agentic Codification Tool,
+  introduced in 2026, assigns international classes and design search codes and made records in the
+  pre-examination queue searchable at once, reducing pendency from months to minutes.
+caveat: >-
+  The agency's own news item. It gives no dates, no before-and-after figures beyond "months to
+  minutes", and does not say which pendency measure it means or how overall trademark examination
+  time changed.
+domain: infrastructure
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Pre-examination queue records before the tool, which were not searchable for months (period not given)"
+effect:
+  relative: null
+  absolute: "Pendency of pre-examination records reduced from months to minutes, per the agency"
+reach: "250,000 trademark applications analysed to date"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-07-13
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "USPTO news: Head of the class: Trademarks at full power with USPTO's AI tool (13 July 2026)"
+    url: https://www.uspto.gov/about-us/news-updates/head-class-trademarks-full-power-usptos-ai-tool
+    type: primary
+    announcement: true
+conflicts: >-
+  The source is the USPTO's own announcement about a tool it built and runs. No independent audit.
+what_would_change: "Published pre-examination wait times before and after Class ACT, with the period measured, and its effect on total trademark pendency."
+notes: >-
+  verify: the item says "this year" for the introduction of Class ACT and gives no period for the
+  250,000 applications, so achieved dates and the window grade are left empty. The headline
+  number is a count of applications handled, not a measured wait.
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Bundled because the agency credits the tool for the faster queue but gives no comparison period or control, and the tool sits inside the examination workflow.
+receipts:
+  - field: headline
+    quote: which has analyzed 250,000 applications to date
+    locator: Body, first paragraph
+    source: 0
+  - field: impact
+    quote: which has analyzed 250,000 applications to date
+    locator: Body, first paragraph
+    source: 0
+  - field: impact_number
+    quote: which has analyzed 250,000 applications to date
+    locator: Body, first paragraph
+    source: 0
+  - field: reach
+    quote: which has analyzed 250,000 applications to date
+    locator: Body, first paragraph
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: d163be1a88bb3ee71b5f9596613999136829763f22c013f4d620607bd07ba901
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: uspto-class-act-trademark-pre-examination-queue-searchable/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "attribution: drafter bundled, verifier isolated; window: drafter no grade, verifier in."
+  record: uspto-class-act-trademark-pre-examination-queue-searchable/2026-11-27.json

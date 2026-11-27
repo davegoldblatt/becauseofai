@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "uspto-class-act-trademark-pre-examination-queue-searchable",
+  "date": "2026-11-27",
+  "as_of": "2026-11-27",
+  "entry_sha256": "d163be1a88bb3ee71b5f9596613999136829763f22c013f4d620607bd07ba901",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-27"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://www.uspto.gov/about-us/news-updates/head-class-trademarks-full-power-usptos-ai-tool",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-27T15:39:49.873Z",
+      "final_url": "https://www.uspto.gov/about-us/news-updates/head-class-trademarks-full-power-usptos-ai-tool",
+      "sha256": "b2ddfc810c0187b46d5322bda1e2b3f759f1446f2d925deafe0dd4264c139fb0",
+      "chars": 3535,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "which has analyzed 250,000 applications to date",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "which has analyzed 250,000 applications to date",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "which has analyzed 250,000 applications to date",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "which has analyzed 250,000 applications to date",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-27",
+    "output": {
+      "full_text": true,
+      "source_kind": "press-release",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "press-release",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "isolated",
+        "window": "in"
+      },
+      "attribution_rationale": "The agency compares pre-examination searchability before and after Class ACT and identifies no accompanying package of changes.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the announcement nevertheless places Class ACT's introduction and immediate benefit in 2026, without an exact launch date."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The USPTO reports benefits from its own tool, and the entry discloses this institutional interest."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The agency reports 250,000 applications analysed and pre-examination records becoming searchable in minutes rather than months following Class ACT's introduction in 2026. It supplies no independent comparison, detailed timing measurements, or evidence of reduced overall examination time."
+    },
+    "error": null,
+    "tokens": {
+      "input": 12580,
+      "output": 588,
+      "total": 13168,
+      "cached": 0,
+      "reasoning": 156
+    },
+    "duration_ms": 14237
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "attribution: drafter bundled, verifier isolated; window: drafter no grade, verifier in.",
+    "splits": [
+      {
+        "grade": "attribution",
+        "drafter": "bundled",
+        "verifier": "isolated"
+      },
+      {
+        "grade": "window",
+        "drafter": null,
+        "verifier": "in"
+      }
+    ]
+  }
+}

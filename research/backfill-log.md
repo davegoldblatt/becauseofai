@@ -718,3 +718,24 @@ Read and rejected:
 - Sinus CT deep learning (Int Forum Allergy Rhinol): reader timed out; AI used to measure trial outcomes, not a benefit.
 - Protocols (VISION-AI, LuAna, ambient nursing scribes, chatbot childbearing) and the rest: set aside from titles.
 - 13 sources read with npm run read.
+
+## 2026-11-27, slice 43: announcements: government and public services, 2026-05-13 to 2026-08-12
+
+Drafted (5, all from the organisation's own page or a news report; speculative or reasonable at best):
+- dwp-microsoft-365-copilot-trial-comparison-group-time-saved: DWP Copilot evaluation, 19 min a day saved vs non-users (3,549 staff, Oct 2024 to Mar 2025).
+- hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved: HMRC phase 3, 3,000 randomised licences, 2-3% of week self-reported.
+- planai-consultation-response-analysis-five-planning-authorities: MHCLG blog, consultation analysis 18.5 hours to 16 minutes, about 90% across five authorities.
+- uspto-class-act-trademark-pre-examination-queue-searchable: USPTO, 250,000 applications analysed, pendency "months to minutes".
+- honolulu-civcheck-ai-permit-review-decision-time: HousingWire, permit decision time 73 to 32.5 days in Q1 2026 (bundled with a system replacement).
+
+Looked at and rejected:
+- Ohio JFS unemployment manual (StateTech): staff research time only, trade article, projections.
+- CRA tax season release: chatbot usage counts only, no outcome tied to AI.
+- IRCC briefing: email and call gains credited to streamlining and "enhanced use of AI" together; no AI-specific number.
+- Peel Police, San Diego Sheriff voice agents: launch with no result (San Diego already an entry).
+- GOV.UK Chat launch: usage counts only. California EDD chatbot (25,000 uses): page never says AI.
+- PlanAssist prototype (June blog): plans and aims only; PlanAssist already an entry.
+- USPTO backlog release: backlog credited to examiners and hiring, AI only mentioned.
+- NJ UI call centre (403), Moncton (403), LGA Milton Keynes (403), Axios safety-net piece (403); Google Cloud San José page is from 2021.
+- Court transcription, immigration AI, SNAP and Medicaid AI, patent AI searches: plans, pilots or no AI-specific result found.
+- 17 searches, 17 pages read with npm run read.
