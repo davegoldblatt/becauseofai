@@ -85,3 +85,24 @@ receipts:
     quote: Between May 9, 2023, and Oct 30, 2025
     locator: Abstract, Findings
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 7b1cfb0dda853849e6f23f8aa755d60ff64f39f725728c8e60f498c9ad49f36f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "evidence: drafter A, verifier could not grade."
+  record: cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null/2026-11-27.json

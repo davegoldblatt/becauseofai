@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou",
+  "date": "2026-11-27",
+  "as_of": "2026-11-27",
+  "entry_sha256": "0d3501b3425779675c38496a8689d05a29f7b15698aa0436a25a1c09fc83ef6d",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-27"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.2196/77701",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-27T02:33:52.819Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13416303/fullTextXML",
+      "sha256": "481444aa0219ef31899a4f441da3cc427ca1b992f37b4ec6484998fb080b6841",
+      "chars": 34542,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "1245.5 (SD 377.2) mL, significantly lower than the 1586.2 (SD 50.4) mL in the control group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "(238/255, 93.3% vs 229/258, 88.8%, respectively; 1-sided P <.001 for noninferiority)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "1245.5 (SD 377.2) mL, significantly lower than the 1586.2 (SD 50.4) mL in the control group",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "48.6% (124/255) of the patients reduced their use of laxatives",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.relative",
+      "source": 0,
+      "quote": "48.6% (124/255) of the patients reduced their use of laxatives",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "the incidence of adverse reactions was notably lower (5/255, 2% vs 15/258, 5.8%, respectively; P =.02)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "This study included 513 patients (AI-guided group: n=255, 49.7%; control group: n=258, 50.3%)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "conducted from October 2024 to March 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "conducted from October 2024 to March 2025",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-27",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.relative",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "isolated",
+        "window": "pre"
+      },
+      "attribution_rationale": "Randomized groups received the same standard preparation instructions, with AI assessment and its resulting personalized guidance added in the intervention group.",
+      "achieved_dates": {
+        "from": "methods",
+        "conflicting": false,
+        "note": "Study Design and Study Population both specify October 2024 through March 2025."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The company provided the app and assisted its development; the entry discloses this involvement and the authors' declaration of no conflicts."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The randomized trial supports the reported reductions in solution consumption and the other quoted numerical outcomes, achieved before the reporting window. Registration is mentioned, but its timing and preregistered primary endpoints cannot be established from the supplied text, so evidence grade A cannot be confirmed."
+    },
+    "error": null,
+    "tokens": {
+      "input": 19993,
+      "output": 621,
+      "total": 20614,
+      "cached": 0,
+      "reasoning": 122
+    },
+    "duration_ms": 16453
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter A, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "A",
+        "verifier": null
+      }
+    ]
+  }
+}

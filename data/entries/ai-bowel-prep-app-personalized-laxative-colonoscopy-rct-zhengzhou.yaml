@@ -90,3 +90,24 @@ receipts:
     quote: conducted from October 2024 to March 2025
     locator: Methods, Study Design
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 0d3501b3425779675c38496a8689d05a29f7b15698aa0436a25a1c09fc83ef6d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "evidence: drafter A, verifier could not grade."
+  record: ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou/2026-11-27.json
