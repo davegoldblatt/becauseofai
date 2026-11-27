@@ -1,0 +1,108 @@
+id: cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null
+section: not-because
+rank: 35
+headline: >-
+  AI-assisted colonoscopy (CAD EYE) did not significantly raise adenoma
+  detection in Lynch syndrome surveillance: 33.8% of patients against 30.9%
+  with white-light colonoscopy alone, in a 757-patient randomized trial.
+impact: "No significant gain in adenoma detection in Lynch syndrome (RCT)"
+impact_number: "33.8% vs 30.9%"
+impact_label: "adenoma detection rate, AI-assisted vs white-light colonoscopy, not significant"
+summary: >-
+  Adults with genetically confirmed Lynch syndrome at nine surveillance centres
+  in four European countries were randomized to high-definition white-light
+  colonoscopy alone or with the CAD EYE detection aid. Detection was slightly
+  higher with the aid, but the difference was not statistically significant and
+  fell short of the improvement the trial was sized to find.
+caveat: >-
+  Only the abstract could be read. The trial was open-label for endoscopists,
+  who work in specialised surveillance centres with high baseline detection,
+  and the trial did not follow cancers or interval cancers. The device is made
+  by Fujifilm.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "HD white-light colonoscopy with CAD EYE computer-aided detection vs HD white-light colonoscopy alone, 1:1 randomization across nine centres"
+effect:
+  relative: "Odds ratio 1.14 (95% CI 0.83-1.57), p=0.41 for adenoma detection"
+  absolute: "Adenoma detection rate 30.9% (114 of 369) with white-light vs 33.8% (123 of 364) with CADe assistance"
+reach: "757 patients randomly allocated, 733 in the primary analysis, at nine centres in Belgium, Germany, the Netherlands, and Spain"
+dates:
+  achieved_start: 2023-05-09
+  achieved_end: 2025-10-30
+  published: 2026-07-16
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "Hüneburg et al., The Lancet Gastroenterology & Hepatology 2026: CADLY2, AI-assisted detection and optical differentiation of colorectal lesions in Lynch syndrome surveillance (abstract via Europe PMC)"
+    url: https://doi.org/10.1016/S2468-1253(26)00163-9
+    type: primary
+conflicts: "The abstract names Fujifilm as maker of the CAD EYE device and gives funding as third-party research funding of the National Center for Hereditary Tumor Syndromes, University Hospital Bonn; author disclosures are in the full text, which could not be read."
+what_would_change: "A larger Lynch syndrome trial showing significantly more adenomas, or fewer interval cancers, with AI-assisted colonoscopy."
+notes: >-
+  Filed under not-because: no significant difference in adenoma detection rate.
+  verify: dates are the abstract's randomization window, May 9, 2023 to
+  Oct 30, 2025; the registry record (DRKS00030695) was not read.
+  verify: full text could not be read, so the level is at most reasonable.
+related: [gi-genius-lynch-syndrome-tandem-colonoscopy-rct-null, genial-co-cade-surveillance-colonoscopy-italy-null, eagle-cadde-colonoscopy-rct]
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Patients were randomized 1:1 to the same white-light colonoscopy with or without the CAD EYE aid, so the arms differ only by the AI aid (isolated).
+receipts:
+  - field: headline
+    quote: The adenoma detection rate was 30·9% (114 of 369 patients) with HD-WL versus 33·8% (123 of 364 patients) with CADe assistance
+    locator: Abstract, Findings
+    source: 0
+  - field: headline
+    quote: 757 patients were randomly allocated to HD-WL colonoscopy (377 patients) or to AI-assisted colonoscopy (380 patients)
+    locator: Abstract, Findings
+    source: 0
+  - field: impact_number
+    quote: The adenoma detection rate was 30·9% (114 of 369 patients) with HD-WL versus 33·8% (123 of 364 patients) with CADe assistance
+    locator: Abstract, Findings
+    source: 0
+  - field: effect.relative
+    quote: (odds ratio 1·14 [95% CI 0·83-1·57], p=0·41)
+    locator: Abstract, Findings
+    source: 0
+  - field: effect.absolute
+    quote: The adenoma detection rate was 30·9% (114 of 369 patients) with HD-WL versus 33·8% (123 of 364 patients) with CADe assistance
+    locator: Abstract, Findings
+    source: 0
+  - field: reach
+    quote: 757 patients were randomly allocated to HD-WL colonoscopy (377 patients) or to AI-assisted colonoscopy (380 patients)
+    locator: Abstract, Findings
+    source: 0
+  - field: dates.achieved_start
+    quote: Between May 9, 2023, and Oct 30, 2025
+    locator: Abstract, Findings
+    source: 0
+  - field: dates.achieved_end
+    quote: Between May 9, 2023, and Oct 30, 2025
+    locator: Abstract, Findings
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 7b1cfb0dda853849e6f23f8aa755d60ff64f39f725728c8e60f498c9ad49f36f
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "evidence: drafter A, verifier could not grade."
+  record: cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null/2026-11-27.json

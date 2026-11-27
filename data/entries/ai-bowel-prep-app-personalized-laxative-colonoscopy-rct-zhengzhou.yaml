@@ -1,0 +1,113 @@
+id: ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou
+section: because
+rank: 149
+headline: >-
+  Because of an AI smartphone app that judged stool photos, patients preparing
+  for colonoscopy drank 1245.5 mL of bowel-cleansing solution against 1586.2 mL
+  in the control group, with adequate cleansing in 93.3% against 88.8%.
+impact: "1245.5 vs 1586.2 mL of laxative solution"
+impact_number: "48.6%"
+impact_label: "of patients in the AI-guided group reduced their laxative use (124 of 255)"
+summary: >-
+  At one hospital in Zhengzhou, 513 colonoscopy patients using sodium phosphate
+  were randomized to an AI app that assessed photos of their stool and told them
+  when to stop the laxative, or to standard instructions. The AI group drank
+  less solution, had bowel cleansing that was not inferior, took the medication
+  as instructed more often, and reported fewer adverse reactions.
+caveat: >-
+  One centre in China; the app was provided by a company that helped develop it.
+  Patients had to be able to use a smartphone, alone or with help. The trial
+  showed no difference in adenoma detection rate, and was powered for
+  non-inferiority of cleansing, not for detection or safety. Patients were not
+  blinded to the app.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "AI-guided bowel preparation (smartphone app assessing stool images, laxative stopped on a pass) vs standard instructions with the full recommended dose, 1:1 block randomization"
+effect:
+  relative: "Reduced laxative use in 48.6% (124/255) of the AI-guided group; adequate bowel preparation not inferior (1-sided P <.001)"
+  absolute: "1245.5 (SD 377.2) mL vs 1586.2 (SD 50.4) mL consumed; adequate preparation 238/255 (93.3%) vs 229/258 (88.8%); adverse reactions 5/255 (2%) vs 15/258 (5.8%)"
+reach: "513 patients analysed (255 AI-guided, 258 control) at one hospital"
+dates:
+  achieved_start: 2024-10
+  achieved_end: 2025-03
+  published: 2026-07-14
+  added: 2026-11-27
+  updated: 2026-11-27
+sources:
+  - title: "Han et al., JMIR mHealth and uHealth 2026: Use of an AI Image Recognition-Based Smartphone App in Personalized Bowel Preparation Before Colonoscopy: Prospective Randomized Controlled Trial"
+    url: https://doi.org/10.2196/77701
+    type: primary
+conflicts: "The AI app was provided by Xiamen Innovision Medical Technology, which the authors thank for its help developing it; the authors declare no conflicts of interest and the study was funded by a Henan Province college research grant."
+what_would_change: null
+notes: >-
+  verify: the reader printed the Europe PMC full text; the registration
+  NCT06610630 was not read separately.
+  verify: the 12-month window is the trial's recruitment and procedure period,
+  October 2024 to March 2025, as stated in the methods.
+related: []
+history:
+  - date: 2026-11-27
+    note: "Added by the backfill run."
+rationale: Patients were randomized 1:1 to the AI app or standard instructions with the same laxative, so the arms differ only by the AI guidance (isolated).
+receipts:
+  - field: headline
+    quote: 1245.5 (SD 377.2) mL, significantly lower than the 1586.2 (SD 50.4) mL in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: headline
+    quote: (238/255, 93.3% vs 229/258, 88.8%, respectively; 1-sided P <.001 for noninferiority)
+    locator: Abstract, Results
+    source: 0
+  - field: impact
+    quote: 1245.5 (SD 377.2) mL, significantly lower than the 1586.2 (SD 50.4) mL in the control group
+    locator: Abstract, Results
+    source: 0
+  - field: impact_number
+    quote: 48.6% (124/255) of the patients reduced their use of laxatives
+    locator: Results, Volume of Laxatives Consumed
+    source: 0
+  - field: effect.relative
+    quote: 48.6% (124/255) of the patients reduced their use of laxatives
+    locator: Results, Volume of Laxatives Consumed
+    source: 0
+  - field: effect.absolute
+    quote: the incidence of adverse reactions was notably lower (5/255, 2% vs 15/258, 5.8%, respectively; P =.02)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: "This study included 513 patients (AI-guided group: n=255, 49.7%; control group: n=258, 50.3%)"
+    locator: Abstract, Results
+    source: 0
+  - field: dates.achieved_start
+    quote: conducted from October 2024 to March 2025
+    locator: Methods, Study Design
+    source: 0
+  - field: dates.achieved_end
+    quote: conducted from October 2024 to March 2025
+    locator: Methods, Study Design
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-27
+  content: 0d3501b3425779675c38496a8689d05a29f7b15698aa0436a25a1c09fc83ef6d
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-27
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-27
+    verdict: fail
+  record: ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou/2026-11-27.json
+held:
+  reason: grade-split
+  since: 2026-11-27
+  detail: "evidence: drafter A, verifier could not grade."
+  record: ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou/2026-11-27.json
