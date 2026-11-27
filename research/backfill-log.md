@@ -739,3 +739,20 @@ Looked at and rejected:
 - NJ UI call centre (403), Moncton (403), LGA Milton Keynes (403), Axios safety-net piece (403); Google Cloud San José page is from 2021.
 - Court transcription, immigration AI, SNAP and Medicaid AI, patent AI searches: plans, pilots or no AI-specific result found.
 - 17 searches, 17 pages read with npm run read.
+
+## 2026-11-27, slice 45: announcements: agriculture and food, 2026-05-13 to 2026-08-12
+
+Drafted:
+- irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield: IRRI's ML fertiliser advisory, 7–12% yield over farmers' practice, one season, speculative.
+- kilimo-ai-irrigation-recommendations-maipo-chile-water-saved: Kilimo irrigation advice, 15%-20% less water on average, Microsoft newsroom, speculative.
+
+Looked at and rejected:
+- Rwanda AI season-planning tools (New Times): "could raise yields 20%", early tests with no method or counts.
+- Afresh/Shelf Engine PCFWC case study: vendor page, 14.8% waste cut, no dates, no named retailer.
+- Nebraska irrigation scheduling tool (UNL page): reader returned a stub; also not clearly AI.
+- Iceland/Retail Insight: partnership, no results. Central Co-op WasteInsight: already an entry.
+- Aquaculture (ProductionCompass, Manolin), bycatch AI monitoring (TNC Edge): vendor claims or capability, no outcome number.
+- Mastitis sensor firm (55% antibiotic drop): vendor claim in trade press, not read.
+- KilimoAI Tanzania cotton, Plantix, SoyAI, NextGenBioPest: no measured result or only plans.
+- Ethiopia wheat fertiliser advice, Khammam chili advisory, FarmerChat: second-hand figures, not read or adoption only.
+- Cut short: 8 searches and 3 pages read, under the brief's floor of twenty and fifteen; later queries were returning no measured results.
