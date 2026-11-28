@@ -1,0 +1,61 @@
+id: denti-i-vietnam-ai-oral-healthcare-platform-plaque-primary-school-hanoi-randomized
+section: because
+rank: 160
+headline: >-
+  Because of an AI-driven oral healthcare platform, Hanoi primary school children who used it had lower dental plaque
+  scores than before, in a randomized study that compared them with children given pamphlets.
+impact: "Lower plaque scores in Hanoi schoolchildren"
+impact_number: "2.49 to 1.70"
+impact_label: "OHI-S plaque score in the AI platform group, baseline to follow-up"
+summary: >-
+  Primary school students in Hanoi were randomly assigned to the Denti-i Vietnam AI platform or pamphlet-based oral
+  health education, and plaque (OHI-S), behaviours and caries were assessed at baseline and after the intervention.
+caveat: >-
+  Only the abstract could be read and it is cut off before the comparison-group result and the p-values, so the
+  difference between arms is not stated here.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: B
+  attribution: bundled
+  window: null
+comparison: "AI-driven oral healthcare platform (Denti-i Vietnam) vs traditional oral health education with pamphlets, randomly assigned primary school students, plaque index and behaviours at baseline and after the intervention"
+effect:
+  relative: null
+  absolute: "OHI-S plaque score in the intervention group fell from 2.49 ± 0.60 to 1.70 ± 0.76; the comparison-group score is not visible in the text read"
+reach: "204 primary school students aged 8-10 years in Hanoi, Vietnam"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-18
+  added: 2026-11-28
+  updated: 2026-11-28
+sources:
+  - title: "Experimental validation of an AI-driven digital healthcare platform for oral health behavior and plaque assessment among Vietnamese children (Methods; abstract via Europe PMC)"
+    url: https://doi.org/10.1016/j.ymeth.2026.05.015
+    doi: 10.1016/j.ymeth.2026.05.015
+    type: primary
+conflicts: "Not stated in the abstract read; the full text could not be read, so funding and any ties of the authors to the Denti-i platform are unchecked."
+what_would_change: "The full text showing the between-group difference at follow-up, the trial registration, and the dates of the study."
+notes: >-
+  verify: the source gives no period for the study in the text read, so the achieved dates and the window grade are left empty.
+  verify: only the abstract was read and it is truncated after the intervention-group plaque result; whether the study was registered is unknown, so the evidence grade is B rather than A.
+  verify: the abstract gives 107 in the intervention group and 97 in the comparison group.
+related: []
+history:
+  - date: 2026-11-28
+    note: Added by the backfill run.
+rationale: Students were randomly assigned to the AI platform or pamphlets, so the arms differ in the whole delivery package rather than only the AI component.
+receipts:
+  - field: impact_number
+    quote: 2.49 ± 0.60 to 1.70 ± 0.76
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: 2.49 ± 0.60 to 1.70 ± 0.76
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: A total of 204 primary school students aged 8-10 years in Hanoi, Vietnam
+    locator: Abstract, Methods
+    source: 0
