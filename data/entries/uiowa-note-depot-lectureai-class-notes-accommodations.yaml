@@ -71,3 +71,23 @@ receipts:
     quote: there were 92 courses with 6,041 students using Note Depot
     locator: "'A noticeable impact' section"
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 18de185c9e31d30814dcb1f055c63fbbf8157c9d80d9e1c3cf87f318f86dc61c
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-28
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-28
+    verdict: pass
+  record: uiowa-note-depot-lectureai-class-notes-accommodations/2026-11-28.json
+  confidence: speculative
+  relaxed:
+    - Source 0 is a news, not a study, a registry record, or an official report.
+    - Not measured against something yet (No outcome is evaluated against a control or baseline; pilot and campus-wide usage counts describe different deployment scales without establishing a comparative benefit.).
