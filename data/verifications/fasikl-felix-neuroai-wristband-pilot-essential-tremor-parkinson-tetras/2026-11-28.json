@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "fasikl-felix-neuroai-wristband-pilot-essential-tremor-parkinson-tetras",
+  "date": "2026-11-28",
+  "as_of": "2026-11-28",
+  "entry_sha256": "96e450bf6d92104fe949a0e43bbc9696f52dc130cf6ba6ce5048f4b851903367",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-28"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://clinicaltrials.gov/study/NCT05842434",
+      "ok": true,
+      "method": "clinicaltrials",
+      "fetched_at": "2026-11-28T17:58:58.460Z",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT05842434?format=json",
+      "sha256": "05f5b830d27c7f609398a43f443bb4a3341174b2014829464ee5d7ab27d92438",
+      "chars": 29407,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "\"paramValue\": \"-2.7\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"paramValue\": \"-2.7\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "\"pValue\": \"<0.001\"",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "25 patients with essential tremors (ET) and 13 patients with Parkinson's disease (PD) were enrolled into the study.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_start",
+      "source": 0,
+      "quote": "2023-06-06",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "dates.achieved_end",
+      "source": 0,
+      "quote": "2023-11-29",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-28",
+    "output": {
+      "full_text": true,
+      "source_kind": "registry-record",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "registry-record",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_start",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "dates.achieved_end",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": "pre"
+      },
+      "attribution_rationale": "The comparison measures the AI-adjusted neurostimulation package against participants' own baselines, without separating AI adjustment from stimulation.",
+      "achieved_dates": {
+        "from": "registry",
+        "conflicting": false,
+        "note": "Actual study dates are June 6 through November 29, 2023; recruitment details give consistent months."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "Fasikl Inc. is the industry sponsor and responsible party submitting the results, as disclosed in the entry."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": ""
+      },
+      "summary": "The registry supports a reported −2.7-point essential-tremor score change at seven days (p <0.001), with 25 ET participants enrolled and 17 providing seven-day scores. The uncontrolled sponsor-run study does not establish the separate contribution of AI adjustment."
+    },
+    "error": null,
+    "tokens": {
+      "input": 20437,
+      "output": 525,
+      "total": 20962,
+      "cached": 0,
+      "reasoning": 34
+    },
+    "duration_ms": 13523
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The registry supports a reported −2.7-point essential-tremor score change at seven days (p <0.001), with 25 ET participants enrolled and 17 providing seven-day scores. The uncontrolled sponsor-run study does not establish the separate contribution of AI adjustment.",
+    "confidence": "strict",
+    "relaxed": []
+  }
+}

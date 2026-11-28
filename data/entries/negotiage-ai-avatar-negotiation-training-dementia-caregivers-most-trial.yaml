@@ -1,0 +1,86 @@
+id: negotiage-ai-avatar-negotiation-training-dementia-caregivers-most-trial
+section: because
+rank: 159
+headline: >-
+  Because of an AI negotiation-practice program with conversational avatars, family caregivers of people with
+  Alzheimer's dementia reported less burden and less negative affect one month later, in a randomized factorial trial
+  with no untreated comparison group.
+impact: "Less caregiver burden after training"
+impact_number: "−3.24"
+impact_label: "points on caregiver burden, baseline to one month after NegotiAge (no control group)"
+summary: >-
+  Family caregivers practiced conflict negotiation with AI avatars in the online NegotiAge program, and burden and
+  negative affect were compared between baseline and one month after.
+caveat: >-
+  The headline change is before versus after in a trial that randomized which exercises caregivers got, so there is no
+  group that received no training and the change may include expectation and time.
+domain: medicine
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: "Caregiver burden and negative affect at one month vs baseline after NegotiAge (videos, worksheets and AI avatar negotiation practice); randomized factorial trial varying which practice exercises were assigned"
+effect:
+  relative: null
+  absolute: "Caregiver burden changed by −3.24 points and negative affect by −2.1 between baseline and one month after NegotiAge"
+reach: "125 family caregivers of people with Alzheimer's dementia across 23 US states"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-06-17
+  added: 2026-11-28
+  updated: 2026-11-28
+sources:
+  - title: "NegotiAge, an AI-based caregiver negotiation training: results from the Multiphase Optimization Strategy (MOST) trial (J Am Geriatr Soc, open access via Europe PMC)"
+    url: https://doi.org/10.1111/jgs.70546
+    doi: 10.1111/jgs.70546
+    type: primary
+conflicts: "Funded by the National Institute on Aging. The authors developed NegotiAge and the IAGO avatar platform it is built on, so the team evaluated its own intervention."
+what_would_change: "A trial with a no-training or usual-care arm, and the three-month follow-up the authors say is still being collected."
+notes: >-
+  verify: the source gives no calendar period for the trial in the text read, so the achieved dates and the window grade are left empty.
+  verify: registered as NCT04837937; 132 completed baseline and 125 the one-month survey; burden and affect are self-reported.
+related: []
+history:
+  - date: 2026-11-28
+    note: Added by the backfill run.
+rationale: Every caregiver received the AI-based training and the reported change is against their own baseline, so the AI practice is bundled with the videos and worksheets and no arm isolates it.
+receipts:
+  - field: impact_number
+    quote: significantly less caregiver burden (−3.24, p  < 0.002)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: significantly less caregiver burden (−3.24, p  < 0.002)
+    locator: Abstract, Results
+    source: 0
+  - field: effect.absolute
+    quote: negative affect (−2.1, p  < 0.0001)
+    locator: Abstract, Results
+    source: 0
+  - field: reach
+    quote: Across 23 states, 125 family caregivers
+    locator: Abstract, Results
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 0213ec89f5335beead56d8127fdafa4c5d0ec5ae34b252dc34dda72b2d3c0da1
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-28
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-28
+    verdict: fail
+  record: negotiage-ai-avatar-negotiation-training-dementia-caregivers-most-trial/2026-11-28.json
+held:
+  reason: grade-split
+  since: 2026-11-28
+  detail: "evidence: drafter C, verifier could not grade."
+  record: negotiage-ai-avatar-negotiation-training-dementia-caregivers-most-trial/2026-11-28.json

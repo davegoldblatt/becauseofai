@@ -773,3 +773,24 @@ Looked at and rejected:
 - Signapse UK rail (Zero Project): reach figure (100 million passengers), no outcome. Auckland NZSL avatars (1News): plan. Atlanta News First kiosk story: no result.
 - Talksign: page 403. Waymap/WMATA, Ramat Gan, Shenzhen guide-robot, FAU prosthetic hand, PRIMA implant, Cochlear FOX: no 2026 outcome numbers found or outside scope.
 - Ran about 32 searches and read 13 pages; the last dozen queries found no new measured results.
+
+## 2026-11-28, slice 46: papers and trial results, 2026-06-15 to 2026-06-22
+
+Drafted (4):
+- nyu-ml-microbiome-personalized-diet-type-2-diabetes-rct-null-mage: NCT05046886 results, ML-personalized diet vs standardized vs usual care, month 6 MAGE no better; not-because, strict possible.
+- fasikl-felix-neuroai-wristband-pilot-essential-tremor-parkinson-tetras: NCT05842434 sponsor-posted open-label pilot, TETRAS −2.7 in essential tremor; evidence C.
+- negotiage-ai-avatar-negotiation-training-dementia-caregivers-most-trial: JAGS MOST trial, burden −3.24 pre/post, no control, no dates, window empty.
+- denti-i-vietnam-ai-oral-healthcare-platform-plaque-primary-school-hanoi-randomized: abstract only (truncated), OHI-S 2.49 to 1.70, reasonable at best.
+
+Looked at and rejected:
+- Asthma risk marker pilot RCT (Sci Rep): pediatricians scored vignettes, no patients.
+- AI avatar vs human explainer videos (JMIR Form Res): 13 students, null feasibility study, no AI benefit or harm to people worth a number.
+- AI vs student MCQs (BMC Med Educ): item psychometrics and perceptions only.
+- DeepL Write and Claude essay study (Frontiers AI): 40 students, pre/post only, no usable absolute number.
+- Psoriasis home imaging (JAAD): measurement reliability, not an outcome.
+- Chest X-ray for TB contacts (medRxiv, Clinton Foundation): CXR read by people, AI only a future suggestion.
+- Paper-to-digital health guidance (medRxiv): says it is non-AI (rule-based RPA).
+- VT ablation targets (medRxiv): 21 and 13 patients retrospective model AUC.
+- Respiratory triage by speech (medRxiv, Amplifier Health): retrospective AUC.
+- Protocols (MindCraft, AMI-SSS01), systematic review, SPIRIT-CONSORT-ELM, model-development and benchmark papers: no people reached.
+- Read 14 candidates in all; the pool had 12 flagged randomized and none of the remaining flagged-outcome items were trials of deployed systems.

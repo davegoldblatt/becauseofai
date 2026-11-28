@@ -1,0 +1,90 @@
+id: fasikl-felix-neuroai-wristband-pilot-essential-tremor-parkinson-tetras
+section: because
+rank: 158
+headline: >-
+  Because of AI that adjusts stimulation to each patient's tremor through the day, adults with essential tremor wearing
+  the Felix wristband scored lower on a physician-rated hand-tremor test after a week, in an open-label pilot with no
+  control group.
+impact: "Lower tremor score in essential tremor"
+impact_number: "−2.7"
+impact_label: "points on the dominant-hand tremor performance score at 7 days, essential tremor"
+summary: >-
+  Adults with essential tremor or Parkinson's tremor wore a wrist neurostimulation band whose AI algorithm adjusts
+  stimulation to their tremor, and physician-rated tremor performance was compared with each person's own baseline.
+caveat: >-
+  Single-arm, open-label pilot run by the device maker with no sham or no-AI comparison, so it cannot separate the AI
+  adjustment from stimulation itself or from expectation.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: C
+  attribution: bundled
+  window: pre
+comparison: "Each participant's TETRAS performance score at 7 days vs their own baseline, Felix NeuroAI wristband, single-arm open-label pilot"
+effect:
+  relative: null
+  absolute: "Essential tremor: change in dominant-hand TETRAS performance score from baseline to 7 days was -2.7 points (paired t-test p <0.001)"
+reach: "25 patients with essential tremor and 13 with Parkinson's disease at two US centres"
+dates:
+  achieved_start: 2023-06-06
+  achieved_end: 2023-11-29
+  published: 2026-06-15
+  added: 2026-11-28
+  updated: 2026-11-28
+sources:
+  - title: "ClinicalTrials.gov NCT05842434: Pilot Study of the Felix System in Patients With Essential Tremor and Parkinson's Tremor, results posted by the sponsor"
+    url: https://clinicaltrials.gov/study/NCT05842434
+    type: primary
+conflicts: "The sponsor, Fasikl Inc., makes the Felix system and posted the results itself; one outcome is rated by the investigators it recruited. No independent analysis."
+what_would_change: "A sham-controlled or no-AI comparison showing the AI adjustment itself adds benefit; the separate sham-controlled TRANQUIL trial is tracked as its own entry."
+notes: >-
+  verify: the registry lists the Parkinson's change on the dominant-hand score as 3.1 with no sign shown, and the ET
+  dominant-hand baseline mean is 14.1 falling to 11.4 in the 17 who completed; only the essential tremor change is used here.
+  verify: enrolment was 25 essential tremor and 13 Parkinson's; 17 and 12 completed the 7-day assessment.
+related: [fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct]
+history:
+  - date: 2026-11-28
+    note: Added by the backfill run.
+rationale: The only comparison is each participant's own baseline and the AI stimulation algorithm is part of a single device, so the result bundles AI with the wristband rather than isolating it.
+receipts:
+  - field: impact_number
+    quote: '"paramValue": "-2.7"'
+    locator: Primary outcome TETRAS performance subscale, analysis for Essential Tremor group
+    source: 0
+  - field: effect.absolute
+    quote: '"paramValue": "-2.7"'
+    locator: Primary outcome TETRAS performance subscale, analysis for Essential Tremor group
+    source: 0
+  - field: effect.absolute
+    quote: '"pValue": "<0.001"'
+    locator: Primary outcome TETRAS performance subscale, analysis for Essential Tremor group
+    source: 0
+  - field: reach
+    quote: 25 patients with essential tremors (ET) and 13 patients with Parkinson's disease (PD) were enrolled into the study.
+    locator: Participant flow, recruitmentDetails
+    source: 0
+  - field: dates.achieved_start
+    quote: 2023-06-06
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: 2023-11-29
+    locator: Status module, completionDateStruct
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 96e450bf6d92104fe949a0e43bbc9696f52dc130cf6ba6ce5048f4b851903367
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-28
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-28
+    verdict: pass
+  record: fasikl-felix-neuroai-wristband-pilot-essential-tremor-parkinson-tetras/2026-11-28.json
+  confidence: strict

@@ -1,0 +1,82 @@
+id: nyu-ml-microbiome-personalized-diet-type-2-diabetes-rct-null-mage
+section: not-because
+rank: 36
+headline: >-
+  A machine-learning diet tool that predicted each patient's blood-sugar response to meals did not lower glucose
+  swings at six months compared with the same counseling without it, in a randomized trial in New York City adults
+  with early type 2 diabetes.
+impact: "No difference from standard diet counseling"
+summary: >-
+  Adults with early type 2 diabetes got Mediterranean-diet counseling with or without meal-by-meal predictions from a
+  gut-microbiome machine-learning algorithm, and glucose variability (MAGE) on continuous monitors was compared with
+  usual care.
+caveat: >-
+  The registry record gives group means with no between-group test, and the personalized arm was closed early so it is
+  smaller than the other two arms.
+domain: medicine
+ai_type: classic-ml
+grades:
+  evidence: A
+  attribution: isolated
+  window: pre
+comparison: "Mediterranean-diet counseling with gut-microbiome machine-learning personalization of postprandial glucose response vs the same counseling without it vs usual care, randomized, month 6 mean amplitude of glycemic excursion"
+effect:
+  relative: null
+  absolute: "Month 6 mean MAGE in mg/dL: 75.91843677 personalized, 75.49766632 standardized counseling, 80.60152023 usual care"
+reach: "38 adults with early-stage type 2 diabetes randomized to the personalized arm, New York City area"
+dates:
+  achieved_start: 2021-12-14
+  achieved_end: 2025-05-22
+  published: 2026-06-18
+  added: 2026-11-28
+  updated: 2026-11-28
+sources:
+  - title: "ClinicalTrials.gov NCT05046886: Personalized Dietary Management in Type 2 Diabetes (DiaTeleMed), results posted"
+    url: https://clinicaltrials.gov/study/NCT05046886
+    type: primary
+conflicts: "Sponsored by NYU Langone Health and funded by the National Institute of Nursing Research (NIH). No industry sponsor appears in the record. Results are the sponsor's own posting."
+what_would_change: "A published analysis with a between-group test and the full planned sample showing a personalized-diet effect on glucose variability or HbA1c."
+notes: >-
+  verify: the registry posts group means at months 3 and 6 but no between-group comparison; the personalized arm was
+  enrolled in the first phase only, so it has 38 randomized against 52 in usual care and 56 in standardized counseling.
+  verify: start date is the registry's actual study start; end date is the registry's actual primary completion date.
+related: [fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct]
+history:
+  - date: 2026-11-28
+    note: Added by the backfill run.
+rationale: Participants were randomized to the same Mediterranean-diet counseling with or without the machine-learning personalization, so the personalized and standardized arms differ only by the algorithm.
+receipts:
+  - field: effect.absolute
+    quote: "75.91843677"
+    locator: Outcome measure 2 (primary, Month 6), Personalized group OG002
+    source: 0
+  - field: effect.absolute
+    quote: "75.49766632"
+    locator: Outcome measure 2 (primary, Month 6), Standardized group OG001
+    source: 0
+  - field: effect.absolute
+    quote: "80.60152023"
+    locator: Outcome measure 2 (primary, Month 6), Usual Care Control group OG000
+    source: 0
+  - field: reach
+    quote: and 36 (of 38) in the Personalized arm were analyzed.
+    locator: Outcome measure 1 (primary, Month 3), populationDescription
+    source: 0
+  - field: dates.achieved_start
+    quote: 2021-12-14
+    locator: Status module, startDateStruct
+    source: 0
+  - field: dates.achieved_end
+    quote: 2025-05-22
+    locator: Status module, primaryCompletionDateStruct
+    source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 9344cfea7c314498eeca9a28d5cec0cb692f19fcc521f46475bb3ad5072211e9
+held:
+  reason: ungrounded
+  since: 2026-11-28
+  detail: No receipt for headline.
+  record: nyu-ml-microbiome-personalized-diet-type-2-diabetes-rct-null-mage/2026-11-28.json
