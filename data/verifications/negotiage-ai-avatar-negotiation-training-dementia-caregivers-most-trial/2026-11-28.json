@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "negotiage-ai-avatar-negotiation-training-dementia-caregivers-most-trial",
+  "date": "2026-11-28",
+  "as_of": "2026-11-28",
+  "entry_sha256": "0213ec89f5335beead56d8127fdafa4c5d0ec5ae34b252dc34dda72b2d3c0da1",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-28"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://doi.org/10.1111/jgs.70546",
+      "ok": true,
+      "method": "europepmc",
+      "fetched_at": "2026-11-28T17:59:49.007Z",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13418792/fullTextXML",
+      "sha256": "3a5114e397992235e99b2cee9043b826197284ddbe9f710387e7f9d53279b2b5",
+      "chars": 32969,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "significantly less caregiver burden (−3.24, p  < 0.002)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "significantly less caregiver burden (−3.24, p  < 0.002)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "negative affect (−2.1, p  < 0.0001)",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "Across 23 states, 125 family caregivers",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-28",
+    "output": {
+      "full_text": true,
+      "source_kind": "paper",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "paper",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": null,
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "The reported changes compare baseline with follow-up after a package containing videos, worksheets, and AI avatar practice, without isolating the AI contribution.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the paper reports relative follow-up intervals but no calendar dates for participation or outcomes."
+      },
+      "conflict": {
+        "in_source": false,
+        "stated_in_entry": true,
+        "note": "The entry discloses developer self-evaluation and public funding; the paper declares no conflicts and identifies no vendor funding, ownership, patent, or licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": true,
+        "ai_counterfactual": true,
+        "dated": false,
+        "note": "Calendar dates for the measured benefit cannot be established; publication dates and relative follow-up intervals do not establish them."
+      },
+      "summary": "The paper supports the reported before-and-after changes and 125 completers across 23 states, but provides neither calendar dates nor an untreated comparison. Evidence is ungraded because preregistration of a primary endpoint is not established and this small academic study does not fit the other evidence categories."
+    },
+    "error": null,
+    "tokens": {
+      "input": 19432,
+      "output": 824,
+      "total": 20256,
+      "cached": 0,
+      "reasoning": 352
+    },
+    "duration_ms": 18994
+  },
+  "adjudication": {
+    "result": "held",
+    "reason": "grade-split",
+    "detail": "evidence: drafter C, verifier could not grade.",
+    "splits": [
+      {
+        "grade": "evidence",
+        "drafter": "C",
+        "verifier": null
+      }
+    ]
+  }
+}

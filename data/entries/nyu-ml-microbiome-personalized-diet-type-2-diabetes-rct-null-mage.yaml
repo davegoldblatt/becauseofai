@@ -63,10 +63,20 @@ receipts:
     locator: Outcome measure 1 (primary, Month 3), populationDescription
     source: 0
   - field: dates.achieved_start
-    quote: "2021-12-14"
+    quote: 2021-12-14
     locator: Status module, startDateStruct
     source: 0
   - field: dates.achieved_end
-    quote: "2025-05-22"
+    quote: 2025-05-22
     locator: Status module, primaryCompletionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 9344cfea7c314498eeca9a28d5cec0cb692f19fcc521f46475bb3ad5072211e9
+held:
+  reason: ungrounded
+  since: 2026-11-28
+  detail: No receipt for headline.
+  record: nyu-ml-microbiome-personalized-diet-type-2-diabetes-rct-null-mage/2026-11-28.json

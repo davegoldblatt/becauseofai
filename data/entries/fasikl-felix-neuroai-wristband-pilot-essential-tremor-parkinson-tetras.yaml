@@ -64,10 +64,27 @@ receipts:
     locator: Participant flow, recruitmentDetails
     source: 0
   - field: dates.achieved_start
-    quote: "2023-06-06"
+    quote: 2023-06-06
     locator: Status module, startDateStruct
     source: 0
   - field: dates.achieved_end
-    quote: "2023-11-29"
+    quote: 2023-11-29
     locator: Status module, completionDateStruct
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: 96e450bf6d92104fe949a0e43bbc9696f52dc130cf6ba6ce5048f4b851903367
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-28
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-28
+    verdict: pass
+  record: fasikl-felix-neuroai-wristband-pilot-essential-tremor-parkinson-tetras/2026-11-28.json
+  confidence: strict

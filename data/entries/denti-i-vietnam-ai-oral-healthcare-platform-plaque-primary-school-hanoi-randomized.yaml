@@ -59,3 +59,24 @@ receipts:
     quote: A total of 204 primary school students aged 8-10 years in Hanoi, Vietnam
     locator: Abstract, Methods
     source: 0
+drafted:
+  vendor: anthropic
+  model: claude-sonnet-5-5
+  date: 2026-11-28
+  content: c3577346f84ec4500f8d53dee1a0902789d5767f9e8720e9476aa5dfce6072cb
+verification:
+  drafter:
+    vendor: anthropic
+    model: claude-sonnet-5-5
+    date: 2026-11-28
+  verifier:
+    vendor: openai
+    model: gpt-6.1-sol
+    date: 2026-11-28
+    verdict: fail
+  record: denti-i-vietnam-ai-oral-healthcare-platform-plaque-primary-school-hanoi-randomized/2026-11-28.json
+held:
+  reason: grade-split
+  since: 2026-11-28
+  detail: "evidence: drafter B, verifier could not grade."
+  record: denti-i-vietnam-ai-oral-healthcare-platform-plaque-primary-school-hanoi-randomized/2026-11-28.json
