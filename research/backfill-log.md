@@ -756,3 +756,20 @@ Looked at and rejected:
 - KilimoAI Tanzania cotton, Plantix, SoyAI, NextGenBioPest: no measured result or only plans.
 - Ethiopia wheat fertiliser advice, Khammam chili advisory, FarmerChat: second-hand figures, not read or adoption only.
 - Cut short: 8 searches and 3 pages read, under the brief's floor of twenty and fifteen; later queries were returning no measured results.
+
+## 2026-11-28, slice 41: announcements: accessibility, 2026-05-13 to 2026-08-12
+
+Drafted (1):
+- uiowa-note-depot-lectureai-class-notes-accommodations: Iowa's AI class-notes tool, 4,998 AI notes for 6,041 students in 92 courses, university news story, speculative.
+
+Looked at and rejected:
+- UC Davis speech BCI (Nature Medicine, June 2026): already an entry (ucd-als-speech-bci).
+- Google DeepMind SL2T sign-to-text (Aug 2026): benchmark score only, no user outcome.
+- Fortell AI 2.0 hearing aids: KEMAR manikin lab measures, no wearers. Existing Fortell entry untouched.
+- Meta AI glasses accessibility post (May 2026): anecdotes and feature list, no count.
+- Be My Eyes / DestinationCRM column: "call volume increased", no figure. Businesswire InnoCaption: 403; company page read, 30 million calls is volume, not an AI effect.
+- Cornell VisionPal diary study (CHI 2026, arXiv 2602.13469): 20 users, 22.2% wrong answers, but no comparison and no dates; left out.
+- Seiple et al. 2025 (OrCam, Envision, Seeing AI): January 2025 clinic tasks, outside the window, no dates.
+- Signapse UK rail (Zero Project): reach figure (100 million passengers), no outcome. Auckland NZSL avatars (1News): plan. Atlanta News First kiosk story: no result.
+- Talksign: page 403. Waymap/WMATA, Ramat Gan, Shenzhen guide-robot, FAU prosthetic hand, PRIMA implant, Cochlear FOX: no 2026 outcome numbers found or outside scope.
+- Ran about 32 searches and read 13 pages; the last dozen queries found no new measured results.

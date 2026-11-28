@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "kind": "verification",
+  "entry": "uiowa-note-depot-lectureai-class-notes-accommodations",
+  "date": "2026-11-28",
+  "as_of": "2026-11-28",
+  "entry_sha256": "18de185c9e31d30814dcb1f055c63fbbf8157c9d80d9e1c3cf87f318f86dc61c",
+  "drafter": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-5-5",
+    "date": "2026-11-28"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "url": "https://oneit.uiowa.edu/news/2026/03/ai-powered-note-depot-simplifies-class-notes-while-supporting-student-access",
+      "ok": true,
+      "method": "html",
+      "fetched_at": "2026-11-28T09:30:33.252Z",
+      "final_url": "https://oneit.uiowa.edu/news/2026/03/ai-powered-note-depot-simplifies-class-notes-while-supporting-student-access",
+      "sha256": "4ae988965e88af05562557d87406bdaf9d059a2664973e7600022a7ee4f54028",
+      "chars": 4976,
+      "truncated": false
+    }
+  ],
+  "quote_checks": [
+    {
+      "field": "headline",
+      "source": 0,
+      "quote": "Launched campus-wide in fall 2025, there were 92 courses with 6,041 students using Note Depot. It generated 4,998 AI notes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact",
+      "source": 0,
+      "quote": "It generated 4,998 AI notes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "impact_number",
+      "source": 0,
+      "quote": "It generated 4,998 AI notes",
+      "found": true,
+      "exact": true,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "It generated 4,998 AI notes and aided in the exchange of 191 notes by student notetakers, helping to meet 314 student accommodations.",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "effect.absolute",
+      "source": 0,
+      "quote": "there were 92 courses with 6,041 students using Note Depot",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    },
+    {
+      "field": "reach",
+      "source": 0,
+      "quote": "there were 92 courses with 6,041 students using Note Depot",
+      "found": true,
+      "exact": false,
+      "status": "supported"
+    }
+  ],
+  "verifier": {
+    "vendor": "openai",
+    "model": "gpt-6.1-sol",
+    "via": "codex-login",
+    "date": "2026-11-28",
+    "output": {
+      "full_text": true,
+      "source_kind": "news",
+      "source_findings": [
+        {
+          "source": 0,
+          "kind": "news",
+          "full_text": true
+        }
+      ],
+      "receipts": [
+        {
+          "field": "headline",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "impact_number",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "effect.absolute",
+          "status": "supported",
+          "note": ""
+        },
+        {
+          "field": "reach",
+          "status": "supported",
+          "note": ""
+        }
+      ],
+      "grades": {
+        "evidence": "C",
+        "attribution": "bundled",
+        "window": null
+      },
+      "attribution_rationale": "No comparative evaluation is reported, and the accommodation totals combine AI-generated notes with a student note exchange and instructor oversight.",
+      "achieved_dates": {
+        "from": "not-applicable",
+        "conflicting": false,
+        "note": "The entry has no achieved dates; the article associates campus-wide usage with fall 2025, which does not establish its position relative to the November 28 window boundary."
+      },
+      "conflict": {
+        "in_source": true,
+        "stated_in_entry": true,
+        "note": "The university reports on a platform its own staff developed and operates, using OpenAI under a university licence."
+      },
+      "tests": {
+        "reached_people": true,
+        "measured_against": false,
+        "ai_counterfactual": true,
+        "dated": true,
+        "note": "No outcome is evaluated against a control or baseline; pilot and campus-wide usage counts describe different deployment scales without establishing a comparative benefit."
+      },
+      "summary": "The source supports the reported notes, course, enrollment, and combined accommodation counts for the fall 2025 deployment. It does not establish improved student outcomes or accommodation delivery against a comparator."
+    },
+    "error": null,
+    "tokens": {
+      "input": 13057,
+      "output": 640,
+      "total": 13697,
+      "cached": 0,
+      "reasoning": 177
+    },
+    "duration_ms": 16669
+  },
+  "adjudication": {
+    "result": "published",
+    "reason": null,
+    "detail": "The source supports the reported notes, course, enrollment, and combined accommodation counts for the fall 2025 deployment. It does not establish improved student outcomes or accommodation delivery against a comparator.",
+    "confidence": "speculative",
+    "relaxed": [
+      "Source 0 is a news, not a study, a registry record, or an official report.",
+      "Not measured against something yet (No outcome is evaluated against a control or baseline; pilot and campus-wide usage counts describe different deployment scales without establishing a comparative benefit.)."
+    ]
+  }
+}
