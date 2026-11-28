@@ -504,3 +504,14 @@ Candidates: 188 over 2026-11-25 to 2026-11-27, 11 flagged randomized, 16 announc
 ### Alerts
 
 None.
+
+## 2026-11-28 (daily scout)
+
+Candidates: 170 over 2026-11-26 to 2026-11-28, 11 flagged randomized, 16 announcements, 1 alert, 41 source errors. No entries drafted.
+
+- AI Health Education Assistant vs human case manager for 7-2-2 home blood pressure monitoring, 1,957 randomized, Taiwan, pilot RCT, [Hypertension Research](https://doi.org/10.1038/s41440-026-02876-2): adherence 50.9% vs 50.5%, a non-inferiority result against human case management (NCT07147413). Only the abstract could be read (Europe PMC). Missing: the full text for methods dates, whether it belongs in `not-because` or as a substitution result, the exploratory post hoc margin.
+- Skipped: AEA registrations (in development or ongoing), coronary CTA and MASLD protocols, Life secondary analysis (already noted 2026-11-27), model validations, reviews, vignette comparisons, opinion, survey and market-report news.
+
+### Alerts
+
+- `jordan-nursing-students-ai-chatbot-substance-abuse-prevention-quasi-experiment`: Crossref reports a new version (10.12688/f1000research.183558.2, dated 2026-09-17). Check whether the numbers changed.
