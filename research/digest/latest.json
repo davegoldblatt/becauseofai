@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-27T14:11:31.368Z",
-  "since": "2026-11-26T14:11:31Z",
+  "generated_at": "2026-11-28T14:11:13.767Z",
+  "since": "2026-11-27T14:11:13Z",
   "site": "https://becauseofai.org",
   "entries": {
-    "published": 87,
-    "held": 102,
+    "published": 93,
+    "held": 104,
     "counts": {
       "because": 27,
       "not-because": 8,
@@ -12,47 +12,61 @@
     },
     "lower_levels": {
       "reasonable": 7,
-      "speculative": 40
+      "speculative": 46
     },
     "changed": [
       {
-        "id": "ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou",
-        "headline": "Because of an AI smartphone app that judged stool photos, patients preparing for colonoscopy drank 1245.5 mL of bowel-cleansing solution against 1586.2 mL in the control group, with adequate cleansing in 93.3% against 88.8%.",
+        "id": "uiowa-note-depot-lectureai-class-notes-accommodations",
+        "headline": "Because of an AI note generator built by the University of Iowa, its Note Depot platform produced 4,998 AI notes for courses with 6,041 students in the first campus-wide term, helping meet class-notes accommodations.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/uiowa-note-depot-lectureai-class-notes-accommodations"
+      },
+      {
+        "id": "irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield",
+        "headline": "Because of PaddyMitra, a WhatsApp fertiliser advisory built on machine learning, rice farmers in three Odisha districts got yields about 7–12% above their own fertiliser practice in a single season.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield"
+      },
+      {
+        "id": "kilimo-ai-irrigation-recommendations-maipo-chile-water-saved",
+        "headline": "Because of Kilimo's satellite-and-weather irrigation recommendations, farms in Chile's Maipo River basin reduced water use by 15%-20% on average, the company says.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/kilimo-ai-irrigation-recommendations-maipo-chile-water-saved"
+      },
+      {
+        "id": "dwp-microsoft-365-copilot-trial-comparison-group-time-saved",
+        "headline": "Because of Microsoft 365 Copilot, DWP staff with a licence saved an average of 19 minutes a day across eight routine tasks, compared with similar staff without one.",
+        "change": "added",
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/dwp-microsoft-365-copilot-trial-comparison-group-time-saved"
+      },
+      {
+        "id": "hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved",
+        "headline": "Because of Microsoft Copilot, HMRC staff randomly given a licence self-reported saving 2-3% of their working week, around 60 minutes a week.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
       },
       {
-        "id": "cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null",
-        "headline": "AI-assisted colonoscopy (CAD EYE) did not significantly raise adenoma detection in Lynch syndrome surveillance: 33.8% of patients against 30.9% with white-light colonoscopy alone, in a 757-patient randomized trial.",
+        "id": "honolulu-civcheck-ai-permit-review-decision-time",
+        "headline": "Because of CivCheck, an AI plan-review tool, Honolulu's average permit decision time for smaller residential projects fell from 73 days to 32.5 days in the first quarter of 2026.",
         "change": "added",
-        "state": "held (grade-split)",
-        "url": null
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/honolulu-civcheck-ai-permit-review-decision-time"
       },
       {
-        "id": "ai-selected-mobile-cbt-nurse-burnout-korea-rct",
-        "headline": "Because of AI, 62 Korean nurses given an AI-selected mobile CBT program had larger four-week falls in client-related, personal and work-related burnout than 63 nurses given burnout information only.",
+        "id": "planai-consultation-response-analysis-five-planning-authorities",
+        "headline": "Because of PlanAI, an AI tool that summarises local plan consultation responses, time to analyse them fell from around 18.5 hours to about 16 minutes in the first trial.",
         "change": "added",
-        "state": "held (grade-split)",
-        "url": null
+        "state": "published as speculative",
+        "url": "https://becauseofai.org/entry/planai-consultation-response-analysis-five-planning-authorities"
       },
       {
-        "id": "ai-teleorthodontics-triage-public-clinic-crossover-rct",
-        "headline": "Because of AI-supported teleorthodontics, triage of patients referred to a public orthodontic clinic was 2.9 times faster than face-to-face screening in a crossover trial, with sensitivity of 1 but specificity of 0.67 for referral acceptance.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon",
-        "headline": "Medical students at a French university who watched lectures narrated by an AI clone of their teacher's voice scored no differently on knowledge tests than students given the teacher's own recording: 51.2 against 51.8 out of 100.",
-        "change": "added",
-        "state": "held (grade-split)",
-        "url": null
-      },
-      {
-        "id": "gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct",
-        "headline": "Because of AI, first-year medical students who used a GPT-4o \"Prompt Loop\" to check its errors while learning histology scored 78.0 on a morphologic reasoning assessment against 67.1 for students using standard virtual microscopy.",
+        "id": "uspto-class-act-trademark-pre-examination-queue-searchable",
+        "headline": "Because of Class ACT, the USPTO says trademark applications waiting in its pre-examination queue became searchable in minutes rather than months, with 250,000 applications analysed.",
         "change": "added",
         "state": "held (grade-split)",
         "url": null
@@ -352,6 +366,13 @@
         "reason": "grade-split",
         "since": "2026-11-26",
         "detail": "evidence: drafter B, verifier could not grade."
+      },
+      {
+        "id": "hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved",
+        "headline": "Because of Microsoft Copilot, HMRC staff randomly given a licence self-reported saving 2-3% of their working week, around 60 minutes a week.",
+        "reason": "grade-split",
+        "since": "2026-11-27",
+        "detail": "attribution: drafter isolated, verifier could not grade."
       },
       {
         "id": "hpv-chatbot-japan-caregivers-literacy-rct",
@@ -718,6 +739,13 @@
         "detail": "evidence: drafter A, verifier could not grade."
       },
       {
+        "id": "uspto-class-act-trademark-pre-examination-queue-searchable",
+        "headline": "Because of Class ACT, the USPTO says trademark applications waiting in its pre-examination queue became searchable in minutes rather than months, with 250,000 applications analysed.",
+        "reason": "grade-split",
+        "since": "2026-11-27",
+        "detail": "attribution: drafter bundled, verifier isolated; window: drafter no grade, verifier in."
+      },
+      {
         "id": "va-cade-colonoscopy-cluster-randomized-adenoma-detection",
         "headline": "Because of AI computer-aided detection, Veterans Health Administration colonoscopy sites raised adenoma detection by 4.2 percentage points, while control sites fell 0.7 points.",
         "reason": "grade-split",
@@ -785,30 +813,6 @@
       "record": "ai-bowel-prep-app-personalized-laxative-colonoscopy-rct-zhengzhou/2026-11-27.json"
     },
     {
-      "id": "ai-selected-mobile-cbt-nurse-burnout-korea-rct",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "ai-selected-mobile-cbt-nurse-burnout-korea-rct/2026-11-26.json"
-    },
-    {
-      "id": "ai-teleorthodontics-triage-public-clinic-crossover-rct",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "ai-teleorthodontics-triage-public-clinic-crossover-rct/2026-11-26.json"
-    },
-    {
-      "id": "ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade; window: drafter no grade, verifier pre.",
-      "record": "ai-voice-cloning-prerecorded-lectures-medical-students-rct-null-lyon/2026-11-26.json"
-    },
-    {
       "id": "cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null",
       "date": "2026-11-27",
       "result": "held",
@@ -817,52 +821,68 @@
       "record": "cadly2-cad-eye-lynch-syndrome-surveillance-adenoma-detection-rct-null/2026-11-27.json"
     },
     {
-      "id": "esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care",
-      "date": "2026-11-26",
+      "id": "dwp-microsoft-365-copilot-trial-comparison-group-time-saved",
+      "date": "2026-11-27",
       "result": "published",
       "reason": null,
-      "detail": "The registry supports the reported fall rates, relative effect, enrollment, and dates in a cluster-randomized evaluation of the eSTEPS package. It does not isolate the algorithm's contribution, and it lists a peer-reviewed trial publication despite the entry's suggestion that one is still awaited.",
-      "record": "esteps-ml-fall-risk-exercise-cds-cluster-rct-brigham-primary-care/2026-11-26.json"
+      "detail": "The report supports the reported numbers and dates through a large observational comparison with regression adjustment. The 19-minute estimate relies on self-reported task times, and non-random licence allocation leaves residual confounding possible.",
+      "record": "dwp-microsoft-365-copilot-trial-comparison-group-time-saved/2026-11-27.json"
     },
     {
-      "id": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct",
-      "date": "2026-11-26",
+      "id": "hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved",
+      "date": "2026-11-27",
+      "result": "held",
+      "reason": "grade-split",
+      "detail": "attribution: drafter isolated, verifier could not grade.",
+      "record": "hmrc-voa-microsoft-copilot-phase-3-randomised-licences-time-saved/2026-11-27.json"
+    },
+    {
+      "id": "honolulu-civcheck-ai-permit-review-decision-time",
+      "date": "2026-11-27",
       "result": "published",
       "reason": null,
-      "detail": "The registry supports the reported 90-day changes and −4.2-point difference, with 125 randomized and 98 analyzed for the primary outcome. It does not isolate AI adaptation's contribution from stimulation, and it cites a peer-reviewed trial report despite the entry's caveat.",
-      "record": "fasikl-felix-neuroai-wristband-essential-tremor-tranquil-sham-rct/2026-11-26.json"
+      "detail": "The article reports average permit decision times falling from 73 to 32.5 days for smaller residential permits processed through CivCheck in Q1 2026. It provides no independent validation or comparison isolating AI from the broader system replacement.",
+      "record": "honolulu-civcheck-ai-permit-review-decision-time/2026-11-27.json"
     },
     {
-      "id": "gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter B, verifier could not grade.",
-      "record": "gpt4o-prompt-loop-virtual-microscopy-histology-students-pilot-rct/2026-11-26.json"
+      "id": "irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield",
+      "date": "2026-11-27",
+      "result": "published",
+      "reason": null,
+      "detail": "The source supports approximately 7–12% higher yields and gains of 0.38–0.60 t/ha in a Kharif 2025 pilot involving about 1500 farmers. It provides no randomization, statistical tests, independent evaluation, or precise harvest dates establishing the window.",
+      "record": "irri-paddymitra-whatsapp-fertiliser-advisory-odisha-rice-yield/2026-11-27.json"
     },
     {
-      "id": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade; window: drafter pre, verifier in.",
-      "record": "psp-ml-placement-success-predictor-youth-behavioral-health-rct-null/2026-11-26.json"
+      "id": "kilimo-ai-irrigation-recommendations-maipo-chile-water-saved",
+      "date": "2026-11-27",
+      "result": "published",
+      "reason": null,
+      "detail": "The complete corporate newsroom feature supports Kilimo's reported 15%–20% reduction and 60 million cubic feet saved against historical baselines. It does not independently verify those figures, isolate AI's contribution, or date the aggregate benefits.",
+      "record": "kilimo-ai-irrigation-recommendations-maipo-chile-water-saved/2026-11-27.json"
     },
     {
-      "id": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility",
-      "date": "2026-11-26",
-      "result": "held",
-      "reason": "grade-split",
-      "detail": "evidence: drafter D, verifier could not grade.",
-      "record": "surpass-hf-llm-patient-executed-diuretic-pa-pressure-feasibility/2026-11-26.json"
+      "id": "planai-consultation-response-analysis-five-planning-authorities",
+      "date": "2026-11-27",
+      "result": "published",
+      "reason": null,
+      "detail": "The report supports the stated analysis times, approximately 90% efficiency gains and participation by five additional planning authorities. It provides no benefit dates or independent evaluation, and the savings cover only one stage of the workflow.",
+      "record": "planai-consultation-response-analysis-five-planning-authorities/2026-11-27.json"
     },
     {
-      "id": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null",
-      "date": "2026-11-26",
+      "id": "uiowa-note-depot-lectureai-class-notes-accommodations",
+      "date": "2026-11-28",
+      "result": "published",
+      "reason": null,
+      "detail": "The source supports the reported notes, course, enrollment, and combined accommodation counts for the fall 2025 deployment. It does not establish improved student outcomes or accommodation delivery against a comparator.",
+      "record": "uiowa-note-depot-lectureai-class-notes-accommodations/2026-11-28.json"
+    },
+    {
+      "id": "uspto-class-act-trademark-pre-examination-queue-searchable",
+      "date": "2026-11-27",
       "result": "held",
       "reason": "grade-split",
-      "detail": "evidence: drafter A, verifier could not grade.",
-      "record": "urogynecology-chatgpt-4o-peri-visit-decisional-conflict-rct-null/2026-11-26.json"
+      "detail": "attribution: drafter bundled, verifier isolated; window: drafter no grade, verifier in.",
+      "record": "uspto-class-act-trademark-pre-examination-queue-searchable/2026-11-27.json"
     }
   ],
   "announced": [
@@ -883,21 +903,23 @@
     }
   ],
   "leads_added": [
-    "AI-supported practice for vaccine-hesitancy communication among student pharmacists, randomized study, [Am J Pharm Educ](https://doi.org/10.1016/j.ajpe.2026.102132): education RCT with students as participants. Missing: the paper read, the comparison arm and absolute scores, achieved dates.",
-    "AI companion and mental health of the elderly, Jiangsu, [AEA RCT 17436](https://www.socialscienceregistry.org/trials/17436): completed, registration only, already noted 2026-11-25. Watch for results.",
-    "Causal reasoning and Gemini-assisted decision-making, Italy, [AEA RCT 20278](https://www.socialscienceregistry.org/trials/20278): completed 2026-11-18 to 2026-11-20, registration only; decision task, unclear it reached people outside the experiment.",
-    "Skipped: AEA registrations in development or ongoing (employer AI training, \"Hiding the Bot\"), CONCERN-EWS critique (already in the entry), ECG ATTR-CM (already noted), EDITH (protocol), model validations, reviews, benchmarks, vignette comparisons, opinion, funding and market-report news."
+    "Kingsbridge Healthcare (Northern Ireland) clinical-letter review AI, GCD Technologies: manual review workload down up to 30%, letters reach patients sooner. [Building Better Healthcare](https://www.buildingbetterhealthcare.com/gcd-technologies-helps-ni-s-largest-private-healthcare-provider). Vendor-written piece; the measured outcome is staff workload, with no turnaround figure or dates. Missing: the organisation's own page, a number about patients, achieved dates.",
+    "Colorectal lesion detection by procedure order with and without AI, secondary analysis of an RCT, [Life](https://doi.org/10.3390/life16111786): find the parent trial's primary report before logging.",
+    "Retinopathy screening, conventional vs AI-assisted, single-centre prospective, [Medicina](https://doi.org/10.3390/medicina62112267): looks like a diagnostic comparison. Missing: the paper read, whether the AI changed patient outcomes.",
+    "Smartwatch loss-of-pulse detection for cardiac arrest, [medRxiv](https://www.medrxiv.org/content/10.64898/2026.11.25.26368935v1): device validation, no evidence it reached patients.",
+    "Causal reasoning and Gemini-assisted decision-making, Italy, [AEA RCT 20278](https://www.socialscienceregistry.org/trials/20278): already noted 2026-11-26.",
+    "Skipped: AEA protocols and registrations in development, coronary CTA and MASLD trial protocols, EDITH (protocol), reviews, model validations, vignette comparisons, layoffs, funding, and market-report news."
   ],
   "x": {
     "username": "bcuz_of_ai",
-    "followers": 5,
+    "followers": 6,
     "posts": [
       {
         "id": "2126111105026035774",
         "url": "https://x.com/bcuz_of_ai/status/2126111105026035774",
         "text": "Because of AI, a wrist-worn neurostimulator that adapts its stimulation with an AI algorithm improved essential-tremor daily-living scores by 6.9 points at 90 days against 2.7…\n\nhttps://t.co/SoBsvheStD https://t.co/FKHZs3hvUN",
         "created_at": "2026-11-27T00:29:23.000Z",
-        "impressions": 6,
+        "impressions": 9,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -921,7 +943,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2125743213608665446",
         "text": "Because of AI aeration control, French wastewater plants used 5.4% less electricity and emitted 6% less carbon, and paid 8.2% less for energy.\n\nhttps://t.co/exwqaBVALF https://t.co/qxxjmAR3dt",
         "created_at": "2026-11-26T00:07:31.000Z",
-        "impressions": 10,
+        "impressions": 12,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -933,7 +955,7 @@
         "url": "https://x.com/bcuz_of_ai/status/2125059513937952800",
         "text": "AI fracture detection did not significantly cut next-day diagnostic revisions (8.6% without AI, 5.7% with AI) among 667 children imaged out of hours in a German paediatric emergency department.\n\nhttps://t.co/dNZxPdKRO7 https://t.co/iPmtxq3nV6",
         "created_at": "2026-11-24T02:50:44.000Z",
-        "impressions": 5,
+        "impressions": 6,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
@@ -968,40 +990,32 @@
     "mentions": []
   },
   "traffic": {
-    "day": "2026-11-26",
-    "pageviews": 27,
-    "visits": 22,
+    "day": "2026-11-27",
+    "pageviews": 21,
+    "visits": 18,
     "top_paths": [
       {
         "path": "/",
-        "views": 15
+        "views": 12
       },
       {
-        "path": "/entry/ucsd-aspire-ai-tutor-precalculus-failure-rate",
+        "path": "/entry/instructor-designed-ai-19-universities-stem-exams-rct",
         "views": 3
       },
       {
-        "path": "/about",
-        "views": 1
-      },
-      {
-        "path": "/method",
-        "views": 1
+        "path": "/entry/khanmigo-hamilton-county-remedial-math-rct",
+        "views": 3
       },
       {
         "path": "/entry/hurricane-melissa-2025",
         "views": 1
       },
       {
-        "path": "/not-yet",
+        "path": "/entry/veolia-france-ai-aeration-control-wastewater-plants-electricity-quasi-experiment",
         "views": 1
       },
       {
-        "path": "/entry/india-tribal-tb-ai-cxr",
-        "views": 1
-      },
-      {
-        "path": "/entry/columbia-star-birth",
+        "path": "/entry/masai-ai-mammography",
         "views": 1
       }
     ]
