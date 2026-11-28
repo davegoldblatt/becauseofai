@@ -1,0 +1,73 @@
+id: uiowa-note-depot-lectureai-class-notes-accommodations
+section: because
+rank: 157
+headline: >-
+  Because of an AI note generator built by the University of Iowa, its Note Depot platform produced 4,998 AI notes for
+  courses with 6,041 students in the first campus-wide term, helping meet class-notes accommodations.
+impact: "4,998 AI-generated class notes in one term"
+impact_number: "4,998"
+impact_label: "AI-generated class notes from lecture recordings, fall 2025"
+summary: >-
+  The University of Iowa built Note Depot, whose LectureAI feature uses an OpenAI model to turn lecture-capture
+  transcripts into notes that instructors review and release, including to students with a class-notes accommodation.
+  The university reports usage counts for a pilot and for the first campus-wide term.
+caveat: >-
+  The university's own news story; it counts notes and courses, not whether students with accommodations learned more
+  or were better served than with human notetakers, and the 314 accommodations figure covers AI notes and
+  student-notetaker exchanges together.
+domain: accessibility
+ai_type: generative
+grades:
+  evidence: C
+  attribution: bundled
+  window: null
+comparison: null
+effect:
+  relative: null
+  absolute: "92 courses with 6,041 students used Note Depot; it generated 4,998 AI notes and aided the exchange of 191 notes by student notetakers, helping to meet 314 student accommodations"
+reach: "6,041 students in 92 courses at the University of Iowa in the first campus-wide term"
+dates:
+  achieved_start: null
+  achieved_end: null
+  published: 2026-03-25
+  added: 2026-11-28
+  updated: 2026-11-28
+sources:
+  - title: "University of Iowa OneIT: AI-powered Note Depot simplifies class notes while supporting student access, 25 March 2026"
+    url: https://oneit.uiowa.edu/news/2026/03/ai-powered-note-depot-simplifies-class-notes-while-supporting-student-access
+    type: primary
+    announcement: true
+conflicts: "The source is the University of Iowa's own news story about a tool its own IT staff built and run; the model is from OpenAI under a university licence. No independent evaluation."
+what_would_change: "Student-level outcomes (use, satisfaction, grades) for students with a class-notes accommodation compared with human notetaking."
+notes: >-
+  verify: the source says the tool launched campus-wide in fall 2025 but gives no calendar dates, so achieved dates and the window grade are left empty.
+  verify: the 314 accommodations figure combines AI notes and the student-notetaker exchange, so the AI-only contribution is not separable.
+history:
+  - date: 2026-11-28
+    note: "Added by the backfill run."
+rationale: The grade is bundled because the source counts notes and accommodations met by two features together, with no comparison group or baseline.
+receipts:
+  - field: headline
+    quote: Launched campus-wide in fall 2025, there were 92 courses with 6,041 students using Note Depot. It generated 4,998 AI notes
+    locator: "'A noticeable impact' section"
+    source: 0
+  - field: impact
+    quote: It generated 4,998 AI notes
+    locator: "'A noticeable impact' section"
+    source: 0
+  - field: impact_number
+    quote: It generated 4,998 AI notes
+    locator: "'A noticeable impact' section"
+    source: 0
+  - field: effect.absolute
+    quote: It generated 4,998 AI notes and aided in the exchange of 191 notes by student notetakers, helping to meet 314 student accommodations.
+    locator: "'A noticeable impact' section"
+    source: 0
+  - field: effect.absolute
+    quote: there were 92 courses with 6,041 students using Note Depot
+    locator: "'A noticeable impact' section"
+    source: 0
+  - field: reach
+    quote: there were 92 courses with 6,041 students using Note Depot
+    locator: "'A noticeable impact' section"
+    source: 0
